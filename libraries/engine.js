@@ -65,17 +65,22 @@ function finishedLoading() {
 
   for (var i = 0; i < scene.length; i++) {
     console.log("SCENE " + i);
+    scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
     console.log(scene[i].backgroundImage);
     for (var j = 0; j < scene[i].item.length; j++) {
       console.log("ITEM " + j);
+      scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
       console.log(scene[i].item[j].image);
       console.log(scene[i].item[j].position.x);
       console.log(scene[i].item[j].position.y);
-      if (scene[i].item[j].zoomImage)
+      if (scene[i].item[j].zoomImage) {
+        scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
         console.log(scene[i].item[j].zoomImage);
+      }
     }
   }
 
+  gameLoop();
 }
 
 // Loading image
@@ -156,5 +161,3 @@ var i = 0;
 function play() {
   //message.text = i;
 }
-
-gameLoop();
