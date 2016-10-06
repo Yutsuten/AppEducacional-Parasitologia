@@ -11,6 +11,7 @@ var Container = PIXI.Container,
     Graphics = PIXI.Graphics,
     Text = PIXI.Text;
 
+// Renderer and Auto-scaling options
 var renderer = autoDetectRenderer(1920, 1080);
 renderer.autoResize = true;
 document.body.appendChild(renderer.view);
@@ -22,8 +23,10 @@ renderer.view.style.position = "absolute";
 renderer.view.style.display = "block";
 var stage = new Container();
 
+// Scene array to be filled on index.js
 var scene = [];
 
+// Item creation, to be used on index.js
 function createItem(directory, posX, posY, zoom = null) {
   var item = {
     image: directory,
@@ -36,6 +39,7 @@ function createItem(directory, posX, posY, zoom = null) {
   return item;
 }
 
+// Start the application
 function start() {
   for (var i = 0; i < scene.length; i++) {
     console.log("SCENE " + i);
@@ -55,8 +59,8 @@ function start() {
     .load(finishedLoading);
 }
 
+// Create an array with all images, without repetition
 function createImagesArray() {
-  // Create an array with all images, without repetition
   var image = [];
   for (var i = 0; i < scene.length; i++) {
     image = addImageToArray(image, scene[i].backgroundImage);
