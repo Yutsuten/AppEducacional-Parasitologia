@@ -1,3 +1,5 @@
+'use strict';
+
 console.log("Pixi.js version: " + PIXI.VERSION);
 
 // Aliases

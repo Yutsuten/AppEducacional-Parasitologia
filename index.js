@@ -1,3 +1,5 @@
+'use strict';
+
 scene[0] = {
   backgroundImage: "img/background.jpg",
   item: [

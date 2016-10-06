@@ -1,3 +1,5 @@
+'use strict';
+
 // Scene array to be filled on index.js
 var scene = [];
 
@@ -60,6 +62,20 @@ function addImageToArray(array, directory) {
 
 function finishedLoading() {
   console.log("finished loading");
+
+  for (var i = 0; i < scene.length; i++) {
+    console.log("SCENE " + i);
+    console.log(scene[i].backgroundImage);
+    for (var j = 0; j < scene[i].item.length; j++) {
+      console.log("ITEM " + j);
+      console.log(scene[i].item[j].image);
+      console.log(scene[i].item[j].position.x);
+      console.log(scene[i].item[j].position.y);
+      if (scene[i].item[j].zoomImage)
+        console.log(scene[i].item[j].zoomImage);
+    }
+  }
+
 }
 
 // Loading image
