@@ -18,19 +18,6 @@ function createItem(directory, posX, posY, zoom = null) {
 
 // Start the application
 function start() {
-  for (var i = 0; i < scene.length; i++) {
-    console.log("SCENE " + i);
-    console.log(scene[i].backgroundImage);
-    for (var j = 0; j < scene[i].item.length; j++) {
-      console.log("ITEM " + j);
-      console.log(scene[i].item[j].image);
-      console.log(scene[i].item[j].position.x);
-      console.log(scene[i].item[j].position.y);
-      if (scene[i].item[j].zoomImage)
-        console.log(scene[i].item[j].zoomImage);
-    }
-  }
-
   loader
     .add(createImagesArray())
     .load(finishedLoading);
@@ -61,21 +48,14 @@ function addImageToArray(array, directory) {
 }
 
 function finishedLoading() {
-  console.log("finished loading");
-
   for (var i = 0; i < scene.length; i++) {
-    console.log("SCENE " + i);
     scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
-    console.log(scene[i].backgroundImage);
     for (var j = 0; j < scene[i].item.length; j++) {
-      console.log("ITEM " + j);
       scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
-      console.log(scene[i].item[j].image);
-      console.log(scene[i].item[j].position.x);
-      console.log(scene[i].item[j].position.y);
+      scene[i].item[j].image.x = scene[i].item[j].position.x;
+      scene[i].item[j].image.y = scene[i].item[j].position.y;
       if (scene[i].item[j].zoomImage) {
         scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
-        console.log(scene[i].item[j].zoomImage);
       }
     }
   }
@@ -83,13 +63,25 @@ function finishedLoading() {
   gameLoop();
 }
 
-// Loading image
-/*loader
-  .add("img/background.jpg")
-  .add("img/student.png")
-  .load(setup);
+var activeScene = 0;
+var state = play;
 
-function setup() {
+var i = 0;
+function play() {
+  //message.text = i;
+  stage.addChild(scene[activeScene].backgroundImage);
+  for (var i = 0; i < scene[activeScene].item.length; i++)
+    stage.addChild(scene[activeScene].item[i].image);
+}
+
+function gameLoop() {
+  requestAnimationFrame(gameLoop);
+  state();
+  renderer.render(stage);
+}
+
+
+/*function setup() {
   var background = new PIXI.Sprite(
     resources["img/background.jpg"].texture
   );
@@ -148,16 +140,3 @@ function setup() {
   //Render the stage
   renderer.render(stage);
 }*/
-
-var state = play;
-
-function gameLoop() {
-  requestAnimationFrame(gameLoop);
-  state();
-  renderer.render(stage);
-}
-
-var i = 0;
-function play() {
-  //message.text = i;
-}
