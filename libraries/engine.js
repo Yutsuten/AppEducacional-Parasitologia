@@ -1,5 +1,18 @@
 console.log("Pixi.js version: " + PIXI.VERSION);
 
+var scene = [];
+
+function start() {
+  for (var i = 0; i < scene.length; i++) {
+    console.log(scene[i].backgroundImage);
+    for (var j = 0; j < scene[i].item.length; j++) {
+      console.log(scene[i].item[j].image);
+      console.log(scene[i].item[j].position.x);
+      console.log(scene[i].item[j].position.y);
+    }
+  }
+}
+
 // Creating aliases
 var Container = PIXI.Container,
     autoDetectRenderer = PIXI.autoDetectRenderer,
