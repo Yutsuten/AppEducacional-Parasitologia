@@ -12,9 +12,15 @@ function createItem(directory, posX, posY, imgScale, zoom = null) {
       y: posY
     },
     scale: imgScale,
-    zoomImage: zoom
+    zoomImage: zoom,
+    sceneChange: null
   };
   return item;
+}
+
+// Scene change, to be used on index.js
+function changeScene(gameItem, scene) {
+  gameItem.sceneChange = scene;
 }
 
 // Start the application
@@ -57,6 +63,10 @@ function finishedLoading() {
       scene[i].item[j].image.y = scene[i].item[j].position.y;
       scene[i].item[j].image.anchor.set(0.5, 0.5);
       scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
+      if (scene[i].item[j].sceneChange) { // Testing filters
+        console.log("Changing filter of " + scene[i].item[j].image);
+        scene[i].item[j].image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 15, 2, 1, 0xFFFFFF, 0.5)];
+      }
       if (scene[i].item[j].zoomImage) {
         scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
       }

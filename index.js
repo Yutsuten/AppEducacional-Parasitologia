@@ -3,8 +3,8 @@
 scene[0] = {
   backgroundImage: "img/background.jpg",
   item: [
-    createItem("img/student.png", 480, 750, 1.7),
-    createItem("img/banana.png", 750, 630, 0.2)
+    createItem("img/student.png", 480, 750, 1),
+    createItem("img/banana.png", 750, 630, 1)
   ]
 };
 
@@ -16,5 +16,7 @@ scene[1] = {
     createItem("img/digestive-system.png", 200, 430, 1, "img/zoom-worm.png")
   ]
 };
+
+changeScene(scene[0].item[1], 1);
 
 start();
