@@ -1,5 +1,27 @@
 console.log("Pixi.js version: " + PIXI.VERSION);
 
+// Aliases
+var Container = PIXI.Container,
+    autoDetectRenderer = PIXI.autoDetectRenderer,
+    loader = PIXI.loader,
+    resources = PIXI.loader.resources,
+    Sprite = PIXI.Sprite,
+    TextureCache = PIXI.utils.TextureCache,
+    Rectangle = PIXI.Rectangle,
+    Graphics = PIXI.Graphics,
+    Text = PIXI.Text;
+
+var renderer = autoDetectRenderer(1920, 1080);
+renderer.autoResize = true;
+document.body.appendChild(renderer.view);
+var scale = scaleToWindow(renderer.view);
+window.addEventListener("resize", function(event) {
+  scale = scaleToWindow(renderer.view);
+});
+renderer.view.style.position = "absolute";
+renderer.view.style.display = "block";
+var stage = new Container();
+
 var scene = [];
 
 function createItem(directory, posX, posY, zoom = null) {
@@ -27,43 +49,42 @@ function start() {
         console.log(scene[i].item[j].zoomImage);
     }
   }
+  console.log(createImagesArray());
+  /*loader
+    .add(createImagesArray())
+    .load(finishedLoading);*/
 }
 
-// Creating aliases
-var Container = PIXI.Container,
-    autoDetectRenderer = PIXI.autoDetectRenderer,
-    loader = PIXI.loader,
-    resources = PIXI.loader.resources,
-    Sprite = PIXI.Sprite,
-    TextureCache = PIXI.utils.TextureCache,
-    Rectangle = PIXI.Rectangle,
-    Graphics = PIXI.Graphics,
-    Text = PIXI.Text;
+function createImagesArray() {
+  // Create an array with all images, without repetition
+  var image = [];
+  for (var i = 0; i < scene.length; i++) {
+    image = addImageToArray(image, scene[i].backgroundImage);
+    for (var j = 0; j < scene[i].item.length; j++) {
+      image = addImageToArray(image, scene[i].item[j].image);
+      if (scene[i].item[j].zoomImage)
+        image = addImageToArray(image, scene[i].item[j].zoomImage);
+    }
+  }
+  return image;
+}
 
-// Create the renderer
-var renderer = autoDetectRenderer(1920, 1080);
-renderer.autoResize = true;
+function addImageToArray(array, directory) {
+  // Check if already exist
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === directory) // Already exist
+      return array;
+  }
+  array.push(directory);
+  return array;
+}
 
-//Add the canvas to the HTML document
-document.body.appendChild(renderer.view);
-
-// Scale to fit the player"s window
-var scale = scaleToWindow(renderer.view);
-
-// Resize renderer on window size change
-window.addEventListener("resize", function(event) {
-  scale = scaleToWindow(renderer.view);
-});
-
-// Removing scrolls
-renderer.view.style.position = "absolute";
-renderer.view.style.display = "block";
-
-// Create a container object called the `stage`
-var stage = new Container();
+function finishedLoading() {
+  console.log("finished loading");
+}
 
 // Loading image
-loader
+/*loader
   .add("img/background.jpg")
   .add("img/student.png")
   .load(setup);
@@ -126,7 +147,7 @@ function setup() {
 
   //Render the stage
   renderer.render(stage);
-}
+}*/
 
 var state = play;
 
