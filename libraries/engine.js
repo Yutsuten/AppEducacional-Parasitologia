@@ -2,13 +2,29 @@ console.log("Pixi.js version: " + PIXI.VERSION);
 
 var scene = [];
 
+function createItem(directory, posX, posY, zoom = null) {
+  var item = {
+    image: directory,
+    position: {
+      x: posX,
+      y: posY
+    },
+    zoomImage: zoom
+  };
+  return item;
+}
+
 function start() {
   for (var i = 0; i < scene.length; i++) {
+    console.log("SCENE " + i);
     console.log(scene[i].backgroundImage);
     for (var j = 0; j < scene[i].item.length; j++) {
+      console.log("ITEM " + j);
       console.log(scene[i].item[j].image);
       console.log(scene[i].item[j].position.x);
       console.log(scene[i].item[j].position.y);
+      if (scene[i].item[j].zoomImage)
+        console.log(scene[i].item[j].zoomImage);
     }
   }
 }
