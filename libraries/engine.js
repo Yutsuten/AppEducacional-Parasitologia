@@ -4,13 +4,14 @@
 var scene = [];
 
 // Item creation, to be used on index.js
-function createItem(directory, posX, posY, zoom = null) {
+function createItem(directory, posX, posY, imgScale, zoom = null) {
   var item = {
     image: directory,
     position: {
       x: posX,
       y: posY
     },
+    scale: imgScale,
     zoomImage: zoom
   };
   return item;
@@ -54,6 +55,8 @@ function finishedLoading() {
       scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
       scene[i].item[j].image.x = scene[i].item[j].position.x;
       scene[i].item[j].image.y = scene[i].item[j].position.y;
+      scene[i].item[j].image.anchor.set(0.5, 0.5);
+      scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
       if (scene[i].item[j].zoomImage) {
         scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
       }
