@@ -49,10 +49,10 @@ function start() {
         console.log(scene[i].item[j].zoomImage);
     }
   }
-  console.log(createImagesArray());
-  /*loader
+
+  loader
     .add(createImagesArray())
-    .load(finishedLoading);*/
+    .load(finishedLoading);
 }
 
 function createImagesArray() {

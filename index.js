@@ -7,7 +7,7 @@ scene[0] = {
 };
 
 scene[1] = {
-  backgroundImage: "img/background2.jpg",
+  backgroundImage: "img/background.jpg",
   item: [
     createItem("img/shit.png", 600, 530, "img/zoom-egg.png"),
     createItem("img/banana.png", 600, 230, "img/zoom-worm.png"),
