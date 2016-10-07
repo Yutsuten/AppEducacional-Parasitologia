@@ -80,6 +80,7 @@ function finishedLoading() {
 
 var activeScene = 0;
 var state = play;
+var meter = new FPSMeter();
 
 var i = 0;
 function play() {
@@ -93,6 +94,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
   state();
   renderer.render(stage);
+  meter.tick();
 }
 
 
