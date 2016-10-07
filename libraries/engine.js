@@ -65,7 +65,9 @@ function finishedLoading() {
       scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
       if (scene[i].item[j].sceneChange) { // Testing filters
         console.log("Changing filter of " + scene[i].item[j].image);
-        scene[i].item[j].image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 15, 2, 1, 0xFFFFFF, 0.5)];
+        // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
+        scene[i].item[j].image.filterArea = new Rectangle(scene[i].item[j].image.x - scene[i].item[j].image.width/2 - 25, scene[i].item[j].image.y - scene[i].item[j].image.height/2 - 25, scene[i].item[j].image.height + 50, scene[i].item[j].image.width + 50);
+        scene[i].item[j].image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
       }
       if (scene[i].item[j].zoomImage) {
         scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
