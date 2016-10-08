@@ -6,7 +6,8 @@ var activeScene = 0;
 var showCoordinates = true;
 
 var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
-var zoomTriangle = CreateTriangle(120);
+var zoomSize = 120;
+var zoomTriangle = CreateTriangle(zoomSize);
 
 // Item creation, to be used on index.js
 function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
@@ -86,8 +87,9 @@ function loadSpritesFromTextures() {
         AddClickChangeSceneEvent(scene[i].item[j]);
       }
       if (scene[i].item[j].zoomImage) {
+        scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
+        scene[i].item[j].zoomImage.visible = false;
         AddClickShowZoomEvent(scene[i].item[j]);
-        //scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
       }
     }
   }
@@ -142,7 +144,8 @@ function AddClickShowZoomEvent(item) {
     zoomTriangle.y = evt.target.position.y;
     if (zoomTriangle.x < renderer.width/2) { // Left side
       // Rotate triangle's base to right
-      zoomTriangle.rotation = 1.5 * Math.PI;
+      zoomTriangle.rotation = 1.5 * Math.PI; //4*zoomSize
+
     }
     else { // Right side
       // Rotate triangle's base to left
@@ -155,8 +158,11 @@ function AddClickShowZoomEvent(item) {
 
 function UpdateScreen() {
   stage.addChild(scene[activeScene].backgroundImage);
-  for (var i = 0; i < scene[activeScene].item.length; i++)
+  for (var i = 0; i < scene[activeScene].item.length; i++) {
     stage.addChild(scene[activeScene].item[i].image);
+    if (scene[activeScene].item[i].zoomImage)
+      stage.addChild(scene[activeScene].item[i].zoomImage);
+  }
   stage.addChild(zoomTriangle);
 
   renderer.render(stage);
