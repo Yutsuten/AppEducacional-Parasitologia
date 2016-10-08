@@ -2,8 +2,11 @@
 
 // Scene array to be filled on index.js
 var scene = [];
-
+var activeScene = 0;
 var showCoordinates = true;
+
+var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
+var zoomTriangle = CreateTriangle(120);
 
 // Item creation, to be used on index.js
 function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
@@ -62,13 +65,15 @@ function loadSpritesFromTextures() {
   for (var i = 0; i < scene.length; i++) {
 
     scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
-    if (showCoordinates) {
-      scene[i].backgroundImage.interactive = true;
-      scene[i].backgroundImage.click = function(evt) {
+    scene[i].backgroundImage.interactive = true;
+    scene[i].backgroundImage.click = function(evt) {
+      zoomTriangle.visible = false;
+      if (showCoordinates) {
         var mousePosition = evt.data.getLocalPosition(stage);
         console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-      };
-    }
+      }
+      UpdateScreen();
+    };
 
     for (var j = 0; j < scene[i].item.length; j++) {
       scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
@@ -88,6 +93,19 @@ function loadSpritesFromTextures() {
   }
 
   UpdateScreen();
+}
+
+function CreateTriangle(size) {
+  var triangle = new Graphics();
+  triangle.beginFill(0x000000);
+  triangle.drawPolygon([
+      -size, 4*size,             //First point
+      size, 4*size,              //Second point
+      0, 0                 //Third point
+  ]);
+  triangle.endFill();
+  triangle.visible = false;
+  return triangle;
 }
 
 function AddEvent(item) {
@@ -110,6 +128,7 @@ function AddClickChangeSceneEvent(item) {
   item.image.click = function(interaction) {
     /*var audio = new Audio("audio/explosion.wav");
     audio.play();*/
+    zoomTriangle.visible = false;
     activeScene = item.sceneChange;
     UpdateScreen();
   };
@@ -117,18 +136,28 @@ function AddClickChangeSceneEvent(item) {
 
 function AddClickShowZoomEvent(item) {
   AddEvent(item);
-  item.image.click = function(interaction) {
+  item.image.click = function(evt) {
     console.log("clicked on object");
+    zoomTriangle.x = evt.target.position.x;
+    zoomTriangle.y = evt.target.position.y;
+    if (zoomTriangle.x < renderer.width/2) { // Left side
+      // Rotate triangle's base to right
+      zoomTriangle.rotation = 1.5 * Math.PI;
+    }
+    else { // Right side
+      // Rotate triangle's base to left
+      zoomTriangle.rotation = 0.5 * Math.PI;
+    }
+    zoomTriangle.visible = true;
+    UpdateScreen();
   };
 }
-
-var activeScene = 0;
-var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
 
 function UpdateScreen() {
   stage.addChild(scene[activeScene].backgroundImage);
   for (var i = 0; i < scene[activeScene].item.length; i++)
     stage.addChild(scene[activeScene].item[i].image);
+  stage.addChild(zoomTriangle);
 
   renderer.render(stage);
 }
@@ -150,17 +179,6 @@ function gameLoop() {
 
 
 /*
-  var triangle = new Graphics();
-  triangle.beginFill(0x000000);
-  triangle.drawPolygon([
-      -32, 64,             //First point
-      32, 64,              //Second point
-      0, 0                 //Third point
-  ]);
-  triangle.endFill();
-  triangle.x = 180;
-  triangle.y = 22;
-
   var message = new Text(
     "Hello Pixi!",
     {font: "32px sans-serif", fill: "white"}
