@@ -81,7 +81,8 @@ function loadSpritesFromTextures() {
         AddClickChangeSceneEvent(scene[i].item[j]);
       }
       if (scene[i].item[j].zoomImage) {
-        scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
+        AddClickShowZoomEvent(scene[i].item[j]);
+        //scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
       }
     }
   }
@@ -89,24 +90,35 @@ function loadSpritesFromTextures() {
   UpdateScreen();
 }
 
-function AddClickChangeSceneEvent(item) {
+function AddEvent(item) {
   item.image.interactive = true;
   // Setting glow area to be 25 pixels bigger than the image bounds
-  item.image.filterArea = new Rectangle(item.image.x - item.image.width/2 - 25, item.image.y - item.image.height/2 - 25, item.image.height + 50, item.image.width + 50);
+  item.image.filterArea = new Rectangle(item.image.x - item.image.width/2 - 25, item.image.y - item.image.height/2 - 25, item.image.width + 50, item.image.height + 50);
   item.image.mouseover = function(interaction) {
     // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
-    item.image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
+    item.image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 18, 2, 1, 0xFFFFFF, 0.3)];
     UpdateScreen();
   };
   item.image.mouseout = function(interaction) {
     item.image.filters = null;
     UpdateScreen();
   };
+}
+
+function AddClickChangeSceneEvent(item) {
+  AddEvent(item);
   item.image.click = function(interaction) {
     /*var audio = new Audio("audio/explosion.wav");
     audio.play();*/
     activeScene = item.sceneChange;
     UpdateScreen();
+  };
+}
+
+function AddClickShowZoomEvent(item) {
+  AddEvent(item);
+  item.image.click = function(interaction) {
+    console.log("clicked on object");
   };
 }
 
