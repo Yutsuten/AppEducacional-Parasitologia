@@ -72,7 +72,7 @@ function finishedLoading() {
     }
   }
 
-  gameLoop();
+  UpdateScene();
 }
 
 function AddClickChangeSceneEvent(item) {
@@ -82,23 +82,33 @@ function AddClickChangeSceneEvent(item) {
   item.image.mouseover = function(interaction) {
     // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
     item.image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
+    UpdateScene();
   };
   item.image.mouseout = function(interaction) {
-    item.image.filters = [];
+    item.image.filters = null;
+    UpdateScene();
   };
   item.image.click = function(interaction) {
     console.log("Clicked");
     var audio = new Audio("audio/explosion.wav");
     audio.play();
     activeScene = item.sceneChange;
+    UpdateScene();
   };
 }
 
 var activeScene = 0;
-var state = play;
-var meter = new FPSMeter();
+var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
 
-var i = 0;
+function UpdateScene() {
+  stage.addChild(scene[activeScene].backgroundImage);
+  for (var i = 0; i < scene[activeScene].item.length; i++)
+    stage.addChild(scene[activeScene].item[i].image);
+
+  renderer.render(stage);
+}
+
+/*var i = 0;
 function play() {
   //message.text = i;
   stage.addChild(scene[activeScene].backgroundImage);
@@ -111,7 +121,7 @@ function gameLoop() {
   state();
   renderer.render(stage);
   meter.tick();
-}
+}*/
 
 
 /*function setup() {
