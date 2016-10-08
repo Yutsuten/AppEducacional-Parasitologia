@@ -63,11 +63,8 @@ function finishedLoading() {
       scene[i].item[j].image.y = scene[i].item[j].position.y;
       scene[i].item[j].image.anchor.set(0.5, 0.5);
       scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
-      if (scene[i].item[j].sceneChange) { // Testing filters
-        console.log("Changing filter of " + scene[i].item[j].image);
-        // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
-        scene[i].item[j].image.filterArea = new Rectangle(scene[i].item[j].image.x - scene[i].item[j].image.width/2 - 25, scene[i].item[j].image.y - scene[i].item[j].image.height/2 - 25, scene[i].item[j].image.height + 50, scene[i].item[j].image.width + 50);
-        scene[i].item[j].image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
+      if (scene[i].item[j].sceneChange) {
+        AddClickChangeSceneEvent(scene[i].item[j]);
       }
       if (scene[i].item[j].zoomImage) {
         scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
@@ -76,6 +73,25 @@ function finishedLoading() {
   }
 
   gameLoop();
+}
+
+function AddClickChangeSceneEvent(item) {
+  item.image.interactive = true;
+  // Setting glow area to be 25 pixels bigger than the image bounds
+  item.image.filterArea = new Rectangle(item.image.x - item.image.width/2 - 25, item.image.y - item.image.height/2 - 25, item.image.height + 50, item.image.width + 50);
+  item.image.mouseover = function(interaction) {
+    // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
+    item.image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
+  };
+  item.image.mouseout = function(interaction) {
+    item.image.filters = [];
+  };
+  item.image.click = function(interaction) {
+    console.log("Clicked");
+    var audio = new Audio("audio/explosion.wav");
+    audio.play();
+    activeScene = item.sceneChange;
+  };
 }
 
 var activeScene = 0;
