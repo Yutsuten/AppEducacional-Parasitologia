@@ -58,7 +58,7 @@ function addImageToArray(array, directory) {
 
 function finishedLoading() {
   for (var i = 0; i < scene.length; i++) {
-    
+
     scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
     if (showCoordinates) {
       scene[i].backgroundImage.interactive = true;
@@ -74,7 +74,7 @@ function finishedLoading() {
       scene[i].item[j].image.y = scene[i].item[j].position.y;
       scene[i].item[j].image.anchor.set(0.5, 0.5);
       scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
-      if (scene[i].item[j].sceneChange) {
+      if (scene[i].item[j].sceneChange != null) {
         AddClickChangeSceneEvent(scene[i].item[j]);
       }
       if (scene[i].item[j].zoomImage) {
@@ -100,8 +100,8 @@ function AddClickChangeSceneEvent(item) {
     UpdateScene();
   };
   item.image.click = function(interaction) {
-    var audio = new Audio("audio/explosion.wav");
-    audio.play();
+    /*var audio = new Audio("audio/explosion.wav");
+    audio.play();*/
     activeScene = item.sceneChange;
     UpdateScene();
   };
