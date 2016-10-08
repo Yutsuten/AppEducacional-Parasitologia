@@ -14,10 +14,13 @@ scene[1] = {
     createItem("img/shit.png", 600, 530, 0.5, "img/zoom-egg.png"),
     createItem("img/banana.png", 600, 230, 1, "img/zoom-egg.png"),
     createItem("img/digestive-system.png", 200, 430, 1, "img/zoom-worm.png"),
-    createItem("img/close.png", 750, 630, 1),
     createItem("img/mosca.gif", 850, 630, 1),
     createItem("img/mosca.gif", 850, 680, 1),
-    createItem("img/mosca.gif", 850, 730, 1)
+    createItem("img/mosca.gif", 850, 730, 1),
+    createItem("img/arrow.png", 550, 730, 1),
+    createItem("img/arrow.png", 650, 730, 1),
+    createItem("img/arrow.png", 750, 730, 1),
+    createItem("img/close.png", 1920 - 60, 60, 1)
   ]
 };
 

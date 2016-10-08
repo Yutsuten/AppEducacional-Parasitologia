@@ -3,6 +3,8 @@
 // Scene array to be filled on index.js
 var scene = [];
 
+var showCoordinates = true;
+
 // Item creation, to be used on index.js
 function createItem(directory, posX, posY, imgScale, zoom = null) {
   var item = {
@@ -56,7 +58,16 @@ function addImageToArray(array, directory) {
 
 function finishedLoading() {
   for (var i = 0; i < scene.length; i++) {
+    
     scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
+    if (showCoordinates) {
+      scene[i].backgroundImage.interactive = true;
+      scene[i].backgroundImage.click = function(evt) {
+        var mousePosition = evt.data.getLocalPosition(stage);
+        console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
+      };
+    }
+
     for (var j = 0; j < scene[i].item.length; j++) {
       scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
       scene[i].item[j].image.x = scene[i].item[j].position.x;
@@ -89,7 +100,6 @@ function AddClickChangeSceneEvent(item) {
     UpdateScene();
   };
   item.image.click = function(interaction) {
-    console.log("Clicked");
     var audio = new Audio("audio/explosion.wav");
     audio.play();
     activeScene = item.sceneChange;
