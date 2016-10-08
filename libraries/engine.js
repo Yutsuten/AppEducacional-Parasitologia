@@ -15,7 +15,7 @@ function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
     },
     scale: imgScale,
     zoomImage: zoom,
-    rotation: imgRotation,
+    rotation: (Math.PI / 180) * imgRotation,
     sceneChange: null
   };
   return item;
@@ -58,7 +58,7 @@ function addImageToArray(array, directory) {
   return array;
 }
 
-function finishedLoading() {
+function loadSpritesFromTextures() {
   for (var i = 0; i < scene.length; i++) {
 
     scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
@@ -76,6 +76,7 @@ function finishedLoading() {
       scene[i].item[j].image.y = scene[i].item[j].position.y;
       scene[i].item[j].image.anchor.set(0.5, 0.5);
       scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
+      scene[i].item[j].image.rotation = scene[i].item[j].rotation;
       if (scene[i].item[j].sceneChange != null) {
         AddClickChangeSceneEvent(scene[i].item[j]);
       }
