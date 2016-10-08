@@ -6,7 +6,7 @@ var scene = [];
 var showCoordinates = true;
 
 // Item creation, to be used on index.js
-function createItem(directory, posX, posY, imgScale, zoom = null) {
+function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
   var item = {
     image: directory,
     position: {
@@ -15,6 +15,7 @@ function createItem(directory, posX, posY, imgScale, zoom = null) {
     },
     scale: imgScale,
     zoomImage: zoom,
+    rotation: imgRotation,
     sceneChange: null
   };
   return item;
@@ -27,9 +28,10 @@ function changeScene(gameItem, scene) {
 
 // Start the application
 function start() {
+  // Load image textures
   loader
     .add(createImagesArray())
-    .load(finishedLoading);
+    .load(loadSpritesFromTextures);
 }
 
 // Create an array with all images, without repetition
@@ -83,7 +85,7 @@ function finishedLoading() {
     }
   }
 
-  UpdateScene();
+  UpdateScreen();
 }
 
 function AddClickChangeSceneEvent(item) {
@@ -93,24 +95,24 @@ function AddClickChangeSceneEvent(item) {
   item.image.mouseover = function(interaction) {
     // viewWidth, viewHeight, outerStrength, innerStrength, color, quality
     item.image.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5)];
-    UpdateScene();
+    UpdateScreen();
   };
   item.image.mouseout = function(interaction) {
     item.image.filters = null;
-    UpdateScene();
+    UpdateScreen();
   };
   item.image.click = function(interaction) {
     /*var audio = new Audio("audio/explosion.wav");
     audio.play();*/
     activeScene = item.sceneChange;
-    UpdateScene();
+    UpdateScreen();
   };
 }
 
 var activeScene = 0;
 var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
 
-function UpdateScene() {
+function UpdateScreen() {
   stage.addChild(scene[activeScene].backgroundImage);
   for (var i = 0; i < scene[activeScene].item.length; i++)
     stage.addChild(scene[activeScene].item[i].image);
@@ -134,29 +136,7 @@ function gameLoop() {
 }*/
 
 
-/*function setup() {
-  var background = new PIXI.Sprite(
-    resources["img/background.jpg"].texture
-  );
-
-  var student = new PIXI.Sprite(
-    resources["img/student.png"].texture
-  );
-  student.interactive = true;
-  student.click = function(interaction) {
-    console.log("Clicked on student");
-    var audio = new Audio("audio/explosion.wav");
-    audio.play();
-    background.visible = !background.visible;
-    renderer.render(stage);
-  };
-  student.mouseover = function(interaction) {
-    console.log("Mouse on student");
-  };
-  student.mouseout = function(interaction) {
-    console.log("Mouse out");
-  };
-
+/*
   var triangle = new Graphics();
   triangle.beginFill(0x000000);
   triangle.drawPolygon([
@@ -173,23 +153,4 @@ function gameLoop() {
     {font: "32px sans-serif", fill: "white"}
   );
   message.position.set(54, 96);
-
-  background.x = 0;
-  background.y = 0;
-
-  student.x = 300;
-  student.y = 530;
-  student.scale.set(1.5, 1.5);
-
-  //student.anchor.set(0.5, 0.5);
-  //student.rotation = 0.5;
-
-  // Adding the image on the stage
-  stage.addChild(background);
-  stage.addChild(student);
-  stage.addChild(triangle);
-  stage.addChild(message);
-
-  //Render the stage
-  renderer.render(stage);
 }*/
