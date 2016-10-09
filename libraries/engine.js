@@ -63,7 +63,7 @@ function AddCalloutEvent(gameItem, tab1Title, tab1Content, tab2Title, tab2Conten
 }
 
 // Scene change, to be used on index.js
-function changeScene(gameItem, scene) {
+function changeSceneEvent(gameItem, scene) {
   gameItem.sceneChange = scene;
 }
 

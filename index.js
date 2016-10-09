@@ -40,8 +40,8 @@ AddCalloutEvent(scene[2].item[0],
       "Tratamento", "As formas leves ou assintomáticas podem ser tratadas com Teclozam. Para as formas sintomáticas, as opções são Metronidazol, tinidazol ou secnidazol.",
       "Transmissão", "Para uma política pública que visasse diminuir o número dessas ocorrências, o primordial a ser feito seria melhorar as condições de saneamento básico de sua população, pois, até mesmo por ser transmitida via fecal-oral, a falta de higiene é uma das principais causas de contaminação.");
 
-changeScene(scene[0].item[1], 1);
-changeScene(scene[1].item[0], 2);
+changeSceneEvent(scene[0].item[1], 1);
+changeSceneEvent(scene[1].item[0], 2);
 
 activeScene = 0;
 
