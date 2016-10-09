@@ -27,7 +27,7 @@ scene[1] = {
 scene[2] = {
   backgroundImage: "img/classroom.jpg",
   item: [
-    createItem("img/sick-person.png", 480, 750, 1, 0)
+    createItem("img/sick-person.png", 480, 750, 1.4, 0)
   ]
 }
 
