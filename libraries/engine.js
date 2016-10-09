@@ -18,10 +18,10 @@ function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null, o
       y: posY
     },
     scale: imgScale,
+    rotation: (Math.PI / 180) * imgRotation,
     zoomImage: zoom,
     zoomOffsetX: offsetX,
     zoomOffsetY: offsetY,
-    rotation: (Math.PI / 180) * imgRotation,
     sceneChange: null
   };
   return item;
