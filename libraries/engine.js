@@ -10,7 +10,7 @@ var zoomSize = 120;
 var zoomTriangle = CreateTriangle(zoomSize);
 
 // Item creation, to be used on index.js
-function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
+function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null, offsetX = 0, offsetY = 0) {
   var item = {
     image: directory,
     position: {
@@ -19,6 +19,8 @@ function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null) {
     },
     scale: imgScale,
     zoomImage: zoom,
+    zoomOffsetX: offsetX,
+    zoomOffsetY: offsetY,
     rotation: (Math.PI / 180) * imgRotation,
     sceneChange: null
   };
@@ -154,22 +156,22 @@ function AddClickShowZoomEvent(item) {
     HideZoom();
 
     // Show zoom of the item clicked
-    zoomTriangle.x = evt.target.position.x;
-    zoomTriangle.y = evt.target.position.y;
+    zoomTriangle.x = item.zoomOffsetX + evt.target.position.x;
+    zoomTriangle.y = item.zoomOffsetY + evt.target.position.y;
     if (zoomTriangle.x < renderer.width/2) { // Left side
       // Rotate triangle's base to right
       zoomTriangle.rotation = 1.5 * Math.PI;
       // Show the zoom image
-      item.zoomImage.x = item.position.x + 4 * zoomSize;
-      item.zoomImage.y = item.position.y;
+      item.zoomImage.x = item.zoomOffsetX + item.position.x + 4 * zoomSize;
+      item.zoomImage.y = item.zoomOffsetY + item.position.y;
       item.zoomImage.visible = true;
     }
     else { // Right side
       // Rotate triangle's base to left
       zoomTriangle.rotation = 0.5 * Math.PI;
       // Show the zoom image
-      item.zoomImage.x = item.position.x - 4 * zoomSize;
-      item.zoomImage.y = item.position.y;
+      item.zoomImage.x = item.zoomOffsetX + item.position.x - 4 * zoomSize;
+      item.zoomImage.y = item.zoomOffsetY + item.position.y;
       item.zoomImage.visible = true;
     }
     zoomTriangle.visible = true;
