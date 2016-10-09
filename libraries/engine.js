@@ -10,7 +10,7 @@ var zoomSize = 120;
 var zoomTriangle = CreateTriangle(zoomSize);
 
 // Item creation, to be used on index.js
-function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null, offsetX = 0, offsetY = 0) {
+function createItem(directory, posX, posY, imgScale, imgRotation) {
   var item = {
     image: directory,
     position: {
@@ -19,12 +19,47 @@ function createItem(directory, posX, posY, imgScale, imgRotation, zoom = null, o
     },
     scale: imgScale,
     rotation: (Math.PI / 180) * imgRotation,
-    zoomImage: zoom,
-    zoomOffsetX: offsetX,
-    zoomOffsetY: offsetY,
+    zoomImage: null,
+    zoomOffsetX: 0,
+    zoomOffsetY: 0,
+    calloutTab: [
+      {
+        title: null,
+        content: null
+      },
+      {
+        title: null,
+        content: null
+      },
+      {
+        title: null,
+        content: null
+      }
+    ],
     sceneChange: null
   };
   return item;
+}
+
+function AddZoomEvent(gameItem, zoom, offsetX = 0, offsetY = 0) {
+  gameItem.zoomImage = zoom;
+  gameItem.zoomOffsetX = offsetX;
+  gameItem.zoomOffsetY = offsetY;
+}
+
+function AddCalloutEvent(gameItem, tab1Title, tab1Content, tab2Title, tab2Content, tab3Title, tab3Content) {
+  gameItem.calloutTab[0].title = tab1Title;
+  console.log(gameItem.calloutTab[0].title);
+  gameItem.calloutTab[0].content = tab1Content;
+  console.log(gameItem.calloutTab[0].content);
+  gameItem.calloutTab[1].title = tab2Title;
+  console.log(gameItem.calloutTab[1].title);
+  gameItem.calloutTab[1].content = tab2Content;
+  console.log(gameItem.calloutTab[1].content);
+  gameItem.calloutTab[2].title = tab3Title;
+  console.log(gameItem.calloutTab[2].title);
+  gameItem.calloutTab[2].content = tab3Content;
+  console.log(gameItem.calloutTab[2].content);
 }
 
 // Scene change, to be used on index.js
