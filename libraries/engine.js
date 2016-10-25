@@ -1,5 +1,22 @@
 'use strict';
 
+var GameImage = function(texture) { // Game Image object
+  PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
+  this.setPosition = function(coordX, coordY) { // New function to game_image
+    console.log(this.x);
+    console.log(this.y);
+  }
+}
+GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
+GameImage.prototype.constructor = GameImage;
+
+/*var newType = function() {
+  this.theType = "newType";
+}
+newType.prototype = Object.create(PIXI.Sprite.prototype);
+var backgroundImage = new newType(resources[scene[i].backgroundImage].texture);
+console.log(backgroundImage);*/
+
 // Scene array to be filled on index.js
 var scene = [];
 var activeScene = 0;
@@ -101,39 +118,19 @@ function addImageToArray(array, directory) {
 
 function loadSpritesFromTextures() {
   for (var i = 0; i < scene.length; i++) {
-
-    scene[i].backgroundImage = new PIXI.Sprite(resources[scene[i].backgroundImage].texture);
-    scene[i].backgroundImage.interactive = true;
+    var backgroundImage = new GameImage(resources[scene[i].backgroundImage].texture);
+    backgroundImage.setPosition(10, 20);
+    /*scene[i].backgroundImage.interactive = true;
     scene[i].backgroundImage.click = function(evt) {
       HideZoom();
       if (showCoordinates) {
         var mousePosition = evt.data.getLocalPosition(stage);
         console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
       }
-    };
-
-    for (var j = 0; j < scene[i].item.length; j++) {
-      scene[i].item[j].image = new PIXI.Sprite(resources[scene[i].item[j].image].texture);
-      scene[i].item[j].image.x = scene[i].item[j].position.x;
-      scene[i].item[j].image.y = scene[i].item[j].position.y;
-      scene[i].item[j].image.anchor.set(0.5, 0.5);
-      scene[i].item[j].image.scale.set(scene[i].item[j].scale, scene[i].item[j].scale);
-      scene[i].item[j].image.rotation = scene[i].item[j].rotation;
-      if (scene[i].item[j].sceneChange != null) {
-        AddClickChangeSceneEvent(scene[i].item[j]);
-      }
-      if (scene[i].item[j].zoomImage) {
-        scene[i].item[j].zoomImage = new PIXI.Sprite(resources[scene[i].item[j].zoomImage].texture);
-        scene[i].item[j].zoomImage.anchor.set(0.5, 0.5);
-        scene[i].item[j].zoomImage.height = 2*zoomSize;
-        scene[i].item[j].zoomImage.width = 2*zoomSize;
-        scene[i].item[j].zoomImage.visible = false;
-        AddClickShowZoomEvent(scene[i].item[j]);
-      }
-    }
+    };*/
   }
 
-  UpdateScreen();
+  //UpdateScreen();
 }
 
 function HideZoom() {
