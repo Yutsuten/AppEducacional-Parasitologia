@@ -3,28 +3,30 @@
 var GameImage = function(texture) { // Game Image object
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
   this.setPosition = function(coordX, coordY) { // New function to game_image
-    console.log(this.x);
-    console.log(this.y);
+    this.x = coordX;
+    this.y = coordY;
+  }
+  this.setScale = function(newScale) {
+    this.scale.set(newScale, newScale);
+  }
+  this.setAlpha = function(newAlpha) {
+    this.alpha = newAlpha;
+  }
+  this.setDarkness = function(newDarkness) {
+    this.tint = 1118481 * (15 - newDarkness);
+  }
+  this.setVisibility = function(newVisibility) {
+    this.visible = newVisibility;
   }
 }
 GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
 GameImage.prototype.constructor = GameImage;
 
-/*var newType = function() {
-  this.theType = "newType";
+
+
+function loadImages(imagesArray, callbackFunction) {
+  loader.add(imagesArray).load(callbackFunction);
 }
-newType.prototype = Object.create(PIXI.Sprite.prototype);
-var backgroundImage = new newType(resources[scene[i].backgroundImage].texture);
-console.log(backgroundImage);*/
-
-// Scene array to be filled on index.js
-var scene = [];
-var activeScene = 0;
-var showCoordinates = true;
-
-var glowFilter = new PIXI.filters.GlowFilter(renderer.width, renderer.height, 20, 2, 1, 0xFFFFFF, 0.5);
-var zoomSize = 120;
-var zoomTriangle = CreateTriangle(zoomSize);
 
 // Item creation, to be used on index.js
 function createItem(directory, posX, posY, imgScale, imgRotation) {
@@ -82,64 +84,6 @@ function AddCalloutEvent(gameItem, tab1Title, tab1Content, tab2Title, tab2Conten
 // Scene change, to be used on index.js
 function changeSceneEvent(gameItem, scene) {
   gameItem.sceneChange = scene;
-}
-
-// Start the application
-function start() {
-  // Load image textures
-  loader
-    .add(createImagesArray())
-    .load(loadSpritesFromTextures);
-}
-
-// Create an array with all images, without repetition
-function createImagesArray() {
-  var image = [];
-  for (var i = 0; i < scene.length; i++) {
-    image = addImageToArray(image, scene[i].backgroundImage);
-    for (var j = 0; j < scene[i].item.length; j++) {
-      image = addImageToArray(image, scene[i].item[j].image);
-      if (scene[i].item[j].zoomImage)
-        image = addImageToArray(image, scene[i].item[j].zoomImage);
-    }
-  }
-  return image;
-}
-
-function addImageToArray(array, directory) {
-  // Check if already exist
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] === directory) // Already exist
-      return array;
-  }
-  array.push(directory);
-  return array;
-}
-
-function loadSpritesFromTextures() {
-  for (var i = 0; i < scene.length; i++) {
-    var backgroundImage = new GameImage(resources[scene[i].backgroundImage].texture);
-    backgroundImage.setPosition(10, 20);
-    /*scene[i].backgroundImage.interactive = true;
-    scene[i].backgroundImage.click = function(evt) {
-      HideZoom();
-      if (showCoordinates) {
-        var mousePosition = evt.data.getLocalPosition(stage);
-        console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-      }
-    };*/
-  }
-
-  //UpdateScreen();
-}
-
-function HideZoom() {
-  zoomTriangle.visible = false;
-  for (var i = 0; i < scene.length; i++)
-    for (var j = 0; j < scene[i].item.length; j++)
-      if (scene[i].item[j].zoomImage)
-        scene[i].item[j].zoomImage.visible = false;
-  UpdateScreen();
 }
 
 function CreateTriangle(size) {
@@ -232,27 +176,3 @@ function UpdateScreen() {
   // Render 'em all
   renderer.render(stage);
 }
-
-/*var i = 0;
-function play() {
-  //message.text = i;
-  stage.addChild(scene[activeScene].backgroundImage);
-  for (var i = 0; i < scene[activeScene].item.length; i++)
-    stage.addChild(scene[activeScene].item[i].image);
-}
-
-function gameLoop() {
-  requestAnimationFrame(gameLoop);
-  state();
-  renderer.render(stage);
-  meter.tick();
-}*/
-
-
-/*
-  var message = new Text(
-    "Hello Pixi!",
-    {font: "32px sans-serif", fill: "white"}
-  );
-  message.position.set(54, 96);
-}*/
