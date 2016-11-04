@@ -134,8 +134,11 @@ var GameScene = function(texture) {
 
   this.width = renderer.width;
   this.height = renderer.height;
+
   var animationDelay = 33;
   var objInstance = this;
+  var animationInterval;
+  var elapsedTime = 0, animationTime;
   var item = [];
 
   // ADD ITEM METHOD

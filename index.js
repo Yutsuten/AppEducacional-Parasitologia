@@ -11,24 +11,40 @@ var background;
 var myItem;
 function scene1setup() {
   background = new GameScene(resources["img/classroom.jpg"].texture);
-  var darkValue = 0;
-  var inc = true;
+  var isDark = false;
   background.interactive = true;
   background.click = function() {
-    console.log("Background clicked");
+    if (isDark === true) {
+      background.changeDarkness(0, 500);
+      isDark = false;
+    }
+    else {
+      background.changeDarkness(255, 500);
+      isDark = true;
+    }
   }
 
   myItem = new GameItem(resources["img/student.png"].texture);
   myItem.setPosition(300, 300);
-  //myItem.move(1000, 500, 800);
+  var moved = false;
+  myItem.interactive = true;
+  myItem.click = function() {
+    if (moved === true) {
+      myItem.move(300, 300, 800);
+      moved = false;
+    }
+    else {
+      myItem.move(1000, 500, 800);
+      moved = true;
+    }
+  }
   //setTimeout(function() {myItem.fadein(800);}, 800);
+
+  background.addItem(myItem);
 
   UpdateScreen();
 }
 
 function UpdateScreen() {
-  //background.showScene();
-  stage.addChild(background);
-  stage.addChild(myItem);
-  renderer.render(stage);
+  background.showScene();
 }
