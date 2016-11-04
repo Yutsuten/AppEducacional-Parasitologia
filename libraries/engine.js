@@ -1,6 +1,6 @@
 'use strict';
 
-var animationDelay = 34;
+var animationDelay = 33;
 
 // GameImage Class
 var GameImage = function(texture) { // Game Image object
@@ -22,11 +22,11 @@ var GameImage = function(texture) { // Game Image object
     this.visible = newVisibility;
   }
 
-  this.getDarkness = function() {
-    return 255 - (this.tint / 65793);
-  }
   this.getScale = function() {
     return this.scale.x;
+  }
+  this.getDarkness = function() {
+    return 255 - (this.tint / 65793);
   }
 }
 GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
@@ -103,6 +103,22 @@ var GameItem = function(texture) {
       }
       else {
         objInstance.setScale(newScale);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+  // MOVE METHOD
+  this.move = function(newX, newY, time) {
+    animationInitialization(time);
+    var initialPosition = { x: this.x, y: this.y};
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setPosition(initialPosition.x + ((newX - initialPosition.x) * (elapsedTime / animationTime)), initialPosition.y + ((newY - initialPosition.y) * (elapsedTime / animationTime)));
+      }
+      else {
+        objInstance.setPosition(newX, newY);
         clearInterval(animationInterval); // Stop calling itself
       }
       UpdateScreen();

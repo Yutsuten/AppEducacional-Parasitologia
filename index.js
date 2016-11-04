@@ -19,8 +19,8 @@ function scene1setup() {
   }
 
   myItem = new GameItem(resources["img/student.png"].texture);
-  myItem.setPosition(150, 150);
-  myItem.changeScale(2, 800);
+  myItem.setPosition(50, 50);
+  myItem.move(800, 200, 800);
   //setTimeout(function() {myItem.fadein(800);}, 800);
 
   UpdateScreen();
