@@ -14,7 +14,7 @@ function scene1setup() {
   var inc = true;
   setInterval(function() {
     if (inc) {
-      if (darkValue >= 15) {
+      if (darkValue >= 255) {
         darkValue -= 1;
         inc = false;
       }
@@ -30,7 +30,7 @@ function scene1setup() {
     background.setDarkness(darkValue);
     stage.addChild(background);
     renderer.render(stage);
-  }, 50);
+  }, 33);
   stage.addChild(background);
   renderer.render(stage);
 }

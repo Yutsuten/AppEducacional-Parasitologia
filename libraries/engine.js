@@ -13,7 +13,7 @@ var GameImage = function(texture) { // Game Image object
     this.alpha = newAlpha;
   }
   this.setDarkness = function(newDarkness) {
-    this.tint = 1118481 * (15 - newDarkness);
+    this.tint = 65793 * (255 - newDarkness);
   }
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
