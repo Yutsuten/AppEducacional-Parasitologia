@@ -5,6 +5,7 @@ var animationDelay = 33;
 // GameImage Class
 var GameImage = function(texture) { // Game Image object
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
+
   this.setPosition = function(coordX, coordY) { // New function to game_image
     this.x = coordX;
     this.y = coordY;
@@ -35,6 +36,7 @@ GameImage.prototype.constructor = GameImage;
 // Item Class
 var GameItem = function(texture) {
   GameImage.apply(this, arguments);
+  this.anchor.set(0.5, 0.5);
 
   var objInstance = this;
   var animationInterval;
