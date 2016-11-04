@@ -1,5 +1,8 @@
 'use strict';
 
+var animationDelay = 34;
+
+// GameImage Class
 var GameImage = function(texture) { // Game Image object
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
   this.setPosition = function(coordX, coordY) { // New function to game_image
@@ -22,7 +25,32 @@ var GameImage = function(texture) { // Game Image object
 GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
 GameImage.prototype.constructor = GameImage;
 
+// Item Class
+var GameItem = function(texture) {
+  GameImage.apply(this, arguments);
 
+  var instance = this;
+  var animationInterval;
+  var elapsedTime = 0, animationTime;
+
+  this.fadeout = function(animationTime) {
+    this.elapsedTime = 0;
+    this.animationTime = animationTime;
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        instance.setAlpha(1 - (elapsedTime / animationTime));
+      }
+      else {
+        instance.setAlpha(0);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+}
+GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
+GameItem.prototype.constructor = GameItem;
 
 function loadImages(imagesArray, callbackFunction) {
   loader.add(imagesArray).load(callbackFunction);
@@ -110,7 +138,7 @@ function AddEvent(item) {
   };
   item.image.mouseout = function(evt) {
     item.image.filters = null;
-    UpdateScreen();
+    //UpdateScreen();
   };
 }
 
@@ -121,7 +149,7 @@ function AddClickChangeSceneEvent(item) {
     audio.play();*/
     HideZoom();
     activeScene = item.sceneChange;
-    UpdateScreen();
+    //UpdateScreen();
   };
 }
 
@@ -151,28 +179,6 @@ function AddClickShowZoomEvent(item) {
       item.zoomImage.visible = true;
     }
     zoomTriangle.visible = true;
-    UpdateScreen();
+    //UpdateScreen();
   };
-}
-
-function UpdateScreen() {
-  // Draw Background
-  stage.addChild(scene[activeScene].backgroundImage);
-
-  // Draw Items
-  for (var i = 0; i < scene[activeScene].item.length; i++) {
-    stage.addChild(scene[activeScene].item[i].image);
-  }
-
-  // Draw zoom's Triangle
-  stage.addChild(zoomTriangle);
-
-  // Draw zoom's Image
-  for (var i = 0; i < scene[activeScene].item.length; i++) {
-    if (scene[activeScene].item[i].zoomImage != null)
-      stage.addChild(scene[activeScene].item[i].zoomImage);
-  }
-
-  // Render 'em all
-  renderer.render(stage);
 }
