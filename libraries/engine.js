@@ -29,25 +29,45 @@ GameImage.prototype.constructor = GameImage;
 var GameItem = function(texture) {
   GameImage.apply(this, arguments);
 
-  var instance = this;
+  var objInstance = this;
   var animationInterval;
   var elapsedTime = 0, animationTime;
 
-  this.fadeout = function(animationTime) {
-    this.elapsedTime = 0;
-    this.animationTime = animationTime;
+  // FADEIN METHOD
+  this.fadein = function(time) {
+    elapsedTime = 0;
+    animationTime = time;
+    clearInterval(animationInterval); // Cancel if there is another animation
     animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
-        instance.setAlpha(1 - (elapsedTime / animationTime));
+        objInstance.setAlpha(elapsedTime / animationTime);
       }
       else {
-        instance.setAlpha(0);
+        objInstance.setAlpha(1);
         clearInterval(animationInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
   }
+  // FADEOUT METHOD
+  this.fadeout = function(time) {
+    elapsedTime = 0;
+    animationTime = time;
+    clearInterval(animationInterval); // Cancel if there is another animation
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setAlpha(1 - (elapsedTime / animationTime));
+      }
+      else {
+        objInstance.setAlpha(0);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+
 }
 GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
 GameItem.prototype.constructor = GameItem;
