@@ -1,7 +1,5 @@
 'use strict';
 
-var animationDelay = 33;
-
 // GameImage Class
 var GameImage = function(texture) { // Game Image object
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
@@ -38,6 +36,7 @@ var GameItem = function(texture) {
   GameImage.apply(this, arguments);
   this.anchor.set(0.5, 0.5);
 
+  var animationDelay = 33;
   var objInstance = this;
   var animationInterval;
   var elapsedTime = 0, animationTime;
@@ -129,6 +128,49 @@ var GameItem = function(texture) {
 }
 GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
 GameItem.prototype.constructor = GameItem;
+
+var GameScene = function(texture) {
+  GameImage.apply(this, arguments);
+
+  this.width = renderer.width;
+  this.height = renderer.height;
+  var animationDelay = 33;
+  var objInstance = this;
+  var item = [];
+
+  // ADD ITEM METHOD
+  this.addItem = function(newItem) {
+    item.push(newItem);
+  }
+  // CHANGE DARKNESS METHOD
+  this.changeDarkness = function(newDarkness, time) {
+    elapsedTime = 0;
+    animationTime = time;
+    clearInterval(animationInterval); // Cancel if there is another animation
+    var initialDarkness = objInstance.getDarkness();
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setDarkness(initialDarkness + Math.round((newDarkness - initialDarkness) * (elapsedTime / animationTime)));
+      }
+      else {
+        objInstance.setDarkness(newDarkness);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+  // SHOW SCENE METHOD
+  this.showScene = function() {
+    stage.addChild(this);
+    for (var i = 0; i < item.length; i++)
+      stage.addChild(item[i]);
+    renderer.render(stage);
+  }
+}
+GameScene.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
+GameScene.prototype.constructor = GameScene;
+
 
 function loadImages(imagesArray, callbackFunction) {
   loader.add(imagesArray).load(callbackFunction);
