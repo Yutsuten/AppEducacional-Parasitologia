@@ -21,6 +21,10 @@ var GameImage = function(texture) { // Game Image object
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
   }
+
+  this.getDarkness = function() {
+    return 255 - (this.tint / 65793);
+  }
 }
 GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
 GameImage.prototype.constructor = GameImage;
@@ -33,11 +37,15 @@ var GameItem = function(texture) {
   var animationInterval;
   var elapsedTime = 0, animationTime;
 
-  // FADEIN METHOD
-  this.fadein = function(time) {
+  function animationInitialization(time) {
     elapsedTime = 0;
     animationTime = time;
     clearInterval(animationInterval); // Cancel if there is another animation
+  }
+
+  // FADEIN METHOD
+  this.fadein = function(time) {
+    animationInitialization(time);
     animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -52,9 +60,7 @@ var GameItem = function(texture) {
   }
   // FADEOUT METHOD
   this.fadeout = function(time) {
-    elapsedTime = 0;
-    animationTime = time;
-    clearInterval(animationInterval); // Cancel if there is another animation
+    animationInitialization(time);
     animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -67,7 +73,23 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
-
+  // CHANGE DARKNESS METHOD
+  this.changeDarkness = function(newDarkness, time) {
+    animationInitialization(time);
+    var initialDarkness = objInstance.getDarkness();
+    var currentDarkness = initialDarkness;
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setDarkness(initialDarkness + Math.round((newDarkness - initialDarkness) * (elapsedTime / animationTime)));
+      }
+      else {
+        objInstance.setDarkness(newDarkness);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
 }
 GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
 GameItem.prototype.constructor = GameItem;

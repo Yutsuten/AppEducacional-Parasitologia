@@ -20,8 +20,8 @@ function scene1setup() {
 
   myItem = new GameItem(resources["img/student.png"].texture);
   myItem.setPosition(150, 150);
-  myItem.fadeout(800);
-  setTimeout(function() {myItem.fadein(800);}, 800);
+  myItem.changeDarkness(200, 800);
+  //setTimeout(function() {myItem.fadein(800);}, 800);
 
   UpdateScreen();
 }
