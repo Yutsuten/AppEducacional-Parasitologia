@@ -25,6 +25,9 @@ var GameImage = function(texture) { // Game Image object
   this.getDarkness = function() {
     return 255 - (this.tint / 65793);
   }
+  this.getScale = function() {
+    return this.scale.x;
+  }
 }
 GameImage.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite
 GameImage.prototype.constructor = GameImage;
@@ -77,7 +80,6 @@ var GameItem = function(texture) {
   this.changeDarkness = function(newDarkness, time) {
     animationInitialization(time);
     var initialDarkness = objInstance.getDarkness();
-    var currentDarkness = initialDarkness;
     animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -85,6 +87,22 @@ var GameItem = function(texture) {
       }
       else {
         objInstance.setDarkness(newDarkness);
+        clearInterval(animationInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+  // CHANGE SCALE METHOD
+  this.changeScale = function(newScale, time) {
+    animationInitialization(time);
+    var initialScale = objInstance.getScale();
+    animationInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setScale(initialScale + ((newScale - initialScale) * (elapsedTime / animationTime)));
+      }
+      else {
+        objInstance.setScale(newScale);
         clearInterval(animationInterval); // Stop calling itself
       }
       UpdateScreen();
