@@ -24,6 +24,7 @@ var GameItem = function(texture) {
         objInstance.setAlpha(elapsedTime / animationTime);
       }
       else {
+        objInstance.interactive = true;
         objInstance.setAlpha(1);
         clearInterval(fadeinInterval); // Stop calling itself
       }
@@ -33,6 +34,8 @@ var GameItem = function(texture) {
 
   // FADEOUT METHOD
   this.fadeout = function(time) {
+    objInstance.interactive = false;
+    objInstance.filters = null;
     animationInitialization(time);
     var fadeoutInterval = setInterval( function() {
       elapsedTime += animationDelay;
@@ -109,6 +112,12 @@ var GameItem = function(texture) {
       objInstance.filters = null;
       UpdateScreen();
     };
+  }
+
+  // DISABLE ITEM METHOD
+  this.disable = function() {
+    this.setAlpha(0);
+    this.interactive = false;
   }
 
 }

@@ -38,28 +38,47 @@ function scene1setup() {
     digestiveSystem.fadein(600);
     banana.move(1287, 273, 600);
     banana.changeScale(3, 600);
+    closeButton.fadein(600);
     background.changeDarkness(230, 600);
   }
 
   var shit = new GameItem(resources["img/shit.png"].texture);
   shit.setPosition(1308, 773);
-  shit.setAlpha(0);
+  shit.disable();
+  shit.addGlowEffect();
   shit.click = function(mouse) {
     console.log("Clicked on shit");
   }
 
   var digestiveSystem = new GameItem(resources["img/digestive-system.png"].texture);
   digestiveSystem.setPosition(480, 530);
-  digestiveSystem.setAlpha(0);
+  digestiveSystem.disable();
+  digestiveSystem.addGlowEffect();
   digestiveSystem.setScale(1.3);
   digestiveSystem.click = function(mouse) {
     console.log("Clicked on digestiveSystem");
+  }
+
+  var closeButton = new GameItem(resources["img/close.png"].texture);
+  closeButton.setPosition(1840, 65);
+  closeButton.disable();
+  closeButton.addGlowEffect();
+  closeButton.click = function(mouse) {
+    console.log("Clicked on close button");
+    student.fadein(600);
+    shit.fadeout(600);
+    digestiveSystem.fadeout(600);
+    banana.move(759, 648, 600);
+    banana.changeScale(1, 600);
+    closeButton.fadeout(600);
+    background.changeDarkness(0, 600);
   }
 
   background.addItem(student);
   background.addItem(banana);
   background.addItem(shit);
   background.addItem(digestiveSystem);
+  background.addItem(closeButton);
 
   UpdateScreen();
 }
