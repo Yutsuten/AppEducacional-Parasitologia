@@ -8,26 +8,24 @@ var GameItem = function(texture) {
 
   var animationDelay = 33;
   var objInstance = this;
-  var animationInterval;
   var elapsedTime = 0, animationTime;
 
   function animationInitialization(time) {
     elapsedTime = 0;
     animationTime = time;
-    clearInterval(animationInterval); // Cancel if there is another animation
   }
 
   // FADEIN METHOD
   this.fadein = function(time) {
     animationInitialization(time);
-    animationInterval = setInterval( function() {
+    var fadeinInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setAlpha(elapsedTime / animationTime);
       }
       else {
         objInstance.setAlpha(1);
-        clearInterval(animationInterval); // Stop calling itself
+        clearInterval(fadeinInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
@@ -36,14 +34,14 @@ var GameItem = function(texture) {
   // FADEOUT METHOD
   this.fadeout = function(time) {
     animationInitialization(time);
-    animationInterval = setInterval( function() {
+    var fadeoutInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setAlpha(1 - (elapsedTime / animationTime));
       }
       else {
         objInstance.setAlpha(0);
-        clearInterval(animationInterval); // Stop calling itself
+        clearInterval(fadeoutInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
@@ -53,14 +51,14 @@ var GameItem = function(texture) {
   this.changeDarkness = function(newDarkness, time) {
     animationInitialization(time);
     var initialDarkness = objInstance.getDarkness();
-    animationInterval = setInterval( function() {
+    var changeDarknessInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setDarkness(initialDarkness + Math.round((newDarkness - initialDarkness) * (elapsedTime / animationTime)));
       }
       else {
         objInstance.setDarkness(newDarkness);
-        clearInterval(animationInterval); // Stop calling itself
+        clearInterval(changeDarknessInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
@@ -70,14 +68,14 @@ var GameItem = function(texture) {
   this.changeScale = function(newScale, time) {
     animationInitialization(time);
     var initialScale = objInstance.getScale();
-    animationInterval = setInterval( function() {
+    var changeScaleInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setScale(initialScale + ((newScale - initialScale) * (elapsedTime / animationTime)));
       }
       else {
         objInstance.setScale(newScale);
-        clearInterval(animationInterval); // Stop calling itself
+        clearInterval(changeScaleInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
@@ -87,14 +85,14 @@ var GameItem = function(texture) {
   this.move = function(newX, newY, time) {
     animationInitialization(time);
     var initialPosition = { x: this.x, y: this.y};
-    animationInterval = setInterval( function() {
+    var moveInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setPosition(initialPosition.x + ((newX - initialPosition.x) * (elapsedTime / animationTime)), initialPosition.y + ((newY - initialPosition.y) * (elapsedTime / animationTime)));
       }
       else {
         objInstance.setPosition(newX, newY);
-        clearInterval(animationInterval); // Stop calling itself
+        clearInterval(moveInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
