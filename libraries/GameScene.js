@@ -3,6 +3,7 @@
 var GameScene = function(texture) {
   GameImage.apply(this, arguments);
 
+  this.interactive = true;
   this.width = renderer.width;
   this.height = renderer.height;
 

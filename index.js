@@ -12,7 +12,6 @@ var myItem;
 function scene1setup() {
   background = new GameScene(resources["img/classroom.jpg"].texture);
   var isDark = false;
-  background.interactive = true;
   background.click = function() {
     if (isDark === true) {
       background.changeDarkness(0, 500);
