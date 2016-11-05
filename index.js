@@ -27,7 +27,7 @@ function scene1setup() {
   myItem = new GameItem(resources["img/student.png"].texture);
   myItem.setPosition(300, 300);
   var moved = false;
-  addGlowEffect(myItem);
+  myItem.addGlowEffect();
   myItem.click = function() {
     if (moved === true) {
       myItem.move(300, 300, 800);

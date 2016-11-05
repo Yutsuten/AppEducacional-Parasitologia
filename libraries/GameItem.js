@@ -100,6 +100,19 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
+  // ADD GLOE EFFECT ON MOUSE OVER METHOD
+  this.addGlowEffect = function() {
+    objInstance.mouseover = function(evt) {
+      // viewWidth, viewHeight, outerStrength, innerStrength, ??, color, quality
+      objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 18, 3, 0.5, 0xFFFFFF, 0.3)];
+      UpdateScreen();
+    };
+    objInstance.mouseout = function(evt) {
+      objInstance.filters = null;
+      UpdateScreen();
+    };
+  }
+
 }
 
 GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
