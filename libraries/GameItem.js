@@ -2,6 +2,8 @@
 
 var GameItem = function(texture) {
   GameImage.apply(this, arguments);
+
+  this.interactive = true;
   this.anchor.set(0.5, 0.5);
 
   var animationDelay = 33;
@@ -30,6 +32,7 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
+
   // FADEOUT METHOD
   this.fadeout = function(time) {
     animationInitialization(time);
@@ -45,6 +48,7 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
+
   // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
     animationInitialization(time);
@@ -61,6 +65,7 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
+
   // CHANGE SCALE METHOD
   this.changeScale = function(newScale, time) {
     animationInitialization(time);
@@ -77,6 +82,7 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
+
   // MOVE METHOD
   this.move = function(newX, newY, time) {
     animationInitialization(time);
@@ -93,6 +99,7 @@ var GameItem = function(texture) {
       UpdateScreen();
     }, animationDelay);
   }
+
 }
 
 GameItem.prototype = Object.create(GameImage.prototype); // Inherance from PIXI.Sprite
