@@ -1,6 +1,7 @@
 'use strict';
 
 var GameImage = function(texture) { // Game Image object
+  arguments[0] = resources[arguments[0]].texture;
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
 
   this.setPosition = function(coordX, coordY) { // New function to game_image

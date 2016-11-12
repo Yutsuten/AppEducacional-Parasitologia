@@ -15,19 +15,19 @@ loadImages(scene1images, scene1setup);
 
 var background;
 function scene1setup() {
-  background = new GameScene(resources["img/classroom.jpg"].texture);
+  background = new GameScene("img/classroom.jpg");
   background.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
     console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
-  var student = new GameItem(resources["img/student.png"].texture);
+  var student = new GameItem("img/student.png");
   student.setPosition(480, 740);
   student.click = function(mouse) {
     console.log("Clicked on student");
   }
 
-  var banana = new GameItem(resources["img/banana.png"].texture);
+  var banana = new GameItem("img/banana.png");
   banana.setPosition(759, 648);
   banana.addGlowEffect();
   banana.click = function(mouse) {
@@ -37,13 +37,13 @@ function scene1setup() {
       student.fadeout(600);
       shit.fadein(600);
       digestiveSystem.fadein(600);
-      banana.move(1287, 273, 2000);
-      banana.changeScale(3, 2000);
+      banana.move(1287, 273, 600);
+      banana.changeScale(3, 600);
       closeButton.fadein(600);
     }, 800);
   }
 
-  var shit = new GameItem(resources["img/shit.png"].texture);
+  var shit = new GameItem("img/shit.png");
   shit.setPosition(1308, 773);
   shit.disable();
   shit.addGlowEffect();
@@ -51,7 +51,7 @@ function scene1setup() {
     console.log("Clicked on shit");
   }
 
-  var digestiveSystem = new GameItem(resources["img/digestive-system.png"].texture);
+  var digestiveSystem = new GameItem("img/digestive-system.png");
   digestiveSystem.setPosition(480, 530);
   digestiveSystem.disable();
   digestiveSystem.addGlowEffect();
@@ -60,7 +60,7 @@ function scene1setup() {
     console.log("Clicked on digestiveSystem");
   }
 
-  var closeButton = new GameItem(resources["img/close.png"].texture);
+  var closeButton = new GameItem("img/close.png");
   closeButton.setPosition(1840, 65);
   closeButton.disable();
   closeButton.addGlowEffect();
