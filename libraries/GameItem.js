@@ -6,18 +6,32 @@ var GameItem = function(texture) {
   this.interactive = true;
   this.anchor.set(0.5, 0.5);
 
-  var animationDelay = 33;
+  var animationDelay = 33; // delay between frames
   var objInstance = this;
-  var elapsedTime = 0, animationTime;
 
-  function animationInitialization(time) {
-    elapsedTime = 0;
-    animationTime = time;
+  GameItem.isAnimating = false;
+  var interactiveValue = objInstance.interactive;
+
+  // Lock interactive feature while animating
+  function animationBegin() {
+    if (!GameItem.isAnimating) {
+      GameItem.isAnimating = true;
+      objInstance.filters = null;
+    }
+  }
+
+  // Unlock interactive feature
+  function animationEnd() {
+    objInstance.interactive = interactiveValue;
+    GameItem.isAnimating = false;
   }
 
   // FADEIN METHOD
   this.fadein = function(time) {
-    animationInitialization(time);
+    var elapsedTime = 0;
+    var animationTime = time;
+    objInstance.interactive = false;
+    objInstance.filters = null;
     var fadeinInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -34,9 +48,10 @@ var GameItem = function(texture) {
 
   // FADEOUT METHOD
   this.fadeout = function(time) {
+    var elapsedTime = 0;
+    var animationTime = time;
     objInstance.interactive = false;
     objInstance.filters = null;
-    animationInitialization(time);
     var fadeoutInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -52,8 +67,11 @@ var GameItem = function(texture) {
 
   // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
-    animationInitialization(time);
+    var elapsedTime = 0;
+    var animationTime = time;
     var initialDarkness = objInstance.getDarkness();
+    var interactiveValue = objInstance.interactive;
+    animationBegin();
     var changeDarknessInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -62,6 +80,7 @@ var GameItem = function(texture) {
       else {
         objInstance.setDarkness(newDarkness);
         clearInterval(changeDarknessInterval); // Stop calling itself
+        animationEnd();
       }
       UpdateScreen();
     }, animationDelay);
@@ -69,8 +88,10 @@ var GameItem = function(texture) {
 
   // CHANGE SCALE METHOD
   this.changeScale = function(newScale, time) {
-    animationInitialization(time);
+    var elapsedTime = 0;
+    var animationTime = time;
     var initialScale = objInstance.getScale();
+    animationBegin();
     var changeScaleInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -79,6 +100,7 @@ var GameItem = function(texture) {
       else {
         objInstance.setScale(newScale);
         clearInterval(changeScaleInterval); // Stop calling itself
+        animationEnd();
       }
       UpdateScreen();
     }, animationDelay);
@@ -86,8 +108,10 @@ var GameItem = function(texture) {
 
   // MOVE METHOD
   this.move = function(newX, newY, time) {
-    animationInitialization(time);
+    var elapsedTime = 0;
+    var animationTime = time;
     var initialPosition = { x: this.x, y: this.y};
+    animationBegin();
     var moveInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -96,6 +120,8 @@ var GameItem = function(texture) {
       else {
         objInstance.setPosition(newX, newY);
         clearInterval(moveInterval); // Stop calling itself
+        objInstance.interactive = interactiveValue;
+        animationEnd();
       }
       UpdateScreen();
     }, animationDelay);
@@ -104,9 +130,11 @@ var GameItem = function(texture) {
   // ADD GLOE EFFECT ON MOUSE OVER METHOD
   this.addGlowEffect = function() {
     objInstance.mouseover = function(evt) {
-      // viewWidth, viewHeight, outerStrength, innerStrength, ??, color, quality
-      objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 18, 3, 0.5, 0xFFFFFF, 0.3)];
-      UpdateScreen();
+      if (!GameItem.isAnimating) {
+        // viewWidth, viewHeight, outerStrength, innerStrength, ??, color, quality
+        objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 18, 3, 0.5, 0xFFFFFF, 0.3)];
+        UpdateScreen();
+      }
     };
     objInstance.mouseout = function(evt) {
       objInstance.filters = null;

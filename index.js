@@ -26,7 +26,6 @@ function scene1setup() {
   student.click = function(mouse) {
     console.log("Clicked on student");
   }
-  //
 
   var banana = new GameItem(resources["img/banana.png"].texture);
   banana.setPosition(759, 648);
@@ -38,8 +37,8 @@ function scene1setup() {
       student.fadeout(600);
       shit.fadein(600);
       digestiveSystem.fadein(600);
-      banana.move(1287, 273, 600);
-      banana.changeScale(3, 600);
+      banana.move(1287, 273, 2000);
+      banana.changeScale(3, 2000);
       closeButton.fadein(600);
     }, 800);
   }
