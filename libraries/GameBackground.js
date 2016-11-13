@@ -10,6 +10,45 @@ var GameBackground = function(texture) {
   var animationDelay = 33;
   var objInstance = this;
 
+  // FADEIN METHOD
+  this.fadein = function(time) {
+    var elapsedTime = 0;
+    var animationTime = time;
+    objInstance.interactive = false;
+    objInstance.filters = null;
+    var fadeinInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setAlpha(elapsedTime / animationTime);
+      }
+      else {
+        objInstance.interactive = true;
+        objInstance.setAlpha(1);
+        clearInterval(fadeinInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+
+  // FADEOUT METHOD
+  this.fadeout = function(time) {
+    var elapsedTime = 0;
+    var animationTime = time;
+    objInstance.interactive = false;
+    objInstance.filters = null;
+    var fadeoutInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < animationTime) {
+        objInstance.setAlpha(1 - (elapsedTime / animationTime));
+      }
+      else {
+        objInstance.setAlpha(0);
+        clearInterval(fadeoutInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+
   // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
     var elapsedTime = 0;
