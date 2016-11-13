@@ -9,16 +9,14 @@ var GameBackground = function(texture) {
 
   var animationDelay = 33;
   var objInstance = this;
-  var animationInterval;
-  var elapsedTime = 0, animationTime;
 
   // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
-    elapsedTime = 0;
-    animationTime = time;
+    var elapsedTime = 0;
+    var animationTime = time;
     clearInterval(animationInterval); // Cancel if there is another animation
     var initialDarkness = objInstance.getDarkness();
-    animationInterval = setInterval( function() {
+    var animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
         objInstance.setDarkness(initialDarkness + Math.round((newDarkness - initialDarkness) * (elapsedTime / animationTime)));
