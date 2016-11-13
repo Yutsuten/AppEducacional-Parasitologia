@@ -2,6 +2,7 @@
 
 var scene1images = [
   "img/classroom.jpg",
+  "img/classroom2.jpg",
   "img/student.png",
   "img/banana.png",
   "img/close.png",
@@ -13,10 +14,19 @@ var scene1images = [
 ];
 loadImages(scene1images, scene1setup);
 
-var background;
+var scene1;
 function scene1setup() {
-  background = new GameScene("img/classroom.jpg");
-  background.click = function(mouse) {
+
+  scene1 = new GameScene();
+
+  var classroom = new GameBackground("img/classroom.jpg");
+  classroom.click = function(mouse) {
+    var mousePosition = mouse.data.getLocalPosition(stage);
+    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
+  }
+
+  var classroom2 = new GameBackground("img/classroom2.jpg");
+  classroom2.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
     console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
@@ -32,7 +42,7 @@ function scene1setup() {
   banana.addGlowEffect();
   banana.click = function(mouse) {
     console.log("Clicked on banana");
-    background.changeDarkness(200, 600);
+    classroom.changeDarkness(200, 600);
     setTimeout(function() {
       student.fadeout(600);
       shit.fadein(600);
@@ -72,18 +82,21 @@ function scene1setup() {
     banana.move(759, 648, 600);
     banana.changeScale(1, 600);
     closeButton.fadeout(600);
-    background.changeDarkness(0, 600);
+    classroom.changeDarkness(0, 600);
+    //scene1.changeBackground(1);
   }
 
-  background.addItem(student);
-  background.addItem(banana);
-  background.addItem(shit);
-  background.addItem(digestiveSystem);
-  background.addItem(closeButton);
+  scene1.addBackground(classroom);
+  scene1.addBackground(classroom2);
+  scene1.addItem(student);
+  scene1.addItem(banana);
+  scene1.addItem(shit);
+  scene1.addItem(digestiveSystem);
+  scene1.addItem(closeButton);
 
   UpdateScreen();
 }
 
 function UpdateScreen() {
-  background.showScene();
+  scene1.showScene();
 }
