@@ -41,6 +41,7 @@ function scene1setup() {
     console.log("Clicked on student");
 
     customText.fadein(600);
+    playMusic("audio/99spirits-crushingevil&spreadingthetruth.m4a");
   }
 
   var banana = new GameItem("img/banana.png");
@@ -56,6 +57,8 @@ function scene1setup() {
       banana.move(1287, 273, 600);
       banana.changeScale(3, 600);
       closeButton.fadein(600);
+
+      playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a")
     }, 800);
   }
 
@@ -65,6 +68,7 @@ function scene1setup() {
   shit.addGlowEffect();
   shit.click = function(mouse) {
     console.log("Clicked on shit");
+    playSoundEffect("audio/explosion.wav");
   }
 
   var digestiveSystem = new GameItem("img/digestive-system.png");
@@ -74,6 +78,7 @@ function scene1setup() {
   digestiveSystem.setScale(1.3);
   digestiveSystem.click = function(mouse) {
     console.log("Clicked on digestiveSystem");
+    playSoundEffect("audio/explosion.wav");
   }
 
   var closeButton = new GameItem("img/close.png");
