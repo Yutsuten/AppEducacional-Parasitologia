@@ -25,6 +25,10 @@ function scene1setup() {
     console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
+  var customText = new GameText("Hello World!!\nHow are you?", {font: "60px Arial", fill: 0x000000, align: "left"});
+  customText.setPosition(700, 50);
+  customText.setAlpha(0);
+
   var classroom2 = new GameBackground("img/classroom2.jpg");
   classroom2.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
@@ -35,6 +39,8 @@ function scene1setup() {
   student.setPosition(480, 740);
   student.click = function(mouse) {
     console.log("Clicked on student");
+
+    customText.fadein(600);
   }
 
   var banana = new GameItem("img/banana.png");
@@ -88,6 +94,7 @@ function scene1setup() {
 
   scene1.addBackground(classroom);
   scene1.addBackground(classroom2);
+  scene1.addItem(customText);
   scene1.addItem(student);
   scene1.addItem(banana);
   scene1.addItem(shit);
