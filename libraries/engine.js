@@ -4,6 +4,16 @@ var gameMusic = null;
 var gameSound = null;
 
 var scene = [];
+var currentScene = 0;
+
+function changeScene(newScene) {
+  currentScene = newScene;
+  UpdateScreen();
+}
+
+function UpdateScreen() {
+  scene[currentScene].showScene();
+}
 
 function loadImages(imagesArray, callbackFunction) {
   loader.add(imagesArray).load(callbackFunction);

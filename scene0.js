@@ -96,6 +96,14 @@ function scene0setup() {
     //scene[0].changeBackground(1);
   }
 
+  var arrow = new GameItem("img/arrow.png");
+  arrow.setPosition(1700, 550);
+  arrow.setScale(0.5);
+  arrow.addGlowEffect();
+  arrow.click = function(mouse) {
+    changeScene(1);
+  }
+
   scene[0].addBackground(classroom);
   scene[0].addBackground(classroom2);
   scene[0].addItem(customText);
@@ -104,10 +112,7 @@ function scene0setup() {
   scene[0].addItem(shit);
   scene[0].addItem(digestiveSystem);
   scene[0].addItem(closeButton);
+  scene[0].addItem(arrow);
 
   UpdateScreen();
-}
-
-function UpdateScreen() {
-  scene[0].showScene();
 }
