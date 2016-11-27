@@ -14,9 +14,12 @@ var scene0images = [
 ];
 loadImages(scene0images, scene0setup);
 
+playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
+
 function scene0setup() {
 
   scene[0] = new GameScene();
+  scene[0].setMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
 
   var classroom = new GameBackground("img/classroom.jpg");
   classroom.click = function(mouse) {
@@ -40,7 +43,6 @@ function scene0setup() {
     console.log("Clicked on student");
 
     customText.fadein(600);
-    playMusic("audio/99spirits-crushingevil&spreadingthetruth.m4a");
   }
 
   var banana = new GameItem("img/banana.png");
@@ -56,8 +58,6 @@ function scene0setup() {
       banana.move(1287, 273, 600);
       banana.changeScale(3, 600);
       closeButton.fadein(600);
-
-      playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a")
     }, 800);
   }
 
@@ -94,6 +94,7 @@ function scene0setup() {
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
     //scene[0].changeBackground(1);
+    pauseMusic();
   }
 
   var arrow = new GameItem("img/arrow.png");

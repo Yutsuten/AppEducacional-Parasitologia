@@ -20,6 +20,9 @@ var GameImage = function(texture) { // Game Image object
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
   }
+  this.setRotation = function(newRotation) {
+    this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
+  }
 
   this.getScale = function() {
     return this.scale.x;

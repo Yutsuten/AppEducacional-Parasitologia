@@ -5,6 +5,18 @@ var GameScene = function() {
   var background = [];
   var item = [];
   var activatedBackground = 0;
+  var music = null;
+
+  this.setMusic = function(musicDirectory) {
+    music = musicDirectory;
+  }
+
+  this.playSceneMusic = function() {
+    if (music != null)
+      playMusic(music);
+    else
+      console.log("ERROR: No music is set to this scene");
+  }
 
   // ADD BACKGROUND METHOD
   this.addBackground = function(newBackground) {

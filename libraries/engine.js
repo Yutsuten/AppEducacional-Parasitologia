@@ -8,6 +8,7 @@ var currentScene = 0;
 
 function changeScene(newScene) {
   currentScene = newScene;
+  scene[currentScene].playSceneMusic();
   UpdateScreen();
 }
 
