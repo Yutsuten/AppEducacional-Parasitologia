@@ -3,6 +3,8 @@
 var gameMusic = null;
 var gameSound = null;
 
+var scene = [];
+
 function loadImages(imagesArray, callbackFunction) {
   loader.add(imagesArray).load(callbackFunction);
 }

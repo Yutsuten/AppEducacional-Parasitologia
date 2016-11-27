@@ -1,6 +1,6 @@
 'use strict';
 
-var scene1images = [
+var scene0images = [
   "img/classroom.jpg",
   "img/classroom2.jpg",
   "img/student.png",
@@ -12,12 +12,11 @@ var scene1images = [
   "img/arrow.png",
   "img/sick-person.png"
 ];
-loadImages(scene1images, scene1setup);
+loadImages(scene0images, scene0setup);
 
-var scene1;
-function scene1setup() {
+function scene0setup() {
 
-  scene1 = new GameScene();
+  scene[0] = new GameScene();
 
   var classroom = new GameBackground("img/classroom.jpg");
   classroom.click = function(mouse) {
@@ -94,21 +93,21 @@ function scene1setup() {
     banana.changeScale(1, 600);
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
-    //scene1.changeBackground(1);
+    //scene[0].changeBackground(1);
   }
 
-  scene1.addBackground(classroom);
-  scene1.addBackground(classroom2);
-  scene1.addItem(customText);
-  scene1.addItem(student);
-  scene1.addItem(banana);
-  scene1.addItem(shit);
-  scene1.addItem(digestiveSystem);
-  scene1.addItem(closeButton);
+  scene[0].addBackground(classroom);
+  scene[0].addBackground(classroom2);
+  scene[0].addItem(customText);
+  scene[0].addItem(student);
+  scene[0].addItem(banana);
+  scene[0].addItem(shit);
+  scene[0].addItem(digestiveSystem);
+  scene[0].addItem(closeButton);
 
   UpdateScreen();
 }
 
 function UpdateScreen() {
-  scene1.showScene();
+  scene[0].showScene();
 }
