@@ -14,8 +14,6 @@ var scene0images = [
 ];
 loadImages(scene0images, scene0setup);
 
-playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
-
 function scene0setup() {
 
   scene[0] = new GameScene();
@@ -116,4 +114,7 @@ function scene0setup() {
   scene[0].addItem(arrow);
 
   UpdateScreen();
+
+  // After loading the first scene, play the music (only needed for this scene)
+  playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
 }
