@@ -15,7 +15,6 @@ var GameText = function(text, style) {
     this.alpha = newAlpha;
   }
 
-  // FADEIN METHOD
   this.fadein = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -32,7 +31,6 @@ var GameText = function(text, style) {
     }, animationDelay);
   }
 
-  // FADEOUT METHOD
   this.fadeout = function(time) {
     var elapsedTime = 0;
     var animationTime = time;

@@ -26,7 +26,6 @@ var GameItem = function(texture) {
     GameItem.isAnimating = false;
   }
 
-  // FADEIN METHOD
   this.fadein = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -46,7 +45,6 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
-  // FADEOUT METHOD
   this.fadeout = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -65,7 +63,6 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
-  // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -86,7 +83,6 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
-  // CHANGE SCALE METHOD
   this.changeScale = function(newScale, time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -106,7 +102,6 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
-  // MOVE METHOD
   this.move = function(newX, newY, time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -127,7 +122,6 @@ var GameItem = function(texture) {
     }, animationDelay);
   }
 
-  // ADD GLOE EFFECT ON MOUSE OVER METHOD
   this.addGlowEffect = function() {
     objInstance.mouseover = function(evt) {
       if (!GameItem.isAnimating) {
@@ -142,7 +136,6 @@ var GameItem = function(texture) {
     };
   }
 
-  // DISABLE ITEM METHOD
   this.disable = function() {
     this.setAlpha(0);
     this.interactive = false;

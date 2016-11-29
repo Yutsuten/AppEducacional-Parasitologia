@@ -9,7 +9,8 @@ var imagesArray = [
   "img/mosca.gif",
   "img/arrow.png",
   "img/sick-person.png",
-  "img/farm.png"
+  "img/farm.png",
+  "img/callout.png"
 ];
 
 loader.add(imagesArray).load(function() {

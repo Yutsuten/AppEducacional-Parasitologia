@@ -10,7 +10,6 @@ var GameBackground = function(texture) {
   var animationDelay = 33;
   var objInstance = this;
 
-  // FADEIN METHOD
   this.fadein = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -30,7 +29,6 @@ var GameBackground = function(texture) {
     }, animationDelay);
   }
 
-  // FADEOUT METHOD
   this.fadeout = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -49,7 +47,6 @@ var GameBackground = function(texture) {
     }, animationDelay);
   }
 
-  // CHANGE DARKNESS METHOD
   this.changeDarkness = function(newDarkness, time) {
     var elapsedTime = 0;
     var animationTime = time;
