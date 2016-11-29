@@ -1,11 +1,7 @@
 'use strict';
 
-var scene1images = [
-  "img/farm.png"
-];
-loadImages(scene1images, scene1setup);
-
-function scene1setup() {
+function loadOutsideScene() {
+  console.log("Begin loading scene 1");
 
   scene[1] = new GameScene();
   scene[1].setMusic("audio/99spirits-crushingevil&spreadingthetruth.m4a");
@@ -29,4 +25,6 @@ function scene1setup() {
   scene[1].addItem(arrow);
 
   UpdateScreen();
+
+  console.log("Finish loading scene 1");
 }

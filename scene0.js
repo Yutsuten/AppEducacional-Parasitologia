@@ -1,20 +1,7 @@
 'use strict';
 
-var scene0images = [
-  "img/classroom.jpg",
-  "img/classroom2.jpg",
-  "img/student.png",
-  "img/banana.png",
-  "img/close.png",
-  "img/shit.png",
-  "img/digestive-system.png",
-  "img/mosca.gif",
-  "img/arrow.png",
-  "img/sick-person.png"
-];
-loadImages(scene0images, scene0setup);
-
-function scene0setup() {
+function loadClassroomScene() {
+  console.log("Begin loading scene 0");
 
   scene[0] = new GameScene();
   scene[0].setMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
@@ -115,6 +102,5 @@ function scene0setup() {
 
   UpdateScreen();
 
-  // After loading the first scene, play the music (only needed for this scene)
-  playMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
+  console.log("Finish loading scene 0");
 }
