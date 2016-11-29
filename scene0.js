@@ -2,22 +2,22 @@
 
 sceneLoader[0] = function() {
 
-  scene[0] = new GameScene();
+  scene[0] = new Game.Scene();
   scene[0].setMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
 
-  var classroom = new GameBackground("img/classroom.jpg");
+  var classroom = new Game.Background("img/classroom.jpg");
   classroom.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
     console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
-  var classroom2 = new GameBackground("img/classroom2.jpg");
+  var classroom2 = new Game.Background("img/classroom2.jpg");
   classroom2.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
     console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
-  var student = new GameItem("img/student.png");
+  var student = new Game.Item("img/student.png");
   student.setPosition(480, 740);
   student.click = function(mouse) {
     console.log("Clicked on student");
@@ -25,7 +25,7 @@ sceneLoader[0] = function() {
     customText.fadein(600);
   }
 
-  var banana = new GameItem("img/banana.png");
+  var banana = new Game.Item("img/banana.png");
   banana.setPosition(759, 648);
   banana.addGlowEffect();
   banana.click = function(mouse) {
@@ -41,7 +41,7 @@ sceneLoader[0] = function() {
     }, 800);
   }
 
-  var shit = new GameItem("img/shit.png");
+  var shit = new Game.Item("img/shit.png");
   shit.setPosition(1308, 773);
   shit.disable();
   shit.addGlowEffect();
@@ -50,7 +50,7 @@ sceneLoader[0] = function() {
     playSoundEffect("audio/explosion.wav");
   }
 
-  var digestiveSystem = new GameItem("img/digestive-system.png");
+  var digestiveSystem = new Game.Item("img/digestive-system.png");
   digestiveSystem.setPosition(480, 530);
   digestiveSystem.disable();
   digestiveSystem.addGlowEffect();
@@ -60,7 +60,7 @@ sceneLoader[0] = function() {
     playSoundEffect("audio/explosion.wav");
   }
 
-  var closeButton = new GameItem("img/close.png");
+  var closeButton = new Game.Item("img/close.png");
   closeButton.setPosition(1840, 65);
   closeButton.disable();
   closeButton.addGlowEffect();
@@ -76,7 +76,7 @@ sceneLoader[0] = function() {
     //scene[0].changeBackground(1);
   }
 
-  var arrow = new GameItem("img/arrow.png");
+  var arrow = new Game.Item("img/arrow.png");
   arrow.setPosition(1700, 550);
   arrow.setScale(0.5);
   arrow.addGlowEffect();
