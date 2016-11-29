@@ -1,7 +1,6 @@
 'use strict';
 
-function loadOutsideScene() {
-  console.log("Begin loading scene 1");
+sceneLoader[1] = function() {
 
   scene[1] = new GameScene();
   scene[1].setMusic("audio/99spirits-crushingevil&spreadingthetruth.m4a");
@@ -23,8 +22,4 @@ function loadOutsideScene() {
 
   scene[1].addBackground(farm);
   scene[1].addItem(arrow);
-
-  UpdateScreen();
-
-  console.log("Finish loading scene 1");
 }

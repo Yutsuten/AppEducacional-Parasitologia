@@ -1,7 +1,6 @@
 'use strict';
 
-function loadClassroomScene() {
-  console.log("Begin loading scene 0");
+sceneLoader[0] = function() {
 
   scene[0] = new GameScene();
   scene[0].setMusic("audio/suikodentierkreis-friendofthegreatplains.m4a");
@@ -99,8 +98,4 @@ function loadClassroomScene() {
   scene[0].addItem(digestiveSystem);
   scene[0].addItem(closeButton);
   scene[0].addItem(arrow);
-
-  UpdateScreen();
-
-  console.log("Finish loading scene 0");
 }

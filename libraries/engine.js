@@ -4,8 +4,8 @@ var gameMusic = null;
 var gameSound = null;
 
 var scene = [];
-var currentScene = 0;
-var loadScene = [];
+var currentScene = null;
+var sceneLoader = [];
 
 function changeScene(newScene) {
   currentScene = newScene;
