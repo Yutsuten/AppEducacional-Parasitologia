@@ -78,7 +78,6 @@ sceneLoader[0] = function() {
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
     //scene[0].changeBackground(1);
-    pauseMusic();
   }
 
   var arrow = new GameItem("img/arrow.png");

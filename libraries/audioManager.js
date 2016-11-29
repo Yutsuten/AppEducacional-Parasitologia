@@ -3,24 +3,6 @@
 var gameMusic = null;
 var gameSound = null;
 
-var scene = [];
-var currentScene = null;
-var sceneLoader = [];
-
-function changeScene(newScene) {
-  currentScene = newScene;
-  scene[currentScene].playSceneMusic();
-  UpdateScreen();
-}
-
-function UpdateScreen() {
-  scene[currentScene].showScene();
-}
-
-function loadImages(imagesArray, callbackFunction) {
-  loader.add(imagesArray).load(callbackFunction);
-}
-
 function playMusic(musicDirectory) {
   if (gameMusic != null) {
     gameMusic.pause();
