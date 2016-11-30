@@ -12,5 +12,6 @@ var gameImages = [
   "img/arrow.png",
   "img/sick-person.png",
   "img/farm.png",
-  "img/callout.png"
+  "img/callout.png",
+  "img/spritesheet.png"
 ];
