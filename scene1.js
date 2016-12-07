@@ -33,7 +33,9 @@ sceneLoader[1] = function() {
   singleImage.x = 850;
   singleImage.y = 750;*/
 
-  var spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90, 4, 12, 200);
+  var spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90);
+  spritesheet.setNumSprites(4, 12);
+  spritesheet.setAnimationDelay(200);
   spritesheet.setPosition(850, 750);
   spritesheet.beginAnimation();
 
