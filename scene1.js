@@ -27,17 +27,12 @@ sceneLoader[1] = function() {
   var calloutText = new Game.Text("Some text blablabla\nEven more text!! lol", {font: "50px Arial", fill: 0x000000, align: "left"});
   calloutText.setPosition(860, 120);
 
-  /*var spritesheet = TextureCache["img/spritesheet.png"];
-  spritesheet.frame = new PIXI.Rectangle(0, 0, 104, 90);
-  var singleImage = new PIXI.Sprite(spritesheet);
-  singleImage.x = 850;
-  singleImage.y = 750;*/
-
   var spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90);
   spritesheet.setNumSprites(4, 12);
   spritesheet.setAnimationDelay(200);
   spritesheet.setPosition(1000, 750);
   spritesheet.setScale(3);
+  spritesheet.setLoop(true);
   spritesheet.beginAnimation();
 
   scene[1].addBackground(farm);
