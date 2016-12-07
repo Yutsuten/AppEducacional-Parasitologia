@@ -36,7 +36,8 @@ sceneLoader[1] = function() {
   var spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90);
   spritesheet.setNumSprites(4, 12);
   spritesheet.setAnimationDelay(200);
-  spritesheet.setPosition(850, 750);
+  spritesheet.setPosition(1000, 750);
+  spritesheet.setScale(3);
   spritesheet.beginAnimation();
 
   scene[1].addBackground(farm);
