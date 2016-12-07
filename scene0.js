@@ -33,7 +33,8 @@ sceneLoader[0] = function() {
     classroom.changeDarkness(200, 600);
     setTimeout(function() {
       student.fadeout(600);
-      shit.fadein(600);
+      //shit.fadein(600);
+      shit.move(1308, 773, 600);
       digestiveSystem.fadein(600);
       banana.move(1287, 273, 600);
       banana.changeScale(3, 600);
@@ -42,8 +43,7 @@ sceneLoader[0] = function() {
   }
 
   var shit = new Game.Item("img/shit.png");
-  shit.setPosition(1308, 773);
-  shit.disable();
+  shit.setPosition(1308, 1373);
   shit.addGlowEffect();
   shit.click = function(mouse) {
     console.log("Clicked on shit");
@@ -67,7 +67,7 @@ sceneLoader[0] = function() {
   closeButton.click = function(mouse) {
     console.log("Clicked on close button");
     student.fadein(600);
-    shit.fadeout(600);
+    shit.move(1308, 1373, 600);
     digestiveSystem.fadeout(600);
     banana.move(759, 648, 600);
     banana.changeScale(1, 600);
