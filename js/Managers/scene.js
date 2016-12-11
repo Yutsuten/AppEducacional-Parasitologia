@@ -14,6 +14,7 @@ var sceneAnimationTime = 350;
 function setScene(newScene) {
   lastScene = currentScene;
   currentScene = newScene;
+  scene[currentScene].playSceneMusic();
   UpdateScreen();
 }
 
@@ -30,6 +31,9 @@ function changeScene(newScene) {
   scene[currentScene].disableSceneInteractiveness();
   scene[currentScene].saveAlphaValues();
   scene[currentScene].setFade(0);
+
+  // Play new music
+  scene[currentScene].playSceneMusic();
 
   // Running method for scene opened
   if (onSceneOpen[currentScene] != null) {
