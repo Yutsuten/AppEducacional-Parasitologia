@@ -1,5 +1,7 @@
 'use strict';
 
+var spritesheet;
+
 sceneLoader[1] = function() {
 
   scene[1] = new Game.Scene();
@@ -27,13 +29,12 @@ sceneLoader[1] = function() {
   var calloutText = new Game.Text("Some text blablabla\nEven more text!! lol", {font: "50px Arial", fill: 0x000000, align: "left"});
   calloutText.setPosition(860, 120);
 
-  var spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90);
+  spritesheet = new Game.SpriteSheet("img/spritesheet.png", 104, 90);
   spritesheet.setNumSprites(4, 12);
   spritesheet.setAnimationDelay(200);
   spritesheet.setPosition(1000, 750);
   spritesheet.setScale(3);
   spritesheet.setLoop(true);
-  spritesheet.beginAnimation();
 
   scene[1].addBackground(farm);
   scene[1].addItem(arrow);
@@ -41,4 +42,9 @@ sceneLoader[1] = function() {
   scene[1].addItem(calloutText);
   //scene[1].addItem(singleImage);
   scene[1].addSpriteSheet(spritesheet);
+}
+
+onSceneOpen[1] = function() {
+  spritesheet.beginAnimation();
+  //spritesheet.setFrame(0);
 }
