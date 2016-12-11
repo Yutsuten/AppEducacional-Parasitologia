@@ -46,5 +46,9 @@ sceneLoader[1] = function() {
 
 onSceneOpen[1] = function() {
   spritesheet.beginAnimation();
-  //spritesheet.setFrame(0);
+  spritesheet.setFrame(0);
+}
+
+onSceneClose[1] = function() {
+  spritesheet.stopAnimation();
 }
