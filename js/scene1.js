@@ -38,6 +38,7 @@ sceneLoader[1] = function() {
 
   var zoom = new Game.Triangle(80, 400);
   zoom.setPosition(500, 500);
+  zoom.setRotation(120);
 
   scene[1].addBackground(farm);
   scene[1].addItem(arrow);

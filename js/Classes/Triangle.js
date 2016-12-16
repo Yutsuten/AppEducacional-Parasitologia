@@ -5,7 +5,7 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
 
   // Triangle methods
   this.setRotation = function(newRotation) {
-    this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
+    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
   }
 
   this.setPosition = function(coordX, coordY) {
