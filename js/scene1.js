@@ -36,10 +36,14 @@ sceneLoader[1] = function() {
   spritesheet.setScale(3);
   spritesheet.setLoop(true);
 
+  var zoom = new Game.Triangle(80, 400);
+  zoom.setPosition(500, 500);
+
   scene[1].addBackground(farm);
   scene[1].addItem(arrow);
   scene[1].addItem(calloutImage);
   scene[1].addItem(calloutText);
+  scene[1].addItem(zoom);
   //scene[1].addItem(singleImage);
   scene[1].addSpriteSheet(spritesheet);
 }
