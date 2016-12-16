@@ -1,7 +1,7 @@
 'use strict';
 
 Game.Triangle = function(triangleWidth, triangleHeight) {
-  Graphics.apply(this);
+  Graphics.apply(this); // Calling the Graphics constructor
 
   // Triangle methods
   this.setRotation = function(newRotation) {
@@ -11,6 +11,16 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
+  }
+
+  this.getBasePosition = function() {
+    var angle = -this.rotation - Math.PI / 2; // In radians
+
+    var position = {
+      x : this.x + triangleHeight * Math.cos(angle),
+      y : this.y - triangleHeight * Math.sin(angle)
+    }
+    return position;
   }
 
   // Drawing the black triangle
