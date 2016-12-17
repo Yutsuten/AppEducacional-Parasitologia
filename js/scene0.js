@@ -19,7 +19,6 @@ sceneLoader[0] = function() {
 
   var student = new Game.Item("img/student.png");
   student.setPosition(480, 740);
-  student.z_order = 3;
   student.click = function(mouse) {
     console.log("Clicked on student");
 
@@ -28,7 +27,6 @@ sceneLoader[0] = function() {
 
   var banana = new Game.Item("img/banana.png");
   banana.setPosition(759, 648);
-  banana.z_order = 3;
   banana.addGlowEffect();
   banana.click = function(mouse) {
     console.log("Clicked on banana");
@@ -46,7 +44,6 @@ sceneLoader[0] = function() {
 
   var shit = new Game.Item("img/shit.png");
   shit.setPosition(1308, 1373);
-  shit.z_order = 3;
   shit.addGlowEffect();
   shit.click = function(mouse) {
     console.log("Clicked on shit");
@@ -55,20 +52,20 @@ sceneLoader[0] = function() {
 
   var digestiveSystemZoom1 = new Game.Triangle(300, 600);
   digestiveSystemZoom1.setPosition(480, 530 + 200);
-  digestiveSystemZoom1.z_order = 2;
+  digestiveSystemZoom1.setZorder(3);
   digestiveSystemZoom1.setRotation(0);
-  digestiveSystemZoom1.visible = false;
+  digestiveSystemZoom1.setVisibility(false);
 
   var digestiveSystemZoom2 = new Game.Item("img/zoom-egg.png");
   var position = digestiveSystemZoom1.getBasePosition();
   digestiveSystemZoom2.setPosition(position.x, position.y);
-  digestiveSystemZoom2.z_order = 1;
+  digestiveSystemZoom2.setZorder(2);
   digestiveSystemZoom2.setHeight(300);
-  digestiveSystemZoom2.visible = false;
+  digestiveSystemZoom2.setVisibility(false);
 
   var digestiveSystem = new Game.Item("img/digestive-system.png");
   digestiveSystem.setPosition(480, 530);
-  digestiveSystem.z_order = 3;
+  digestiveSystem.setZorder(4);
   digestiveSystem.disable();
   digestiveSystem.addGlowEffect();
   digestiveSystem.setScale(1.3);
@@ -77,21 +74,20 @@ sceneLoader[0] = function() {
     console.log("Clicked on digestiveSystem");
     playSoundEffect("audio/explosion.wav");
     zoomActivated = !zoomActivated;
-    digestiveSystemZoom1.visible = zoomActivated;
-    digestiveSystemZoom2.visible = zoomActivated;
+    digestiveSystemZoom1.setVisibility(zoomActivated);
+    digestiveSystemZoom2.setVisibility(zoomActivated);
     UpdateScreen();
   }
 
   var closeButton = new Game.Item("img/close.png");
   closeButton.setPosition(1840, 65);
-  closeButton.z_order = 3;
   closeButton.disable();
   closeButton.addGlowEffect();
   closeButton.click = function(mouse) {
     console.log("Clicked on close button");
     zoomActivated = false;
-    digestiveSystemZoom1.visible = false;
-    digestiveSystemZoom2.visible = false;
+    digestiveSystemZoom1.setVisibility(false);
+    digestiveSystemZoom2.setVisibility(false);
     student.fadein(600);
     shit.move(1308, 1373, 600);
     digestiveSystem.fadeout(600);
@@ -104,7 +100,6 @@ sceneLoader[0] = function() {
 
   var arrow = new Game.Item("img/arrow.png");
   arrow.setPosition(1700, 550);
-  arrow.z_order = 3;
   arrow.setScale(0.5);
   arrow.addGlowEffect();
   arrow.click = function(mouse) {

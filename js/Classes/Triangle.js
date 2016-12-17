@@ -9,12 +9,16 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   this.setRotation = function(newRotation) {
     this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
   }
-
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
   }
-
+  this.setZorder = function(newZorder) {
+    this.z_order = newZorder;
+  }
+  this.setVisibility = function(newVisibility) {
+    this.visible = newVisibility;
+  }
   this.getBasePosition = function() {
     var angle = -this.rotation - Math.PI / 2; // In radians
 

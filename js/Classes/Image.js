@@ -16,6 +16,9 @@ Game.Image = function(texture) { // Game Image object
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
   }
+  this.setZorder = function(newZorder) {
+    this.z_order = newZorder;
+  }
   this.setDarkness = function(newDarkness) {
     this.tint = 65793 * (255 - newDarkness);
   }
