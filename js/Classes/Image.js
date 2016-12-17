@@ -25,6 +25,14 @@ Game.Image = function(texture) { // Game Image object
   this.setRotation = function(newRotation) {
     this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
   }
+  this.setHeight = function(newHeight) {
+    this.height = 200;
+    this.scale.x = this.scale.y;
+  }
+  this.setWidth = function(newWidth) {
+    this.width = 200;
+    this.scale.y = this.scale.x;
+  }
 
   this.getScale = function() {
     return this.scale.x;

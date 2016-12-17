@@ -36,16 +36,24 @@ sceneLoader[1] = function() {
   spritesheet.setScale(3);
   spritesheet.setLoop(true);
 
-  var zoom = new Game.Triangle(80, 400);
+  var zoom = new Game.Triangle(100, 400);
   zoom.setPosition(500, 500);
+  zoom.z_order = 3;
   zoom.setRotation(0);
   zoom.getBasePosition();
+
+  var egg = new Game.Item("img/zoom-egg.png");
+  var position = zoom.getBasePosition();
+  egg.setPosition(position.x, position.y);
+  egg.z_order = 2;
+  egg.setHeight(200);
 
   scene[1].addBackground(farm);
   scene[1].addItem(arrow);
   scene[1].addItem(calloutImage);
   scene[1].addItem(calloutText);
   scene[1].addItem(zoom);
+  scene[1].addItem(egg);
   //scene[1].addItem(singleImage);
   scene[1].addSpriteSheet(spritesheet);
 }
