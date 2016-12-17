@@ -53,6 +53,19 @@ sceneLoader[0] = function() {
     playSoundEffect("audio/explosion.wav");
   }
 
+  var digestiveSystemZoom1 = new Game.Triangle(300, 600);
+  digestiveSystemZoom1.setPosition(480, 530 + 200);
+  digestiveSystemZoom1.z_order = 2;
+  digestiveSystemZoom1.setRotation(0);
+  digestiveSystemZoom1.visible = false;
+
+  var digestiveSystemZoom2 = new Game.Item("img/zoom-egg.png");
+  var position = digestiveSystemZoom1.getBasePosition();
+  digestiveSystemZoom2.setPosition(position.x, position.y);
+  digestiveSystemZoom2.z_order = 1;
+  digestiveSystemZoom2.setHeight(300);
+  digestiveSystemZoom2.visible = false;
+
   var digestiveSystem = new Game.Item("img/digestive-system.png");
   digestiveSystem.setPosition(480, 530);
   digestiveSystem.z_order = 3;
@@ -63,31 +76,10 @@ sceneLoader[0] = function() {
   digestiveSystem.click = function(mouse) {
     console.log("Clicked on digestiveSystem");
     playSoundEffect("audio/explosion.wav");
-    var zoom, egg;
-    if (!zoomActivated) {
-      zoom = new Game.Triangle(120, 600);
-      zoom.setPosition(digestiveSystem.x, digestiveSystem.y);
-      zoom.z_order = 3;
-      zoom.setRotation(0);
-      zoom.visible = true;
-
-      egg = new Game.Item("img/zoom-egg.png");
-      var position = zoom.getBasePosition();
-      egg.setPosition(position.x, position.y);
-      egg.z_order = 2;
-      egg.setHeight(240);
-      egg.visible = true;
-
-      scene[0].addItem(zoom);
-      scene[0].addItem(egg);
-
-      UpdateScreen();
-    }
-    else {
-      zoom.visible = false;
-      egg.visible = false;
-    }
     zoomActivated = !zoomActivated;
+    digestiveSystemZoom1.visible = zoomActivated;
+    digestiveSystemZoom2.visible = zoomActivated;
+    UpdateScreen();
   }
 
   var closeButton = new Game.Item("img/close.png");
@@ -97,6 +89,9 @@ sceneLoader[0] = function() {
   closeButton.addGlowEffect();
   closeButton.click = function(mouse) {
     console.log("Clicked on close button");
+    zoomActivated = false;
+    digestiveSystemZoom1.visible = false;
+    digestiveSystemZoom2.visible = false;
     student.fadein(600);
     shit.move(1308, 1373, 600);
     digestiveSystem.fadeout(600);
@@ -121,6 +116,8 @@ sceneLoader[0] = function() {
   scene[0].addItem(student);
   scene[0].addItem(banana);
   scene[0].addItem(shit);
+  scene[0].addItem(digestiveSystemZoom1);
+  scene[0].addItem(digestiveSystemZoom2);
   scene[0].addItem(digestiveSystem);
   scene[0].addItem(closeButton);
   scene[0].addItem(arrow);

@@ -28,8 +28,8 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   // Drawing the black triangle
   this.beginFill(0x000000);
   this.drawPolygon([
-      -triangleWidth, triangleHeight,
-      triangleWidth, triangleHeight,
+      -triangleWidth/2, triangleHeight,
+      triangleWidth/2, triangleHeight,
       0, 0
   ]);
   this.endFill();
