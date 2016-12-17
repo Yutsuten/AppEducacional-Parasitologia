@@ -134,8 +134,8 @@ Game.Item = function(texture) {
   this.addGlowEffect = function() {
     objInstance.mouseover = function(evt) {
       if (!Game.Item.isAnimating) {
-        // viewWidth, viewHeight, outerStrength, innerStrength, ??, color, quality
-        objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 18, 3, 0.5, 0xFFFFFF, 0.3)];
+        // distance, outerStrength, innerStrength, color, quality
+        objInstance.filters = [new PIXI.filters.GlowFilter(10, 3, 0.5, 0xFFFFFF, 0.3)];
         UpdateScreen();
       }
     };
