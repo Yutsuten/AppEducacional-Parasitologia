@@ -26,11 +26,11 @@ Game.Image = function(texture) { // Game Image object
     this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
   }
   this.setHeight = function(newHeight) {
-    this.height = 200;
+    this.height = newHeight;
     this.scale.x = this.scale.y;
   }
   this.setWidth = function(newWidth) {
-    this.width = 200;
+    this.width = newWidth;
     this.scale.y = this.scale.x;
   }
 

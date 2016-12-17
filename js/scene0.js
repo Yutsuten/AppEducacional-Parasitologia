@@ -59,9 +59,35 @@ sceneLoader[0] = function() {
   digestiveSystem.disable();
   digestiveSystem.addGlowEffect();
   digestiveSystem.setScale(1.3);
+  var zoomActivated = false;
   digestiveSystem.click = function(mouse) {
     console.log("Clicked on digestiveSystem");
     playSoundEffect("audio/explosion.wav");
+    var zoom, egg;
+    if (!zoomActivated) {
+      zoom = new Game.Triangle(120, 600);
+      zoom.setPosition(digestiveSystem.x, digestiveSystem.y);
+      zoom.z_order = 3;
+      zoom.setRotation(0);
+      zoom.visible = true;
+
+      egg = new Game.Item("img/zoom-egg.png");
+      var position = zoom.getBasePosition();
+      egg.setPosition(position.x, position.y);
+      egg.z_order = 2;
+      egg.setHeight(240);
+      egg.visible = true;
+
+      scene[0].addItem(zoom);
+      scene[0].addItem(egg);
+
+      UpdateScreen();
+    }
+    else {
+      zoom.visible = false;
+      egg.visible = false;
+    }
+    zoomActivated = !zoomActivated;
   }
 
   var closeButton = new Game.Item("img/close.png");
