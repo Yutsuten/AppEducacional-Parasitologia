@@ -81,6 +81,7 @@ Game.Scene = function() {
 
   this.showScene = function() {
     stage.addChild(background[activatedBackground]);
+    item.sort(function(a, b) {return b.z_order - a.z_order;}); // Sort items by Z order
     for (var i = 0; i < item.length; i++)
       stage.addChild(item[i]);
     for (var i = 0; i < spritesheet.length; i++)

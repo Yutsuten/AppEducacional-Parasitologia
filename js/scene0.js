@@ -19,6 +19,7 @@ sceneLoader[0] = function() {
 
   var student = new Game.Item("img/student.png");
   student.setPosition(480, 740);
+  student.z_order = 3;
   student.click = function(mouse) {
     console.log("Clicked on student");
 
@@ -27,6 +28,7 @@ sceneLoader[0] = function() {
 
   var banana = new Game.Item("img/banana.png");
   banana.setPosition(759, 648);
+  banana.z_order = 3;
   banana.addGlowEffect();
   banana.click = function(mouse) {
     console.log("Clicked on banana");
@@ -44,6 +46,7 @@ sceneLoader[0] = function() {
 
   var shit = new Game.Item("img/shit.png");
   shit.setPosition(1308, 1373);
+  shit.z_order = 3;
   shit.addGlowEffect();
   shit.click = function(mouse) {
     console.log("Clicked on shit");
@@ -52,6 +55,7 @@ sceneLoader[0] = function() {
 
   var digestiveSystem = new Game.Item("img/digestive-system.png");
   digestiveSystem.setPosition(480, 530);
+  digestiveSystem.z_order = 3;
   digestiveSystem.disable();
   digestiveSystem.addGlowEffect();
   digestiveSystem.setScale(1.3);
@@ -62,6 +66,7 @@ sceneLoader[0] = function() {
 
   var closeButton = new Game.Item("img/close.png");
   closeButton.setPosition(1840, 65);
+  closeButton.z_order = 3;
   closeButton.disable();
   closeButton.addGlowEffect();
   closeButton.click = function(mouse) {
@@ -78,6 +83,7 @@ sceneLoader[0] = function() {
 
   var arrow = new Game.Item("img/arrow.png");
   arrow.setPosition(1700, 550);
+  arrow.z_order = 3;
   arrow.setScale(0.5);
   arrow.addGlowEffect();
   arrow.click = function(mouse) {

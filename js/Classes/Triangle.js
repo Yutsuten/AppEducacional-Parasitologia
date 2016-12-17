@@ -3,6 +3,8 @@
 Game.Triangle = function(triangleWidth, triangleHeight) {
   Graphics.apply(this); // Calling the Graphics constructor
 
+  this.z_order = 5;
+
   // Triangle methods
   this.setRotation = function(newRotation) {
     this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree

@@ -4,6 +4,8 @@ Game.Image = function(texture) { // Game Image object
   arguments[0] = resources[arguments[0]].texture;
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
 
+  this.z_order = 5;
+
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
