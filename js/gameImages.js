@@ -4,7 +4,7 @@ var gameImages = [
   "classroom.jpg",
   "classroom2.jpg",
   "student.png",
-  "banana.png",
+  "banana2.png",
   "close.png",
   "shit.png",
   "digestive-system.png",

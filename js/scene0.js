@@ -23,8 +23,8 @@ sceneLoader[0] = function() {
     console.log("Clicked on student");
   }
 
-  var banana = new Game.Item("banana.png");
-  banana.setPosition(759, 648);
+  var banana = new Game.Item("banana2.png");
+  banana.setPosition(759, 620);
   banana.addGlowEffect();
   banana.setScale(0.2);
   banana.click = function(mouse) {
@@ -79,6 +79,7 @@ sceneLoader[0] = function() {
   digestiveSystem.addGlowEffect();
   digestiveSystem.setScale(1.3);
   var zoomActivated = false;
+
   digestiveSystem.click = function(mouse) {
     console.log("Clicked on digestiveSystem");
     playSoundEffect("audio/explosion.wav");
@@ -101,7 +102,7 @@ sceneLoader[0] = function() {
     student.fadein(600);
     shit.move(1308, 1373, 600);
     digestiveSystem.fadeout(600);
-    banana.move(759, 648, 600);
+    banana.move(759, 620, 600);
     banana.changeScale(0.2, 600);
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
