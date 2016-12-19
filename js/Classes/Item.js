@@ -137,7 +137,8 @@ Game.Item = function(texture) {
                                                 objInstance.y - objInstance.height/2 - 15,
                                                 objInstance.width + 30,
                                                 objInstance.height + 30);
-        objInstance.filters = [new PIXI.filters.GlowFilter(10, 3, 0, 0xFFFFFF, 0.3)];
+        // GlowFilter(10, 3, 0, 0xFFFFFF, 0.3)
+        objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 10, 5, 0, 0xFFFFFF, 0.3)];
         UpdateScreen();
       }
     };

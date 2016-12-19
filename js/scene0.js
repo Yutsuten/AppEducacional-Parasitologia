@@ -26,6 +26,7 @@ sceneLoader[0] = function() {
   var banana = new Game.Item("banana.png");
   banana.setPosition(759, 648);
   banana.addGlowEffect();
+  banana.setScale(0.2);
   banana.click = function(mouse) {
     disableInteractiveness();
     console.log("Clicked on banana");
@@ -39,7 +40,7 @@ sceneLoader[0] = function() {
       digestiveSystem.setAlpha(0);
       digestiveSystem.fadein(600);
       banana.move(1287, 273, 600);
-      banana.changeScale(3, 600);
+      banana.changeScale(0.4, 600);
       closeButton.enable();
       closeButton.setAlpha(0);
       closeButton.fadein(600);
@@ -101,12 +102,13 @@ sceneLoader[0] = function() {
     shit.move(1308, 1373, 600);
     digestiveSystem.fadeout(600);
     banana.move(759, 648, 600);
-    banana.changeScale(1, 600);
+    banana.changeScale(0.2, 600);
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
 
     setTimeout(function() {
       closeButton.disable();
+      digestiveSystem.disable();
       enableInteractiveness();
     }, 700);
   }
