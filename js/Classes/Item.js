@@ -9,6 +9,8 @@ Game.Item = function(texture) {
   var animationDelay = 33; // delay between frames
   var objInstance = this;
 
+  var glowRectangle;
+
   Game.Item.isAnimating = false;
   var interactiveValue = objInstance.interactive;
 
@@ -97,6 +99,7 @@ Game.Item = function(texture) {
         objInstance.setScale(newScale);
         clearInterval(changeScaleInterval); // Stop calling itself
         animationEnd();
+        updateGlowRectangle();
       }
       UpdateScreen();
     }, animationDelay);
@@ -126,16 +129,28 @@ Game.Item = function(texture) {
         clearInterval(moveInterval); // Stop calling itself
         objInstance.interactive = interactiveValue;
         animationEnd();
+        updateGlowRectangle();
       }
       UpdateScreen();
     }, animationDelay);
+  }
+
+  var updateGlowRectangle = function() {
+    objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
+                                            objInstance.y - objInstance.height/2 - 15,
+                                            objInstance.width + 30,
+                                            objInstance.height + 30);
   }
 
   this.addGlowEffect = function() {
     objInstance.mouseover = function(evt) {
       if (!Game.Item.isAnimating) {
         // distance, outerStrength, innerStrength, color, quality
-        objInstance.filters = [new PIXI.filters.GlowFilter(10, 3, 0.5, 0xFFFFFF, 0.3)];
+        objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
+                                                objInstance.y - objInstance.height/2 - 15,
+                                                objInstance.width + 30,
+                                                objInstance.height + 30);
+        objInstance.filters = [new PIXI.filters.GlowFilter(10, 3, 0, 0xFFFFFF, 0.3)];
         UpdateScreen();
       }
     };
