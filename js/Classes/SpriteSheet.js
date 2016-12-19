@@ -1,7 +1,7 @@
 'use strict';
 
 Game.SpriteSheet = function(textureDirectory, spriteWidth, spriteHeight) {
-  var spritesheet = TextureCache[textureDirectory];
+  var spritesheet = TextureCache["img/" + textureDirectory];
   var width = spriteWidth;
   var height = spriteHeight;
 

@@ -1,18 +1,18 @@
 'use strict';
 
 var gameImages = [
-  "img/classroom.jpg",
-  "img/classroom2.jpg",
-  "img/student.png",
-  "img/banana.png",
-  "img/close.png",
-  "img/shit.png",
-  "img/digestive-system.png",
-  "img/mosca.gif",
-  "img/arrow.png",
-  "img/sick-person.png",
-  "img/farm.png",
-  "img/callout.png",
-  "img/spritesheet.png",
-  "img/zoom-egg.png"
+  "classroom.jpg",
+  "classroom2.jpg",
+  "student.png",
+  "banana.png",
+  "close.png",
+  "shit.png",
+  "digestive-system.png",
+  "mosca.gif",
+  "arrow.png",
+  "sick-person.png",
+  "farm.png",
+  "callout.png",
+  "spritesheet.png",
+  "zoom-egg.png"
 ];
