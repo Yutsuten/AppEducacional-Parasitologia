@@ -9,6 +9,8 @@ var lastScene = null;
 var currentScene = null;
 var animDelay = 33;
 var sceneAnimationTime = 350;
+var elapsedTime = 0;
+var sceneFadeInterval;
 
 // No animation at all
 function setScene(newScene) {
@@ -20,7 +22,7 @@ function setScene(newScene) {
 
 // With animation
 function changeScene(newScene) {
-  var elapsedTime = 0;
+  elapsedTime = 0;
 
   // Changing to new scene
   lastScene = currentScene;
@@ -44,24 +46,27 @@ function changeScene(newScene) {
     onSceneClose[lastScene]();
   }
 
-  var sceneFadeInterval = setInterval( function() {
-    elapsedTime += animDelay;
-    // Not finished animation
-    if (elapsedTime < sceneAnimationTime) {
-      // Draw the older scene
-      scene[lastScene].showScene();
-      // Change the newer scene fade
-      scene[currentScene].setFade(elapsedTime/sceneAnimationTime);
-    }
-    // Finished animation
-    else {
-      scene[lastScene].enableSceneInteractiveness();
-      scene[currentScene].enableSceneInteractiveness();
-      scene[currentScene].setFade(1);
-      clearInterval(sceneFadeInterval); // Stop calling itself
-    }
-    UpdateScreen();
-  }, animDelay);
+  sceneFade();
+  sceneFadeInterval = setInterval(sceneFade, animDelay);
+}
+
+function sceneFade() {
+  elapsedTime += animDelay;
+  // Not finished animation
+  if (elapsedTime < sceneAnimationTime) {
+    // Draw the older scene
+    scene[lastScene].showScene();
+    // Change the newer scene fade
+    scene[currentScene].setFade(elapsedTime/sceneAnimationTime);
+  }
+  // Finished animation
+  else {
+    scene[lastScene].enableSceneInteractiveness();
+    scene[currentScene].enableSceneInteractiveness();
+    scene[currentScene].setFade(1);
+    clearInterval(sceneFadeInterval); // Stop calling itself
+  }
+  UpdateScreen();
 }
 
 function UpdateScreen() {
