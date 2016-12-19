@@ -21,25 +21,33 @@ sceneLoader[0] = function() {
   student.setPosition(480, 740);
   student.click = function(mouse) {
     console.log("Clicked on student");
-
-    customText.fadein(600);
   }
 
   var banana = new Game.Item("banana.png");
   banana.setPosition(759, 648);
   banana.addGlowEffect();
   banana.click = function(mouse) {
+    disableInteractiveness();
     console.log("Clicked on banana");
     classroom.changeDarkness(200, 600);
+
     setTimeout(function() {
       student.fadeout(600);
       //shit.fadein(600);
       shit.move(1308, 773, 600);
+      digestiveSystem.enable();
+      digestiveSystem.setAlpha(0);
       digestiveSystem.fadein(600);
       banana.move(1287, 273, 600);
       banana.changeScale(3, 600);
+      closeButton.enable();
+      closeButton.setAlpha(0);
       closeButton.fadein(600);
     }, 800);
+
+    setTimeout(function() {
+      enableInteractiveness();
+    }, 1300);
   }
 
   var shit = new Game.Item("shit.png");
@@ -84,6 +92,7 @@ sceneLoader[0] = function() {
   closeButton.disable();
   closeButton.addGlowEffect();
   closeButton.click = function(mouse) {
+    disableInteractiveness();
     console.log("Clicked on close button");
     zoomActivated = false;
     digestiveSystemZoom1.setVisibility(false);
@@ -95,7 +104,11 @@ sceneLoader[0] = function() {
     banana.changeScale(1, 600);
     closeButton.fadeout(600);
     classroom.changeDarkness(0, 600);
-    //scene[0].changeBackground(1);
+
+    setTimeout(function() {
+      closeButton.disable();
+      enableInteractiveness();
+    }, 700);
   }
 
   var arrow = new Game.Item("arrow.png");

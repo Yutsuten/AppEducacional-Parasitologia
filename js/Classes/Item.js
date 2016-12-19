@@ -1,5 +1,15 @@
 'use strict';
 
+// Lock interactive feature while animating
+function disableInteractiveness() {
+  Game.Item.isAnimating = true;
+}
+
+// Unlock interactive feature
+function enableInteractiveness() {
+  Game.Item.isAnimating = false;
+}
+
 Game.Item = function(texture) {
   Game.Image.apply(this, arguments);
 
@@ -12,26 +22,10 @@ Game.Item = function(texture) {
   var glowRectangle;
 
   Game.Item.isAnimating = false;
-  var interactiveValue = objInstance.interactive;
-
-  // Lock interactive feature while animating
-  function animationBegin() {
-    if (!Game.Item.isAnimating) {
-      Game.Item.isAnimating = true;
-      objInstance.filters = null;
-    }
-  }
-
-  // Unlock interactive feature
-  function animationEnd() {
-    objInstance.interactive = interactiveValue;
-    Game.Item.isAnimating = false;
-  }
 
   this.fadein = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
-    objInstance.interactive = false;
     objInstance.filters = null;
     var fadeinInterval = setInterval( function() {
       elapsedTime += animationDelay;
@@ -39,7 +33,6 @@ Game.Item = function(texture) {
         objInstance.setAlpha(elapsedTime / animationTime);
       }
       else {
-        objInstance.interactive = true;
         objInstance.setAlpha(1);
         clearInterval(fadeinInterval); // Stop calling itself
       }
@@ -50,7 +43,6 @@ Game.Item = function(texture) {
   this.fadeout = function(time) {
     var elapsedTime = 0;
     var animationTime = time;
-    objInstance.interactive = false;
     objInstance.filters = null;
     var fadeoutInterval = setInterval( function() {
       elapsedTime += animationDelay;
@@ -69,8 +61,7 @@ Game.Item = function(texture) {
     var elapsedTime = 0;
     var animationTime = time;
     var initialDarkness = objInstance.getDarkness();
-    var interactiveValue = objInstance.interactive;
-    animationBegin();
+    objInstance.filters = null;
     var changeDarknessInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -79,7 +70,6 @@ Game.Item = function(texture) {
       else {
         objInstance.setDarkness(newDarkness);
         clearInterval(changeDarknessInterval); // Stop calling itself
-        animationEnd();
       }
       UpdateScreen();
     }, animationDelay);
@@ -89,7 +79,7 @@ Game.Item = function(texture) {
     var elapsedTime = 0;
     var animationTime = time;
     var initialScale = objInstance.getScale();
-    animationBegin();
+    objInstance.filters = null;
     var changeScaleInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -98,7 +88,6 @@ Game.Item = function(texture) {
       else {
         objInstance.setScale(newScale);
         clearInterval(changeScaleInterval); // Stop calling itself
-        animationEnd();
         updateGlowRectangle();
       }
       UpdateScreen();
@@ -116,8 +105,8 @@ Game.Item = function(texture) {
   this.move = function(newX, newY, time) {
     var elapsedTime = 0;
     var animationTime = time;
-    var initialPosition = { x: this.x, y: this.y};
-    animationBegin();
+    var initialPosition = {x: this.x, y: this.y};
+    objInstance.filters = null;
     var moveInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
@@ -127,8 +116,6 @@ Game.Item = function(texture) {
       else {
         objInstance.setPosition(newX, newY);
         clearInterval(moveInterval); // Stop calling itself
-        objInstance.interactive = interactiveValue;
-        animationEnd();
         updateGlowRectangle();
       }
       UpdateScreen();
@@ -161,8 +148,14 @@ Game.Item = function(texture) {
   }
 
   this.disable = function() {
-    this.setAlpha(0);
+    this.filters = null;
+    this.visible = false;
     this.interactive = false;
+  }
+
+  this.enable = function() {
+    this.visible = true;
+    this.interactive = true;
   }
 
 }
