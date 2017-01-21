@@ -19,8 +19,12 @@ Game.Image = function(texture) { // Game Image object
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
   }
+  this.setTint = function(red, green, blue) {
+    this.tint = (red << 16) + (green << 8) + blue;
+  }
   this.setDarkness = function(newDarkness) {
-    this.tint = 65793 * (255 - newDarkness);
+    newDarkness = 255 - newDarkness;
+    this.setTint(newDarkness, newDarkness, newDarkness);
   }
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
