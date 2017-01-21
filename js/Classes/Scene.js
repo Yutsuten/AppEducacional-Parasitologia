@@ -12,6 +12,10 @@ Game.Scene = function() {
   var spritesheetAlpha = [];
   var itemInteractiveness = [];
 
+  var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
+  backgroundMask.setAlpha(0);
+  var animationDelay = 33; // delay between frames (for changing background mask alpha)
+
   this.setMusic = function(musicDirectory) {
     music = "audio/" + musicDirectory;
   }
@@ -38,6 +42,30 @@ Game.Scene = function() {
   this.changeBackground = function(backgroundIndex) {
     activatedBackground = backgroundIndex;
     this.showScene();
+  }
+
+  this.setBackgroundMaskColor = function(red, green, blue) {
+    backgroundMask.setColor(red, green, blue);
+  }
+
+  this.setBackgroundMaskAlpha = function(newAlpha) {
+    backgroundMask.setAlpha(newAlpha);
+  }
+
+  this.changeBackgroundMaskAlpha = function(newAlpha, time) {
+    var elapsedTime = 0;
+    var initialAlpha = backgroundMask.alpha;
+    var fadeInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < time) {
+        backgroundMask.setAlpha(initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time));
+      }
+      else {
+        backgroundMask.setAlpha(newAlpha);
+        clearInterval(fadeInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
   }
 
   this.saveAlphaValues = function() {
@@ -81,6 +109,7 @@ Game.Scene = function() {
 
   this.showScene = function() {
     stage.addChild(background[activatedBackground]);
+    stage.addChild(backgroundMask);
     item.sort(function(a, b) {return b.z_order - a.z_order;}); // Sort items by Z order
     for (var i = 0; i < item.length; i++)
       stage.addChild(item[i]);
