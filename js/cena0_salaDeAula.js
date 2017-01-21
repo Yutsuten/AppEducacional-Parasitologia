@@ -38,6 +38,7 @@ sceneLoader[0] = function() {
     changeScene(2); // Muda para a cena exterior
   }
 
+  // Adicionando o Background e os Itens na cena
   // Background
   scene[0].addBackground(fundoSalaDeAula);
   // Itens
