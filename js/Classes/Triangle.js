@@ -19,6 +19,12 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
   }
+  this.setColor = function(red, green, blue) {
+    this.tint = (red << 16) + (green << 8) + blue;
+  }
+  this.setAlpha = function(newAlpha) {
+    this.alpha = newAlpha;
+  }
   this.getBasePosition = function() {
     var angle = -this.rotation - Math.PI / 2; // In radians
 
@@ -30,7 +36,7 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   }
 
   // Drawing the black triangle
-  this.beginFill(0x000000);
+  this.beginFill(0xFFFFFF);
   this.drawPolygon([
       -triangleWidth/2, triangleHeight,
       triangleWidth/2, triangleHeight,
