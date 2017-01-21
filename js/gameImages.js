@@ -1,18 +1,28 @@
 'use strict';
 
 var gameImages = [
-  "classroom.jpg",
-  "classroom2.jpg",
-  "student.png",
-  "banana2.png",
-  "close.png",
-  "shit.png",
-  "digestive-system.png",
+  // Background Cenas
+  "salaDeAula.png",
+  "cenaExterna.png",
+  "cenaArmarioBackground.jpg",
+
+  // Imagens Sala de Aula
+  "estudanteNormal.png",
+  "estudanteDoente.png",
+  "banana.png",
+  "fezes.png",
+  "sistemaDigestivo.png",
   "mosca.gif",
-  "arrow.png",
-  "sick-person.png",
-  "farm.png",
-  "callout.png",
-  "spritesheet.png",
-  "zoom-egg.png"
+  "ovos.png",
+
+  // Imagens Cena Exterior
+
+  // Imagens Armario
+  "armarioLivros.jpg",
+
+  // Imagens Gerais (usadas em varios lugares)
+  "botaoFechar.png",
+  "balao.png",
+  "abaDoBalao.png",
+  "seta.png"
 ];

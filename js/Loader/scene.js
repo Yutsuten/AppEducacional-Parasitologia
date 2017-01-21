@@ -1,5 +1,7 @@
 'use strict';
 
+//loader.reset();
+
 for (var i = 0; i < gameImages.length; i++)
   gameImages[i] = "img/" + gameImages[i];
 
