@@ -13,7 +13,7 @@ Game.Scene = function() {
   var itemInteractiveness = [];
 
   this.setMusic = function(musicDirectory) {
-    music = musicDirectory;
+    music = "audio/" + musicDirectory;
   }
 
   this.playSceneMusic = function() {
