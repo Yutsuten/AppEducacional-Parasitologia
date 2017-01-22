@@ -2,7 +2,7 @@
 
 var gameImages = [
   // Background Cenas
-  "salaDeAula.png",
+  "salaDeAula.jpg",
   "cenaExterior.png",
   "cenaArmarioBackground.jpg",
 

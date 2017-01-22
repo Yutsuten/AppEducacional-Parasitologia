@@ -47,18 +47,18 @@ Game.Background = function(texture) {
     }, animationDelay);
   }
 
-  this.changeDarkness = function(newDarkness, time) {
+  this.changeBrightness = function(newBrightness, time) {
     var elapsedTime = 0;
     var animationTime = time;
     clearInterval(animationInterval); // Cancel if there is another animation
-    var initialDarkness = objInstance.getDarkness();
+    var initialBrightness = objInstance.getBrightness();
     var animationInterval = setInterval( function() {
       elapsedTime += animationDelay;
       if (elapsedTime < animationTime) {
-        objInstance.setDarkness(initialDarkness + Math.round((newDarkness - initialDarkness) * (elapsedTime / animationTime)));
+        objInstance.setBrightness(initialBrightness + Math.round((newBrightness - initialBrightness) * (elapsedTime / animationTime)));
       }
       else {
-        objInstance.setDarkness(newDarkness);
+        objInstance.setBrightness(newBrightness);
         clearInterval(animationInterval); // Stop calling itself
       }
       UpdateScreen();

@@ -8,7 +8,7 @@ sceneLoader[0] = function() {
   scene[0].setMusic("musicaSalaDeAula.mp3");
 
   // Adicionando uma imagem de fundo
-  var fundoSalaDeAula = new Game.Background("salaDeAula.png");
+  var fundoSalaDeAula = new Game.Background("salaDeAula.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   var mostraCoordenadasAoClicar = true;
@@ -17,6 +17,25 @@ sceneLoader[0] = function() {
       var mousePosition = mouse.data.getLocalPosition(stage);
       console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
     }
+  }
+
+  // Adicionando o aluno da banana
+  var estudanteBananaNormal = new Game.Item("estudanteNormal.png");
+  estudanteBananaNormal.setPosition(955, 655);
+
+  // Adiconando a banana
+  var banana = new Game.Item("banana.png");
+  banana.setPosition(955, 760);
+  banana.setScale(0.2);
+  banana.setZorder(4);
+  banana.addGlowEffect();
+  banana.click = function(mouse) {
+    disableInteractiveness();
+    fundoSalaDeAula.changeBrightness(50, 600);
+
+    setTimeout(function() {
+      enableInteractiveness();
+    }, 1300);
   }
 
   // Adiciona uma seta para levar a cena externa
@@ -44,5 +63,7 @@ sceneLoader[0] = function() {
   // Itens
   scene[0].addItem(setaJanela);
   scene[0].addItem(setaArmario);
+  scene[0].addItem(estudanteBananaNormal);
+  scene[0].addItem(banana);
 
 }

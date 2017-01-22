@@ -22,9 +22,8 @@ Game.Image = function(texture) { // Game Image object
   this.setTint = function(red, green, blue) {
     this.tint = (red << 16) + (green << 8) + blue;
   }
-  this.setDarkness = function(newDarkness) {
-    newDarkness = 255 - newDarkness;
-    this.setTint(newDarkness, newDarkness, newDarkness);
+  this.setBrightness = function(newBrightness) {
+    this.setTint(newBrightness, newBrightness, newBrightness);
   }
   this.setVisibility = function(newVisibility) {
     this.visible = newVisibility;
@@ -44,8 +43,8 @@ Game.Image = function(texture) { // Game Image object
   this.getScale = function() {
     return this.scale.x;
   }
-  this.getDarkness = function() {
-    return 255 - (this.tint / 65793);
+  this.getBrightness = function() {
+    return this.tint / 65793;
   }
 }
 
