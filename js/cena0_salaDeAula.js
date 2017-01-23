@@ -41,45 +41,49 @@ sceneLoader[0] = function() {
     setTimeout(function() {
       setaJanela.disable();
       setaArmario.disable();
+    }, 800);
+
+    // Eventos que acontecem apos 1.6 segundos do clique
+    setTimeout(function() {
       scene[0].setBackgroundMaskColor(120, 220, 255);
       scene[0].changeBackgroundMaskAlpha(1, 600);
       estudanteBananaNormal.fadeout(600);
       banana.fadeout(600);
       sistemaDigestivo.enable();
       sistemaDigestivo.fadein(600);
-    }, 800);
-
-    // Eventos que acontecem apos 1.6 segundos do clique
-    setTimeout(function() {
-      bananaInfectada.enable();
-      bananaInfectada.fadein(600);
     }, 1600);
 
     // Eventos que acontecem apos 2.4 segundos do clique
     setTimeout(function() {
-      coliDesencistamento.enable();
-      coliDesencistamento.fadein(600);
+      bananaInfectada.enable();
+      bananaInfectada.fadein(600);
     }, 2400);
 
     // Eventos que acontecem apos 3.2 segundos do clique
     setTimeout(function() {
-      coliEncistamento.enable();
-      coliEncistamento.fadein(600);
+      coliDesencistamento.enable();
+      coliDesencistamento.fadein(600);
     }, 3200);
 
     // Eventos que acontecem apos 4 segundos do clique
     setTimeout(function() {
-      coliFezes.enable();
-      coliFezes.fadein(600);
+      coliEncistamento.enable();
+      coliEncistamento.fadein(600);
     }, 4000);
 
     // Eventos que acontecem apos 4.8 segundos do clique
     setTimeout(function() {
-      coliMosca.enable();
-      coliMosca.fadein(600);
+      coliFezes.enable();
+      coliFezes.fadein(600);
     }, 4800);
 
     // Eventos que acontecem apos 5.6 segundos do clique
+    setTimeout(function() {
+      coliMosca.enable();
+      coliMosca.fadein(600);
+    }, 5600);
+
+    // Eventos que acontecem apos 6.4 segundos do clique
     setTimeout(function() {
       enableInteractiveness();
     }, 5600);
