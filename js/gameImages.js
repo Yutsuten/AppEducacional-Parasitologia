@@ -14,6 +14,7 @@ var gameImages = [
   "sistemaDigestivo.png",
   "mosca.gif",
   "ovos.png",
+  "temp.jpg",
 
   // Imagens Cena Exterior
 

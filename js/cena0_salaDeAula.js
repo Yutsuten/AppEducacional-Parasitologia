@@ -48,9 +48,40 @@ sceneLoader[0] = function() {
       sistemaDigestivo.fadein(600);
     }, 800);
 
+    // Eventos que acontecem apos 1.6 segundos do clique
+    setTimeout(function() {
+      bananaInfectada.enable();
+      bananaInfectada.fadein(600);
+    }, 1600);
+
+    // Eventos que acontecem apos 2.4 segundos do clique
+    setTimeout(function() {
+      coliDesencistamento.enable();
+      coliDesencistamento.fadein(600);
+    }, 2400);
+
+    // Eventos que acontecem apos 3.2 segundos do clique
+    setTimeout(function() {
+      coliEncistamento.enable();
+      coliEncistamento.fadein(600);
+    }, 3200);
+
+    // Eventos que acontecem apos 4 segundos do clique
+    setTimeout(function() {
+      coliFezes.enable();
+      coliFezes.fadein(600);
+    }, 4000);
+
+    // Eventos que acontecem apos 4.8 segundos do clique
+    setTimeout(function() {
+      coliMosca.enable();
+      coliMosca.fadein(600);
+    }, 4800);
+
+    // Eventos que acontecem apos 5.6 segundos do clique
     setTimeout(function() {
       enableInteractiveness();
-    }, 1300);
+    }, 5600);
   }
 
   // Adiciona a imagem do sistema digestivo - Ciclo Entamoeba Coli
@@ -59,6 +90,39 @@ sceneLoader[0] = function() {
   sistemaDigestivo.setScale(1.3);
   sistemaDigestivo.setAlpha(0);
   sistemaDigestivo.disable();
+
+  // Adiciona a primeira imagem do ciclo Entamoeba Coli
+  var bananaInfectada = new Game.Item("temp.jpg");
+  bananaInfectada.setPosition(335, 255);
+  bananaInfectada.setAlpha(0);
+  bananaInfectada.disable();
+
+  // Adiciona a segunda imagem do ciclo Entamoeba Coli
+  var coliDesencistamento = new Game.Item("temp.jpg");
+  coliDesencistamento.setPosition(335, 770);
+  coliDesencistamento.setAlpha(0);
+  coliDesencistamento.disable();
+
+  // Adiciona a terceira imagem do ciclo Entamoeba Coli
+  var coliEncistamento = new Game.Item("temp.jpg");
+  coliEncistamento.setPosition(1520, 200);
+  coliEncistamento.setScale(0.8);
+  coliEncistamento.setAlpha(0);
+  coliEncistamento.disable();
+
+  // Adiciona a quarta imagem do ciclo Entamoeba Coli
+  var coliFezes = new Game.Item("fezes.png");
+  coliFezes.setPosition(1520, 540);
+  coliFezes.setScale(0.8);
+  coliFezes.setAlpha(0);
+  coliFezes.disable();
+
+  // Adiciona a quinta imagem do ciclo Entamoeba Coli
+  var coliMosca = new Game.Item("temp.jpg");
+  coliMosca.setPosition(1520, 880);
+  coliMosca.setScale(0.8);
+  coliMosca.setAlpha(0);
+  coliMosca.disable();
 
   // Adiciona uma seta para levar a cena externa
   var setaJanela = new Game.Item("seta.png");
@@ -85,8 +149,14 @@ sceneLoader[0] = function() {
   // Itens
   scene[0].addItem(setaJanela);
   scene[0].addItem(setaArmario);
+
   scene[0].addItem(estudanteBananaNormal);
   scene[0].addItem(banana);
   scene[0].addItem(sistemaDigestivo);
+  scene[0].addItem(bananaInfectada);
+  scene[0].addItem(coliDesencistamento);
+  scene[0].addItem(coliEncistamento);
+  scene[0].addItem(coliFezes);
+  scene[0].addItem(coliMosca);
 
 }
