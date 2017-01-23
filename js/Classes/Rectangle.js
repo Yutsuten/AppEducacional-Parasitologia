@@ -5,6 +5,8 @@ Game.Rectangle = function(rectangleWidth, rectangleHeight) {
 
   this.z_order = 5;
 
+  var animationDelay = 33; // delay between frames (for changing background mask alpha)
+
   // Triangle methods
   this.setRotation = function(newRotation) {
     this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
@@ -24,6 +26,24 @@ Game.Rectangle = function(rectangleWidth, rectangleHeight) {
   }
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
+  }
+
+  // Animation methods
+  this.changeAlpha = function(newAlpha, time) {
+    var elapsedTime = 0;
+    var initialAlpha = this.alpha;
+    var objInstance = this;
+    var fadeInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < time) {
+        objInstance.setAlpha(initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time));
+      }
+      else {
+        objInstance.setAlpha(newAlpha);
+        clearInterval(fadeInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
   }
 
   // Drawing the rectangle

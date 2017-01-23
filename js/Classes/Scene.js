@@ -14,7 +14,6 @@ Game.Scene = function() {
 
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   backgroundMask.setAlpha(0);
-  var animationDelay = 33; // delay between frames (for changing background mask alpha)
 
   this.setMusic = function(musicDirectory) {
     music = "audio/" + musicDirectory;
@@ -53,19 +52,7 @@ Game.Scene = function() {
   }
 
   this.changeBackgroundMaskAlpha = function(newAlpha, time) {
-    var elapsedTime = 0;
-    var initialAlpha = backgroundMask.alpha;
-    var fadeInterval = setInterval( function() {
-      elapsedTime += animationDelay;
-      if (elapsedTime < time) {
-        backgroundMask.setAlpha(initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time));
-      }
-      else {
-        backgroundMask.setAlpha(newAlpha);
-        clearInterval(fadeInterval); // Stop calling itself
-      }
-      UpdateScreen();
-    }, animationDelay);
+    backgroundMask.changeAlpha(newAlpha, time);
   }
 
   this.saveAlphaValues = function() {
