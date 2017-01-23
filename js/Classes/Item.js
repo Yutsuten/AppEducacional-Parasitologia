@@ -129,6 +129,10 @@ Game.Item = function(texture) {
                                             objInstance.height + 30);
   }
 
+  this.removeGlow = function() {
+    this.filters = null;
+  }
+
   this.addGlowEffect = function() {
     objInstance.mouseover = function(evt) {
       if (!Game.Item.isAnimating) {

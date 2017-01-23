@@ -32,6 +32,7 @@ sceneLoader[0] = function() {
   banana.click = function(mouse) {
     // Eventos que acontecem imediatamente apos clicar na banana
     disableInteractiveness();
+    banana.removeGlow();
     fundoSalaDeAula.changeBrightness(100, 600);
     setaJanela.fadeout(600);
     setaArmario.fadeout(600);
