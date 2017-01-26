@@ -29,7 +29,7 @@ Game.Image = function(texture) { // Game Image object
     this.visible = newVisibility;
   }
   this.setRotation = function(newRotation) {
-    this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
+    this.rotation = -newRotation * (Math.PI / 180); // Changing from radians to degree
   }
   this.setHeight = function(newHeight) {
     this.height = newHeight;

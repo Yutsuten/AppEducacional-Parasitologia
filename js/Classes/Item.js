@@ -122,6 +122,10 @@ Game.Item = function(texture) {
     }, animationDelay);
   }
 
+  this.setInteractive = function(isInteractive) {
+    this.interactive = isInteractive;
+  }
+
   var updateGlowRectangle = function() {
     objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
                                             objInstance.y - objInstance.height/2 - 15,
