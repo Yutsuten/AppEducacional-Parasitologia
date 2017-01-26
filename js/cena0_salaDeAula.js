@@ -20,34 +20,37 @@ sceneLoader[0] = function() {
     }
   }
 
-  scene[0].item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
-  scene[0].item.carteiras.setPosition(960, 857);
-  scene[0].item.carteiras.setZorder(10);
-  scene[0].item.carteiras.setInteractive(false);
+  // Criando um aliase de scene[0].item
+  var item = scene[0].item;
 
-  scene[0].item["mesaProfessor"] = new Game.Item("salaDeAula_mesaProfessor.png");
-  scene[0].item.mesaProfessor.setPosition(1400, 550);
-  scene[0].item.mesaProfessor.setZorder(15);
-  scene[0].item.mesaProfessor.setInteractive(false);
+  item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
+  item.carteiras.setPosition(960, 857);
+  item.carteiras.setZorder(10);
+  item.carteiras.setInteractive(false);
+
+  item["mesaProfessor"] = new Game.Item("salaDeAula_mesaProfessor.png");
+  item.mesaProfessor.setPosition(1400, 550);
+  item.mesaProfessor.setZorder(15);
+  item.mesaProfessor.setInteractive(false);
 
   // Adiciona uma seta para levar a cena externa
-  scene[0].item["setaJanela"] = new Game.Item("seta.png");
-  scene[0].item.setaJanela.setPosition(1735, 480);
-  scene[0].item.setaJanela.setScale(0.5);
-  scene[0].item.setaJanela.addGlowEffect();
-  scene[0].item.setaJanela.setZorder(1);
-  scene[0].item.setaJanela.click = function(mouse) {
+  item["setaJanela"] = new Game.Item("seta.png");
+  item.setaJanela.setPosition(1735, 480);
+  item.setaJanela.setScale(0.5);
+  item.setaJanela.addGlowEffect();
+  item.setaJanela.setZorder(1);
+  item.setaJanela.click = function(mouse) {
     changeScene(1); // Muda para a cena exterior
   }
 
   // Adiciona uma seta para levar ao armario
-  scene[0].item["setaArmario"] = new Game.Item("seta.png");
-  scene[0].item.setaArmario.setPosition(210, 480);
-  scene[0].item.setaArmario.setScale(0.5);
-  scene[0].item.setaArmario.setRotation(180);
-  scene[0].item.setaArmario.addGlowEffect();
-  scene[0].item.setaArmario.setZorder(1);
-  scene[0].item.setaArmario.click = function(mouse) {
+  item["setaArmario"] = new Game.Item("seta.png");
+  item.setaArmario.setPosition(210, 480);
+  item.setaArmario.setScale(0.5);
+  item.setaArmario.setRotation(180);
+  item.setaArmario.addGlowEffect();
+  item.setaArmario.setZorder(1);
+  item.setaArmario.click = function(mouse) {
     changeScene(2); // Muda para a cena exterior
   }
 
