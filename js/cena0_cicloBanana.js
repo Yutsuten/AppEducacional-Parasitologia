@@ -12,7 +12,6 @@ function carregaCicloBanana() {
   item.banana.setPosition(980, 730);
   item.banana.setScale(0.2);
   item.banana.setZorder(9);
-  //item.banana.addGlowEffect();
   item.banana.onMouseOver = function() {
     item.banana.addGlow();
   }
