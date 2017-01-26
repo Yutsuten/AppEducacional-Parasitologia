@@ -203,6 +203,8 @@ function carregaCicloBanana() {
     item.coliBotaoFechar.removeGlow();
   }
   item.coliBotaoFechar.click = function(mouse) {
+    disableInteractiveness();
+
     // Fadeout em todas as imagens do ciclo
     item.sistemaDigestivo.fadeout(600);
     item.bananaInfectada.fadeout(600);
@@ -266,6 +268,10 @@ function carregaCicloBanana() {
       item.botaoFinalizarTexto.enable();
       item.botaoFinalizarTexto.fadein(600);
     }, 800);
+
+    setTimeout(function() {
+      enableInteractiveness();
+    }, 1600);
   }
 
   item["estudanteDoente"] = new Game.Item("estudanteDoente.png");
@@ -369,6 +375,8 @@ function carregaCicloBanana() {
   item.botaoFinalizar.setAlpha(0);
   item.botaoFinalizar.disable();
   item.botaoFinalizar.click = function(mouse) {
+    disableInteractiveness();
+
     // Oculta o estudante doente
     item.estudanteDoente.fadeout(600);
     // Oculta o balao e as informacoes
@@ -397,6 +405,10 @@ function carregaCicloBanana() {
       item.botaoFinalizar.disable();
       item.botaoFinalizarTexto.disable();
 
+      item.balaoDescricaoSintomas.disable();
+      item.balaoDescricaoTratamento.disable();
+      item.balaoDescricaoTransmissao.disable();
+
       // Volta a cena inicial
       item.estudanteBananaNormal.enable();
       item.estudanteBananaNormal.fadein(600);
@@ -414,6 +426,10 @@ function carregaCicloBanana() {
       item.mesaProfessor.changeBrightness(255, 600);
       scene[0].background.changeBrightness(255, 600);
     }, 800);
+
+    setTimeout(function() {
+      enableInteractiveness();
+    }, 1600);
   }
 
   item["botaoFinalizarTexto"] = new Game.Text("OK, entendi!", {font: "30px Arial", fill: 0x000000, align: "left"});
