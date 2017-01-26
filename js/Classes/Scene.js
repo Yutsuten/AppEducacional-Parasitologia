@@ -2,7 +2,6 @@
 
 Game.Scene = function() {
 
-  var item = [];
   var spritesheet = [];
   var activatedBackground = 0;
   var music = null;
@@ -12,6 +11,8 @@ Game.Scene = function() {
   var itemInteractiveness = [];
 
   this.background = null;
+  this.item = {};
+  var itemsArray = [];
 
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   backgroundMask.setAlpha(0);
@@ -27,17 +28,17 @@ Game.Scene = function() {
       console.log("ERROR: No music is set to this scene");
   }
 
-  this.addItem = function(newItem) {
-    item.push(newItem);
+  this.addAllItemsToScene = function() {
+    // Add from object to array
+    for (var singleItem in this.item) {
+      itemsArray.push(this.item[singleItem]);
+    }
+    // Sort items by Z order
+    itemsArray.sort(function(a, b) {return b.z_order - a.z_order;}); // Sort items by Z order
   }
 
   this.addSpriteSheet = function(newSpritesheet) {
     spritesheet.push(newSpritesheet);
-  }
-
-  this.changeBackground = function(backgroundIndex) {
-    activatedBackground = backgroundIndex;
-    this.showScene();
   }
 
   this.setBackgroundMaskColor = function(red, green, blue) {
@@ -54,7 +55,7 @@ Game.Scene = function() {
 
   this.saveAlphaValues = function() {
     for (var i = 0; i < item.length; i++) {
-      itemAlpha[i] = item[i].alpha;
+      itemAlpha[i] = itemsArray[i].alpha;
     }
     for (var i = 0; i < spritesheet.length; i++) {
       spritesheetAlpha[i] = spritesheet[i].getAlpha();
@@ -63,7 +64,7 @@ Game.Scene = function() {
 
   this.saveInteractiveness = function() {
     for (var i = 0; i < item.length; i++) {
-      itemInteractiveness[i] = item[i].interactive;
+      itemInteractiveness[i] = itemsArray[i].interactive;
     }
   }
 
@@ -71,7 +72,7 @@ Game.Scene = function() {
     // Set the items alpha to the desired alpha
     background.setAlpha(fadeValue);
     for (var i = 0; i < item.length; i++) {
-      item[i].alpha = fadeValue / itemAlpha[i];
+      itemsArray[i].alpha = fadeValue / itemAlpha[i];
     }
     for (var i = 0; i < spritesheet.length; i++) {
       spritesheet[i].setAlpha(fadeValue / spritesheetAlpha[i]);
@@ -81,22 +82,21 @@ Game.Scene = function() {
   this.disableSceneInteractiveness = function() {
     this.saveInteractiveness();
     for (var i = 0; i < item.length; i++) {
-      item[i].interactive = false;
+      itemsArray[i].interactive = false;
     }
   }
 
   this.enableSceneInteractiveness = function() {
     for (var i = 0; i < item.length; i++) {
-      item[i].interactive = itemInteractiveness[i];
+      itemsArray[i].interactive = itemInteractiveness[i];
     }
   }
 
   this.showScene = function() {
     stage.addChild(this.background);
     stage.addChild(backgroundMask);
-    item.sort(function(a, b) {return b.z_order - a.z_order;}); // Sort items by Z order
-    for (var i = 0; i < item.length; i++)
-      stage.addChild(item[i]);
+    for (var i = 0; i < itemsArray.length; i++)
+      stage.addChild(itemsArray[i]);
     for (var i = 0; i < spritesheet.length; i++)
       stage.addChild(spritesheet[i].getCurrentFrame());
   }

@@ -2,8 +2,6 @@
 
 sceneLoader[0] = function() {
 
-  var item = {};
-
   // Iniciando a nova cena
   scene[0] = new Game.Scene();
   // Adicionando musica na cena
@@ -26,18 +24,20 @@ sceneLoader[0] = function() {
   carteiras.setPosition(960, 857);
   carteiras.setZorder(10);
   carteiras.setInteractive(false);*/
-  item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
-  item["carteiras"].setPosition(960, 857);
-  item["carteiras"].setZorder(10);
-  item["carteiras"].setInteractive(false);
+  scene[0].item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
+  scene[0].item["carteiras"].setPosition(960, 857);
+  scene[0].item["carteiras"].setZorder(10);
+  scene[0].item["carteiras"].setInteractive(false);
 
-  var mesaProfessor = new Game.Item("salaDeAula_mesaProfessor.png");
-  mesaProfessor.setPosition(1400, 550);
-  mesaProfessor.setZorder(15);
-  mesaProfessor.setInteractive(false);
+  scene[0].item["mesaProfessor"] = new Game.Item("salaDeAula_mesaProfessor.png");
+  scene[0].item["mesaProfessor"].setPosition(1400, 550);
+  scene[0].item["mesaProfessor"].setZorder(15);
+  scene[0].item["mesaProfessor"].setInteractive(false);
+
+  scene[0].addAllItemsToScene();
 
   // Adiciona uma seta para levar a cena externa
-  var setaJanela = new Game.Item("seta.png");
+  /*var setaJanela = new Game.Item("seta.png");
   setaJanela.setPosition(1735, 480);
   setaJanela.setScale(0.5);
   setaJanela.addGlowEffect();
@@ -76,7 +76,7 @@ sceneLoader[0] = function() {
     banana.removeGlow();
     scene[0].background.changeBrightness(100, 600);
     item["carteiras"].changeBrightness(100, 600);
-    mesaProfessor.changeBrightness(100, 600);
+    scene[0].item["mesaProfessor"].changeBrightness(100, 600);
     setaJanela.fadeout(600);
     setaArmario.fadeout(600);
 
@@ -247,29 +247,5 @@ sceneLoader[0] = function() {
   var coliBotaoFechar = new Game.Item("botaoFechar.png");
   coliBotaoFechar.setPosition(1850, 78);
   coliBotaoFechar.setAlpha(0);
-  coliBotaoFechar.disable();
-
-  // Adicionando o Background e os Itens na cena
-  // Background
-  //scene[0].addBackground(fundoSalaDeAula);
-  // Itens
-  scene[0].addItem(setaJanela);
-  scene[0].addItem(setaArmario);
-  scene[0].addItem(item["carteiras"]);
-  scene[0].addItem(mesaProfessor);
-
-  // Itens ciclo banana
-  scene[0].addItem(estudanteBananaNormal);
-  scene[0].addItem(banana);
-  scene[0].addItem(sistemaDigestivo);
-  scene[0].addItem(bananaInfectada);
-  scene[0].addItem(coliSeta_12);
-  scene[0].addItem(coliDesencistamento);
-  scene[0].addItem(coliSeta_23);
-  scene[0].addItem(coliEncistamento);
-  scene[0].addItem(coliSeta_34);
-  scene[0].addItem(coliFezes);
-  scene[0].addItem(coliSeta_45);
-  scene[0].addItem(coliMosca);
-  scene[0].addItem(coliBotaoFechar);
+  coliBotaoFechar.disable();*/
 }
