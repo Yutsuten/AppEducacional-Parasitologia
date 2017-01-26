@@ -54,7 +54,7 @@ Game.Scene = function() {
   }
 
   this.saveAlphaValues = function() {
-    for (var i = 0; i < item.length; i++) {
+    for (var i = 0; i < itemsArray.length; i++) {
       itemAlpha[i] = itemsArray[i].alpha;
     }
     for (var i = 0; i < spritesheet.length; i++) {
@@ -63,15 +63,15 @@ Game.Scene = function() {
   }
 
   this.saveInteractiveness = function() {
-    for (var i = 0; i < item.length; i++) {
+    for (var i = 0; i < itemsArray.length; i++) {
       itemInteractiveness[i] = itemsArray[i].interactive;
     }
   }
 
   this.setFade = function(fadeValue) {
     // Set the items alpha to the desired alpha
-    background.setAlpha(fadeValue);
-    for (var i = 0; i < item.length; i++) {
+    this.background.setAlpha(fadeValue);
+    for (var i = 0; i < itemsArray.length; i++) {
       itemsArray[i].alpha = fadeValue / itemAlpha[i];
     }
     for (var i = 0; i < spritesheet.length; i++) {
@@ -81,13 +81,13 @@ Game.Scene = function() {
 
   this.disableSceneInteractiveness = function() {
     this.saveInteractiveness();
-    for (var i = 0; i < item.length; i++) {
+    for (var i = 0; i < itemsArray.length; i++) {
       itemsArray[i].interactive = false;
     }
   }
 
   this.enableSceneInteractiveness = function() {
-    for (var i = 0; i < item.length; i++) {
+    for (var i = 0; i < itemsArray.length; i++) {
       itemsArray[i].interactive = itemInteractiveness[i];
     }
   }

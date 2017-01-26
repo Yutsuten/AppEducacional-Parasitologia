@@ -8,7 +8,6 @@ sceneLoader[0] = function() {
   scene[0].setMusic("musicaSalaDeAula.mp3");
 
   // Adicionando uma imagem de fundo
-  //var fundoSalaDeAula = new Game.Background("salaDeAula.jpg");
   scene[0].background = new Game.Background("salaDeAula.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
