@@ -299,9 +299,9 @@ function carregaCicloBanana() {
   item.balaoAbaSintomas.setAlpha(0);
   item.balaoAbaSintomas.disable();
   item.balaoAbaSintomas.click = function(mouse) {
-    item.balaoDescricaoSintomas.enable();
     item.balaoDescricaoTratamento.disable();
     item.balaoDescricaoTransmissao.disable();
+    item.balaoDescricaoSintomas.enable();
     UpdateScreen();
   }
 
@@ -327,8 +327,8 @@ function carregaCicloBanana() {
   item.balaoAbaTratamento.disable();
   item.balaoAbaTratamento.click = function(mouse) {
     item.balaoDescricaoSintomas.disable();
-    item.balaoDescricaoTratamento.enable();
     item.balaoDescricaoTransmissao.disable();
+    item.balaoDescricaoTratamento.enable();
     UpdateScreen();
   }
 
@@ -393,6 +393,9 @@ function carregaCicloBanana() {
     item.balaoDescricaoSintomas.fadeout(600);
     item.botaoFinalizar.fadeout(600);
     item.botaoFinalizarTexto.fadeout(600);
+    item.balaoDescricaoSintomas.fadeout(600);
+    item.balaoDescricaoTratamento.fadeout(600);
+    item.balaoDescricaoTransmissao.fadeout(600);
 
     setTimeout(function() {
       // Desabilita as imagens que desapareceram
