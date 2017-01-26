@@ -94,6 +94,10 @@ sceneLoader[0] = function() {
     }, 5600);
   }
 
+  var mesaProfessor = new Game.Item("salaDeAula_mesaProfessor.png");
+  mesaProfessor.setPosition(1400, 550);
+  mesaProfessor.setZorder(5);
+
   // Adiciona a imagem do sistema digestivo - Ciclo Entamoeba Coli
   var sistemaDigestivo = new Game.Item("sistemaDigestivo.png");
   sistemaDigestivo.setPosition(960, 550);
@@ -139,6 +143,7 @@ sceneLoader[0] = function() {
   setaJanela.setPosition(1735, 480);
   setaJanela.setScale(0.5);
   setaJanela.addGlowEffect();
+  setaJanela.setZorder(1);
   setaJanela.click = function(mouse) {
     changeScene(1); // Muda para a cena exterior
   }
@@ -149,6 +154,7 @@ sceneLoader[0] = function() {
   setaArmario.setScale(0.5);
   setaArmario.setRotation(180);
   setaArmario.addGlowEffect();
+  setaArmario.setZorder(1);
   setaArmario.click = function(mouse) {
     changeScene(2); // Muda para a cena exterior
   }
@@ -162,6 +168,7 @@ sceneLoader[0] = function() {
 
   scene[0].addItem(estudanteBananaNormal);
   scene[0].addItem(carteiras);
+  scene[0].addItem(mesaProfessor);
   scene[0].addItem(banana);
   scene[0].addItem(sistemaDigestivo);
   scene[0].addItem(bananaInfectada);
