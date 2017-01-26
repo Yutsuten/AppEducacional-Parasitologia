@@ -22,10 +22,15 @@ sceneLoader[0] = function() {
   // Adicionando o aluno da banana
   var estudanteBananaNormal = new Game.Item("estudanteNormal.png");
   estudanteBananaNormal.setPosition(960, 655);
+  estudanteBananaNormal.setZorder(6);
+
+  var carteiras = new Game.Item("salaDeAula_carteiras.png");
+  carteiras.setPosition(960, 857);
+  carteiras.setZorder(5);
 
   // Adiconando a banana
   var banana = new Game.Item("banana.png");
-  banana.setPosition(960, 760);
+  banana.setPosition(980, 730);
   banana.setScale(0.2);
   banana.setZorder(4);
   banana.addGlowEffect();
@@ -156,6 +161,7 @@ sceneLoader[0] = function() {
   scene[0].addItem(setaArmario);
 
   scene[0].addItem(estudanteBananaNormal);
+  scene[0].addItem(carteiras);
   scene[0].addItem(banana);
   scene[0].addItem(sistemaDigestivo);
   scene[0].addItem(bananaInfectada);

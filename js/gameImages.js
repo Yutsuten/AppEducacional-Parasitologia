@@ -8,13 +8,16 @@ var gameImages = [
 
   // Imagens Sala de Aula
   "estudanteNormal.png",
-  "estudanteDoente.png",
+  "salaDeAula_carteiras.png",
+  "salaDeAula_mesaProfessor.png",
   "banana.png",
+
+  // Imagens ciclo da banana
+  "estudanteDoente.png",
   "fezes.png",
   "sistemaDigestivo.png",
   "mosca.gif",
   "ovos.png",
-  "temp.jpg",
 
   // Imagens Cena Exterior
 
@@ -25,5 +28,6 @@ var gameImages = [
   "botaoFechar.png",
   "balao.png",
   "abaDoBalao.png",
+  "temp.jpg",
   "seta.png"
 ];
