@@ -14,9 +14,11 @@ function carregaCicloBanana() {
   item.banana.setZorder(9);
   item.banana.onMouseOver = function() {
     item.banana.addGlow();
+    scene[0].setSubtitle("Entamoeba Coli");
   }
   item.banana.onMouseOut = function() {
     item.banana.removeGlow();
+    scene[0].setSubtitle("");
   }
   item.banana.click = function(mouse) {
     // Eventos que acontecem imediatamente apos clicar na banana
@@ -30,6 +32,7 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos 0.8 segundos do clique
     setTimeout(function() {
+      scene[0].setSubtitle("");
       item.setaJanela.disable();
       item.setaArmario.disable();
     }, 800);

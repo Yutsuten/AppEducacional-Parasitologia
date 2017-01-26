@@ -17,6 +17,18 @@ Game.Scene = function() {
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   backgroundMask.setAlpha(0);
 
+  var subtitle = new Game.Text("", {font: "60px Arial", fontWeight: 'bold',
+                                //stroke: 'black', strokeThickness: 10,
+                                dropShadow: true, dropShadowBlur: 10,
+                                fill: 0xFFFFFF, align: "left"});
+  subtitle.setAchor(0.5, 0.5);
+  subtitle.setPosition(960, 1000);
+
+  this.setSubtitle = function setSubtitle(text) {
+    subtitle.text = text;
+    UpdateScreen();
+  }
+
   this.setMusic = function(musicDirectory) {
     music = "audio/" + musicDirectory;
   }
@@ -99,5 +111,6 @@ Game.Scene = function() {
       stage.addChild(itemsArray[i]);
     for (var i = 0; i < spritesheet.length; i++)
       stage.addChild(spritesheet[i].getCurrentFrame());
+    stage.addChild(subtitle);
   }
 }
