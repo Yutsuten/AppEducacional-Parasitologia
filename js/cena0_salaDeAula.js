@@ -37,7 +37,6 @@ sceneLoader[0] = function() {
   item["setaJanela"] = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
   item.setaJanela.setScale(0.5);
-  item.setaJanela.addGlowEffect();
   item.setaJanela.setZorder(1);
   item.setaJanela.click = function(mouse) {
     changeScene(1); // Muda para a cena exterior
@@ -48,7 +47,6 @@ sceneLoader[0] = function() {
   item.setaArmario.setPosition(210, 480);
   item.setaArmario.setScale(0.5);
   item.setaArmario.setRotation(180);
-  item.setaArmario.addGlowEffect();
   item.setaArmario.setZorder(1);
   item.setaArmario.click = function(mouse) {
     changeScene(2); // Muda para a cena exterior

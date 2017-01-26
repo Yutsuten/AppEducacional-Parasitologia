@@ -133,28 +133,32 @@ Game.Item = function(texture) {
                                             objInstance.height + 30);
   }
 
-  this.removeGlow = function() {
-    this.filters = null;
+  this.addGlow = function(strength = 10) {
+    this.filterArea = new Rectangle(  this.x - this.width/2 - 15,
+                                      this.y - this.height/2 - 15,
+                                      this.width + 30,
+                                      this.height + 30);
+    // distance, outerStrength, innerStrength, color, quality
+    this.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, strength, strength/2, 0, 0xFFFFFF, 0.3)];
+    UpdateScreen();
   }
 
-  this.addGlowEffect = function() {
-    objInstance.mouseover = function(evt) {
-      if (!Game.Item.isAnimating) {
-        // distance, outerStrength, innerStrength, color, quality
-        objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
-                                                objInstance.y - objInstance.height/2 - 15,
-                                                objInstance.width + 30,
-                                                objInstance.height + 30);
-        // GlowFilter(10, 3, 0, 0xFFFFFF, 0.3)
-        objInstance.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, 10, 5, 0, 0xFFFFFF, 0.3)];
-        UpdateScreen();
-      }
-    };
-    objInstance.mouseout = function(evt) {
-      objInstance.filters = null;
-      UpdateScreen();
-    };
+  this.removeGlow = function() {
+    this.filters = null;
+    UpdateScreen();
   }
+
+  this.mouseover = function(evt) {
+    if (!Game.Item.isAnimating) {
+      if (this.onMouseOver != null)
+        this.onMouseOver();
+    }
+  }
+
+  this.mouseout = function(evt) {
+    if (this.onMouseOut != null)
+      this.onMouseOut();
+  };
 
   this.disable = function() {
     this.filters = null;

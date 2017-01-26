@@ -12,7 +12,13 @@ function carregaCicloBanana() {
   item.banana.setPosition(980, 730);
   item.banana.setScale(0.2);
   item.banana.setZorder(9);
-  item.banana.addGlowEffect();
+  //item.banana.addGlowEffect();
+  item.banana.onMouseOver = function() {
+    item.banana.addGlow();
+  }
+  item.banana.onMouseOut = function() {
+    item.banana.removeGlow();
+  }
   item.banana.click = function(mouse) {
     // Eventos que acontecem imediatamente apos clicar na banana
     disableInteractiveness();
@@ -191,4 +197,7 @@ function carregaCicloBanana() {
   item.coliBotaoFechar.setPosition(1850, 78);
   item.coliBotaoFechar.setAlpha(0);
   item.coliBotaoFechar.disable();
+  item.coliBotaoFechar.click = function(mouse) {
+
+  }
 }
