@@ -2,7 +2,6 @@
 
 Game.Scene = function() {
 
-  var background = [];
   var item = [];
   var spritesheet = [];
   var activatedBackground = 0;
@@ -11,6 +10,8 @@ Game.Scene = function() {
   var itemAlpha = [];
   var spritesheetAlpha = [];
   var itemInteractiveness = [];
+
+  this.background = null;
 
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   backgroundMask.setAlpha(0);
@@ -24,10 +25,6 @@ Game.Scene = function() {
       playMusic(music);
     else
       console.log("ERROR: No music is set to this scene");
-  }
-
-  this.addBackground = function(newBackground) {
-    background.push(newBackground);
   }
 
   this.addItem = function(newItem) {
@@ -72,7 +69,7 @@ Game.Scene = function() {
 
   this.setFade = function(fadeValue) {
     // Set the items alpha to the desired alpha
-    background[activatedBackground].setAlpha(fadeValue);
+    background.setAlpha(fadeValue);
     for (var i = 0; i < item.length; i++) {
       item[i].alpha = fadeValue / itemAlpha[i];
     }
@@ -95,7 +92,7 @@ Game.Scene = function() {
   }
 
   this.showScene = function() {
-    stage.addChild(background[activatedBackground]);
+    stage.addChild(this.background);
     stage.addChild(backgroundMask);
     item.sort(function(a, b) {return b.z_order - a.z_order;}); // Sort items by Z order
     for (var i = 0; i < item.length; i++)

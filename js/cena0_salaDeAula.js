@@ -2,27 +2,34 @@
 
 sceneLoader[0] = function() {
 
+  var item = {};
+
   // Iniciando a nova cena
   scene[0] = new Game.Scene();
   // Adicionando musica na cena
   scene[0].setMusic("musicaSalaDeAula.mp3");
 
   // Adicionando uma imagem de fundo
-  var fundoSalaDeAula = new Game.Background("salaDeAula.jpg");
+  //var fundoSalaDeAula = new Game.Background("salaDeAula.jpg");
+  scene[0].background = new Game.Background("salaDeAula.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   var mostraCoordenadasAoClicar = true;
-  fundoSalaDeAula.click = function(mouse) {
+  scene[0].background.click = function(mouse) {
     if (mostraCoordenadasAoClicar) {
       var mousePosition = mouse.data.getLocalPosition(stage);
       console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
     }
   }
 
-  var carteiras = new Game.Item("salaDeAula_carteiras.png");
+  /*var carteiras = new Game.Item("salaDeAula_carteiras.png");
   carteiras.setPosition(960, 857);
   carteiras.setZorder(10);
-  carteiras.setInteractive(false);
+  carteiras.setInteractive(false);*/
+  item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
+  item["carteiras"].setPosition(960, 857);
+  item["carteiras"].setZorder(10);
+  item["carteiras"].setInteractive(false);
 
   var mesaProfessor = new Game.Item("salaDeAula_mesaProfessor.png");
   mesaProfessor.setPosition(1400, 550);
@@ -67,8 +74,8 @@ sceneLoader[0] = function() {
     // Eventos que acontecem imediatamente apos clicar na banana
     disableInteractiveness();
     banana.removeGlow();
-    fundoSalaDeAula.changeBrightness(100, 600);
-    carteiras.changeBrightness(100, 600);
+    scene[0].background.changeBrightness(100, 600);
+    item["carteiras"].changeBrightness(100, 600);
     mesaProfessor.changeBrightness(100, 600);
     setaJanela.fadeout(600);
     setaArmario.fadeout(600);
@@ -244,11 +251,11 @@ sceneLoader[0] = function() {
 
   // Adicionando o Background e os Itens na cena
   // Background
-  scene[0].addBackground(fundoSalaDeAula);
+  //scene[0].addBackground(fundoSalaDeAula);
   // Itens
   scene[0].addItem(setaJanela);
   scene[0].addItem(setaArmario);
-  scene[0].addItem(carteiras);
+  scene[0].addItem(item["carteiras"]);
   scene[0].addItem(mesaProfessor);
 
   // Itens ciclo banana

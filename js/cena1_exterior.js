@@ -7,8 +7,8 @@ sceneLoader[1] = function() {
   // Adicionando musica na cena
   scene[1].setMusic("musicaCenaExterna.mp3");
 
-  // Adicionando uma imagem de fundo
-  var fundoCenaExterior = new Game.Background("cenaExterior.png");
+  /*// Adicionando uma imagem de fundo
+  //var fundoCenaExterior = new Game.Background("cenaExterior.png");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   var mostraCoordenadasAoClicar = true;
@@ -31,8 +31,8 @@ sceneLoader[1] = function() {
 
   // Adicionando o Background e os Itens na cena
   // Background
-  scene[1].addBackground(fundoCenaExterior);
+  //scene[1].addBackground(fundoCenaExterior);
   // Itens
-  scene[1].addItem(setaSalaDeAula);
+  scene[1].addItem(setaSalaDeAula);*/
 
 }
