@@ -259,6 +259,12 @@ function carregaCicloBanana() {
 
       item.balaoDescricaoSintomas.enable();
       item.balaoDescricaoSintomas.fadein(600);
+
+      item.botaoFinalizar.enable();
+      item.botaoFinalizar.fadein(600);
+
+      item.botaoFinalizarTexto.enable();
+      item.botaoFinalizarTexto.fadein(600);
     }, 800);
   }
 
@@ -328,7 +334,6 @@ function carregaCicloBanana() {
   item.balaoDescricaoTratamento.setPosition(810, 140);
   item.balaoDescricaoTratamento.setZorder(1);
   item.balaoDescricaoTratamento.disable();
-  item.balaoDescricaoTratamento.disable();
 
   // Aba Transmissao
   item["balaoAbaTransmissao"] = new Game.Item("abaDoBalao.png");
@@ -355,6 +360,67 @@ function carregaCicloBanana() {
   item.balaoDescricaoTransmissao.setPosition(810, 140);
   item.balaoDescricaoTransmissao.setZorder(1);
   item.balaoDescricaoTransmissao.disable();
-  item.balaoDescricaoTransmissao.disable();
+
+  // Botao OK, entendi
+  item["botaoFinalizar"] = new Game.Item("abaDoBalao.png");
+  item.botaoFinalizar.setPosition(1600, 320);
+  item.botaoFinalizar.setZorder(2);
+  item.botaoFinalizar.setScale(1.3);
+  item.botaoFinalizar.setAlpha(0);
+  item.botaoFinalizar.disable();
+  item.botaoFinalizar.click = function(mouse) {
+    // Oculta o estudante doente
+    item.estudanteDoente.fadeout(600);
+    // Oculta o balao e as informacoes
+    item.balaoSobreColi.fadeout(600);
+    item.balaoAbaSintomas.fadeout(600);
+    item.balaoAbaSintomasTexto.fadeout(600);
+    item.balaoAbaTratamento.fadeout(600);
+    item.balaoAbaTratamentoTexto.fadeout(600);
+    item.balaoAbaTransmissao.fadeout(600);
+    item.balaoAbaTransmissaoTexto.fadeout(600);
+    item.balaoDescricaoSintomas.fadeout(600);
+    item.botaoFinalizar.fadeout(600);
+    item.botaoFinalizarTexto.fadeout(600);
+
+    setTimeout(function() {
+      // Desabilita as imagens que desapareceram
+      item.estudanteDoente.disable();
+      item.balaoSobreColi.disable();
+      item.balaoAbaSintomas.disable();
+      item.balaoAbaSintomasTexto.disable();
+      item.balaoAbaTratamento.disable();
+      item.balaoAbaTratamentoTexto.disable();
+      item.balaoAbaTransmissao.disable();
+      item.balaoAbaTransmissaoTexto.disable();
+      item.balaoDescricaoSintomas.disable();
+      item.botaoFinalizar.disable();
+      item.botaoFinalizarTexto.disable();
+
+      // Volta a cena inicial
+      item.estudanteBananaNormal.enable();
+      item.estudanteBananaNormal.fadein(600);
+
+      item.banana.enable();
+      item.banana.fadein(600);
+
+      item.setaJanela.enable();
+      item.setaJanela.fadein(600);
+
+      item.setaArmario.enable();
+      item.setaArmario.fadein(600);
+
+      item.carteiras.changeBrightness(255, 600);
+      item.mesaProfessor.changeBrightness(255, 600);
+      scene[0].background.changeBrightness(255, 600);
+    }, 800);
+  }
+
+  item["botaoFinalizarTexto"] = new Game.Text("OK, entendi!", {font: "30px Arial", fill: 0x000000, align: "left"});
+  item.botaoFinalizarTexto.setPosition(1600, 320);
+  item.botaoFinalizarTexto.setZorder(1);
+  item.botaoFinalizarTexto.setAchor(0.5, 0.5);
+  item.botaoFinalizarTexto.setAlpha(0);
+  item.botaoFinalizarTexto.disable();
 
 }
