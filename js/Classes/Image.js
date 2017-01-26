@@ -39,6 +39,9 @@ Game.Image = function(texture) { // Game Image object
     this.width = newWidth;
     this.scale.y = this.scale.x;
   }
+  this.setAchor = function(achorX, achorY) {
+    this.anchor.set(achorX, achorY);
+  }
 
   this.getScale = function() {
     return this.scale.x;
