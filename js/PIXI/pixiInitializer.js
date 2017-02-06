@@ -13,7 +13,7 @@ var Container = PIXI.Container,
     Graphics = PIXI.Graphics
 
 // Renderer and Auto-scaling options
-var renderer = autoDetectRenderer(1920, 1080);
+var renderer = autoDetectRenderer(1920, 1080, {antialias: true});
 renderer.autoResize = true;
 document.body.appendChild(renderer.view);
 var scale = scaleToWindow(renderer.view);
