@@ -54,12 +54,12 @@ function carregaCicloBanana() {
       item.estudanteBananaNormal.disable();
       item.bananaInfectada.enable();
       item.bananaInfectada.fadein(600);
+      item.zoomBanana.setVisibility(true);
+      item.zoomBanana.changeAlpha(1, 600);
     }, 3200);
 
     // Eventos que acontecem apos 3.6 segundos do clique
     setTimeout(function() {
-      item.coliSeta_12.enable();
-      item.coliSeta_12.fadein(600);
     }, 3600);
 
     // Eventos que acontecem apos 4 segundos do clique
@@ -70,8 +70,6 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos 4.4 segundos do clique
     setTimeout(function() {
-      item.coliSeta_23.enable();
-      item.coliSeta_23.fadein(600);
     }, 4400);
 
     // Eventos que acontecem apos 4.8 segundos do clique
@@ -82,8 +80,6 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos 5.2 segundos do clique
     setTimeout(function() {
-      item.coliSeta_34.enable();
-      item.coliSeta_34.fadein(600);
     }, 5200);
 
     // Eventos que acontecem apos 5.6 segundos do clique
@@ -94,8 +90,6 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos 6.0 segundos do clique
     setTimeout(function() {
-      item.coliSeta_45.enable();
-      item.coliSeta_45.fadein(600);
     }, 6000);
 
     // Eventos que acontecem apos 6.4 segundos do clique
@@ -120,7 +114,7 @@ function carregaCicloBanana() {
   item["sistemaDigestivo"] = new Game.Item("sistemaDigestivo.png");
   item.sistemaDigestivo.setPosition(960, 550);
   item.sistemaDigestivo.setScale(1.3);
-  item.sistemaDigestivo.setZorder(5);
+  item.sistemaDigestivo.setZorder(6);
   item.sistemaDigestivo.setInteractive(false);
   item.sistemaDigestivo.setAlpha(0);
   item.sistemaDigestivo.disable();
@@ -128,70 +122,44 @@ function carregaCicloBanana() {
   // Adiciona a primeira imagem do ciclo Entamoeba Coli
   item["bananaInfectada"] = new Game.Item("temp.jpg");
   item.bananaInfectada.setPosition(335, 255);
-  item.bananaInfectada.setZorder(5);
+  item.bananaInfectada.setZorder(4);
   item.bananaInfectada.setAlpha(0);
   item.bananaInfectada.disable();
 
-  item["coliSeta_12"] = new Game.Item("seta.png");
-  item.coliSeta_12.setPosition(337, 514);
-  item.coliSeta_12.setRotation(270);
-  item.coliSeta_12.setScale(0.5);
-  item.coliSeta_12.setZorder(4);
-  item.coliSeta_12.setAlpha(0);
-  item.coliSeta_12.disable();
+  item["zoomBanana"] = new Game.Line(355, 255, 1030, 280, 3);
+  item.zoomBanana.setColor(0, 0, 0);
+  item.zoomBanana.setZorder(5);
+  item.zoomBanana.setAlpha(0);
+  item.zoomBanana.setVisibility(false);
 
   // Adiciona a segunda imagem do ciclo Entamoeba Coli
   item["coliDesencistamento"] = new Game.Item("temp.jpg");
   item.coliDesencistamento.setPosition(335, 770);
-  item.coliDesencistamento.setZorder(5);
+  item.coliDesencistamento.setZorder(4);
   item.coliDesencistamento.setAlpha(0);
   item.coliDesencistamento.disable();
-
-  item["coliSeta_23"] = new Game.Item("seta.png");
-  item.coliSeta_23.setPosition(960, 760);
-  item.coliSeta_23.setRotation(45);
-  item.coliSeta_23.setScale(0.3);
-  item.coliSeta_23.setZorder(4);
-  item.coliSeta_23.setAlpha(0);
-  item.coliSeta_23.disable();
 
   // Adiciona a terceira imagem do ciclo Entamoeba Coli
   item["coliEncistamento"] = new Game.Item("temp.jpg");
   item.coliEncistamento.setPosition(1520, 200);
   item.coliEncistamento.setScale(0.8);
-  item.coliEncistamento.setZorder(5);
+  item.coliEncistamento.setZorder(4);
   item.coliEncistamento.setAlpha(0);
   item.coliEncistamento.disable();
-
-  item["coliSeta_34"] = new Game.Item("seta.png");
-  item.coliSeta_34.setPosition(1520, 382);
-  item.coliSeta_34.setRotation(270);
-  item.coliSeta_34.setScale(0.4);
-  item.coliSeta_34.setZorder(4);
-  item.coliSeta_34.setAlpha(0);
-  item.coliSeta_34.disable();
 
   // Adiciona a quarta imagem do ciclo Entamoeba Coli
   item["coliFezes"] = new Game.Item("fezes.png");
   item.coliFezes.setPosition(1520, 540);
   item.coliFezes.setScale(0.8);
-  item.coliFezes.setZorder(5);
+  item.coliFezes.setZorder(4);
   item.coliFezes.setAlpha(0);
   item.coliFezes.disable();
-
-  item["coliSeta_45"] = new Game.Item("seta.png");
-  item.coliSeta_45.setPosition(1520, 706);
-  item.coliSeta_45.setRotation(270);
-  item.coliSeta_45.setScale(0.4);
-  item.coliSeta_45.setZorder(4);
-  item.coliSeta_45.setAlpha(0);
-  item.coliSeta_45.disable();
 
   // Adiciona a quinta imagem do ciclo Entamoeba Coli
   item["coliMosca"] = new Game.Item("temp.jpg");
   item.coliMosca.setPosition(1520, 880);
   item.coliMosca.setScale(0.8);
-  item.coliMosca.setZorder(5);
+  item.coliMosca.setZorder(4);
   item.coliMosca.setAlpha(0);
   item.coliMosca.disable();
 
@@ -211,13 +179,10 @@ function carregaCicloBanana() {
     // Fadeout em todas as imagens do ciclo
     item.sistemaDigestivo.fadeout(600);
     item.bananaInfectada.fadeout(600);
-    item.coliSeta_12.fadeout(600);
+    item.zoomBanana.changeAlpha(0, 600);
     item.coliDesencistamento.fadeout(600);
-    item.coliSeta_23.fadeout(600);
     item.coliEncistamento.fadeout(600);
-    item.coliSeta_34.fadeout(600);
     item.coliFezes.fadeout(600);
-    item.coliSeta_45.fadeout(600);
     item.coliMosca.fadeout(600);
     item.coliBotaoFechar.fadeout(600);
 
@@ -226,13 +191,10 @@ function carregaCicloBanana() {
       // Desabilita todos os itens do ciclo
       item.sistemaDigestivo.disable();
       item.bananaInfectada.disable();
-      item.coliSeta_12.disable();
+      item.zoomBanana.setVisibility(true);
       item.coliDesencistamento.disable();
-      item.coliSeta_23.disable();
       item.coliEncistamento.disable();
-      item.coliSeta_34.disable();
       item.coliFezes.disable();
-      item.coliSeta_45.disable();
       item.coliMosca.disable();
       item.coliBotaoFechar.disable();
 

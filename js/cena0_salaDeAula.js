@@ -63,9 +63,6 @@ sceneLoader[0] = function() {
     changeScene(2); // Muda para a cena exterior
   }
 
-  item["risco"] = new Game.Line(0, 0, 1920, 1080, 3);
-  item.risco.setColor(0, 0, 0);
-
   // Carrega elementos do ciclo da banana
   carregaCicloBanana();
 
