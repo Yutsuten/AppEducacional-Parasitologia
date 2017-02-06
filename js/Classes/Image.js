@@ -4,8 +4,13 @@ Game.Image = function(texture) { // Game Image object
   arguments[0] = resources["img/" + arguments[0]].texture;
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
 
+  // PROPERTIES
   this.z_order = 5;
+  var animationDelay = 33; // delay between frames of "Change value" methods
+  var objInstance = this; // reference to this object
 
+  // METHODS
+  // Set value methods (changes instantly)
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
@@ -43,12 +48,31 @@ Game.Image = function(texture) { // Game Image object
     this.anchor.set(achorX, achorY);
   }
 
+  // Get value methods
   this.getScale = function() {
     return this.scale.x;
   }
   this.getBrightness = function() {
     return this.tint / 65793;
   }
+
+  // Change value methods (animations that change properties within time)
+  this.changeAlpha = function(newAlpha, time) {
+    var elapsedTime = 0;
+    var initialAlpha = this.alpha;
+    var fadeInterval = setInterval( function() {
+      elapsedTime += animationDelay;
+      if (elapsedTime < time) {
+        objInstance.alpha = initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time);
+      }
+      else {
+        objInstance.alpha = newAlpha;
+        clearInterval(fadeInterval); // Stop calling itself
+      }
+      UpdateScreen();
+    }, animationDelay);
+  }
+
 }
 
 Game.Image.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite

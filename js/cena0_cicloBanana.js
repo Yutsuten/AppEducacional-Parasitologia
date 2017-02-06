@@ -46,14 +46,14 @@ function carregaCicloBanana() {
     // Eventos que acontecem apos 2.4 segundos do clique
     setTimeout(function() {
       item.sistemaDigestivo.enable();
-      item.sistemaDigestivo.fadein(600);
+      item.sistemaDigestivo.changeAlpha(1, 600);
     }, 2400);
 
     // Eventos que acontecem apos 3.2 segundos do clique
     setTimeout(function() {
       item.estudanteBananaNormal.disable();
       item.bananaInfectada.enable();
-      item.bananaInfectada.fadein(600);
+      item.bananaInfectada.changeAlpha(1, 600);
       item.zoomBanana.setVisibility(true);
       item.zoomBanana.changeAlpha(1, 600);
     }, 3200);
@@ -65,7 +65,7 @@ function carregaCicloBanana() {
     // Eventos que acontecem apos 4 segundos do clique
     setTimeout(function() {
       item.coliDesencistamento.enable();
-      item.coliDesencistamento.fadein(600);
+      item.coliDesencistamento.changeAlpha(1, 600);
     }, 4000);
 
     // Eventos que acontecem apos 4.4 segundos do clique
@@ -75,7 +75,7 @@ function carregaCicloBanana() {
     // Eventos que acontecem apos 4.8 segundos do clique
     setTimeout(function() {
       item.coliEncistamento.enable();
-      item.coliEncistamento.fadein(600);
+      item.coliEncistamento.changeAlpha(1, 600);
     }, 4800);
 
     // Eventos que acontecem apos 5.2 segundos do clique
@@ -85,7 +85,7 @@ function carregaCicloBanana() {
     // Eventos que acontecem apos 5.6 segundos do clique
     setTimeout(function() {
       item.coliFezes.enable();
-      item.coliFezes.fadein(600);
+      item.coliFezes.changeAlpha(1, 600);
     }, 5600);
 
     // Eventos que acontecem apos 6.0 segundos do clique
@@ -95,13 +95,13 @@ function carregaCicloBanana() {
     // Eventos que acontecem apos 6.4 segundos do clique
     setTimeout(function() {
       item.coliMosca.enable();
-      item.coliMosca.fadein(600);
+      item.coliMosca.changeAlpha(1, 600);
     }, 6400);
 
     // Eventos que acontecem apos 6.8 segundos do clique
     setTimeout(function() {
       item.coliBotaoFechar.enable();
-      item.coliBotaoFechar.fadein(600);
+      item.coliBotaoFechar.changeAlpha(1, 600);
     }, 6800);
 
     // Eventos que acontecem apos 7.6 segundos do clique
@@ -200,38 +200,38 @@ function carregaCicloBanana() {
 
       // Mostra o estudante doente
       item.estudanteDoente.enable();
-      item.estudanteDoente.fadein(600);
+      item.estudanteDoente.changeAlpha(1, 600);
 
       // Mostra o balao e as informacoes
       item.balaoSobreColi.enable();
-      item.balaoSobreColi.fadein(600);
+      item.balaoSobreColi.changeAlpha(1, 600);
 
       item.balaoAbaSintomas.enable();
-      item.balaoAbaSintomas.fadein(600);
+      item.balaoAbaSintomas.changeAlpha(1, 600);
 
       item.balaoAbaSintomasTexto.enable();
-      item.balaoAbaSintomasTexto.fadein(600);
+      item.balaoAbaSintomasTexto.changeAlpha(1, 600);
 
       item.balaoAbaTratamento.enable();
-      item.balaoAbaTratamento.fadein(600);
+      item.balaoAbaTratamento.changeAlpha(1, 600);
 
       item.balaoAbaTratamentoTexto.enable();
-      item.balaoAbaTratamentoTexto.fadein(600);
+      item.balaoAbaTratamentoTexto.changeAlpha(1, 600);
 
       item.balaoAbaTransmissao.enable();
-      item.balaoAbaTransmissao.fadein(600);
+      item.balaoAbaTransmissao.changeAlpha(1, 600);
 
       item.balaoAbaTransmissaoTexto.enable();
-      item.balaoAbaTransmissaoTexto.fadein(600);
+      item.balaoAbaTransmissaoTexto.changeAlpha(1, 600);
 
       item.balaoDescricaoSintomas.enable();
-      item.balaoDescricaoSintomas.fadein(600);
+      item.balaoDescricaoSintomas.changeAlpha(1, 600);
 
       item.botaoFinalizar.enable();
-      item.botaoFinalizar.fadein(600);
+      item.botaoFinalizar.changeAlpha(1, 600);
 
       item.botaoFinalizarTexto.enable();
-      item.botaoFinalizarTexto.fadein(600);
+      item.botaoFinalizarTexto.changeAlpha(1, 600);
     }, 800);
 
     setTimeout(function() {
@@ -379,16 +379,16 @@ function carregaCicloBanana() {
 
       // Volta a cena inicial
       item.estudanteBananaNormal.enable();
-      item.estudanteBananaNormal.fadein(600);
+      item.estudanteBananaNormal.changeAlpha(1, 600);
 
       item.banana.enable();
-      item.banana.fadein(600);
+      item.banana.changeAlpha(1, 600);
 
       item.setaJanela.enable();
-      item.setaJanela.fadein(600);
+      item.setaJanela.changeAlpha(1, 600);
 
       item.setaArmario.enable();
-      item.setaArmario.fadein(600);
+      item.setaArmario.changeAlpha(1, 600);
 
       item.carteiras.changeBrightness(255, 600);
       item.mesaProfessor.changeBrightness(255, 600);
