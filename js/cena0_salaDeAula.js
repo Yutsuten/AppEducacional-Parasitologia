@@ -11,12 +11,10 @@ sceneLoader[0] = function() {
   scene[0].background = new Game.Background("salaDeAula.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
-  var mostraCoordenadasAoClicar = true;
+  scene[0].background.setInteractive(true);
   scene[0].background.click = function(mouse) {
-    if (mostraCoordenadasAoClicar) {
-      var mousePosition = mouse.data.getLocalPosition(stage);
-      console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-    }
+    var mousePosition = mouse.data.getLocalPosition(stage);
+    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
   // Criando um aliase de scene[0].item

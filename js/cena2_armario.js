@@ -11,12 +11,10 @@ sceneLoader[2] = function() {
   scene[2].background = new Game.Background("cenaArmarioBackground.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
-  var mostraCoordenadasAoClicar = true;
+  scene[2].background.setInteractive(true);
   scene[2].background.click = function(mouse) {
-    if (mostraCoordenadasAoClicar) {
-      var mousePosition = mouse.data.getLocalPosition(stage);
-      console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-    }
+    var mousePosition = mouse.data.getLocalPosition(stage);
+    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
   // Criando um aliase de scene[2].item

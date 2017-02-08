@@ -3,7 +3,7 @@ function carregaCicloBanana() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estudanteBananaNormal"] = new Game.Item("estudanteNormal.png");
+  item["estudanteBananaNormal"] = new Game.Image("estudanteNormal.png");
   item.estudanteBananaNormal.setPosition(960, 655);
   item.estudanteBananaNormal.setZorder(11);
 
