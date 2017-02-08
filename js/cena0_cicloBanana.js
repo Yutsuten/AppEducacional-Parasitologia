@@ -12,6 +12,7 @@ function carregaCicloBanana() {
   item.banana.setPosition(980, 730);
   item.banana.setScale(0.2);
   item.banana.setZorder(9);
+  item.banana.setInteractive(true);
   item.banana.onMouseOver = function() {
     item.banana.addGlow();
     scene[0].setSubtitle("Entamoeba Coli");
@@ -27,8 +28,8 @@ function carregaCicloBanana() {
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
-    item.setaJanela.fadeout(600);
-    item.setaArmario.fadeout(600);
+    item.setaJanela.changeAlpha(0, 600);
+    item.setaArmario.changeAlpha(0, 600);
 
     // Eventos que acontecem apos 0.8 segundos do clique
     setTimeout(function() {
@@ -39,8 +40,8 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos 1.6 segundos do clique
     setTimeout(function() {
-      item.banana.fadeout(600);
-      item.estudanteBananaNormal.fadeout(600);
+      item.banana.changeAlpha(0, 600);
+      item.estudanteBananaNormal.changeAlpha(0, 600);
     }, 1600);
 
     // Eventos que acontecem apos 2.4 segundos do clique
@@ -167,6 +168,7 @@ function carregaCicloBanana() {
   item.coliBotaoFechar.setPosition(1850, 78);
   item.coliBotaoFechar.setAlpha(0);
   item.coliBotaoFechar.disable();
+  item.coliBotaoFechar.setInteractive(true);
   item.coliBotaoFechar.onMouseOver = function() {
     item.coliBotaoFechar.addGlow();
   }
@@ -177,14 +179,14 @@ function carregaCicloBanana() {
     disableInteractiveness();
 
     // Fadeout em todas as imagens do ciclo
-    item.sistemaDigestivo.fadeout(600);
-    item.bananaInfectada.fadeout(600);
+    item.sistemaDigestivo.changeAlpha(0, 600);
+    item.bananaInfectada.changeAlpha(0, 600);
     item.zoomBanana.changeAlpha(0, 600);
-    item.coliDesencistamento.fadeout(600);
-    item.coliEncistamento.fadeout(600);
-    item.coliFezes.fadeout(600);
-    item.coliMosca.fadeout(600);
-    item.coliBotaoFechar.fadeout(600);
+    item.coliDesencistamento.changeAlpha(0, 600);
+    item.coliEncistamento.changeAlpha(0, 600);
+    item.coliFezes.changeAlpha(0, 600);
+    item.coliMosca.changeAlpha(0, 600);
+    item.coliBotaoFechar.changeAlpha(0, 600);
 
     // Eventos que acontecem apos 0.8 segundos do clique
     setTimeout(function() {
@@ -260,6 +262,7 @@ function carregaCicloBanana() {
   item.balaoAbaSintomas.setScale(1.3);
   item.balaoAbaSintomas.setAlpha(0);
   item.balaoAbaSintomas.disable();
+  item.balaoAbaSintomas.setInteractive(true);
   item.balaoAbaSintomas.click = function(mouse) {
     item.balaoDescricaoTratamento.disable();
     item.balaoDescricaoTransmissao.disable();
@@ -287,6 +290,7 @@ function carregaCicloBanana() {
   item.balaoAbaTratamento.setScale(1.3);
   item.balaoAbaTratamento.setAlpha(0);
   item.balaoAbaTratamento.disable();
+  item.balaoAbaTratamento.setInteractive(true);
   item.balaoAbaTratamento.click = function(mouse) {
     item.balaoDescricaoSintomas.disable();
     item.balaoDescricaoTransmissao.disable();
@@ -313,6 +317,7 @@ function carregaCicloBanana() {
   item.balaoAbaTransmissao.setScale(1.3);
   item.balaoAbaTransmissao.setAlpha(0);
   item.balaoAbaTransmissao.disable();
+  item.balaoAbaTransmissao.setInteractive(true);
   item.balaoAbaTransmissao.click = function(mouse) {
     item.balaoDescricaoSintomas.disable();
     item.balaoDescricaoTratamento.disable();
@@ -339,25 +344,26 @@ function carregaCicloBanana() {
   item.botaoFinalizar.setScale(1.3);
   item.botaoFinalizar.setAlpha(0);
   item.botaoFinalizar.disable();
+  item.botaoFinalizar.setInteractive(true);
   item.botaoFinalizar.click = function(mouse) {
     disableInteractiveness();
 
     // Oculta o estudante doente
-    item.estudanteDoente.fadeout(600);
+    item.estudanteDoente.changeAlpha(0, 600);
     // Oculta o balao e as informacoes
-    item.balaoSobreColi.fadeout(600);
-    item.balaoAbaSintomas.fadeout(600);
-    item.balaoAbaSintomasTexto.fadeout(600);
-    item.balaoAbaTratamento.fadeout(600);
-    item.balaoAbaTratamentoTexto.fadeout(600);
-    item.balaoAbaTransmissao.fadeout(600);
-    item.balaoAbaTransmissaoTexto.fadeout(600);
-    item.balaoDescricaoSintomas.fadeout(600);
-    item.botaoFinalizar.fadeout(600);
-    item.botaoFinalizarTexto.fadeout(600);
-    item.balaoDescricaoSintomas.fadeout(600);
-    item.balaoDescricaoTratamento.fadeout(600);
-    item.balaoDescricaoTransmissao.fadeout(600);
+    item.balaoSobreColi.changeAlpha(0, 600);
+    item.balaoAbaSintomas.changeAlpha(0, 600);
+    item.balaoAbaSintomasTexto.changeAlpha(0, 600);
+    item.balaoAbaTratamento.changeAlpha(0, 600);
+    item.balaoAbaTratamentoTexto.changeAlpha(0, 600);
+    item.balaoAbaTransmissao.changeAlpha(0, 600);
+    item.balaoAbaTransmissaoTexto.changeAlpha(0, 600);
+    item.balaoDescricaoSintomas.changeAlpha(0, 600);
+    item.botaoFinalizar.changeAlpha(0, 600);
+    item.botaoFinalizarTexto.changeAlpha(0, 600);
+    item.balaoDescricaoSintomas.changeAlpha(0, 600);
+    item.balaoDescricaoTratamento.changeAlpha(0, 600);
+    item.balaoDescricaoTransmissao.changeAlpha(0, 600);
 
     setTimeout(function() {
       // Desabilita as imagens que desapareceram

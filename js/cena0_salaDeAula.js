@@ -37,6 +37,7 @@ sceneLoader[0] = function() {
   item.setaJanela.setPosition(1735, 480);
   item.setaJanela.setScale(0.5);
   item.setaJanela.setZorder(1);
+  item.setaJanela.setInteractive(true);
   item.setaJanela.onMouseOver = function() {
     item.setaJanela.addGlow();
   }
@@ -53,6 +54,7 @@ sceneLoader[0] = function() {
   item.setaArmario.setScale(0.5);
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
+  item.setaArmario.setInteractive(true);
   item.setaArmario.onMouseOver = function() {
     item.setaArmario.addGlow();
   }

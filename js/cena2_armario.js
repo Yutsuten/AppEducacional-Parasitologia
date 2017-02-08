@@ -31,6 +31,7 @@ sceneLoader[2] = function() {
   item["setaSalaDeAula"] = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(1735, 480);
   item.setaSalaDeAula.setScale(0.5);
+  item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {
     item.setaSalaDeAula.addGlow();
   }
