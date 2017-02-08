@@ -17,7 +17,7 @@ Game.Scene = function() {
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   backgroundMask.setAlpha(0);
 
-  var subtitle = new Game.Text("", {font: "60px Arial", fontWeight: 'bold',
+  var subtitle = new Game.Text("", {font: "60px SimSun", fontWeight: 'bold',
                                 //stroke: 'black', strokeThickness: 10,
                                 dropShadow: true, dropShadowBlur: 10,
                                 fill: 0xFFFFFF, align: "left"});
