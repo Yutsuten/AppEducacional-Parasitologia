@@ -22,6 +22,30 @@ sceneLoader[1] = function() {
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
 
+  item["chiqueiro"] = new Game.Item("chiqueiro.png");
+  item.chiqueiro.setPosition(240, 240);
+  item.chiqueiro.setZorder(15);
+
+  item["horta"] = new Game.Item("horta.png");
+  item.horta.setPosition(400, 660);
+  item.horta.setZorder(10);
+
+  item["latrina"] = new Game.Item("latrina.png");
+  item.latrina.setPosition(1450, 200);
+  item.latrina.setZorder(15);
+
+  item["lixeira"] = new Game.Item("lixeira.png");
+  item.lixeira.setPosition(580, 290);
+  item.lixeira.setZorder(16);
+
+  item["poco"] = new Game.Item("poco.png");
+  item.poco.setPosition(1723, 648);
+  item.poco.setZorder(10);
+
+  item["vaca"] = new Game.Item("vaca.png");
+  item.vaca.setPosition(938, 250);
+  item.vaca.setZorder(15);
+
   // Adiciona uma seta para voltar na sala de aula
   item["setaSalaDeAula"] = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(210, 480);

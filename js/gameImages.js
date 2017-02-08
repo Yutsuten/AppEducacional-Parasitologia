@@ -20,6 +20,12 @@ var gameImages = [
   "ovos.png",
 
   // Imagens Cena Exterior
+  "chiqueiro.png",
+  "horta.png",
+  "latrina.png",
+  "lixeira.png",
+  "poco.png",
+  "vaca.png",
 
   // Imagens Armario
   "armarioLivros.jpg",
