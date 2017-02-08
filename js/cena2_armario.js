@@ -23,7 +23,7 @@ sceneLoader[2] = function() {
   var item = scene[2].item;
 
   // Adiciona a imagem do armario
-  item["armarioDeLivros"] = new Game.Item("armarioLivros.jpg");
+  item["armarioDeLivros"] = new Game.Image("armarioLivros.jpg");
   item.armarioDeLivros.setPosition(990, 560);
   item.armarioDeLivros.setScale(0.8);
 

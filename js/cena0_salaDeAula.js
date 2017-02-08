@@ -22,12 +22,12 @@ sceneLoader[0] = function() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
 
-  item["carteiras"] = new Game.Item("salaDeAula_carteiras.png");
+  item["carteiras"] = new Game.Image("salaDeAula_carteiras.png");
   item.carteiras.setPosition(960, 857);
   item.carteiras.setZorder(10);
   item.carteiras.setInteractive(false);
 
-  item["mesaProfessor"] = new Game.Item("salaDeAula_mesaProfessor.png");
+  item["mesaProfessor"] = new Game.Image("salaDeAula_mesaProfessor.png");
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);
   item.mesaProfessor.setInteractive(false);
@@ -37,7 +37,6 @@ sceneLoader[0] = function() {
   item.setaJanela.setPosition(1735, 480);
   item.setaJanela.setScale(0.5);
   item.setaJanela.setZorder(1);
-  item.setaJanela.setInteractive(true);
   item.setaJanela.onMouseOver = function() {
     item.setaJanela.addGlow();
   }
@@ -54,7 +53,6 @@ sceneLoader[0] = function() {
   item.setaArmario.setScale(0.5);
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
-  item.setaArmario.setInteractive(true);
   item.setaArmario.onMouseOver = function() {
     item.setaArmario.addGlow();
   }

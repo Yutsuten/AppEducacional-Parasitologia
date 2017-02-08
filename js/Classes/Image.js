@@ -14,6 +14,7 @@ Game.Image = function(texture) { // Game Image object
   // Class initialization
   arguments[0] = resources["img/" + arguments[0]].texture;
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor
+  this.anchor.set(0.5, 0.5); // Default anchor at center
   this.interactive = false;
 
   // PROPERTIES

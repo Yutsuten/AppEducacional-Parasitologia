@@ -12,7 +12,6 @@ function carregaCicloBanana() {
   item.banana.setPosition(980, 730);
   item.banana.setScale(0.2);
   item.banana.setZorder(9);
-  item.banana.setInteractive(true);
   item.banana.onMouseOver = function() {
     item.banana.addGlow();
     scene[0].setSubtitle("Entamoeba Coli");
@@ -112,7 +111,7 @@ function carregaCicloBanana() {
   }
 
   // Adiciona a imagem do sistema digestivo - Ciclo Entamoeba Coli
-  item["sistemaDigestivo"] = new Game.Item("sistemaDigestivo.png");
+  item["sistemaDigestivo"] = new Game.Image("sistemaDigestivo.png");
   item.sistemaDigestivo.setPosition(960, 550);
   item.sistemaDigestivo.setScale(1.3);
   item.sistemaDigestivo.setZorder(6);
@@ -121,7 +120,7 @@ function carregaCicloBanana() {
   item.sistemaDigestivo.disable();
 
   // Adiciona a primeira imagem do ciclo Entamoeba Coli
-  item["bananaInfectada"] = new Game.Item("temp.jpg");
+  item["bananaInfectada"] = new Game.Image("temp.jpg");
   item.bananaInfectada.setPosition(335, 255);
   item.bananaInfectada.setZorder(4);
   item.bananaInfectada.setAlpha(0);
@@ -134,14 +133,14 @@ function carregaCicloBanana() {
   item.zoomBanana.setVisibility(false);
 
   // Adiciona a segunda imagem do ciclo Entamoeba Coli
-  item["coliDesencistamento"] = new Game.Item("temp.jpg");
+  item["coliDesencistamento"] = new Game.Image("temp.jpg");
   item.coliDesencistamento.setPosition(335, 770);
   item.coliDesencistamento.setZorder(4);
   item.coliDesencistamento.setAlpha(0);
   item.coliDesencistamento.disable();
 
   // Adiciona a terceira imagem do ciclo Entamoeba Coli
-  item["coliEncistamento"] = new Game.Item("temp.jpg");
+  item["coliEncistamento"] = new Game.Image("temp.jpg");
   item.coliEncistamento.setPosition(1520, 200);
   item.coliEncistamento.setScale(0.8);
   item.coliEncistamento.setZorder(4);
@@ -149,7 +148,7 @@ function carregaCicloBanana() {
   item.coliEncistamento.disable();
 
   // Adiciona a quarta imagem do ciclo Entamoeba Coli
-  item["coliFezes"] = new Game.Item("fezes.png");
+  item["coliFezes"] = new Game.Image("fezes.png");
   item.coliFezes.setPosition(1520, 540);
   item.coliFezes.setScale(0.8);
   item.coliFezes.setZorder(4);
@@ -157,7 +156,7 @@ function carregaCicloBanana() {
   item.coliFezes.disable();
 
   // Adiciona a quinta imagem do ciclo Entamoeba Coli
-  item["coliMosca"] = new Game.Item("temp.jpg");
+  item["coliMosca"] = new Game.Image("temp.jpg");
   item.coliMosca.setPosition(1520, 880);
   item.coliMosca.setScale(0.8);
   item.coliMosca.setZorder(4);
@@ -241,14 +240,14 @@ function carregaCicloBanana() {
     }, 1600);
   }
 
-  item["estudanteDoente"] = new Game.Item("estudanteDoente.png");
+  item["estudanteDoente"] = new Game.Image("estudanteDoente.png");
   item.estudanteDoente.setPosition(600, 660);
   item.estudanteDoente.setZorder(11);
   item.estudanteDoente.setScale(1.3);
   item.estudanteDoente.setAlpha(0);
   item.estudanteDoente.disable();
 
-  item["balaoSobreColi"] = new Game.Item("balao.png");
+  item["balaoSobreColi"] = new Game.Image("balao.png");
   item.balaoSobreColi.setPosition(1270, 260);
   item.balaoSobreColi.setZorder(3);
   item.balaoSobreColi.setScale(1.4);

@@ -2,6 +2,7 @@
 
 Game.Background = function(texture) {
   Game.Image.apply(this, arguments);
+  this.anchor.set(0, 0); // Default anchor at top-left
 
   this.interactive = true;
   this.width = renderer.width;
