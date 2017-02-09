@@ -200,8 +200,8 @@ Game.Image = function(texture) {
   }
 
   // Return the graphic(s) to be drawn
-  this.graphic = function() {
-    return this;
+  this.draw = function(stage) {
+    stage.addChild(this);
   }
 
 }

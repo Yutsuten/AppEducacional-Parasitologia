@@ -58,8 +58,8 @@ Game.Text = function(text, style) {
   }
 
   // Return the graphic(s) to be drawn
-  this.graphic = function() {
-    return this;
+  this.draw = function(stage) {
+    stage.addChild(this);
   }
 
 }
