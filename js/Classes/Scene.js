@@ -105,12 +105,10 @@ Game.Scene = function() {
   }
 
   this.showScene = function() {
-    stage.addChild(this.background);
-    stage.addChild(backgroundMask);
+    stage.addChild(this.background.graphic());
+    stage.addChild(backgroundMask.graphic());
     for (var i = 0; i < itemsArray.length; i++)
-      stage.addChild(itemsArray[i]);
-    for (var i = 0; i < spritesheet.length; i++)
-      stage.addChild(spritesheet[i].getCurrentFrame());
+      stage.addChild(itemsArray[i].graphic());
     stage.addChild(subtitle);
   }
 }

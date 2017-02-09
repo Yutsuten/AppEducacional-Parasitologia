@@ -59,6 +59,11 @@ Game.Primitive = function() {
     this.visible = true;
   }
 
+  // Return the graphic(s) to be drawn
+  this.graphic = function() {
+    return this;
+  }
+
 }
 
 Game.Primitive.prototype = Object.create(Graphics.prototype); // Inherance from Graphics

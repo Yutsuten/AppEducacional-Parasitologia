@@ -199,6 +199,11 @@ Game.Image = function(texture) {
       this.onMouseOut();
   }
 
+  // Return the graphic(s) to be drawn
+  this.graphic = function() {
+    return this;
+  }
+
 }
 
 Game.Image.prototype = Object.create(PIXI.Sprite.prototype); // Inherance from PIXI.Sprite

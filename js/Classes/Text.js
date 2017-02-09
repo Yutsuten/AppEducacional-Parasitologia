@@ -57,6 +57,11 @@ Game.Text = function(text, style) {
     this.visible = true;
   }
 
+  // Return the graphic(s) to be drawn
+  this.graphic = function() {
+    return this;
+  }
+
 }
 
 Game.Text.prototype = Object.create(PIXI.Text.prototype); // Inherance from PIXI.Sprite
