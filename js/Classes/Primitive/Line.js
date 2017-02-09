@@ -15,18 +15,19 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
   var angle = Math.atan2(y2-y1, x2-x1)*180/Math.PI;
   var triangleAtBeginning = null;
   var triangleAtEnd = null;
-  var xDirection;
-  var yDirection;
+  var xDirection = x2-x1;
+  var yDirection = y2-y1;
 
-  if (x2-x1 == 0)
-    xDirection = 0;
-  else
-    xDirection = (x2-x1) > 0 ? 1 : -1;
-
-  if (y2-y1 == 0)
-    yDirection = 0;
-  else
-    yDirection = (y2-y1) > 0 ? 1 : -1;
+  if (Math.abs(xDirection) > Math.abs(yDirection)) {
+    var normalizer = Math.abs(xDirection);
+    xDirection /= normalizer;
+    yDirection /= normalizer;
+  }
+  else {
+    var normalizer = Math.abs(yDirection);
+    xDirection /= normalizer;
+    yDirection /= normalizer;
+  }
 
   // METHODS
   // Do not allow changing the position
@@ -39,8 +40,10 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
     triangleAtBeginning.setRotation(-angle);
   }
 
-  this.addArrowAtEnd = function() {
-
+  this.addArrowAtEnd = function(size = 7*lineWidth) {
+    triangleAtEnd = new Game.Triangle(size, size);
+    triangleAtEnd.setPosition(x2 + xDirection*size/2, y2 + yDirection*size/2);
+    triangleAtEnd.setRotation(-angle+180);
   }
 
   // Return the graphic(s) to be drawn
@@ -48,6 +51,8 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
     stage.addChild(this);
     if (triangleAtBeginning)
       stage.addChild(triangleAtBeginning);
+    if (triangleAtEnd)
+      stage.addChild(triangleAtEnd);
   }
 
 }
