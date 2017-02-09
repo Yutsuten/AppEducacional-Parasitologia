@@ -12,20 +12,31 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
 
   // PROPERTIES
   // Private properties
-  var angle = -Math.atan2(y2-y1, x2-x1)*180/Math.PI;
-  console.log(angle);
+  var angle = Math.atan2(y2-y1, x2-x1)*180/Math.PI;
   var triangleAtBeginning = null;
   var triangleAtEnd = null;
+  var xDirection;
+  var yDirection;
+
+  if (x2-x1 == 0)
+    xDirection = 0;
+  else
+    xDirection = (x2-x1) > 0 ? 1 : -1;
+
+  if (y2-y1 == 0)
+    yDirection = 0;
+  else
+    yDirection = (y2-y1) > 0 ? 1 : -1;
 
   // METHODS
   // Do not allow changing the position
   this.setPosition = null;
 
   // Method to make an arrow
-  this.addArrowAtBeginning = function() {
-    triangleAtBeginning = new Game.Triangle(8*lineWidth, 8*lineWidth);
-    triangleAtBeginning.setPosition(x1, y1);
-    triangleAtBeginning.setRotation(angle);
+  this.addArrowAtBeginning = function(size = 7*lineWidth) {
+    triangleAtBeginning = new Game.Triangle(size, size);
+    triangleAtBeginning.setPosition(x1 + -xDirection*size/2, y1 + -yDirection*size/2);
+    triangleAtBeginning.setRotation(-angle);
   }
 
   this.addArrowAtEnd = function() {
