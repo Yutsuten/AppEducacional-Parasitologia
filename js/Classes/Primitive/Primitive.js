@@ -3,9 +3,11 @@
 Game.Primitive = function() {
   // Class initialization
   Graphics.apply(this); // Calling the Graphics constructor
-  this.z_order = 5;
 
   // PROPERTIES
+  // Public properties
+  this.z_order = 5;
+
   // Private properties
   var animationDelay = 33; // delay between frames (for changing background mask alpha)
   var objInstance = this; // reference to this object

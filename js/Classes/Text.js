@@ -2,13 +2,22 @@
 
 // Add Text class to Game
 Game.Text = function(text, style) {
+  // Class initialization
   PIXI.Text.apply(this, arguments);
 
+  // PROPERTIES
+  // Public properties
   this.z_order = 5;
 
+  // Private properties
   var animationDelay = 33; // delay between frames
   var objInstance = this;
 
+  // METHODS
+  // Set value methods (changes instantly)
+  this.setRotation = function(newRotation) {
+    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
+  }
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
@@ -23,33 +32,18 @@ Game.Text = function(text, style) {
     this.anchor.set(achorX, achorY);
   }
 
-  this.fadein = function(time) {
+  // Change value methods (animations that change properties within time)
+  this.changeAlpha = function(newAlpha, time) {
     var elapsedTime = 0;
-    var animationTime = time;
-    var fadeinInterval = setInterval( function() {
+    var initialAlpha = this.alpha;
+    var fadeInterval = setInterval( function() {
       elapsedTime += animationDelay;
-      if (elapsedTime < animationTime) {
-        objInstance.alpha = elapsedTime / animationTime;
+      if (elapsedTime < time) {
+        objInstance.setAlpha(initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time));
       }
       else {
-        objInstance.alpha = 1;
-        clearInterval(fadeinInterval); // Stop calling itself
-      }
-      UpdateScreen();
-    }, animationDelay);
-  }
-
-  this.fadeout = function(time) {
-    var elapsedTime = 0;
-    var animationTime = time;
-    var fadeoutInterval = setInterval( function() {
-      elapsedTime += animationDelay;
-      if (elapsedTime < animationTime) {
-        objInstance.alpha = 1 - (elapsedTime / animationTime);
-      }
-      else {
-        objInstance.alpha = 0;
-        clearInterval(fadeoutInterval); // Stop calling itself
+        objInstance.setAlpha(newAlpha);
+        clearInterval(fadeInterval); // Stop calling itself
       }
       UpdateScreen();
     }, animationDelay);
