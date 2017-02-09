@@ -10,7 +10,7 @@ function enableInteractiveness() {
   Game.Image.isAnimating = false;
 }
 
-Game.Image = function(texture) { // Game Image object
+Game.Image = function(texture) {
   // Class initialization
   arguments[0] = resources["img/" + arguments[0]].texture;
   PIXI.Sprite.apply(this, arguments); // Getting the PIXI.Sprite arguments and allowing to run its constructor

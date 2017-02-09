@@ -1,61 +1,10 @@
 'use strict';
 
 Game.Triangle = function(triangleWidth, triangleHeight) {
-  Graphics.apply(this); // Calling the Graphics constructor
+  // Class initialization
+  Game.Primitive.apply(this); // Calling the Primitive constructor
 
-  this.z_order = 5;
-
-  var animationDelay = 33; // delay between frames (for changing background mask alpha)
-
-  // Triangle methods
-  this.setRotation = function(newRotation) {
-    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
-  }
-  this.setPosition = function(coordX, coordY) {
-    this.x = coordX;
-    this.y = coordY;
-  }
-  this.setZorder = function(newZorder) {
-    this.z_order = newZorder;
-  }
-  this.setVisibility = function(newVisibility) {
-    this.visible = newVisibility;
-  }
-  this.setColor = function(red, green, blue) {
-    this.tint = (red << 16) + (green << 8) + blue;
-  }
-  this.setAlpha = function(newAlpha) {
-    this.alpha = newAlpha;
-  }
-  this.getBasePosition = function() {
-    var angle = -this.rotation - Math.PI / 2; // In radians
-
-    var position = {
-      x : this.x + triangleHeight * Math.cos(angle),
-      y : this.y - triangleHeight * Math.sin(angle)
-    }
-    return position;
-  }
-
-  // Animation methods
-  this.changeAlpha = function(newAlpha, time) {
-    var elapsedTime = 0;
-    var initialAlpha = this.alpha;
-    var objInstance = this;
-    var fadeInterval = setInterval( function() {
-      elapsedTime += animationDelay;
-      if (elapsedTime < time) {
-        objInstance.setAlpha(initialAlpha + (newAlpha - initialAlpha) * (elapsedTime / time));
-      }
-      else {
-        objInstance.setAlpha(newAlpha);
-        clearInterval(fadeInterval); // Stop calling itself
-      }
-      UpdateScreen();
-    }, animationDelay);
-  }
-
-  // Drawing the black triangle
+  // Drawing the triangle
   this.beginFill(0xFFFFFF);
   this.drawPolygon([
       -triangleWidth/2, triangleHeight,
@@ -65,5 +14,5 @@ Game.Triangle = function(triangleWidth, triangleHeight) {
   this.endFill();
 }
 
-Game.Triangle.prototype = Object.create(Graphics.prototype); // Inherance from Graphics
+Game.Triangle.prototype = Object.create(Game.Primitive.prototype); // Inherance from Graphics
 Game.Triangle.prototype.constructor = Game.Triangle;
