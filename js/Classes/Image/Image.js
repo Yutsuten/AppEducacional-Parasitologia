@@ -60,8 +60,8 @@ Game.Image = function(texture) {
     this.width = newWidth;
     this.scale.y = this.scale.x;
   }
-  this.setAchor = function(achorX, achorY) {
-    this.anchor.set(achorX, achorY);
+  this.setAnchor = function(anchorX, anchorY) {
+    this.anchor.set(anchorX, anchorY);
   }
   this.setInteractive = function(isInteractive) {
     this.interactive = isInteractive;

@@ -272,7 +272,7 @@ function carregaCicloBanana() {
   item["balaoAbaSintomasTexto"] = new Game.Text("Sintomas", {font: "30px Arial", fill: 0x000000, align: "left"});
   item.balaoAbaSintomasTexto.setPosition(950, 80);
   item.balaoAbaSintomasTexto.setZorder(1);
-  item.balaoAbaSintomasTexto.setAchor(0.5, 0.5);
+  item.balaoAbaSintomasTexto.setAnchor(0.5, 0.5);
   item.balaoAbaSintomasTexto.setAlpha(0);
   item.balaoAbaSintomasTexto.disable();
 
@@ -300,7 +300,7 @@ function carregaCicloBanana() {
   item["balaoAbaTratamentoTexto"] = new Game.Text("Tratamento", {font: "30px Arial", fill: 0x000000, align: "left"});
   item.balaoAbaTratamentoTexto.setPosition(1270, 80);
   item.balaoAbaTratamentoTexto.setZorder(1);
-  item.balaoAbaTratamentoTexto.setAchor(0.5, 0.5);
+  item.balaoAbaTratamentoTexto.setAnchor(0.5, 0.5);
   item.balaoAbaTratamentoTexto.setAlpha(0);
   item.balaoAbaTratamentoTexto.disable();
 
@@ -327,7 +327,7 @@ function carregaCicloBanana() {
   item["balaoAbaTransmissaoTexto"] = new Game.Text("Transmissão", {font: "30px Arial", fill: 0x000000, align: "left"});
   item.balaoAbaTransmissaoTexto.setPosition(1590, 80);
   item.balaoAbaTransmissaoTexto.setZorder(1);
-  item.balaoAbaTransmissaoTexto.setAchor(0.5, 0.5);
+  item.balaoAbaTransmissaoTexto.setAnchor(0.5, 0.5);
   item.balaoAbaTransmissaoTexto.setAlpha(0);
   item.balaoAbaTransmissaoTexto.disable();
 
@@ -408,7 +408,7 @@ function carregaCicloBanana() {
   item["botaoFinalizarTexto"] = new Game.Text("OK, entendi!", {font: "30px Arial", fill: 0x000000, align: "left"});
   item.botaoFinalizarTexto.setPosition(1600, 320);
   item.botaoFinalizarTexto.setZorder(1);
-  item.botaoFinalizarTexto.setAchor(0.5, 0.5);
+  item.botaoFinalizarTexto.setAnchor(0.5, 0.5);
   item.botaoFinalizarTexto.setAlpha(0);
   item.botaoFinalizarTexto.disable();
 

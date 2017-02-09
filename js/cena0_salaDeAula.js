@@ -25,6 +25,9 @@ sceneLoader[0] = function() {
   item.carteiras.setZorder(10);
   item.carteiras.setInteractive(false);
 
+  item["seta"] = new Game.Line(200, 200, 100, 300, 4);
+  item.seta.addArrowAtBeginning();
+
   item["mesaProfessor"] = new Game.Image("salaDeAula_mesaProfessor.png");
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);

@@ -28,8 +28,8 @@ Game.Text = function(text, style) {
   this.setRotation = function(newRotation) {
     this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
   }
-  this.setAchor = function(achorX, achorY) {
-    this.anchor.set(achorX, achorY);
+  this.setAnchor = function(anchorX, anchorY) {
+    this.anchor.set(anchorX, anchorY);
   }
 
   // Change value methods (animations that change properties within time)

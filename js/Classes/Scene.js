@@ -21,7 +21,7 @@ Game.Scene = function() {
                                 //stroke: 'black', strokeThickness: 10,
                                 dropShadow: true, dropShadowBlur: 10,
                                 fill: 0xFFFFFF, align: "left"});
-  subtitle.setAchor(0.5, 0.5);
+  subtitle.setAnchor(0.5, 0.5);
   subtitle.setPosition(960, 1000);
 
   this.setSubtitle = function setSubtitle(text) {
