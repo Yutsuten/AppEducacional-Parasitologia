@@ -12,6 +12,7 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
 
   // PROPERTIES
   // Private properties
+  var objInstance = this; // reference to this object
   var angle = Math.atan2(y2-y1, x2-x1)*180/Math.PI;
   var triangleAtBeginning = null;
   var triangleAtEnd = null;
@@ -30,20 +31,49 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
   }
 
   // METHODS
-  // Do not allow changing the position
+  // Do not allow call some methods
   this.setPosition = null;
+  this.setRotation = null;
+
+  var distributeProperties = function() {
+    if (triangleAtBeginning) {
+      triangleAtBeginning.alpha = objInstance.alpha;
+      triangleAtBeginning.z_order = objInstance.z_order;
+      triangleAtBeginning.tint = objInstance.tint;
+    }
+    if (triangleAtEnd) {
+      triangleAtEnd.alpha = objInstance.alpha;
+      triangleAtEnd.z_order = objInstance.z_order;
+      triangleAtEnd.tint = objInstance.tint;
+    }
+  }
+
+  this.setAlpha = function(newAlpha) {
+    this.alpha = newAlpha;
+    distributeProperties();
+  }
+  this.setZorder = function(newZorder) {
+    this.z_order = newZorder;
+    distributeProperties();
+  }
+  this.setColor = function(red, green, blue) {
+    this.tint = (red << 16) + (green << 8) + blue;
+    distributeProperties();
+  }
 
   // Method to make an arrow
   this.addArrowAtBeginning = function(size = 7*lineWidth) {
     triangleAtBeginning = new Game.Triangle(size, size);
     triangleAtBeginning.setPosition(x1 + -xDirection*size/2, y1 + -yDirection*size/2);
     triangleAtBeginning.setRotation(-angle);
+    distributeProperties();
   }
 
   this.addArrowAtEnd = function(size = 7*lineWidth) {
     triangleAtEnd = new Game.Triangle(size, size);
     triangleAtEnd.setPosition(x2 + xDirection*size/2, y2 + yDirection*size/2);
     triangleAtEnd.setRotation(-angle+180);
+    distributeProperties();
   }
 
   // Return the graphic(s) to be drawn
