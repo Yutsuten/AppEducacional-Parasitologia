@@ -14,24 +14,24 @@ Game.Primitive = function() {
 
   // METHODS
   // Set value methods (changes instantly)
-  this.setRotation = function(newRotation) {
-    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
-  }
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
   }
+  this.setAlpha = function(newAlpha) {
+    this.alpha = newAlpha;
+  }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
-  }
-  this.setVisibility = function(newVisibility) {
-    this.visible = newVisibility;
   }
   this.setColor = function(red, green, blue) {
     this.tint = (red << 16) + (green << 8) + blue;
   }
-  this.setAlpha = function(newAlpha) {
-    this.alpha = newAlpha;
+  this.setRotation = function(newRotation) {
+    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
+  }
+  this.setAchor = function(achorX, achorY) {
+    this.anchor.set(achorX, achorY);
   }
 
   // Change value methods (animations that change properties within time)
@@ -50,6 +50,15 @@ Game.Primitive = function() {
       UpdateScreen();
     }, animationDelay);
   }
+
+  // Enable-Disable Methods
+  this.disable = function() {
+    this.visible = false;
+  }
+  this.enable = function() {
+    this.visible = true;
+  }
+
 }
 
 Game.Primitive.prototype = Object.create(Graphics.prototype); // Inherance from Graphics

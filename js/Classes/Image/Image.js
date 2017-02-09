@@ -49,9 +49,6 @@ Game.Image = function(texture) {
   this.setBrightness = function(newBrightness) {
     this.setTint(newBrightness, newBrightness, newBrightness);
   }
-  this.setVisibility = function(newVisibility) {
-    this.visible = newVisibility;
-  }
   this.setRotation = function(newRotation) {
     this.rotation = -newRotation * (Math.PI / 180); // Changing from radians to degree
   }
@@ -170,10 +167,7 @@ Game.Image = function(texture) {
   }
 
   this.addGlow = function(strength = 10) {
-    this.filterArea = new Rectangle(  this.x - this.width/2 - 15,
-                                      this.y - this.height/2 - 15,
-                                      this.width + 30,
-                                      this.height + 30);
+    updateGlowRectangle();
     // distance, outerStrength, innerStrength, color, quality
     this.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, strength, strength/2, 0, 0xFFFFFF, 0.3)];
     UpdateScreen();
@@ -184,15 +178,13 @@ Game.Image = function(texture) {
     UpdateScreen();
   }
 
+  // Enable-Disable Methods
   this.disable = function() {
     this.filters = null;
     this.visible = false;
-    this.interactive = false;
   }
-
   this.enable = function() {
     this.visible = true;
-    this.interactive = true;
   }
 
   // Implementing the mouseover and mouseout methods

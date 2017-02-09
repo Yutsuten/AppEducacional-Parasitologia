@@ -54,7 +54,7 @@ function carregaCicloBanana() {
       item.estudanteBananaNormal.disable();
       item.bananaInfectada.enable();
       item.bananaInfectada.changeAlpha(1, 600);
-      item.zoomBanana.setVisibility(true);
+      item.zoomBanana.enable();
       item.zoomBanana.changeAlpha(1, 600);
     }, 3200);
 
@@ -130,7 +130,7 @@ function carregaCicloBanana() {
   item.zoomBanana.setColor(0, 0, 0);
   item.zoomBanana.setZorder(5);
   item.zoomBanana.setAlpha(0);
-  item.zoomBanana.setVisibility(false);
+  item.zoomBanana.disable();
 
   // Adiciona a segunda imagem do ciclo Entamoeba Coli
   item["coliDesencistamento"] = new Game.Image("temp.jpg");
@@ -192,7 +192,7 @@ function carregaCicloBanana() {
       // Desabilita todos os itens do ciclo
       item.sistemaDigestivo.disable();
       item.bananaInfectada.disable();
-      item.zoomBanana.setVisibility(true);
+      item.zoomBanana.enable();
       item.coliDesencistamento.disable();
       item.coliEncistamento.disable();
       item.coliFezes.disable();

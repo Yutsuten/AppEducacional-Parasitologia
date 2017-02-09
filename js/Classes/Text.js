@@ -15,9 +15,6 @@ Game.Text = function(text, style) {
 
   // METHODS
   // Set value methods (changes instantly)
-  this.setRotation = function(newRotation) {
-    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
-  }
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
@@ -27,6 +24,9 @@ Game.Text = function(text, style) {
   }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
+  }
+  this.setRotation = function(newRotation) {
+    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
   }
   this.setAchor = function(achorX, achorY) {
     this.anchor.set(achorX, achorY);
@@ -49,10 +49,10 @@ Game.Text = function(text, style) {
     }, animationDelay);
   }
 
+  // Enable-Disable Methods
   this.disable = function() {
     this.visible = false;
   }
-
   this.enable = function() {
     this.visible = true;
   }
