@@ -8,12 +8,6 @@ Game.Button = function(buttonNormal, buttonHover, buttonClicked, text, style) {
   text = new Game.Text(text, style);
 
   // PROPERTIES
-  // Static properties
-
-
-  // Public properties
-
-
   // Private properties
   var objInstance = this; // reference to this object
   var state = 0; //0: normal, 1: hover, 2: clicked
@@ -27,36 +21,48 @@ Game.Button = function(buttonNormal, buttonHover, buttonClicked, text, style) {
     text.position.set(coordX, coordY);
     text.setAnchor(0.5, 0.5);
   }
+  this.setAlpha = function(newAlpha) {
+    buttonNormal.setAlpha(newAlpha);
+    buttonHover.setAlpha(newAlpha);
+    buttonClicked.setAlpha(newAlpha);
+    text.setAlpha(newAlpha);
+  }
+  this.setZorder = function(newZorder) {
+    buttonNormal.setZorder(newZorder);
+    buttonHover.setZorder(newZorder);
+    buttonClicked.setZorder(newZorder);
+    text.setZorder(newZorder-1);
+  }
 
-  var onMouseOut = function() {
+  var btNormal = function() {
     state = 0;
     UpdateScreen();
   }
-  var onMouseOver = function() {
+  var btHover = function() {
     state = 1;
     UpdateScreen();
   }
-  var onClick = function() {
+  var btClick = function() {
     state = 2;
     UpdateScreen();
     if (objInstance.click)
       objInstance.click();
   }
 
-  buttonNormal.mouseover = function(mouse) {
-    onMouseOver();
-  }
   buttonHover.mouseout = function(mouse) {
-    onMouseOut();
-  }
-  buttonHover.mousedown = function(mouse) {
-    onClick();
-  }
-  buttonClicked.mouseup = function(mouse) {
-    onMouseOver();
+    btNormal();
   }
   buttonClicked.mouseout = function(mouse) {
-    onMouseOut();
+    btNormal();
+  }
+  buttonNormal.mouseover = function(mouse) {
+    btHover();
+  }
+  buttonClicked.mouseup = function(mouse) {
+    btHover();
+  }
+  buttonHover.mousedown = function(mouse) {
+    btClick();
   }
 
   // Return the graphic(s) to be drawn
