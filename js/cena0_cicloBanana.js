@@ -126,7 +126,7 @@ function carregaCicloBanana() {
   itensCiclo.push(item.zoomBanana);
 
   // Adiciona a segunda imagem do ciclo Entamoeba Coli
-  item["coliDesencistamento"] = new Game.Image("temp.jpg");
+  item["coliDesencistamento"] = new Game.Image("entamoebaCisto.png");
   item.coliDesencistamento.setPosition(335, 770);
   item.coliDesencistamento.setZorder(4);
   item.coliDesencistamento.setAlpha(0);
@@ -134,7 +134,7 @@ function carregaCicloBanana() {
   itensCiclo.push(item.coliDesencistamento);
 
   // Adiciona a terceira imagem do ciclo Entamoeba Coli
-  item["coliEncistamento"] = new Game.Image("temp.jpg");
+  item["coliEncistamento"] = new Game.Image("entamoebaTrofozoito.png");
   item.coliEncistamento.setPosition(1520, 200);
   item.coliEncistamento.setScale(0.8);
   item.coliEncistamento.setZorder(4);

@@ -12,9 +12,11 @@ var gameImages = [
   "salaDeAula_mesaProfessor.png",
   "banana.png",
 
-  // Imagens ciclo da banana
+  // Imagens ciclo da banana (Entamoeba Coli)
   "estudanteDoente.png",
   "fezes.png",
+  "entamoebaCisto.png",
+  "entamoebaTrofozoito.png",
   "sistemaDigestivo.png",
   "mosca.gif",
   "ovos.png",
