@@ -23,6 +23,9 @@ function carregaCicloBanana() {
   item.banana.click = function(mouse) {
     // Eventos que acontecem imediatamente apos clicar na banana
     disableInteractiveness();
+    var currentTime = 0;
+    var animationInterval = 700; // Intervalo entre cada animacao
+
     item.banana.removeGlow();
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
@@ -30,84 +33,68 @@ function carregaCicloBanana() {
     item.setaJanela.changeAlpha(0, 600);
     item.setaArmario.changeAlpha(0, 600);
 
-    // Eventos que acontecem apos 0.8 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       scene[0].setSubtitle("");
       item.setaJanela.disable();
       item.setaArmario.disable();
-    }, 800);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 1.6 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.banana.changeAlpha(0, 600);
       item.estudanteBananaNormal.changeAlpha(0, 600);
-    }, 1600);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 2.4 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.sistemaDigestivo.enable();
       item.sistemaDigestivo.changeAlpha(1, 600);
-    }, 2400);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 3.2 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.estudanteBananaNormal.disable();
       item.bananaInfectada.enable();
       item.bananaInfectada.changeAlpha(1, 600);
       item.zoomBanana.enable();
       item.zoomBanana.changeAlpha(1, 600);
-    }, 3200);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 3.6 segundos do clique
-    setTimeout(function() {
-    }, 3600);
-
-    // Eventos que acontecem apos 4 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.coliDesencistamento.enable();
       item.coliDesencistamento.changeAlpha(1, 600);
-    }, 4000);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 4.4 segundos do clique
-    setTimeout(function() {
-    }, 4400);
-
-    // Eventos que acontecem apos 4.8 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.coliEncistamento.enable();
       item.coliEncistamento.changeAlpha(1, 600);
-    }, 4800);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 5.2 segundos do clique
-    setTimeout(function() {
-    }, 5200);
-
-    // Eventos que acontecem apos 5.6 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.coliFezes.enable();
       item.coliFezes.changeAlpha(1, 600);
-    }, 5600);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 6.0 segundos do clique
-    setTimeout(function() {
-    }, 6000);
-
-    // Eventos que acontecem apos 6.4 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.coliMosca.enable();
       item.coliMosca.changeAlpha(1, 600);
-    }, 6400);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 6.8 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       item.coliBotaoFechar.enable();
       item.coliBotaoFechar.changeAlpha(1, 600);
-    }, 6800);
+    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos 7.6 segundos do clique
+    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       enableInteractiveness();
-    }, 7600);
+    }, currentTime += animationInterval);
   }
 
   var itensCiclo = [];
@@ -186,6 +173,8 @@ function carregaCicloBanana() {
   }
   item.coliBotaoFechar.click = function(mouse) {
     disableInteractiveness();
+    var currentTime = 0;
+    var animationInterval = 700; // Intervalo entre cada animacao
 
     // Fadeout em todas as imagens do ciclo
     groupChangeAlpha(itensCiclo, 0, 600);
@@ -201,11 +190,11 @@ function carregaCicloBanana() {
       groupChangeAlpha(itensSobreDoenca, 1, 600);
       item.balaoDescricaoTratamento.disable();
       item.balaoDescricaoTransmissao.disable();
-    }, 800);
+    }, currentTime += animationInterval);
 
     setTimeout(function() {
       enableInteractiveness();
-    }, 1600);
+    }, currentTime += animationInterval);
   }
 
   var itensSobreDoenca = [];
@@ -326,6 +315,8 @@ function carregaCicloBanana() {
   item.botaoFinalizar.disable();
   item.botaoFinalizar.click = function(mouse) {
     disableInteractiveness();
+    var currentTime = 0;
+    var animationInterval = 700; // Intervalo entre cada animacao
 
     // Oculta o estudante doente
     // Oculta o balao e as informacoes
@@ -351,11 +342,11 @@ function carregaCicloBanana() {
       item.carteiras.changeBrightness(255, 600);
       item.mesaProfessor.changeBrightness(255, 600);
       scene[0].background.changeBrightness(255, 600);
-    }, 800);
+    }, currentTime += animationInterval);
 
     setTimeout(function() {
       enableInteractiveness();
-    }, 1600);
+    }, currentTime += animationInterval);
   }
   itensSobreDoenca.push(item.botaoFinalizar);
 
