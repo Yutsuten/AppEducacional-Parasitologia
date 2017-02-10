@@ -193,7 +193,7 @@ function carregaCicloBanana() {
       // Desabilita todos os itens do ciclo
       item.sistemaDigestivo.disable();
       item.bananaInfectada.disable();
-      item.zoomBanana.enable();
+      item.zoomBanana.disable();
       item.coliDesencistamento.disable();
       item.coliEncistamento.disable();
       item.coliFezes.disable();

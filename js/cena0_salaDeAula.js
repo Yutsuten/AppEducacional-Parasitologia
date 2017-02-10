@@ -23,12 +23,10 @@ sceneLoader[0] = function() {
   item["carteiras"] = new Game.Image("salaDeAula_carteiras.png");
   item.carteiras.setPosition(960, 857);
   item.carteiras.setZorder(10);
-  item.carteiras.setInteractive(false);
 
   item["mesaProfessor"] = new Game.Image("salaDeAula_mesaProfessor.png");
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);
-  item.mesaProfessor.setInteractive(false);
 
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");
