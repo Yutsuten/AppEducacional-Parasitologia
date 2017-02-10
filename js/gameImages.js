@@ -34,6 +34,7 @@ var gameImages = [
   "botaoFechar.png",
   "balao.png",
   "abaDoBalao.png",
+  "botao.png",
   "temp.jpg",
   "seta.png"
 ];

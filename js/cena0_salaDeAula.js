@@ -30,6 +30,9 @@ sceneLoader[0] = function() {
   item.mesaProfessor.setZorder(15);
   item.mesaProfessor.setInteractive(false);
 
+  item["botao"] = new Game.Button("abaDoBalao.png", "botao.png", "abaDoBalao.png", "OK, entendi!", {font: "30px SimSun", dropShadow: true, dropShadowBlur: 10, fill: 0xFFFFFF, align: "left"});
+  item.botao.setPosition(600, 100);
+
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);

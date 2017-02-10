@@ -129,6 +129,7 @@ function carregaCicloBanana() {
   item["zoomBanana"] = new Game.Line(355, 255, 1030, 280, 3);
   item.zoomBanana.setColor(0, 0, 0);
   item.zoomBanana.setZorder(5);
+  item.zoomBanana.addArrowAtEnd();
   item.zoomBanana.setAlpha(0);
   item.zoomBanana.disable();
 
