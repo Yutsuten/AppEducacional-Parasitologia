@@ -1,29 +1,34 @@
 'use strict';
 
 Game.Scene = function() {
+  // Class initialization
 
+  // PROPERTIES
+  // Private properties
   var spritesheet = [];
   var activatedBackground = 0;
   var music = null;
-
   var itemAlpha = [];
   var spritesheetAlpha = [];
   var itemInteractiveness = [];
-
-  this.background = null;
-  this.item = {};
   var itemsArray = [];
-
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
-  backgroundMask.setAlpha(0);
-
   var subtitle = new Game.Text("", {font: "60px SimSun", fontWeight: 'bold',
                                 //stroke: 'black', strokeThickness: 10,
                                 dropShadow: true, dropShadowBlur: 10,
                                 fill: 0xFFFFFF, align: "left"});
+
+  // Public properties
+  this.background = null;
+  this.item = {};
+
+  // Variables initialization
+  backgroundMask.setAlpha(0);
   subtitle.setAnchor(0.5, 0.5);
   subtitle.setPosition(960, 1000);
 
+  // METHODS
+  // Public methods
   this.setSubtitle = function setSubtitle(text) {
     subtitle.text = text;
     UpdateScreen();
