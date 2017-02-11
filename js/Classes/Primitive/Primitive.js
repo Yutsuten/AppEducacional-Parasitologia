@@ -29,7 +29,7 @@ Game.Primitive = function() {
     this.tint = (red << 16) + (green << 8) + blue;
   }
   this.setRotation = function(newRotation) {
-    this.rotation = -1 * (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
+    this.rotation = (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
   }
 
   // Change value methods (animations that change properties within time)

@@ -51,7 +51,7 @@ Game.Image = function(texture) {
     this.setTint(newBrightness, newBrightness, newBrightness);
   }
   this.setRotation = function(newRotation) {
-    this.rotation = -newRotation * (Math.PI / 180); // Changing from radians to degree
+    this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
   }
   this.setHeight = function(newHeight) {
     this.height = newHeight;
