@@ -13,6 +13,7 @@ Game.Button = function(buttonNormal, buttonHover, buttonClicked, text, style) {
   var state = 0; //0: normal, 1: hover, 2: clicked
 
   // METHODS
+  // Public methods
   // Set value methods (changes instantly)
   this.setPosition = function(coordX, coordY) {
     buttonNormal.position.set(coordX, coordY);
@@ -32,21 +33,6 @@ Game.Button = function(buttonNormal, buttonHover, buttonClicked, text, style) {
     buttonHover.setZorder(newZorder);
     buttonClicked.setZorder(newZorder);
     text.setZorder(newZorder-1);
-  }
-
-  var btNormal = function() {
-    state = 0;
-    UpdateScreen();
-  }
-  var btHover = function() {
-    state = 1;
-    UpdateScreen();
-  }
-  var btClick = function() {
-    state = 2;
-    UpdateScreen();
-    if (objInstance.click)
-      objInstance.click();
   }
 
   buttonHover.mouseout = function(mouse) {
@@ -79,6 +65,22 @@ Game.Button = function(buttonNormal, buttonHover, buttonClicked, text, style) {
         break;
     }
     text.draw(stage);
+  }
+
+  // Private methods
+  var btNormal = function() {
+    state = 0;
+    UpdateScreen();
+  }
+  var btHover = function() {
+    state = 1;
+    UpdateScreen();
+  }
+  var btClick = function() {
+    state = 2;
+    UpdateScreen();
+    if (objInstance.click)
+      objInstance.click();
   }
 
 }
