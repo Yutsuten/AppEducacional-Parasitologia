@@ -29,6 +29,7 @@ Game.Image = function(texture) {
   var objInstance = this; // reference to this object
 
   // METHODS
+  // Public methods
   // Set value methods (changes instantly)
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
@@ -130,14 +131,6 @@ Game.Image = function(texture) {
     }, animationDelay);
   }
 
-  // Returns values between 0 and 1
-  // 0 is the initial position
-  // 1 is the final position
-  var moveFunction = function(elapsedTime, animationTime) {
-    var x = elapsedTime / animationTime;
-    return 0.5*Math.sin((10*x/Math.PI) - 0.5*Math.PI)+0.5;
-  }
-
   this.move = function(newX, newY, time) {
     var elapsedTime = 0;
     var animationTime = time;
@@ -156,14 +149,6 @@ Game.Image = function(texture) {
       }
       UpdateScreen();
     }, animationDelay);
-  }
-
-  // Glow methods
-  var updateGlowRectangle = function() {
-    objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
-                                            objInstance.y - objInstance.height/2 - 15,
-                                            objInstance.width + 30,
-                                            objInstance.height + 30);
   }
 
   this.addGlow = function(strength = 10) {
@@ -202,6 +187,23 @@ Game.Image = function(texture) {
   // Return the graphic(s) to be drawn
   this.draw = function(stage) {
     stage.addChild(this);
+  }
+
+  // Private methods
+  // Glow area
+  var updateGlowRectangle = function() {
+    objInstance.filterArea = new Rectangle( objInstance.x - objInstance.width/2 - 15,
+                                            objInstance.y - objInstance.height/2 - 15,
+                                            objInstance.width + 30,
+                                            objInstance.height + 30);
+  }
+
+  // Returns values between 0 and 1
+  // 0 is the initial position
+  // 1 is the final position
+  var moveFunction = function(elapsedTime, animationTime) {
+    var x = elapsedTime / animationTime;
+    return 0.5*Math.sin((10*x/Math.PI) - 0.5*Math.PI)+0.5;
   }
 
 }
