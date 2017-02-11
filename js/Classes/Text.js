@@ -14,6 +14,7 @@ Game.Text = function(text, style) {
   var objInstance = this;
 
   // METHODS
+  // Public methods
   // Set value methods (changes instantly)
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;

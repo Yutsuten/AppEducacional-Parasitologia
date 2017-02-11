@@ -13,6 +13,7 @@ Game.Primitive = function() {
   var objInstance = this; // reference to this object
 
   // METHODS
+  // Public methods
   // Set value methods (changes instantly)
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
