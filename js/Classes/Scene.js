@@ -29,7 +29,7 @@ Game.Scene = function() {
 
   // METHODS
   // Public methods
-  this.setSubtitle = function setSubtitle(text) {
+  this.setSubtitle = function(text) {
     subtitle.text = text;
     UpdateScreen();
   }
