@@ -65,14 +65,14 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
   this.addArrowAtBeginning = function(size = 7*lineWidth) {
     triangleAtBeginning = new Game.Triangle(size, size);
     triangleAtBeginning.setPosition(x1 + -xDirection*size/2, y1 + -yDirection*size/2);
-    triangleAtBeginning.setRotation(-angle);
+    triangleAtBeginning.setRotation(angle+180);
     distributeProperties();
   }
 
   this.addArrowAtEnd = function(size = 7*lineWidth) {
     triangleAtEnd = new Game.Triangle(size, size);
     triangleAtEnd.setPosition(x2 + xDirection*size/2, y2 + yDirection*size/2);
-    triangleAtEnd.setRotation(-angle+180);
+    triangleAtEnd.setRotation(angle);
     distributeProperties();
   }
 
