@@ -60,7 +60,7 @@ sceneLoader[0] = function() {
   }
 
   // Carrega elementos do ciclo da banana
-  carregaCicloBanana();
+  carregaCicloEcoli();
 
   scene[0].addAllItemsToScene();
 }

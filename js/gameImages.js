@@ -15,8 +15,8 @@ var gameImages = [
   "horta.png",
   "latrina.png",
   "lixeira.png",
-  "poco.png",
-  "vaca.png",
+  "pocoExterior.png",
+  "vacaExterior.png",
 
   // Estudantes
   "estHbrcClo.png",

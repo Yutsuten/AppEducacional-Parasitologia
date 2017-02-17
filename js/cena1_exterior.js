@@ -8,7 +8,7 @@ sceneLoader[1] = function() {
   scene[1].setMusic("musicaCenaExterna.mp3");
 
   // Adicionando uma imagem de fundo
-  scene[1].background = new Game.Background("cenaExterior.png");
+  scene[1].background = new Game.Background("cenaExterior.jpg");
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   scene[1].background.setInteractive(true);
@@ -36,13 +36,13 @@ sceneLoader[1] = function() {
   item.lixeira.setPosition(580, 290);
   item.lixeira.setZorder(16);
 
-  item["poco"] = new Game.Image("poco.png");
-  item.poco.setPosition(1723, 648);
-  item.poco.setZorder(10);
+  item["pocoExterior"] = new Game.Image("pocoExterior.png");
+  item.pocoExterior.setPosition(1723, 648);
+  item.pocoExterior.setZorder(10);
 
-  item["vaca"] = new Game.Image("vaca.png");
-  item.vaca.setPosition(938, 250);
-  item.vaca.setZorder(15);
+  item["vacaExterior"] = new Game.Image("vacaExterior.png");
+  item.vacaExterior.setPosition(938, 250);
+  item.vacaExterior.setZorder(15);
 
   // Adiciona uma seta para voltar na sala de aula
   item["setaSalaDeAula"] = new Game.Item("seta.png");

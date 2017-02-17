@@ -1,14 +1,14 @@
-function carregaCicloBanana() {
+function carregaCicloEcoli() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estudanteBananaNormal"] = new Game.Image("estudanteNormal.png");
+  item["estudanteBananaNormal"] = new Game.Image("estHngrSdv.png");
   item.estudanteBananaNormal.setPosition(960, 655);
   item.estudanteBananaNormal.setZorder(11);
 
   // Adiconando a banana
-  item["banana"] = new Game.Item("banana.png");
+  /*item["banana"] = new Game.Item("banana.png");
   item.banana.setPosition(980, 730);
   item.banana.setScale(0.2);
   item.banana.setZorder(9);
@@ -357,6 +357,6 @@ function carregaCicloBanana() {
   item.botaoFinalizarTexto.setAnchor(0.5, 0.5);
   item.botaoFinalizarTexto.setAlpha(0);
   item.botaoFinalizarTexto.disable();
-  itensSobreDoenca.push(item.botaoFinalizarTexto);
+  itensSobreDoenca.push(item.botaoFinalizarTexto);*/
 
 }
