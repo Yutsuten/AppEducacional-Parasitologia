@@ -48,13 +48,14 @@ function carregaCicloBanana() {
 
     // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
+      item.estudanteBananaNormal.disable();
+      item.banana.disable();
       item.sistemaDigestivo.enable();
       item.sistemaDigestivo.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
-      item.estudanteBananaNormal.disable();
       item.bananaInfectada.enable();
       item.bananaInfectada.changeAlpha(1, 600);
       item.zoomBanana.enable();
