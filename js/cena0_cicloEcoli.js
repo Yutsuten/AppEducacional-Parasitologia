@@ -6,6 +6,17 @@ function carregaCicloEcoli() {
   item["estBananaNormal"] = new Game.Item("estHprdSdv.png");
   item.estBananaNormal.setPosition(1220, 630);
   item.estBananaNormal.setZorder(11);
+  item.estBananaNormal.onMouseOver = function() {
+    item.estBananaNormal.addGlow();
+    scene[0].setSubtitle("Amebíase");
+  }
+  item.estBananaNormal.onMouseOut = function() {
+    item.estBananaNormal.removeGlow();
+    scene[0].setSubtitle("");
+  }
+  item.estBananaNormal.click = function() {
+
+  }
 
   // Adiconando a banana
   /*item["banana"] = new Game.Item("banana.png");

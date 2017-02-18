@@ -6,4 +6,15 @@ function carregaCicloTaeniaSolium() {
   item["estPorcoNormal"] = new Game.Item("estHjpnSdv.png");
   item.estPorcoNormal.setPosition(150, 308);
   item.estPorcoNormal.setZorder(11);
+  item.estPorcoNormal.onMouseOver = function() {
+    item.estPorcoNormal.addGlow();
+    scene[1].setSubtitle("Teníase");
+  }
+  item.estPorcoNormal.onMouseOut = function() {
+    item.estPorcoNormal.removeGlow();
+    scene[1].setSubtitle("");
+  }
+  item.estPorcoNormal.click = function() {
+
+  }
 }
