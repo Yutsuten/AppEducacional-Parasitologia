@@ -3,7 +3,7 @@ function carregaCicloPlasmodium() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estudante"] = new Game.Image("estudante.png");
-  item.estudante.setPosition(1220, 630);
-  item.estudante.setZorder(11);
+  item["estPernNormal"] = new Game.Image("estMngrSdv.png");
+  item.estPernNormal.setPosition(1220, 630);
+  item.estPernNormal.setZorder(11);
 }

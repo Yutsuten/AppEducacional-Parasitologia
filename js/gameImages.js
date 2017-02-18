@@ -18,38 +18,18 @@ var gameImages = [
   "pocoExterior.png",
   "vacaExterior.png",
 
-  // Estudantes
-  "estHbrcClo.png",
-  "estHbrcDte.png",
-  "estHbrcSdv.png",
-  "estHjpnClo.png",
-  "estHjpnDte.png",
-  "estHjpnSdv.png",
-  "estHngrClo.png",
-  "estHngrDte.png",
-  "estHngrSdv.png",
+  // Ciclo do Entamoeba Coli (banana)
   "estHprdClo.png",
   "estHprdDte.png",
   "estHprdSdv.png",
-  "estMbrcClo.png",
-  "estMbrcDte.png",
-  "estMbrcSdv.png",
-  "estMjpnClo.png",
-  "estMjpnDte.png",
-  "estMjpnSdv.png",
-  "estMngrClo.png",
-  "estMngrDte.png",
-  "estMngrSdv.png",
-  "estMprdClo.png",
-  "estMprdDte.png",
-  "estMprdSdv.png",
-
-  // Ciclo do Entamoeba Coli (banana)
   "fezesComMosca.png",
   "entamoebaCisto.png",
   "entamoebaTrofozoito.png",
 
   // Ciclo do Ascaris (tomate)
+  "estHngrClo.png",
+  "estHngrDte.png",
+  "estHngrSdv.png",
   "circulacao.png",
   "pulmao.png",
   "coracao.png",
@@ -57,10 +37,19 @@ var gameImages = [
   "fezesSemMosca.png",
 
   // Ciclo do Plasmodium (pernilongo)
+  "estMngrClo.png",
+  "estMngrDte.png",
+  "estMngrSdv.png",
 
   // Ciclo do Toxoplasmose (gato)
+  "estMjpnClo.png",
+  "estMjpnDte.png",
+  "estMjpnSdv.png",
 
   // Ciclo da Giardia (poco)
+  "estMbrcClo.png",
+  "estMbrcDte.png",
+  "estMbrcSdv.png",
   "poco.png",
   "cistos.png",
   "giardiaReproducao.png",
@@ -68,6 +57,9 @@ var gameImages = [
   "lencolFreatico.png",
 
   // Ciclo da Taenia Saginata (vaca)
+  "estMprdClo.png",
+  "estMprdDte.png",
+  "estMprdSdv.png",
   "vaca.png",
   "carneInfectada.png",
   "teniaAdulta.png",
@@ -75,9 +67,15 @@ var gameImages = [
   "papelLixo.png",
 
   // Ciclo da Taenia Solium (porco)
+  "estHjpnClo.png",
+  "estHjpnDte.png",
+  "estHjpnSdv.png",
   "porco.png",
 
   // Ciclo da Cisticercose (cenoura)
+  "estHbrcClo.png",
+  "estHbrcDte.png",
+  "estHbrcSdv.png",
   "chorumeLixoCenouras.png",
   "cerebroInfectado.png",
 
