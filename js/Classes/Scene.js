@@ -13,10 +13,20 @@ Game.Scene = function() {
   var itemInteractiveness = [];
   var itemsArray = [];
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
-  var subtitle = new Game.Text("", {font: "60px SimSun", fontWeight: 'bold',
-                                //stroke: 'black', strokeThickness: 10,
-                                dropShadow: true, dropShadowBlur: 10,
-                                fill: 0xFFFFFF, align: "left"});
+  var subtitle = new MultiStyleText("",
+    {
+      "default": {fontFamily: "SimSun", fontSize: "60px",
+        //stroke: 'black', strokeThickness: 10,
+        dropShadow: true, dropShadowBlur: 10,
+        fill: 0xFFFFFF, align: "left"
+      },
+      "i" : {
+        fontStyle: "italic"
+      },
+      "b" : {
+        fontStyle: "bold"
+      }
+    });
 
   // Public properties
   this.background = null;
@@ -24,8 +34,8 @@ Game.Scene = function() {
 
   // Variables initialization
   backgroundMask.setAlpha(0);
-  subtitle.setAnchor(0.5, 0.5);
-  subtitle.setPosition(960, 1000);
+  subtitle.anchor.set(0.5, 0.5);
+  subtitle.position.set(960, 1000);
 
   // METHODS
   // Public methods
@@ -114,6 +124,6 @@ Game.Scene = function() {
     backgroundMask.draw(stage);
     for (var i = 0; i < itemsArray.length; i++)
       itemsArray[i].draw(stage);
-    subtitle.draw(stage);
+    stage.addChild(subtitle);
   }
 }

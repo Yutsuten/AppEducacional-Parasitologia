@@ -62,23 +62,6 @@ sceneLoader[0] = function() {
     changeScene(2); // Muda para a cena exterior
   }
 
-  item["textoTeste"] = new MultiStyleText("Let's make some <ml>multiline</ml>",
-  {
-  	"default": {
-  		fontFamily: "Arial",
-  		fontSize: "24px",
-  		fill: "#cccccc",
-  		align: "center"
-  	},
-  	"ml": {
-  		fontStyle: "italic"
-  	},
-  });
-  item["textoTeste"].z_order = 1;
-  item["textoTeste"].draw = function(stage) {
-    stage.addChild(item["textoTeste"]);
-  }
-
   // Carrega ciclos
   carregaCicloEcoli();
   carregaCicloAscaris();
