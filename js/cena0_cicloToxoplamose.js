@@ -4,6 +4,6 @@ function carregaCicloToxoplasmose() {
 
   // Adicionando o aluno
   item["estGatoNormal"] = new Game.Image("estMjpnSdv.png");
-  item.estGatoNormal.setPosition(1220, 630);
+  item.estGatoNormal.setPosition(610, 455);
   item.estGatoNormal.setZorder(11);
 }

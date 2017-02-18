@@ -4,6 +4,6 @@ function carregaCicloPlasmodium() {
 
   // Adicionando o aluno
   item["estPernNormal"] = new Game.Image("estMngrSdv.png");
-  item.estPernNormal.setPosition(1220, 630);
-  item.estPernNormal.setZorder(11);
+  item.estPernNormal.setPosition(1586, 838);
+  item.estPernNormal.setZorder(9);
 }

@@ -4,6 +4,6 @@ function carregaCicloAscaris() {
 
   // Adicionando o aluno
   item["estTomateNormal"] = new Game.Image("estHngrSdv.png");
-  item.estTomateNormal.setPosition(1220, 630);
+  item.estTomateNormal.setPosition(940, 590);
   item.estTomateNormal.setZorder(11);
 }
