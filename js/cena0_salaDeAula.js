@@ -9,6 +9,7 @@ sceneLoader[0] = function() {
 
   // Adicionando uma imagem de fundo
   scene[0].background = new Game.Background("salaDeAula.jpg");
+  scene[0].background.setBrightness(210);
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   scene[0].background.setInteractive(true);
@@ -23,10 +24,12 @@ sceneLoader[0] = function() {
   item["carteiras"] = new Game.Image("salaDeAula_carteiras.png");
   item.carteiras.setPosition(960, 857);
   item.carteiras.setZorder(10);
+  item.carteiras.setBrightness(200);
 
   item["mesaProfessor"] = new Game.Image("salaDeAula_mesaProfessor.png");
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);
+  item.mesaProfessor.setBrightness(200);
 
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");
@@ -57,6 +60,23 @@ sceneLoader[0] = function() {
   }
   item.setaArmario.click = function(mouse) {
     changeScene(2); // Muda para a cena exterior
+  }
+
+  item["textoTeste"] = new MultiStyleText("Let's make some <ml>multiline</ml>",
+  {
+  	"default": {
+  		fontFamily: "Arial",
+  		fontSize: "24px",
+  		fill: "#cccccc",
+  		align: "center"
+  	},
+  	"ml": {
+  		fontStyle: "italic"
+  	},
+  });
+  item["textoTeste"].z_order = 1;
+  item["textoTeste"].draw = function(stage) {
+    stage.addChild(item["textoTeste"]);
   }
 
   // Carrega ciclos

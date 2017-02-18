@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("Pixi.js version: " + PIXI.VERSION);
-
 // Aliases
 var Container = PIXI.Container,
     autoDetectRenderer = PIXI.autoDetectRenderer,

@@ -154,7 +154,7 @@ Game.Image = function(texture) {
   this.addGlow = function(strength = 10) {
     updateGlowRectangle();
     // distance, outerStrength, innerStrength, color, quality
-    this.filters = [new PIXI.filters.GlowFilter(renderer.width, renderer.height, strength, strength/2, 0, 0xFFFFFF, 0.3)];
+    this.filters = [new PIXI.filters.GlowFilter(strength, 2, 1, 0xFFFFFF, 1)];
     UpdateScreen();
   }
 
