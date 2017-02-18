@@ -35,16 +35,29 @@ var gameImages = [
   "coracao.png",
   "figado.png",
   "fezesSemMosca.png",
+  "ascarisFilhote.png",
+  "ascarisMF.png",
+  "ovoAscaris.png",
 
   // Ciclo do Plasmodium (pernilongo)
   "estMngrClo.png",
   "estMngrDte.png",
   "estMngrSdv.png",
+  "mosquito.png",
+  "picada.png",
+  "merozoito.png",
+  "hemaciaComMerozoito.png",
+  "gametocitoPlasmodium.png",
+  "esporozoito.png",
 
   // Ciclo do Toxoplasmose (gato)
   "estMjpnClo.png",
   "estMjpnDte.png",
   "estMjpnSdv.png",
+  "toxoplamose.png",
+  "gato.png",
+  "rato.png",
+  "caixaDeAreia.png",
 
   // Ciclo da Giardia (poco)
   "estMbrcClo.png",
@@ -61,6 +74,7 @@ var gameImages = [
   "estMprdDte.png",
   "estMprdSdv.png",
   "vaca.png",
+  "ovoTenia.png",
   "carneInfectada.png",
   "teniaAdulta.png",
   "proglate.png",
