@@ -15,7 +15,7 @@ function carregaCicloEcoli() {
     item.estBananaNormal.setBrightness(220);
     scene[0].setSubtitle("");
   }
-  item.estBananaNormal.click = function() {
+  item.estBananaNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 700; // Intervalo entre cada animacao
@@ -25,6 +25,7 @@ function carregaCicloEcoli() {
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
+
     item.estTomateNormal.changeBrightness(100, 600);
     item.estPernNormal.changeBrightness(100, 600);
     item.estGatoNormal.changeBrightness(100, 600);
@@ -35,173 +36,116 @@ function carregaCicloEcoli() {
       scene[0].setSubtitle("");
       item.setaJanela.disable();
       item.setaArmario.disable();
-      item.estTomateNormal.setInteractive(false);
-      item.estPernNormal.setInteractive(false);
-      item.estGatoNormal.setInteractive(false);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      scene[0].setSubtitle("");
       item.estBananaNormal.changeBrightness(100, 600);
     }, currentTime += animationInterval);
-  }
 
-  /*
-  item.banana.click = function(mouse) {
-
-    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
-      item.estudanteBananaNormal.disable();
-      item.banana.disable();
-      item.sistemaDigestivo.enable();
-      item.sistemaDigestivo.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.bananaInfectada.enable();
-      item.bananaInfectada.changeAlpha(1, 600);
-      item.zoomBanana.enable();
-      item.zoomBanana.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.coliDesencistamento.enable();
-      item.coliDesencistamento.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.coliEncistamento.enable();
-      item.coliEncistamento.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.coliFezes.enable();
-      item.coliFezes.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.coliMosca.enable();
-      item.coliMosca.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      item.coliBotaoFechar.enable();
-      item.coliBotaoFechar.changeAlpha(1, 600);
-    }, currentTime += animationInterval);
-
-    // Eventos que acontecem apos o intervalo estipulado
-    setTimeout(function() {
-      enableInteractiveness();
     }, currentTime += animationInterval);
   }
 
   var itensCiclo = [];
 
-  // Adiciona a imagem do sistema digestivo - Ciclo Entamoeba Coli
-  item["sistemaDigestivo"] = new Game.Image("sistemaDigestivo.png");
-  item.sistemaDigestivo.setPosition(960, 550);
-  item.sistemaDigestivo.setScale(1.3);
-  item.sistemaDigestivo.setZorder(6);
-  item.sistemaDigestivo.setInteractive(false);
-  item.sistemaDigestivo.setAlpha(0);
-  item.sistemaDigestivo.disable();
-  itensCiclo.push(item.sistemaDigestivo);
+  // Imagens ciclo
+  item["estBananaCiclo"] = new Game.Image("estHprdClo.png");
+  item.estBananaCiclo.setPosition(960, 550);
+  item.estBananaCiclo.setScale(0.5);
+  item.estBananaCiclo.setZorder(9);
+  //item.estBananaCiclo.setAlpha(0);
+  //item.estBananaCiclo.disable();
+  itensCiclo.push(item.estBananaCiclo);
 
-  // Adiciona a primeira imagem do ciclo Entamoeba Coli
-  item["bananaInfectada"] = new Game.Image("temp.jpg");
-  item.bananaInfectada.setPosition(335, 255);
-  item.bananaInfectada.setZorder(4);
-  item.bananaInfectada.setAlpha(0);
-  item.bananaInfectada.disable();
-  itensCiclo.push(item.bananaInfectada);
+  item["elem1"] = new Game.Image("entamoebaCisto.png");
+  item.elem1.setPosition(485, 300);
+  item.elem1.setScale(0.7);
+  item.elem1.setZorder(6);
+  //item.elem1.setAlpha(0);
+  //item.elem1.disable();
+  itensCiclo.push(item.elem1);
 
-  item["zoomBanana"] = new Game.Line(355, 255, 1030, 280, 3);
-  item.zoomBanana.setColor(0, 0, 0);
-  item.zoomBanana.setZorder(5);
-  item.zoomBanana.addArrowAtEnd();
-  item.zoomBanana.setAlpha(0);
-  item.zoomBanana.disable();
-  itensCiclo.push(item.zoomBanana);
+  item["setaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item.setaElem1Est.setColor(0, 0, 0);
+  item.setaElem1Est.setZorder(7);
 
-  // Adiciona a segunda imagem do ciclo Entamoeba Coli
-  item["coliDesencistamento"] = new Game.Image("entamoebaCisto.png");
-  item.coliDesencistamento.setPosition(335, 770);
-  item.coliDesencistamento.setZorder(4);
-  item.coliDesencistamento.setAlpha(0);
-  item.coliDesencistamento.disable();
-  itensCiclo.push(item.coliDesencistamento);
+  item["elem2a"] = new Game.Image("entamoebaCisto.png");
+  item.elem2a.setPosition(200, 750);
+  item.elem2a.setScale(0.4);
+  item.elem2a.setZorder(6);
+  //item.elem2a.setAlpha(0);
+  //item.elem2a.disable();
+  itensCiclo.push(item.elem2a);
 
-  // Adiciona a terceira imagem do ciclo Entamoeba Coli
-  item["coliEncistamento"] = new Game.Image("entamoebaTrofozoito.png");
-  item.coliEncistamento.setPosition(1520, 200);
-  item.coliEncistamento.setScale(0.8);
-  item.coliEncistamento.setZorder(4);
-  item.coliEncistamento.setAlpha(0);
-  item.coliEncistamento.disable();
-  itensCiclo.push(item.coliEncistamento);
+  item["setaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
+  item.setaElem2aElem2b.setColor(0, 0, 0);
+  item.setaElem2aElem2b.addArrowAtEnd();
+  item.setaElem2aElem2b.setZorder(7);
 
-  // Adiciona a quarta imagem do ciclo Entamoeba Coli
-  item["coliFezes"] = new Game.Image("fezes.png");
-  item.coliFezes.setPosition(1520, 540);
-  item.coliFezes.setScale(0.8);
-  item.coliFezes.setZorder(4);
-  item.coliFezes.setAlpha(0);
-  item.coliFezes.disable();
-  itensCiclo.push(item.coliFezes);
+  item["elem2b"] = new Game.Image("entamoebaTrofozoito.png");
+  item.elem2b.setPosition(537, 750);
+  item.elem2b.setScale(0.53);
+  item.elem2b.setZorder(6);
+  //item.elem2b.setAlpha(0);
+  //item.elem2b.disable();
+  itensCiclo.push(item.elem2b);
 
-  // Adiciona a quinta imagem do ciclo Entamoeba Coli
-  item["coliMosca"] = new Game.Image("temp.jpg");
-  item.coliMosca.setPosition(1520, 880);
-  item.coliMosca.setScale(0.8);
-  item.coliMosca.setZorder(4);
-  item.coliMosca.setAlpha(0);
-  item.coliMosca.disable();
-  itensCiclo.push(item.coliMosca);
+  item["setaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
+  item.setaElem2bEst.setColor(0, 0, 0);
+  item.setaElem2bEst.setZorder(7);
 
-  item["coliBotaoFechar"] = new Game.Item("botaoFechar.png");
-  item.coliBotaoFechar.setPosition(1850, 78);
-  item.coliBotaoFechar.setAlpha(0);
-  item.coliBotaoFechar.disable();
-  itensCiclo.push(item.coliBotaoFechar);
-  item.coliBotaoFechar.onMouseOver = function() {
-    item.coliBotaoFechar.addGlow();
-  }
-  item.coliBotaoFechar.onMouseOut = function() {
-    item.coliBotaoFechar.removeGlow();
-  }
-  item.coliBotaoFechar.click = function(mouse) {
-    disableInteractiveness();
-    var currentTime = 0;
-    var animationInterval = 700; // Intervalo entre cada animacao
+  item["setaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
+  item.setaEstElem3a.setColor(0, 0, 0);
+  item.setaEstElem3a.setZorder(7);
 
-    // Fadeout em todas as imagens do ciclo
-    groupChangeAlpha(itensCiclo, 0, 600);
+  item["elem3a"] = new Game.Image("entamoebaTrofozoito.png");
+  item.elem3a.setPosition(1330, 250);
+  item.elem3a.setScale(0.42);
+  item.elem3a.setZorder(6);
+  //item.elem3a.setAlpha(0);
+  //item.elem3a.disable();
+  itensCiclo.push(item.elem3a);
 
-    // Eventos que acontecem apos 0.8 segundos do clique
-    setTimeout(function() {
-      // Desabilita todos os itens do ciclo
-      groupDisable(itensCiclo);
+  item["setaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
+  item.setaElem3aElem3b.setColor(0, 0, 0);
+  item.setaElem3aElem3b.addArrowAtEnd();
+  item.setaElem3aElem3b.setZorder(7);
 
-      // Mostra o estudante doente
-      // Mostra o balao e as informacoes
-      groupEnable(itensSobreDoenca);
-      groupChangeAlpha(itensSobreDoenca, 1, 600);
-      item.balaoDescricaoTratamento.disable();
-      item.balaoDescricaoTransmissao.disable();
-    }, currentTime += animationInterval);
+  item["elem3b"] = new Game.Image("entamoebaCisto.png");
+  item.elem3b.setPosition(1670, 250);
+  item.elem3b.setScale(0.55);
+  item.elem3b.setZorder(6);
+  //item.elem3b.setAlpha(0);
+  //item.elem3b.disable();
+  itensCiclo.push(item.elem3b);
 
-    setTimeout(function() {
-      enableInteractiveness();
-    }, currentTime += animationInterval);
-  }
+  item["setaEstElem4"] = new Game.Line(1000, 810, 1170, 800, 4);
+  item.setaEstElem4.setColor(0, 0, 0);
+  item.setaEstElem4.addArrowAtEnd();
+  item.setaEstElem4.setZorder(7);
 
-  var itensSobreDoenca = [];
+  item["elem4"] = new Game.Image("fezesComMosca.png");
+  item.elem4.setPosition(1330, 800);
+  item.elem4.setScale(0.51);
+  item.elem4.setZorder(6);
+  //item.elem4.setAlpha(0);
+  //item.elem4.disable();
+  itensCiclo.push(item.elem4);
+
+  item["setaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
+  item.setaElem4Elem5.setColor(0, 0, 0);
+  item.setaElem4Elem5.setZorder(7);
+
+  item["elem5"] = new Game.Image("entamoebaCisto.png");
+  item.elem5.setPosition(1700, 800);
+  item.elem5.setScale(0.56);
+  item.elem5.setZorder(6);
+  //item.elem5.setAlpha(0);
+  //item.elem5.disable();
+  itensCiclo.push(item.elem5);
+
+  /*var itensSobreDoenca = [];
 
   item["estudanteDoente"] = new Game.Image("estudanteDoente.png");
   item.estudanteDoente.setPosition(600, 660);

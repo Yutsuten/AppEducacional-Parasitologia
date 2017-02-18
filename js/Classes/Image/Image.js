@@ -2,12 +2,12 @@
 
 // Lock interactive feature while animating
 function disableInteractiveness() {
-  Game.Image.isAnimating = true;
+  Game.Image.allowInteraction = false;
 }
 
 // Unlock interactive feature
 function enableInteractiveness() {
-  Game.Image.isAnimating = false;
+  Game.Image.allowInteraction = true;
 }
 
 Game.Image = function(texture) {
@@ -19,7 +19,7 @@ Game.Image = function(texture) {
 
   // PROPERTIES
   // Static properties
-  Game.Image.isAnimating = false;
+  Game.Image.allowInteraction = true;
 
   // Public properties
   this.z_order = 5;
@@ -173,15 +173,18 @@ Game.Image = function(texture) {
   }
 
   // Implementing the mouseover and mouseout methods
-  this.mouseover = function(evt) {
-    if (!Game.Image.isAnimating) {
-      if (this.onMouseOver != null)
-        this.onMouseOver();
-    }
+  this.mouseover = function(mouse) {
+    if (Game.Image.allowInteraction && this.onMouseOver != null)
+      this.onMouseOver();
   }
-  this.mouseout = function(evt) {
-    if (this.onMouseOut != null)
+  this.mouseout = function(mouse) {
+    if (Game.Image.allowInteraction && this.onMouseOut != null)
       this.onMouseOut();
+  }
+  this.click = function(mouse) {
+    if (Game.Image.allowInteraction && this.onClick != null) {
+      this.onClick();
+    }
   }
 
   // Return the graphic(s) to be drawn
