@@ -15,47 +15,38 @@ function carregaCicloEcoli() {
     scene[0].setSubtitle("");
   }
   item.estBananaNormal.click = function() {
-
-  }
-
-  // Adiconando a banana
-  /*item["banana"] = new Game.Item("banana.png");
-  item.banana.setPosition(980, 730);
-  item.banana.setScale(0.2);
-  item.banana.setZorder(9);
-  item.banana.onMouseOver = function() {
-    item.banana.addGlow();
-    scene[0].setSubtitle("Entamoeba Coli");
-  }
-  item.banana.onMouseOut = function() {
-    item.banana.removeGlow();
-    scene[0].setSubtitle("");
-  }
-  item.banana.click = function(mouse) {
-    // Eventos que acontecem imediatamente apos clicar na banana
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 700; // Intervalo entre cada animacao
 
-    item.banana.removeGlow();
+    // Fadeout unrelated images
+    item.estBananaNormal.removeGlow();
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
+    item.estTomateNormal.changeBrightness(100, 600);
+    item.estPernNormal.changeBrightness(100, 600);
+    item.estGatoNormal.changeBrightness(100, 600);
     item.setaJanela.changeAlpha(0, 600);
     item.setaArmario.changeAlpha(0, 600);
 
-    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
       scene[0].setSubtitle("");
       item.setaJanela.disable();
       item.setaArmario.disable();
+      item.estTomateNormal.setInteractive(false);
+      item.estPernNormal.setInteractive(false);
+      item.estGatoNormal.setInteractive(false);
     }, currentTime += animationInterval);
 
-    // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
-      item.banana.changeAlpha(0, 600);
-      item.estudanteBananaNormal.changeAlpha(0, 600);
+      scene[0].setSubtitle("");
+      item.estBananaNormal.changeBrightness(100, 600);
     }, currentTime += animationInterval);
+  }
+
+  /*
+  item.banana.click = function(mouse) {
 
     // Eventos que acontecem apos o intervalo estipulado
     setTimeout(function() {
