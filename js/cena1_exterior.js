@@ -60,5 +60,11 @@ sceneLoader[1] = function() {
     changeScene(0); // Muda para a sala de aula
   }
 
+  // Carrega ciclos
+  carregaCicloGiardia();
+  carregaCicloTaeniaSaginata();
+  carregaCicloTaeniaSolium();
+  carregaCicloCisticercose();
+
   scene[1].addAllItemsToScene();
 }

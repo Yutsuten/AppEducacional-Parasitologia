@@ -59,8 +59,11 @@ sceneLoader[0] = function() {
     changeScene(2); // Muda para a cena exterior
   }
 
-  // Carrega elementos do ciclo da banana
+  // Carrega ciclos
   carregaCicloEcoli();
+  carregaCicloAscaris();
+  carregaCicloPlasmodium();
+  carregaCicloToxoplasmose();
 
   scene[0].addAllItemsToScene();
 }
