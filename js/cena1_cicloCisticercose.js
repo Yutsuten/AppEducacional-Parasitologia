@@ -4,6 +4,7 @@ function carregaCicloCisticercose() {
 
   // Adicionando o aluno
   item["estCenouraNormal"] = new Game.Image("estHbrcSdv.png");
-  item.estCenouraNormal.setPosition(1220, 630);
-  item.estCenouraNormal.setZorder(11);
+  item.estCenouraNormal.setPosition(375, 560);
+  item.estCenouraNormal.setScale(0.7);
+  item.estCenouraNormal.setZorder(9);
 }

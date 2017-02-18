@@ -4,6 +4,6 @@ function carregaCicloGiardia() {
 
   // Adicionando o aluno
   item["estPocoNormal"] = new Game.Image("estMbrcSdv.png");
-  item.estPocoNormal.setPosition(1220, 630);
-  item.estPocoNormal.setZorder(11);
+  item.estPocoNormal.setPosition(1500, 650);
+  item.estPocoNormal.setZorder(9);
 }

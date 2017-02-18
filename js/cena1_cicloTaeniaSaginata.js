@@ -4,6 +4,6 @@ function carregaCicloTaeniaSaginata() {
 
   // Adicionando o aluno
   item["estVacaNormal"] = new Game.Image("estMprdSdv.png");
-  item.estVacaNormal.setPosition(1220, 630);
+  item.estVacaNormal.setPosition(1150, 250);
   item.estVacaNormal.setZorder(11);
 }

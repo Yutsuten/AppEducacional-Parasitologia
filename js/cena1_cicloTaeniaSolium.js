@@ -4,6 +4,6 @@ function carregaCicloTaeniaSolium() {
 
   // Adicionando o aluno
   item["estPorcoNormal"] = new Game.Image("estHjpnSdv.png");
-  item.estPorcoNormal.setPosition(1220, 630);
+  item.estPorcoNormal.setPosition(150, 308);
   item.estPorcoNormal.setZorder(11);
 }
