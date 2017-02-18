@@ -6,13 +6,13 @@ function carregaCicloEcoli() {
   item["estBananaNormal"] = new Game.Item("estHprdSdv.png");
   item.estBananaNormal.setPosition(1220, 630);
   item.estBananaNormal.setZorder(11);
-  item.estBananaNormal.setBrightness(210);
+  item.estBananaNormal.setBrightness(220);
   item.estBananaNormal.onMouseOver = function() {
     item.estBananaNormal.setBrightness(255);
     scene[0].setSubtitle("Amebíase");
   }
   item.estBananaNormal.onMouseOut = function() {
-    item.estBananaNormal.setBrightness(210);
+    item.estBananaNormal.setBrightness(220);
     scene[0].setSubtitle("");
   }
   item.estBananaNormal.click = function() {

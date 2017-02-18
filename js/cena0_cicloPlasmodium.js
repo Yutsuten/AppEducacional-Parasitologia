@@ -6,12 +6,13 @@ function carregaCicloPlasmodium() {
   item["estPernNormal"] = new Game.Item("estMngrSdv.png");
   item.estPernNormal.setPosition(1586, 838);
   item.estPernNormal.setZorder(9);
+  item.estPernNormal.setBrightness(220);
   item.estPernNormal.onMouseOver = function() {
-    item.estPernNormal.addGlow();
+    item.estPernNormal.setBrightness(255);
     scene[0].setSubtitle("Malária");
   }
   item.estPernNormal.onMouseOut = function() {
-    item.estPernNormal.removeGlow();
+    item.estPernNormal.setBrightness(220);
     scene[0].setSubtitle("");
   }
   item.estPernNormal.click = function() {
