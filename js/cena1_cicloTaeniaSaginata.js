@@ -3,7 +3,7 @@ function carregaCicloTaeniaSaginata() {
   var item = scene[1].item;
 
   // Adicionando o aluno
-  item["estVacaNormal"] = new Game.Image("estMprdSdv.png");
+  item["estVacaNormal"] = new Game.Item("estMprdSdv.png");
   item.estVacaNormal.setPosition(1150, 250);
   item.estVacaNormal.setZorder(11);
 }

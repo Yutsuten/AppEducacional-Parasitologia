@@ -3,7 +3,7 @@ function carregaCicloEcoli() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estBananaNormal"] = new Game.Image("estHprdSdv.png");
+  item["estBananaNormal"] = new Game.Item("estHprdSdv.png");
   item.estBananaNormal.setPosition(1220, 630);
   item.estBananaNormal.setZorder(11);
 

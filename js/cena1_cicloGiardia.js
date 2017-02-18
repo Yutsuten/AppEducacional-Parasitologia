@@ -3,7 +3,7 @@ function carregaCicloGiardia() {
   var item = scene[1].item;
 
   // Adicionando o aluno
-  item["estPocoNormal"] = new Game.Image("estMbrcSdv.png");
+  item["estPocoNormal"] = new Game.Item("estMbrcSdv.png");
   item.estPocoNormal.setPosition(1500, 650);
   item.estPocoNormal.setZorder(9);
 }
