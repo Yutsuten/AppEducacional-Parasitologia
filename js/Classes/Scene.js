@@ -99,10 +99,8 @@ Game.Scene = function() {
     // Set the items alpha to the desired alpha
     this.background.setAlpha(fadeValue);
     for (var i = 0; i < itemsArray.length; i++) {
-      itemsArray[i].alpha = fadeValue / itemAlpha[i];
-    }
-    for (var i = 0; i < spritesheet.length; i++) {
-      spritesheet[i].setAlpha(fadeValue / spritesheetAlpha[i]);
+      if (itemAlpha[i] != 0)
+        itemsArray[i].alpha = fadeValue / itemAlpha[i];
     }
   }
 
