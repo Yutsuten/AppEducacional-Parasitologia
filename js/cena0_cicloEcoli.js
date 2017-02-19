@@ -60,10 +60,11 @@ function carregaCicloEcoli() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.estBananaNormal.changeBrightness(100, 600);
+      item.estBananaNormal.changeAlpha(0, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
+      item.estBananaNormal.disable();
       item.estBananaCiclo.enable();
       item.estBananaCiclo.changeAlpha(1, 600);
     }, currentTime += animationInterval);
@@ -131,7 +132,7 @@ function carregaCicloEcoli() {
     }, currentTime += animationInterval);
   }
 
-  var itensCiclo = [];
+  var itensBananaCiclo = [];
 
   // Imagens ciclo
   item["estBananaCiclo"] = new Game.Image("estHprdClo.png");
@@ -140,7 +141,7 @@ function carregaCicloEcoli() {
   item.estBananaCiclo.setZorder(9);
   item.estBananaCiclo.setAlpha(0);
   item.estBananaCiclo.disable();
-  itensCiclo.push(item.estBananaCiclo);
+  itensBananaCiclo.push(item.estBananaCiclo);
 
   item["bananaElem1"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem1.setPosition(485, 300);
@@ -154,21 +155,21 @@ function carregaCicloEcoli() {
   item.bananaElem1.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem1);
+  itensBananaCiclo.push(item.bananaElem1);
 
   item["bananaNum1"] = new Game.Text("1", estiloNumeros);
   item.bananaNum1.setAnchor(0.5, 0.6);
   item.bananaNum1.setPosition(650, 140);
   item.bananaNum1.setAlpha(0);
   item.bananaNum1.disable();
-  itensCiclo.push(item.bananaNum1);
+  itensBananaCiclo.push(item.bananaNum1);
 
   item["bananaSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
   item.bananaSetaElem1Est.setColor(0, 0, 0);
   item.bananaSetaElem1Est.setZorder(7);
   item.bananaSetaElem1Est.setAlpha(0);
   item.bananaSetaElem1Est.disable();
-  itensCiclo.push(item.bananaSetaElem1Est);
+  itensBananaCiclo.push(item.bananaSetaElem1Est);
 
   item["bananaElem2a"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem2a.setPosition(200, 750);
@@ -182,14 +183,14 @@ function carregaCicloEcoli() {
   item.bananaElem2a.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem2a);
+  itensBananaCiclo.push(item.bananaElem2a);
 
   item["bananaNum2"] = new Game.Text("2", estiloNumeros);
   item.bananaNum2.setAnchor(0.5, 0.6);
   item.bananaNum2.setPosition(350, 700);
   item.bananaNum2.setAlpha(0);
   item.bananaNum2.disable();
-  itensCiclo.push(item.bananaNum2);
+  itensBananaCiclo.push(item.bananaNum2);
 
   item["bananaSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
   item.bananaSetaElem2aElem2b.setColor(0, 0, 0);
@@ -197,7 +198,7 @@ function carregaCicloEcoli() {
   item.bananaSetaElem2aElem2b.setZorder(7);
   item.bananaSetaElem2aElem2b.setAlpha(0);
   item.bananaSetaElem2aElem2b.disable();
-  itensCiclo.push(item.bananaSetaElem2aElem2b);
+  itensBananaCiclo.push(item.bananaSetaElem2aElem2b);
 
   item["bananaElem2b"] = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem2b.setPosition(537, 750);
@@ -211,21 +212,21 @@ function carregaCicloEcoli() {
   item.bananaElem2b.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem2b);
+  itensBananaCiclo.push(item.bananaElem2b);
 
   item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
   item.bananaSetaElem2bEst.setColor(0, 0, 0);
   item.bananaSetaElem2bEst.setZorder(7);
   item.bananaSetaElem2bEst.setAlpha(0);
   item.bananaSetaElem2bEst.disable();
-  itensCiclo.push(item.bananaSetaElem2bEst);
+  itensBananaCiclo.push(item.bananaSetaElem2bEst);
 
   item["bananaSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
   item.bananaSetaEstElem3a.setColor(0, 0, 0);
   item.bananaSetaEstElem3a.setZorder(7);
   item.bananaSetaEstElem3a.setAlpha(0);
   item.bananaSetaEstElem3a.disable();
-  itensCiclo.push(item.bananaSetaEstElem3a);
+  itensBananaCiclo.push(item.bananaSetaEstElem3a);
 
   item["bananaElem3a"] = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem3a.setPosition(1330, 250);
@@ -239,14 +240,14 @@ function carregaCicloEcoli() {
   item.bananaElem3a.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem3a);
+  itensBananaCiclo.push(item.bananaElem3a);
 
   item["bananaNum3"] = new Game.Text("3", estiloNumeros);
   item.bananaNum3.setAnchor(0.5, 0.6);
   item.bananaNum3.setPosition(1480, 200);
   item.bananaNum3.setAlpha(0);
   item.bananaNum3.disable();
-  itensCiclo.push(item.bananaNum3);
+  itensBananaCiclo.push(item.bananaNum3);
 
   item["bananaSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
   item.bananaSetaElem3aElem3b.setColor(0, 0, 0);
@@ -254,7 +255,7 @@ function carregaCicloEcoli() {
   item.bananaSetaElem3aElem3b.setZorder(7);
   item.bananaSetaElem3aElem3b.setAlpha(0);
   item.bananaSetaElem3aElem3b.disable();
-  itensCiclo.push(item.bananaSetaElem3aElem3b);
+  itensBananaCiclo.push(item.bananaSetaElem3aElem3b);
 
   item["bananaElem3b"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem3b.setPosition(1670, 250);
@@ -268,7 +269,7 @@ function carregaCicloEcoli() {
   item.bananaElem3b.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem3b);
+  itensBananaCiclo.push(item.bananaElem3b);
 
   item["bananaSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
   item.bananaSetaEstElem4.setColor(0, 0, 0);
@@ -276,14 +277,14 @@ function carregaCicloEcoli() {
   item.bananaSetaEstElem4.setZorder(7);
   item.bananaSetaEstElem4.setAlpha(0);
   item.bananaSetaEstElem4.disable();
-  itensCiclo.push(item.bananaSetaEstElem4);
+  itensBananaCiclo.push(item.bananaSetaEstElem4);
 
   item["bananaNum4"] = new Game.Text("4", estiloNumeros);
   item.bananaNum4.setAnchor(0.5, 0.6);
   item.bananaNum4.setPosition(1450, 660);
   item.bananaNum4.setAlpha(0);
   item.bananaNum4.disable();
-  itensCiclo.push(item.bananaNum4);
+  itensBananaCiclo.push(item.bananaNum4);
 
   item["bananaElem4"] = new Game.Item("fezesComMosca.png");
   item.bananaElem4.setPosition(1330, 800);
@@ -297,21 +298,21 @@ function carregaCicloEcoli() {
   item.bananaElem4.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem4);
+  itensBananaCiclo.push(item.bananaElem4);
 
   item["bananaSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
   item.bananaSetaElem4Elem5.setColor(0, 0, 0);
   item.bananaSetaElem4Elem5.setZorder(7);
   item.bananaSetaElem4Elem5.setAlpha(0);
   item.bananaSetaElem4Elem5.disable();
-  itensCiclo.push(item.bananaSetaElem4Elem5);
+  itensBananaCiclo.push(item.bananaSetaElem4Elem5);
 
   item["bananaNum5"] = new Game.Text("5", estiloNumeros);
   item.bananaNum5.setAnchor(0.5, 0.6);
   item.bananaNum5.setPosition(1851, 671);
   item.bananaNum5.setAlpha(0);
   item.bananaNum5.disable();
-  itensCiclo.push(item.bananaNum5);
+  itensBananaCiclo.push(item.bananaNum5);
 
   item["bananaElem5"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem5.setPosition(1700, 800);
@@ -325,7 +326,7 @@ function carregaCicloEcoli() {
   item.bananaElem5.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensCiclo.push(item.bananaElem5);
+  itensBananaCiclo.push(item.bananaElem5);
 
   item["bananaFechar"] = new Game.Item("botaoFechar.png");
   item.bananaFechar.setPosition(1840, 70);
@@ -344,41 +345,67 @@ function carregaCicloEcoli() {
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
-    groupChangeAlpha(itensCiclo, 0, 600);
+    groupChangeAlpha(itensBananaCiclo, 0, 600);
 
     setTimeout(function() {
-      groupDisable(itensCiclo);
+      groupDisable(itensBananaCiclo);
+
+      item.estBananaDoente.enable();
+      item.estBananaDoente.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      groupDisable(itensBananaCiclo);
+      item.bananaBalaoSintoma.enable();
+      item.bananaBalaoSintoma.changeAlpha(1, 600);
+      item.bananaTextoSintomas.enable();
+      item.bananaTextoSintomas.changeAlpha(1, 600);
+
+      item.bananaAbaPrevencao.enable();
+      item.bananaAbaPrevencao.changeAlpha(1, 600);
+      item.bananaAbaTransmissao.enable();
+      item.bananaAbaTransmissao.changeAlpha(1, 600);
+
+      item.bananaBotaoOK.enable();
+      item.bananaBotaoOK.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
       enableInteractiveness();
     }, currentTime += animationInterval);
   }
+  itensBananaCiclo.push(item.bananaFechar);
+
+  var itensBananaDoente = [];
 
   item["estBananaDoente"] = new Game.Image("estHprdDte.png");
   item.estBananaDoente.setPosition(1218, 668);
   item.estBananaDoente.setZorder(11);
-  //item.estBananaDoente.setAlpha(0);
-  //item.estBananaDoente.disable();
+  item.estBananaDoente.setAlpha(0);
+  item.estBananaDoente.disable();
+  itensBananaDoente.push(item.estBananaDoente);
 
   item["bananaBalaoSintoma"] = new Game.Image("balSintEsq.png");
   item.bananaBalaoSintoma.setPosition(730, 300);
   item.bananaBalaoSintoma.setScale(0.25);
   item.bananaBalaoSintoma.setZorder(6);
-  //item.bananaBalaoSintoma.setAlpha(0);
-  //item.bananaBalaoSintoma.disable();
+  item.bananaBalaoSintoma.setAlpha(0);
+  item.bananaBalaoSintoma.disable();
+  itensBananaDoente.push(item.bananaBalaoSintoma);
 
   item["bananaBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
   item.bananaBalaoPrevencao.setPosition(730, 300);
   item.bananaBalaoPrevencao.setScale(0.25);
   item.bananaBalaoPrevencao.setZorder(6);
   item.bananaBalaoPrevencao.disable();
+  itensBananaDoente.push(item.bananaBalaoPrevencao);
 
   item["bananaBalaoTransmissao"] = new Game.Image("balTranEsq.png");
   item.bananaBalaoTransmissao.setPosition(730, 300);
   item.bananaBalaoTransmissao.setScale(0.25);
   item.bananaBalaoTransmissao.setZorder(6);
   item.bananaBalaoTransmissao.disable();
+  itensBananaDoente.push(item.bananaBalaoTransmissao);
 
 
   item["bananaAbaSintomas"] = new Game.Item("abaSint.png");
@@ -399,11 +426,13 @@ function carregaCicloEcoli() {
     item.bananaTextoPrevencao.disable();
     item.bananaTextoTransmissao.disable();
   }
+  itensBananaDoente.push(item.bananaAbaSintomas);
 
   item["bananaTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.bananaTextoSintomas.setPosition(432-130, 71+20);
-  //item.bananaTextoSintomas.setAlpha(0);
-  //item.bananaTextoSintomas.disable();
+  item.bananaTextoSintomas.setAlpha(0);
+  item.bananaTextoSintomas.disable();
+  itensBananaDoente.push(item.bananaTextoSintomas);
 
   /*item["bananaAbaSintomasHover"] = new Game.Item("abaSintHover.png");
   item.bananaAbaSintomasHover.setPosition(432, 71);
@@ -420,8 +449,8 @@ function carregaCicloEcoli() {
   item.bananaAbaPrevencao.setPosition(432 + 232, 71);
   item.bananaAbaPrevencao.setScale(0.25);
   item.bananaAbaPrevencao.setZorder(7);
-  //item.bananaAbaPrevencao.setAlpha(0);
-  //item.bananaAbaPrevencao.disable();
+  item.bananaAbaPrevencao.setAlpha(0);
+  item.bananaAbaPrevencao.disable();
   item.bananaAbaPrevencao.onClick = function() {
     item.bananaBalaoSintoma.disable();
     item.bananaBalaoPrevencao.enable();
@@ -435,10 +464,12 @@ function carregaCicloEcoli() {
     item.bananaTextoPrevencao.enable();
     item.bananaTextoTransmissao.disable();
   }
+  itensBananaDoente.push(item.bananaAbaPrevencao);
 
   item["bananaTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.bananaTextoPrevencao.setPosition(432-130, 71+20);
   item.bananaTextoPrevencao.disable();
+  itensBananaDoente.push(item.bananaTextoPrevencao);
 
   /*item["bananaAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
   item.bananaAbaPrevencaoHover.setPosition(432 + 247, 71);
@@ -457,8 +488,8 @@ function carregaCicloEcoli() {
   item.bananaAbaTransmissao.setPosition(432 + 482, 71);
   item.bananaAbaTransmissao.setScale(0.25);
   item.bananaAbaTransmissao.setZorder(7);
-  //item.bananaAbaTransmissao.setAlpha(0);
-  //item.bananaAbaTransmissao.disable();
+  item.bananaAbaTransmissao.setAlpha(0);
+  item.bananaAbaTransmissao.disable();
   item.bananaAbaTransmissao.onClick = function() {
     item.bananaBalaoSintoma.disable();
     item.bananaBalaoPrevencao.disable();
@@ -472,10 +503,12 @@ function carregaCicloEcoli() {
     item.bananaTextoPrevencao.disable();
     item.bananaTextoTransmissao.enable();
   }
+  itensBananaDoente.push(item.bananaAbaTransmissao);
 
   item["bananaTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.bananaTextoTransmissao.setPosition(432-130, 71+20);
   item.bananaTextoTransmissao.disable();
+  itensBananaDoente.push(item.bananaTextoTransmissao);
 
   /*item["bananaAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
   item.bananaAbaTransmissaoHover.setPosition(432 + 2*247, 71);
@@ -483,24 +516,30 @@ function carregaCicloEcoli() {
   item.bananaAbaTransmissaoHover.setZorder(7);
   item.bananaAbaTransmissaoHover.disable();*/
 
-  item["botaoOK"] = new Game.Item("okNormal.png");
-  item.botaoOK.setScale(0.25);
-  item.botaoOK.setPosition(432+450, 71+290);
-  item.botaoOK.onMouseOver = function() {
-    item.botaoOK.disable();
-    item.botaoOKhover.enable();
+  item["bananaBotaoOK"] = new Game.Item("okNormal.png");
+  item.bananaBotaoOK.setScale(0.25);
+  item.bananaBotaoOK.setPosition(432+450, 71+290);
+  item.bananaBotaoOK.setAlpha(0);
+  item.bananaBotaoOK.disable();
+  item.bananaBotaoOK.onMouseOver = function() {
+    item.bananaBotaoOK.disable();
+    item.bananaBotaoOKhover.enable();
   }
+  itensBananaDoente.push(item.bananaBotaoOK);
 
-  item["botaoOKhover"] = new Game.Item("okHover.png");
-  item.botaoOKhover.setScale(0.25);
-  item.botaoOKhover.setPosition(432+450, 71+290);
-  item.botaoOKhover.disable();
-  item.botaoOKhover.onMouseOut = function() {
-    item.botaoOKhover.disable();
-    item.botaoOK.enable();
+  item["bananaBotaoOKhover"] = new Game.Item("okHover.png");
+  item.bananaBotaoOKhover.setScale(0.25);
+  item.bananaBotaoOKhover.setPosition(432+450, 71+290);
+  item.bananaBotaoOKhover.disable();
+  item.bananaBotaoOKhover.onMouseOut = function() {
+    item.bananaBotaoOKhover.disable();
+    item.bananaBotaoOK.enable();
   }
-  item.botaoOKhover.onClick = function() {
-    console.log("OK, entendi!");
+  item.bananaBotaoOKhover.onClick = function() {
+    disableInteractiveness();
+    groupChangeAlpha(itensBananaDoente, 0, 600);
+
   }
+  itensBananaDoente.push(item.bananaBotaoOKhover);
 
 }
