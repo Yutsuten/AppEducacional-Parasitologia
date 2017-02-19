@@ -42,7 +42,7 @@ sceneLoader[0] = function() {
   item.setaJanela.onMouseOut = function() {
     item.setaJanela.removeGlow();
   }
-  item.setaJanela.click = function(mouse) {
+  item.setaJanela.onClick = function(mouse) {
     changeScene(1); // Muda para a cena exterior
   }
 
@@ -58,7 +58,7 @@ sceneLoader[0] = function() {
   item.setaArmario.onMouseOut = function() {
     item.setaArmario.removeGlow();
   }
-  item.setaArmario.click = function(mouse) {
+  item.setaArmario.onClick = function(mouse) {
     changeScene(2); // Muda para a cena exterior
   }
 

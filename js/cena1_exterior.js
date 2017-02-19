@@ -56,7 +56,7 @@ sceneLoader[1] = function() {
   item.setaSalaDeAula.onMouseOut = function() {
     item.setaSalaDeAula.removeGlow();
   }
-  item.setaSalaDeAula.click = function(mouse) {
+  item.setaSalaDeAula.onClick = function(mouse) {
     changeScene(0); // Muda para a sala de aula
   }
 
