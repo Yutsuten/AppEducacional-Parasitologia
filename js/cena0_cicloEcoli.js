@@ -26,7 +26,7 @@ function carregaCicloEcoli() {
   item.estBananaNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
-    var animationInterval = 700; // Intervalo entre cada animacao
+    var animationInterval = 750; // Intervalo entre cada animacao
 
     // Fadeout unrelated images
     item.estBananaNormal.removeGlow();
@@ -40,6 +40,13 @@ function carregaCicloEcoli() {
     item.setaJanela.changeAlpha(0, 600);
     item.setaArmario.changeAlpha(0, 600);
 
+    item.estTomateNormal.setInteractive(false);
+    item.estPernNormal.setInteractive(false);
+    item.estGatoNormal.setInteractive(false);
+    item.estBananaNormal.setInteractive(false);
+    item.setaJanela.setInteractive(false);
+    item.setaArmario.setInteractive(false);
+
     setTimeout(function() {
       scene[0].setSubtitle("");
       item.setaJanela.disable();
@@ -51,7 +58,65 @@ function carregaCicloEcoli() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
+      item.estBananaCiclo.enable();
+      item.estBananaCiclo.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
 
+    setTimeout(function() {
+      item.bananaElem1.enable();
+      item.bananaElem1.changeAlpha(1, 600);
+      item.bananaNum1.enable();
+      item.bananaNum1.changeAlpha(1, 600);
+      item.bananaSetaElem1Est.enable();
+      item.bananaSetaElem1Est.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.bananaElem2a.enable();
+      item.bananaElem2a.changeAlpha(1, 600);
+      item.bananaNum2.enable();
+      item.bananaNum2.changeAlpha(1, 600);
+      item.bananaSetaElem2aElem2b.enable();
+      item.bananaSetaElem2aElem2b.changeAlpha(1, 600);
+      item.bananaElem2b.enable();
+      item.bananaElem2b.changeAlpha(1, 600);
+      item.bananaSetaElem2bEst.enable();
+      item.bananaSetaElem2bEst.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.bananaSetaEstElem3a.enable();
+      item.bananaSetaEstElem3a.changeAlpha(1, 600);
+      item.bananaElem3a.enable();
+      item.bananaElem3a.changeAlpha(1, 600);
+      item.bananaNum3.enable();
+      item.bananaNum3.changeAlpha(1, 600);
+      item.bananaSetaElem3aElem3b.enable();
+      item.bananaSetaElem3aElem3b.changeAlpha(1, 600);
+      item.bananaElem3b.enable();
+      item.bananaElem3b.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.bananaSetaEstElem4.enable();
+      item.bananaSetaEstElem4.changeAlpha(1, 600);
+      item.bananaNum4.enable();
+      item.bananaNum4.changeAlpha(1, 600);
+      item.bananaElem4.enable();
+      item.bananaElem4.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.bananaSetaElem4Elem5.enable();
+      item.bananaSetaElem4Elem5.changeAlpha(1, 600);
+      item.bananaNum5.enable();
+      item.bananaNum5.changeAlpha(1, 600);
+      item.bananaElem5.enable();
+      item.bananaElem5.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      enableInteractiveness();
     }, currentTime += animationInterval);
   }
 
@@ -194,7 +259,7 @@ function carregaCicloEcoli() {
   }
   itensCiclo.push(item.bananaElem3b);
 
-  item["bananaSetaEstElem4"] = new Game.Line(1000, 810, 1170, 800, 4);
+  item["bananaSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
   item.bananaSetaEstElem4.setColor(0, 0, 0);
   item.bananaSetaEstElem4.addArrowAtEnd();
   item.bananaSetaEstElem4.setZorder(7);
@@ -250,166 +315,5 @@ function carregaCicloEcoli() {
     scene[0].setSubtitle("");
   }
   itensCiclo.push(item.bananaElem5);
-
-  /*var itensSobreDoenca = [];
-
-  item["estudanteDoente"] = new Game.Image("estudanteDoente.png");
-  item.estudanteDoente.setPosition(600, 660);
-  item.estudanteDoente.setZorder(11);
-  item.estudanteDoente.setScale(1.3);
-  item.estudanteDoente.setAlpha(0);
-  item.estudanteDoente.disable();
-  itensSobreDoenca.push(item.estudanteDoente);
-
-  item["balaoSobreColi"] = new Game.Image("balao.png");
-  item.balaoSobreColi.setPosition(1270, 260);
-  item.balaoSobreColi.setZorder(3);
-  item.balaoSobreColi.setScale(1.4);
-  item.balaoSobreColi.setAlpha(0);
-  item.balaoSobreColi.disable();
-  itensSobreDoenca.push(item.balaoSobreColi);
-
-  // Aba Sintomas
-  item["balaoAbaSintomas"] = new Game.Item("abaDoBalao.png");
-  item.balaoAbaSintomas.setPosition(950, 80);
-  item.balaoAbaSintomas.setZorder(2);
-  item.balaoAbaSintomas.setScale(1.3);
-  item.balaoAbaSintomas.setAlpha(0);
-  item.balaoAbaSintomas.disable();
-  item.balaoAbaSintomas.setInteractive(true);
-  item.balaoAbaSintomas.click = function(mouse) {
-    item.balaoDescricaoTratamento.disable();
-    item.balaoDescricaoTransmissao.disable();
-    item.balaoDescricaoSintomas.enable();
-    UpdateScreen();
-  }
-  itensSobreDoenca.push(item.balaoAbaSintomas);
-
-  item["balaoAbaSintomasTexto"] = new Game.Text("Sintomas", {font: "30px Arial", fill: 0x000000, align: "left"});
-  item.balaoAbaSintomasTexto.setPosition(950, 80);
-  item.balaoAbaSintomasTexto.setZorder(1);
-  item.balaoAbaSintomasTexto.setAnchor(0.5, 0.5);
-  item.balaoAbaSintomasTexto.setAlpha(0);
-  item.balaoAbaSintomasTexto.disable();
-  itensSobreDoenca.push(item.balaoAbaSintomasTexto);
-
-  item["balaoDescricaoSintomas"] = new Game.Text("Descrição sintomas ...", {font: "32px Arial", fill: 0x000000, align: "left"});
-  item.balaoDescricaoSintomas.setPosition(810, 140);
-  item.balaoDescricaoSintomas.setZorder(1);
-  item.balaoDescricaoSintomas.setAlpha(0);
-  item.balaoDescricaoSintomas.disable();
-  itensSobreDoenca.push(item.balaoDescricaoSintomas);
-
-  // Aba Tratamento
-  item["balaoAbaTratamento"] = new Game.Item("abaDoBalao.png");
-  item.balaoAbaTratamento.setPosition(1270, 80);
-  item.balaoAbaTratamento.setZorder(2);
-  item.balaoAbaTratamento.setScale(1.3);
-  item.balaoAbaTratamento.setAlpha(0);
-  item.balaoAbaTratamento.disable();
-  item.balaoAbaTratamento.setInteractive(true);
-  item.balaoAbaTratamento.click = function(mouse) {
-    item.balaoDescricaoSintomas.disable();
-    item.balaoDescricaoTransmissao.disable();
-    item.balaoDescricaoTratamento.enable();
-    UpdateScreen();
-  }
-  itensSobreDoenca.push(item.balaoAbaTratamento);
-
-  item["balaoAbaTratamentoTexto"] = new Game.Text("Tratamento", {font: "30px Arial", fill: 0x000000, align: "left"});
-  item.balaoAbaTratamentoTexto.setPosition(1270, 80);
-  item.balaoAbaTratamentoTexto.setZorder(1);
-  item.balaoAbaTratamentoTexto.setAnchor(0.5, 0.5);
-  item.balaoAbaTratamentoTexto.setAlpha(0);
-  item.balaoAbaTratamentoTexto.disable();
-  itensSobreDoenca.push(item.balaoAbaTratamentoTexto);
-
-  item["balaoDescricaoTratamento"] = new Game.Text("Descrição tratamento ...", {font: "32px Arial", fill: 0x000000, align: "left"});
-  item.balaoDescricaoTratamento.setPosition(810, 140);
-  item.balaoDescricaoTratamento.setZorder(1);
-  item.balaoDescricaoTratamento.disable();
-  itensSobreDoenca.push(item.balaoDescricaoTratamento);
-
-  // Aba Transmissao
-  item["balaoAbaTransmissao"] = new Game.Item("abaDoBalao.png");
-  item.balaoAbaTransmissao.setPosition(1590, 80);
-  item.balaoAbaTransmissao.setZorder(2);
-  item.balaoAbaTransmissao.setScale(1.3);
-  item.balaoAbaTransmissao.setAlpha(0);
-  item.balaoAbaTransmissao.disable();
-  item.balaoAbaTransmissao.setInteractive(true);
-  item.balaoAbaTransmissao.click = function(mouse) {
-    item.balaoDescricaoSintomas.disable();
-    item.balaoDescricaoTratamento.disable();
-    item.balaoDescricaoTransmissao.enable();
-    UpdateScreen();
-  }
-  itensSobreDoenca.push(item.balaoAbaTransmissao);
-
-  item["balaoAbaTransmissaoTexto"] = new Game.Text("Transmissão", {font: "30px Arial", fill: 0x000000, align: "left"});
-  item.balaoAbaTransmissaoTexto.setPosition(1590, 80);
-  item.balaoAbaTransmissaoTexto.setZorder(1);
-  item.balaoAbaTransmissaoTexto.setAnchor(0.5, 0.5);
-  item.balaoAbaTransmissaoTexto.setAlpha(0);
-  item.balaoAbaTransmissaoTexto.disable();
-  itensSobreDoenca.push(item.balaoAbaTransmissaoTexto);
-
-  item["balaoDescricaoTransmissao"] = new Game.Text("Descrição transmissão ...", {font: "32px Arial", fill: 0x000000, align: "left"});
-  item.balaoDescricaoTransmissao.setPosition(810, 140);
-  item.balaoDescricaoTransmissao.setZorder(1);
-  item.balaoDescricaoTransmissao.disable();
-  itensSobreDoenca.push(item.balaoDescricaoTransmissao);
-
-  // Botao OK, entendi
-  item["botaoFinalizar"] = new Game.Item("abaDoBalao.png");
-  item.botaoFinalizar.setPosition(1600, 320);
-  item.botaoFinalizar.setZorder(2);
-  item.botaoFinalizar.setScale(1.3);
-  item.botaoFinalizar.setAlpha(0);
-  item.botaoFinalizar.disable();
-  item.botaoFinalizar.click = function(mouse) {
-    disableInteractiveness();
-    var currentTime = 0;
-    var animationInterval = 700; // Intervalo entre cada animacao
-
-    // Oculta o estudante doente
-    // Oculta o balao e as informacoes
-    groupChangeAlpha(itensSobreDoenca, 0, 600);
-
-    setTimeout(function() {
-      // Desabilita as imagens que desapareceram
-      groupDisable(itensSobreDoenca);
-
-      // Volta a cena inicial
-      item.estudanteBananaNormal.enable();
-      item.estudanteBananaNormal.changeAlpha(1, 600);
-
-      item.banana.enable();
-      item.banana.changeAlpha(1, 600);
-
-      item.setaJanela.enable();
-      item.setaJanela.changeAlpha(1, 600);
-
-      item.setaArmario.enable();
-      item.setaArmario.changeAlpha(1, 600);
-
-      item.carteiras.changeBrightness(255, 600);
-      item.mesaProfessor.changeBrightness(255, 600);
-      scene[0].background.changeBrightness(255, 600);
-    }, currentTime += animationInterval);
-
-    setTimeout(function() {
-      enableInteractiveness();
-    }, currentTime += animationInterval);
-  }
-  itensSobreDoenca.push(item.botaoFinalizar);
-
-  item["botaoFinalizarTexto"] = new Game.Text("OK, entendi!", {font: "30px Arial", fill: 0x000000, align: "left"});
-  item.botaoFinalizarTexto.setPosition(1600, 320);
-  item.botaoFinalizarTexto.setZorder(1);
-  item.botaoFinalizarTexto.setAnchor(0.5, 0.5);
-  item.botaoFinalizarTexto.setAlpha(0);
-  item.botaoFinalizarTexto.disable();
-  itensSobreDoenca.push(item.botaoFinalizarTexto);*/
 
 }
