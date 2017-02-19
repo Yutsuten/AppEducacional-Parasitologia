@@ -66,112 +66,124 @@ function carregaCicloEcoli() {
   //item.estBananaCiclo.disable();
   itensCiclo.push(item.estBananaCiclo);
 
-  item["elem1"] = new Game.Image("entamoebaCisto.png");
-  item.elem1.setPosition(485, 300);
-  item.elem1.setScale(0.7);
-  item.elem1.setZorder(6);
-  //item.elem1.setAlpha(0);
-  //item.elem1.disable();
-  itensCiclo.push(item.elem1);
+  item["bananaElem1"] = new Game.Image("entamoebaCisto.png");
+  item.bananaElem1.setPosition(485, 300);
+  item.bananaElem1.setScale(0.7);
+  item.bananaElem1.setZorder(6);
+  //item.bananaElem1.setAlpha(0);
+  //item.bananaElem1.disable();
+  itensCiclo.push(item.bananaElem1);
 
-  item["num1"] = new Game.Text("1", estiloNumeros);
-  item.num1.setAnchor(0.5, 0.6);
-  item.num1.setPosition(650, 140);
+  item["bananaNum1"] = new Game.Text("1", estiloNumeros);
+  item.bananaNum1.setAnchor(0.5, 0.6);
+  item.bananaNum1.setPosition(650, 140);
+  itensCiclo.push(item.bananaNum1);
 
-  item["setaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
-  item.setaElem1Est.setColor(0, 0, 0);
-  item.setaElem1Est.setZorder(7);
+  item["bananaSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item.bananaSetaElem1Est.setColor(0, 0, 0);
+  item.bananaSetaElem1Est.setZorder(7);
+  itensCiclo.push(item.bananaSetaElem1Est);
 
-  item["elem2a"] = new Game.Image("entamoebaCisto.png");
-  item.elem2a.setPosition(200, 750);
-  item.elem2a.setScale(0.4);
-  item.elem2a.setZorder(6);
-  //item.elem2a.setAlpha(0);
-  //item.elem2a.disable();
-  itensCiclo.push(item.elem2a);
+  item["bananaElem2a"] = new Game.Image("entamoebaCisto.png");
+  item.bananaElem2a.setPosition(200, 750);
+  item.bananaElem2a.setScale(0.4);
+  item.bananaElem2a.setZorder(6);
+  //item.bananaElem2a.setAlpha(0);
+  //item.bananaElem2a.disable();
+  itensCiclo.push(item.bananaElem2a);
 
-  item["num2"] = new Game.Text("2", estiloNumeros);
-  item.num2.setAnchor(0.5, 0.6);
-  item.num2.setPosition(350, 700);
+  item["bananaNum2"] = new Game.Text("2", estiloNumeros);
+  item.bananaNum2.setAnchor(0.5, 0.6);
+  item.bananaNum2.setPosition(350, 700);
+  itensCiclo.push(item.bananaNum2);
 
-  item["setaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
-  item.setaElem2aElem2b.setColor(0, 0, 0);
-  item.setaElem2aElem2b.addArrowAtEnd();
-  item.setaElem2aElem2b.setZorder(7);
+  item["bananaSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
+  item.bananaSetaElem2aElem2b.setColor(0, 0, 0);
+  item.bananaSetaElem2aElem2b.addArrowAtEnd();
+  item.bananaSetaElem2aElem2b.setZorder(7);
+  itensCiclo.push(item.bananaSetaElem2aElem2b);
 
-  item["elem2b"] = new Game.Image("entamoebaTrofozoito.png");
-  item.elem2b.setPosition(537, 750);
-  item.elem2b.setScale(0.53);
-  item.elem2b.setZorder(6);
-  //item.elem2b.setAlpha(0);
-  //item.elem2b.disable();
-  itensCiclo.push(item.elem2b);
+  item["bananaElem2b"] = new Game.Image("entamoebaTrofozoito.png");
+  item.bananaElem2b.setPosition(537, 750);
+  item.bananaElem2b.setScale(0.53);
+  item.bananaElem2b.setZorder(6);
+  //item.bananaElem2b.setAlpha(0);
+  //item.bananaElem2b.disable();
+  itensCiclo.push(item.bananaElem2b);
 
-  item["setaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
-  item.setaElem2bEst.setColor(0, 0, 0);
-  item.setaElem2bEst.setZorder(7);
+  item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
+  item.bananaSetaElem2bEst.setColor(0, 0, 0);
+  item.bananaSetaElem2bEst.setZorder(7);
+  itensCiclo.push(item.bananaSetaElem2bEst);
 
-  item["setaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
-  item.setaEstElem3a.setColor(0, 0, 0);
-  item.setaEstElem3a.setZorder(7);
+  item["bananaSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
+  item.bananaSetaEstElem3a.setColor(0, 0, 0);
+  item.bananaSetaEstElem3a.setZorder(7);
+  itensCiclo.push(item.bananaSetaEstElem3a);
 
-  item["elem3a"] = new Game.Image("entamoebaTrofozoito.png");
-  item.elem3a.setPosition(1330, 250);
-  item.elem3a.setScale(0.42);
-  item.elem3a.setZorder(6);
-  //item.elem3a.setAlpha(0);
-  //item.elem3a.disable();
-  itensCiclo.push(item.elem3a);
+  item["bananaElem3a"] = new Game.Image("entamoebaTrofozoito.png");
+  item.bananaElem3a.setPosition(1330, 250);
+  item.bananaElem3a.setScale(0.42);
+  item.bananaElem3a.setZorder(6);
+  //item.bananaElem3a.setAlpha(0);
+  //item.bananaElem3a.disable();
+  itensCiclo.push(item.bananaElem3a);
 
-  item["num3"] = new Game.Text("3", estiloNumeros);
-  item.num3.setAnchor(0.5, 0.6);
-  item.num3.setPosition(1480, 200);
+  item["bananaNum3"] = new Game.Text("3", estiloNumeros);
+  item.bananaNum3.setAnchor(0.5, 0.6);
+  item.bananaNum3.setPosition(1480, 200);
+  itensCiclo.push(item.bananaNum3);
 
-  item["setaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
-  item.setaElem3aElem3b.setColor(0, 0, 0);
-  item.setaElem3aElem3b.addArrowAtEnd();
-  item.setaElem3aElem3b.setZorder(7);
+  item["bananaSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
+  item.bananaSetaElem3aElem3b.setColor(0, 0, 0);
+  item.bananaSetaElem3aElem3b.addArrowAtEnd();
+  item.bananaSetaElem3aElem3b.setZorder(7);
+  itensCiclo.push(item.bananaSetaElem3aElem3b);
 
-  item["elem3b"] = new Game.Image("entamoebaCisto.png");
-  item.elem3b.setPosition(1670, 250);
-  item.elem3b.setScale(0.55);
-  item.elem3b.setZorder(6);
-  //item.elem3b.setAlpha(0);
-  //item.elem3b.disable();
-  itensCiclo.push(item.elem3b);
+  item["bananaElem3b"] = new Game.Image("entamoebaCisto.png");
+  item.bananaElem3b.setPosition(1670, 250);
+  item.bananaElem3b.setScale(0.55);
+  item.bananaElem3b.setZorder(6);
+  //item.bananaElem3b.setAlpha(0);
+  //item.bananaElem3b.disable();
+  itensCiclo.push(item.bananaElem3b);
 
-  item["setaEstElem4"] = new Game.Line(1000, 810, 1170, 800, 4);
-  item.setaEstElem4.setColor(0, 0, 0);
-  item.setaEstElem4.addArrowAtEnd();
-  item.setaEstElem4.setZorder(7);
+  item["bananaSetaEstElem4"] = new Game.Line(1000, 810, 1170, 800, 4);
+  item.bananaSetaEstElem4.setColor(0, 0, 0);
+  item.bananaSetaEstElem4.addArrowAtEnd();
+  item.bananaSetaEstElem4.setZorder(7);
+  itensCiclo.push(item.bananaSetaEstElem4);
 
-  item["num4"] = new Game.Text("4", estiloNumeros);
-  item.num4.setAnchor(0.5, 0.6);
-  item.num4.setPosition(1450, 660);
+  item["bananaNum4"] = new Game.Text("4", estiloNumeros);
+  item.bananaNum4.setAnchor(0.5, 0.6);
+  item.bananaNum4.setPosition(1450, 660);
+  itensCiclo.push(item.bananaNum4);
 
-  item["elem4"] = new Game.Image("fezesComMosca.png");
-  item.elem4.setPosition(1330, 800);
-  item.elem4.setScale(0.51);
-  item.elem4.setZorder(6);
-  //item.elem4.setAlpha(0);
-  //item.elem4.disable();
-  itensCiclo.push(item.elem4);
+  item["bananaElem4"] = new Game.Image("fezesComMosca.png");
+  item.bananaElem4.setPosition(1330, 800);
+  item.bananaElem4.setScale(0.51);
+  item.bananaElem4.setZorder(6);
+  //item.bananaElem4.setAlpha(0);
+  //item.bananaElem4.disable();
+  itensCiclo.push(item.bananaElem4);
 
-  item["setaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
-  item.setaElem4Elem5.setColor(0, 0, 0);
-  item.setaElem4Elem5.setZorder(7);
+  item["bananaSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
+  item.bananaSetaElem4Elem5.setColor(0, 0, 0);
+  item.bananaSetaElem4Elem5.setZorder(7);
+  itensCiclo.push(item.bananaSetaElem4Elem5);
 
-  item["num5"] = new Game.Text("5", estiloNumeros);
-  item.num5.setAnchor(0.5, 0.6);
-  item.num5.setPosition(1851, 671);
+  item["bananaNum5"] = new Game.Text("5", estiloNumeros);
+  item.bananaNum5.setAnchor(0.5, 0.6);
+  item.bananaNum5.setPosition(1851, 671);
+  itensCiclo.push(item.bananaNum5);
 
-  item["elem5"] = new Game.Image("entamoebaCisto.png");
-  item.elem5.setPosition(1700, 800);
-  item.elem5.setScale(0.56);
-  item.elem5.setZorder(6);
-  //item.elem5.setAlpha(0);
-  //item.elem5.disable();
-  itensCiclo.push(item.elem5);
+  item["bananaElem5"] = new Game.Image("entamoebaCisto.png");
+  item.bananaElem5.setPosition(1700, 800);
+  item.bananaElem5.setScale(0.56);
+  item.bananaElem5.setZorder(6);
+  //item.bananaElem5.setAlpha(0);
+  //item.bananaElem5.disable();
+  itensCiclo.push(item.bananaElem5);
 
   /*var itensSobreDoenca = [];
 
