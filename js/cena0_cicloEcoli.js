@@ -366,14 +366,93 @@ function carregaCicloEcoli() {
   item.bananaBalaoPrevencao.setPosition(730, 300);
   item.bananaBalaoPrevencao.setScale(0.25);
   item.bananaBalaoPrevencao.setZorder(6);
-  item.bananaBalaoPrevencao.setAlpha(0);
   item.bananaBalaoPrevencao.disable();
 
   item["bananaBalaoTransmissao"] = new Game.Image("balTranEsq.png");
   item.bananaBalaoTransmissao.setPosition(730, 300);
   item.bananaBalaoTransmissao.setScale(0.25);
   item.bananaBalaoTransmissao.setZorder(6);
-  item.bananaBalaoTransmissao.setAlpha(0);
   item.bananaBalaoTransmissao.disable();
+
+
+  item["bananaAbaSintomas"] = new Game.Item("abaSint.png");
+  item.bananaAbaSintomas.setPosition(432, 71);
+  item.bananaAbaSintomas.setScale(0.25);
+  item.bananaAbaSintomas.setZorder(7);
+  item.bananaAbaSintomas.disable();
+  item.bananaAbaSintomas.onClick = function() {
+    item.bananaBalaoSintoma.enable();
+    item.bananaBalaoPrevencao.disable();
+    item.bananaBalaoTransmissao.disable();
+
+    item.bananaAbaSintomas.disable();
+    item.bananaAbaPrevencao.enable();
+    item.bananaAbaTransmissao.enable();
+    UpdateScreen();
+  }
+
+  /*item["bananaAbaSintomasHover"] = new Game.Item("abaSintHover.png");
+  item.bananaAbaSintomasHover.setPosition(432, 71);
+  item.bananaAbaSintomasHover.setScale(0.25);
+  item.bananaAbaSintomasHover.setZorder(7);
+  item.bananaAbaSintomasHover.disable();
+  item.bananaAbaSintomasHover.setInteractive(false);
+  item.bananaAbaSintomas.onMouseOut = function() {
+    item.bananaAbaSintomas.enable();
+    item.bananaAbaSintomasHover.disable();
+  }*/
+
+  item["bananaAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.bananaAbaPrevencao.setPosition(432 + 232, 71);
+  item.bananaAbaPrevencao.setScale(0.25);
+  item.bananaAbaPrevencao.setZorder(7);
+  //item.bananaAbaPrevencao.setAlpha(0);
+  //item.bananaAbaPrevencao.disable();
+  item.bananaAbaPrevencao.onClick = function() {
+    item.bananaBalaoSintoma.disable();
+    item.bananaBalaoPrevencao.enable();
+    item.bananaBalaoTransmissao.disable();
+
+    item.bananaAbaSintomas.enable();
+    item.bananaAbaPrevencao.disable();
+    item.bananaAbaTransmissao.enable();
+    UpdateScreen();
+  }
+
+  /*item["bananaAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
+  item.bananaAbaPrevencaoHover.setPosition(432 + 247, 71);
+  item.bananaAbaPrevencaoHover.setScale(0.25);
+  item.bananaAbaPrevencaoHover.setZorder(7);
+  item.bananaAbaPrevencaoHover.setInteractive(false);
+  item.bananaAbaPrevencaoHover.disable();
+  item.bananaAbaPrevencaoHover.onMouseOut = function() {
+    item.bananaAbaPrevencaoHover.setInteractive(false);
+    item.bananaAbaPrevencaoHover.disable();
+    item.bananaAbaPrevencao.setInteractive(true);
+    item.bananaAbaPrevencao.enable();
+  }*/
+
+  item["bananaAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.bananaAbaTransmissao.setPosition(432 + 482, 71);
+  item.bananaAbaTransmissao.setScale(0.25);
+  item.bananaAbaTransmissao.setZorder(7);
+  //item.bananaAbaTransmissao.setAlpha(0);
+  //item.bananaAbaTransmissao.disable();
+  item.bananaAbaTransmissao.onClick = function() {
+    item.bananaBalaoSintoma.disable();
+    item.bananaBalaoPrevencao.disable();
+    item.bananaBalaoTransmissao.enable();
+
+    item.bananaAbaSintomas.enable();
+    item.bananaAbaPrevencao.enable();
+    item.bananaAbaTransmissao.disable();
+    UpdateScreen();
+  }
+
+  /*item["bananaAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
+  item.bananaAbaTransmissaoHover.setPosition(432 + 2*247, 71);
+  item.bananaAbaTransmissaoHover.setScale(0.25);
+  item.bananaAbaTransmissaoHover.setZorder(7);
+  item.bananaAbaTransmissaoHover.disable();*/
 
 }
