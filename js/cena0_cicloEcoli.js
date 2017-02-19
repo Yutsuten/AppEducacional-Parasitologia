@@ -6,6 +6,12 @@ var estiloNumeros = {
   fontSize: "200px"
 }
 
+var estiloInfoBalao = {
+  fontFamily: "Book Antiqua",
+  fill: 0x000000,
+  fontSize: "40px"
+}
+
 function carregaCicloEcoli() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
@@ -388,8 +394,18 @@ function carregaCicloEcoli() {
     item.bananaAbaSintomas.disable();
     item.bananaAbaPrevencao.enable();
     item.bananaAbaTransmissao.enable();
+
+    item.bananaTextoSintomas.enable();
+    item.bananaTextoPrevencao.disable();
+    item.bananaTextoTransmissao.disable();
+
     UpdateScreen();
   }
+
+  item["bananaTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.bananaTextoSintomas.setPosition(432-130, 71+20);
+  //item.bananaTextoSintomas.setAlpha(0);
+  //item.bananaTextoSintomas.disable();
 
   /*item["bananaAbaSintomasHover"] = new Game.Item("abaSintHover.png");
   item.bananaAbaSintomasHover.setPosition(432, 71);
@@ -416,8 +432,17 @@ function carregaCicloEcoli() {
     item.bananaAbaSintomas.enable();
     item.bananaAbaPrevencao.disable();
     item.bananaAbaTransmissao.enable();
+
+    item.bananaTextoSintomas.disable();
+    item.bananaTextoPrevencao.enable();
+    item.bananaTextoTransmissao.disable();
+
     UpdateScreen();
   }
+
+  item["bananaTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.bananaTextoPrevencao.setPosition(432-130, 71+20);
+  item.bananaTextoPrevencao.disable();
 
   /*item["bananaAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
   item.bananaAbaPrevencaoHover.setPosition(432 + 247, 71);
@@ -446,8 +471,17 @@ function carregaCicloEcoli() {
     item.bananaAbaSintomas.enable();
     item.bananaAbaPrevencao.enable();
     item.bananaAbaTransmissao.disable();
+
+    item.bananaTextoSintomas.disable();
+    item.bananaTextoPrevencao.disable();
+    item.bananaTextoTransmissao.enable();
+
     UpdateScreen();
   }
+
+  item["bananaTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.bananaTextoTransmissao.setPosition(432-130, 71+20);
+  item.bananaTextoTransmissao.disable();
 
   /*item["bananaAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
   item.bananaAbaTransmissaoHover.setPosition(432 + 2*247, 71);
