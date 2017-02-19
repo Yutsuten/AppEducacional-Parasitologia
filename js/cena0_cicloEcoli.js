@@ -62,16 +62,16 @@ function carregaCicloEcoli() {
   item.estBananaCiclo.setPosition(960, 550);
   item.estBananaCiclo.setScale(0.5);
   item.estBananaCiclo.setZorder(9);
-  //item.estBananaCiclo.setAlpha(0);
-  //item.estBananaCiclo.disable();
+  item.estBananaCiclo.setAlpha(0);
+  item.estBananaCiclo.disable();
   itensCiclo.push(item.estBananaCiclo);
 
   item["bananaElem1"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem1.setPosition(485, 300);
   item.bananaElem1.setScale(0.7);
   item.bananaElem1.setZorder(6);
-  //item.bananaElem1.setAlpha(0);
-  //item.bananaElem1.disable();
+  item.bananaElem1.setAlpha(0);
+  item.bananaElem1.disable();
   item.bananaElem1.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -83,19 +83,23 @@ function carregaCicloEcoli() {
   item["bananaNum1"] = new Game.Text("1", estiloNumeros);
   item.bananaNum1.setAnchor(0.5, 0.6);
   item.bananaNum1.setPosition(650, 140);
+  item.bananaNum1.setAlpha(0);
+  item.bananaNum1.disable();
   itensCiclo.push(item.bananaNum1);
 
   item["bananaSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
   item.bananaSetaElem1Est.setColor(0, 0, 0);
   item.bananaSetaElem1Est.setZorder(7);
+  item.bananaSetaElem1Est.setAlpha(0);
+  item.bananaSetaElem1Est.disable();
   itensCiclo.push(item.bananaSetaElem1Est);
 
   item["bananaElem2a"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem2a.setPosition(200, 750);
   item.bananaElem2a.setScale(0.4);
   item.bananaElem2a.setZorder(6);
-  //item.bananaElem2a.setAlpha(0);
-  //item.bananaElem2a.disable();
+  item.bananaElem2a.setAlpha(0);
+  item.bananaElem2a.disable();
   item.bananaElem2a.onMouseOver = function() {
     scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
@@ -107,20 +111,24 @@ function carregaCicloEcoli() {
   item["bananaNum2"] = new Game.Text("2", estiloNumeros);
   item.bananaNum2.setAnchor(0.5, 0.6);
   item.bananaNum2.setPosition(350, 700);
+  item.bananaNum2.setAlpha(0);
+  item.bananaNum2.disable();
   itensCiclo.push(item.bananaNum2);
 
   item["bananaSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
   item.bananaSetaElem2aElem2b.setColor(0, 0, 0);
   item.bananaSetaElem2aElem2b.addArrowAtEnd();
   item.bananaSetaElem2aElem2b.setZorder(7);
+  item.bananaSetaElem2aElem2b.setAlpha(0);
+  item.bananaSetaElem2aElem2b.disable();
   itensCiclo.push(item.bananaSetaElem2aElem2b);
 
   item["bananaElem2b"] = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem2b.setPosition(537, 750);
   item.bananaElem2b.setScale(0.53);
   item.bananaElem2b.setZorder(6);
-  //item.bananaElem2b.setAlpha(0);
-  //item.bananaElem2b.disable();
+  item.bananaElem2b.setAlpha(0);
+  item.bananaElem2b.disable();
   item.bananaElem2b.onMouseOver = function() {
     scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
   }
@@ -132,19 +140,23 @@ function carregaCicloEcoli() {
   item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
   item.bananaSetaElem2bEst.setColor(0, 0, 0);
   item.bananaSetaElem2bEst.setZorder(7);
+  item.bananaSetaElem2bEst.setAlpha(0);
+  item.bananaSetaElem2bEst.disable();
   itensCiclo.push(item.bananaSetaElem2bEst);
 
   item["bananaSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
   item.bananaSetaEstElem3a.setColor(0, 0, 0);
   item.bananaSetaEstElem3a.setZorder(7);
+  item.bananaSetaEstElem3a.setAlpha(0);
+  item.bananaSetaEstElem3a.disable();
   itensCiclo.push(item.bananaSetaEstElem3a);
 
   item["bananaElem3a"] = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem3a.setPosition(1330, 250);
   item.bananaElem3a.setScale(0.42);
   item.bananaElem3a.setZorder(6);
-  //item.bananaElem3a.setAlpha(0);
-  //item.bananaElem3a.disable();
+  item.bananaElem3a.setAlpha(0);
+  item.bananaElem3a.disable();
   item.bananaElem3a.onMouseOver = function() {
     scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
   }
@@ -156,20 +168,24 @@ function carregaCicloEcoli() {
   item["bananaNum3"] = new Game.Text("3", estiloNumeros);
   item.bananaNum3.setAnchor(0.5, 0.6);
   item.bananaNum3.setPosition(1480, 200);
+  item.bananaNum3.setAlpha(0);
+  item.bananaNum3.disable();
   itensCiclo.push(item.bananaNum3);
 
   item["bananaSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
   item.bananaSetaElem3aElem3b.setColor(0, 0, 0);
   item.bananaSetaElem3aElem3b.addArrowAtEnd();
   item.bananaSetaElem3aElem3b.setZorder(7);
+  item.bananaSetaElem3aElem3b.setAlpha(0);
+  item.bananaSetaElem3aElem3b.disable();
   itensCiclo.push(item.bananaSetaElem3aElem3b);
 
   item["bananaElem3b"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem3b.setPosition(1670, 250);
   item.bananaElem3b.setScale(0.55);
   item.bananaElem3b.setZorder(6);
-  //item.bananaElem3b.setAlpha(0);
-  //item.bananaElem3b.disable();
+  item.bananaElem3b.setAlpha(0);
+  item.bananaElem3b.disable();
   item.bananaElem3b.onMouseOver = function() {
     scene[0].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
   }
@@ -182,19 +198,23 @@ function carregaCicloEcoli() {
   item.bananaSetaEstElem4.setColor(0, 0, 0);
   item.bananaSetaEstElem4.addArrowAtEnd();
   item.bananaSetaEstElem4.setZorder(7);
+  item.bananaSetaEstElem4.setAlpha(0);
+  item.bananaSetaEstElem4.disable();
   itensCiclo.push(item.bananaSetaEstElem4);
 
   item["bananaNum4"] = new Game.Text("4", estiloNumeros);
   item.bananaNum4.setAnchor(0.5, 0.6);
   item.bananaNum4.setPosition(1450, 660);
+  item.bananaNum4.setAlpha(0);
+  item.bananaNum4.disable();
   itensCiclo.push(item.bananaNum4);
 
   item["bananaElem4"] = new Game.Item("fezesComMosca.png");
   item.bananaElem4.setPosition(1330, 800);
   item.bananaElem4.setScale(0.51);
   item.bananaElem4.setZorder(6);
-  //item.bananaElem4.setAlpha(0);
-  //item.bananaElem4.disable();
+  item.bananaElem4.setAlpha(0);
+  item.bananaElem4.disable();
   item.bananaElem4.onMouseOver = function() {
     scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
   }
@@ -206,19 +226,23 @@ function carregaCicloEcoli() {
   item["bananaSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
   item.bananaSetaElem4Elem5.setColor(0, 0, 0);
   item.bananaSetaElem4Elem5.setZorder(7);
+  item.bananaSetaElem4Elem5.setAlpha(0);
+  item.bananaSetaElem4Elem5.disable();
   itensCiclo.push(item.bananaSetaElem4Elem5);
 
   item["bananaNum5"] = new Game.Text("5", estiloNumeros);
   item.bananaNum5.setAnchor(0.5, 0.6);
   item.bananaNum5.setPosition(1851, 671);
+  item.bananaNum5.setAlpha(0);
+  item.bananaNum5.disable();
   itensCiclo.push(item.bananaNum5);
 
   item["bananaElem5"] = new Game.Item("entamoebaCisto.png");
   item.bananaElem5.setPosition(1700, 800);
   item.bananaElem5.setScale(0.56);
   item.bananaElem5.setZorder(6);
-  //item.bananaElem5.setAlpha(0);
-  //item.bananaElem5.disable();
+  item.bananaElem5.setAlpha(0);
+  item.bananaElem5.disable();
   item.bananaElem5.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>E. coli</i>");
   }
