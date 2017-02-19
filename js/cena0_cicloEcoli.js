@@ -1,3 +1,11 @@
+var estiloNumeros = {
+  fontFamily: "CircleCaps",
+  dropShadow: true,
+  dropShadowBlur: 10,
+  fill: 0xFFFFFF,
+  fontSize: "200px"
+}
+
 function carregaCicloEcoli() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
@@ -66,6 +74,10 @@ function carregaCicloEcoli() {
   //item.elem1.disable();
   itensCiclo.push(item.elem1);
 
+  item["num1"] = new Game.Text("1", estiloNumeros);
+  item.num1.setAnchor(0.5, 0.6);
+  item.num1.setPosition(650, 140);
+
   item["setaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
   item.setaElem1Est.setColor(0, 0, 0);
   item.setaElem1Est.setZorder(7);
@@ -77,6 +89,10 @@ function carregaCicloEcoli() {
   //item.elem2a.setAlpha(0);
   //item.elem2a.disable();
   itensCiclo.push(item.elem2a);
+
+  item["num2"] = new Game.Text("2", estiloNumeros);
+  item.num2.setAnchor(0.5, 0.6);
+  item.num2.setPosition(350, 700);
 
   item["setaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
   item.setaElem2aElem2b.setColor(0, 0, 0);
@@ -107,6 +123,10 @@ function carregaCicloEcoli() {
   //item.elem3a.disable();
   itensCiclo.push(item.elem3a);
 
+  item["num3"] = new Game.Text("3", estiloNumeros);
+  item.num3.setAnchor(0.5, 0.6);
+  item.num3.setPosition(1480, 200);
+
   item["setaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
   item.setaElem3aElem3b.setColor(0, 0, 0);
   item.setaElem3aElem3b.addArrowAtEnd();
@@ -125,6 +145,10 @@ function carregaCicloEcoli() {
   item.setaEstElem4.addArrowAtEnd();
   item.setaEstElem4.setZorder(7);
 
+  item["num4"] = new Game.Text("4", estiloNumeros);
+  item.num4.setAnchor(0.5, 0.6);
+  item.num4.setPosition(1450, 660);
+
   item["elem4"] = new Game.Image("fezesComMosca.png");
   item.elem4.setPosition(1330, 800);
   item.elem4.setScale(0.51);
@@ -136,6 +160,10 @@ function carregaCicloEcoli() {
   item["setaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
   item.setaElem4Elem5.setColor(0, 0, 0);
   item.setaElem4Elem5.setZorder(7);
+
+  item["num5"] = new Game.Text("5", estiloNumeros);
+  item.num5.setAnchor(0.5, 0.6);
+  item.num5.setPosition(1851, 671);
 
   item["elem5"] = new Game.Image("entamoebaCisto.png");
   item.elem5.setPosition(1700, 800);
