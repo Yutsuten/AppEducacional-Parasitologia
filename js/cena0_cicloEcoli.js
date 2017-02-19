@@ -35,7 +35,6 @@ function carregaCicloEcoli() {
     var animationInterval = 750; // Intervalo entre cada animacao
 
     // Fadeout unrelated images
-    item.estBananaNormal.removeGlow();
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
@@ -368,6 +367,13 @@ function carregaCicloEcoli() {
 
       item.bananaBotaoOK.enable();
       item.bananaBotaoOK.changeAlpha(1, 600);
+
+      item.bananaBalaoPrevencao.setAlpha(1);
+      item.bananaBalaoTransmissao.setAlpha(1);
+      item.bananaAbaSintomas.setAlpha(1);
+      item.bananaBotaoOKhover.setAlpha(1);
+      item.bananaTextoPrevencao.setAlpha(1);
+      item.bananaTextoTransmissao.setAlpha(1);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
@@ -537,7 +543,48 @@ function carregaCicloEcoli() {
   }
   item.bananaBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    var currentTime = 0;
+    var animationInterval = 750; // Intervalo entre cada animacao
+
     groupChangeAlpha(itensBananaDoente, 0, 600);
+
+    setTimeout(function() {
+      item.estBananaNormal.enable();
+      item.estBananaNormal.setBrightness(220);
+      item.estBananaNormal.changeAlpha(1, 600);
+
+      scene[0].background.changeBrightness(210, 600);
+      item.carteiras.changeBrightness(210, 600);
+      item.mesaProfessor.changeBrightness(210, 600);
+
+      item.estTomateNormal.changeBrightness(210, 600);
+      item.estPernNormal.changeBrightness(210, 600);
+      item.estGatoNormal.changeBrightness(210, 600);
+      item.setaJanela.enable();
+      item.setaArmario.enable();
+      item.setaJanela.changeAlpha(1, 600);
+      item.setaArmario.changeAlpha(1, 600);
+
+      item.bananaBotaoOKhover.disable();
+      item.bananaBalaoPrevencao.disable();
+      item.bananaBalaoTransmissao.disable();
+      item.bananaAbaSintomas.disable();
+      item.bananaAbaPrevencao.disable();
+      item.bananaAbaTransmissao.disable();
+      item.bananaTextoPrevencao.disable();
+      item.bananaTextoTransmissao.disable();
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.estTomateNormal.setInteractive(true);
+      item.estPernNormal.setInteractive(true);
+      item.estGatoNormal.setInteractive(true);
+      item.estBananaNormal.setInteractive(true);
+      item.setaJanela.setInteractive(true);
+      item.setaArmario.setInteractive(true);
+
+      enableInteractiveness();
+    }, currentTime += animationInterval);
 
   }
   itensBananaDoente.push(item.bananaBotaoOKhover);
