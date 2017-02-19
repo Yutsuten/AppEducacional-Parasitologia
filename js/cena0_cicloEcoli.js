@@ -531,6 +531,9 @@ function carregaCicloEcoli() {
     item.bananaBotaoOK.disable();
     item.bananaBotaoOKhover.enable();
   }
+  item.bananaBotaoOK.onClick = function() {
+    item.bananaBotaoOKhover.onClick();
+  }
   itensBananaDoente.push(item.bananaBotaoOK);
 
   item["bananaBotaoOKhover"] = new Game.Item("okHover.png");
