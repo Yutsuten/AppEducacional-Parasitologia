@@ -116,6 +116,11 @@ function carregaCicloEcoli() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
+      item.bananaFechar.enable();
+      item.bananaFechar.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
       enableInteractiveness();
     }, currentTime += animationInterval);
   }
@@ -315,5 +320,60 @@ function carregaCicloEcoli() {
     scene[0].setSubtitle("");
   }
   itensCiclo.push(item.bananaElem5);
+
+  item["bananaFechar"] = new Game.Item("botaoFechar.png");
+  item.bananaFechar.setPosition(1840, 70);
+  item.bananaFechar.setRotation(180);
+  item.bananaFechar.setZorder(1);
+  item.bananaFechar.setAlpha(0);
+  item.bananaFechar.disable();
+  item.bananaFechar.onMouseOver = function() {
+    item.bananaFechar.addGlow();
+  }
+  item.bananaFechar.onMouseOut = function() {
+    item.bananaFechar.removeGlow();
+  }
+  item.bananaFechar.onClick = function(mouse) {
+    disableInteractiveness();
+    var currentTime = 0;
+    var animationInterval = 750; // Intervalo entre cada animacao
+
+    groupChangeAlpha(itensCiclo, 0, 600);
+
+    setTimeout(function() {
+      groupDisable(itensCiclo);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      enableInteractiveness();
+    }, currentTime += animationInterval);
+  }
+
+  item["estBananaDoente"] = new Game.Image("estHprdDte.png");
+  item.estBananaDoente.setPosition(1218, 668);
+  item.estBananaDoente.setZorder(11);
+  //item.estBananaDoente.setAlpha(0);
+  //item.estBananaDoente.disable();
+
+  item["bananaBalaoSintoma"] = new Game.Image("balSintEsq.png");
+  item.bananaBalaoSintoma.setPosition(730, 300);
+  item.bananaBalaoSintoma.setScale(0.25);
+  item.bananaBalaoSintoma.setZorder(6);
+  //item.bananaBalaoSintoma.setAlpha(0);
+  //item.bananaBalaoSintoma.disable();
+
+  item["bananaBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
+  item.bananaBalaoPrevencao.setPosition(730, 300);
+  item.bananaBalaoPrevencao.setScale(0.25);
+  item.bananaBalaoPrevencao.setZorder(6);
+  item.bananaBalaoPrevencao.setAlpha(0);
+  item.bananaBalaoPrevencao.disable();
+
+  item["bananaBalaoTransmissao"] = new Game.Image("balTranEsq.png");
+  item.bananaBalaoTransmissao.setPosition(730, 300);
+  item.bananaBalaoTransmissao.setScale(0.25);
+  item.bananaBalaoTransmissao.setZorder(6);
+  item.bananaBalaoTransmissao.setAlpha(0);
+  item.bananaBalaoTransmissao.disable();
 
 }
