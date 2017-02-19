@@ -398,8 +398,6 @@ function carregaCicloEcoli() {
     item.bananaTextoSintomas.enable();
     item.bananaTextoPrevencao.disable();
     item.bananaTextoTransmissao.disable();
-
-    UpdateScreen();
   }
 
   item["bananaTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
@@ -436,8 +434,6 @@ function carregaCicloEcoli() {
     item.bananaTextoSintomas.disable();
     item.bananaTextoPrevencao.enable();
     item.bananaTextoTransmissao.disable();
-
-    UpdateScreen();
   }
 
   item["bananaTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
@@ -475,8 +471,6 @@ function carregaCicloEcoli() {
     item.bananaTextoSintomas.disable();
     item.bananaTextoPrevencao.disable();
     item.bananaTextoTransmissao.enable();
-
-    UpdateScreen();
   }
 
   item["bananaTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
@@ -488,5 +482,25 @@ function carregaCicloEcoli() {
   item.bananaAbaTransmissaoHover.setScale(0.25);
   item.bananaAbaTransmissaoHover.setZorder(7);
   item.bananaAbaTransmissaoHover.disable();*/
+
+  item["botaoOK"] = new Game.Item("okNormal.png");
+  item.botaoOK.setScale(0.25);
+  item.botaoOK.setPosition(432+450, 71+290);
+  item.botaoOK.onMouseOver = function() {
+    item.botaoOK.disable();
+    item.botaoOKhover.enable();
+  }
+
+  item["botaoOKhover"] = new Game.Item("okHover.png");
+  item.botaoOKhover.setScale(0.25);
+  item.botaoOKhover.setPosition(432+450, 71+290);
+  item.botaoOKhover.disable();
+  item.botaoOKhover.onMouseOut = function() {
+    item.botaoOKhover.disable();
+    item.botaoOK.enable();
+  }
+  item.botaoOKhover.onClick = function() {
+    console.log("OK, entendi!");
+  }
 
 }

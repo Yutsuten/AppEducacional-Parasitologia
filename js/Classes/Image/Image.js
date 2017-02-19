@@ -170,6 +170,7 @@ Game.Image = function(texture) {
   }
   this.enable = function() {
     this.visible = true;
+    UpdateScreen();
   }
 
   // Implementing the mouseover and mouseout methods
