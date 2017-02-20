@@ -434,14 +434,14 @@ function carregaCicloAscaris() {
   var itensTomateDoente = [];
 
   item["estTomateDoente"] = new Game.Image("estHngrDte.png");
-  item.estTomateDoente.setPosition(1218, 668);
+  item.estTomateDoente.setPosition(960, 550);
   item.estTomateDoente.setZorder(11);
   item.estTomateDoente.setAlpha(0);
   item.estTomateDoente.disable();
   itensTomateDoente.push(item.estTomateDoente);
 
   item["tomateBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.tomateBalaoSintoma.setPosition(730, 300);
+  item.tomateBalaoSintoma.setPosition(730-260, 300);
   item.tomateBalaoSintoma.setScale(0.25);
   item.tomateBalaoSintoma.setZorder(6);
   item.tomateBalaoSintoma.setAlpha(0);
@@ -449,14 +449,14 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateBalaoSintoma);
 
   item["tomateBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.tomateBalaoPrevencao.setPosition(730, 300);
+  item.tomateBalaoPrevencao.setPosition(730-260, 300);
   item.tomateBalaoPrevencao.setScale(0.25);
   item.tomateBalaoPrevencao.setZorder(6);
   item.tomateBalaoPrevencao.disable();
   itensTomateDoente.push(item.tomateBalaoPrevencao);
 
   item["tomateBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.tomateBalaoTransmissao.setPosition(730, 300);
+  item.tomateBalaoTransmissao.setPosition(730-260, 300);
   item.tomateBalaoTransmissao.setScale(0.25);
   item.tomateBalaoTransmissao.setZorder(6);
   item.tomateBalaoTransmissao.disable();
@@ -464,7 +464,7 @@ function carregaCicloAscaris() {
 
 
   item["tomateAbaSintomas"] = new Game.Item("abaSint.png");
-  item.tomateAbaSintomas.setPosition(432, 71);
+  item.tomateAbaSintomas.setPosition(432-260, 71);
   item.tomateAbaSintomas.setScale(0.25);
   item.tomateAbaSintomas.setZorder(7);
   item.tomateAbaSintomas.disable();
@@ -484,7 +484,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaSintomas);
 
   item["tomateTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.tomateTextoSintomas.setPosition(432-130, 71+20);
+  item.tomateTextoSintomas.setPosition(432-130-260, 71+20);
   item.tomateTextoSintomas.setAlpha(0);
   item.tomateTextoSintomas.disable();
   itensTomateDoente.push(item.tomateTextoSintomas);
@@ -501,7 +501,7 @@ function carregaCicloAscaris() {
   }*/
 
   item["tomateAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.tomateAbaPrevencao.setPosition(432 + 232, 71);
+  item.tomateAbaPrevencao.setPosition(432+232-260, 71);
   item.tomateAbaPrevencao.setScale(0.25);
   item.tomateAbaPrevencao.setZorder(7);
   item.tomateAbaPrevencao.setAlpha(0);
@@ -522,7 +522,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaPrevencao);
 
   item["tomateTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.tomateTextoPrevencao.setPosition(432-130, 71+20);
+  item.tomateTextoPrevencao.setPosition(432-130-260, 71+20);
   item.tomateTextoPrevencao.disable();
   itensTomateDoente.push(item.tomateTextoPrevencao);
 
@@ -540,7 +540,7 @@ function carregaCicloAscaris() {
   }*/
 
   item["tomateAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.tomateAbaTransmissao.setPosition(432 + 482, 71);
+  item.tomateAbaTransmissao.setPosition(432+482-260, 71);
   item.tomateAbaTransmissao.setScale(0.25);
   item.tomateAbaTransmissao.setZorder(7);
   item.tomateAbaTransmissao.setAlpha(0);
@@ -561,7 +561,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaTransmissao);
 
   item["tomateTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.tomateTextoTransmissao.setPosition(432-130, 71+20);
+  item.tomateTextoTransmissao.setPosition(432-130-260, 71+20);
   item.tomateTextoTransmissao.disable();
   itensTomateDoente.push(item.tomateTextoTransmissao);
 
@@ -573,7 +573,7 @@ function carregaCicloAscaris() {
 
   item["tomateBotaoOK"] = new Game.Item("okNormal.png");
   item.tomateBotaoOK.setScale(0.25);
-  item.tomateBotaoOK.setPosition(432+450, 71+290);
+  item.tomateBotaoOK.setPosition(432+450-260, 71+290);
   item.tomateBotaoOK.setAlpha(0);
   item.tomateBotaoOK.disable();
   item.tomateBotaoOK.onMouseOver = function() {
@@ -587,7 +587,7 @@ function carregaCicloAscaris() {
 
   item["tomateBotaoOKhover"] = new Game.Item("okHover.png");
   item.tomateBotaoOKhover.setScale(0.25);
-  item.tomateBotaoOKhover.setPosition(432+450, 71+290);
+  item.tomateBotaoOKhover.setPosition(432+450-260, 71+290);
   item.tomateBotaoOKhover.disable();
   item.tomateBotaoOKhover.onMouseOut = function() {
     item.tomateBotaoOKhover.disable();
