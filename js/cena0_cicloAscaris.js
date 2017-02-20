@@ -64,16 +64,12 @@ function carregaCicloAscaris() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.tomateElem2a.enable();
-      item.tomateElem2a.changeAlpha(1, 600);
+      item.tomateElem2.enable();
+      item.tomateElem2.changeAlpha(1, 600);
       item.tomateNum2.enable();
       item.tomateNum2.changeAlpha(1, 600);
-      item.tomateSetaElem2aElem2b.enable();
-      item.tomateSetaElem2aElem2b.changeAlpha(1, 600);
-      item.tomateElem2b.enable();
-      item.tomateElem2b.changeAlpha(1, 600);
-      item.tomateSetaElem2bEst.enable();
-      item.tomateSetaElem2bEst.changeAlpha(1, 600);
+      item.tomateSetaElem2Est.enable();
+      item.tomateSetaElem2Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
@@ -85,13 +81,21 @@ function carregaCicloAscaris() {
       item.tomateNum3.changeAlpha(1, 600);
       item.tomateSetaElem3aElem3b.enable();
       item.tomateSetaElem3aElem3b.changeAlpha(1, 600);
+      item.tomateSetaElem3aElem3c.enable();
+      item.tomateSetaElem3aElem3c.changeAlpha(1, 600);
+      item.tomateSetaElem3aElem3d.enable();
+      item.tomateSetaElem3aElem3d.changeAlpha(1, 600);
       item.tomateElem3b.enable();
       item.tomateElem3b.changeAlpha(1, 600);
+      item.tomateElem3c.enable();
+      item.tomateElem3c.changeAlpha(1, 600);
+      item.tomateElem3d.enable();
+      item.tomateElem3d.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.tomateSetaEstElem4.enable();
-      item.tomateSetaEstElem4.changeAlpha(1, 600);
+      item.tomateSetaElem4Est.enable();
+      item.tomateSetaElem4Est.changeAlpha(1, 600);
       item.tomateNum4.enable();
       item.tomateNum4.changeAlpha(1, 600);
       item.tomateElem4.enable();
@@ -99,12 +103,21 @@ function carregaCicloAscaris() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.tomateSetaElem4Elem5.enable();
-      item.tomateSetaElem4Elem5.changeAlpha(1, 600);
+      item.tomateSetaEstElem5.enable();
+      item.tomateSetaEstElem5.changeAlpha(1, 600);
       item.tomateNum5.enable();
       item.tomateNum5.changeAlpha(1, 600);
       item.tomateElem5.enable();
       item.tomateElem5.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.tomateSetaElem5Elem6.enable();
+      item.tomateSetaElem5Elem6.changeAlpha(1, 600);
+      item.tomateElem6.enable();
+      item.tomateElem6.changeAlpha(1, 600);
+      item.tomateNum6.enable();
+      item.tomateNum6.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
@@ -124,18 +137,18 @@ function carregaCicloAscaris() {
   item.estTomateCiclo.setPosition(900, 550);
   item.estTomateCiclo.setScale(0.5);
   item.estTomateCiclo.setZorder(9);
-  //item.estTomateCiclo.setAlpha(0);
-  //item.estTomateCiclo.disable();
+  item.estTomateCiclo.setAlpha(0);
+  item.estTomateCiclo.disable();
   itensTomateCiclo.push(item.estTomateCiclo);
 
   item["tomateElem1"] = new Game.Item("ovoAscaris.png");
   item.tomateElem1.setPosition(450, 250);
   item.tomateElem1.setScale(0.58);
   item.tomateElem1.setZorder(6);
-  //item.tomateElem1.setAlpha(0);
-  //item.tomateElem1.disable();
+  item.tomateElem1.setAlpha(0);
+  item.tomateElem1.disable();
   item.tomateElem1.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[0].setSubtitle("Ovo de <i>Ascaris lumbricoides</i>");
   }
   item.tomateElem1.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -145,25 +158,25 @@ function carregaCicloAscaris() {
   item["tomateNum1"] = new Game.Text("1", estiloNumeros);
   item.tomateNum1.setAnchor(0.5, 0.6);
   item.tomateNum1.setPosition(620, 120);
-  //item.tomateNum1.setAlpha(0);
-  //item.tomateNum1.disable();
+  item.tomateNum1.setAlpha(0);
+  item.tomateNum1.disable();
   itensTomateCiclo.push(item.tomateNum1);
 
   item["tomateSetaElem1Est"] = new Game.Line(450, 250, 830, 440, 4);
   item.tomateSetaElem1Est.setColor(0, 0, 0);
   item.tomateSetaElem1Est.setZorder(7);
-  //item.tomateSetaElem1Est.setAlpha(0);
-  //item.tomateSetaElem1Est.disable();
+  item.tomateSetaElem1Est.setAlpha(0);
+  item.tomateSetaElem1Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem1Est);
 
   item["tomateElem2"] = new Game.Item("ascarisFilhote.png");
   item.tomateElem2.setPosition(380, 550);
   item.tomateElem2.setScale(0.47);
   item.tomateElem2.setZorder(6);
-  //item.tomateElem2.setAlpha(0);
-  //item.tomateElem2.disable();
+  item.tomateElem2.setAlpha(0);
+  item.tomateElem2.disable();
   item.tomateElem2.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[0].setSubtitle("Verme jovem de <i>Ascaris lumbricoides</i>");
   }
   item.tomateElem2.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -173,32 +186,32 @@ function carregaCicloAscaris() {
   item["tomateNum2"] = new Game.Text("2", estiloNumeros);
   item.tomateNum2.setAnchor(0.5, 0.6);
   item.tomateNum2.setPosition(290, 420);
-  //item.tomateNum2.setAlpha(0);
-  //item.tomateNum2.disable();
+  item.tomateNum2.setAlpha(0);
+  item.tomateNum2.disable();
   itensTomateCiclo.push(item.tomateNum2);
 
   item["tomateSetaElem2Est"] = new Game.Line(380, 550, 840, 700, 4);
   item.tomateSetaElem2Est.setColor(0, 0, 0);
   item.tomateSetaElem2Est.setZorder(7);
-  //item.tomateSetaElem2Est.setAlpha(0);
-  //item.tomateSetaElem2Est.disable();
+  item.tomateSetaElem2Est.setAlpha(0);
+  item.tomateSetaElem2Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem2Est);
 
   item["tomateSetaEstElem3a"] = new Game.Line(900, 600, 1300, 300, 4);
   item.tomateSetaEstElem3a.setColor(0, 0, 0);
   item.tomateSetaEstElem3a.setZorder(7);
-  //item.tomateSetaEstElem3a.setAlpha(0);
-  //item.tomateSetaEstElem3a.disable();
+  item.tomateSetaEstElem3a.setAlpha(0);
+  item.tomateSetaEstElem3a.disable();
   itensTomateCiclo.push(item.tomateSetaEstElem3a);
 
   item["tomateElem3a"] = new Game.Item("circulacao.png");
   item.tomateElem3a.setPosition(1300, 300);
   item.tomateElem3a.setScale(0.57);
   item.tomateElem3a.setZorder(6);
-  //item.tomateElem3a.setAlpha(0);
-  //item.tomateElem3a.disable();
+  item.tomateElem3a.setAlpha(0);
+  item.tomateElem3a.disable();
   item.tomateElem3a.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Migração do verme para a circulação sanguínea");
   }
   item.tomateElem3a.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -208,42 +221,42 @@ function carregaCicloAscaris() {
   item["tomateNum3"] = new Game.Text("3", estiloNumeros);
   item.tomateNum3.setAnchor(0.5, 0.6);
   item.tomateNum3.setPosition(1430, 180);
-  //item.tomateNum3.setAlpha(0);
-  //item.tomateNum3.disable();
+  item.tomateNum3.setAlpha(0);
+  item.tomateNum3.disable();
   itensTomateCiclo.push(item.tomateNum3);
 
   item["tomateSetaElem3aElem3b"] = new Game.Line(1300, 300, 1520, 200, 4);
   item.tomateSetaElem3aElem3b.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3b.addArrowAtEnd();
   item.tomateSetaElem3aElem3b.setZorder(7);
-  //item.tomateSetaElem3aElem3b.setAlpha(0);
-  //item.tomateSetaElem3aElem3b.disable();
+  item.tomateSetaElem3aElem3b.setAlpha(0);
+  item.tomateSetaElem3aElem3b.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3b);
 
   item["tomateSetaElem3aElem3c"] = new Game.Line(1300, 300, 1570, 360, 4);
   item.tomateSetaElem3aElem3c.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3c.addArrowAtEnd();
   item.tomateSetaElem3aElem3c.setZorder(7);
-  //item.tomateSetaElem3aElem3c.setAlpha(0);
-  //item.tomateSetaElem3aElem3c.disable();
+  item.tomateSetaElem3aElem3c.setAlpha(0);
+  item.tomateSetaElem3aElem3c.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3c);
 
   item["tomateSetaElem3aElem3d"] = new Game.Line(1300, 300, 1470, 450, 4);
   item.tomateSetaElem3aElem3d.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3d.addArrowAtEnd();
   item.tomateSetaElem3aElem3d.setZorder(7);
-  //item.tomateSetaElem3aElem3d.setAlpha(0);
-  //item.tomateSetaElem3aElem3d.disable();
+  item.tomateSetaElem3aElem3d.setAlpha(0);
+  item.tomateSetaElem3aElem3d.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3d);
 
   item["tomateElem3b"] = new Game.Item("coracao.png");
   item.tomateElem3b.setPosition(1630, 170);
   item.tomateElem3b.setScale(0.35);
   item.tomateElem3b.setZorder(6);
-  //item.tomateElem3b.setAlpha(0);
-  //item.tomateElem3b.disable();
+  item.tomateElem3b.setAlpha(0);
+  item.tomateElem3b.disable();
   item.tomateElem3b.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Migração para o coração");
   }
   item.tomateElem3b.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -254,10 +267,10 @@ function carregaCicloAscaris() {
   item.tomateElem3c.setPosition(1670, 370);
   item.tomateElem3c.setScale(0.32);
   item.tomateElem3c.setZorder(6);
-  //item.tomateElem3c.setAlpha(0);
-  //item.tomateElem3c.disable();
+  item.tomateElem3c.setAlpha(0);
+  item.tomateElem3c.disable();
   item.tomateElem3c.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Migração para o fígado");
   }
   item.tomateElem3c.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -268,10 +281,10 @@ function carregaCicloAscaris() {
   item.tomateElem3d.setPosition(1550, 530);
   item.tomateElem3d.setScale(0.35);
   item.tomateElem3d.setZorder(6);
-  //item.tomateElem3d.setAlpha(0);
-  //item.tomateElem3d.disable();
+  item.tomateElem3d.setAlpha(0);
+  item.tomateElem3d.disable();
   item.tomateElem3d.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Migração para o pulmão");
   }
   item.tomateElem3d.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -281,25 +294,25 @@ function carregaCicloAscaris() {
   item["tomateSetaElem4Est"] = new Game.Line(420, 850, 840, 760, 4);
   item.tomateSetaElem4Est.setColor(0, 0, 0);
   item.tomateSetaElem4Est.setZorder(7);
-  //item.tomateSetaElem4Est.setAlpha(0);
-  //item.tomateSetaElem4Est.disable();
+  item.tomateSetaElem4Est.setAlpha(0);
+  item.tomateSetaElem4Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem4Est);
 
   item["tomateNum4"] = new Game.Text("4", estiloNumeros);
   item.tomateNum4.setAnchor(0.5, 0.6);
   item.tomateNum4.setPosition(540, 720);
-  //item.tomateNum4.setAlpha(0);
-  //item.tomateNum4.disable();
+  item.tomateNum4.setAlpha(0);
+  item.tomateNum4.disable();
   itensTomateCiclo.push(item.tomateNum4);
 
   item["tomateElem4"] = new Game.Item("ascarisMF.png");
   item.tomateElem4.setPosition(420, 850);
   item.tomateElem4.setScale(0.51);
   item.tomateElem4.setZorder(6);
-  //item.tomateElem4.setAlpha(0);
-  //item.tomateElem4.disable();
+  item.tomateElem4.setAlpha(0);
+  item.tomateElem4.disable();
   item.tomateElem4.onMouseOver = function() {
-    scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[0].setSubtitle("Macho e fêmea de vermes adultos de <i>A. lumbricoides</i>");
   }
   item.tomateElem4.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -310,25 +323,25 @@ function carregaCicloAscaris() {
   item.tomateSetaEstElem5.setColor(0, 0, 0);
   item.tomateSetaEstElem5.addArrowAtEnd();
   item.tomateSetaEstElem5.setZorder(7);
-  //item.tomateSetaEstElem5.setAlpha(0);
-  //item.tomateSetaEstElem5.disable();
+  item.tomateSetaEstElem5.setAlpha(0);
+  item.tomateSetaEstElem5.disable();
   itensTomateCiclo.push(item.tomateSetaEstElem5);
 
   item["tomateNum5"] = new Game.Text("5", estiloNumeros);
   item.tomateNum5.setAnchor(0.5, 0.6);
   item.tomateNum5.setPosition(1400, 680);
-  //item.tomateNum5.setAlpha(0);
-  //item.tomateNum5.disable();
+  item.tomateNum5.setAlpha(0);
+  item.tomateNum5.disable();
   itensTomateCiclo.push(item.tomateNum5);
 
   item["tomateElem5"] = new Game.Item("fezesSemMosca.png");
   item.tomateElem5.setPosition(1300, 800);
   item.tomateElem5.setScale(0.44);
   item.tomateElem5.setZorder(6);
-  //item.tomateElem5.setAlpha(0);
-  //item.tomateElem5.disable();
+  item.tomateElem5.setAlpha(0);
+  item.tomateElem5.disable();
   item.tomateElem5.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Fezes contendo ovos de <i>A. lumbricoides</i>");
   }
   item.tomateElem5.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -338,18 +351,18 @@ function carregaCicloAscaris() {
   item["tomateSetaElem5Elem6"] = new Game.Line(1300, 800, 1700, 800, 4);
   item.tomateSetaElem5Elem6.setColor(0, 0, 0);
   item.tomateSetaElem5Elem6.setZorder(7);
-  //item.tomateSetaElem5Elem6.setAlpha(0);
-  //item.tomateSetaElem5Elem6.disable();
+  item.tomateSetaElem5Elem6.setAlpha(0);
+  item.tomateSetaElem5Elem6.disable();
   itensTomateCiclo.push(item.tomateSetaElem5Elem6);
 
   item["tomateElem6"] = new Game.Item("ovoAscaris.png");
   item.tomateElem6.setPosition(1700, 800);
   item.tomateElem6.setScale(0.5);
   item.tomateElem6.setZorder(6);
-  //item.tomateElem6.setAlpha(0);
-  //item.tomateElem6.disable();
+  item.tomateElem6.setAlpha(0);
+  item.tomateElem6.disable();
   item.tomateElem6.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Ovo de <i>A. lumbricoides</i>");
   }
   item.tomateElem6.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -359,8 +372,8 @@ function carregaCicloAscaris() {
   item["tomateNum6"] = new Game.Text("6", estiloNumeros);
   item.tomateNum6.setAnchor(0.5, 0.6);
   item.tomateNum6.setPosition(1820, 680);
-  //item.tomateNum6.setAlpha(0);
-  //item.tomateNum6.disable();
+  item.tomateNum6.setAlpha(0);
+  item.tomateNum6.disable();
   itensTomateCiclo.push(item.tomateNum6);
 
   item["tomateFechar"] = new Game.Item("botaoFechar.png");
