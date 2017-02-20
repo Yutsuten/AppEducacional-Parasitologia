@@ -154,7 +154,7 @@ function carregaCicloPlasmodium() {
   item.pernElem1.setAlpha(0);
   item.pernElem1.disable();
   item.pernElem1.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[0].setSubtitle("Mosquito fêmea transmissor da Malária: <i>Anopheles</i> sp");
   }
   item.pernElem1.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -182,7 +182,7 @@ function carregaCicloPlasmodium() {
   item.pernElem2.setAlpha(0);
   item.pernElem2.disable();
   item.pernElem2.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[0].setSubtitle("Infecção do organismo com esporozoítos de <i>Plasmodium</i> sp");
   }
   item.pernElem2.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -210,7 +210,7 @@ function carregaCicloPlasmodium() {
   item.pernElem3.setAlpha(0);
   item.pernElem3.disable();
   item.pernElem3.onMouseOver = function() {
-    scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Esporozoíto de <i>Plasmodium</i> sp");
   }
   item.pernElem3.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -246,7 +246,7 @@ function carregaCicloPlasmodium() {
   item.pernElem4.setAlpha(0);
   item.pernElem4.disable();
   item.pernElem4.onMouseOver = function() {
-    scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[0].setSubtitle("Merozoíto de <i>Plasmodium</i> sp");
   }
   item.pernElem4.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -281,7 +281,7 @@ function carregaCicloPlasmodium() {
   item.pernElem5.setAlpha(0);
   item.pernElem5.disable();
   item.pernElem5.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Merozoíto de <i>Plasmodium</i> sp no interior de hemácias");
   }
   item.pernElem5.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -310,7 +310,7 @@ function carregaCicloPlasmodium() {
   item.pernElem6.setAlpha(0);
   item.pernElem6.disable();
   item.pernElem6.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Gametócitos feminino e masculino de <i>Plasmodium</i> sp ");
   }
   item.pernElem6.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -331,14 +331,14 @@ function carregaCicloPlasmodium() {
   item.pernNum7.disable();
   itensPernCiclo.push(item.pernNum7);
 
-  item["pernElem7"] = new Game.Item("hemaciaComMerozoito.png");
+  item["pernElem7"] = new Game.Item("gametocitoPlasmodium.png");
   item.pernElem7.setPosition(1260, 800);
   item.pernElem7.setScale(0.50);
   item.pernElem7.setZorder(6);
   item.pernElem7.setAlpha(0);
   item.pernElem7.disable();
   item.pernElem7.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Gametócitos feminino e masculino no interior do mosquito");
   }
   item.pernElem7.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -367,7 +367,7 @@ function carregaCicloPlasmodium() {
   item.pernElem8.setAlpha(0);
   item.pernElem8.disable();
   item.pernElem8.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Esporozoítos no interior do mosquito");
   }
   item.pernElem8.onMouseOut = function() {
     scene[0].setSubtitle("");
