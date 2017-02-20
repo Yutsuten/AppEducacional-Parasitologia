@@ -343,7 +343,7 @@ function carregaCicloPlasmodium() {
   item.pernElem7.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensPernCiclo.push(item.pernElem5);
+  itensPernCiclo.push(item.pernElem7);
 
   item["pernSetaElem7Elem8"] = new Game.Line(1260, 800, 1500, 800, 4);
   item.pernSetaElem7Elem8.setColor(0, 0, 0);
@@ -355,14 +355,14 @@ function carregaCicloPlasmodium() {
 
   item["pernNum8"] = new Game.Text("8", estiloNumeros);
   item.pernNum8.setAnchor(0.5, 0.6);
-  item.pernNum8.setPosition(1770, 670);
+  item.pernNum8.setPosition(1790, 650);
   item.pernNum8.setAlpha(0);
   item.pernNum8.disable();
   itensPernCiclo.push(item.pernNum8);
 
   item["pernElem8"] = new Game.Item("esporozoito.png");
   item.pernElem8.setPosition(1650, 800);
-  item.pernElem8.setScale(0.52);
+  item.pernElem8.setScale(0.56);
   item.pernElem8.setZorder(6);
   item.pernElem8.setAlpha(0);
   item.pernElem8.disable();
@@ -432,14 +432,14 @@ function carregaCicloPlasmodium() {
   var itensPernDoente = [];
 
   item["estPernDoente"] = new Game.Image("estMngrDte.png");
-  item.estPernDoente.setPosition(1218, 668);
-  item.estPernDoente.setZorder(11);
+  item.estPernDoente.setPosition(1565, 858);
+  item.estPernDoente.setZorder(6);
   item.estPernDoente.setAlpha(0);
   item.estPernDoente.disable();
   itensPernDoente.push(item.estPernDoente);
 
   item["pernBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.pernBalaoSintoma.setPosition(730, 300);
+  item.pernBalaoSintoma.setPosition(730+300, 300);
   item.pernBalaoSintoma.setScale(0.25);
   item.pernBalaoSintoma.setZorder(6);
   item.pernBalaoSintoma.setAlpha(0);
@@ -447,14 +447,14 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernBalaoSintoma);
 
   item["pernBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.pernBalaoPrevencao.setPosition(730, 300);
+  item.pernBalaoPrevencao.setPosition(730+300, 300);
   item.pernBalaoPrevencao.setScale(0.25);
   item.pernBalaoPrevencao.setZorder(6);
   item.pernBalaoPrevencao.disable();
   itensPernDoente.push(item.pernBalaoPrevencao);
 
   item["pernBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.pernBalaoTransmissao.setPosition(730, 300);
+  item.pernBalaoTransmissao.setPosition(730+300, 300);
   item.pernBalaoTransmissao.setScale(0.25);
   item.pernBalaoTransmissao.setZorder(6);
   item.pernBalaoTransmissao.disable();
@@ -462,7 +462,7 @@ function carregaCicloPlasmodium() {
 
 
   item["pernAbaSintomas"] = new Game.Item("abaSint.png");
-  item.pernAbaSintomas.setPosition(432, 71);
+  item.pernAbaSintomas.setPosition(432+300, 71);
   item.pernAbaSintomas.setScale(0.25);
   item.pernAbaSintomas.setZorder(7);
   item.pernAbaSintomas.disable();
@@ -482,7 +482,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaSintomas);
 
   item["pernTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.pernTextoSintomas.setPosition(432-130, 71+20);
+  item.pernTextoSintomas.setPosition(432-130+300, 71+20);
   item.pernTextoSintomas.setAlpha(0);
   item.pernTextoSintomas.disable();
   itensPernDoente.push(item.pernTextoSintomas);
@@ -499,7 +499,7 @@ function carregaCicloPlasmodium() {
   }*/
 
   item["pernAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.pernAbaPrevencao.setPosition(432 + 232, 71);
+  item.pernAbaPrevencao.setPosition(432+232+300, 71);
   item.pernAbaPrevencao.setScale(0.25);
   item.pernAbaPrevencao.setZorder(7);
   item.pernAbaPrevencao.setAlpha(0);
@@ -520,7 +520,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaPrevencao);
 
   item["pernTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.pernTextoPrevencao.setPosition(432-130, 71+20);
+  item.pernTextoPrevencao.setPosition(432-130+300, 71+20);
   item.pernTextoPrevencao.disable();
   itensPernDoente.push(item.pernTextoPrevencao);
 
@@ -538,7 +538,7 @@ function carregaCicloPlasmodium() {
   }*/
 
   item["pernAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.pernAbaTransmissao.setPosition(432 + 482, 71);
+  item.pernAbaTransmissao.setPosition(432+482+300, 71);
   item.pernAbaTransmissao.setScale(0.25);
   item.pernAbaTransmissao.setZorder(7);
   item.pernAbaTransmissao.setAlpha(0);
@@ -559,7 +559,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaTransmissao);
 
   item["pernTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.pernTextoTransmissao.setPosition(432-130, 71+20);
+  item.pernTextoTransmissao.setPosition(432-130+300, 71+20);
   item.pernTextoTransmissao.disable();
   itensPernDoente.push(item.pernTextoTransmissao);
 
@@ -571,7 +571,7 @@ function carregaCicloPlasmodium() {
 
   item["pernBotaoOK"] = new Game.Item("okNormal.png");
   item.pernBotaoOK.setScale(0.25);
-  item.pernBotaoOK.setPosition(432+450, 71+290);
+  item.pernBotaoOK.setPosition(432+450+300, 71+290);
   item.pernBotaoOK.setAlpha(0);
   item.pernBotaoOK.disable();
   item.pernBotaoOK.onMouseOver = function() {
@@ -585,7 +585,7 @@ function carregaCicloPlasmodium() {
 
   item["pernBotaoOKhover"] = new Game.Item("okHover.png");
   item.pernBotaoOKhover.setScale(0.25);
-  item.pernBotaoOKhover.setPosition(432+450, 71+290);
+  item.pernBotaoOKhover.setPosition(432+450+300, 71+290);
   item.pernBotaoOKhover.disable();
   item.pernBotaoOKhover.onMouseOut = function() {
     item.pernBotaoOKhover.disable();
