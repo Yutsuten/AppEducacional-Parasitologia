@@ -64,47 +64,66 @@ function carregaCicloPlasmodium() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.pernElem2a.enable();
-      item.pernElem2a.changeAlpha(1, 600);
+      item.pernElem2.enable();
+      item.pernElem2.changeAlpha(1, 600);
       item.pernNum2.enable();
       item.pernNum2.changeAlpha(1, 600);
-      item.pernSetaElem2aElem2b.enable();
-      item.pernSetaElem2aElem2b.changeAlpha(1, 600);
-      item.pernElem2b.enable();
-      item.pernElem2b.changeAlpha(1, 600);
-      item.pernSetaElem2bEst.enable();
-      item.pernSetaElem2bEst.changeAlpha(1, 600);
+      item.pernSetaElem2Est.enable();
+      item.pernSetaElem2Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.pernSetaEstElem3a.enable();
-      item.pernSetaEstElem3a.changeAlpha(1, 600);
-      item.pernElem3a.enable();
-      item.pernElem3a.changeAlpha(1, 600);
+      item.pernElem3.enable();
+      item.pernElem3.changeAlpha(1, 600);
       item.pernNum3.enable();
       item.pernNum3.changeAlpha(1, 600);
-      item.pernSetaElem3aElem3b.enable();
-      item.pernSetaElem3aElem3b.changeAlpha(1, 600);
-      item.pernElem3b.enable();
-      item.pernElem3b.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.pernSetaEstElem4.enable();
-      item.pernSetaEstElem4.changeAlpha(1, 600);
+      item.pernSetaElem3aElem4.enable();
+      item.pernSetaElem3aElem4.changeAlpha(1, 600);
       item.pernNum4.enable();
       item.pernNum4.changeAlpha(1, 600);
       item.pernElem4.enable();
       item.pernElem4.changeAlpha(1, 600);
+      item.pernSetaElem4Est.enable();
+      item.pernSetaElem4Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.pernSetaElem4Elem5.enable();
-      item.pernSetaElem4Elem5.changeAlpha(1, 600);
+      item.pernSetaEstElem5.enable();
+      item.pernSetaEstElem5.changeAlpha(1, 600);
       item.pernNum5.enable();
       item.pernNum5.changeAlpha(1, 600);
       item.pernElem5.enable();
       item.pernElem5.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.pernSetaElem5Elem6.enable();
+      item.pernSetaElem5Elem6.changeAlpha(1, 600);
+      item.pernNum6.enable();
+      item.pernNum6.changeAlpha(1, 600);
+      item.pernElem6.enable();
+      item.pernElem6.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.pernSetaEstElem7.enable();
+      item.pernSetaEstElem7.changeAlpha(1, 600);
+      item.pernNum7.enable();
+      item.pernNum7.changeAlpha(1, 600);
+      item.pernElem7.enable();
+      item.pernElem7.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.pernSetaElem7Elem8.enable();
+      item.pernSetaElem7Elem8.changeAlpha(1, 600);
+      item.pernNum8.enable();
+      item.pernNum8.changeAlpha(1, 600);
+      item.pernElem8.enable();
+      item.pernElem8.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
@@ -124,16 +143,16 @@ function carregaCicloPlasmodium() {
   item.estPernCiclo.setPosition(960, 550);
   item.estPernCiclo.setScale(0.5);
   item.estPernCiclo.setZorder(9);
-  //item.estPernCiclo.setAlpha(0);
-  //item.estPernCiclo.disable();
+  item.estPernCiclo.setAlpha(0);
+  item.estPernCiclo.disable();
   itensPernCiclo.push(item.estPernCiclo);
 
   item["pernElem1"] = new Game.Item("mosquito.png");
   item.pernElem1.setPosition(550, 250);
   item.pernElem1.setScale(0.4);
   item.pernElem1.setZorder(6);
-  //item.pernElem1.setAlpha(0);
-  //item.pernElem1.disable();
+  item.pernElem1.setAlpha(0);
+  item.pernElem1.disable();
   item.pernElem1.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -145,23 +164,23 @@ function carregaCicloPlasmodium() {
   item["pernNum1"] = new Game.Text("1", estiloNumeros);
   item.pernNum1.setAnchor(0.5, 0.6);
   item.pernNum1.setPosition(650, 140);
-  //item.pernNum1.setAlpha(0);
-  //item.pernNum1.disable();
+  item.pernNum1.setAlpha(0);
+  item.pernNum1.disable();
   itensPernCiclo.push(item.pernNum1);
 
   item["pernSetaElem1Est"] = new Game.Line(550, 250, 725, 700, 4);
   item.pernSetaElem1Est.setColor(0, 0, 0);
   item.pernSetaElem1Est.setZorder(7);
-  //item.pernSetaElem1Est.setAlpha(0);
-  //item.pernSetaElem1Est.disable();
+  item.pernSetaElem1Est.setAlpha(0);
+  item.pernSetaElem1Est.disable();
   itensPernCiclo.push(item.pernSetaElem1Est);
 
   item["pernElem2"] = new Game.Item("picada.png");
   item.pernElem2.setPosition(330, 440);
   item.pernElem2.setScale(0.49);
   item.pernElem2.setZorder(6);
-  //item.pernElem2.setAlpha(0);
-  //item.pernElem2.disable();
+  item.pernElem2.setAlpha(0);
+  item.pernElem2.disable();
   item.pernElem2.onMouseOver = function() {
     scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
@@ -173,23 +192,23 @@ function carregaCicloPlasmodium() {
   item["pernNum2"] = new Game.Text("2", estiloNumeros);
   item.pernNum2.setAnchor(0.5, 0.6);
   item.pernNum2.setPosition(220, 310);
-  //item.pernNum2.setAlpha(0);
-  //item.pernNum2.disable();
+  item.pernNum2.setAlpha(0);
+  item.pernNum2.disable();
   itensPernCiclo.push(item.pernNum2);
 
   item["pernSetaElem2Est"] = new Game.Line(330, 440, 715, 710, 4);
   item.pernSetaElem2Est.setColor(0, 0, 0);
   item.pernSetaElem2Est.setZorder(7);
-  //item.pernSetaElem2Est.setAlpha(0);
-  //item.pernSetaElem2Est.disable();
+  item.pernSetaElem2Est.setAlpha(0);
+  item.pernSetaElem2Est.disable();
   itensPernCiclo.push(item.pernSetaElem2Est);
 
   item["pernElem3"] = new Game.Item("esporozoito.png");
   item.pernElem3.setPosition(200, 820);
   item.pernElem3.setScale(0.42);
   item.pernElem3.setZorder(6);
-  //item.pernElem3.setAlpha(0);
-  //item.pernElem3.disable();
+  item.pernElem3.setAlpha(0);
+  item.pernElem3.disable();
   item.pernElem3.onMouseOver = function() {
     scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
   }
@@ -201,31 +220,31 @@ function carregaCicloPlasmodium() {
   item["pernNum3"] = new Game.Text("3", estiloNumeros);
   item.pernNum3.setAnchor(0.5, 0.6);
   item.pernNum3.setPosition(310, 710);
-  //item.pernNum3.setAlpha(0);
-  //item.pernNum3.disable();
+  item.pernNum3.setAlpha(0);
+  item.pernNum3.disable();
   itensPernCiclo.push(item.pernNum3);
 
   item["pernSetaElem3aElem4"] = new Game.Line(200, 820, 385, 820, 4);
   item.pernSetaElem3aElem4.setColor(0, 0, 0);
   item.pernSetaElem3aElem4.addArrowAtEnd();
   item.pernSetaElem3aElem4.setZorder(7);
-  //item.pernSetaElem3aElem4.setAlpha(0);
-  //item.pernSetaElem3aElem4.disable();
+  item.pernSetaElem3aElem4.setAlpha(0);
+  item.pernSetaElem3aElem4.disable();
   itensPernCiclo.push(item.pernSetaElem3aElem4);
 
   item["pernNum4"] = new Game.Text("4", estiloNumeros);
   item.pernNum4.setAnchor(0.5, 0.6);
   item.pernNum4.setPosition(470, 660);
-  //item.pernNum4.setAlpha(0);
-  //item.pernNum4.disable();
+  item.pernNum4.setAlpha(0);
+  item.pernNum4.disable();
   itensPernCiclo.push(item.pernNum4);
 
   item["pernElem4"] = new Game.Item("merozoito.png");
   item.pernElem4.setPosition(530, 820);
   item.pernElem4.setScale(0.49);
   item.pernElem4.setZorder(6);
-  //item.pernElem4.setAlpha(0);
-  //item.pernElem4.disable();
+  item.pernElem4.setAlpha(0);
+  item.pernElem4.disable();
   item.pernElem4.onMouseOver = function() {
     scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
   }
@@ -237,30 +256,30 @@ function carregaCicloPlasmodium() {
   item["pernSetaElem4Est"] = new Game.Line(530, 820, 830, 720, 4);
   item.pernSetaElem4Est.setColor(0, 0, 0);
   item.pernSetaElem4Est.setZorder(7);
-  //item.pernSetaElem4Est.setAlpha(0);
-  //item.pernSetaElem4Est.disable();
+  item.pernSetaElem4Est.setAlpha(0);
+  item.pernSetaElem4Est.disable();
   itensPernCiclo.push(item.pernSetaElem4Est);
 
   item["pernSetaEstElem5"] = new Game.Line(980, 630, 1260, 270, 4);
   item.pernSetaEstElem5.setColor(0, 0, 0);
   item.pernSetaEstElem5.setZorder(7);
-  //item.pernSetaEstElem5.setAlpha(0);
-  //item.pernSetaEstElem5.disable();
+  item.pernSetaEstElem5.setAlpha(0);
+  item.pernSetaEstElem5.disable();
   itensPernCiclo.push(item.pernSetaEstElem5);
 
   item["pernNum5"] = new Game.Text("5", estiloNumeros);
   item.pernNum5.setAnchor(0.5, 0.6);
   item.pernNum5.setPosition(1390, 140);
-  //item.pernNum5.setAlpha(0);
-  //item.pernNum5.disable();
+  item.pernNum5.setAlpha(0);
+  item.pernNum5.disable();
   itensPernCiclo.push(item.pernNum5);
 
   item["pernElem5"] = new Game.Item("hemaciaComMerozoito.png");
   item.pernElem5.setPosition(1260, 270);
   item.pernElem5.setScale(0.48);
   item.pernElem5.setZorder(6);
-  //item.pernElem5.setAlpha(0);
-  //item.pernElem5.disable();
+  item.pernElem5.setAlpha(0);
+  item.pernElem5.disable();
   item.pernElem5.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -273,23 +292,23 @@ function carregaCicloPlasmodium() {
   item.pernSetaElem5Elem6.setColor(0, 0, 0);
   item.pernSetaElem5Elem6.addArrowAtEnd();
   item.pernSetaElem5Elem6.setZorder(7);
-  //item.pernSetaElem5Elem6.setAlpha(0);
-  //item.pernSetaElem5Elem6.disable();
+  item.pernSetaElem5Elem6.setAlpha(0);
+  item.pernSetaElem5Elem6.disable();
   itensPernCiclo.push(item.pernSetaElem5Elem6);
 
   item["pernNum6"] = new Game.Text("6", estiloNumeros);
   item.pernNum6.setAnchor(0.5, 0.6);
   item.pernNum6.setPosition(1770, 140);
-  //item.pernNum6.setAlpha(0);
-  //item.pernNum6.disable();
+  item.pernNum6.setAlpha(0);
+  item.pernNum6.disable();
   itensPernCiclo.push(item.pernNum6);
 
   item["pernElem6"] = new Game.Item("gametocitoPlasmodium.png");
   item.pernElem6.setPosition(1650, 270);
   item.pernElem6.setScale(0.52);
   item.pernElem6.setZorder(6);
-  //item.pernElem6.setAlpha(0);
-  //item.pernElem6.disable();
+  item.pernElem6.setAlpha(0);
+  item.pernElem6.disable();
   item.pernElem6.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -301,23 +320,23 @@ function carregaCicloPlasmodium() {
   item["pernSetaEstElem7"] = new Game.Line(1040, 635, 1260, 800, 4);
   item.pernSetaEstElem7.setColor(0, 0, 0);
   item.pernSetaEstElem7.setZorder(7);
-  //item.pernSetaEstElem7.setAlpha(0);
-  //item.pernSetaEstElem7.disable();
+  item.pernSetaEstElem7.setAlpha(0);
+  item.pernSetaEstElem7.disable();
   itensPernCiclo.push(item.pernSetaEstElem7);
 
   item["pernNum7"] = new Game.Text("7", estiloNumeros);
   item.pernNum7.setAnchor(0.5, 0.6);
   item.pernNum7.setPosition(1390, 670);
-  //item.pernNum7.setAlpha(0);
-  //item.pernNum7.disable();
+  item.pernNum7.setAlpha(0);
+  item.pernNum7.disable();
   itensPernCiclo.push(item.pernNum7);
 
   item["pernElem7"] = new Game.Item("hemaciaComMerozoito.png");
   item.pernElem7.setPosition(1260, 800);
   item.pernElem7.setScale(0.50);
   item.pernElem7.setZorder(6);
-  //item.pernElem7.setAlpha(0);
-  //item.pernElem7.disable();
+  item.pernElem7.setAlpha(0);
+  item.pernElem7.disable();
   item.pernElem7.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -330,23 +349,23 @@ function carregaCicloPlasmodium() {
   item.pernSetaElem7Elem8.setColor(0, 0, 0);
   item.pernSetaElem7Elem8.addArrowAtEnd();
   item.pernSetaElem7Elem8.setZorder(7);
-  //item.pernSetaElem7Elem8.setAlpha(0);
-  //item.pernSetaElem7Elem8.disable();
+  item.pernSetaElem7Elem8.setAlpha(0);
+  item.pernSetaElem7Elem8.disable();
   itensPernCiclo.push(item.pernSetaElem7Elem8);
 
   item["pernNum8"] = new Game.Text("8", estiloNumeros);
   item.pernNum8.setAnchor(0.5, 0.6);
   item.pernNum8.setPosition(1770, 670);
-  //item.pernNum8.setAlpha(0);
-  //item.pernNum8.disable();
+  item.pernNum8.setAlpha(0);
+  item.pernNum8.disable();
   itensPernCiclo.push(item.pernNum8);
 
   item["pernElem8"] = new Game.Item("esporozoito.png");
   item.pernElem8.setPosition(1650, 800);
   item.pernElem8.setScale(0.52);
   item.pernElem8.setZorder(6);
-  //item.pernElem8.setAlpha(0);
-  //item.pernElem8.disable();
+  item.pernElem8.setAlpha(0);
+  item.pernElem8.disable();
   item.pernElem8.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>E. coli</i>");
   }
