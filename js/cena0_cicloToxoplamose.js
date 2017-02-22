@@ -122,7 +122,7 @@ function carregaCicloToxoplasmose() {
   item.gatoElem1.setAlpha(0);
   item.gatoElem1.disable();
   item.gatoElem1.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[0].setSubtitle("Oocisto de <i>Toxoplasma gondii</i>");
   }
   item.gatoElem1.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -150,7 +150,7 @@ function carregaCicloToxoplasmose() {
   item.gatoElem2.setAlpha(0);
   item.gatoElem2.disable();
   item.gatoElem2.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[0].setSubtitle("Fezes de gato com oocistos de <i>T. gondii</i>");
   }
   item.gatoElem2.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -194,7 +194,7 @@ function carregaCicloToxoplasmose() {
   item.gatoElem3.setAlpha(0);
   item.gatoElem3.disable();
   item.gatoElem3.onMouseOver = function() {
-    scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Roedor infectado com <i>T. gondii</i>");
   }
   item.gatoElem3.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -223,7 +223,7 @@ function carregaCicloToxoplasmose() {
   item.gatoElem4.setAlpha(0);
   item.gatoElem4.disable();
   item.gatoElem4.onMouseOver = function() {
-    scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[0].setSubtitle("Gato infectado com <i>T. gondii</i>");
   }
   item.gatoElem4.onMouseOut = function() {
     scene[0].setSubtitle("");
