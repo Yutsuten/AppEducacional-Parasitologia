@@ -392,7 +392,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
   item["gatoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.gatoTextoPrevencao.setPosition(432-130+562, 71+20);
+  item.gatoTextoPrevencao.setPosition(432-130+550, 71+20);
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
 

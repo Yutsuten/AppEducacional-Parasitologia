@@ -435,27 +435,27 @@ function carregaCicloTaeniaSaginata() {
   item.estVacaDoente.setPosition(905, 560);
   item.estVacaDoente.setScale(1.8);
   item.estVacaDoente.setZorder(11);
-  //item.estVacaDoente.setAlpha(0);
-  //item.estVacaDoente.disable();
+  item.estVacaDoente.setAlpha(0);
+  item.estVacaDoente.disable();
   itensVacaDoente.push(item.estVacaDoente);
 
-  item["vacaBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.vacaBalaoSintoma.setPosition(730, 300);
+  item["vacaBalaoSintoma"] = new Game.Image("balSintDir.png");
+  item.vacaBalaoSintoma.setPosition(730+440+270, 300);
   item.vacaBalaoSintoma.setScale(0.25);
   item.vacaBalaoSintoma.setZorder(6);
   item.vacaBalaoSintoma.setAlpha(0);
   item.vacaBalaoSintoma.disable();
   itensVacaDoente.push(item.vacaBalaoSintoma);
 
-  item["vacaBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.vacaBalaoPrevencao.setPosition(730, 300);
+  item["vacaBalaoPrevencao"] = new Game.Image("balPrevDir.png");
+  item.vacaBalaoPrevencao.setPosition(730+440+270, 300);
   item.vacaBalaoPrevencao.setScale(0.25);
   item.vacaBalaoPrevencao.setZorder(6);
   item.vacaBalaoPrevencao.disable();
   itensVacaDoente.push(item.vacaBalaoPrevencao);
 
-  item["vacaBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.vacaBalaoTransmissao.setPosition(730, 300);
+  item["vacaBalaoTransmissao"] = new Game.Image("balTranDir.png");
+  item.vacaBalaoTransmissao.setPosition(730+440+270, 300);
   item.vacaBalaoTransmissao.setScale(0.25);
   item.vacaBalaoTransmissao.setZorder(6);
   item.vacaBalaoTransmissao.disable();
@@ -463,7 +463,7 @@ function carregaCicloTaeniaSaginata() {
 
 
   item["vacaAbaSintomas"] = new Game.Item("abaSint.png");
-  item.vacaAbaSintomas.setPosition(432, 71);
+  item.vacaAbaSintomas.setPosition(426+550+270, 71);
   item.vacaAbaSintomas.setScale(0.25);
   item.vacaAbaSintomas.setZorder(7);
   item.vacaAbaSintomas.disable();
@@ -483,7 +483,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaSintomas);
 
   item["vacaTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.vacaTextoSintomas.setPosition(432-130, 71+20);
+  item.vacaTextoSintomas.setPosition(432-130+550+270, 71+20);
   item.vacaTextoSintomas.setAlpha(0);
   item.vacaTextoSintomas.disable();
   itensVacaDoente.push(item.vacaTextoSintomas);
@@ -500,7 +500,7 @@ function carregaCicloTaeniaSaginata() {
   }*/
 
   item["vacaAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.vacaAbaPrevencao.setPosition(432 + 232, 71);
+  item.vacaAbaPrevencao.setPosition(432+244+550+270, 71);
   item.vacaAbaPrevencao.setScale(0.25);
   item.vacaAbaPrevencao.setZorder(7);
   item.vacaAbaPrevencao.setAlpha(0);
@@ -521,7 +521,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaPrevencao);
 
   item["vacaTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.vacaTextoPrevencao.setPosition(432-130, 71+20);
+  item.vacaTextoPrevencao.setPosition(432-130+550+270, 71+20);
   item.vacaTextoPrevencao.disable();
   itensVacaDoente.push(item.vacaTextoPrevencao);
 
@@ -539,7 +539,7 @@ function carregaCicloTaeniaSaginata() {
   }*/
 
   item["vacaAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.vacaAbaTransmissao.setPosition(432 + 482, 71);
+  item.vacaAbaTransmissao.setPosition(432+490+550+270, 71);
   item.vacaAbaTransmissao.setScale(0.25);
   item.vacaAbaTransmissao.setZorder(7);
   item.vacaAbaTransmissao.setAlpha(0);
@@ -560,7 +560,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaTransmissao);
 
   item["vacaTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.vacaTextoTransmissao.setPosition(432-130, 71+20);
+  item.vacaTextoTransmissao.setPosition(432-130+550+270, 71+20);
   item.vacaTextoTransmissao.disable();
   itensVacaDoente.push(item.vacaTextoTransmissao);
 
@@ -572,7 +572,7 @@ function carregaCicloTaeniaSaginata() {
 
   item["vacaBotaoOK"] = new Game.Item("okNormal.png");
   item.vacaBotaoOK.setScale(0.25);
-  item.vacaBotaoOK.setPosition(432+450, 71+290);
+  item.vacaBotaoOK.setPosition(432+450+550+270, 71+290);
   item.vacaBotaoOK.setAlpha(0);
   item.vacaBotaoOK.disable();
   item.vacaBotaoOK.onMouseOver = function() {
@@ -586,7 +586,7 @@ function carregaCicloTaeniaSaginata() {
 
   item["vacaBotaoOKhover"] = new Game.Item("okHover.png");
   item.vacaBotaoOKhover.setScale(0.25);
-  item.vacaBotaoOKhover.setPosition(432+450, 71+290);
+  item.vacaBotaoOKhover.setPosition(432+450+550+270, 71+290);
   item.vacaBotaoOKhover.disable();
   item.vacaBotaoOKhover.onMouseOut = function() {
     item.vacaBotaoOKhover.disable();
