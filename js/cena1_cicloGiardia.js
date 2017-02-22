@@ -122,19 +122,19 @@ function carregaCicloGiardia() {
 
   // Imagens ciclo
   item["estPocoCiclo"] = new Game.Image("estMbrcClo.png");
-  item.estPocoCiclo.setPosition(960, 550);
+  item.estPocoCiclo.setPosition(800, 550);
   item.estPocoCiclo.setScale(0.5);
   item.estPocoCiclo.setZorder(9);
-  item.estPocoCiclo.setAlpha(0);
-  item.estPocoCiclo.disable();
+  //item.estPocoCiclo.setAlpha(0);
+  //item.estPocoCiclo.disable();
   itensPocoCiclo.push(item.estPocoCiclo);
 
-  item["pocoElem1"] = new Game.Item("entamoebaCisto.png");
-  item.pocoElem1.setPosition(485, 300);
-  item.pocoElem1.setScale(0.7);
+  item["pocoElem1"] = new Game.Item("poco.png");
+  item.pocoElem1.setPosition(385, 300);
+  item.pocoElem1.setScale(0.8);
   item.pocoElem1.setZorder(6);
-  item.pocoElem1.setAlpha(0);
-  item.pocoElem1.disable();
+  //item.pocoElem1.setAlpha(0);
+  //item.pocoElem1.disable();
   item.pocoElem1.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -145,139 +145,97 @@ function carregaCicloGiardia() {
 
   item["pocoNum1"] = new Game.Text("1", estiloNumeros);
   item.pocoNum1.setAnchor(0.5, 0.6);
-  item.pocoNum1.setPosition(650, 140);
-  item.pocoNum1.setAlpha(0);
-  item.pocoNum1.disable();
+  item.pocoNum1.setPosition(600, 140);
+  //item.pocoNum1.setAlpha(0);
+  //item.pocoNum1.disable();
   itensPocoCiclo.push(item.pocoNum1);
 
-  item["pocoSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item["pocoSetaElem1Est"] = new Game.Line(595, 390, 700, 440, 4);
   item.pocoSetaElem1Est.setColor(0, 0, 0);
+  item.pocoSetaElem1Est.addArrowAtBeginning();
   item.pocoSetaElem1Est.setZorder(7);
-  item.pocoSetaElem1Est.setAlpha(0);
-  item.pocoSetaElem1Est.disable();
+  //item.pocoSetaElem1Est.setAlpha(0);
+  //item.pocoSetaElem1Est.disable();
   itensPocoCiclo.push(item.pocoSetaElem1Est);
 
-  item["pocoElem2a"] = new Game.Item("entamoebaCisto.png");
-  item.pocoElem2a.setPosition(200, 750);
-  item.pocoElem2a.setScale(0.4);
-  item.pocoElem2a.setZorder(6);
-  item.pocoElem2a.setAlpha(0);
-  item.pocoElem2a.disable();
-  item.pocoElem2a.onMouseOver = function() {
+  item["pocoElem2"] = new Game.Item("cistos.png");
+  item.pocoElem2.setPosition(1120, 280);
+  item.pocoElem2.setScale(0.5);
+  item.pocoElem2.setZorder(6);
+  //item.pocoElem2.setAlpha(0);
+  //item.pocoElem2.disable();
+  item.pocoElem2.onMouseOver = function() {
     scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
-  item.pocoElem2a.onMouseOut = function() {
+  item.pocoElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
-  itensPocoCiclo.push(item.pocoElem2a);
+  itensPocoCiclo.push(item.pocoElem2);
 
   item["pocoNum2"] = new Game.Text("2", estiloNumeros);
   item.pocoNum2.setAnchor(0.5, 0.6);
-  item.pocoNum2.setPosition(350, 700);
-  item.pocoNum2.setAlpha(0);
-  item.pocoNum2.disable();
+  item.pocoNum2.setPosition(1240, 150);
+  //item.pocoNum2.setAlpha(0);
+  //item.pocoNum2.disable();
   itensPocoCiclo.push(item.pocoNum2);
 
-  item["pocoSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
-  item.pocoSetaElem2aElem2b.setColor(0, 0, 0);
-  item.pocoSetaElem2aElem2b.addArrowAtEnd();
-  item.pocoSetaElem2aElem2b.setZorder(7);
-  item.pocoSetaElem2aElem2b.setAlpha(0);
-  item.pocoSetaElem2aElem2b.disable();
-  itensPocoCiclo.push(item.pocoSetaElem2aElem2b);
+  item["pocoSetaEst1Elem2"] = new Game.Line(795, 425, 1180, 280, 4);
+  item.pocoSetaEst1Elem2.setColor(0, 0, 0);
+  item.pocoSetaEst1Elem2.addArrowAtEnd();
+  item.pocoSetaEst1Elem2.setZorder(7);
+  //item.pocoSetaEst1Elem2.setAlpha(0);
+  //item.pocoSetaEst1Elem2.disable();
+  itensPocoCiclo.push(item.pocoSetaEst1Elem2);
 
-  item["pocoElem2b"] = new Game.Item("entamoebaTrofozoito.png");
-  item.pocoElem2b.setPosition(537, 750);
-  item.pocoElem2b.setScale(0.53);
-  item.pocoElem2b.setZorder(6);
-  item.pocoElem2b.setAlpha(0);
-  item.pocoElem2b.disable();
-  item.pocoElem2b.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
-  }
-  item.pocoElem2b.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensPocoCiclo.push(item.pocoElem2b);
+  item["pocoSetaEst2Elem2"] = new Game.Line(860, 700, 1180, 280, 4);
+  item.pocoSetaEst2Elem2.setColor(0, 0, 0);
+  item.pocoSetaEst2Elem2.setZorder(7);
+  //item.pocoSetaEst2Elem2.setAlpha(0);
+  //item.pocoSetaEst2Elem2.disable();
+  itensPocoCiclo.push(item.pocoSetaEst2Elem2);
 
-  item["pocoSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
-  item.pocoSetaElem2bEst.setColor(0, 0, 0);
-  item.pocoSetaElem2bEst.setZorder(7);
-  item.pocoSetaElem2bEst.setAlpha(0);
-  item.pocoSetaElem2bEst.disable();
-  itensPocoCiclo.push(item.pocoSetaElem2bEst);
-
-  item["pocoSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
-  item.pocoSetaEstElem3a.setColor(0, 0, 0);
-  item.pocoSetaEstElem3a.setZorder(7);
-  item.pocoSetaEstElem3a.setAlpha(0);
-  item.pocoSetaEstElem3a.disable();
-  itensPocoCiclo.push(item.pocoSetaEstElem3a);
-
-  item["pocoElem3a"] = new Game.Item("entamoebaTrofozoito.png");
-  item.pocoElem3a.setPosition(1330, 250);
-  item.pocoElem3a.setScale(0.42);
-  item.pocoElem3a.setZorder(6);
-  item.pocoElem3a.setAlpha(0);
-  item.pocoElem3a.disable();
-  item.pocoElem3a.onMouseOver = function() {
+  item["pocoElem3"] = new Game.Item("giardiaReproducao.png");
+  item.pocoElem3.setPosition(1450, 280);
+  item.pocoElem3.setScale(0.49);
+  item.pocoElem3.setZorder(6);
+  //item.pocoElem3.setAlpha(0);
+  //item.pocoElem3.disable();
+  item.pocoElem3.onMouseOver = function() {
     scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
   }
-  item.pocoElem3a.onMouseOut = function() {
+  item.pocoElem3.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
-  itensPocoCiclo.push(item.pocoElem3a);
+  itensPocoCiclo.push(item.pocoElem3);
 
   item["pocoNum3"] = new Game.Text("3", estiloNumeros);
   item.pocoNum3.setAnchor(0.5, 0.6);
-  item.pocoNum3.setPosition(1480, 200);
-  item.pocoNum3.setAlpha(0);
-  item.pocoNum3.disable();
+  item.pocoNum3.setPosition(1570, 150);
+  //item.pocoNum3.setAlpha(0);
+  //item.pocoNum3.disable();
   itensPocoCiclo.push(item.pocoNum3);
 
-  item["pocoSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
-  item.pocoSetaElem3aElem3b.setColor(0, 0, 0);
-  item.pocoSetaElem3aElem3b.addArrowAtEnd();
-  item.pocoSetaElem3aElem3b.setZorder(7);
-  item.pocoSetaElem3aElem3b.setAlpha(0);
-  item.pocoSetaElem3aElem3b.disable();
-  itensPocoCiclo.push(item.pocoSetaElem3aElem3b);
-
-  item["pocoElem3b"] = new Game.Item("entamoebaCisto.png");
-  item.pocoElem3b.setPosition(1670, 250);
-  item.pocoElem3b.setScale(0.55);
-  item.pocoElem3b.setZorder(6);
-  item.pocoElem3b.setAlpha(0);
-  item.pocoElem3b.disable();
-  item.pocoElem3b.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
-  }
-  item.pocoElem3b.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensPocoCiclo.push(item.pocoElem3b);
-
-  item["pocoSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
-  item.pocoSetaEstElem4.setColor(0, 0, 0);
-  item.pocoSetaEstElem4.addArrowAtEnd();
-  item.pocoSetaEstElem4.setZorder(7);
-  item.pocoSetaEstElem4.setAlpha(0);
-  item.pocoSetaEstElem4.disable();
-  itensPocoCiclo.push(item.pocoSetaEstElem4);
+  item["pocoSetaElem2Elem3"] = new Game.Line(1120, 280, 1310, 280, 4);
+  item.pocoSetaElem2Elem3.setColor(0, 0, 0);
+  item.pocoSetaElem2Elem3.addArrowAtEnd();
+  item.pocoSetaElem2Elem3.setZorder(7);
+  //item.pocoSetaElem2Elem3.setAlpha(0);
+  //item.pocoSetaElem2Elem3.disable();
+  itensPocoCiclo.push(item.pocoSetaElem2Elem3);
 
   item["pocoNum4"] = new Game.Text("4", estiloNumeros);
   item.pocoNum4.setAnchor(0.5, 0.6);
-  item.pocoNum4.setPosition(1450, 660);
-  item.pocoNum4.setAlpha(0);
-  item.pocoNum4.disable();
+  item.pocoNum4.setPosition(1880, 140);
+  //item.pocoNum4.setAlpha(0);
+  //item.pocoNum4.disable();
   itensPocoCiclo.push(item.pocoNum4);
 
-  item["pocoElem4"] = new Game.Item("fezesComMosca.png");
-  item.pocoElem4.setPosition(1330, 800);
-  item.pocoElem4.setScale(0.51);
+  item["pocoElem4"] = new Game.Item("maisCistos.png");
+  item.pocoElem4.setPosition(1780, 280);
+  item.pocoElem4.setScale(0.5);
   item.pocoElem4.setZorder(6);
-  item.pocoElem4.setAlpha(0);
-  item.pocoElem4.disable();
+  //item.pocoElem4.setAlpha(0);
+  //item.pocoElem4.disable();
   item.pocoElem4.onMouseOver = function() {
     scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
   }
@@ -286,26 +244,35 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem4);
 
-  item["pocoSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
-  item.pocoSetaElem4Elem5.setColor(0, 0, 0);
-  item.pocoSetaElem4Elem5.setZorder(7);
-  item.pocoSetaElem4Elem5.setAlpha(0);
-  item.pocoSetaElem4Elem5.disable();
-  itensPocoCiclo.push(item.pocoSetaElem4Elem5);
+  item["pocoSetaElem3Elem4"] = new Game.Line(1450, 280, 1630, 280, 4);
+  item.pocoSetaElem3Elem4.setColor(0, 0, 0);
+  item.pocoSetaElem3Elem4.addArrowAtEnd();
+  item.pocoSetaElem3Elem4.setZorder(7);
+  //item.pocoSetaElem3Elem4.setAlpha(0);
+  //item.pocoSetaElem3Elem4.disable();
+  itensPocoCiclo.push(item.pocoSetaElem3Elem4);
 
   item["pocoNum5"] = new Game.Text("5", estiloNumeros);
   item.pocoNum5.setAnchor(0.5, 0.6);
-  item.pocoNum5.setPosition(1851, 671);
-  item.pocoNum5.setAlpha(0);
-  item.pocoNum5.disable();
+  item.pocoNum5.setPosition(1310, 680);
+  //item.pocoNum5.setAlpha(0);
+  //item.pocoNum5.disable();
   itensPocoCiclo.push(item.pocoNum5);
 
-  item["pocoElem5"] = new Game.Item("entamoebaCisto.png");
-  item.pocoElem5.setPosition(1700, 800);
-  item.pocoElem5.setScale(0.56);
+  item["pocoSetaEstElem5"] = new Game.Line(850, 760, 1040, 790, 4);
+  item.pocoSetaEstElem5.setColor(0, 0, 0);
+  item.pocoSetaEstElem5.addArrowAtEnd();
+  item.pocoSetaEstElem5.setZorder(7);
+  //item.pocoSetaEstElem5.setAlpha(0);
+  //item.pocoSetaEstElem5.disable();
+  itensPocoCiclo.push(item.pocoSetaEstElem5);
+
+  item["pocoElem5"] = new Game.Item("fezesSemMosca.png");
+  item.pocoElem5.setPosition(1180, 800);
+  item.pocoElem5.setScale(0.47);
   item.pocoElem5.setZorder(6);
-  item.pocoElem5.setAlpha(0);
-  item.pocoElem5.disable();
+  //item.pocoElem5.setAlpha(0);
+  //item.pocoElem5.disable();
   item.pocoElem5.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -313,6 +280,35 @@ function carregaCicloGiardia() {
     scene[1].setSubtitle("");
   }
   itensPocoCiclo.push(item.pocoElem5);
+
+  item["pocoSetaElem5Elem6"] = new Game.Line(1180, 800, 1440, 800, 4);
+  item.pocoSetaElem5Elem6.setColor(0, 0, 0);
+  item.pocoSetaElem5Elem6.addArrowAtEnd();
+  item.pocoSetaElem5Elem6.setZorder(7);
+  //item.pocoSetaElem5Elem6.setAlpha(0);
+  //item.pocoSetaElem5Elem6.disable();
+  itensPocoCiclo.push(item.pocoSetaElem5Elem6);
+
+  item["pocoElem6"] = new Game.Item("lencolFreatico.png");
+  item.pocoElem6.setPosition(1650, 800);
+  item.pocoElem6.setScale(0.75);
+  item.pocoElem6.setZorder(6);
+  //item.pocoElem6.setAlpha(0);
+  //item.pocoElem6.disable();
+  item.pocoElem6.onMouseOver = function() {
+    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+  }
+  item.pocoElem6.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
+  itensPocoCiclo.push(item.pocoElem6);
+
+  item["pocoNum6"] = new Game.Text("6", estiloNumeros);
+  item.pocoNum6.setAnchor(0.5, 0.6);
+  item.pocoNum6.setPosition(1830, 630);
+  //item.pocoNum6.setAlpha(0);
+  //item.pocoNum6.disable();
+  itensPocoCiclo.push(item.pocoNum6);
 
   item["pocoFechar"] = new Game.Item("botaoFechar.png");
   item.pocoFechar.setPosition(1840, 70);
