@@ -303,29 +303,30 @@ function carregaCicloToxoplasmose() {
   var itensGatoDoente = [];
 
   item["estGatoDoente"] = new Game.Image("estMjpnDte.png");
-  item.estGatoDoente.setPosition(1218, 668);
+  item.estGatoDoente.setPosition(500, 590);
+  item.estGatoDoente.setScale(1.35);
   item.estGatoDoente.setZorder(11);
   item.estGatoDoente.setAlpha(0);
   item.estGatoDoente.disable();
   itensGatoDoente.push(item.estGatoDoente);
 
-  item["gatoBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.gatoBalaoSintoma.setPosition(730, 300);
+  item["gatoBalaoSintoma"] = new Game.Image("balSintDir.png");
+  item.gatoBalaoSintoma.setPosition(730+440, 300);
   item.gatoBalaoSintoma.setScale(0.25);
   item.gatoBalaoSintoma.setZorder(6);
   item.gatoBalaoSintoma.setAlpha(0);
   item.gatoBalaoSintoma.disable();
   itensGatoDoente.push(item.gatoBalaoSintoma);
 
-  item["gatoBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.gatoBalaoPrevencao.setPosition(730, 300);
+  item["gatoBalaoPrevencao"] = new Game.Image("balPrevDir.png");
+  item.gatoBalaoPrevencao.setPosition(730+440, 300);
   item.gatoBalaoPrevencao.setScale(0.25);
   item.gatoBalaoPrevencao.setZorder(6);
   item.gatoBalaoPrevencao.disable();
   itensGatoDoente.push(item.gatoBalaoPrevencao);
 
-  item["gatoBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.gatoBalaoTransmissao.setPosition(730, 300);
+  item["gatoBalaoTransmissao"] = new Game.Image("balTranDir.png");
+  item.gatoBalaoTransmissao.setPosition(730+440, 300);
   item.gatoBalaoTransmissao.setScale(0.25);
   item.gatoBalaoTransmissao.setZorder(6);
   item.gatoBalaoTransmissao.disable();
@@ -333,7 +334,7 @@ function carregaCicloToxoplasmose() {
 
 
   item["gatoAbaSintomas"] = new Game.Item("abaSint.png");
-  item.gatoAbaSintomas.setPosition(432, 71);
+  item.gatoAbaSintomas.setPosition(432+550, 71);
   item.gatoAbaSintomas.setScale(0.25);
   item.gatoAbaSintomas.setZorder(7);
   item.gatoAbaSintomas.disable();
@@ -353,7 +354,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaSintomas);
 
   item["gatoTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.gatoTextoSintomas.setPosition(432-130, 71+20);
+  item.gatoTextoSintomas.setPosition(432-130+550, 71+20);
   item.gatoTextoSintomas.setAlpha(0);
   item.gatoTextoSintomas.disable();
   itensGatoDoente.push(item.gatoTextoSintomas);
@@ -370,7 +371,7 @@ function carregaCicloToxoplasmose() {
   }*/
 
   item["gatoAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.gatoAbaPrevencao.setPosition(432 + 232, 71);
+  item.gatoAbaPrevencao.setPosition(432+232+550, 71);
   item.gatoAbaPrevencao.setScale(0.25);
   item.gatoAbaPrevencao.setZorder(7);
   item.gatoAbaPrevencao.setAlpha(0);
@@ -391,7 +392,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
   item["gatoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.gatoTextoPrevencao.setPosition(432-130, 71+20);
+  item.gatoTextoPrevencao.setPosition(432-130+550, 71+20);
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
 
@@ -409,7 +410,7 @@ function carregaCicloToxoplasmose() {
   }*/
 
   item["gatoAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.gatoAbaTransmissao.setPosition(432 + 482, 71);
+  item.gatoAbaTransmissao.setPosition(432+482+550, 71);
   item.gatoAbaTransmissao.setScale(0.25);
   item.gatoAbaTransmissao.setZorder(7);
   item.gatoAbaTransmissao.setAlpha(0);
@@ -430,7 +431,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaTransmissao);
 
   item["gatoTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.gatoTextoTransmissao.setPosition(432-130, 71+20);
+  item.gatoTextoTransmissao.setPosition(432-130+550, 71+20);
   item.gatoTextoTransmissao.disable();
   itensGatoDoente.push(item.gatoTextoTransmissao);
 
@@ -442,7 +443,7 @@ function carregaCicloToxoplasmose() {
 
   item["gatoBotaoOK"] = new Game.Item("okNormal.png");
   item.gatoBotaoOK.setScale(0.25);
-  item.gatoBotaoOK.setPosition(432+450, 71+290);
+  item.gatoBotaoOK.setPosition(432+450+550, 71+290);
   item.gatoBotaoOK.setAlpha(0);
   item.gatoBotaoOK.disable();
   item.gatoBotaoOK.onMouseOver = function() {
@@ -456,7 +457,7 @@ function carregaCicloToxoplasmose() {
 
   item["gatoBotaoOKhover"] = new Game.Item("okHover.png");
   item.gatoBotaoOKhover.setScale(0.25);
-  item.gatoBotaoOKhover.setPosition(432+450, 71+290);
+  item.gatoBotaoOKhover.setPosition(432+450+550, 71+290);
   item.gatoBotaoOKhover.disable();
   item.gatoBotaoOKhover.onMouseOut = function() {
     item.gatoBotaoOKhover.disable();
