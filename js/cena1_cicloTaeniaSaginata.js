@@ -432,10 +432,11 @@ function carregaCicloTaeniaSaginata() {
   var itensVacaDoente = [];
 
   item["estVacaDoente"] = new Game.Image("estMprdDte.png");
-  item.estVacaDoente.setPosition(1218, 668);
+  item.estVacaDoente.setPosition(905, 560);
+  item.estVacaDoente.setScale(1.8);
   item.estVacaDoente.setZorder(11);
-  item.estVacaDoente.setAlpha(0);
-  item.estVacaDoente.disable();
+  //item.estVacaDoente.setAlpha(0);
+  //item.estVacaDoente.disable();
   itensVacaDoente.push(item.estVacaDoente);
 
   item["vacaBalaoSintoma"] = new Game.Image("balSintEsq.png");
