@@ -60,52 +60,71 @@ function carregaCicloTaeniaSaginata() {
       item.vacaElem1.changeAlpha(1, 600);
       item.vacaNum1.enable();
       item.vacaNum1.changeAlpha(1, 600);
-      item.vacaSetaElem1Est.enable();
-      item.vacaSetaElem1Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.vacaElem2a.enable();
-      item.vacaElem2a.changeAlpha(1, 600);
+      item.vacaSetaElem1Elem2.enable();
+      item.vacaSetaElem1Elem2.changeAlpha(1, 600);
+      item.vacaElem2.enable();
+      item.vacaElem2.changeAlpha(1, 600);
       item.vacaNum2.enable();
       item.vacaNum2.changeAlpha(1, 600);
-      item.vacaSetaElem2aElem2b.enable();
-      item.vacaSetaElem2aElem2b.changeAlpha(1, 600);
-      item.vacaElem2b.enable();
-      item.vacaElem2b.changeAlpha(1, 600);
-      item.vacaSetaElem2bEst.enable();
-      item.vacaSetaElem2bEst.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.vacaSetaEstElem3a.enable();
-      item.vacaSetaEstElem3a.changeAlpha(1, 600);
-      item.vacaElem3a.enable();
-      item.vacaElem3a.changeAlpha(1, 600);
+      item.vacaSetaElem1Elem3.enable();
+      item.vacaSetaElem1Elem3.changeAlpha(1, 600);
+      item.vacaElem3.enable();
+      item.vacaElem3.changeAlpha(1, 600);
       item.vacaNum3.enable();
       item.vacaNum3.changeAlpha(1, 600);
-      item.vacaSetaElem3aElem3b.enable();
-      item.vacaSetaElem3aElem3b.changeAlpha(1, 600);
-      item.vacaElem3b.enable();
-      item.vacaElem3b.changeAlpha(1, 600);
+      item.vacaSetaElem3Est.enable();
+      item.vacaSetaElem3Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.vacaSetaEstElem4.enable();
-      item.vacaSetaEstElem4.changeAlpha(1, 600);
       item.vacaNum4.enable();
       item.vacaNum4.changeAlpha(1, 600);
       item.vacaElem4.enable();
       item.vacaElem4.changeAlpha(1, 600);
+      item.vacaSetaElem4Est.enable();
+      item.vacaSetaElem4Est.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.vacaSetaElem4Elem5.enable();
-      item.vacaSetaElem4Elem5.changeAlpha(1, 600);
+      item.vacaSetaEstElem5.enable();
+      item.vacaSetaEstElem5.changeAlpha(1, 600);
       item.vacaNum5.enable();
       item.vacaNum5.changeAlpha(1, 600);
       item.vacaElem5.enable();
       item.vacaElem5.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.vacaSetaElem5Elem6.enable();
+      item.vacaSetaElem5Elem6.changeAlpha(1, 600);
+      item.vacaNum6.enable();
+      item.vacaNum6.changeAlpha(1, 600);
+      item.vacaElem6.enable();
+      item.vacaElem6.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.vacaSetaElem6Elem7.enable();
+      item.vacaSetaElem6Elem7.changeAlpha(1, 600);
+      item.vacaNum7.enable();
+      item.vacaNum7.changeAlpha(1, 600);
+      item.vacaElem7.enable();
+      item.vacaElem7.changeAlpha(1, 600);
+    }, currentTime += animationInterval);
+
+    setTimeout(function() {
+      item.vacaSetaElem5Elem8.enable();
+      item.vacaSetaElem5Elem8.changeAlpha(1, 600);
+      item.vacaNum8.enable();
+      item.vacaNum8.changeAlpha(1, 600);
+      item.vacaElem8.enable();
+      item.vacaElem8.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
@@ -125,16 +144,16 @@ function carregaCicloTaeniaSaginata() {
   item.estVacaCiclo.setPosition(960, 550);
   item.estVacaCiclo.setScale(0.5);
   item.estVacaCiclo.setZorder(9);
-  //item.estVacaCiclo.setAlpha(0);
-  //item.estVacaCiclo.disable();
+  item.estVacaCiclo.setAlpha(0);
+  item.estVacaCiclo.disable();
   itensVacaCiclo.push(item.estVacaCiclo);
 
   item["vacaElem1"] = new Game.Item("vaca.png");
   item.vacaElem1.setPosition(300, 300);
   item.vacaElem1.setScale(0.7);
   item.vacaElem1.setZorder(6);
-  //item.vacaElem1.setAlpha(0);
-  //item.vacaElem1.disable();
+  item.vacaElem1.setAlpha(0);
+  item.vacaElem1.disable();
   item.vacaElem1.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -146,23 +165,23 @@ function carregaCicloTaeniaSaginata() {
   item["vacaNum1"] = new Game.Text("1", estiloNumeros);
   item.vacaNum1.setAnchor(0.5, 0.6);
   item.vacaNum1.setPosition(470, 140);
-  //item.vacaNum1.setAlpha(0);
-  //item.vacaNum1.disable();
+  item.vacaNum1.setAlpha(0);
+  item.vacaNum1.disable();
   itensVacaCiclo.push(item.vacaNum1);
 
   item["vacaSetaElem1Elem2"] = new Game.Line(300, 300, 200, 750, 4);
   item.vacaSetaElem1Elem2.setColor(0, 0, 0);
   item.vacaSetaElem1Elem2.setZorder(7);
-  //item.vacaSetaElem1Elem2.setAlpha(0);
-  //item.vacaSetaElem1Elem2.disable();
+  item.vacaSetaElem1Elem2.setAlpha(0);
+  item.vacaSetaElem1Elem2.disable();
   itensVacaCiclo.push(item.vacaSetaElem1Elem2);
 
   item["vacaElem2"] = new Game.Item("ovoTenia.png");
   item.vacaElem2.setPosition(200, 750);
   item.vacaElem2.setScale(0.5);
   item.vacaElem2.setZorder(6);
-  //item.vacaElem2.setAlpha(0);
-  //item.vacaElem2.disable();
+  item.vacaElem2.setAlpha(0);
+  item.vacaElem2.disable();
   item.vacaElem2.onMouseOver = function() {
     scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
@@ -174,24 +193,24 @@ function carregaCicloTaeniaSaginata() {
   item["vacaNum2"] = new Game.Text("2", estiloNumeros);
   item.vacaNum2.setAnchor(0.5, 0.6);
   item.vacaNum2.setPosition(350, 650);
-  //item.vacaNum2.setAlpha(0);
-  //item.vacaNum2.disable();
+  item.vacaNum2.setAlpha(0);
+  item.vacaNum2.disable();
   itensVacaCiclo.push(item.vacaNum2);
 
   item["vacaSetaElem1Elem3"] = new Game.Line(300, 300, 555, 220, 4);
   item.vacaSetaElem1Elem3.setColor(0, 0, 0);
   item.vacaSetaElem1Elem3.addArrowAtEnd();
   item.vacaSetaElem1Elem3.setZorder(7);
-  //item.vacaSetaElem1Elem3.setAlpha(0);
-  //item.vacaSetaElem1Elem3.disable();
+  item.vacaSetaElem1Elem3.setAlpha(0);
+  item.vacaSetaElem1Elem3.disable();
   itensVacaCiclo.push(item.vacaSetaElem1Elem3);
 
   item["vacaElem3"] = new Game.Item("carneInfectada.png");
   item.vacaElem3.setPosition(700, 190);
   item.vacaElem3.setScale(0.5);
   item.vacaElem3.setZorder(6);
-  //item.vacaElem3.setAlpha(0);
-  //item.vacaElem3.disable();
+  item.vacaElem3.setAlpha(0);
+  item.vacaElem3.disable();
   item.vacaElem3.onMouseOver = function() {
     scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
   }
@@ -203,30 +222,30 @@ function carregaCicloTaeniaSaginata() {
   item["vacaNum3"] = new Game.Text("3", estiloNumeros);
   item.vacaNum3.setAnchor(0.5, 0.6);
   item.vacaNum3.setPosition(825, 65);
-  //item.vacaNum3.setAlpha(0);
-  //item.vacaNum3.disable();
+  item.vacaNum3.setAlpha(0);
+  item.vacaNum3.disable();
   itensVacaCiclo.push(item.vacaNum3);
 
   item["vacaSetaElem3Est"] = new Game.Line(700, 190, 1015, 460, 4);
   item.vacaSetaElem3Est.setColor(0, 0, 0);
   item.vacaSetaElem3Est.setZorder(7);
-  //item.vacaSetaElem3Est.setAlpha(0);
-  //item.vacaSetaElem3Est.disable();
+  item.vacaSetaElem3Est.setAlpha(0);
+  item.vacaSetaElem3Est.disable();
   itensVacaCiclo.push(item.vacaSetaElem3Est);
 
   item["vacaNum4"] = new Game.Text("4", estiloNumeros);
   item.vacaNum4.setAnchor(0.5, 0.6);
   item.vacaNum4.setPosition(700, 660);
-  //item.vacaNum4.setAlpha(0);
-  //item.vacaNum4.disable();
+  item.vacaNum4.setAlpha(0);
+  item.vacaNum4.disable();
   itensVacaCiclo.push(item.vacaNum4);
 
   item["vacaElem4"] = new Game.Item("teniaAdulta.png");
   item.vacaElem4.setPosition(580, 800);
   item.vacaElem4.setScale(0.51);
   item.vacaElem4.setZorder(6);
-  //item.vacaElem4.setAlpha(0);
-  //item.vacaElem4.disable();
+  item.vacaElem4.setAlpha(0);
+  item.vacaElem4.disable();
   item.vacaElem4.onMouseOver = function() {
     scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
   }
@@ -238,30 +257,30 @@ function carregaCicloTaeniaSaginata() {
   item["vacaSetaElem4Est"] = new Game.Line(580, 800, 950, 770, 4);
   item.vacaSetaElem4Est.setColor(0, 0, 0);
   item.vacaSetaElem4Est.setZorder(7);
-  //item.vacaSetaElem4Est.setAlpha(0);
-  //item.vacaSetaElem4Est.disable();
+  item.vacaSetaElem4Est.setAlpha(0);
+  item.vacaSetaElem4Est.disable();
   itensVacaCiclo.push(item.vacaSetaElem4Est);
 
   item["vacaSetaEstElem5"] = new Game.Line(950, 800, 1300, 600, 4);
   item.vacaSetaEstElem5.setColor(0, 0, 0);
   item.vacaSetaEstElem5.setZorder(7);
-  //item.vacaSetaEstElem5.setAlpha(0);
-  //item.vacaSetaEstElem5.disable();
+  item.vacaSetaEstElem5.setAlpha(0);
+  item.vacaSetaEstElem5.disable();
   itensVacaCiclo.push(item.vacaSetaEstElem5);
 
   item["vacaNum5"] = new Game.Text("5", estiloNumeros);
   item.vacaNum5.setAnchor(0.5, 0.6);
   item.vacaNum5.setPosition(1410, 470);
-  //item.vacaNum5.setAlpha(0);
-  //item.vacaNum5.disable();
+  item.vacaNum5.setAlpha(0);
+  item.vacaNum5.disable();
   itensVacaCiclo.push(item.vacaNum5);
 
   item["vacaElem5"] = new Game.Item("fezesSemMosca.png");
   item.vacaElem5.setPosition(1300, 600);
   item.vacaElem5.setScale(0.48);
   item.vacaElem5.setZorder(6);
-  //item.vacaElem5.setAlpha(0);
-  //item.vacaElem5.disable();
+  item.vacaElem5.setAlpha(0);
+  item.vacaElem5.disable();
   item.vacaElem5.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -273,23 +292,23 @@ function carregaCicloTaeniaSaginata() {
   item["vacaSetaElem5Elem6"] = new Game.Line(1300, 600, 1400, 300, 4);
   item.vacaSetaElem5Elem6.setColor(0, 0, 0);
   item.vacaSetaElem5Elem6.setZorder(7);
-  //item.vacaSetaElem5Elem6.setAlpha(0);
-  //item.vacaSetaElem5Elem6.disable();
+  item.vacaSetaElem5Elem6.setAlpha(0);
+  item.vacaSetaElem5Elem6.disable();
   itensVacaCiclo.push(item.vacaSetaElem5Elem6);
 
   item["vacaNum6"] = new Game.Text("6", estiloNumeros);
   item.vacaNum6.setAnchor(0.5, 0.6);
   item.vacaNum6.setPosition(1520, 180);
-  //item.vacaNum6.setAlpha(0);
-  //item.vacaNum6.disable();
+  item.vacaNum6.setAlpha(0);
+  item.vacaNum6.disable();
   itensVacaCiclo.push(item.vacaNum6);
 
   item["vacaElem6"] = new Game.Item("proglate.png");
   item.vacaElem6.setPosition(1400, 300);
   item.vacaElem6.setScale(0.48);
   item.vacaElem6.setZorder(6);
-  //item.vacaElem6.setAlpha(0);
-  //item.vacaElem6.disable();
+  item.vacaElem6.setAlpha(0);
+  item.vacaElem6.disable();
   item.vacaElem6.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -301,23 +320,23 @@ function carregaCicloTaeniaSaginata() {
   item["vacaSetaElem6Elem7"] = new Game.Line(1400, 300, 1740, 300, 4);
   item.vacaSetaElem6Elem7.setColor(0, 0, 0);
   item.vacaSetaElem6Elem7.setZorder(7);
-  //item.vacaSetaElem6Elem7.setAlpha(0);
-  //item.vacaSetaElem6Elem7.disable();
+  item.vacaSetaElem6Elem7.setAlpha(0);
+  item.vacaSetaElem6Elem7.disable();
   itensVacaCiclo.push(item.vacaSetaElem6Elem7);
 
   item["vacaNum7"] = new Game.Text("7", estiloNumeros);
   item.vacaNum7.setAnchor(0.5, 0.6);
   item.vacaNum7.setPosition(1865, 175);
-  //item.vacaNum7.setAlpha(0);
-  //item.vacaNum7.disable();
+  item.vacaNum7.setAlpha(0);
+  item.vacaNum7.disable();
   itensVacaCiclo.push(item.vacaNum7);
 
   item["vacaElem7"] = new Game.Item("ovoTenia.png");
   item.vacaElem7.setPosition(1740, 300);
   item.vacaElem7.setScale(0.5);
   item.vacaElem7.setZorder(6);
-  //item.vacaElem7.setAlpha(0);
-  //item.vacaElem7.disable();
+  item.vacaElem7.setAlpha(0);
+  item.vacaElem7.disable();
   item.vacaElem7.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>E. coli</i>");
   }
@@ -330,23 +349,23 @@ function carregaCicloTaeniaSaginata() {
   item.vacaSetaElem5Elem8.setColor(0, 0, 0);
   item.vacaSetaElem5Elem8.addArrowAtEnd();
   item.vacaSetaElem5Elem8.setZorder(7);
-  //item.vacaSetaElem5Elem8.setAlpha(0);
-  //item.vacaSetaElem5Elem8.disable();
+  item.vacaSetaElem5Elem8.setAlpha(0);
+  item.vacaSetaElem5Elem8.disable();
   itensVacaCiclo.push(item.vacaSetaElem5Elem8);
 
   item["vacaNum8"] = new Game.Text("8", estiloNumeros);
   item.vacaNum8.setAnchor(0.5, 0.6);
   item.vacaNum8.setPosition(1810, 670);
-  //item.vacaNum8.setAlpha(0);
-  //item.vacaNum8.disable();
+  item.vacaNum8.setAlpha(0);
+  item.vacaNum8.disable();
   itensVacaCiclo.push(item.vacaNum8);
 
   item["vacaElem8"] = new Game.Item("papelLixo.png");
   item.vacaElem8.setPosition(1650, 830);
   item.vacaElem8.setScale(0.68);
   item.vacaElem8.setZorder(6);
-  //item.vacaElem8.setAlpha(0);
-  //item.vacaElem8.disable();
+  item.vacaElem8.setAlpha(0);
+  item.vacaElem8.disable();
   item.vacaElem8.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>E. coli</i>");
   }
