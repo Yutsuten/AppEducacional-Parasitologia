@@ -121,19 +121,19 @@ function carregaCicloToxoplasmose() {
 
   // Imagens ciclo
   item["estGatoCiclo"] = new Game.Image("estMjpnClo.png");
-  item.estGatoCiclo.setPosition(960, 550);
+  item.estGatoCiclo.setPosition(700, 550);
   item.estGatoCiclo.setScale(0.5);
   item.estGatoCiclo.setZorder(9);
-  item.estGatoCiclo.setAlpha(0);
-  item.estGatoCiclo.disable();
+  //item.estGatoCiclo.setAlpha(0);
+  //item.estGatoCiclo.disable();
   itensGatoCiclo.push(item.estGatoCiclo);
 
-  item["gatoElem1"] = new Game.Item("entamoebaCisto.png");
-  item.gatoElem1.setPosition(485, 300);
+  item["gatoElem1"] = new Game.Item("toxoplamose.png");
+  item.gatoElem1.setPosition(285, 250);
   item.gatoElem1.setScale(0.7);
   item.gatoElem1.setZorder(6);
-  item.gatoElem1.setAlpha(0);
-  item.gatoElem1.disable();
+  //item.gatoElem1.setAlpha(0);
+  //item.gatoElem1.disable();
   item.gatoElem1.onMouseOver = function() {
     scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -144,139 +144,97 @@ function carregaCicloToxoplasmose() {
 
   item["gatoNum1"] = new Game.Text("1", estiloNumeros);
   item.gatoNum1.setAnchor(0.5, 0.6);
-  item.gatoNum1.setPosition(650, 140);
-  item.gatoNum1.setAlpha(0);
-  item.gatoNum1.disable();
+  item.gatoNum1.setPosition(450, 90);
+  //item.gatoNum1.setAlpha(0);
+  //item.gatoNum1.disable();
   itensGatoCiclo.push(item.gatoNum1);
 
-  item["gatoSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item["gatoSetaElem1Est"] = new Game.Line(285, 250, 700, 430, 4);
   item.gatoSetaElem1Est.setColor(0, 0, 0);
   item.gatoSetaElem1Est.setZorder(7);
-  item.gatoSetaElem1Est.setAlpha(0);
-  item.gatoSetaElem1Est.disable();
+  //item.gatoSetaElem1Est.setAlpha(0);
+  //item.gatoSetaElem1Est.disable();
   itensGatoCiclo.push(item.gatoSetaElem1Est);
 
-  item["gatoElem2a"] = new Game.Item("entamoebaCisto.png");
-  item.gatoElem2a.setPosition(200, 750);
-  item.gatoElem2a.setScale(0.4);
-  item.gatoElem2a.setZorder(6);
-  item.gatoElem2a.setAlpha(0);
-  item.gatoElem2a.disable();
-  item.gatoElem2a.onMouseOver = function() {
+  item["gatoElem2"] = new Game.Item("caixaDeAreia.png");
+  item.gatoElem2.setPosition(1100, 250);
+  item.gatoElem2.setScale(0.7);
+  item.gatoElem2.setZorder(6);
+  //item.gatoElem2.setAlpha(0);
+  //item.gatoElem2.disable();
+  item.gatoElem2.onMouseOver = function() {
     scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
-  item.gatoElem2a.onMouseOut = function() {
+  item.gatoElem2.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensGatoCiclo.push(item.gatoElem2a);
+  itensGatoCiclo.push(item.gatoElem2);
 
   item["gatoNum2"] = new Game.Text("2", estiloNumeros);
   item.gatoNum2.setAnchor(0.5, 0.6);
-  item.gatoNum2.setPosition(350, 700);
-  item.gatoNum2.setAlpha(0);
-  item.gatoNum2.disable();
+  item.gatoNum2.setPosition(1280, 110);
+  //item.gatoNum2.setAlpha(0);
+  //item.gatoNum2.disable();
   itensGatoCiclo.push(item.gatoNum2);
 
-  item["gatoSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
-  item.gatoSetaElem2aElem2b.setColor(0, 0, 0);
-  item.gatoSetaElem2aElem2b.addArrowAtEnd();
-  item.gatoSetaElem2aElem2b.setZorder(7);
-  item.gatoSetaElem2aElem2b.setAlpha(0);
-  item.gatoSetaElem2aElem2b.disable();
-  itensGatoCiclo.push(item.gatoSetaElem2aElem2b);
+  item["gatoSetaElem1Elem2"] = new Game.Line(285, 200, 1100, 200, 4);
+  item.gatoSetaElem1Elem2.setColor(0, 0, 0);
+  item.gatoSetaElem1Elem2.setZorder(7);
+  //item.gatoSetaElem1Elem2.setAlpha(0);
+  //item.gatoSetaElem1Elem2.disable();
+  itensGatoCiclo.push(item.gatoSetaElem1Elem2);
 
-  item["gatoElem2b"] = new Game.Item("entamoebaTrofozoito.png");
-  item.gatoElem2b.setPosition(537, 750);
-  item.gatoElem2b.setScale(0.53);
-  item.gatoElem2b.setZorder(6);
-  item.gatoElem2b.setAlpha(0);
-  item.gatoElem2b.disable();
-  item.gatoElem2b.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
-  }
-  item.gatoElem2b.onMouseOut = function() {
-    scene[0].setSubtitle("");
-  }
-  itensGatoCiclo.push(item.gatoElem2b);
+  item["gatoSetaEstElem2"] = new Game.Line(745, 430, 920, 340, 4);
+  item.gatoSetaEstElem2.setColor(0, 0, 0);
+  item.gatoSetaEstElem2.addArrowAtEnd();
+  item.gatoSetaEstElem2.setZorder(7);
+  //item.gatoSetaEstElem2.setAlpha(0);
+  //item.gatoSetaEstElem2.disable();
+  itensGatoCiclo.push(item.gatoSetaEstElem2);
 
-  item["gatoSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
-  item.gatoSetaElem2bEst.setColor(0, 0, 0);
-  item.gatoSetaElem2bEst.setZorder(7);
-  item.gatoSetaElem2bEst.setAlpha(0);
-  item.gatoSetaElem2bEst.disable();
-  itensGatoCiclo.push(item.gatoSetaElem2bEst);
+  item["gatoSetaElem2Elem3"] = new Game.Line(1100, 250, 1230, 600, 4);
+  item.gatoSetaElem2Elem3.setColor(0, 0, 0);
+  item.gatoSetaElem2Elem3.addArrowAtEnd();
+  item.gatoSetaElem2Elem3.setZorder(7);
+  //item.gatoSetaElem2Elem3.setAlpha(0);
+  //item.gatoSetaElem2Elem3.disable();
+  itensGatoCiclo.push(item.gatoSetaElem2Elem3);
 
-  item["gatoSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
-  item.gatoSetaEstElem3a.setColor(0, 0, 0);
-  item.gatoSetaEstElem3a.setZorder(7);
-  item.gatoSetaEstElem3a.setAlpha(0);
-  item.gatoSetaEstElem3a.disable();
-  itensGatoCiclo.push(item.gatoSetaEstElem3a);
-
-  item["gatoElem3a"] = new Game.Item("entamoebaTrofozoito.png");
-  item.gatoElem3a.setPosition(1330, 250);
-  item.gatoElem3a.setScale(0.42);
-  item.gatoElem3a.setZorder(6);
-  item.gatoElem3a.setAlpha(0);
-  item.gatoElem3a.disable();
-  item.gatoElem3a.onMouseOver = function() {
+  item["gatoElem3"] = new Game.Item("rato.png");
+  item.gatoElem3.setPosition(1300, 800);
+  item.gatoElem3.setScale(0.73);
+  item.gatoElem3.setZorder(6);
+  //item.gatoElem3.setAlpha(0);
+  //item.gatoElem3.disable();
+  item.gatoElem3.onMouseOver = function() {
     scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
   }
-  item.gatoElem3a.onMouseOut = function() {
+  item.gatoElem3.onMouseOut = function() {
     scene[0].setSubtitle("");
   }
-  itensGatoCiclo.push(item.gatoElem3a);
+  itensGatoCiclo.push(item.gatoElem3);
 
   item["gatoNum3"] = new Game.Text("3", estiloNumeros);
   item.gatoNum3.setAnchor(0.5, 0.6);
-  item.gatoNum3.setPosition(1480, 200);
-  item.gatoNum3.setAlpha(0);
-  item.gatoNum3.disable();
+  item.gatoNum3.setPosition(1480, 650);
+  //item.gatoNum3.setAlpha(0);
+  //item.gatoNum3.disable();
   itensGatoCiclo.push(item.gatoNum3);
 
-  item["gatoSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
-  item.gatoSetaElem3aElem3b.setColor(0, 0, 0);
-  item.gatoSetaElem3aElem3b.addArrowAtEnd();
-  item.gatoSetaElem3aElem3b.setZorder(7);
-  item.gatoSetaElem3aElem3b.setAlpha(0);
-  item.gatoSetaElem3aElem3b.disable();
-  itensGatoCiclo.push(item.gatoSetaElem3aElem3b);
+  item["gatoSetaElem3Elem4"] = new Game.Line(1300, 800, 1550, 460, 4);
+  item.gatoSetaElem3Elem4.setColor(0, 0, 0);
+  item.gatoSetaElem3Elem4.addArrowAtEnd();
+  item.gatoSetaElem3Elem4.setZorder(7);
+  //item.gatoSetaElem3Elem4.setAlpha(0);
+  //item.gatoSetaElem3Elem4.disable();
+  itensGatoCiclo.push(item.gatoSetaElem3Elem4);
 
-  item["gatoElem3b"] = new Game.Item("entamoebaCisto.png");
-  item.gatoElem3b.setPosition(1670, 250);
-  item.gatoElem3b.setScale(0.55);
-  item.gatoElem3b.setZorder(6);
-  item.gatoElem3b.setAlpha(0);
-  item.gatoElem3b.disable();
-  item.gatoElem3b.onMouseOver = function() {
-    scene[0].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
-  }
-  item.gatoElem3b.onMouseOut = function() {
-    scene[0].setSubtitle("");
-  }
-  itensGatoCiclo.push(item.gatoElem3b);
-
-  item["gatoSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
-  item.gatoSetaEstElem4.setColor(0, 0, 0);
-  item.gatoSetaEstElem4.addArrowAtEnd();
-  item.gatoSetaEstElem4.setZorder(7);
-  item.gatoSetaEstElem4.setAlpha(0);
-  item.gatoSetaEstElem4.disable();
-  itensGatoCiclo.push(item.gatoSetaEstElem4);
-
-  item["gatoNum4"] = new Game.Text("4", estiloNumeros);
-  item.gatoNum4.setAnchor(0.5, 0.6);
-  item.gatoNum4.setPosition(1450, 660);
-  item.gatoNum4.setAlpha(0);
-  item.gatoNum4.disable();
-  itensGatoCiclo.push(item.gatoNum4);
-
-  item["gatoElem4"] = new Game.Item("fezesComMosca.png");
-  item.gatoElem4.setPosition(1330, 800);
-  item.gatoElem4.setScale(0.51);
+  item["gatoElem4"] = new Game.Item("gato.png");
+  item.gatoElem4.setPosition(1670, 300);
+  item.gatoElem4.setScale(0.67);
   item.gatoElem4.setZorder(6);
-  item.gatoElem4.setAlpha(0);
-  item.gatoElem4.disable();
+  //item.gatoElem4.setAlpha(0);
+  //item.gatoElem4.disable();
   item.gatoElem4.onMouseOver = function() {
     scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
   }
@@ -285,33 +243,20 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoCiclo.push(item.gatoElem4);
 
-  item["gatoSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
-  item.gatoSetaElem4Elem5.setColor(0, 0, 0);
-  item.gatoSetaElem4Elem5.setZorder(7);
-  item.gatoSetaElem4Elem5.setAlpha(0);
-  item.gatoSetaElem4Elem5.disable();
-  itensGatoCiclo.push(item.gatoSetaElem4Elem5);
+  item["gatoNum4"] = new Game.Text("4", estiloNumeros);
+  item.gatoNum4.setAnchor(0.5, 0.6);
+  item.gatoNum4.setPosition(1520, 150);
+  //item.gatoNum4.setAlpha(0);
+  //item.gatoNum4.disable();
+  itensGatoCiclo.push(item.gatoNum4);
 
-  item["gatoNum5"] = new Game.Text("5", estiloNumeros);
-  item.gatoNum5.setAnchor(0.5, 0.6);
-  item.gatoNum5.setPosition(1851, 671);
-  item.gatoNum5.setAlpha(0);
-  item.gatoNum5.disable();
-  itensGatoCiclo.push(item.gatoNum5);
-
-  item["gatoElem5"] = new Game.Item("entamoebaCisto.png");
-  item.gatoElem5.setPosition(1700, 800);
-  item.gatoElem5.setScale(0.56);
-  item.gatoElem5.setZorder(6);
-  item.gatoElem5.setAlpha(0);
-  item.gatoElem5.disable();
-  item.gatoElem5.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
-  }
-  item.gatoElem5.onMouseOut = function() {
-    scene[0].setSubtitle("");
-  }
-  itensGatoCiclo.push(item.gatoElem5);
+  item["gatoSetaElem4Elem2"] = new Game.Line(1670, 300, 1300, 270, 4);
+  item.gatoSetaElem4Elem2.setColor(0, 0, 0);
+  item.gatoSetaElem4Elem2.addArrowAtEnd();
+  item.gatoSetaElem4Elem2.setZorder(7);
+  //item.gatoSetaElem4Elem2.setAlpha(0);
+  //item.gatoSetaElem4Elem2.disable();
+  itensGatoCiclo.push(item.gatoSetaElem4Elem2);
 
   item["gatoFechar"] = new Game.Item("botaoFechar.png");
   item.gatoFechar.setPosition(1840, 70);
