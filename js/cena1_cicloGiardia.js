@@ -139,7 +139,7 @@ function carregaCicloGiardia() {
   item.pocoElem1.setAlpha(0);
   item.pocoElem1.disable();
   item.pocoElem1.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[1].setSubtitle("Poço artesiano contaminado com cistos de <i>Giardia lamblia</i>");
   }
   item.pocoElem1.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -168,7 +168,7 @@ function carregaCicloGiardia() {
   item.pocoElem2.setAlpha(0);
   item.pocoElem2.disable();
   item.pocoElem2.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[1].setSubtitle("Cistos de <i>G. lamblia</i>");
   }
   item.pocoElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -204,7 +204,7 @@ function carregaCicloGiardia() {
   item.pocoElem3.setAlpha(0);
   item.pocoElem3.disable();
   item.pocoElem3.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
+    scene[1].setSubtitle("Multiplicação de trofozoítos de <i>G. lamblia</i>");
   }
   item.pocoElem3.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -240,7 +240,7 @@ function carregaCicloGiardia() {
   item.pocoElem4.setAlpha(0);
   item.pocoElem4.disable();
   item.pocoElem4.onMouseOver = function() {
-    scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[1].setSubtitle("Cistos de <i>G. lamblia</i>");
   }
   item.pocoElem4.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -277,7 +277,7 @@ function carregaCicloGiardia() {
   item.pocoElem5.setAlpha(0);
   item.pocoElem5.disable();
   item.pocoElem5.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Fezes com cistos de <i>G. lamblia</i>");
   }
   item.pocoElem5.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -299,7 +299,7 @@ function carregaCicloGiardia() {
   item.pocoElem6.setAlpha(0);
   item.pocoElem6.disable();
   item.pocoElem6.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Fezes da fossa contaminam o lençol freático, que abastece o poço artesiano");
   }
   item.pocoElem6.onMouseOut = function() {
     scene[1].setSubtitle("");
