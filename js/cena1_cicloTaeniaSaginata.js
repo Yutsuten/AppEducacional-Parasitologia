@@ -155,7 +155,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem1.setAlpha(0);
   item.vacaElem1.disable();
   item.vacaElem1.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[1].setSubtitle("Vaca comendo grama contaminada");
   }
   item.vacaElem1.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -183,7 +183,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem2.setAlpha(0);
   item.vacaElem2.disable();
   item.vacaElem2.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[1].setSubtitle("Ovo de <i>Taenia saginata</i>");
   }
   item.vacaElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -212,7 +212,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem3.setAlpha(0);
   item.vacaElem3.disable();
   item.vacaElem3.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
+    scene[1].setSubtitle("Carne de vaca crua com cisticercos de <i>T. saginata</i>");
   }
   item.vacaElem3.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -247,7 +247,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem4.setAlpha(0);
   item.vacaElem4.disable();
   item.vacaElem4.onMouseOver = function() {
-    scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[1].setSubtitle("Verme adulto de <i>T. saginata</i>");
   }
   item.vacaElem4.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -282,7 +282,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem5.setAlpha(0);
   item.vacaElem5.disable();
   item.vacaElem5.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Fezes com proglotes de <i>T. saginata</i>");
   }
   item.vacaElem5.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -310,7 +310,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem6.setAlpha(0);
   item.vacaElem6.disable();
   item.vacaElem6.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Proglotes com ovos");
   }
   item.vacaElem6.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -338,7 +338,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem7.setAlpha(0);
   item.vacaElem7.disable();
   item.vacaElem7.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Ovo de <i>T. saginata</i>");
   }
   item.vacaElem7.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -367,7 +367,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaElem8.setAlpha(0);
   item.vacaElem8.disable();
   item.vacaElem8.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Papel higiênico no lixo com proglotes de <i>T. saginata</i>");
   }
   item.vacaElem8.onMouseOut = function() {
     scene[1].setSubtitle("");
