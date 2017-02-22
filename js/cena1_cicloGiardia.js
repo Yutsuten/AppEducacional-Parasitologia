@@ -371,14 +371,14 @@ function carregaCicloGiardia() {
   var itensPocoDoente = [];
 
   item["estPocoDoente"] = new Game.Image("estMbrcDte.png");
-  item.estPocoDoente.setPosition(1218, 668);
+  item.estPocoDoente.setPosition(1320, 670);
   item.estPocoDoente.setZorder(11);
   item.estPocoDoente.setAlpha(0);
   item.estPocoDoente.disable();
   itensPocoDoente.push(item.estPocoDoente);
 
   item["pocoBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.pocoBalaoSintoma.setPosition(730, 300);
+  item.pocoBalaoSintoma.setPosition(730+80, 300);
   item.pocoBalaoSintoma.setScale(0.25);
   item.pocoBalaoSintoma.setZorder(6);
   item.pocoBalaoSintoma.setAlpha(0);
@@ -386,14 +386,14 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoBalaoSintoma);
 
   item["pocoBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.pocoBalaoPrevencao.setPosition(730, 300);
+  item.pocoBalaoPrevencao.setPosition(730+80, 300);
   item.pocoBalaoPrevencao.setScale(0.25);
   item.pocoBalaoPrevencao.setZorder(6);
   item.pocoBalaoPrevencao.disable();
   itensPocoDoente.push(item.pocoBalaoPrevencao);
 
   item["pocoBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.pocoBalaoTransmissao.setPosition(730, 300);
+  item.pocoBalaoTransmissao.setPosition(730+80, 300);
   item.pocoBalaoTransmissao.setScale(0.25);
   item.pocoBalaoTransmissao.setZorder(6);
   item.pocoBalaoTransmissao.disable();
@@ -401,7 +401,7 @@ function carregaCicloGiardia() {
 
 
   item["pocoAbaSintomas"] = new Game.Item("abaSint.png");
-  item.pocoAbaSintomas.setPosition(432, 71);
+  item.pocoAbaSintomas.setPosition(432+80, 71);
   item.pocoAbaSintomas.setScale(0.25);
   item.pocoAbaSintomas.setZorder(7);
   item.pocoAbaSintomas.disable();
@@ -421,7 +421,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaSintomas);
 
   item["pocoTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.pocoTextoSintomas.setPosition(432-130, 71+20);
+  item.pocoTextoSintomas.setPosition(432-130+80, 71+20);
   item.pocoTextoSintomas.setAlpha(0);
   item.pocoTextoSintomas.disable();
   itensPocoDoente.push(item.pocoTextoSintomas);
@@ -438,7 +438,7 @@ function carregaCicloGiardia() {
   }*/
 
   item["pocoAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.pocoAbaPrevencao.setPosition(432 + 232, 71);
+  item.pocoAbaPrevencao.setPosition(432+232+80, 71);
   item.pocoAbaPrevencao.setScale(0.25);
   item.pocoAbaPrevencao.setZorder(7);
   item.pocoAbaPrevencao.setAlpha(0);
@@ -459,7 +459,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaPrevencao);
 
   item["pocoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.pocoTextoPrevencao.setPosition(432-130, 71+20);
+  item.pocoTextoPrevencao.setPosition(432-130+80, 71+20);
   item.pocoTextoPrevencao.disable();
   itensPocoDoente.push(item.pocoTextoPrevencao);
 
@@ -477,7 +477,7 @@ function carregaCicloGiardia() {
   }*/
 
   item["pocoAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.pocoAbaTransmissao.setPosition(432 + 482, 71);
+  item.pocoAbaTransmissao.setPosition(432+482+80, 71);
   item.pocoAbaTransmissao.setScale(0.25);
   item.pocoAbaTransmissao.setZorder(7);
   item.pocoAbaTransmissao.setAlpha(0);
@@ -498,7 +498,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaTransmissao);
 
   item["pocoTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.pocoTextoTransmissao.setPosition(432-130, 71+20);
+  item.pocoTextoTransmissao.setPosition(432-130+80, 71+20);
   item.pocoTextoTransmissao.disable();
   itensPocoDoente.push(item.pocoTextoTransmissao);
 
@@ -510,7 +510,7 @@ function carregaCicloGiardia() {
 
   item["pocoBotaoOK"] = new Game.Item("okNormal.png");
   item.pocoBotaoOK.setScale(0.25);
-  item.pocoBotaoOK.setPosition(432+450, 71+290);
+  item.pocoBotaoOK.setPosition(432+450+80, 71+290);
   item.pocoBotaoOK.setAlpha(0);
   item.pocoBotaoOK.disable();
   item.pocoBotaoOK.onMouseOver = function() {
@@ -524,7 +524,7 @@ function carregaCicloGiardia() {
 
   item["pocoBotaoOKhover"] = new Game.Item("okHover.png");
   item.pocoBotaoOKhover.setScale(0.25);
-  item.pocoBotaoOKhover.setPosition(432+450, 71+290);
+  item.pocoBotaoOKhover.setPosition(432+450+80, 71+290);
   item.pocoBotaoOKhover.disable();
   item.pocoBotaoOKhover.onMouseOut = function() {
     item.pocoBotaoOKhover.disable();
