@@ -16,5 +16,5 @@ loader.add(gameImages).load(function() {
   console.log("Finish");
 
   // Initial Scene
-  setScene(1);
+  setScene(0);
 });
