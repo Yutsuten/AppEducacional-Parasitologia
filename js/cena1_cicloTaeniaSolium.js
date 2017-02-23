@@ -125,18 +125,18 @@ function carregaCicloTaeniaSolium() {
   item.estPorcoCiclo.setPosition(960, 550);
   item.estPorcoCiclo.setScale(0.5);
   item.estPorcoCiclo.setZorder(9);
-  item.estPorcoCiclo.setAlpha(0);
-  item.estPorcoCiclo.disable();
+  //item.estPorcoCiclo.setAlpha(0);
+  //item.estPorcoCiclo.disable();
   itensPorcoCiclo.push(item.estPorcoCiclo);
 
-  item["porcoElem1"] = new Game.Item("entamoebaCisto.png");
-  item.porcoElem1.setPosition(485, 300);
+  item["porcoElem1"] = new Game.Item("porco.png");
+  item.porcoElem1.setPosition(300, 240);
   item.porcoElem1.setScale(0.7);
   item.porcoElem1.setZorder(6);
-  item.porcoElem1.setAlpha(0);
-  item.porcoElem1.disable();
+  //item.porcoElem1.setAlpha(0);
+  //item.porcoElem1.disable();
   item.porcoElem1.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[1].setSubtitle("Porco comendo grama contaminada");
   }
   item.porcoElem1.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -145,174 +145,216 @@ function carregaCicloTaeniaSolium() {
 
   item["porcoNum1"] = new Game.Text("1", estiloNumeros);
   item.porcoNum1.setAnchor(0.5, 0.6);
-  item.porcoNum1.setPosition(650, 140);
-  item.porcoNum1.setAlpha(0);
-  item.porcoNum1.disable();
+  item.porcoNum1.setPosition(470, 80);
+  //item.porcoNum1.setAlpha(0);
+  //item.porcoNum1.disable();
   itensPorcoCiclo.push(item.porcoNum1);
 
-  item["porcoSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
-  item.porcoSetaElem1Est.setColor(0, 0, 0);
-  item.porcoSetaElem1Est.setZorder(7);
-  item.porcoSetaElem1Est.setAlpha(0);
-  item.porcoSetaElem1Est.disable();
-  itensPorcoCiclo.push(item.porcoSetaElem1Est);
+  item["porcoSetaElem1Elem2"] = new Game.Line(300, 240, 700, 190, 4);
+  item.porcoSetaElem1Elem2.setColor(0, 0, 0);
+  item.porcoSetaElem1Elem2.setZorder(7);
+  //item.porcoSetaElem1Elem2.setAlpha(0);
+  //item.porcoSetaElem1Elem2.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem1Elem2);
 
-  item["porcoElem2a"] = new Game.Item("entamoebaCisto.png");
-  item.porcoElem2a.setPosition(200, 750);
-  item.porcoElem2a.setScale(0.4);
-  item.porcoElem2a.setZorder(6);
-  item.porcoElem2a.setAlpha(0);
-  item.porcoElem2a.disable();
-  item.porcoElem2a.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+  item["porcoElem2"] = new Game.Item("ovoTenia.png");
+  item.porcoElem2.setPosition(700, 190);
+  item.porcoElem2.setScale(0.5);
+  item.porcoElem2.setZorder(6);
+  //item.porcoElem2.setAlpha(0);
+  //item.porcoElem2.disable();
+  item.porcoElem2.onMouseOver = function() {
+    scene[1].setSubtitle("Ovo de <i>Taenia saginata</i>");
   }
-  item.porcoElem2a.onMouseOut = function() {
+  item.porcoElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
-  itensPorcoCiclo.push(item.porcoElem2a);
+  itensPorcoCiclo.push(item.porcoElem2);
 
   item["porcoNum2"] = new Game.Text("2", estiloNumeros);
   item.porcoNum2.setAnchor(0.5, 0.6);
-  item.porcoNum2.setPosition(350, 700);
-  item.porcoNum2.setAlpha(0);
-  item.porcoNum2.disable();
+  item.porcoNum2.setPosition(825, 65);
+  //item.porcoNum2.setAlpha(0);
+  //item.porcoNum2.disable();
   itensPorcoCiclo.push(item.porcoNum2);
 
-  item["porcoSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
-  item.porcoSetaElem2aElem2b.setColor(0, 0, 0);
-  item.porcoSetaElem2aElem2b.addArrowAtEnd();
-  item.porcoSetaElem2aElem2b.setZorder(7);
-  item.porcoSetaElem2aElem2b.setAlpha(0);
-  item.porcoSetaElem2aElem2b.disable();
-  itensPorcoCiclo.push(item.porcoSetaElem2aElem2b);
+  item["porcoSetaElem1Elem3"] = new Game.Line(300, 240, 230, 545, 4);
+  item.porcoSetaElem1Elem3.setColor(0, 0, 0);
+  item.porcoSetaElem1Elem3.addArrowAtEnd();
+  item.porcoSetaElem1Elem3.setZorder(7);
+  //item.porcoSetaElem1Elem3.setAlpha(0);
+  //item.porcoSetaElem1Elem3.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem1Elem3);
 
-  item["porcoElem2b"] = new Game.Item("entamoebaTrofozoito.png");
-  item.porcoElem2b.setPosition(537, 750);
-  item.porcoElem2b.setScale(0.53);
-  item.porcoElem2b.setZorder(6);
-  item.porcoElem2b.setAlpha(0);
-  item.porcoElem2b.disable();
-  item.porcoElem2b.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+  item["porcoElem3"] = new Game.Item("carneInfectada.png");
+  item.porcoElem3.setPosition(200, 690);
+  item.porcoElem3.setScale(0.5);
+  item.porcoElem3.setZorder(6);
+  //item.porcoElem3.setAlpha(0);
+  //item.porcoElem3.disable();
+  item.porcoElem3.onMouseOver = function() {
+    scene[1].setSubtitle("Carne de porco crua com cisticercos de <i>T. saginata</i>");
   }
-  item.porcoElem2b.onMouseOut = function() {
+  item.porcoElem3.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
-  itensPorcoCiclo.push(item.porcoElem2b);
-
-  item["porcoSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
-  item.porcoSetaElem2bEst.setColor(0, 0, 0);
-  item.porcoSetaElem2bEst.setZorder(7);
-  item.porcoSetaElem2bEst.setAlpha(0);
-  item.porcoSetaElem2bEst.disable();
-  itensPorcoCiclo.push(item.porcoSetaElem2bEst);
-
-  item["porcoSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
-  item.porcoSetaEstElem3a.setColor(0, 0, 0);
-  item.porcoSetaEstElem3a.setZorder(7);
-  item.porcoSetaEstElem3a.setAlpha(0);
-  item.porcoSetaEstElem3a.disable();
-  itensPorcoCiclo.push(item.porcoSetaEstElem3a);
-
-  item["porcoElem3a"] = new Game.Item("entamoebaTrofozoito.png");
-  item.porcoElem3a.setPosition(1330, 250);
-  item.porcoElem3a.setScale(0.42);
-  item.porcoElem3a.setZorder(6);
-  item.porcoElem3a.setAlpha(0);
-  item.porcoElem3a.disable();
-  item.porcoElem3a.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
-  }
-  item.porcoElem3a.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensPorcoCiclo.push(item.porcoElem3a);
+  itensPorcoCiclo.push(item.porcoElem3);
 
   item["porcoNum3"] = new Game.Text("3", estiloNumeros);
   item.porcoNum3.setAnchor(0.5, 0.6);
-  item.porcoNum3.setPosition(1480, 200);
-  item.porcoNum3.setAlpha(0);
-  item.porcoNum3.disable();
+  item.porcoNum3.setPosition(330, 570);
+  //item.porcoNum3.setAlpha(0);
+  //item.porcoNum3.disable();
   itensPorcoCiclo.push(item.porcoNum3);
 
-  item["porcoSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
-  item.porcoSetaElem3aElem3b.setColor(0, 0, 0);
-  item.porcoSetaElem3aElem3b.addArrowAtEnd();
-  item.porcoSetaElem3aElem3b.setZorder(7);
-  item.porcoSetaElem3aElem3b.setAlpha(0);
-  item.porcoSetaElem3aElem3b.disable();
-  itensPorcoCiclo.push(item.porcoSetaElem3aElem3b);
-
-  item["porcoElem3b"] = new Game.Item("entamoebaCisto.png");
-  item.porcoElem3b.setPosition(1670, 250);
-  item.porcoElem3b.setScale(0.55);
-  item.porcoElem3b.setZorder(6);
-  item.porcoElem3b.setAlpha(0);
-  item.porcoElem3b.disable();
-  item.porcoElem3b.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
-  }
-  item.porcoElem3b.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensPorcoCiclo.push(item.porcoElem3b);
-
-  item["porcoSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
-  item.porcoSetaEstElem4.setColor(0, 0, 0);
-  item.porcoSetaEstElem4.addArrowAtEnd();
-  item.porcoSetaEstElem4.setZorder(7);
-  item.porcoSetaEstElem4.setAlpha(0);
-  item.porcoSetaEstElem4.disable();
-  itensPorcoCiclo.push(item.porcoSetaEstElem4);
+  item["porcoSetaElem3Est"] = new Game.Line(345, 665, 1000, 460, 4);
+  item.porcoSetaElem3Est.setColor(0, 0, 0);
+  item.porcoSetaElem3Est.addArrowAtBeginning();
+  item.porcoSetaElem3Est.setZorder(7);
+  //item.porcoSetaElem3Est.setAlpha(0);
+  //item.porcoSetaElem3Est.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem3Est);
 
   item["porcoNum4"] = new Game.Text("4", estiloNumeros);
   item.porcoNum4.setAnchor(0.5, 0.6);
-  item.porcoNum4.setPosition(1450, 660);
-  item.porcoNum4.setAlpha(0);
-  item.porcoNum4.disable();
+  item.porcoNum4.setPosition(700, 660);
+  //item.porcoNum4.setAlpha(0);
+  //item.porcoNum4.disable();
   itensPorcoCiclo.push(item.porcoNum4);
 
-  item["porcoElem4"] = new Game.Item("fezesComMosca.png");
-  item.porcoElem4.setPosition(1330, 800);
+  item["porcoElem4"] = new Game.Item("teniaAdulta.png");
+  item.porcoElem4.setPosition(580, 800);
   item.porcoElem4.setScale(0.51);
   item.porcoElem4.setZorder(6);
-  item.porcoElem4.setAlpha(0);
-  item.porcoElem4.disable();
+  //item.porcoElem4.setAlpha(0);
+  //item.porcoElem4.disable();
   item.porcoElem4.onMouseOver = function() {
-    scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[1].setSubtitle("Verme adulto de <i>T. saginata</i>");
   }
   item.porcoElem4.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
   itensPorcoCiclo.push(item.porcoElem4);
 
-  item["porcoSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
-  item.porcoSetaElem4Elem5.setColor(0, 0, 0);
-  item.porcoSetaElem4Elem5.setZorder(7);
-  item.porcoSetaElem4Elem5.setAlpha(0);
-  item.porcoSetaElem4Elem5.disable();
-  itensPorcoCiclo.push(item.porcoSetaElem4Elem5);
+  item["porcoSetaElem4Est"] = new Game.Line(580, 800, 950, 770, 4);
+  item.porcoSetaElem4Est.setColor(0, 0, 0);
+  item.porcoSetaElem4Est.setZorder(7);
+  //item.porcoSetaElem4Est.setAlpha(0);
+  //item.porcoSetaElem4Est.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem4Est);
+
+  item["porcoSetaEstElem5"] = new Game.Line(950, 800, 1300, 600, 4);
+  item.porcoSetaEstElem5.setColor(0, 0, 0);
+  item.porcoSetaEstElem5.setZorder(7);
+  //item.porcoSetaEstElem5.setAlpha(0);
+  //item.porcoSetaEstElem5.disable();
+  itensPorcoCiclo.push(item.porcoSetaEstElem5);
 
   item["porcoNum5"] = new Game.Text("5", estiloNumeros);
   item.porcoNum5.setAnchor(0.5, 0.6);
-  item.porcoNum5.setPosition(1851, 671);
-  item.porcoNum5.setAlpha(0);
-  item.porcoNum5.disable();
+  item.porcoNum5.setPosition(1410, 470);
+  //item.porcoNum5.setAlpha(0);
+  //item.porcoNum5.disable();
   itensPorcoCiclo.push(item.porcoNum5);
 
-  item["porcoElem5"] = new Game.Item("entamoebaCisto.png");
-  item.porcoElem5.setPosition(1700, 800);
-  item.porcoElem5.setScale(0.56);
+  item["porcoElem5"] = new Game.Item("fezesSemMosca.png");
+  item.porcoElem5.setPosition(1300, 600);
+  item.porcoElem5.setScale(0.48);
   item.porcoElem5.setZorder(6);
-  item.porcoElem5.setAlpha(0);
-  item.porcoElem5.disable();
+  //item.porcoElem5.setAlpha(0);
+  //item.porcoElem5.disable();
   item.porcoElem5.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[1].setSubtitle("Fezes com proglotes de <i>T. saginata</i>");
   }
   item.porcoElem5.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
   itensPorcoCiclo.push(item.porcoElem5);
+
+  item["porcoSetaElem5Elem6"] = new Game.Line(1300, 600, 1400, 300, 4);
+  item.porcoSetaElem5Elem6.setColor(0, 0, 0);
+  item.porcoSetaElem5Elem6.setZorder(7);
+  //item.porcoSetaElem5Elem6.setAlpha(0);
+  //item.porcoSetaElem5Elem6.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem5Elem6);
+
+  item["porcoNum6"] = new Game.Text("6", estiloNumeros);
+  item.porcoNum6.setAnchor(0.5, 0.6);
+  item.porcoNum6.setPosition(1520, 180);
+  //item.porcoNum6.setAlpha(0);
+  //item.porcoNum6.disable();
+  itensPorcoCiclo.push(item.porcoNum6);
+
+  item["porcoElem6"] = new Game.Item("proglate.png");
+  item.porcoElem6.setPosition(1400, 300);
+  item.porcoElem6.setScale(0.48);
+  item.porcoElem6.setZorder(6);
+  //item.porcoElem6.setAlpha(0);
+  //item.porcoElem6.disable();
+  item.porcoElem6.onMouseOver = function() {
+    scene[1].setSubtitle("Proglotes com ovos");
+  }
+  item.porcoElem6.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
+  itensPorcoCiclo.push(item.porcoElem6);
+
+  item["porcoSetaElem6Elem7"] = new Game.Line(1400, 300, 1740, 300, 4);
+  item.porcoSetaElem6Elem7.setColor(0, 0, 0);
+  item.porcoSetaElem6Elem7.setZorder(7);
+  //item.porcoSetaElem6Elem7.setAlpha(0);
+  //item.porcoSetaElem6Elem7.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem6Elem7);
+
+  item["porcoNum7"] = new Game.Text("7", estiloNumeros);
+  item.porcoNum7.setAnchor(0.5, 0.6);
+  item.porcoNum7.setPosition(1865, 175);
+  //item.porcoNum7.setAlpha(0);
+  //item.porcoNum7.disable();
+  itensPorcoCiclo.push(item.porcoNum7);
+
+  item["porcoElem7"] = new Game.Item("ovoTenia.png");
+  item.porcoElem7.setPosition(1740, 300);
+  item.porcoElem7.setScale(0.5);
+  item.porcoElem7.setZorder(6);
+  //item.porcoElem7.setAlpha(0);
+  //item.porcoElem7.disable();
+  item.porcoElem7.onMouseOver = function() {
+    scene[1].setSubtitle("Ovo de <i>T. saginata</i>");
+  }
+  item.porcoElem7.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
+  itensPorcoCiclo.push(item.porcoElem7);
+
+  item["porcoSetaElem5Elem8"] = new Game.Line(1300, 600, 1480, 725, 4);
+  item.porcoSetaElem5Elem8.setColor(0, 0, 0);
+  item.porcoSetaElem5Elem8.addArrowAtEnd();
+  item.porcoSetaElem5Elem8.setZorder(7);
+  //item.porcoSetaElem5Elem8.setAlpha(0);
+  //item.porcoSetaElem5Elem8.disable();
+  itensPorcoCiclo.push(item.porcoSetaElem5Elem8);
+
+  item["porcoNum8"] = new Game.Text("8", estiloNumeros);
+  item.porcoNum8.setAnchor(0.5, 0.6);
+  item.porcoNum8.setPosition(1810, 670);
+  //item.porcoNum8.setAlpha(0);
+  //item.porcoNum8.disable();
+  itensPorcoCiclo.push(item.porcoNum8);
+
+  item["porcoElem8"] = new Game.Item("papelLixo.png");
+  item.porcoElem8.setPosition(1650, 830);
+  item.porcoElem8.setScale(0.68);
+  item.porcoElem8.setZorder(6);
+  //item.porcoElem8.setAlpha(0);
+  //item.porcoElem8.disable();
+  item.porcoElem8.onMouseOver = function() {
+    scene[1].setSubtitle("Papel higiênico no lixo com proglotes de <i>T. saginata</i>");
+  }
+  item.porcoElem8.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
+  itensPorcoCiclo.push(item.porcoElem8);
 
   item["porcoFechar"] = new Game.Item("botaoFechar.png");
   item.porcoFechar.setPosition(1840, 70);
