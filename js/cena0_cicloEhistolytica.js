@@ -149,7 +149,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem1.setAlpha(0);
   item.bananaElem1.disable();
   item.bananaElem1.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[0].setSubtitle("Cisto de <i>Entamoeba histolytica</i>");
   }
   item.bananaElem1.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -177,7 +177,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem2a.setAlpha(0);
   item.bananaElem2a.disable();
   item.bananaElem2a.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[0].setSubtitle("Desencistamento de <i>Entamoeba histolytica</i>: cisto");
   }
   item.bananaElem2a.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -206,7 +206,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem2b.setAlpha(0);
   item.bananaElem2b.disable();
   item.bananaElem2b.onMouseOver = function() {
-    scene[0].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Desencistamento de <i>E. histolytica</i>: trofozoíto");
   }
   item.bananaElem2b.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -234,7 +234,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem3a.setAlpha(0);
   item.bananaElem3a.disable();
   item.bananaElem3a.onMouseOver = function() {
-    scene[0].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
+    scene[0].setSubtitle("Encistamento de <i>E. histolytica</i>: trofozoíto");
   }
   item.bananaElem3a.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -263,7 +263,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem3b.setAlpha(0);
   item.bananaElem3b.disable();
   item.bananaElem3b.onMouseOver = function() {
-    scene[0].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
+    scene[0].setSubtitle("Encistamento de <i>E. histolytica</i>: cisto");
   }
   item.bananaElem3b.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -292,7 +292,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem4.setAlpha(0);
   item.bananaElem4.disable();
   item.bananaElem4.onMouseOver = function() {
-    scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
+    scene[0].setSubtitle("Moscas sendo infectadas por fezes com <i>E. histolytica</i>");
   }
   item.bananaElem4.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -320,7 +320,7 @@ function carregaCicloEhistolytica() {
   item.bananaElem5.setAlpha(0);
   item.bananaElem5.disable();
   item.bananaElem5.onMouseOver = function() {
-    scene[0].setSubtitle("Cisto de <i>E. coli</i>");
+    scene[0].setSubtitle("Cisto de <i>E. histolytica</i>");
   }
   item.bananaElem5.onMouseOut = function() {
     scene[0].setSubtitle("");
