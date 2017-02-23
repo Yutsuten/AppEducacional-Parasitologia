@@ -433,29 +433,30 @@ function carregaCicloTaeniaSolium() {
   var itensPorcoDoente = [];
 
   item["estPorcoDoente"] = new Game.Image("estHjpnDte.png");
-  item.estPorcoDoente.setPosition(1218, 668);
+  item.estPorcoDoente.setPosition(815, 590);
+  item.estPorcoDoente.setScale(1.9);
   item.estPorcoDoente.setZorder(11);
   item.estPorcoDoente.setAlpha(0);
   item.estPorcoDoente.disable();
   itensPorcoDoente.push(item.estPorcoDoente);
 
-  item["porcoBalaoSintoma"] = new Game.Image("balSintEsq.png");
-  item.porcoBalaoSintoma.setPosition(730, 300);
+  item["porcoBalaoSintoma"] = new Game.Image("balSintDir.png");
+  item.porcoBalaoSintoma.setPosition(730+440+270, 300);
   item.porcoBalaoSintoma.setScale(0.25);
   item.porcoBalaoSintoma.setZorder(6);
   item.porcoBalaoSintoma.setAlpha(0);
   item.porcoBalaoSintoma.disable();
   itensPorcoDoente.push(item.porcoBalaoSintoma);
 
-  item["porcoBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
-  item.porcoBalaoPrevencao.setPosition(730, 300);
+  item["porcoBalaoPrevencao"] = new Game.Image("balPrevDir.png");
+  item.porcoBalaoPrevencao.setPosition(730+440+270, 300);
   item.porcoBalaoPrevencao.setScale(0.25);
   item.porcoBalaoPrevencao.setZorder(6);
   item.porcoBalaoPrevencao.disable();
   itensPorcoDoente.push(item.porcoBalaoPrevencao);
 
-  item["porcoBalaoTransmissao"] = new Game.Image("balTranEsq.png");
-  item.porcoBalaoTransmissao.setPosition(730, 300);
+  item["porcoBalaoTransmissao"] = new Game.Image("balTranDir.png");
+  item.porcoBalaoTransmissao.setPosition(730+440+270, 300);
   item.porcoBalaoTransmissao.setScale(0.25);
   item.porcoBalaoTransmissao.setZorder(6);
   item.porcoBalaoTransmissao.disable();
@@ -463,7 +464,7 @@ function carregaCicloTaeniaSolium() {
 
 
   item["porcoAbaSintomas"] = new Game.Item("abaSint.png");
-  item.porcoAbaSintomas.setPosition(432, 71);
+  item.porcoAbaSintomas.setPosition(426+550+270, 71);
   item.porcoAbaSintomas.setScale(0.25);
   item.porcoAbaSintomas.setZorder(7);
   item.porcoAbaSintomas.disable();
@@ -483,7 +484,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaSintomas);
 
   item["porcoTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.porcoTextoSintomas.setPosition(432-130, 71+20);
+  item.porcoTextoSintomas.setPosition(432-130+550+270, 71+20);
   item.porcoTextoSintomas.setAlpha(0);
   item.porcoTextoSintomas.disable();
   itensPorcoDoente.push(item.porcoTextoSintomas);
@@ -500,7 +501,7 @@ function carregaCicloTaeniaSolium() {
   }*/
 
   item["porcoAbaPrevencao"] = new Game.Item("abaPrev.png");
-  item.porcoAbaPrevencao.setPosition(432 + 232, 71);
+  item.porcoAbaPrevencao.setPosition(432+244+550+270, 71);
   item.porcoAbaPrevencao.setScale(0.25);
   item.porcoAbaPrevencao.setZorder(7);
   item.porcoAbaPrevencao.setAlpha(0);
@@ -521,7 +522,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaPrevencao);
 
   item["porcoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.porcoTextoPrevencao.setPosition(432-130, 71+20);
+  item.porcoTextoPrevencao.setPosition(432-130+550+270, 71+20);
   item.porcoTextoPrevencao.disable();
   itensPorcoDoente.push(item.porcoTextoPrevencao);
 
@@ -539,7 +540,7 @@ function carregaCicloTaeniaSolium() {
   }*/
 
   item["porcoAbaTransmissao"] = new Game.Item("abaTran.png");
-  item.porcoAbaTransmissao.setPosition(432 + 482, 71);
+  item.porcoAbaTransmissao.setPosition(432+490+550+270, 71);
   item.porcoAbaTransmissao.setScale(0.25);
   item.porcoAbaTransmissao.setZorder(7);
   item.porcoAbaTransmissao.setAlpha(0);
@@ -560,7 +561,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaTransmissao);
 
   item["porcoTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.porcoTextoTransmissao.setPosition(432-130, 71+20);
+  item.porcoTextoTransmissao.setPosition(432-130+550+270, 71+20);
   item.porcoTextoTransmissao.disable();
   itensPorcoDoente.push(item.porcoTextoTransmissao);
 
@@ -572,7 +573,7 @@ function carregaCicloTaeniaSolium() {
 
   item["porcoBotaoOK"] = new Game.Item("okNormal.png");
   item.porcoBotaoOK.setScale(0.25);
-  item.porcoBotaoOK.setPosition(432+450, 71+290);
+  item.porcoBotaoOK.setPosition(432+450+550+270, 71+290);
   item.porcoBotaoOK.setAlpha(0);
   item.porcoBotaoOK.disable();
   item.porcoBotaoOK.onMouseOver = function() {
@@ -586,7 +587,7 @@ function carregaCicloTaeniaSolium() {
 
   item["porcoBotaoOKhover"] = new Game.Item("okHover.png");
   item.porcoBotaoOKhover.setScale(0.25);
-  item.porcoBotaoOKhover.setPosition(432+450, 71+290);
+  item.porcoBotaoOKhover.setPosition(432+450+550+270, 71+290);
   item.porcoBotaoOKhover.disable();
   item.porcoBotaoOKhover.onMouseOut = function() {
     item.porcoBotaoOKhover.disable();
