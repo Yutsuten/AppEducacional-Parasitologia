@@ -155,7 +155,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem1.setAlpha(0);
   item.porcoElem1.disable();
   item.porcoElem1.onMouseOver = function() {
-    scene[1].setSubtitle("Porco comendo grama contaminada");
+    scene[1].setSubtitle("Porco comendo lixo contaminado");
   }
   item.porcoElem1.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -183,7 +183,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem2.setAlpha(0);
   item.porcoElem2.disable();
   item.porcoElem2.onMouseOver = function() {
-    scene[1].setSubtitle("Ovo de <i>Taenia saginata</i>");
+    scene[1].setSubtitle("Ovo de <i>Taenia solium</i>");
   }
   item.porcoElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -212,7 +212,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem3.setAlpha(0);
   item.porcoElem3.disable();
   item.porcoElem3.onMouseOver = function() {
-    scene[1].setSubtitle("Carne de porco crua com cisticercos de <i>T. saginata</i>");
+    scene[1].setSubtitle("Carne de porco crua com cisticercos de <i>T. solium</i>");
   }
   item.porcoElem3.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -248,7 +248,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem4.setAlpha(0);
   item.porcoElem4.disable();
   item.porcoElem4.onMouseOver = function() {
-    scene[1].setSubtitle("Verme adulto de <i>T. saginata</i>");
+    scene[1].setSubtitle("Verme adulto de <i>T. solium</i>");
   }
   item.porcoElem4.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -283,7 +283,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem5.setAlpha(0);
   item.porcoElem5.disable();
   item.porcoElem5.onMouseOver = function() {
-    scene[1].setSubtitle("Fezes com proglotes de <i>T. saginata</i>");
+    scene[1].setSubtitle("Fezes com proglotes de <i>T. solium</i>");
   }
   item.porcoElem5.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -339,7 +339,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem7.setAlpha(0);
   item.porcoElem7.disable();
   item.porcoElem7.onMouseOver = function() {
-    scene[1].setSubtitle("Ovo de <i>T. saginata</i>");
+    scene[1].setSubtitle("Ovo de <i>T. solium</i>");
   }
   item.porcoElem7.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -368,7 +368,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoElem8.setAlpha(0);
   item.porcoElem8.disable();
   item.porcoElem8.onMouseOver = function() {
-    scene[1].setSubtitle("Papel higiênico no lixo com proglotes de <i>T. saginata</i>");
+    scene[1].setSubtitle("Papel higiênico no lixo com proglotes de <i>T. solium</i>");
   }
   item.porcoElem8.onMouseOut = function() {
     scene[1].setSubtitle("");
