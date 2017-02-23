@@ -163,7 +163,7 @@ function carregaCicloEhistolytica() {
   item.bananaNum1.disable();
   itensBananaCiclo.push(item.bananaNum1);
 
-  item["bananaSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item["bananaSetaElem1Est"] = new Game.Line(485, 300, 910, 500, 4);
   item.bananaSetaElem1Est.setColor(0, 0, 0);
   item.bananaSetaElem1Est.setZorder(7);
   item.bananaSetaElem1Est.setAlpha(0);
@@ -213,14 +213,14 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem2b);
 
-  item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
+  item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 940, 810, 4);
   item.bananaSetaElem2bEst.setColor(0, 0, 0);
   item.bananaSetaElem2bEst.setZorder(7);
   item.bananaSetaElem2bEst.setAlpha(0);
   item.bananaSetaElem2bEst.disable();
   itensBananaCiclo.push(item.bananaSetaElem2bEst);
 
-  item["bananaSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
+  item["bananaSetaEstElem3a"] = new Game.Line(1010, 770, 1330, 250, 4);
   item.bananaSetaEstElem3a.setColor(0, 0, 0);
   item.bananaSetaEstElem3a.setZorder(7);
   item.bananaSetaEstElem3a.setAlpha(0);
@@ -270,7 +270,7 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem3b);
 
-  item["bananaSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
+  item["bananaSetaEstElem4"] = new Game.Line(930, 880, 1180, 800, 4);
   item.bananaSetaEstElem4.setColor(0, 0, 0);
   item.bananaSetaEstElem4.addArrowAtEnd();
   item.bananaSetaEstElem4.setZorder(7);

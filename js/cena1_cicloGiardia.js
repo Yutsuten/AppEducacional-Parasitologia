@@ -153,7 +153,7 @@ function carregaCicloGiardia() {
   item.pocoNum1.disable();
   itensPocoCiclo.push(item.pocoNum1);
 
-  item["pocoSetaElem1Est"] = new Game.Line(595, 390, 700, 440, 4);
+  item["pocoSetaElem1Est"] = new Game.Line(595, 390, 720, 430, 4);
   item.pocoSetaElem1Est.setColor(0, 0, 0);
   item.pocoSetaElem1Est.addArrowAtBeginning();
   item.pocoSetaElem1Est.setZorder(7);
@@ -182,7 +182,7 @@ function carregaCicloGiardia() {
   item.pocoNum2.disable();
   itensPocoCiclo.push(item.pocoNum2);
 
-  item["pocoSetaEst1Elem2"] = new Game.Line(795, 425, 1180, 280, 4);
+  item["pocoSetaEst1Elem2"] = new Game.Line(810, 400, 1180, 280, 4);
   item.pocoSetaEst1Elem2.setColor(0, 0, 0);
   item.pocoSetaEst1Elem2.addArrowAtEnd();
   item.pocoSetaEst1Elem2.setZorder(7);
@@ -262,7 +262,7 @@ function carregaCicloGiardia() {
   item.pocoNum5.disable();
   itensPocoCiclo.push(item.pocoNum5);
 
-  item["pocoSetaEstElem5"] = new Game.Line(850, 760, 1040, 790, 4);
+  item["pocoSetaEstElem5"] = new Game.Line(860, 830, 1040, 790, 4);
   item.pocoSetaEstElem5.setColor(0, 0, 0);
   item.pocoSetaEstElem5.addArrowAtEnd();
   item.pocoSetaEstElem5.setZorder(7);
