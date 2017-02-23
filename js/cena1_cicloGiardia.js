@@ -39,6 +39,11 @@ function carregaCicloGiardia() {
     item.estPorcoNormal.setInteractive(false);
     item.estPocoNormal.setInteractive(false);
     item.setaSalaDeAula.setInteractive(false);
+    item.chiqueiro.setInteractive(false);
+    item.horta.setInteractive(false);
+    item.latrina.setInteractive(false);
+    item.lixeira.setInteractive(false);
+    item.pocoExterior.setInteractive(false);
 
     setTimeout(function() {
       scene[1].setSubtitle("");
@@ -572,6 +577,11 @@ function carregaCicloGiardia() {
       item.estPorcoNormal.setInteractive(true);
       item.estPocoNormal.setInteractive(true);
       item.setaSalaDeAula.setInteractive(true);
+      item.chiqueiro.setInteractive(true);
+      item.horta.setInteractive(true);
+      item.latrina.setInteractive(true);
+      item.lixeira.setInteractive(true);
+      item.pocoExterior.setInteractive(true);
 
       enableInteractiveness();
     }, currentTime += animationInterval);
