@@ -102,7 +102,7 @@ function carregaCicloCisticercose() {
   item.cenouraElem1.setAlpha(0);
   item.cenouraElem1.disable();
   item.cenouraElem1.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
+    scene[1].setSubtitle("Contaminação da horta por chorume");
   }
   item.cenouraElem1.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -130,7 +130,7 @@ function carregaCicloCisticercose() {
   item.cenouraElem2.setAlpha(0);
   item.cenouraElem2.disable();
   item.cenouraElem2.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
+    scene[1].setSubtitle("Cérebro infectado por cisticercos de <i>Taenia solium</i>");
   }
   item.cenouraElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
