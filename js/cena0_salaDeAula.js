@@ -67,7 +67,7 @@ sceneLoader[0] = function() {
   }
 
   // Carrega ciclos
-  carregaCicloEcoli();
+  carregaCicloEhistolytica();
   carregaCicloAscaris();
   carregaCicloPlasmodium();
   carregaCicloToxoplasmose();

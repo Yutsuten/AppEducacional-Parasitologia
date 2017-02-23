@@ -12,7 +12,7 @@ var estiloInfoBalao = {
   fontSize: "40px"
 }
 
-function carregaCicloEcoli() {
+function carregaCicloEhistolytica() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
 
