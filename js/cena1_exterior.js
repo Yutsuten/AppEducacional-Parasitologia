@@ -77,7 +77,7 @@ sceneLoader[1] = function() {
   // Adiciona uma seta para voltar na sala de aula
   item["setaSalaDeAula"] = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(210, 480);
-  item.setaSalaDeAula.setScale(0.5);
+  item.setaSalaDeAula.setScale(0.3);
   item.setaSalaDeAula.setRotation(180);
   item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {

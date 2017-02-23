@@ -34,7 +34,7 @@ sceneLoader[0] = function() {
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
-  item.setaJanela.setScale(0.5);
+  item.setaJanela.setScale(0.3);
   item.setaJanela.setZorder(1);
   item.setaJanela.onMouseOver = function() {
     scene[0].setSubtitle("Ambiente externo");
@@ -51,7 +51,7 @@ sceneLoader[0] = function() {
   // Adiciona uma seta para levar ao armario
   item["setaArmario"] = new Game.Item("seta.png");
   item.setaArmario.setPosition(210, 480);
-  item.setaArmario.setScale(0.5);
+  item.setaArmario.setScale(0.3);
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
   item.setaArmario.onMouseOver = function() {
