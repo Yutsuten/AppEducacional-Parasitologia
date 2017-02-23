@@ -21,7 +21,7 @@ sceneLoader[1] = function() {
   var item = scene[1].item;
 
   item["chiqueiro"] = new Game.Item("chiqueiro.png");
-  item.chiqueiro.setPosition(240, 240);
+  item.chiqueiro.setPosition(238, 240);
   item.chiqueiro.setZorder(15);
   item.chiqueiro.onMouseOver = function() {
     scene[1].setSubtitle("Chiqueiro");
@@ -51,7 +51,7 @@ sceneLoader[1] = function() {
   }
 
   item["lixeira"] = new Game.Item("lixeira.png");
-  item.lixeira.setPosition(580, 290);
+  item.lixeira.setPosition(567, 288);
   item.lixeira.setZorder(16);
   item.lixeira.onMouseOver = function() {
     scene[1].setSubtitle("Lixo");
@@ -61,7 +61,7 @@ sceneLoader[1] = function() {
   }
 
   item["pocoExterior"] = new Game.Item("pocoExterior.png");
-  item.pocoExterior.setPosition(1723, 648);
+  item.pocoExterior.setPosition(1723, 643);
   item.pocoExterior.setZorder(10);
   item.pocoExterior.onMouseOver = function() {
     scene[1].setSubtitle("Poço artesiano");
@@ -71,7 +71,7 @@ sceneLoader[1] = function() {
   }
 
   item["vacaExterior"] = new Game.Image("vacaExterior.png");
-  item.vacaExterior.setPosition(938, 250);
+  item.vacaExterior.setPosition(935, 252);
   item.vacaExterior.setZorder(15);
 
   // Adiciona uma seta para voltar na sala de aula
