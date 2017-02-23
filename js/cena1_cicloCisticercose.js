@@ -127,16 +127,15 @@ function carregaCicloCisticercose() {
   item.estCenouraCiclo.setPosition(960, 550);
   item.estCenouraCiclo.setScale(0.5);
   item.estCenouraCiclo.setZorder(9);
-  item.estCenouraCiclo.setAlpha(0);
-  item.estCenouraCiclo.disable();
+  //item.estCenouraCiclo.setAlpha(0);
+  //item.estCenouraCiclo.disable();
   itensCenouraCiclo.push(item.estCenouraCiclo);
 
-  item["cenouraElem1"] = new Game.Item("entamoebaCisto.png");
-  item.cenouraElem1.setPosition(485, 300);
-  item.cenouraElem1.setScale(0.7);
+  item["cenouraElem1"] = new Game.Item("chorumeLixoCenouras.png");
+  item.cenouraElem1.setPosition(400, 500);
   item.cenouraElem1.setZorder(6);
-  item.cenouraElem1.setAlpha(0);
-  item.cenouraElem1.disable();
+  //item.cenouraElem1.setAlpha(0);
+  //item.cenouraElem1.disable();
   item.cenouraElem1.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -147,174 +146,45 @@ function carregaCicloCisticercose() {
 
   item["cenouraNum1"] = new Game.Text("1", estiloNumeros);
   item.cenouraNum1.setAnchor(0.5, 0.6);
-  item.cenouraNum1.setPosition(650, 140);
-  item.cenouraNum1.setAlpha(0);
-  item.cenouraNum1.disable();
+  item.cenouraNum1.setPosition(630, 250);
+  //item.cenouraNum1.setAlpha(0);
+  //item.cenouraNum1.disable();
   itensCenouraCiclo.push(item.cenouraNum1);
 
-  item["cenouraSetaElem1Est"] = new Game.Line(485, 300, 915, 500, 4);
+  item["cenouraSetaElem1Est"] = new Game.Line(680, 500, 900, 500, 4);
   item.cenouraSetaElem1Est.setColor(0, 0, 0);
+  item.cenouraSetaElem1Est.addArrowAtBeginning();
   item.cenouraSetaElem1Est.setZorder(7);
-  item.cenouraSetaElem1Est.setAlpha(0);
-  item.cenouraSetaElem1Est.disable();
+  //item.cenouraSetaElem1Est.setAlpha(0);
+  //item.cenouraSetaElem1Est.disable();
   itensCenouraCiclo.push(item.cenouraSetaElem1Est);
 
-  item["cenouraElem2a"] = new Game.Item("entamoebaCisto.png");
-  item.cenouraElem2a.setPosition(200, 750);
-  item.cenouraElem2a.setScale(0.4);
-  item.cenouraElem2a.setZorder(6);
-  item.cenouraElem2a.setAlpha(0);
-  item.cenouraElem2a.disable();
-  item.cenouraElem2a.onMouseOver = function() {
+  item["cenouraElem2"] = new Game.Item("cerebroInfectado.png");
+  item.cenouraElem2.setPosition(1500, 500);
+  item.cenouraElem2.setZorder(6);
+  //item.cenouraElem2.setAlpha(0);
+  //item.cenouraElem2.disable();
+  item.cenouraElem2.onMouseOver = function() {
     scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
-  item.cenouraElem2a.onMouseOut = function() {
+  item.cenouraElem2.onMouseOut = function() {
     scene[1].setSubtitle("");
   }
-  itensCenouraCiclo.push(item.cenouraElem2a);
+  itensCenouraCiclo.push(item.cenouraElem2);
 
   item["cenouraNum2"] = new Game.Text("2", estiloNumeros);
   item.cenouraNum2.setAnchor(0.5, 0.6);
-  item.cenouraNum2.setPosition(350, 700);
-  item.cenouraNum2.setAlpha(0);
-  item.cenouraNum2.disable();
+  item.cenouraNum2.setPosition(1730, 250);
+  //item.cenouraNum2.setAlpha(0);
+  //item.cenouraNum2.disable();
   itensCenouraCiclo.push(item.cenouraNum2);
 
-  item["cenouraSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
-  item.cenouraSetaElem2aElem2b.setColor(0, 0, 0);
-  item.cenouraSetaElem2aElem2b.addArrowAtEnd();
-  item.cenouraSetaElem2aElem2b.setZorder(7);
-  item.cenouraSetaElem2aElem2b.setAlpha(0);
-  item.cenouraSetaElem2aElem2b.disable();
-  itensCenouraCiclo.push(item.cenouraSetaElem2aElem2b);
-
-  item["cenouraElem2b"] = new Game.Item("entamoebaTrofozoito.png");
-  item.cenouraElem2b.setPosition(537, 750);
-  item.cenouraElem2b.setScale(0.53);
-  item.cenouraElem2b.setZorder(6);
-  item.cenouraElem2b.setAlpha(0);
-  item.cenouraElem2b.disable();
-  item.cenouraElem2b.onMouseOver = function() {
-    scene[1].setSubtitle("Desencistamento de <i>E. coli</i>: trofozoíto");
-  }
-  item.cenouraElem2b.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensCenouraCiclo.push(item.cenouraElem2b);
-
-  item["cenouraSetaElem2bEst"] = new Game.Line(537, 750, 920, 800, 4);
-  item.cenouraSetaElem2bEst.setColor(0, 0, 0);
-  item.cenouraSetaElem2bEst.setZorder(7);
-  item.cenouraSetaElem2bEst.setAlpha(0);
-  item.cenouraSetaElem2bEst.disable();
-  itensCenouraCiclo.push(item.cenouraSetaElem2bEst);
-
-  item["cenouraSetaEstElem3a"] = new Game.Line(1000, 780, 1330, 250, 4);
-  item.cenouraSetaEstElem3a.setColor(0, 0, 0);
-  item.cenouraSetaEstElem3a.setZorder(7);
-  item.cenouraSetaEstElem3a.setAlpha(0);
-  item.cenouraSetaEstElem3a.disable();
-  itensCenouraCiclo.push(item.cenouraSetaEstElem3a);
-
-  item["cenouraElem3a"] = new Game.Item("entamoebaTrofozoito.png");
-  item.cenouraElem3a.setPosition(1330, 250);
-  item.cenouraElem3a.setScale(0.42);
-  item.cenouraElem3a.setZorder(6);
-  item.cenouraElem3a.setAlpha(0);
-  item.cenouraElem3a.disable();
-  item.cenouraElem3a.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: trofozoíto");
-  }
-  item.cenouraElem3a.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensCenouraCiclo.push(item.cenouraElem3a);
-
-  item["cenouraNum3"] = new Game.Text("3", estiloNumeros);
-  item.cenouraNum3.setAnchor(0.5, 0.6);
-  item.cenouraNum3.setPosition(1480, 200);
-  item.cenouraNum3.setAlpha(0);
-  item.cenouraNum3.disable();
-  itensCenouraCiclo.push(item.cenouraNum3);
-
-  item["cenouraSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
-  item.cenouraSetaElem3aElem3b.setColor(0, 0, 0);
-  item.cenouraSetaElem3aElem3b.addArrowAtEnd();
-  item.cenouraSetaElem3aElem3b.setZorder(7);
-  item.cenouraSetaElem3aElem3b.setAlpha(0);
-  item.cenouraSetaElem3aElem3b.disable();
-  itensCenouraCiclo.push(item.cenouraSetaElem3aElem3b);
-
-  item["cenouraElem3b"] = new Game.Item("entamoebaCisto.png");
-  item.cenouraElem3b.setPosition(1670, 250);
-  item.cenouraElem3b.setScale(0.55);
-  item.cenouraElem3b.setZorder(6);
-  item.cenouraElem3b.setAlpha(0);
-  item.cenouraElem3b.disable();
-  item.cenouraElem3b.onMouseOver = function() {
-    scene[1].setSubtitle("Encistamento de <i>E. coli</i>: cisto");
-  }
-  item.cenouraElem3b.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensCenouraCiclo.push(item.cenouraElem3b);
-
-  item["cenouraSetaEstElem4"] = new Game.Line(1000, 810, 1180, 800, 4);
-  item.cenouraSetaEstElem4.setColor(0, 0, 0);
-  item.cenouraSetaEstElem4.addArrowAtEnd();
-  item.cenouraSetaEstElem4.setZorder(7);
-  item.cenouraSetaEstElem4.setAlpha(0);
-  item.cenouraSetaEstElem4.disable();
-  itensCenouraCiclo.push(item.cenouraSetaEstElem4);
-
-  item["cenouraNum4"] = new Game.Text("4", estiloNumeros);
-  item.cenouraNum4.setAnchor(0.5, 0.6);
-  item.cenouraNum4.setPosition(1450, 660);
-  item.cenouraNum4.setAlpha(0);
-  item.cenouraNum4.disable();
-  itensCenouraCiclo.push(item.cenouraNum4);
-
-  item["cenouraElem4"] = new Game.Item("fezesComMosca.png");
-  item.cenouraElem4.setPosition(1330, 800);
-  item.cenouraElem4.setScale(0.51);
-  item.cenouraElem4.setZorder(6);
-  item.cenouraElem4.setAlpha(0);
-  item.cenouraElem4.disable();
-  item.cenouraElem4.onMouseOver = function() {
-    scene[1].setSubtitle("Moscas sendo infectadas por fezes com <i>E. coli</i>");
-  }
-  item.cenouraElem4.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensCenouraCiclo.push(item.cenouraElem4);
-
-  item["cenouraSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
-  item.cenouraSetaElem4Elem5.setColor(0, 0, 0);
-  item.cenouraSetaElem4Elem5.setZorder(7);
-  item.cenouraSetaElem4Elem5.setAlpha(0);
-  item.cenouraSetaElem4Elem5.disable();
-  itensCenouraCiclo.push(item.cenouraSetaElem4Elem5);
-
-  item["cenouraNum5"] = new Game.Text("5", estiloNumeros);
-  item.cenouraNum5.setAnchor(0.5, 0.6);
-  item.cenouraNum5.setPosition(1851, 671);
-  item.cenouraNum5.setAlpha(0);
-  item.cenouraNum5.disable();
-  itensCenouraCiclo.push(item.cenouraNum5);
-
-  item["cenouraElem5"] = new Game.Item("entamoebaCisto.png");
-  item.cenouraElem5.setPosition(1700, 800);
-  item.cenouraElem5.setScale(0.56);
-  item.cenouraElem5.setZorder(6);
-  item.cenouraElem5.setAlpha(0);
-  item.cenouraElem5.disable();
-  item.cenouraElem5.onMouseOver = function() {
-    scene[1].setSubtitle("Cisto de <i>E. coli</i>");
-  }
-  item.cenouraElem5.onMouseOut = function() {
-    scene[1].setSubtitle("");
-  }
-  itensCenouraCiclo.push(item.cenouraElem5);
+  item["cenouraSetaEstElem2"] = new Game.Line(1000, 350, 1500, 500, 4);
+  item.cenouraSetaEstElem2.setColor(0, 0, 0);
+  item.cenouraSetaEstElem2.setZorder(7);
+  //item.cenouraSetaEstElem2.setAlpha(0);
+  //item.cenouraSetaEstElem2.disable();
+  itensCenouraCiclo.push(item.cenouraSetaEstElem2);
 
   item["cenouraFechar"] = new Game.Item("botaoFechar.png");
   item.cenouraFechar.setPosition(1840, 70);
