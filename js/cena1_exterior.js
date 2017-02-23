@@ -20,25 +20,55 @@ sceneLoader[1] = function() {
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
 
-  item["chiqueiro"] = new Game.Image("chiqueiro.png");
+  item["chiqueiro"] = new Game.Item("chiqueiro.png");
   item.chiqueiro.setPosition(240, 240);
   item.chiqueiro.setZorder(15);
+  item.chiqueiro.onMouseOver = function() {
+    scene[1].setSubtitle("Chiqueiro");
+  }
+  item.chiqueiro.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
 
-  item["horta"] = new Game.Image("horta.png");
+  item["horta"] = new Game.Item("horta.png");
   item.horta.setPosition(400, 660);
   item.horta.setZorder(10);
+  item.horta.onMouseOver = function() {
+    scene[1].setSubtitle("Horta");
+  }
+  item.horta.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
 
-  item["latrina"] = new Game.Image("latrina.png");
+  item["latrina"] = new Game.Item("latrina.png");
   item.latrina.setPosition(1450, 200);
   item.latrina.setZorder(15);
+  item.latrina.onMouseOver = function() {
+    scene[1].setSubtitle("Fossa");
+  }
+  item.latrina.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
 
-  item["lixeira"] = new Game.Image("lixeira.png");
+  item["lixeira"] = new Game.Item("lixeira.png");
   item.lixeira.setPosition(580, 290);
   item.lixeira.setZorder(16);
+  item.lixeira.onMouseOver = function() {
+    scene[1].setSubtitle("Lixo");
+  }
+  item.lixeira.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
 
-  item["pocoExterior"] = new Game.Image("pocoExterior.png");
+  item["pocoExterior"] = new Game.Item("pocoExterior.png");
   item.pocoExterior.setPosition(1723, 648);
   item.pocoExterior.setZorder(10);
+  item.pocoExterior.onMouseOver = function() {
+    scene[1].setSubtitle("Poço artesiano");
+  }
+  item.pocoExterior.onMouseOut = function() {
+    scene[1].setSubtitle("");
+  }
 
   item["vacaExterior"] = new Game.Image("vacaExterior.png");
   item.vacaExterior.setPosition(938, 250);
@@ -51,9 +81,11 @@ sceneLoader[1] = function() {
   item.setaSalaDeAula.setRotation(180);
   item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {
+    scene[1].setSubtitle("Sala de aula");
     item.setaSalaDeAula.addGlow();
   }
   item.setaSalaDeAula.onMouseOut = function() {
+    scene[1].setSubtitle("");
     item.setaSalaDeAula.removeGlow();
   }
   item.setaSalaDeAula.onClick = function(mouse) {

@@ -37,9 +37,11 @@ sceneLoader[0] = function() {
   item.setaJanela.setScale(0.5);
   item.setaJanela.setZorder(1);
   item.setaJanela.onMouseOver = function() {
+    scene[0].setSubtitle("Ambiente externo");
     item.setaJanela.addGlow();
   }
   item.setaJanela.onMouseOut = function() {
+    scene[0].setSubtitle("");
     item.setaJanela.removeGlow();
   }
   item.setaJanela.onClick = function(mouse) {
@@ -53,9 +55,11 @@ sceneLoader[0] = function() {
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
   item.setaArmario.onMouseOver = function() {
+    scene[0].setSubtitle("Armário");
     item.setaArmario.addGlow();
   }
   item.setaArmario.onMouseOut = function() {
+    scene[0].setSubtitle("");
     item.setaArmario.removeGlow();
   }
   item.setaArmario.onClick = function(mouse) {

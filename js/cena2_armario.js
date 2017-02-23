@@ -26,9 +26,11 @@ sceneLoader[2] = function() {
   item.setaSalaDeAula.setScale(0.5);
   item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {
+    scene[2].setSubtitle("Sala de aula");
     item.setaSalaDeAula.addGlow();
   }
   item.setaSalaDeAula.onMouseOut = function() {
+    scene[2].setSubtitle("");
     item.setaSalaDeAula.removeGlow();
   }
   item.setaSalaDeAula.onClick = function(mouse) {
