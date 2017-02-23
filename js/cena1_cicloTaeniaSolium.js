@@ -262,7 +262,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoSetaElem4Est.disable();
   itensPorcoCiclo.push(item.porcoSetaElem4Est);
 
-  item["porcoSetaEstElem5"] = new Game.Line(950, 800, 1300, 600, 4);
+  item["porcoSetaEstElem5"] = new Game.Line(1080, 815, 1300, 600, 4);
   item.porcoSetaEstElem5.setColor(0, 0, 0);
   item.porcoSetaEstElem5.setZorder(7);
   item.porcoSetaEstElem5.setAlpha(0);
