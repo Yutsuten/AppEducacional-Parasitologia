@@ -319,7 +319,7 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem4);
 
-  item["tomateSetaEstElem5"] = new Game.Line(920, 760, 1165, 790, 4);
+  item["tomateSetaEstElem5"] = new Game.Line(870, 815, 1165, 790, 4);
   item.tomateSetaEstElem5.setColor(0, 0, 0);
   item.tomateSetaEstElem5.addArrowAtEnd();
   item.tomateSetaEstElem5.setZorder(7);
