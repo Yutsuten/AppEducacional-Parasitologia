@@ -67,47 +67,12 @@ function carregaCicloCisticercose() {
       }, currentTime += animationInterval);
 
       setTimeout(function() {
-        item.cenouraElem2a.enable();
-        item.cenouraElem2a.changeAlpha(1, 600);
+        item.cenouraElem2.enable();
+        item.cenouraElem2.changeAlpha(1, 600);
         item.cenouraNum2.enable();
         item.cenouraNum2.changeAlpha(1, 600);
-        item.cenouraSetaElem2aElem2b.enable();
-        item.cenouraSetaElem2aElem2b.changeAlpha(1, 600);
-        item.cenouraElem2b.enable();
-        item.cenouraElem2b.changeAlpha(1, 600);
-        item.cenouraSetaElem2bEst.enable();
-        item.cenouraSetaElem2bEst.changeAlpha(1, 600);
-      }, currentTime += animationInterval);
-
-      setTimeout(function() {
-        item.cenouraSetaEstElem3a.enable();
-        item.cenouraSetaEstElem3a.changeAlpha(1, 600);
-        item.cenouraElem3a.enable();
-        item.cenouraElem3a.changeAlpha(1, 600);
-        item.cenouraNum3.enable();
-        item.cenouraNum3.changeAlpha(1, 600);
-        item.cenouraSetaElem3aElem3b.enable();
-        item.cenouraSetaElem3aElem3b.changeAlpha(1, 600);
-        item.cenouraElem3b.enable();
-        item.cenouraElem3b.changeAlpha(1, 600);
-      }, currentTime += animationInterval);
-
-      setTimeout(function() {
-        item.cenouraSetaEstElem4.enable();
-        item.cenouraSetaEstElem4.changeAlpha(1, 600);
-        item.cenouraNum4.enable();
-        item.cenouraNum4.changeAlpha(1, 600);
-        item.cenouraElem4.enable();
-        item.cenouraElem4.changeAlpha(1, 600);
-      }, currentTime += animationInterval);
-
-      setTimeout(function() {
-        item.cenouraSetaElem4Elem5.enable();
-        item.cenouraSetaElem4Elem5.changeAlpha(1, 600);
-        item.cenouraNum5.enable();
-        item.cenouraNum5.changeAlpha(1, 600);
-        item.cenouraElem5.enable();
-        item.cenouraElem5.changeAlpha(1, 600);
+        item.cenouraSetaEstElem2.enable();
+        item.cenouraSetaEstElem2.changeAlpha(1, 600);
       }, currentTime += animationInterval);
 
       setTimeout(function() {
@@ -127,15 +92,15 @@ function carregaCicloCisticercose() {
   item.estCenouraCiclo.setPosition(960, 550);
   item.estCenouraCiclo.setScale(0.5);
   item.estCenouraCiclo.setZorder(9);
-  //item.estCenouraCiclo.setAlpha(0);
-  //item.estCenouraCiclo.disable();
+  item.estCenouraCiclo.setAlpha(0);
+  item.estCenouraCiclo.disable();
   itensCenouraCiclo.push(item.estCenouraCiclo);
 
   item["cenouraElem1"] = new Game.Item("chorumeLixoCenouras.png");
   item.cenouraElem1.setPosition(400, 500);
   item.cenouraElem1.setZorder(6);
-  //item.cenouraElem1.setAlpha(0);
-  //item.cenouraElem1.disable();
+  item.cenouraElem1.setAlpha(0);
+  item.cenouraElem1.disable();
   item.cenouraElem1.onMouseOver = function() {
     scene[1].setSubtitle("Cisto de <i>Entamoeba coli</i>");
   }
@@ -147,23 +112,23 @@ function carregaCicloCisticercose() {
   item["cenouraNum1"] = new Game.Text("1", estiloNumeros);
   item.cenouraNum1.setAnchor(0.5, 0.6);
   item.cenouraNum1.setPosition(630, 250);
-  //item.cenouraNum1.setAlpha(0);
-  //item.cenouraNum1.disable();
+  item.cenouraNum1.setAlpha(0);
+  item.cenouraNum1.disable();
   itensCenouraCiclo.push(item.cenouraNum1);
 
   item["cenouraSetaElem1Est"] = new Game.Line(680, 500, 900, 500, 4);
   item.cenouraSetaElem1Est.setColor(0, 0, 0);
   item.cenouraSetaElem1Est.addArrowAtBeginning();
   item.cenouraSetaElem1Est.setZorder(7);
-  //item.cenouraSetaElem1Est.setAlpha(0);
-  //item.cenouraSetaElem1Est.disable();
+  item.cenouraSetaElem1Est.setAlpha(0);
+  item.cenouraSetaElem1Est.disable();
   itensCenouraCiclo.push(item.cenouraSetaElem1Est);
 
   item["cenouraElem2"] = new Game.Item("cerebroInfectado.png");
   item.cenouraElem2.setPosition(1500, 500);
   item.cenouraElem2.setZorder(6);
-  //item.cenouraElem2.setAlpha(0);
-  //item.cenouraElem2.disable();
+  item.cenouraElem2.setAlpha(0);
+  item.cenouraElem2.disable();
   item.cenouraElem2.onMouseOver = function() {
     scene[1].setSubtitle("Desencistamento de <i>Entamoeba coli</i>: cisto");
   }
@@ -175,15 +140,15 @@ function carregaCicloCisticercose() {
   item["cenouraNum2"] = new Game.Text("2", estiloNumeros);
   item.cenouraNum2.setAnchor(0.5, 0.6);
   item.cenouraNum2.setPosition(1730, 250);
-  //item.cenouraNum2.setAlpha(0);
-  //item.cenouraNum2.disable();
+  item.cenouraNum2.setAlpha(0);
+  item.cenouraNum2.disable();
   itensCenouraCiclo.push(item.cenouraNum2);
 
   item["cenouraSetaEstElem2"] = new Game.Line(1000, 350, 1500, 500, 4);
   item.cenouraSetaEstElem2.setColor(0, 0, 0);
   item.cenouraSetaEstElem2.setZorder(7);
-  //item.cenouraSetaEstElem2.setAlpha(0);
-  //item.cenouraSetaEstElem2.disable();
+  item.cenouraSetaEstElem2.setAlpha(0);
+  item.cenouraSetaEstElem2.disable();
   itensCenouraCiclo.push(item.cenouraSetaEstElem2);
 
   item["cenouraFechar"] = new Game.Item("botaoFechar.png");
