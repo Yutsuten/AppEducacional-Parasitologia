@@ -176,7 +176,9 @@ Game.Image = function(texture) {
   // Implementing the mouseover and mouseout methods
   this.mouseover = function(mouse) {
     if (Game.Image.allowInteraction && this.onMouseOver != null)
-      this.onMouseOver();
+      setTimeout(function() {
+        objInstance.onMouseOver();
+      }, 25);
   }
   this.mouseout = function(mouse) {
     if (Game.Image.allowInteraction && this.onMouseOut != null)
