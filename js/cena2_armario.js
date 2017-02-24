@@ -33,6 +33,11 @@ sceneLoader[2] = function() {
     scene[2].setSubtitle("");
     item.livroObjetoDeApendizagem.setBrightness(210);
   }
+  item.livroObjetoDeApendizagem.onClick = function(mouse) {
+    scene[2].setSubtitle("");
+    item.livroObjetoDeApendizagem.setBrightness(210);
+    scene[2].openBook("ObjetoDeApendizagem");
+  }
 
   item["livroParasitologia"] = new Game.Item("livroParasitologia.png");
   item.livroParasitologia.setPosition(972, 200);
