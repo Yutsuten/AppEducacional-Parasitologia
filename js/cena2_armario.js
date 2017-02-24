@@ -34,8 +34,7 @@ sceneLoader[2] = function() {
     item.livroObjetoDeApendizagem.setBrightness(210);
   }
   item.livroObjetoDeApendizagem.onClick = function(mouse) {
-    scene[2].setSubtitle("");
-    item.livroObjetoDeApendizagem.setBrightness(210);
+    item.livroObjetoDeApendizagem.onMouseOut();
     scene[2].openBook("ObjetoDeApendizagem");
   }
 
@@ -51,6 +50,10 @@ sceneLoader[2] = function() {
     scene[2].setSubtitle("");
     item.livroParasitologia.setBrightness(210);
   }
+  item.livroParasitologia.onClick = function(mouse) {
+    item.livroParasitologia.onMouseOut();
+    scene[2].openBook("Parasitologia");
+  }
 
   item["livroAmebiase"] = new Game.Item("livroAmebiase.png");
   item.livroAmebiase.setPosition(1218, 196);
@@ -63,6 +66,10 @@ sceneLoader[2] = function() {
   item.livroAmebiase.onMouseOut = function() {
     scene[2].setSubtitle("");
     item.livroAmebiase.setBrightness(210);
+  }
+  item.livroAmebiase.onClick = function(mouse) {
+    item.livroAmebiase.onMouseOut();
+    scene[2].openBook("Amebiase");
   }
 
   item["livroMalaria"] = new Game.Item("livroMalaria.png");
@@ -77,6 +84,10 @@ sceneLoader[2] = function() {
     scene[2].setSubtitle("");
     item.livroMalaria.setBrightness(210);
   }
+  item.livroMalaria.onClick = function(mouse) {
+    item.livroMalaria.onMouseOut();
+    scene[2].openBook("Malaria");
+  }
 
   item["livroToxoplamose"] = new Game.Item("livroToxoplamose.png");
   item.livroToxoplamose.setPosition(850, 590);
@@ -89,6 +100,10 @@ sceneLoader[2] = function() {
   item.livroToxoplamose.onMouseOut = function() {
     scene[2].setSubtitle("");
     item.livroToxoplamose.setBrightness(210);
+  }
+  item.livroToxoplamose.onClick = function(mouse) {
+    item.livroToxoplamose.onMouseOut();
+    scene[2].openBook("Toxoplamose");
   }
 
   item["livroAscaridiase"] = new Game.Item("livroAscaridiase.png");
@@ -103,6 +118,10 @@ sceneLoader[2] = function() {
     scene[2].setSubtitle("");
     item.livroAscaridiase.setBrightness(210);
   }
+  item.livroAscaridiase.onClick = function(mouse) {
+    item.livroAscaridiase.onMouseOut();
+    scene[2].openBook("Ascaridiase");
+  }
 
   item["livroTeniase"] = new Game.Item("livroTeniase.png");
   item.livroTeniase.setPosition(768, 924);
@@ -116,18 +135,26 @@ sceneLoader[2] = function() {
     scene[2].setSubtitle("");
     item.livroTeniase.setBrightness(210);
   }
-
-  item["livroGiardíase"] = new Game.Item("livroGiardíase.png");
-  item.livroGiardíase.setPosition(1168, 1058);
-  item.livroGiardíase.setZorder(20);
-  item.livroGiardíase.setBrightness(210);
-  item.livroGiardíase.onMouseOver = function() {
-    scene[2].setSubtitle("livroGiardíase");
-    item.livroGiardíase.setBrightness(255);
+  item.livroTeniase.onClick = function(mouse) {
+    item.livroTeniase.onMouseOut();
+    scene[2].openBook("Teniase");
   }
-  item.livroGiardíase.onMouseOut = function() {
+
+  item["livroGiardiase"] = new Game.Item("livroGiardiase.png");
+  item.livroGiardiase.setPosition(1168, 1058);
+  item.livroGiardiase.setZorder(20);
+  item.livroGiardiase.setBrightness(210);
+  item.livroGiardiase.onMouseOver = function() {
+    scene[2].setSubtitle("livroGiardiase");
+    item.livroGiardiase.setBrightness(255);
+  }
+  item.livroGiardiase.onMouseOut = function() {
     scene[2].setSubtitle("");
-    item.livroGiardíase.setBrightness(210);
+    item.livroGiardiase.setBrightness(210);
+  }
+  item.livroGiardiase.onClick = function(mouse) {
+    item.livroGiardiase.onMouseOut();
+    scene[2].openBook("Giardiase");
   }
 
   item["livroAgradecimentos"] = new Game.Item("livroAgradecimentos.png");
@@ -141,6 +168,10 @@ sceneLoader[2] = function() {
   item.livroAgradecimentos.onMouseOut = function() {
     scene[2].setSubtitle("");
     item.livroAgradecimentos.setBrightness(210);
+  }
+  item.livroAgradecimentos.onClick = function(mouse) {
+    item.livroAgradecimentos.onMouseOut();
+    scene[2].openBook("Agradecimentos");
   }
 
   // Adiciona uma seta para voltar na sala de aula

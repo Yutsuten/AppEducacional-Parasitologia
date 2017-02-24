@@ -24,7 +24,7 @@ var gameImages = [
   "livroAgradecimentos.png",
   "livroAmebiase.png",
   "livroAscaridiase.png",
-  "livroGiardíase.png",
+  "livroGiardiase.png",
   "livroMalaria.png",
   "livroObjetoDeApendizagem.png",
   "livroParasitologia.png",
