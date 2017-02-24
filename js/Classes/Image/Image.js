@@ -178,7 +178,7 @@ Game.Image = function(texture) {
     if (Game.Image.allowInteraction && this.onMouseOver != null)
       setTimeout(function() {
         objInstance.onMouseOver();
-      }, 25);
+      }, 10);
   }
   this.mouseout = function(mouse) {
     if (Game.Image.allowInteraction && this.onMouseOut != null)
