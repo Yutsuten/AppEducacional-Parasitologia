@@ -398,36 +398,62 @@ function carregaCicloTaeniaSaginata() {
     var animationInterval = 750; // Intervalo entre cada animacao
 
     groupChangeAlpha(itensVacaCiclo, 0, 600);
+    item.estVacaNormal.brightnessTarget = 150;
+    item.estVacaNormal.interactiveTarget = false;
+    item.estVacaNormal.setInteractive(false);
+    scene[1].nextState();
 
     setTimeout(function() {
       groupDisable(itensVacaCiclo);
 
       item.estVacaDoente.enable();
       item.estVacaDoente.changeAlpha(1, 600);
+
+      if (scene[1].state == 1) { // Se ainda nao passou pelos 2 ciclos
+        // Return the background brightness
+        scene[1].background.changeBrightness(210, 600);
+        item.chiqueiro.changeBrightness(210, 600);
+        item.horta.changeBrightness(210, 600);
+        item.latrina.changeBrightness(210, 600);
+        item.lixeira.changeBrightness(210, 600);
+        item.pocoExterior.changeBrightness(210, 600);
+        item.vacaExterior.changeBrightness(210, 600);
+        // Return the students brightness
+        item.estCenouraNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
+        item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
+        item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
+        // Return the interactiveness value
+        item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
+        item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
+        item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
+        item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
+      }
     }, currentTime += animationInterval);
 
-    setTimeout(function() {
-      groupDisable(itensVacaCiclo);
-      item.vacaBalaoSintoma.enable();
-      item.vacaBalaoSintoma.changeAlpha(1, 600);
-      item.vacaTextoSintomas.enable();
-      item.vacaTextoSintomas.changeAlpha(1, 600);
+    if (scene[1].state > 1) {
+      setTimeout(function() {
+        groupDisable(itensVacaCiclo);
+        item.vacaBalaoSintoma.enable();
+        item.vacaBalaoSintoma.changeAlpha(1, 600);
+        item.vacaTextoSintomas.enable();
+        item.vacaTextoSintomas.changeAlpha(1, 600);
 
-      item.vacaAbaPrevencao.enable();
-      item.vacaAbaPrevencao.changeAlpha(1, 600);
-      item.vacaAbaTransmissao.enable();
-      item.vacaAbaTransmissao.changeAlpha(1, 600);
+        item.vacaAbaPrevencao.enable();
+        item.vacaAbaPrevencao.changeAlpha(1, 600);
+        item.vacaAbaTransmissao.enable();
+        item.vacaAbaTransmissao.changeAlpha(1, 600);
 
-      item.vacaBotaoOK.enable();
-      item.vacaBotaoOK.changeAlpha(1, 600);
+        item.vacaBotaoOK.enable();
+        item.vacaBotaoOK.changeAlpha(1, 600);
 
-      item.vacaBalaoPrevencao.setAlpha(1);
-      item.vacaBalaoTransmissao.setAlpha(1);
-      item.vacaAbaSintomas.setAlpha(1);
-      item.vacaBotaoOKhover.setAlpha(1);
-      item.vacaTextoPrevencao.setAlpha(1);
-      item.vacaTextoTransmissao.setAlpha(1);
-    }, currentTime += animationInterval);
+        item.vacaBalaoPrevencao.setAlpha(1);
+        item.vacaBalaoTransmissao.setAlpha(1);
+        item.vacaAbaSintomas.setAlpha(1);
+        item.vacaBotaoOKhover.setAlpha(1);
+        item.vacaTextoPrevencao.setAlpha(1);
+        item.vacaTextoTransmissao.setAlpha(1);
+      }, currentTime += animationInterval);
+    }
 
     setTimeout(function() {
       enableInteractiveness();
@@ -604,11 +630,20 @@ function carregaCicloTaeniaSaginata() {
     var animationInterval = 750; // Intervalo entre cada animacao
 
     groupChangeAlpha(itensVacaDoente, 0, 600);
+    if (scene[1].state == 2) {
+      item.estPorcoDoente.changeAlpha(0, 600);
+    }
 
     setTimeout(function() {
       item.estVacaNormal.enable();
-      item.estVacaNormal.setBrightness(220);
+      item.estVacaNormal.setBrightness(item.estVacaNormal.brightnessTarget);
       item.estVacaNormal.changeAlpha(1, 600);
+
+      if (scene[1].state == 2) {
+        item.estPorcoNormal.enable();
+        item.estPorcoNormal.setBrightness(item.estPorcoNormal.brightnessTarget);
+        item.estPorcoNormal.changeAlpha(1, 600);
+      }
 
       scene[1].background.changeBrightness(210, 600);
       item.chiqueiro.changeBrightness(210, 600);
@@ -618,9 +653,9 @@ function carregaCicloTaeniaSaginata() {
       item.pocoExterior.changeBrightness(210, 600);
       item.vacaExterior.changeBrightness(210, 600);
 
-      item.estCenouraNormal.changeBrightness(210, 600);
-      item.estPocoNormal.changeBrightness(210, 600);
-      item.estPorcoNormal.changeBrightness(210, 600);
+      item.estCenouraNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
+      item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
+      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
       item.setaSalaDeAula.enable();
       item.setaSalaDeAula.changeAlpha(1, 600);
 
@@ -635,10 +670,11 @@ function carregaCicloTaeniaSaginata() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.estCenouraNormal.setInteractive(true);
-      item.estPocoNormal.setInteractive(true);
-      item.estPorcoNormal.setInteractive(true);
-      item.estVacaNormal.setInteractive(true);
+      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
+      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
+      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
+      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
+
       item.setaSalaDeAula.setInteractive(true);
       item.chiqueiro.setInteractive(true);
       item.horta.setInteractive(true);

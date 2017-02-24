@@ -109,12 +109,12 @@ sceneLoader[1] = function() {
         console.log("state 0 -> 1");
         break;
       case 1:
-        if (!item.estVacaNormal.interactive && !item.estPorcoNormal.interactive) {
+        if (!item.estVacaNormal.interactiveTarget && !item.estPorcoNormal.interactiveTarget) {
           scene[1].state = 2;
           item.estCenouraNormal.brightnessTarget = 220;
           item.estCenouraNormal.interactiveTarget = true;
         }
-        console.log("state 1 -> 2");
+        console.log("state 1 -> " + scene[1].state);
         break;
       case 2:
         scene[1].state = 3;
