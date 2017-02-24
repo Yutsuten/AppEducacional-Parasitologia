@@ -9,6 +9,8 @@ var gameImages = [
   // Imagens Sala de Aula
   "salaDeAula_carteiras.png",
   "salaDeAula_mesaProfessor.png",
+  "salaDeAula_caixaDeAreia.png",
+  "salaDeAula_vasoDeFlores.png",
 
   // Imagens Cena Exterior
   "chiqueiro.png",
@@ -100,11 +102,11 @@ var gameImages = [
   "balSintDir.png",
   "balPrevEsq.png",
   "balPrevDir.png",
-  "abaTranHover.png",
+  //"abaTranHover.png",
   "abaTran.png",
-  "abaSintHover.png",
+  //"abaSintHover.png",
   "abaSint.png",
-  "abaPrevHover.png",
+  //"abaPrevHover.png",
   "abaPrev.png",
   "okNormal.png",
   "okHover.png",
