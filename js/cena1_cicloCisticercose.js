@@ -380,10 +380,11 @@ function carregaCicloCisticercose() {
     var animationInterval = 750; // Intervalo entre cada animacao
 
     groupChangeAlpha(itensCenouraDoente, 0, 600);
+    scene[1].nextState();
 
     setTimeout(function() {
       item.estCenouraNormal.enable();
-      item.estCenouraNormal.setBrightness(220);
+      item.estCenouraNormal.setBrightness(item.estCenouraNormal.brightnessTarget);
       item.estCenouraNormal.changeAlpha(1, 600);
 
       scene[1].background.changeBrightness(210, 600);
@@ -394,9 +395,9 @@ function carregaCicloCisticercose() {
       item.pocoExterior.changeBrightness(210, 600);
       item.vacaExterior.changeBrightness(210, 600);
 
-      item.estPocoNormal.changeBrightness(210, 600);
-      item.estVacaNormal.changeBrightness(210, 600);
-      item.estPorcoNormal.changeBrightness(210, 600);
+      item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
+      item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
+      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
       item.setaSalaDeAula.enable();
       item.setaSalaDeAula.changeAlpha(1, 600);
 
@@ -411,10 +412,11 @@ function carregaCicloCisticercose() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.estPocoNormal.setInteractive(true);
-      item.estVacaNormal.setInteractive(true);
-      item.estPorcoNormal.setInteractive(true);
-      item.estCenouraNormal.setInteractive(true);
+      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
+      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
+      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
+      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
+
       item.setaSalaDeAula.setInteractive(true);
       item.chiqueiro.setInteractive(true);
       item.horta.setInteractive(true);

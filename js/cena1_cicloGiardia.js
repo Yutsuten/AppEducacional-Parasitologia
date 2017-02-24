@@ -585,8 +585,6 @@ function carregaCicloGiardia() {
       item.lixeira.setInteractive(true);
       item.pocoExterior.setInteractive(true);
 
-
-
       enableInteractiveness();
     }, currentTime += animationInterval);
 
