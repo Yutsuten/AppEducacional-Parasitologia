@@ -410,6 +410,11 @@ function carregaCicloTaeniaSaginata() {
       item.estVacaDoente.setBrightness(150); // Começa com 150 por causa que os 2 precisam ser vistos
       item.estVacaDoente.changeAlpha(1, 600);
 
+      if (scene[1].state > 1) {
+        item.estPorcoDoente.changeBrightness(255, 600);
+        item.estVacaDoente.changeBrightness(255, 600);
+      }
+
       if (scene[1].state == 1) { // Se ainda nao passou pelos 2 ciclos
         // Return the background brightness
         scene[1].background.changeBrightness(210, 600);
@@ -432,11 +437,6 @@ function carregaCicloTaeniaSaginata() {
     }, currentTime += animationInterval);
 
     if (scene[1].state > 1) {
-      setTimeout(function() {
-        item.estPorcoDoente.changeBrightness(255, 600);
-        item.estVacaDoente.changeBrightness(255, 600);
-      }, currentTime += animationInterval);
-
       setTimeout(function() {
         groupDisable(itensVacaCiclo);
         item.vacaBalaoSintoma.enable();
