@@ -156,6 +156,8 @@ sceneLoader[2] = function() {
     changeScene(0); // Muda para a cena exterior
   }
 
+  carregaLivroAberto();
+
   scene[2].addAllItemsToScene();
 
 }
