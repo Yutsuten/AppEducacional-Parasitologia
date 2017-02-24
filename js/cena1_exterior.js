@@ -77,16 +77,17 @@ sceneLoader[1] = function() {
   // Adiciona uma seta para voltar na sala de aula
   item["setaSalaDeAula"] = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(210, 480);
+  item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);
   item.setaSalaDeAula.setRotation(180);
   item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {
     scene[1].setSubtitle("Sala de aula");
-    item.setaSalaDeAula.addGlow();
+    item.setaSalaDeAula.setBrightness(255);
   }
   item.setaSalaDeAula.onMouseOut = function() {
     scene[1].setSubtitle("");
-    item.setaSalaDeAula.removeGlow();
+    item.setaSalaDeAula.setBrightness(220);
   }
   item.setaSalaDeAula.onClick = function(mouse) {
     changeScene(0); // Muda para a sala de aula

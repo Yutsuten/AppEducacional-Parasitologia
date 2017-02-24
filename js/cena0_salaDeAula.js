@@ -56,15 +56,16 @@ sceneLoader[0] = function() {
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
+  item.setaJanela.setBrightness(220);
   item.setaJanela.setScale(0.3);
   item.setaJanela.setZorder(1);
   item.setaJanela.onMouseOver = function() {
     scene[0].setSubtitle("Ambiente externo");
-    item.setaJanela.addGlow();
+    item.setaJanela.setBrightness(255);
   }
   item.setaJanela.onMouseOut = function() {
     scene[0].setSubtitle("");
-    item.setaJanela.removeGlow();
+    item.setaJanela.setBrightness(220);
   }
   item.setaJanela.onClick = function(mouse) {
     changeScene(1); // Muda para a cena exterior
@@ -73,16 +74,17 @@ sceneLoader[0] = function() {
   // Adiciona uma seta para levar ao armario
   item["setaArmario"] = new Game.Item("seta.png");
   item.setaArmario.setPosition(210, 480);
+  item.setaArmario.setBrightness(220);
   item.setaArmario.setScale(0.3);
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
   item.setaArmario.onMouseOver = function() {
     scene[0].setSubtitle("Armário");
-    item.setaArmario.addGlow();
+    item.setaArmario.setBrightness(255);
   }
   item.setaArmario.onMouseOut = function() {
     scene[0].setSubtitle("");
-    item.setaArmario.removeGlow();
+    item.setaArmario.setBrightness(220);
   }
   item.setaArmario.onClick = function(mouse) {
     changeScene(2); // Muda para a cena exterior
