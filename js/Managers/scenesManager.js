@@ -61,9 +61,9 @@ function sceneFade() {
   }
   // Finished animation
   else {
+    scene[currentScene].setFade(1);
     scene[lastScene].enableSceneInteractiveness();
     scene[currentScene].enableSceneInteractiveness();
-    scene[currentScene].setFade(1);
     clearInterval(sceneFadeInterval); // Stop calling itself
   }
   UpdateScreen();

@@ -92,6 +92,38 @@ sceneLoader[1] = function() {
     changeScene(0); // Muda para a sala de aula
   }
 
+  // Estados da cena
+  scene[1].state = 0;
+  scene[1].nextState = function() {
+    switch (scene[1].state) {
+      case 0:
+        scene[1].state = 1;
+        item.estPocoNormal.setBrightness(150);
+        item.estPocoNormal.setInteractive(false);
+        item.estVacaNormal.setBrightness(220);
+        item.estVacaNormal.setInteractive(true);
+        item.estPorcoNormal.setBrightness(220);
+        item.estPorcoNormal.setInteractive(true);
+        break;
+      case 1:
+        if (!item.estVacaNormal.interactive && !item.estPorcoNormal.interactive) {
+          scene[1].state = 2;
+          item.estCenouraNormal.setBrightness(220);
+          item.estCenouraNormal.setInteractive(true);
+        }
+        break;
+      case 2:
+        scene[1].state = 3;
+        item.estPocoNormal.setBrightness(220);
+        item.estPocoNormal.setInteractive(true);
+        item.estVacaNormal.setBrightness(220);
+        item.estVacaNormal.setInteractive(true);
+        item.estPorcoNormal.setBrightness(220);
+        item.estPorcoNormal.setInteractive(true);
+        break;
+    }
+  }
+
   // Carrega ciclos
   carregaCicloGiardia();
   carregaCicloTaeniaSaginata();

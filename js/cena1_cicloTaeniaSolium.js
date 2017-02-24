@@ -6,7 +6,8 @@ function carregaCicloTaeniaSolium() {
   item["estPorcoNormal"] = new Game.Item("estHjpnSdv.png");
   item.estPorcoNormal.setPosition(150, 308);
   item.estPorcoNormal.setZorder(11);
-  item.estPorcoNormal.setBrightness(220);
+  item.estPorcoNormal.setBrightness(150);
+  item.estPorcoNormal.setInteractive(false);
   item.estPorcoNormal.onMouseOver = function() {
     item.estPorcoNormal.setBrightness(255);
     scene[1].setSubtitle("Teníase");

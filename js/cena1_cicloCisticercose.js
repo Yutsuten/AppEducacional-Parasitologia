@@ -7,7 +7,8 @@ function carregaCicloCisticercose() {
   item.estCenouraNormal.setPosition(375, 560);
   item.estCenouraNormal.setScale(0.7);
   item.estCenouraNormal.setZorder(9);
-  item.estCenouraNormal.setBrightness(220);
+  item.estCenouraNormal.setBrightness(150);
+  item.estCenouraNormal.setInteractive(false);
   item.estCenouraNormal.onMouseOver = function() {
     item.estCenouraNormal.setBrightness(255);
     scene[1].setSubtitle("Cisticercose");
