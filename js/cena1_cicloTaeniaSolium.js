@@ -408,6 +408,7 @@ function carregaCicloTaeniaSolium() {
       groupDisable(itensPorcoCiclo);
 
       item.estPorcoDoente.enable();
+      item.estPorcoDoente.setBrightness(150); // Começa com 150 por causa que os 2 precisam ser vistos
       item.estPorcoDoente.changeAlpha(1, 600);
 
       if (scene[1].state == 1) { // Se ainda nao passou pelos 2 ciclos
@@ -432,6 +433,11 @@ function carregaCicloTaeniaSolium() {
     }, currentTime += animationInterval);
 
     if (scene[1].state > 1) {
+      setTimeout(function() {
+        item.estPorcoDoente.changeBrightness(255, 600);
+        item.estVacaDoente.changeBrightness(255, 600);
+      }, currentTime += animationInterval);
+
       setTimeout(function() {
         groupDisable(itensPorcoCiclo);
         item.porcoBalaoSintoma.enable();
