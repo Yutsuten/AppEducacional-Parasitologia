@@ -21,6 +21,17 @@ sceneLoader[0] = function() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
 
+  item["caixaDeAreia"] = new Game.Item("salaDeAula_caixaDeAreia.png");
+  item.caixaDeAreia.setPosition(554, 478);
+  item.caixaDeAreia.setZorder(20);
+  item.caixaDeAreia.setBrightness(210);
+  item.caixaDeAreia.onMouseOver = function() {
+    scene[0].setSubtitle("Caixa de areia");
+  }
+  item.caixaDeAreia.onMouseOut = function() {
+    scene[0].setSubtitle("");
+  }
+
   item["carteiras"] = new Game.Image("salaDeAula_carteiras.png");
   item.carteiras.setPosition(960, 857);
   item.carteiras.setZorder(10);
@@ -30,6 +41,17 @@ sceneLoader[0] = function() {
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);
   item.mesaProfessor.setBrightness(200);
+
+  item["vasoDeFlores"] = new Game.Item("salaDeAula_vasoDeFlores.png");
+  item.vasoDeFlores.setPosition(1630, 400);
+  item.vasoDeFlores.setZorder(20);
+  item.vasoDeFlores.setBrightness(210);
+  item.vasoDeFlores.onMouseOver = function() {
+    scene[0].setSubtitle("Vaso com água parada");
+  }
+  item.vasoDeFlores.onMouseOut = function() {
+    scene[0].setSubtitle("");
+  }
 
   // Adiciona uma seta para levar a cena externa
   item["setaJanela"] = new Game.Item("seta.png");

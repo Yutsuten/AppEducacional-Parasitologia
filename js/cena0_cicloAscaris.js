@@ -24,6 +24,8 @@ function carregaCicloAscaris() {
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
+    item.caixaDeAreia.changeBrightness(100, 600);
+    item.vasoDeFlores.changeBrightness(100, 600);
 
     item.estBananaNormal.changeBrightness(100, 600);
     item.estPernNormal.changeBrightness(100, 600);
@@ -37,6 +39,8 @@ function carregaCicloAscaris() {
     item.estTomateNormal.setInteractive(false);
     item.setaJanela.setInteractive(false);
     item.setaArmario.setInteractive(false);
+    item.caixaDeAreia.setInteractive(false);
+    item.vasoDeFlores.setInteractive(false);
 
     setTimeout(function() {
       scene[0].setSubtitle("");
@@ -608,6 +612,8 @@ function carregaCicloAscaris() {
       scene[0].background.changeBrightness(210, 600);
       item.carteiras.changeBrightness(210, 600);
       item.mesaProfessor.changeBrightness(210, 600);
+      item.caixaDeAreia.changeBrightness(210, 600);
+      item.vasoDeFlores.changeBrightness(210, 600);
 
       item.estBananaNormal.changeBrightness(210, 600);
       item.estPernNormal.changeBrightness(210, 600);
@@ -634,6 +640,8 @@ function carregaCicloAscaris() {
       item.estTomateNormal.setInteractive(true);
       item.setaJanela.setInteractive(true);
       item.setaArmario.setInteractive(true);
+      item.caixaDeAreia.setInteractive(true);
+      item.vasoDeFlores.setInteractive(true);
 
       enableInteractiveness();
     }, currentTime += animationInterval);

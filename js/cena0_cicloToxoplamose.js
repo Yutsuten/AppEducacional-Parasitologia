@@ -4,7 +4,7 @@ function carregaCicloToxoplasmose() {
 
   // Adicionando o aluno
   item["estGatoNormal"] = new Game.Item("estMjpnSdv.png");
-  item.estGatoNormal.setPosition(610, 455);
+  item.estGatoNormal.setPosition(660, 455);
   item.estGatoNormal.setZorder(11);
   item.estGatoNormal.setBrightness(220);
   item.estGatoNormal.onMouseOver = function() {
@@ -24,6 +24,8 @@ function carregaCicloToxoplasmose() {
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);
     item.mesaProfessor.changeBrightness(100, 600);
+    item.caixaDeAreia.changeBrightness(100, 600);
+    item.vasoDeFlores.changeBrightness(100, 600);
 
     item.estTomateNormal.changeBrightness(100, 600);
     item.estPernNormal.changeBrightness(100, 600);
@@ -37,6 +39,8 @@ function carregaCicloToxoplasmose() {
     item.estGatoNormal.setInteractive(false);
     item.setaJanela.setInteractive(false);
     item.setaArmario.setInteractive(false);
+    item.caixaDeAreia.setInteractive(false);
+    item.vasoDeFlores.setInteractive(false);
 
     setTimeout(function() {
       scene[0].setSubtitle("");
@@ -478,6 +482,8 @@ function carregaCicloToxoplasmose() {
       scene[0].background.changeBrightness(210, 600);
       item.carteiras.changeBrightness(210, 600);
       item.mesaProfessor.changeBrightness(210, 600);
+      item.caixaDeAreia.changeBrightness(210, 600);
+      item.vasoDeFlores.changeBrightness(210, 600);
 
       item.estTomateNormal.changeBrightness(210, 600);
       item.estPernNormal.changeBrightness(210, 600);
@@ -504,6 +510,8 @@ function carregaCicloToxoplasmose() {
       item.estGatoNormal.setInteractive(true);
       item.setaJanela.setInteractive(true);
       item.setaArmario.setInteractive(true);
+      item.caixaDeAreia.setInteractive(true);
+      item.vasoDeFlores.setInteractive(true);
 
       enableInteractiveness();
     }, currentTime += animationInterval);
