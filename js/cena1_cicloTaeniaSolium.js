@@ -541,7 +541,7 @@ function carregaCicloTaeniaSolium() {
   item["porcoAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.porcoAbaPrevencao.setPosition(432+244+550+270, 71);
   item.porcoAbaPrevencao.setScale(0.25);
-  item.porcoAbaPrevencao.setZorder(7);
+  item.porcoAbaPrevencao.setZorder(8);
   item.porcoAbaPrevencao.setAlpha(0);
   item.porcoAbaPrevencao.disable();
   item.porcoAbaPrevencao.onClick = function() {
@@ -580,7 +580,7 @@ function carregaCicloTaeniaSolium() {
   item["porcoAbaTransmissao"] = new Game.Item("abaTran.png");
   item.porcoAbaTransmissao.setPosition(432+490+550+270, 71);
   item.porcoAbaTransmissao.setScale(0.25);
-  item.porcoAbaTransmissao.setZorder(7);
+  item.porcoAbaTransmissao.setZorder(9);
   item.porcoAbaTransmissao.setAlpha(0);
   item.porcoAbaTransmissao.disable();
   item.porcoAbaTransmissao.onClick = function() {

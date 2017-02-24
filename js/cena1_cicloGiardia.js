@@ -445,7 +445,7 @@ function carregaCicloGiardia() {
   item["pocoAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.pocoAbaPrevencao.setPosition(432+232+80, 71);
   item.pocoAbaPrevencao.setScale(0.25);
-  item.pocoAbaPrevencao.setZorder(7);
+  item.pocoAbaPrevencao.setZorder(8);
   item.pocoAbaPrevencao.setAlpha(0);
   item.pocoAbaPrevencao.disable();
   item.pocoAbaPrevencao.onClick = function() {
@@ -484,7 +484,7 @@ function carregaCicloGiardia() {
   item["pocoAbaTransmissao"] = new Game.Item("abaTran.png");
   item.pocoAbaTransmissao.setPosition(432+482+80, 71);
   item.pocoAbaTransmissao.setScale(0.25);
-  item.pocoAbaTransmissao.setZorder(7);
+  item.pocoAbaTransmissao.setZorder(9);
   item.pocoAbaTransmissao.setAlpha(0);
   item.pocoAbaTransmissao.disable();
   item.pocoAbaTransmissao.onClick = function() {

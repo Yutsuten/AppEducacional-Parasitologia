@@ -503,7 +503,7 @@ function carregaCicloAscaris() {
   item["tomateAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.tomateAbaPrevencao.setPosition(432+232-260, 71);
   item.tomateAbaPrevencao.setScale(0.25);
-  item.tomateAbaPrevencao.setZorder(7);
+  item.tomateAbaPrevencao.setZorder(8);
   item.tomateAbaPrevencao.setAlpha(0);
   item.tomateAbaPrevencao.disable();
   item.tomateAbaPrevencao.onClick = function() {
@@ -542,7 +542,7 @@ function carregaCicloAscaris() {
   item["tomateAbaTransmissao"] = new Game.Item("abaTran.png");
   item.tomateAbaTransmissao.setPosition(432+482-260, 71);
   item.tomateAbaTransmissao.setScale(0.25);
-  item.tomateAbaTransmissao.setZorder(7);
+  item.tomateAbaTransmissao.setZorder(9);
   item.tomateAbaTransmissao.setAlpha(0);
   item.tomateAbaTransmissao.disable();
   item.tomateAbaTransmissao.onClick = function() {

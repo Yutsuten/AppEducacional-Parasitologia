@@ -284,7 +284,7 @@ function carregaCicloCisticercose() {
   item["cenouraAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.cenouraAbaPrevencao.setPosition(432+244+550-150, 71);
   item.cenouraAbaPrevencao.setScale(0.25);
-  item.cenouraAbaPrevencao.setZorder(7);
+  item.cenouraAbaPrevencao.setZorder(8);
   item.cenouraAbaPrevencao.setAlpha(0);
   item.cenouraAbaPrevencao.disable();
   item.cenouraAbaPrevencao.onClick = function() {
@@ -323,7 +323,7 @@ function carregaCicloCisticercose() {
   item["cenouraAbaTransmissao"] = new Game.Item("abaTran.png");
   item.cenouraAbaTransmissao.setPosition(432+490+550-150, 71);
   item.cenouraAbaTransmissao.setScale(0.25);
-  item.cenouraAbaTransmissao.setZorder(7);
+  item.cenouraAbaTransmissao.setZorder(9);
   item.cenouraAbaTransmissao.setAlpha(0);
   item.cenouraAbaTransmissao.disable();
   item.cenouraAbaTransmissao.onClick = function() {

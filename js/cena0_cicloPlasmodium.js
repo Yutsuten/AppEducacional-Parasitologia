@@ -501,7 +501,7 @@ function carregaCicloPlasmodium() {
   item["pernAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.pernAbaPrevencao.setPosition(432+232+300, 71);
   item.pernAbaPrevencao.setScale(0.25);
-  item.pernAbaPrevencao.setZorder(7);
+  item.pernAbaPrevencao.setZorder(8);
   item.pernAbaPrevencao.setAlpha(0);
   item.pernAbaPrevencao.disable();
   item.pernAbaPrevencao.onClick = function() {
@@ -540,7 +540,7 @@ function carregaCicloPlasmodium() {
   item["pernAbaTransmissao"] = new Game.Item("abaTran.png");
   item.pernAbaTransmissao.setPosition(432+482+300, 71);
   item.pernAbaTransmissao.setScale(0.25);
-  item.pernAbaTransmissao.setZorder(7);
+  item.pernAbaTransmissao.setZorder(9);
   item.pernAbaTransmissao.setAlpha(0);
   item.pernAbaTransmissao.disable();
   item.pernAbaTransmissao.onClick = function() {
