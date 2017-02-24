@@ -20,6 +20,18 @@ var gameImages = [
   "pocoExterior.png",
   "vacaExterior.png",
 
+  // Imagens Armario
+  "livroAgradecimentos.png",
+  "livroAmebiase.png",
+  "livroAscaridiase.png",
+  "livroGiardíase.png",
+  "livroMalaria.png",
+  "livroObjetoDeApendizagem.png",
+  "livroParasitologia.png",
+  "livroTeniase.png",
+  "livroToxoplamose.png",
+  "livroAberto.png",
+
   // Ciclo do Entamoeba Coli (banana)
   "estHprdClo.png",
   "estHprdDte.png",

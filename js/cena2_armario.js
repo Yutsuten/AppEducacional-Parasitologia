@@ -23,12 +23,12 @@ sceneLoader[2] = function() {
   // Adiciona uma seta para voltar na sala de aula
   item["setaSalaDeAula"] = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(1735, 480);
-  item.setaSalaDeAula.setBrightness(255);
+  item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);
   item.setaSalaDeAula.setInteractive(true);
   item.setaSalaDeAula.onMouseOver = function() {
     scene[2].setSubtitle("Sala de aula");
-    item.setaSalaDeAula.setBrightness(220);
+    item.setaSalaDeAula.setBrightness(255);
   }
   item.setaSalaDeAula.onMouseOut = function() {
     scene[2].setSubtitle("");
