@@ -98,30 +98,47 @@ sceneLoader[1] = function() {
     switch (scene[1].state) {
       case 0:
         scene[1].state = 1;
-        item.estPocoNormal.setBrightness(150);
-        item.estPocoNormal.setInteractive(false);
-        item.estVacaNormal.setBrightness(220);
-        item.estVacaNormal.setInteractive(true);
-        item.estPorcoNormal.setBrightness(220);
-        item.estPorcoNormal.setInteractive(true);
+        item.estPocoNormal.brightnessTarget = 150;
+        item.estPocoNormal.interactiveTarget = false;
+        item.estVacaNormal.brightnessTarget = 220;
+        item.estVacaNormal.interactiveTarget = true;
+        item.estPorcoNormal.brightnessTarget = 220;
+        item.estPorcoNormal.interactiveTarget = true;
+        item.estCenouraNormal.brightnessTarget = 150;
+        item.estCenouraNormal.interactiveTarget = false;
+        console.log("state 0 -> 1");
         break;
       case 1:
         if (!item.estVacaNormal.interactive && !item.estPorcoNormal.interactive) {
           scene[1].state = 2;
-          item.estCenouraNormal.setBrightness(220);
-          item.estCenouraNormal.setInteractive(true);
+          item.estCenouraNormal.brightnessTarget = 220;
+          item.estCenouraNormal.interactiveTarget = true;
         }
+        console.log("state 1 -> 2");
         break;
       case 2:
         scene[1].state = 3;
-        item.estPocoNormal.setBrightness(220);
-        item.estPocoNormal.setInteractive(true);
-        item.estVacaNormal.setBrightness(220);
-        item.estVacaNormal.setInteractive(true);
-        item.estPorcoNormal.setBrightness(220);
-        item.estPorcoNormal.setInteractive(true);
+        item.estPocoNormal.brightnessTarget = 220;
+        item.estPocoNormal.interactiveTarget = true;
+        item.estVacaNormal.brightnessTarget = 220;
+        item.estVacaNormal.interactiveTarget = true;
+        item.estPorcoNormal.brightnessTarget = 220;
+        item.estPorcoNormal.interactiveTarget = true;
+        console.log("state 2 -> 3");
+        break;
+      case 3:
+      item.estPocoNormal.brightnessTarget = 220;
+      item.estPocoNormal.interactiveTarget = true;
+      item.estVacaNormal.brightnessTarget = 220;
+      item.estVacaNormal.interactiveTarget = true;
+      item.estPorcoNormal.brightnessTarget = 220;
+      item.estPorcoNormal.interactiveTarget = true;
+      item.estCenouraNormal.brightnessTarget = 220;
+      item.estCenouraNormal.interactiveTarget = true;
+        console.log("state 3");
         break;
     }
+    UpdateScreen();
   }
 
   // Carrega ciclos

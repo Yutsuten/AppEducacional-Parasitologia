@@ -541,10 +541,11 @@ function carregaCicloGiardia() {
     var animationInterval = 750; // Intervalo entre cada animacao
 
     groupChangeAlpha(itensPocoDoente, 0, 600);
+    scene[1].nextState();
 
     setTimeout(function() {
       item.estPocoNormal.enable();
-      item.estPocoNormal.setBrightness(220);
+      item.estPocoNormal.setBrightness(item.estPocoNormal.brightnessTarget);
       item.estPocoNormal.changeAlpha(1, 600);
 
       scene[1].background.changeBrightness(210, 600);
@@ -555,9 +556,9 @@ function carregaCicloGiardia() {
       item.pocoExterior.changeBrightness(210, 600);
       item.vacaExterior.changeBrightness(210, 600);
 
-      item.estCenouraNormal.changeBrightness(210, 600);
-      item.estVacaNormal.changeBrightness(210, 600);
-      item.estPorcoNormal.changeBrightness(210, 600);
+      item.estCenouraNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
+      item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
+      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
       item.setaSalaDeAula.enable();
       item.setaSalaDeAula.changeAlpha(1, 600);
 
@@ -572,16 +573,19 @@ function carregaCicloGiardia() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.estCenouraNormal.setInteractive(true);
-      item.estVacaNormal.setInteractive(true);
-      item.estPorcoNormal.setInteractive(true);
-      item.estPocoNormal.setInteractive(true);
+      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
+      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
+      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
+      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
+
       item.setaSalaDeAula.setInteractive(true);
       item.chiqueiro.setInteractive(true);
       item.horta.setInteractive(true);
       item.latrina.setInteractive(true);
       item.lixeira.setInteractive(true);
       item.pocoExterior.setInteractive(true);
+
+
 
       enableInteractiveness();
     }, currentTime += animationInterval);
