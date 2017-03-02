@@ -13,7 +13,7 @@ Game.Scene = function() {
   var itemInteractiveness = [];
   var itemsArray = [];
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
-  var subtitle = new MultiStyleText("",
+  var subtitle = new Game.Text("",
     {
       "default": {fontFamily: "Book Antiqua", fontSize: "60px",
         //stroke: 'black', strokeThickness: 10,

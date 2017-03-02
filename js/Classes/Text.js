@@ -3,7 +3,7 @@
 // Add Text class to Game
 Game.Text = function(text, style) {
   // Class initialization
-  PIXI.Text.apply(this, arguments);
+  MultiStyleText.apply(this, arguments);
 
   // PROPERTIES
   // Public properties
@@ -72,5 +72,5 @@ Game.Text = function(text, style) {
 
 }
 
-Game.Text.prototype = Object.create(PIXI.Text.prototype); // Inherance from PIXI.Sprite
+Game.Text.prototype = Object.create(MultiStyleText.prototype); // Inherance from PIXI.Sprite
 Game.Text.prototype.constructor = Game.Text;

@@ -5,10 +5,12 @@ function carregaLivroAberto() {
 
   // Criando a variavel que tera todos os livros
   var livro = {};
-  var estiloTextoLivro = {fontFamily: "Book Antiqua", fontSize: "40px",
+  var estiloTextoLivro = {
+    "default": {fontFamily: "Book Antiqua", fontSize: "40px",
     //stroke: 'black', strokeThickness: 10,
     dropShadow: true, dropShadowBlur: 10,
     fill: 0xFFFFFF, align: "left"
+    }
   };
   var paginaAtual = null;
 
