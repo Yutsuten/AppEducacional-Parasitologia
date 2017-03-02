@@ -22,5 +22,5 @@ loader.add(gameImages)
     console.log("Finish");
 
     // Initial Scene
-    setScene(2);
+    setScene(0);
   });
