@@ -1,15 +1,19 @@
 var estiloNumeros = {
-  fontFamily: "CircleCaps",
-  dropShadow: true,
-  dropShadowBlur: 10,
-  fill: 0xFFFFFF,
-  fontSize: "200px"
+  "default" : {
+    fontFamily: "CircleCaps",
+    dropShadow: true,
+    dropShadowBlur: 10,
+    fill: 0xFFFFFF,
+    fontSize: "200px"
+  }
 }
 
 var estiloInfoBalao = {
-  fontFamily: "Book Antiqua",
-  fill: 0x000000,
-  fontSize: "40px"
+  "default" : {
+    fontFamily: "Book Antiqua",
+    fill: 0x010101,
+    fontSize: "40px"
+  }
 }
 
 function carregaCicloEhistolytica() {
