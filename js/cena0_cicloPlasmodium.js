@@ -3,7 +3,7 @@ function carregaCicloPlasmodium() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estPernNormal"] = new Game.Item("estMngrSdv.png");
+  item.estPernNormal = new Game.Item("estMngrSdv.png");
   item.estPernNormal.setPosition(1586, 838);
   item.estPernNormal.setZorder(9);
   item.estPernNormal.setBrightness(220);
@@ -143,7 +143,7 @@ function carregaCicloPlasmodium() {
   var itensPernCiclo = [];
 
   // Imagens ciclo
-  item["estPernCiclo"] = new Game.Image("estMngrClo.png");
+  item.estPernCiclo = new Game.Image("estMngrClo.png");
   item.estPernCiclo.setPosition(960, 550);
   item.estPernCiclo.setScale(0.5);
   item.estPernCiclo.setZorder(9);
@@ -151,7 +151,7 @@ function carregaCicloPlasmodium() {
   item.estPernCiclo.disable();
   itensPernCiclo.push(item.estPernCiclo);
 
-  item["pernElem1"] = new Game.Item("mosquito.png");
+  item.pernElem1 = new Game.Item("mosquito.png");
   item.pernElem1.setPosition(550, 250);
   item.pernElem1.setScale(0.4);
   item.pernElem1.setZorder(6);
@@ -165,21 +165,21 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem1);
 
-  item["pernNum1"] = new Game.Text("1", estiloNumeros);
+  item.pernNum1 = new Game.Text("1", estiloNumeros);
   item.pernNum1.setAnchor(0.5, 0.6);
   item.pernNum1.setPosition(650, 140);
   item.pernNum1.setAlpha(0);
   item.pernNum1.disable();
   itensPernCiclo.push(item.pernNum1);
 
-  item["pernSetaElem1Est"] = new Game.Line(550, 250, 725, 700, 4);
+  item.pernSetaElem1Est = new Game.Line(550, 250, 725, 700, 4);
   item.pernSetaElem1Est.setColor(0, 0, 0);
   item.pernSetaElem1Est.setZorder(7);
   item.pernSetaElem1Est.setAlpha(0);
   item.pernSetaElem1Est.disable();
   itensPernCiclo.push(item.pernSetaElem1Est);
 
-  item["pernElem2"] = new Game.Item("picada.png");
+  item.pernElem2 = new Game.Item("picada.png");
   item.pernElem2.setPosition(330, 440);
   item.pernElem2.setScale(0.49);
   item.pernElem2.setZorder(6);
@@ -193,21 +193,21 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem2);
 
-  item["pernNum2"] = new Game.Text("2", estiloNumeros);
+  item.pernNum2 = new Game.Text("2", estiloNumeros);
   item.pernNum2.setAnchor(0.5, 0.6);
   item.pernNum2.setPosition(220, 310);
   item.pernNum2.setAlpha(0);
   item.pernNum2.disable();
   itensPernCiclo.push(item.pernNum2);
 
-  item["pernSetaElem2Est"] = new Game.Line(330, 440, 715, 710, 4);
+  item.pernSetaElem2Est = new Game.Line(330, 440, 715, 710, 4);
   item.pernSetaElem2Est.setColor(0, 0, 0);
   item.pernSetaElem2Est.setZorder(7);
   item.pernSetaElem2Est.setAlpha(0);
   item.pernSetaElem2Est.disable();
   itensPernCiclo.push(item.pernSetaElem2Est);
 
-  item["pernElem3"] = new Game.Item("esporozoito.png");
+  item.pernElem3 = new Game.Item("esporozoito.png");
   item.pernElem3.setPosition(200, 820);
   item.pernElem3.setScale(0.42);
   item.pernElem3.setZorder(6);
@@ -221,14 +221,14 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem3);
 
-  item["pernNum3"] = new Game.Text("3", estiloNumeros);
+  item.pernNum3 = new Game.Text("3", estiloNumeros);
   item.pernNum3.setAnchor(0.5, 0.6);
   item.pernNum3.setPosition(310, 710);
   item.pernNum3.setAlpha(0);
   item.pernNum3.disable();
   itensPernCiclo.push(item.pernNum3);
 
-  item["pernSetaElem3aElem4"] = new Game.Line(200, 820, 385, 820, 4);
+  item.pernSetaElem3aElem4 = new Game.Line(200, 820, 385, 820, 4);
   item.pernSetaElem3aElem4.setColor(0, 0, 0);
   item.pernSetaElem3aElem4.addArrowAtEnd();
   item.pernSetaElem3aElem4.setZorder(7);
@@ -236,14 +236,14 @@ function carregaCicloPlasmodium() {
   item.pernSetaElem3aElem4.disable();
   itensPernCiclo.push(item.pernSetaElem3aElem4);
 
-  item["pernNum4"] = new Game.Text("4", estiloNumeros);
+  item.pernNum4 = new Game.Text("4", estiloNumeros);
   item.pernNum4.setAnchor(0.5, 0.6);
   item.pernNum4.setPosition(470, 660);
   item.pernNum4.setAlpha(0);
   item.pernNum4.disable();
   itensPernCiclo.push(item.pernNum4);
 
-  item["pernElem4"] = new Game.Item("merozoito.png");
+  item.pernElem4 = new Game.Item("merozoito.png");
   item.pernElem4.setPosition(530, 820);
   item.pernElem4.setScale(0.49);
   item.pernElem4.setZorder(6);
@@ -257,28 +257,28 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem4);
 
-  item["pernSetaElem4Est"] = new Game.Line(530, 820, 830, 720, 4);
+  item.pernSetaElem4Est = new Game.Line(530, 820, 830, 720, 4);
   item.pernSetaElem4Est.setColor(0, 0, 0);
   item.pernSetaElem4Est.setZorder(7);
   item.pernSetaElem4Est.setAlpha(0);
   item.pernSetaElem4Est.disable();
   itensPernCiclo.push(item.pernSetaElem4Est);
 
-  item["pernSetaEstElem5"] = new Game.Line(980, 630, 1260, 270, 4);
+  item.pernSetaEstElem5 = new Game.Line(980, 630, 1260, 270, 4);
   item.pernSetaEstElem5.setColor(0, 0, 0);
   item.pernSetaEstElem5.setZorder(7);
   item.pernSetaEstElem5.setAlpha(0);
   item.pernSetaEstElem5.disable();
   itensPernCiclo.push(item.pernSetaEstElem5);
 
-  item["pernNum5"] = new Game.Text("5", estiloNumeros);
+  item.pernNum5 = new Game.Text("5", estiloNumeros);
   item.pernNum5.setAnchor(0.5, 0.6);
   item.pernNum5.setPosition(1390, 140);
   item.pernNum5.setAlpha(0);
   item.pernNum5.disable();
   itensPernCiclo.push(item.pernNum5);
 
-  item["pernElem5"] = new Game.Item("hemaciaComMerozoito.png");
+  item.pernElem5 = new Game.Item("hemaciaComMerozoito.png");
   item.pernElem5.setPosition(1260, 270);
   item.pernElem5.setScale(0.48);
   item.pernElem5.setZorder(6);
@@ -292,7 +292,7 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem5);
 
-  item["pernSetaElem5Elem6"] = new Game.Line(1260, 270, 1500, 270, 4);
+  item.pernSetaElem5Elem6 = new Game.Line(1260, 270, 1500, 270, 4);
   item.pernSetaElem5Elem6.setColor(0, 0, 0);
   item.pernSetaElem5Elem6.addArrowAtEnd();
   item.pernSetaElem5Elem6.setZorder(7);
@@ -300,14 +300,14 @@ function carregaCicloPlasmodium() {
   item.pernSetaElem5Elem6.disable();
   itensPernCiclo.push(item.pernSetaElem5Elem6);
 
-  item["pernNum6"] = new Game.Text("6", estiloNumeros);
+  item.pernNum6 = new Game.Text("6", estiloNumeros);
   item.pernNum6.setAnchor(0.5, 0.6);
   item.pernNum6.setPosition(1770, 140);
   item.pernNum6.setAlpha(0);
   item.pernNum6.disable();
   itensPernCiclo.push(item.pernNum6);
 
-  item["pernElem6"] = new Game.Item("gametocitoPlasmodium.png");
+  item.pernElem6 = new Game.Item("gametocitoPlasmodium.png");
   item.pernElem6.setPosition(1650, 270);
   item.pernElem6.setScale(0.52);
   item.pernElem6.setZorder(6);
@@ -321,21 +321,21 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem6);
 
-  item["pernSetaEstElem7"] = new Game.Line(1040, 635, 1260, 800, 4);
+  item.pernSetaEstElem7 = new Game.Line(1040, 635, 1260, 800, 4);
   item.pernSetaEstElem7.setColor(0, 0, 0);
   item.pernSetaEstElem7.setZorder(7);
   item.pernSetaEstElem7.setAlpha(0);
   item.pernSetaEstElem7.disable();
   itensPernCiclo.push(item.pernSetaEstElem7);
 
-  item["pernNum7"] = new Game.Text("7", estiloNumeros);
+  item.pernNum7 = new Game.Text("7", estiloNumeros);
   item.pernNum7.setAnchor(0.5, 0.6);
   item.pernNum7.setPosition(1390, 670);
   item.pernNum7.setAlpha(0);
   item.pernNum7.disable();
   itensPernCiclo.push(item.pernNum7);
 
-  item["pernElem7"] = new Game.Item("gametocitoPlasmodium.png");
+  item.pernElem7 = new Game.Item("gametocitoPlasmodium.png");
   item.pernElem7.setPosition(1260, 800);
   item.pernElem7.setScale(0.50);
   item.pernElem7.setZorder(6);
@@ -349,7 +349,7 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem7);
 
-  item["pernSetaElem7Elem8"] = new Game.Line(1260, 800, 1500, 800, 4);
+  item.pernSetaElem7Elem8 = new Game.Line(1260, 800, 1500, 800, 4);
   item.pernSetaElem7Elem8.setColor(0, 0, 0);
   item.pernSetaElem7Elem8.addArrowAtEnd();
   item.pernSetaElem7Elem8.setZorder(7);
@@ -357,14 +357,14 @@ function carregaCicloPlasmodium() {
   item.pernSetaElem7Elem8.disable();
   itensPernCiclo.push(item.pernSetaElem7Elem8);
 
-  item["pernNum8"] = new Game.Text("8", estiloNumeros);
+  item.pernNum8 = new Game.Text("8", estiloNumeros);
   item.pernNum8.setAnchor(0.5, 0.6);
   item.pernNum8.setPosition(1790, 650);
   item.pernNum8.setAlpha(0);
   item.pernNum8.disable();
   itensPernCiclo.push(item.pernNum8);
 
-  item["pernElem8"] = new Game.Item("esporozoito.png");
+  item.pernElem8 = new Game.Item("esporozoito.png");
   item.pernElem8.setPosition(1650, 800);
   item.pernElem8.setScale(0.56);
   item.pernElem8.setZorder(6);
@@ -378,7 +378,7 @@ function carregaCicloPlasmodium() {
   }
   itensPernCiclo.push(item.pernElem8);
 
-  item["pernFechar"] = new Game.Item("botaoFechar.png");
+  item.pernFechar = new Game.Item("botaoFechar.png");
   item.pernFechar.setPosition(1840, 70);
   item.pernFechar.setRotation(180);
   item.pernFechar.setZorder(1);
@@ -435,14 +435,14 @@ function carregaCicloPlasmodium() {
 
   var itensPernDoente = [];
 
-  item["estPernDoente"] = new Game.Image("estMngrDte.png");
+  item.estPernDoente = new Game.Image("estMngrDte.png");
   item.estPernDoente.setPosition(1565, 858);
   item.estPernDoente.setZorder(6);
   item.estPernDoente.setAlpha(0);
   item.estPernDoente.disable();
   itensPernDoente.push(item.estPernDoente);
 
-  item["pernBalaoSintoma"] = new Game.Image("balSintEsq.png");
+  item.pernBalaoSintoma = new Game.Image("balSintEsq.png");
   item.pernBalaoSintoma.setPosition(730+300, 300);
   item.pernBalaoSintoma.setScale(0.25);
   item.pernBalaoSintoma.setZorder(6);
@@ -450,14 +450,14 @@ function carregaCicloPlasmodium() {
   item.pernBalaoSintoma.disable();
   itensPernDoente.push(item.pernBalaoSintoma);
 
-  item["pernBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
+  item.pernBalaoPrevencao = new Game.Image("balPrevEsq.png");
   item.pernBalaoPrevencao.setPosition(730+300, 300);
   item.pernBalaoPrevencao.setScale(0.25);
   item.pernBalaoPrevencao.setZorder(6);
   item.pernBalaoPrevencao.disable();
   itensPernDoente.push(item.pernBalaoPrevencao);
 
-  item["pernBalaoTransmissao"] = new Game.Image("balTranEsq.png");
+  item.pernBalaoTransmissao = new Game.Image("balTranEsq.png");
   item.pernBalaoTransmissao.setPosition(730+300, 300);
   item.pernBalaoTransmissao.setScale(0.25);
   item.pernBalaoTransmissao.setZorder(6);
@@ -465,7 +465,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernBalaoTransmissao);
 
 
-  item["pernAbaSintomas"] = new Game.Item("abaSint.png");
+  item.pernAbaSintomas = new Game.Item("abaSint.png");
   item.pernAbaSintomas.setPosition(432+300, 71);
   item.pernAbaSintomas.setScale(0.25);
   item.pernAbaSintomas.setZorder(7);
@@ -485,13 +485,13 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaSintomas);
 
-  item["pernTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.pernTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.pernTextoSintomas.setPosition(432-130+300, 71+20);
   item.pernTextoSintomas.setAlpha(0);
   item.pernTextoSintomas.disable();
   itensPernDoente.push(item.pernTextoSintomas);
 
-  item["pernAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.pernAbaPrevencao = new Game.Item("abaPrev.png");
   item.pernAbaPrevencao.setPosition(432+232+300, 71);
   item.pernAbaPrevencao.setScale(0.25);
   item.pernAbaPrevencao.setZorder(8);
@@ -512,12 +512,12 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaPrevencao);
 
-  item["pernTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.pernTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.pernTextoPrevencao.setPosition(432-130+300, 71+20);
   item.pernTextoPrevencao.disable();
   itensPernDoente.push(item.pernTextoPrevencao);
 
-  item["pernAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.pernAbaTransmissao = new Game.Item("abaTran.png");
   item.pernAbaTransmissao.setPosition(432+482+300, 71);
   item.pernAbaTransmissao.setScale(0.25);
   item.pernAbaTransmissao.setZorder(9);
@@ -538,12 +538,12 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaTransmissao);
 
-  item["pernTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.pernTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.pernTextoTransmissao.setPosition(432-130+300, 71+20);
   item.pernTextoTransmissao.disable();
   itensPernDoente.push(item.pernTextoTransmissao);
 
-  item["pernBotaoOK"] = new Game.Item("okNormal.png");
+  item.pernBotaoOK = new Game.Item("okNormal.png");
   item.pernBotaoOK.setScale(0.25);
   item.pernBotaoOK.setPosition(432+450+300, 71+290);
   item.pernBotaoOK.setAlpha(0);
@@ -557,7 +557,7 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernBotaoOK);
 
-  item["pernBotaoOKhover"] = new Game.Item("okHover.png");
+  item.pernBotaoOKhover = new Game.Item("okHover.png");
   item.pernBotaoOKhover.setScale(0.25);
   item.pernBotaoOKhover.setPosition(432+450+300, 71+290);
   item.pernBotaoOKhover.disable();

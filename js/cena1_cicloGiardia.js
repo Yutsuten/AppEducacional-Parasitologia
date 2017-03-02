@@ -3,7 +3,7 @@ function carregaCicloGiardia() {
   var item = scene[1].item;
 
   // Adicionando o aluno
-  item["estPocoNormal"] = new Game.Item("estMbrcSdv.png");
+  item.estPocoNormal = new Game.Item("estMbrcSdv.png");
   item.estPocoNormal.setPosition(1500, 650);
   item.estPocoNormal.setZorder(9);
   item.estPocoNormal.setBrightness(220);
@@ -129,7 +129,7 @@ function carregaCicloGiardia() {
   var itensPocoCiclo = [];
 
   // Imagens ciclo
-  item["estPocoCiclo"] = new Game.Image("estMbrcClo.png");
+  item.estPocoCiclo = new Game.Image("estMbrcClo.png");
   item.estPocoCiclo.setPosition(800, 550);
   item.estPocoCiclo.setScale(0.5);
   item.estPocoCiclo.setZorder(9);
@@ -137,7 +137,7 @@ function carregaCicloGiardia() {
   item.estPocoCiclo.disable();
   itensPocoCiclo.push(item.estPocoCiclo);
 
-  item["pocoElem1"] = new Game.Item("poco.png");
+  item.pocoElem1 = new Game.Item("poco.png");
   item.pocoElem1.setPosition(385, 300);
   item.pocoElem1.setScale(0.8);
   item.pocoElem1.setZorder(6);
@@ -151,14 +151,14 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem1);
 
-  item["pocoNum1"] = new Game.Text("1", estiloNumeros);
+  item.pocoNum1 = new Game.Text("1", estiloNumeros);
   item.pocoNum1.setAnchor(0.5, 0.6);
   item.pocoNum1.setPosition(600, 140);
   item.pocoNum1.setAlpha(0);
   item.pocoNum1.disable();
   itensPocoCiclo.push(item.pocoNum1);
 
-  item["pocoSetaElem1Est"] = new Game.Line(595, 390, 720, 430, 4);
+  item.pocoSetaElem1Est = new Game.Line(595, 390, 720, 430, 4);
   item.pocoSetaElem1Est.setColor(0, 0, 0);
   item.pocoSetaElem1Est.addArrowAtBeginning();
   item.pocoSetaElem1Est.setZorder(7);
@@ -166,7 +166,7 @@ function carregaCicloGiardia() {
   item.pocoSetaElem1Est.disable();
   itensPocoCiclo.push(item.pocoSetaElem1Est);
 
-  item["pocoElem2"] = new Game.Item("cistos.png");
+  item.pocoElem2 = new Game.Item("cistos.png");
   item.pocoElem2.setPosition(1120, 280);
   item.pocoElem2.setScale(0.5);
   item.pocoElem2.setZorder(6);
@@ -180,14 +180,14 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem2);
 
-  item["pocoNum2"] = new Game.Text("2", estiloNumeros);
+  item.pocoNum2 = new Game.Text("2", estiloNumeros);
   item.pocoNum2.setAnchor(0.5, 0.6);
   item.pocoNum2.setPosition(1240, 150);
   item.pocoNum2.setAlpha(0);
   item.pocoNum2.disable();
   itensPocoCiclo.push(item.pocoNum2);
 
-  item["pocoSetaEst1Elem2"] = new Game.Line(810, 400, 1180, 280, 4);
+  item.pocoSetaEst1Elem2 = new Game.Line(810, 400, 1180, 280, 4);
   item.pocoSetaEst1Elem2.setColor(0, 0, 0);
   item.pocoSetaEst1Elem2.addArrowAtEnd();
   item.pocoSetaEst1Elem2.setZorder(7);
@@ -195,14 +195,14 @@ function carregaCicloGiardia() {
   item.pocoSetaEst1Elem2.disable();
   itensPocoCiclo.push(item.pocoSetaEst1Elem2);
 
-  item["pocoSetaEst2Elem2"] = new Game.Line(860, 700, 1180, 280, 4);
+  item.pocoSetaEst2Elem2 = new Game.Line(860, 700, 1180, 280, 4);
   item.pocoSetaEst2Elem2.setColor(0, 0, 0);
   item.pocoSetaEst2Elem2.setZorder(7);
   item.pocoSetaEst2Elem2.setAlpha(0);
   item.pocoSetaEst2Elem2.disable();
   itensPocoCiclo.push(item.pocoSetaEst2Elem2);
 
-  item["pocoElem3"] = new Game.Item("giardiaReproducao.png");
+  item.pocoElem3 = new Game.Item("giardiaReproducao.png");
   item.pocoElem3.setPosition(1450, 280);
   item.pocoElem3.setScale(0.49);
   item.pocoElem3.setZorder(6);
@@ -216,14 +216,14 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem3);
 
-  item["pocoNum3"] = new Game.Text("3", estiloNumeros);
+  item.pocoNum3 = new Game.Text("3", estiloNumeros);
   item.pocoNum3.setAnchor(0.5, 0.6);
   item.pocoNum3.setPosition(1570, 150);
   item.pocoNum3.setAlpha(0);
   item.pocoNum3.disable();
   itensPocoCiclo.push(item.pocoNum3);
 
-  item["pocoSetaElem2Elem3"] = new Game.Line(1120, 280, 1310, 280, 4);
+  item.pocoSetaElem2Elem3 = new Game.Line(1120, 280, 1310, 280, 4);
   item.pocoSetaElem2Elem3.setColor(0, 0, 0);
   item.pocoSetaElem2Elem3.addArrowAtEnd();
   item.pocoSetaElem2Elem3.setZorder(7);
@@ -231,14 +231,14 @@ function carregaCicloGiardia() {
   item.pocoSetaElem2Elem3.disable();
   itensPocoCiclo.push(item.pocoSetaElem2Elem3);
 
-  item["pocoNum4"] = new Game.Text("4", estiloNumeros);
+  item.pocoNum4 = new Game.Text("4", estiloNumeros);
   item.pocoNum4.setAnchor(0.5, 0.6);
   item.pocoNum4.setPosition(1880, 140);
   item.pocoNum4.setAlpha(0);
   item.pocoNum4.disable();
   itensPocoCiclo.push(item.pocoNum4);
 
-  item["pocoElem4"] = new Game.Item("maisCistos.png");
+  item.pocoElem4 = new Game.Item("maisCistos.png");
   item.pocoElem4.setPosition(1780, 280);
   item.pocoElem4.setScale(0.5);
   item.pocoElem4.setZorder(6);
@@ -252,7 +252,7 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem4);
 
-  item["pocoSetaElem3Elem4"] = new Game.Line(1450, 280, 1630, 280, 4);
+  item.pocoSetaElem3Elem4 = new Game.Line(1450, 280, 1630, 280, 4);
   item.pocoSetaElem3Elem4.setColor(0, 0, 0);
   item.pocoSetaElem3Elem4.addArrowAtEnd();
   item.pocoSetaElem3Elem4.setZorder(7);
@@ -260,14 +260,14 @@ function carregaCicloGiardia() {
   item.pocoSetaElem3Elem4.disable();
   itensPocoCiclo.push(item.pocoSetaElem3Elem4);
 
-  item["pocoNum5"] = new Game.Text("5", estiloNumeros);
+  item.pocoNum5 = new Game.Text("5", estiloNumeros);
   item.pocoNum5.setAnchor(0.5, 0.6);
   item.pocoNum5.setPosition(1310, 680);
   item.pocoNum5.setAlpha(0);
   item.pocoNum5.disable();
   itensPocoCiclo.push(item.pocoNum5);
 
-  item["pocoSetaEstElem5"] = new Game.Line(860, 830, 1040, 790, 4);
+  item.pocoSetaEstElem5 = new Game.Line(860, 830, 1040, 790, 4);
   item.pocoSetaEstElem5.setColor(0, 0, 0);
   item.pocoSetaEstElem5.addArrowAtEnd();
   item.pocoSetaEstElem5.setZorder(7);
@@ -275,7 +275,7 @@ function carregaCicloGiardia() {
   item.pocoSetaEstElem5.disable();
   itensPocoCiclo.push(item.pocoSetaEstElem5);
 
-  item["pocoElem5"] = new Game.Item("fezesSemMosca.png");
+  item.pocoElem5 = new Game.Item("fezesSemMosca.png");
   item.pocoElem5.setPosition(1180, 800);
   item.pocoElem5.setScale(0.47);
   item.pocoElem5.setZorder(6);
@@ -289,7 +289,7 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem5);
 
-  item["pocoSetaElem5Elem6"] = new Game.Line(1180, 800, 1440, 800, 4);
+  item.pocoSetaElem5Elem6 = new Game.Line(1180, 800, 1440, 800, 4);
   item.pocoSetaElem5Elem6.setColor(0, 0, 0);
   item.pocoSetaElem5Elem6.addArrowAtEnd();
   item.pocoSetaElem5Elem6.setZorder(7);
@@ -297,7 +297,7 @@ function carregaCicloGiardia() {
   item.pocoSetaElem5Elem6.disable();
   itensPocoCiclo.push(item.pocoSetaElem5Elem6);
 
-  item["pocoElem6"] = new Game.Item("lencolFreatico.png");
+  item.pocoElem6 = new Game.Item("lencolFreatico.png");
   item.pocoElem6.setPosition(1650, 800);
   item.pocoElem6.setScale(0.75);
   item.pocoElem6.setZorder(6);
@@ -311,14 +311,14 @@ function carregaCicloGiardia() {
   }
   itensPocoCiclo.push(item.pocoElem6);
 
-  item["pocoNum6"] = new Game.Text("6", estiloNumeros);
+  item.pocoNum6 = new Game.Text("6", estiloNumeros);
   item.pocoNum6.setAnchor(0.5, 0.6);
   item.pocoNum6.setPosition(1830, 630);
   item.pocoNum6.setAlpha(0);
   item.pocoNum6.disable();
   itensPocoCiclo.push(item.pocoNum6);
 
-  item["pocoFechar"] = new Game.Item("botaoFechar.png");
+  item.pocoFechar = new Game.Item("botaoFechar.png");
   item.pocoFechar.setPosition(1840, 70);
   item.pocoFechar.setRotation(180);
   item.pocoFechar.setZorder(1);
@@ -375,14 +375,14 @@ function carregaCicloGiardia() {
 
   var itensPocoDoente = [];
 
-  item["estPocoDoente"] = new Game.Image("estMbrcDte.png");
+  item.estPocoDoente = new Game.Image("estMbrcDte.png");
   item.estPocoDoente.setPosition(1320, 670);
   item.estPocoDoente.setZorder(11);
   item.estPocoDoente.setAlpha(0);
   item.estPocoDoente.disable();
   itensPocoDoente.push(item.estPocoDoente);
 
-  item["pocoBalaoSintoma"] = new Game.Image("balSintEsq.png");
+  item.pocoBalaoSintoma = new Game.Image("balSintEsq.png");
   item.pocoBalaoSintoma.setPosition(730+80, 300);
   item.pocoBalaoSintoma.setScale(0.25);
   item.pocoBalaoSintoma.setZorder(6);
@@ -390,14 +390,14 @@ function carregaCicloGiardia() {
   item.pocoBalaoSintoma.disable();
   itensPocoDoente.push(item.pocoBalaoSintoma);
 
-  item["pocoBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
+  item.pocoBalaoPrevencao = new Game.Image("balPrevEsq.png");
   item.pocoBalaoPrevencao.setPosition(730+80, 300);
   item.pocoBalaoPrevencao.setScale(0.25);
   item.pocoBalaoPrevencao.setZorder(6);
   item.pocoBalaoPrevencao.disable();
   itensPocoDoente.push(item.pocoBalaoPrevencao);
 
-  item["pocoBalaoTransmissao"] = new Game.Image("balTranEsq.png");
+  item.pocoBalaoTransmissao = new Game.Image("balTranEsq.png");
   item.pocoBalaoTransmissao.setPosition(730+80, 300);
   item.pocoBalaoTransmissao.setScale(0.25);
   item.pocoBalaoTransmissao.setZorder(6);
@@ -405,7 +405,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoBalaoTransmissao);
 
 
-  item["pocoAbaSintomas"] = new Game.Item("abaSint.png");
+  item.pocoAbaSintomas = new Game.Item("abaSint.png");
   item.pocoAbaSintomas.setPosition(432+80, 71);
   item.pocoAbaSintomas.setScale(0.25);
   item.pocoAbaSintomas.setZorder(7);
@@ -425,13 +425,13 @@ function carregaCicloGiardia() {
   }
   itensPocoDoente.push(item.pocoAbaSintomas);
 
-  item["pocoTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.pocoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.pocoTextoSintomas.setPosition(432-130+80, 71+20);
   item.pocoTextoSintomas.setAlpha(0);
   item.pocoTextoSintomas.disable();
   itensPocoDoente.push(item.pocoTextoSintomas);
 
-  item["pocoAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.pocoAbaPrevencao = new Game.Item("abaPrev.png");
   item.pocoAbaPrevencao.setPosition(432+232+80, 71);
   item.pocoAbaPrevencao.setScale(0.25);
   item.pocoAbaPrevencao.setZorder(8);
@@ -452,12 +452,12 @@ function carregaCicloGiardia() {
   }
   itensPocoDoente.push(item.pocoAbaPrevencao);
 
-  item["pocoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.pocoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.pocoTextoPrevencao.setPosition(432-130+80, 71+20);
   item.pocoTextoPrevencao.disable();
   itensPocoDoente.push(item.pocoTextoPrevencao);
 
-  item["pocoAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.pocoAbaTransmissao = new Game.Item("abaTran.png");
   item.pocoAbaTransmissao.setPosition(432+482+80, 71);
   item.pocoAbaTransmissao.setScale(0.25);
   item.pocoAbaTransmissao.setZorder(9);
@@ -478,12 +478,12 @@ function carregaCicloGiardia() {
   }
   itensPocoDoente.push(item.pocoAbaTransmissao);
 
-  item["pocoTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.pocoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.pocoTextoTransmissao.setPosition(432-130+80, 71+20);
   item.pocoTextoTransmissao.disable();
   itensPocoDoente.push(item.pocoTextoTransmissao);
 
-  item["pocoBotaoOK"] = new Game.Item("okNormal.png");
+  item.pocoBotaoOK = new Game.Item("okNormal.png");
   item.pocoBotaoOK.setScale(0.25);
   item.pocoBotaoOK.setPosition(432+450+80, 71+290);
   item.pocoBotaoOK.setAlpha(0);
@@ -497,7 +497,7 @@ function carregaCicloGiardia() {
   }
   itensPocoDoente.push(item.pocoBotaoOK);
 
-  item["pocoBotaoOKhover"] = new Game.Item("okHover.png");
+  item.pocoBotaoOKhover = new Game.Item("okHover.png");
   item.pocoBotaoOKhover.setScale(0.25);
   item.pocoBotaoOKhover.setPosition(432+450+80, 71+290);
   item.pocoBotaoOKhover.disable();

@@ -3,7 +3,7 @@ function carregaCicloCisticercose() {
   var item = scene[1].item;
 
   // Adicionando o aluno
-  item["estCenouraNormal"] = new Game.Item("estHbrcSdv.png");
+  item.estCenouraNormal = new Game.Item("estHbrcSdv.png");
   item.estCenouraNormal.setPosition(375, 560);
   item.estCenouraNormal.setScale(0.7);
   item.estCenouraNormal.setZorder(9);
@@ -94,7 +94,7 @@ function carregaCicloCisticercose() {
   var itensCenouraCiclo = [];
 
   // Imagens ciclo
-  item["estCenouraCiclo"] = new Game.Image("estHbrcClo.png");
+  item.estCenouraCiclo = new Game.Image("estHbrcClo.png");
   item.estCenouraCiclo.setPosition(960, 550);
   item.estCenouraCiclo.setScale(0.5);
   item.estCenouraCiclo.setZorder(9);
@@ -102,7 +102,7 @@ function carregaCicloCisticercose() {
   item.estCenouraCiclo.disable();
   itensCenouraCiclo.push(item.estCenouraCiclo);
 
-  item["cenouraElem1"] = new Game.Item("chorumeLixoCenouras.png");
+  item.cenouraElem1 = new Game.Item("chorumeLixoCenouras.png");
   item.cenouraElem1.setPosition(400, 500);
   item.cenouraElem1.setZorder(6);
   item.cenouraElem1.setAlpha(0);
@@ -115,14 +115,14 @@ function carregaCicloCisticercose() {
   }
   itensCenouraCiclo.push(item.cenouraElem1);
 
-  item["cenouraNum1"] = new Game.Text("1", estiloNumeros);
+  item.cenouraNum1 = new Game.Text("1", estiloNumeros);
   item.cenouraNum1.setAnchor(0.5, 0.6);
   item.cenouraNum1.setPosition(630, 250);
   item.cenouraNum1.setAlpha(0);
   item.cenouraNum1.disable();
   itensCenouraCiclo.push(item.cenouraNum1);
 
-  item["cenouraSetaElem1Est"] = new Game.Line(680, 500, 900, 500, 4);
+  item.cenouraSetaElem1Est = new Game.Line(680, 500, 900, 500, 4);
   item.cenouraSetaElem1Est.setColor(0, 0, 0);
   item.cenouraSetaElem1Est.addArrowAtBeginning();
   item.cenouraSetaElem1Est.setZorder(7);
@@ -130,7 +130,7 @@ function carregaCicloCisticercose() {
   item.cenouraSetaElem1Est.disable();
   itensCenouraCiclo.push(item.cenouraSetaElem1Est);
 
-  item["cenouraElem2"] = new Game.Item("cerebroInfectado.png");
+  item.cenouraElem2 = new Game.Item("cerebroInfectado.png");
   item.cenouraElem2.setPosition(1500, 500);
   item.cenouraElem2.setZorder(6);
   item.cenouraElem2.setAlpha(0);
@@ -143,21 +143,21 @@ function carregaCicloCisticercose() {
   }
   itensCenouraCiclo.push(item.cenouraElem2);
 
-  item["cenouraNum2"] = new Game.Text("2", estiloNumeros);
+  item.cenouraNum2 = new Game.Text("2", estiloNumeros);
   item.cenouraNum2.setAnchor(0.5, 0.6);
   item.cenouraNum2.setPosition(1730, 250);
   item.cenouraNum2.setAlpha(0);
   item.cenouraNum2.disable();
   itensCenouraCiclo.push(item.cenouraNum2);
 
-  item["cenouraSetaEstElem2"] = new Game.Line(1000, 350, 1500, 500, 4);
+  item.cenouraSetaEstElem2 = new Game.Line(1000, 350, 1500, 500, 4);
   item.cenouraSetaEstElem2.setColor(0, 0, 0);
   item.cenouraSetaEstElem2.setZorder(7);
   item.cenouraSetaEstElem2.setAlpha(0);
   item.cenouraSetaEstElem2.disable();
   itensCenouraCiclo.push(item.cenouraSetaEstElem2);
 
-  item["cenouraFechar"] = new Game.Item("botaoFechar.png");
+  item.cenouraFechar = new Game.Item("botaoFechar.png");
   item.cenouraFechar.setPosition(1840, 70);
   item.cenouraFechar.setRotation(180);
   item.cenouraFechar.setZorder(1);
@@ -214,14 +214,14 @@ function carregaCicloCisticercose() {
 
   var itensCenouraDoente = [];
 
-  item["estCenouraDoente"] = new Game.Image("estHbrcDte.png");
+  item.estCenouraDoente = new Game.Image("estHbrcDte.png");
   item.estCenouraDoente.setPosition(470, 510);
   item.estCenouraDoente.setZorder(9);
   item.estCenouraDoente.setAlpha(0);
   item.estCenouraDoente.disable();
   itensCenouraDoente.push(item.estCenouraDoente);
 
-  item["cenouraBalaoSintoma"] = new Game.Image("balSintDir.png");
+  item.cenouraBalaoSintoma = new Game.Image("balSintDir.png");
   item.cenouraBalaoSintoma.setPosition(730+440-150, 300);
   item.cenouraBalaoSintoma.setScale(0.25);
   item.cenouraBalaoSintoma.setZorder(6);
@@ -229,14 +229,14 @@ function carregaCicloCisticercose() {
   item.cenouraBalaoSintoma.disable();
   itensCenouraDoente.push(item.cenouraBalaoSintoma);
 
-  item["cenouraBalaoPrevencao"] = new Game.Image("balPrevDir.png");
+  item.cenouraBalaoPrevencao = new Game.Image("balPrevDir.png");
   item.cenouraBalaoPrevencao.setPosition(730+440-150, 300);
   item.cenouraBalaoPrevencao.setScale(0.25);
   item.cenouraBalaoPrevencao.setZorder(6);
   item.cenouraBalaoPrevencao.disable();
   itensCenouraDoente.push(item.cenouraBalaoPrevencao);
 
-  item["cenouraBalaoTransmissao"] = new Game.Image("balTranDir.png");
+  item.cenouraBalaoTransmissao = new Game.Image("balTranDir.png");
   item.cenouraBalaoTransmissao.setPosition(730+440-150, 300);
   item.cenouraBalaoTransmissao.setScale(0.25);
   item.cenouraBalaoTransmissao.setZorder(6);
@@ -244,7 +244,7 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraBalaoTransmissao);
 
 
-  item["cenouraAbaSintomas"] = new Game.Item("abaSint.png");
+  item.cenouraAbaSintomas = new Game.Item("abaSint.png");
   item.cenouraAbaSintomas.setPosition(426+550-150, 71);
   item.cenouraAbaSintomas.setScale(0.25);
   item.cenouraAbaSintomas.setZorder(7);
@@ -264,13 +264,13 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaSintomas);
 
-  item["cenouraTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.cenouraTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.cenouraTextoSintomas.setPosition(432-130+550-150, 71+20);
   item.cenouraTextoSintomas.setAlpha(0);
   item.cenouraTextoSintomas.disable();
   itensCenouraDoente.push(item.cenouraTextoSintomas);
 
-  item["cenouraAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.cenouraAbaPrevencao = new Game.Item("abaPrev.png");
   item.cenouraAbaPrevencao.setPosition(432+244+550-150, 71);
   item.cenouraAbaPrevencao.setScale(0.25);
   item.cenouraAbaPrevencao.setZorder(8);
@@ -291,12 +291,12 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaPrevencao);
 
-  item["cenouraTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.cenouraTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.cenouraTextoPrevencao.setPosition(432-130+550-150, 71+20);
   item.cenouraTextoPrevencao.disable();
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
 
-  item["cenouraAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.cenouraAbaTransmissao = new Game.Item("abaTran.png");
   item.cenouraAbaTransmissao.setPosition(432+490+550-150, 71);
   item.cenouraAbaTransmissao.setScale(0.25);
   item.cenouraAbaTransmissao.setZorder(9);
@@ -317,12 +317,12 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaTransmissao);
 
-  item["cenouraTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.cenouraTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.cenouraTextoTransmissao.setPosition(432-130+550-150, 71+20);
   item.cenouraTextoTransmissao.disable();
   itensCenouraDoente.push(item.cenouraTextoTransmissao);
 
-  item["cenouraBotaoOK"] = new Game.Item("okNormal.png");
+  item.cenouraBotaoOK = new Game.Item("okNormal.png");
   item.cenouraBotaoOK.setScale(0.25);
   item.cenouraBotaoOK.setPosition(432+450+550-150, 71+290);
   item.cenouraBotaoOK.setAlpha(0);
@@ -336,7 +336,7 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraBotaoOK);
 
-  item["cenouraBotaoOKhover"] = new Game.Item("okHover.png");
+  item.cenouraBotaoOKhover = new Game.Item("okHover.png");
   item.cenouraBotaoOKhover.setScale(0.25);
   item.cenouraBotaoOKhover.setPosition(432+450+550-150, 71+290);
   item.cenouraBotaoOKhover.disable();

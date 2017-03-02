@@ -3,7 +3,7 @@ function carregaCicloAscaris() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estTomateNormal"] = new Game.Item("estHngrSdv.png");
+  item.estTomateNormal = new Game.Item("estHngrSdv.png");
   item.estTomateNormal.setPosition(940, 590);
   item.estTomateNormal.setZorder(11);
   item.estTomateNormal.setBrightness(220);
@@ -137,7 +137,7 @@ function carregaCicloAscaris() {
   var itensTomateCiclo = [];
 
   // Imagens ciclo
-  item["estTomateCiclo"] = new Game.Image("estHngrClo.png");
+  item.estTomateCiclo = new Game.Image("estHngrClo.png");
   item.estTomateCiclo.setPosition(900, 550);
   item.estTomateCiclo.setScale(0.5);
   item.estTomateCiclo.setZorder(9);
@@ -145,7 +145,7 @@ function carregaCicloAscaris() {
   item.estTomateCiclo.disable();
   itensTomateCiclo.push(item.estTomateCiclo);
 
-  item["tomateElem1"] = new Game.Item("ovoAscaris.png");
+  item.tomateElem1 = new Game.Item("ovoAscaris.png");
   item.tomateElem1.setPosition(450, 250);
   item.tomateElem1.setScale(0.58);
   item.tomateElem1.setZorder(6);
@@ -159,21 +159,21 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem1);
 
-  item["tomateNum1"] = new Game.Text("1", estiloNumeros);
+  item.tomateNum1 = new Game.Text("1", estiloNumeros);
   item.tomateNum1.setAnchor(0.5, 0.6);
   item.tomateNum1.setPosition(620, 120);
   item.tomateNum1.setAlpha(0);
   item.tomateNum1.disable();
   itensTomateCiclo.push(item.tomateNum1);
 
-  item["tomateSetaElem1Est"] = new Game.Line(450, 250, 830, 440, 4);
+  item.tomateSetaElem1Est = new Game.Line(450, 250, 830, 440, 4);
   item.tomateSetaElem1Est.setColor(0, 0, 0);
   item.tomateSetaElem1Est.setZorder(7);
   item.tomateSetaElem1Est.setAlpha(0);
   item.tomateSetaElem1Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem1Est);
 
-  item["tomateElem2"] = new Game.Item("ascarisFilhote.png");
+  item.tomateElem2 = new Game.Item("ascarisFilhote.png");
   item.tomateElem2.setPosition(380, 550);
   item.tomateElem2.setScale(0.47);
   item.tomateElem2.setZorder(6);
@@ -187,28 +187,28 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem2);
 
-  item["tomateNum2"] = new Game.Text("2", estiloNumeros);
+  item.tomateNum2 = new Game.Text("2", estiloNumeros);
   item.tomateNum2.setAnchor(0.5, 0.6);
   item.tomateNum2.setPosition(290, 420);
   item.tomateNum2.setAlpha(0);
   item.tomateNum2.disable();
   itensTomateCiclo.push(item.tomateNum2);
 
-  item["tomateSetaElem2Est"] = new Game.Line(380, 550, 840, 700, 4);
+  item.tomateSetaElem2Est = new Game.Line(380, 550, 840, 700, 4);
   item.tomateSetaElem2Est.setColor(0, 0, 0);
   item.tomateSetaElem2Est.setZorder(7);
   item.tomateSetaElem2Est.setAlpha(0);
   item.tomateSetaElem2Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem2Est);
 
-  item["tomateSetaEstElem3a"] = new Game.Line(900, 600, 1300, 300, 4);
+  item.tomateSetaEstElem3a = new Game.Line(900, 600, 1300, 300, 4);
   item.tomateSetaEstElem3a.setColor(0, 0, 0);
   item.tomateSetaEstElem3a.setZorder(7);
   item.tomateSetaEstElem3a.setAlpha(0);
   item.tomateSetaEstElem3a.disable();
   itensTomateCiclo.push(item.tomateSetaEstElem3a);
 
-  item["tomateElem3a"] = new Game.Item("circulacao.png");
+  item.tomateElem3a = new Game.Item("circulacao.png");
   item.tomateElem3a.setPosition(1300, 300);
   item.tomateElem3a.setScale(0.57);
   item.tomateElem3a.setZorder(6);
@@ -222,14 +222,14 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem3a);
 
-  item["tomateNum3"] = new Game.Text("3", estiloNumeros);
+  item.tomateNum3 = new Game.Text("3", estiloNumeros);
   item.tomateNum3.setAnchor(0.5, 0.6);
   item.tomateNum3.setPosition(1430, 180);
   item.tomateNum3.setAlpha(0);
   item.tomateNum3.disable();
   itensTomateCiclo.push(item.tomateNum3);
 
-  item["tomateSetaElem3aElem3b"] = new Game.Line(1300, 300, 1520, 200, 4);
+  item.tomateSetaElem3aElem3b = new Game.Line(1300, 300, 1520, 200, 4);
   item.tomateSetaElem3aElem3b.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3b.addArrowAtEnd();
   item.tomateSetaElem3aElem3b.setZorder(7);
@@ -237,7 +237,7 @@ function carregaCicloAscaris() {
   item.tomateSetaElem3aElem3b.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3b);
 
-  item["tomateSetaElem3aElem3c"] = new Game.Line(1300, 300, 1570, 360, 4);
+  item.tomateSetaElem3aElem3c = new Game.Line(1300, 300, 1570, 360, 4);
   item.tomateSetaElem3aElem3c.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3c.addArrowAtEnd();
   item.tomateSetaElem3aElem3c.setZorder(7);
@@ -245,7 +245,7 @@ function carregaCicloAscaris() {
   item.tomateSetaElem3aElem3c.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3c);
 
-  item["tomateSetaElem3aElem3d"] = new Game.Line(1300, 300, 1470, 450, 4);
+  item.tomateSetaElem3aElem3d = new Game.Line(1300, 300, 1470, 450, 4);
   item.tomateSetaElem3aElem3d.setColor(0, 0, 0);
   item.tomateSetaElem3aElem3d.addArrowAtEnd();
   item.tomateSetaElem3aElem3d.setZorder(7);
@@ -253,7 +253,7 @@ function carregaCicloAscaris() {
   item.tomateSetaElem3aElem3d.disable();
   itensTomateCiclo.push(item.tomateSetaElem3aElem3d);
 
-  item["tomateElem3b"] = new Game.Item("coracao.png");
+  item.tomateElem3b = new Game.Item("coracao.png");
   item.tomateElem3b.setPosition(1630, 170);
   item.tomateElem3b.setScale(0.35);
   item.tomateElem3b.setZorder(6);
@@ -267,7 +267,7 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem3b);
 
-  item["tomateElem3c"] = new Game.Item("figado.png");
+  item.tomateElem3c = new Game.Item("figado.png");
   item.tomateElem3c.setPosition(1670, 370);
   item.tomateElem3c.setScale(0.32);
   item.tomateElem3c.setZorder(6);
@@ -281,7 +281,7 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem3c);
 
-  item["tomateElem3d"] = new Game.Item("pulmao.png");
+  item.tomateElem3d = new Game.Item("pulmao.png");
   item.tomateElem3d.setPosition(1550, 530);
   item.tomateElem3d.setScale(0.35);
   item.tomateElem3d.setZorder(6);
@@ -295,21 +295,21 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem3d);
 
-  item["tomateSetaElem4Est"] = new Game.Line(420, 850, 840, 760, 4);
+  item.tomateSetaElem4Est = new Game.Line(420, 850, 840, 760, 4);
   item.tomateSetaElem4Est.setColor(0, 0, 0);
   item.tomateSetaElem4Est.setZorder(7);
   item.tomateSetaElem4Est.setAlpha(0);
   item.tomateSetaElem4Est.disable();
   itensTomateCiclo.push(item.tomateSetaElem4Est);
 
-  item["tomateNum4"] = new Game.Text("4", estiloNumeros);
+  item.tomateNum4 = new Game.Text("4", estiloNumeros);
   item.tomateNum4.setAnchor(0.5, 0.6);
   item.tomateNum4.setPosition(540, 720);
   item.tomateNum4.setAlpha(0);
   item.tomateNum4.disable();
   itensTomateCiclo.push(item.tomateNum4);
 
-  item["tomateElem4"] = new Game.Item("ascarisMF.png");
+  item.tomateElem4 = new Game.Item("ascarisMF.png");
   item.tomateElem4.setPosition(420, 850);
   item.tomateElem4.setScale(0.51);
   item.tomateElem4.setZorder(6);
@@ -323,7 +323,7 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem4);
 
-  item["tomateSetaEstElem5"] = new Game.Line(870, 815, 1165, 790, 4);
+  item.tomateSetaEstElem5 = new Game.Line(870, 815, 1165, 790, 4);
   item.tomateSetaEstElem5.setColor(0, 0, 0);
   item.tomateSetaEstElem5.addArrowAtEnd();
   item.tomateSetaEstElem5.setZorder(7);
@@ -331,14 +331,14 @@ function carregaCicloAscaris() {
   item.tomateSetaEstElem5.disable();
   itensTomateCiclo.push(item.tomateSetaEstElem5);
 
-  item["tomateNum5"] = new Game.Text("5", estiloNumeros);
+  item.tomateNum5 = new Game.Text("5", estiloNumeros);
   item.tomateNum5.setAnchor(0.5, 0.6);
   item.tomateNum5.setPosition(1400, 680);
   item.tomateNum5.setAlpha(0);
   item.tomateNum5.disable();
   itensTomateCiclo.push(item.tomateNum5);
 
-  item["tomateElem5"] = new Game.Item("fezesSemMosca.png");
+  item.tomateElem5 = new Game.Item("fezesSemMosca.png");
   item.tomateElem5.setPosition(1300, 800);
   item.tomateElem5.setScale(0.44);
   item.tomateElem5.setZorder(6);
@@ -352,14 +352,14 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem5);
 
-  item["tomateSetaElem5Elem6"] = new Game.Line(1300, 800, 1700, 800, 4);
+  item.tomateSetaElem5Elem6 = new Game.Line(1300, 800, 1700, 800, 4);
   item.tomateSetaElem5Elem6.setColor(0, 0, 0);
   item.tomateSetaElem5Elem6.setZorder(7);
   item.tomateSetaElem5Elem6.setAlpha(0);
   item.tomateSetaElem5Elem6.disable();
   itensTomateCiclo.push(item.tomateSetaElem5Elem6);
 
-  item["tomateElem6"] = new Game.Item("ovoAscaris.png");
+  item.tomateElem6 = new Game.Item("ovoAscaris.png");
   item.tomateElem6.setPosition(1700, 800);
   item.tomateElem6.setScale(0.5);
   item.tomateElem6.setZorder(6);
@@ -373,14 +373,14 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem6);
 
-  item["tomateNum6"] = new Game.Text("6", estiloNumeros);
+  item.tomateNum6 = new Game.Text("6", estiloNumeros);
   item.tomateNum6.setAnchor(0.5, 0.6);
   item.tomateNum6.setPosition(1820, 680);
   item.tomateNum6.setAlpha(0);
   item.tomateNum6.disable();
   itensTomateCiclo.push(item.tomateNum6);
 
-  item["tomateFechar"] = new Game.Item("botaoFechar.png");
+  item.tomateFechar = new Game.Item("botaoFechar.png");
   item.tomateFechar.setPosition(1840, 70);
   item.tomateFechar.setRotation(180);
   item.tomateFechar.setZorder(1);
@@ -437,14 +437,14 @@ function carregaCicloAscaris() {
 
   var itensTomateDoente = [];
 
-  item["estTomateDoente"] = new Game.Image("estHngrDte.png");
+  item.estTomateDoente = new Game.Image("estHngrDte.png");
   item.estTomateDoente.setPosition(960, 550);
   item.estTomateDoente.setZorder(11);
   item.estTomateDoente.setAlpha(0);
   item.estTomateDoente.disable();
   itensTomateDoente.push(item.estTomateDoente);
 
-  item["tomateBalaoSintoma"] = new Game.Image("balSintEsq.png");
+  item.tomateBalaoSintoma = new Game.Image("balSintEsq.png");
   item.tomateBalaoSintoma.setPosition(730-260, 300);
   item.tomateBalaoSintoma.setScale(0.25);
   item.tomateBalaoSintoma.setZorder(6);
@@ -452,14 +452,14 @@ function carregaCicloAscaris() {
   item.tomateBalaoSintoma.disable();
   itensTomateDoente.push(item.tomateBalaoSintoma);
 
-  item["tomateBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
+  item.tomateBalaoPrevencao = new Game.Image("balPrevEsq.png");
   item.tomateBalaoPrevencao.setPosition(730-260, 300);
   item.tomateBalaoPrevencao.setScale(0.25);
   item.tomateBalaoPrevencao.setZorder(6);
   item.tomateBalaoPrevencao.disable();
   itensTomateDoente.push(item.tomateBalaoPrevencao);
 
-  item["tomateBalaoTransmissao"] = new Game.Image("balTranEsq.png");
+  item.tomateBalaoTransmissao = new Game.Image("balTranEsq.png");
   item.tomateBalaoTransmissao.setPosition(730-260, 300);
   item.tomateBalaoTransmissao.setScale(0.25);
   item.tomateBalaoTransmissao.setZorder(6);
@@ -467,7 +467,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateBalaoTransmissao);
 
 
-  item["tomateAbaSintomas"] = new Game.Item("abaSint.png");
+  item.tomateAbaSintomas = new Game.Item("abaSint.png");
   item.tomateAbaSintomas.setPosition(432-260, 71);
   item.tomateAbaSintomas.setScale(0.25);
   item.tomateAbaSintomas.setZorder(7);
@@ -487,13 +487,13 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaSintomas);
 
-  item["tomateTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.tomateTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.tomateTextoSintomas.setPosition(432-130-260, 71+20);
   item.tomateTextoSintomas.setAlpha(0);
   item.tomateTextoSintomas.disable();
   itensTomateDoente.push(item.tomateTextoSintomas);
 
-  item["tomateAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.tomateAbaPrevencao = new Game.Item("abaPrev.png");
   item.tomateAbaPrevencao.setPosition(432+232-260, 71);
   item.tomateAbaPrevencao.setScale(0.25);
   item.tomateAbaPrevencao.setZorder(8);
@@ -514,12 +514,12 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaPrevencao);
 
-  item["tomateTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.tomateTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.tomateTextoPrevencao.setPosition(432-130-260, 71+20);
   item.tomateTextoPrevencao.disable();
   itensTomateDoente.push(item.tomateTextoPrevencao);
 
-  item["tomateAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.tomateAbaTransmissao = new Game.Item("abaTran.png");
   item.tomateAbaTransmissao.setPosition(432+482-260, 71);
   item.tomateAbaTransmissao.setScale(0.25);
   item.tomateAbaTransmissao.setZorder(9);
@@ -540,12 +540,12 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaTransmissao);
 
-  item["tomateTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.tomateTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.tomateTextoTransmissao.setPosition(432-130-260, 71+20);
   item.tomateTextoTransmissao.disable();
   itensTomateDoente.push(item.tomateTextoTransmissao);
 
-  item["tomateBotaoOK"] = new Game.Item("okNormal.png");
+  item.tomateBotaoOK = new Game.Item("okNormal.png");
   item.tomateBotaoOK.setScale(0.25);
   item.tomateBotaoOK.setPosition(432+450-260, 71+290);
   item.tomateBotaoOK.setAlpha(0);
@@ -559,7 +559,7 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateBotaoOK);
 
-  item["tomateBotaoOKhover"] = new Game.Item("okHover.png");
+  item.tomateBotaoOKhover = new Game.Item("okHover.png");
   item.tomateBotaoOKhover.setScale(0.25);
   item.tomateBotaoOKhover.setPosition(432+450-260, 71+290);
   item.tomateBotaoOKhover.disable();

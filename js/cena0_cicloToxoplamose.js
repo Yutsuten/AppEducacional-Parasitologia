@@ -3,7 +3,7 @@ function carregaCicloToxoplasmose() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estGatoNormal"] = new Game.Item("estMjpnSdv.png");
+  item.estGatoNormal = new Game.Item("estMjpnSdv.png");
   item.estGatoNormal.setPosition(660, 455);
   item.estGatoNormal.setZorder(11);
   item.estGatoNormal.setBrightness(220);
@@ -111,7 +111,7 @@ function carregaCicloToxoplasmose() {
   var itensGatoCiclo = [];
 
   // Imagens ciclo
-  item["estGatoCiclo"] = new Game.Image("estMjpnClo.png");
+  item.estGatoCiclo = new Game.Image("estMjpnClo.png");
   item.estGatoCiclo.setPosition(700, 550);
   item.estGatoCiclo.setScale(0.5);
   item.estGatoCiclo.setZorder(9);
@@ -119,7 +119,7 @@ function carregaCicloToxoplasmose() {
   item.estGatoCiclo.disable();
   itensGatoCiclo.push(item.estGatoCiclo);
 
-  item["gatoElem1"] = new Game.Item("toxoplamose.png");
+  item.gatoElem1 = new Game.Item("toxoplamose.png");
   item.gatoElem1.setPosition(285, 250);
   item.gatoElem1.setScale(0.7);
   item.gatoElem1.setZorder(6);
@@ -133,21 +133,21 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoCiclo.push(item.gatoElem1);
 
-  item["gatoNum1"] = new Game.Text("1", estiloNumeros);
+  item.gatoNum1 = new Game.Text("1", estiloNumeros);
   item.gatoNum1.setAnchor(0.5, 0.6);
   item.gatoNum1.setPosition(450, 90);
   item.gatoNum1.setAlpha(0);
   item.gatoNum1.disable();
   itensGatoCiclo.push(item.gatoNum1);
 
-  item["gatoSetaElem1Est"] = new Game.Line(285, 250, 700, 430, 4);
+  item.gatoSetaElem1Est = new Game.Line(285, 250, 700, 430, 4);
   item.gatoSetaElem1Est.setColor(0, 0, 0);
   item.gatoSetaElem1Est.setZorder(7);
   item.gatoSetaElem1Est.setAlpha(0);
   item.gatoSetaElem1Est.disable();
   itensGatoCiclo.push(item.gatoSetaElem1Est);
 
-  item["gatoElem2"] = new Game.Item("caixaDeAreia.png");
+  item.gatoElem2 = new Game.Item("caixaDeAreia.png");
   item.gatoElem2.setPosition(1100, 250);
   item.gatoElem2.setScale(0.7);
   item.gatoElem2.setZorder(6);
@@ -161,21 +161,21 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoCiclo.push(item.gatoElem2);
 
-  item["gatoNum2"] = new Game.Text("2", estiloNumeros);
+  item.gatoNum2 = new Game.Text("2", estiloNumeros);
   item.gatoNum2.setAnchor(0.5, 0.6);
   item.gatoNum2.setPosition(1280, 110);
   item.gatoNum2.setAlpha(0);
   item.gatoNum2.disable();
   itensGatoCiclo.push(item.gatoNum2);
 
-  item["gatoSetaElem1Elem2"] = new Game.Line(285, 200, 1100, 200, 4);
+  item.gatoSetaElem1Elem2 = new Game.Line(285, 200, 1100, 200, 4);
   item.gatoSetaElem1Elem2.setColor(0, 0, 0);
   item.gatoSetaElem1Elem2.setZorder(7);
   item.gatoSetaElem1Elem2.setAlpha(0);
   item.gatoSetaElem1Elem2.disable();
   itensGatoCiclo.push(item.gatoSetaElem1Elem2);
 
-  item["gatoSetaEstElem2"] = new Game.Line(745, 430, 920, 340, 4);
+  item.gatoSetaEstElem2 = new Game.Line(745, 430, 920, 340, 4);
   item.gatoSetaEstElem2.setColor(0, 0, 0);
   item.gatoSetaEstElem2.addArrowAtEnd();
   item.gatoSetaEstElem2.setZorder(7);
@@ -183,7 +183,7 @@ function carregaCicloToxoplasmose() {
   item.gatoSetaEstElem2.disable();
   itensGatoCiclo.push(item.gatoSetaEstElem2);
 
-  item["gatoSetaElem2Elem3"] = new Game.Line(1100, 250, 1230, 600, 4);
+  item.gatoSetaElem2Elem3 = new Game.Line(1100, 250, 1230, 600, 4);
   item.gatoSetaElem2Elem3.setColor(0, 0, 0);
   item.gatoSetaElem2Elem3.addArrowAtEnd();
   item.gatoSetaElem2Elem3.setZorder(7);
@@ -191,7 +191,7 @@ function carregaCicloToxoplasmose() {
   item.gatoSetaElem2Elem3.disable();
   itensGatoCiclo.push(item.gatoSetaElem2Elem3);
 
-  item["gatoElem3"] = new Game.Item("rato.png");
+  item.gatoElem3 = new Game.Item("rato.png");
   item.gatoElem3.setPosition(1300, 800);
   item.gatoElem3.setScale(0.73);
   item.gatoElem3.setZorder(6);
@@ -205,14 +205,14 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoCiclo.push(item.gatoElem3);
 
-  item["gatoNum3"] = new Game.Text("3", estiloNumeros);
+  item.gatoNum3 = new Game.Text("3", estiloNumeros);
   item.gatoNum3.setAnchor(0.5, 0.6);
   item.gatoNum3.setPosition(1480, 650);
   item.gatoNum3.setAlpha(0);
   item.gatoNum3.disable();
   itensGatoCiclo.push(item.gatoNum3);
 
-  item["gatoSetaElem3Elem4"] = new Game.Line(1300, 800, 1550, 460, 4);
+  item.gatoSetaElem3Elem4 = new Game.Line(1300, 800, 1550, 460, 4);
   item.gatoSetaElem3Elem4.setColor(0, 0, 0);
   item.gatoSetaElem3Elem4.addArrowAtEnd();
   item.gatoSetaElem3Elem4.setZorder(7);
@@ -220,7 +220,7 @@ function carregaCicloToxoplasmose() {
   item.gatoSetaElem3Elem4.disable();
   itensGatoCiclo.push(item.gatoSetaElem3Elem4);
 
-  item["gatoElem4"] = new Game.Item("gato.png");
+  item.gatoElem4 = new Game.Item("gato.png");
   item.gatoElem4.setPosition(1670, 300);
   item.gatoElem4.setScale(0.67);
   item.gatoElem4.setZorder(6);
@@ -234,14 +234,14 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoCiclo.push(item.gatoElem4);
 
-  item["gatoNum4"] = new Game.Text("4", estiloNumeros);
+  item.gatoNum4 = new Game.Text("4", estiloNumeros);
   item.gatoNum4.setAnchor(0.5, 0.6);
   item.gatoNum4.setPosition(1520, 150);
   item.gatoNum4.setAlpha(0);
   item.gatoNum4.disable();
   itensGatoCiclo.push(item.gatoNum4);
 
-  item["gatoSetaElem4Elem2"] = new Game.Line(1670, 300, 1300, 270, 4);
+  item.gatoSetaElem4Elem2 = new Game.Line(1670, 300, 1300, 270, 4);
   item.gatoSetaElem4Elem2.setColor(0, 0, 0);
   item.gatoSetaElem4Elem2.addArrowAtEnd();
   item.gatoSetaElem4Elem2.setZorder(7);
@@ -249,7 +249,7 @@ function carregaCicloToxoplasmose() {
   item.gatoSetaElem4Elem2.disable();
   itensGatoCiclo.push(item.gatoSetaElem4Elem2);
 
-  item["gatoFechar"] = new Game.Item("botaoFechar.png");
+  item.gatoFechar = new Game.Item("botaoFechar.png");
   item.gatoFechar.setPosition(1840, 70);
   item.gatoFechar.setRotation(180);
   item.gatoFechar.setZorder(1);
@@ -306,7 +306,7 @@ function carregaCicloToxoplasmose() {
 
   var itensGatoDoente = [];
 
-  item["estGatoDoente"] = new Game.Image("estMjpnDte.png");
+  item.estGatoDoente = new Game.Image("estMjpnDte.png");
   item.estGatoDoente.setPosition(500, 590);
   item.estGatoDoente.setScale(1.35);
   item.estGatoDoente.setZorder(11);
@@ -314,7 +314,7 @@ function carregaCicloToxoplasmose() {
   item.estGatoDoente.disable();
   itensGatoDoente.push(item.estGatoDoente);
 
-  item["gatoBalaoSintoma"] = new Game.Image("balSintDir.png");
+  item.gatoBalaoSintoma = new Game.Image("balSintDir.png");
   item.gatoBalaoSintoma.setPosition(730+440, 300);
   item.gatoBalaoSintoma.setScale(0.25);
   item.gatoBalaoSintoma.setZorder(6);
@@ -322,14 +322,14 @@ function carregaCicloToxoplasmose() {
   item.gatoBalaoSintoma.disable();
   itensGatoDoente.push(item.gatoBalaoSintoma);
 
-  item["gatoBalaoPrevencao"] = new Game.Image("balPrevDir.png");
+  item.gatoBalaoPrevencao = new Game.Image("balPrevDir.png");
   item.gatoBalaoPrevencao.setPosition(730+440, 300);
   item.gatoBalaoPrevencao.setScale(0.25);
   item.gatoBalaoPrevencao.setZorder(6);
   item.gatoBalaoPrevencao.disable();
   itensGatoDoente.push(item.gatoBalaoPrevencao);
 
-  item["gatoBalaoTransmissao"] = new Game.Image("balTranDir.png");
+  item.gatoBalaoTransmissao = new Game.Image("balTranDir.png");
   item.gatoBalaoTransmissao.setPosition(730+440, 300);
   item.gatoBalaoTransmissao.setScale(0.25);
   item.gatoBalaoTransmissao.setZorder(6);
@@ -337,7 +337,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoBalaoTransmissao);
 
 
-  item["gatoAbaSintomas"] = new Game.Item("abaSint.png");
+  item.gatoAbaSintomas = new Game.Item("abaSint.png");
   item.gatoAbaSintomas.setPosition(426+550, 71);
   item.gatoAbaSintomas.setScale(0.25);
   item.gatoAbaSintomas.setZorder(7);
@@ -357,13 +357,13 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaSintomas);
 
-  item["gatoTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.gatoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.gatoTextoSintomas.setPosition(432-130+550, 71+20);
   item.gatoTextoSintomas.setAlpha(0);
   item.gatoTextoSintomas.disable();
   itensGatoDoente.push(item.gatoTextoSintomas);
 
-  item["gatoAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.gatoAbaPrevencao = new Game.Item("abaPrev.png");
   item.gatoAbaPrevencao.setPosition(432+244+550, 71);
   item.gatoAbaPrevencao.setScale(0.25);
   item.gatoAbaPrevencao.setZorder(8);
@@ -384,12 +384,12 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
-  item["gatoTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.gatoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.gatoTextoPrevencao.setPosition(432-130+550, 71+20);
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
 
-  item["gatoAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.gatoAbaTransmissao = new Game.Item("abaTran.png");
   item.gatoAbaTransmissao.setPosition(432+490+550, 71);
   item.gatoAbaTransmissao.setScale(0.25);
   item.gatoAbaTransmissao.setZorder(9);
@@ -410,12 +410,12 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaTransmissao);
 
-  item["gatoTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.gatoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.gatoTextoTransmissao.setPosition(432-130+550, 71+20);
   item.gatoTextoTransmissao.disable();
   itensGatoDoente.push(item.gatoTextoTransmissao);
 
-  item["gatoBotaoOK"] = new Game.Item("okNormal.png");
+  item.gatoBotaoOK = new Game.Item("okNormal.png");
   item.gatoBotaoOK.setScale(0.25);
   item.gatoBotaoOK.setPosition(432+450+550, 71+290);
   item.gatoBotaoOK.setAlpha(0);
@@ -429,7 +429,7 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoBotaoOK);
 
-  item["gatoBotaoOKhover"] = new Game.Item("okHover.png");
+  item.gatoBotaoOKhover = new Game.Item("okHover.png");
   item.gatoBotaoOKhover.setScale(0.25);
   item.gatoBotaoOKhover.setPosition(432+450+550, 71+290);
   item.gatoBotaoOKhover.disable();

@@ -20,7 +20,7 @@ sceneLoader[1] = function() {
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
 
-  item["chiqueiro"] = new Game.Item("chiqueiro.png");
+  item.chiqueiro = new Game.Item("chiqueiro.png");
   item.chiqueiro.setPosition(238, 240);
   item.chiqueiro.setZorder(15);
   item.chiqueiro.onMouseOver = function() {
@@ -30,7 +30,7 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
-  item["horta"] = new Game.Item("horta.png");
+  item.horta = new Game.Item("horta.png");
   item.horta.setPosition(400, 660);
   item.horta.setZorder(10);
   item.horta.onMouseOver = function() {
@@ -40,7 +40,7 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
-  item["latrina"] = new Game.Item("latrina.png");
+  item.latrina = new Game.Item("latrina.png");
   item.latrina.setPosition(1450, 200);
   item.latrina.setZorder(15);
   item.latrina.onMouseOver = function() {
@@ -50,7 +50,7 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
-  item["lixeira"] = new Game.Item("lixeira.png");
+  item.lixeira = new Game.Item("lixeira.png");
   item.lixeira.setPosition(567, 288);
   item.lixeira.setZorder(16);
   item.lixeira.onMouseOver = function() {
@@ -60,7 +60,7 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
-  item["pocoExterior"] = new Game.Item("pocoExterior.png");
+  item.pocoExterior = new Game.Item("pocoExterior.png");
   item.pocoExterior.setPosition(1723, 643);
   item.pocoExterior.setZorder(10);
   item.pocoExterior.onMouseOver = function() {
@@ -70,12 +70,12 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
-  item["vacaExterior"] = new Game.Image("vacaExterior.png");
+  item.vacaExterior = new Game.Image("vacaExterior.png");
   item.vacaExterior.setPosition(935, 252);
   item.vacaExterior.setZorder(15);
 
   // Adiciona uma seta para voltar na sala de aula
-  item["setaSalaDeAula"] = new Game.Item("seta.png");
+  item.setaSalaDeAula = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(210, 480);
   item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);

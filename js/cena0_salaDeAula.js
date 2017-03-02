@@ -21,7 +21,7 @@ sceneLoader[0] = function() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
 
-  item["caixaDeAreia"] = new Game.Item("salaDeAula_caixaDeAreia.png");
+  item.caixaDeAreia = new Game.Item("salaDeAula_caixaDeAreia.png");
   item.caixaDeAreia.setPosition(554, 478);
   item.caixaDeAreia.setZorder(20);
   item.caixaDeAreia.setBrightness(210);
@@ -32,17 +32,17 @@ sceneLoader[0] = function() {
     scene[0].setSubtitle("");
   }
 
-  item["carteiras"] = new Game.Image("salaDeAula_carteiras.png");
+  item.carteiras = new Game.Image("salaDeAula_carteiras.png");
   item.carteiras.setPosition(960, 857);
   item.carteiras.setZorder(10);
   item.carteiras.setBrightness(200);
 
-  item["mesaProfessor"] = new Game.Image("salaDeAula_mesaProfessor.png");
+  item.mesaProfessor = new Game.Image("salaDeAula_mesaProfessor.png");
   item.mesaProfessor.setPosition(1400, 550);
   item.mesaProfessor.setZorder(15);
   item.mesaProfessor.setBrightness(200);
 
-  item["vasoDeFlores"] = new Game.Item("salaDeAula_vasoDeFlores.png");
+  item.vasoDeFlores = new Game.Item("salaDeAula_vasoDeFlores.png");
   item.vasoDeFlores.setPosition(1630, 400);
   item.vasoDeFlores.setZorder(20);
   item.vasoDeFlores.setBrightness(210);
@@ -54,7 +54,7 @@ sceneLoader[0] = function() {
   }
 
   // Adiciona uma seta para levar a cena externa
-  item["setaJanela"] = new Game.Item("seta.png");
+  item.setaJanela = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
   item.setaJanela.setBrightness(220);
   item.setaJanela.setScale(0.3);
@@ -72,7 +72,7 @@ sceneLoader[0] = function() {
   }
 
   // Adiciona uma seta para levar ao armario
-  item["setaArmario"] = new Game.Item("seta.png");
+  item.setaArmario = new Game.Item("seta.png");
   item.setaArmario.setPosition(210, 480);
   item.setaArmario.setBrightness(220);
   item.setaArmario.setScale(0.3);

@@ -62,7 +62,7 @@ function carregaLivroAberto() {
   }
 
   // Conteúdo do livro Objeto de Aprendizagem
-  item["livroObjetoDeApendizagemPagina0"] = new Page();
+  item.livroObjetoDeApendizagemPagina0 = new Page();
   item.livroObjetoDeApendizagemPagina0.texto = new Game.Text("Texto sobre Objeto de Aprendizagem.", estiloTextoLivro);
   item.livroObjetoDeApendizagemPagina0.texto.setPosition(248, 172);
   item.livroObjetoDeApendizagemPagina0.texto.setAlpha(0);
@@ -70,13 +70,13 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.addContent("texto");
 
   // Imagens do livro e do X de fechar
-  item["livroAberto"] = new Game.Image("livroAberto.png");
+  item.livroAberto = new Game.Image("livroAberto.png");
   item.livroAberto.setZorder(4);
   item.livroAberto.setPosition(960, 540);
   item.livroAberto.setAlpha(0);
   item.livroAberto.disable();
 
-  item["fechaLivro"] = new Game.Item("botaoFechar.png");
+  item.fechaLivro = new Game.Item("botaoFechar.png");
   item.fechaLivro.setPosition(1840, 70);
   item.fechaLivro.setZorder(1);
   item.fechaLivro.setAlpha(0);

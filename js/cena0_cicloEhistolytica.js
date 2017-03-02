@@ -17,7 +17,7 @@ function carregaCicloEhistolytica() {
   var item = scene[0].item;
 
   // Adicionando o aluno
-  item["estBananaNormal"] = new Game.Item("estHprdSdv.png");
+  item.estBananaNormal = new Game.Item("estHprdSdv.png");
   item.estBananaNormal.setPosition(1220, 630);
   item.estBananaNormal.setZorder(11);
   item.estBananaNormal.setBrightness(220);
@@ -138,7 +138,7 @@ function carregaCicloEhistolytica() {
   var itensBananaCiclo = [];
 
   // Imagens ciclo
-  item["estBananaCiclo"] = new Game.Image("estHprdClo.png");
+  item.estBananaCiclo = new Game.Image("estHprdClo.png");
   item.estBananaCiclo.setPosition(960, 550);
   item.estBananaCiclo.setScale(0.5);
   item.estBananaCiclo.setZorder(9);
@@ -146,7 +146,7 @@ function carregaCicloEhistolytica() {
   item.estBananaCiclo.disable();
   itensBananaCiclo.push(item.estBananaCiclo);
 
-  item["bananaElem1"] = new Game.Item("entamoebaCisto.png");
+  item.bananaElem1 = new Game.Item("entamoebaCisto.png");
   item.bananaElem1.setPosition(485, 300);
   item.bananaElem1.setScale(0.7);
   item.bananaElem1.setZorder(6);
@@ -160,21 +160,21 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem1);
 
-  item["bananaNum1"] = new Game.Text("1", estiloNumeros);
+  item.bananaNum1 = new Game.Text("1", estiloNumeros);
   item.bananaNum1.setAnchor(0.5, 0.6);
   item.bananaNum1.setPosition(650, 140);
   item.bananaNum1.setAlpha(0);
   item.bananaNum1.disable();
   itensBananaCiclo.push(item.bananaNum1);
 
-  item["bananaSetaElem1Est"] = new Game.Line(485, 300, 910, 500, 4);
+  item.bananaSetaElem1Est = new Game.Line(485, 300, 910, 500, 4);
   item.bananaSetaElem1Est.setColor(0, 0, 0);
   item.bananaSetaElem1Est.setZorder(7);
   item.bananaSetaElem1Est.setAlpha(0);
   item.bananaSetaElem1Est.disable();
   itensBananaCiclo.push(item.bananaSetaElem1Est);
 
-  item["bananaElem2a"] = new Game.Item("entamoebaCisto.png");
+  item.bananaElem2a = new Game.Item("entamoebaCisto.png");
   item.bananaElem2a.setPosition(200, 750);
   item.bananaElem2a.setScale(0.4);
   item.bananaElem2a.setZorder(6);
@@ -188,14 +188,14 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem2a);
 
-  item["bananaNum2"] = new Game.Text("2", estiloNumeros);
+  item.bananaNum2 = new Game.Text("2", estiloNumeros);
   item.bananaNum2.setAnchor(0.5, 0.6);
   item.bananaNum2.setPosition(350, 700);
   item.bananaNum2.setAlpha(0);
   item.bananaNum2.disable();
   itensBananaCiclo.push(item.bananaNum2);
 
-  item["bananaSetaElem2aElem2b"] = new Game.Line(200, 750, 380, 750, 4);
+  item.bananaSetaElem2aElem2b = new Game.Line(200, 750, 380, 750, 4);
   item.bananaSetaElem2aElem2b.setColor(0, 0, 0);
   item.bananaSetaElem2aElem2b.addArrowAtEnd();
   item.bananaSetaElem2aElem2b.setZorder(7);
@@ -203,7 +203,7 @@ function carregaCicloEhistolytica() {
   item.bananaSetaElem2aElem2b.disable();
   itensBananaCiclo.push(item.bananaSetaElem2aElem2b);
 
-  item["bananaElem2b"] = new Game.Item("entamoebaTrofozoito.png");
+  item.bananaElem2b = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem2b.setPosition(537, 750);
   item.bananaElem2b.setScale(0.53);
   item.bananaElem2b.setZorder(6);
@@ -217,21 +217,21 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem2b);
 
-  item["bananaSetaElem2bEst"] = new Game.Line(537, 750, 940, 810, 4);
+  item.bananaSetaElem2bEst = new Game.Line(537, 750, 940, 810, 4);
   item.bananaSetaElem2bEst.setColor(0, 0, 0);
   item.bananaSetaElem2bEst.setZorder(7);
   item.bananaSetaElem2bEst.setAlpha(0);
   item.bananaSetaElem2bEst.disable();
   itensBananaCiclo.push(item.bananaSetaElem2bEst);
 
-  item["bananaSetaEstElem3a"] = new Game.Line(1010, 770, 1330, 250, 4);
+  item.bananaSetaEstElem3a = new Game.Line(1010, 770, 1330, 250, 4);
   item.bananaSetaEstElem3a.setColor(0, 0, 0);
   item.bananaSetaEstElem3a.setZorder(7);
   item.bananaSetaEstElem3a.setAlpha(0);
   item.bananaSetaEstElem3a.disable();
   itensBananaCiclo.push(item.bananaSetaEstElem3a);
 
-  item["bananaElem3a"] = new Game.Item("entamoebaTrofozoito.png");
+  item.bananaElem3a = new Game.Item("entamoebaTrofozoito.png");
   item.bananaElem3a.setPosition(1330, 250);
   item.bananaElem3a.setScale(0.42);
   item.bananaElem3a.setZorder(6);
@@ -245,14 +245,14 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem3a);
 
-  item["bananaNum3"] = new Game.Text("3", estiloNumeros);
+  item.bananaNum3 = new Game.Text("3", estiloNumeros);
   item.bananaNum3.setAnchor(0.5, 0.6);
   item.bananaNum3.setPosition(1480, 200);
   item.bananaNum3.setAlpha(0);
   item.bananaNum3.disable();
   itensBananaCiclo.push(item.bananaNum3);
 
-  item["bananaSetaElem3aElem3b"] = new Game.Line(1330, 250, 1510, 250, 4);
+  item.bananaSetaElem3aElem3b = new Game.Line(1330, 250, 1510, 250, 4);
   item.bananaSetaElem3aElem3b.setColor(0, 0, 0);
   item.bananaSetaElem3aElem3b.addArrowAtEnd();
   item.bananaSetaElem3aElem3b.setZorder(7);
@@ -260,7 +260,7 @@ function carregaCicloEhistolytica() {
   item.bananaSetaElem3aElem3b.disable();
   itensBananaCiclo.push(item.bananaSetaElem3aElem3b);
 
-  item["bananaElem3b"] = new Game.Item("entamoebaCisto.png");
+  item.bananaElem3b = new Game.Item("entamoebaCisto.png");
   item.bananaElem3b.setPosition(1670, 250);
   item.bananaElem3b.setScale(0.55);
   item.bananaElem3b.setZorder(6);
@@ -274,7 +274,7 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem3b);
 
-  item["bananaSetaEstElem4"] = new Game.Line(930, 880, 1180, 800, 4);
+  item.bananaSetaEstElem4 = new Game.Line(930, 880, 1180, 800, 4);
   item.bananaSetaEstElem4.setColor(0, 0, 0);
   item.bananaSetaEstElem4.addArrowAtEnd();
   item.bananaSetaEstElem4.setZorder(7);
@@ -282,14 +282,14 @@ function carregaCicloEhistolytica() {
   item.bananaSetaEstElem4.disable();
   itensBananaCiclo.push(item.bananaSetaEstElem4);
 
-  item["bananaNum4"] = new Game.Text("4", estiloNumeros);
+  item.bananaNum4 = new Game.Text("4", estiloNumeros);
   item.bananaNum4.setAnchor(0.5, 0.6);
   item.bananaNum4.setPosition(1450, 660);
   item.bananaNum4.setAlpha(0);
   item.bananaNum4.disable();
   itensBananaCiclo.push(item.bananaNum4);
 
-  item["bananaElem4"] = new Game.Item("fezesComMosca.png");
+  item.bananaElem4 = new Game.Item("fezesComMosca.png");
   item.bananaElem4.setPosition(1330, 800);
   item.bananaElem4.setScale(0.51);
   item.bananaElem4.setZorder(6);
@@ -303,21 +303,21 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem4);
 
-  item["bananaSetaElem4Elem5"] = new Game.Line(1330, 800, 1700, 800, 4);
+  item.bananaSetaElem4Elem5 = new Game.Line(1330, 800, 1700, 800, 4);
   item.bananaSetaElem4Elem5.setColor(0, 0, 0);
   item.bananaSetaElem4Elem5.setZorder(7);
   item.bananaSetaElem4Elem5.setAlpha(0);
   item.bananaSetaElem4Elem5.disable();
   itensBananaCiclo.push(item.bananaSetaElem4Elem5);
 
-  item["bananaNum5"] = new Game.Text("5", estiloNumeros);
+  item.bananaNum5 = new Game.Text("5", estiloNumeros);
   item.bananaNum5.setAnchor(0.5, 0.6);
   item.bananaNum5.setPosition(1851, 671);
   item.bananaNum5.setAlpha(0);
   item.bananaNum5.disable();
   itensBananaCiclo.push(item.bananaNum5);
 
-  item["bananaElem5"] = new Game.Item("entamoebaCisto.png");
+  item.bananaElem5 = new Game.Item("entamoebaCisto.png");
   item.bananaElem5.setPosition(1700, 800);
   item.bananaElem5.setScale(0.56);
   item.bananaElem5.setZorder(6);
@@ -331,7 +331,7 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem5);
 
-  item["bananaFechar"] = new Game.Item("botaoFechar.png");
+  item.bananaFechar = new Game.Item("botaoFechar.png");
   item.bananaFechar.setPosition(1840, 70);
   item.bananaFechar.setRotation(180);
   item.bananaFechar.setZorder(1);
@@ -388,14 +388,14 @@ function carregaCicloEhistolytica() {
 
   var itensBananaDoente = [];
 
-  item["estBananaDoente"] = new Game.Image("estHprdDte.png");
+  item.estBananaDoente = new Game.Image("estHprdDte.png");
   item.estBananaDoente.setPosition(1218, 668);
   item.estBananaDoente.setZorder(11);
   item.estBananaDoente.setAlpha(0);
   item.estBananaDoente.disable();
   itensBananaDoente.push(item.estBananaDoente);
 
-  item["bananaBalaoSintoma"] = new Game.Image("balSintEsq.png");
+  item.bananaBalaoSintoma = new Game.Image("balSintEsq.png");
   item.bananaBalaoSintoma.setPosition(730, 300);
   item.bananaBalaoSintoma.setScale(0.25);
   item.bananaBalaoSintoma.setZorder(6);
@@ -403,14 +403,14 @@ function carregaCicloEhistolytica() {
   item.bananaBalaoSintoma.disable();
   itensBananaDoente.push(item.bananaBalaoSintoma);
 
-  item["bananaBalaoPrevencao"] = new Game.Image("balPrevEsq.png");
+  item.bananaBalaoPrevencao = new Game.Image("balPrevEsq.png");
   item.bananaBalaoPrevencao.setPosition(730, 300);
   item.bananaBalaoPrevencao.setScale(0.25);
   item.bananaBalaoPrevencao.setZorder(6);
   item.bananaBalaoPrevencao.disable();
   itensBananaDoente.push(item.bananaBalaoPrevencao);
 
-  item["bananaBalaoTransmissao"] = new Game.Image("balTranEsq.png");
+  item.bananaBalaoTransmissao = new Game.Image("balTranEsq.png");
   item.bananaBalaoTransmissao.setPosition(730, 300);
   item.bananaBalaoTransmissao.setScale(0.25);
   item.bananaBalaoTransmissao.setZorder(6);
@@ -418,7 +418,7 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaBalaoTransmissao);
 
 
-  item["bananaAbaSintomas"] = new Game.Item("abaSint.png");
+  item.bananaAbaSintomas = new Game.Item("abaSint.png");
   item.bananaAbaSintomas.setPosition(432, 71);
   item.bananaAbaSintomas.setScale(0.25);
   item.bananaAbaSintomas.setZorder(7);
@@ -438,13 +438,13 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaSintomas);
 
-  item["bananaTextoSintomas"] = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.bananaTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
   item.bananaTextoSintomas.setPosition(432-130, 71+20);
   item.bananaTextoSintomas.setAlpha(0);
   item.bananaTextoSintomas.disable();
   itensBananaDoente.push(item.bananaTextoSintomas);
 
-  item["bananaAbaPrevencao"] = new Game.Item("abaPrev.png");
+  item.bananaAbaPrevencao = new Game.Item("abaPrev.png");
   item.bananaAbaPrevencao.setPosition(432 + 232, 71);
   item.bananaAbaPrevencao.setScale(0.25);
   item.bananaAbaPrevencao.setZorder(8);
@@ -465,12 +465,12 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaPrevencao);
 
-  item["bananaTextoPrevencao"] = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.bananaTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
   item.bananaTextoPrevencao.setPosition(432-130, 71+20);
   item.bananaTextoPrevencao.disable();
   itensBananaDoente.push(item.bananaTextoPrevencao);
 
-  item["bananaAbaTransmissao"] = new Game.Item("abaTran.png");
+  item.bananaAbaTransmissao = new Game.Item("abaTran.png");
   item.bananaAbaTransmissao.setPosition(432 + 482, 71);
   item.bananaAbaTransmissao.setScale(0.25);
   item.bananaAbaTransmissao.setZorder(9);
@@ -491,12 +491,12 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaTransmissao);
 
-  item["bananaTextoTransmissao"] = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.bananaTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
   item.bananaTextoTransmissao.setPosition(432-130, 71+20);
   item.bananaTextoTransmissao.disable();
   itensBananaDoente.push(item.bananaTextoTransmissao);
 
-  item["bananaBotaoOK"] = new Game.Item("okNormal.png");
+  item.bananaBotaoOK = new Game.Item("okNormal.png");
   item.bananaBotaoOK.setScale(0.25);
   item.bananaBotaoOK.setPosition(432+450, 71+290);
   item.bananaBotaoOK.setAlpha(0);
@@ -510,7 +510,7 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaBotaoOK);
 
-  item["bananaBotaoOKhover"] = new Game.Item("okHover.png");
+  item.bananaBotaoOKhover = new Game.Item("okHover.png");
   item.bananaBotaoOKhover.setScale(0.25);
   item.bananaBotaoOKhover.setPosition(432+450, 71+290);
   item.bananaBotaoOKhover.disable();

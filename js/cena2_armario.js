@@ -23,7 +23,7 @@ sceneLoader[2] = function() {
 
   scene[2].livros = [];
 
-  item["livroObjetoDeApendizagem"] = new Game.Item("livroObjetoDeApendizagem.png");
+  item.livroObjetoDeApendizagem = new Game.Item("livroObjetoDeApendizagem.png");
   item.livroObjetoDeApendizagem.setPosition(565, 204);
   item.livroObjetoDeApendizagem.setZorder(20);
   item.livroObjetoDeApendizagem.setBrightness(210);
@@ -41,7 +41,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroObjetoDeApendizagem);
 
-  item["livroParasitologia"] = new Game.Item("livroParasitologia.png");
+  item.livroParasitologia = new Game.Item("livroParasitologia.png");
   item.livroParasitologia.setPosition(972, 200);
   item.livroParasitologia.setZorder(20);
   item.livroParasitologia.setBrightness(210);
@@ -59,7 +59,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroParasitologia);
 
-  item["livroAmebiase"] = new Game.Item("livroAmebiase.png");
+  item.livroAmebiase = new Game.Item("livroAmebiase.png");
   item.livroAmebiase.setPosition(1218, 196);
   item.livroAmebiase.setZorder(20);
   item.livroAmebiase.setBrightness(210);
@@ -77,7 +77,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroAmebiase);
 
-  item["livroMalaria"] = new Game.Item("livroMalaria.png");
+  item.livroMalaria = new Game.Item("livroMalaria.png");
   item.livroMalaria.setPosition(698, 642);
   item.livroMalaria.setZorder(20);
   item.livroMalaria.setBrightness(210);
@@ -95,7 +95,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroMalaria);
 
-  item["livroToxoplamose"] = new Game.Item("livroToxoplamose.png");
+  item.livroToxoplamose = new Game.Item("livroToxoplamose.png");
   item.livroToxoplamose.setPosition(850, 590);
   item.livroToxoplamose.setZorder(20);
   item.livroToxoplamose.setBrightness(210);
@@ -113,7 +113,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroToxoplamose);
 
-  item["livroAscaridiase"] = new Game.Item("livroAscaridiase.png");
+  item.livroAscaridiase = new Game.Item("livroAscaridiase.png");
   item.livroAscaridiase.setPosition(1314, 636);
   item.livroAscaridiase.setZorder(20);
   item.livroAscaridiase.setBrightness(210);
@@ -131,7 +131,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroAscaridiase);
 
-  item["livroTeniase"] = new Game.Item("livroTeniase.png");
+  item.livroTeniase = new Game.Item("livroTeniase.png");
   item.livroTeniase.setPosition(768, 924);
   item.livroTeniase.setZorder(20);
   item.livroTeniase.setBrightness(210);
@@ -149,7 +149,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroTeniase);
 
-  item["livroGiardiase"] = new Game.Item("livroGiardiase.png");
+  item.livroGiardiase = new Game.Item("livroGiardiase.png");
   item.livroGiardiase.setPosition(1168, 1058);
   item.livroGiardiase.setZorder(20);
   item.livroGiardiase.setBrightness(210);
@@ -167,7 +167,7 @@ sceneLoader[2] = function() {
   }
   scene[2].livros.push(item.livroGiardiase);
 
-  item["livroAgradecimentos"] = new Game.Item("livroAgradecimentos.png");
+  item.livroAgradecimentos = new Game.Item("livroAgradecimentos.png");
   item.livroAgradecimentos.setPosition(1345, 940);
   item.livroAgradecimentos.setZorder(20);
   item.livroAgradecimentos.setBrightness(210);
@@ -186,7 +186,7 @@ sceneLoader[2] = function() {
   scene[2].livros.push(item.livroAgradecimentos);
 
   // Adiciona uma seta para voltar na sala de aula
-  item["setaSalaDeAula"] = new Game.Item("seta.png");
+  item.setaSalaDeAula = new Game.Item("seta.png");
   item.setaSalaDeAula.setPosition(1735, 480);
   item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);
