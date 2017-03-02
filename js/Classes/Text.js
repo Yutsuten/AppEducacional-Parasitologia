@@ -19,18 +19,23 @@ Game.Text = function(text, style) {
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
+    UpdateScreen();
   }
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
+    UpdateScreen();
   }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
+    UpdateScreen();
   }
   this.setRotation = function(newRotation) {
     this.rotation = (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
+    UpdateScreen();
   }
   this.setAnchor = function(anchorX, anchorY) {
     this.anchor.set(anchorX, anchorY);
+    UpdateScreen();
   }
 
   // Change value methods (animations that change properties within time)
@@ -53,9 +58,11 @@ Game.Text = function(text, style) {
   // Enable-Disable Methods
   this.disable = function() {
     this.visible = false;
+    UpdateScreen();
   }
   this.enable = function() {
     this.visible = true;
+    UpdateScreen();
   }
 
   // Return the graphic(s) to be drawn

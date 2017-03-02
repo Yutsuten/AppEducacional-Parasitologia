@@ -18,18 +18,23 @@ Game.Primitive = function() {
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
+    UpdateScreen();
   }
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
+    UpdateScreen();
   }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
+    UpdateScreen();
   }
   this.setColor = function(red, green, blue) {
     this.tint = (red << 16) + (green << 8) + blue;
+    UpdateScreen();
   }
   this.setRotation = function(newRotation) {
     this.rotation = (newRotation + 90) * (Math.PI / 180); // Changing from radians to degree
+    UpdateScreen();
   }
 
   // Change value methods (animations that change properties within time)
@@ -52,9 +57,11 @@ Game.Primitive = function() {
   // Enable-Disable Methods
   this.disable = function() {
     this.visible = false;
+    UpdateScreen();
   }
   this.enable = function() {
     this.visible = true;
+    UpdateScreen();
   }
 
   // Return the graphic(s) to be drawn

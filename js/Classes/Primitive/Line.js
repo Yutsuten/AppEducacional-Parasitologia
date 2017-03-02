@@ -51,14 +51,17 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
     distributeProperties();
+    UpdateScreen();
   }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
     distributeProperties();
+    UpdateScreen();
   }
   this.setColor = function(red, green, blue) {
     this.tint = (red << 16) + (green << 8) + blue;
     distributeProperties();
+    UpdateScreen();
   }
 
   // Method to make an arrow
@@ -67,6 +70,7 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
     triangleAtBeginning.setPosition(x1 + -xDirection*size/2, y1 + -yDirection*size/2);
     triangleAtBeginning.setRotation(angle+180);
     distributeProperties();
+    UpdateScreen();
   }
 
   this.addArrowAtEnd = function(size = 7*lineWidth) {
@@ -74,6 +78,7 @@ Game.Line = function(x1, y1, x2, y2, lineWidth) {
     triangleAtEnd.setPosition(x2 + xDirection*size/2, y2 + yDirection*size/2);
     triangleAtEnd.setRotation(angle);
     distributeProperties();
+    UpdateScreen();
   }
 
   // Return the graphic(s) to be drawn

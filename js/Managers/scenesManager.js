@@ -70,6 +70,11 @@ function sceneFade() {
 }
 
 function UpdateScreen() {
-  scene[currentScene].showScene();
-  ScreenUpdateRequest();
+  if (scene[currentScene] != null) { // Validate scene
+    scene[currentScene].showScene();
+    ScreenUpdateRequest();
+  }
+  else {
+    console.warn("Cannot draw on nonexistent scene. Scene number: " + currentScene);
+  }
 }

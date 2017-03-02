@@ -34,38 +34,49 @@ Game.Image = function(texture) {
   this.setPosition = function(coordX, coordY) {
     this.x = coordX;
     this.y = coordY;
+    UpdateScreen();
   }
   this.setScale = function(newScale) {
     this.scale.set(newScale, newScale);
+    UpdateScreen();
   }
   this.setAlpha = function(newAlpha) {
     this.alpha = newAlpha;
+    UpdateScreen();
   }
   this.setZorder = function(newZorder) {
     this.z_order = newZorder;
+    UpdateScreen();
   }
   this.setTint = function(red, green, blue) {
     this.tint = (red << 16) + (green << 8) + blue;
+    UpdateScreen();
   }
   this.setBrightness = function(newBrightness) {
     this.setTint(newBrightness, newBrightness, newBrightness);
+    UpdateScreen();
   }
   this.setRotation = function(newRotation) {
     this.rotation = newRotation * (Math.PI / 180); // Changing from radians to degree
+    UpdateScreen();
   }
   this.setHeight = function(newHeight) {
     this.height = newHeight;
     this.scale.x = this.scale.y;
+    UpdateScreen();
   }
   this.setWidth = function(newWidth) {
     this.width = newWidth;
     this.scale.y = this.scale.x;
+    UpdateScreen();
   }
   this.setAnchor = function(anchorX, anchorY) {
     this.anchor.set(anchorX, anchorY);
+    UpdateScreen();
   }
   this.setInteractive = function(isInteractive) {
     this.interactive = isInteractive;
+    UpdateScreen();
   }
 
   // Get value methods
@@ -167,6 +178,7 @@ Game.Image = function(texture) {
   this.disable = function() {
     this.filters = null;
     this.visible = false;
+    UpdateScreen();
   }
   this.enable = function() {
     this.visible = true;
