@@ -363,17 +363,6 @@ function carregaCicloToxoplasmose() {
   item.gatoTextoSintomas.disable();
   itensGatoDoente.push(item.gatoTextoSintomas);
 
-  /*item["gatoAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.gatoAbaSintomasHover.setPosition(432, 71);
-  item.gatoAbaSintomasHover.setScale(0.25);
-  item.gatoAbaSintomasHover.setZorder(7);
-  item.gatoAbaSintomasHover.disable();
-  item.gatoAbaSintomasHover.setInteractive(false);
-  item.gatoAbaSintomas.onMouseOut = function() {
-    item.gatoAbaSintomas.enable();
-    item.gatoAbaSintomasHover.disable();
-  }*/
-
   item["gatoAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.gatoAbaPrevencao.setPosition(432+244+550, 71);
   item.gatoAbaPrevencao.setScale(0.25);
@@ -400,19 +389,6 @@ function carregaCicloToxoplasmose() {
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
 
-  /*item["gatoAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.gatoAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.gatoAbaPrevencaoHover.setScale(0.25);
-  item.gatoAbaPrevencaoHover.setZorder(7);
-  item.gatoAbaPrevencaoHover.setInteractive(false);
-  item.gatoAbaPrevencaoHover.disable();
-  item.gatoAbaPrevencaoHover.onMouseOut = function() {
-    item.gatoAbaPrevencaoHover.setInteractive(false);
-    item.gatoAbaPrevencaoHover.disable();
-    item.gatoAbaPrevencao.setInteractive(true);
-    item.gatoAbaPrevencao.enable();
-  }*/
-
   item["gatoAbaTransmissao"] = new Game.Item("abaTran.png");
   item.gatoAbaTransmissao.setPosition(432+490+550, 71);
   item.gatoAbaTransmissao.setScale(0.25);
@@ -438,12 +414,6 @@ function carregaCicloToxoplasmose() {
   item.gatoTextoTransmissao.setPosition(432-130+550, 71+20);
   item.gatoTextoTransmissao.disable();
   itensGatoDoente.push(item.gatoTextoTransmissao);
-
-  /*item["gatoAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.gatoAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.gatoAbaTransmissaoHover.setScale(0.25);
-  item.gatoAbaTransmissaoHover.setZorder(7);
-  item.gatoAbaTransmissaoHover.disable();*/
 
   item["gatoBotaoOK"] = new Game.Item("okNormal.png");
   item.gatoBotaoOK.setScale(0.25);

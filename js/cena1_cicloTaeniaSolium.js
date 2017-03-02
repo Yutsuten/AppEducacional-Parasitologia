@@ -527,17 +527,6 @@ function carregaCicloTaeniaSolium() {
   item.porcoTextoSintomas.disable();
   itensPorcoDoente.push(item.porcoTextoSintomas);
 
-  /*item["porcoAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.porcoAbaSintomasHover.setPosition(432, 71);
-  item.porcoAbaSintomasHover.setScale(0.25);
-  item.porcoAbaSintomasHover.setZorder(7);
-  item.porcoAbaSintomasHover.disable();
-  item.porcoAbaSintomasHover.setInteractive(false);
-  item.porcoAbaSintomas.onMouseOut = function() {
-    item.porcoAbaSintomas.enable();
-    item.porcoAbaSintomasHover.disable();
-  }*/
-
   item["porcoAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.porcoAbaPrevencao.setPosition(432+244+550+270, 71);
   item.porcoAbaPrevencao.setScale(0.25);
@@ -564,19 +553,6 @@ function carregaCicloTaeniaSolium() {
   item.porcoTextoPrevencao.disable();
   itensPorcoDoente.push(item.porcoTextoPrevencao);
 
-  /*item["porcoAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.porcoAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.porcoAbaPrevencaoHover.setScale(0.25);
-  item.porcoAbaPrevencaoHover.setZorder(7);
-  item.porcoAbaPrevencaoHover.setInteractive(false);
-  item.porcoAbaPrevencaoHover.disable();
-  item.porcoAbaPrevencaoHover.onMouseOut = function() {
-    item.porcoAbaPrevencaoHover.setInteractive(false);
-    item.porcoAbaPrevencaoHover.disable();
-    item.porcoAbaPrevencao.setInteractive(true);
-    item.porcoAbaPrevencao.enable();
-  }*/
-
   item["porcoAbaTransmissao"] = new Game.Item("abaTran.png");
   item.porcoAbaTransmissao.setPosition(432+490+550+270, 71);
   item.porcoAbaTransmissao.setScale(0.25);
@@ -602,12 +578,6 @@ function carregaCicloTaeniaSolium() {
   item.porcoTextoTransmissao.setPosition(432-130+550+270, 71+20);
   item.porcoTextoTransmissao.disable();
   itensPorcoDoente.push(item.porcoTextoTransmissao);
-
-  /*item["porcoAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.porcoAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.porcoAbaTransmissaoHover.setScale(0.25);
-  item.porcoAbaTransmissaoHover.setZorder(7);
-  item.porcoAbaTransmissaoHover.disable();*/
 
   item["porcoBotaoOK"] = new Game.Item("okNormal.png");
   item.porcoBotaoOK.setScale(0.25);

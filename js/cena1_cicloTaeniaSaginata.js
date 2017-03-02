@@ -526,17 +526,6 @@ function carregaCicloTaeniaSaginata() {
   item.vacaTextoSintomas.disable();
   itensVacaDoente.push(item.vacaTextoSintomas);
 
-  /*item["vacaAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.vacaAbaSintomasHover.setPosition(432, 71);
-  item.vacaAbaSintomasHover.setScale(0.25);
-  item.vacaAbaSintomasHover.setZorder(7);
-  item.vacaAbaSintomasHover.disable();
-  item.vacaAbaSintomasHover.setInteractive(false);
-  item.vacaAbaSintomas.onMouseOut = function() {
-    item.vacaAbaSintomas.enable();
-    item.vacaAbaSintomasHover.disable();
-  }*/
-
   item["vacaAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.vacaAbaPrevencao.setPosition(432+244+550+270, 71);
   item.vacaAbaPrevencao.setScale(0.25);
@@ -563,19 +552,6 @@ function carregaCicloTaeniaSaginata() {
   item.vacaTextoPrevencao.disable();
   itensVacaDoente.push(item.vacaTextoPrevencao);
 
-  /*item["vacaAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.vacaAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.vacaAbaPrevencaoHover.setScale(0.25);
-  item.vacaAbaPrevencaoHover.setZorder(7);
-  item.vacaAbaPrevencaoHover.setInteractive(false);
-  item.vacaAbaPrevencaoHover.disable();
-  item.vacaAbaPrevencaoHover.onMouseOut = function() {
-    item.vacaAbaPrevencaoHover.setInteractive(false);
-    item.vacaAbaPrevencaoHover.disable();
-    item.vacaAbaPrevencao.setInteractive(true);
-    item.vacaAbaPrevencao.enable();
-  }*/
-
   item["vacaAbaTransmissao"] = new Game.Item("abaTran.png");
   item.vacaAbaTransmissao.setPosition(432+490+550+270, 71);
   item.vacaAbaTransmissao.setScale(0.25);
@@ -601,12 +577,6 @@ function carregaCicloTaeniaSaginata() {
   item.vacaTextoTransmissao.setPosition(432-130+550+270, 71+20);
   item.vacaTextoTransmissao.disable();
   itensVacaDoente.push(item.vacaTextoTransmissao);
-
-  /*item["vacaAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.vacaAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.vacaAbaTransmissaoHover.setScale(0.25);
-  item.vacaAbaTransmissaoHover.setZorder(7);
-  item.vacaAbaTransmissaoHover.disable();*/
 
   item["vacaBotaoOK"] = new Game.Item("okNormal.png");
   item.vacaBotaoOK.setScale(0.25);

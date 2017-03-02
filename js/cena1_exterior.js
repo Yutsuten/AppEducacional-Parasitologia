@@ -107,7 +107,6 @@ sceneLoader[1] = function() {
         item.estPorcoNormal.interactiveTarget = true;
         item.estCenouraNormal.brightnessTarget = 150;
         item.estCenouraNormal.interactiveTarget = false;
-        //console.log("state 0 -> 1");
         break;
       case 1:
         if (!item.estVacaNormal.interactiveTarget && !item.estPorcoNormal.interactiveTarget) {
@@ -115,7 +114,6 @@ sceneLoader[1] = function() {
           item.estCenouraNormal.brightnessTarget = 220;
           item.estCenouraNormal.interactiveTarget = true;
         }
-        //console.log("state 1 -> " + scene[1].state);
         break;
       case 2:
         scene[1].state = 3;
@@ -125,7 +123,6 @@ sceneLoader[1] = function() {
         item.estVacaNormal.interactiveTarget = true;
         item.estPorcoNormal.brightnessTarget = 220;
         item.estPorcoNormal.interactiveTarget = true;
-        //console.log("state 2 -> 3");
         break;
       case 3:
         item.estPocoNormal.brightnessTarget = 220;
@@ -136,7 +133,6 @@ sceneLoader[1] = function() {
         item.estPorcoNormal.interactiveTarget = true;
         item.estCenouraNormal.brightnessTarget = 220;
         item.estCenouraNormal.interactiveTarget = true;
-        //console.log("state 3");
         break;
     }
     UpdateScreen();

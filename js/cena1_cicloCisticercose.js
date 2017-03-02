@@ -270,17 +270,6 @@ function carregaCicloCisticercose() {
   item.cenouraTextoSintomas.disable();
   itensCenouraDoente.push(item.cenouraTextoSintomas);
 
-  /*item["cenouraAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.cenouraAbaSintomasHover.setPosition(432, 71);
-  item.cenouraAbaSintomasHover.setScale(0.25);
-  item.cenouraAbaSintomasHover.setZorder(7);
-  item.cenouraAbaSintomasHover.disable();
-  item.cenouraAbaSintomasHover.setInteractive(false);
-  item.cenouraAbaSintomas.onMouseOut = function() {
-    item.cenouraAbaSintomas.enable();
-    item.cenouraAbaSintomasHover.disable();
-  }*/
-
   item["cenouraAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.cenouraAbaPrevencao.setPosition(432+244+550-150, 71);
   item.cenouraAbaPrevencao.setScale(0.25);
@@ -307,19 +296,6 @@ function carregaCicloCisticercose() {
   item.cenouraTextoPrevencao.disable();
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
 
-  /*item["cenouraAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.cenouraAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.cenouraAbaPrevencaoHover.setScale(0.25);
-  item.cenouraAbaPrevencaoHover.setZorder(7);
-  item.cenouraAbaPrevencaoHover.setInteractive(false);
-  item.cenouraAbaPrevencaoHover.disable();
-  item.cenouraAbaPrevencaoHover.onMouseOut = function() {
-    item.cenouraAbaPrevencaoHover.setInteractive(false);
-    item.cenouraAbaPrevencaoHover.disable();
-    item.cenouraAbaPrevencao.setInteractive(true);
-    item.cenouraAbaPrevencao.enable();
-  }*/
-
   item["cenouraAbaTransmissao"] = new Game.Item("abaTran.png");
   item.cenouraAbaTransmissao.setPosition(432+490+550-150, 71);
   item.cenouraAbaTransmissao.setScale(0.25);
@@ -345,12 +321,6 @@ function carregaCicloCisticercose() {
   item.cenouraTextoTransmissao.setPosition(432-130+550-150, 71+20);
   item.cenouraTextoTransmissao.disable();
   itensCenouraDoente.push(item.cenouraTextoTransmissao);
-
-  /*item["cenouraAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.cenouraAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.cenouraAbaTransmissaoHover.setScale(0.25);
-  item.cenouraAbaTransmissaoHover.setZorder(7);
-  item.cenouraAbaTransmissaoHover.disable();*/
 
   item["cenouraBotaoOK"] = new Game.Item("okNormal.png");
   item.cenouraBotaoOK.setScale(0.25);

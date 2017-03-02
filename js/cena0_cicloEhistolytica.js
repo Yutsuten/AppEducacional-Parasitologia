@@ -444,17 +444,6 @@ function carregaCicloEhistolytica() {
   item.bananaTextoSintomas.disable();
   itensBananaDoente.push(item.bananaTextoSintomas);
 
-  /*item["bananaAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.bananaAbaSintomasHover.setPosition(432, 71);
-  item.bananaAbaSintomasHover.setScale(0.25);
-  item.bananaAbaSintomasHover.setZorder(7);
-  item.bananaAbaSintomasHover.disable();
-  item.bananaAbaSintomasHover.setInteractive(false);
-  item.bananaAbaSintomas.onMouseOut = function() {
-    item.bananaAbaSintomas.enable();
-    item.bananaAbaSintomasHover.disable();
-  }*/
-
   item["bananaAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.bananaAbaPrevencao.setPosition(432 + 232, 71);
   item.bananaAbaPrevencao.setScale(0.25);
@@ -481,19 +470,6 @@ function carregaCicloEhistolytica() {
   item.bananaTextoPrevencao.disable();
   itensBananaDoente.push(item.bananaTextoPrevencao);
 
-  /*item["bananaAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.bananaAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.bananaAbaPrevencaoHover.setScale(0.25);
-  item.bananaAbaPrevencaoHover.setZorder(7);
-  item.bananaAbaPrevencaoHover.setInteractive(false);
-  item.bananaAbaPrevencaoHover.disable();
-  item.bananaAbaPrevencaoHover.onMouseOut = function() {
-    item.bananaAbaPrevencaoHover.setInteractive(false);
-    item.bananaAbaPrevencaoHover.disable();
-    item.bananaAbaPrevencao.setInteractive(true);
-    item.bananaAbaPrevencao.enable();
-  }*/
-
   item["bananaAbaTransmissao"] = new Game.Item("abaTran.png");
   item.bananaAbaTransmissao.setPosition(432 + 482, 71);
   item.bananaAbaTransmissao.setScale(0.25);
@@ -519,12 +495,6 @@ function carregaCicloEhistolytica() {
   item.bananaTextoTransmissao.setPosition(432-130, 71+20);
   item.bananaTextoTransmissao.disable();
   itensBananaDoente.push(item.bananaTextoTransmissao);
-
-  /*item["bananaAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.bananaAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.bananaAbaTransmissaoHover.setScale(0.25);
-  item.bananaAbaTransmissaoHover.setZorder(7);
-  item.bananaAbaTransmissaoHover.disable();*/
 
   item["bananaBotaoOK"] = new Game.Item("okNormal.png");
   item.bananaBotaoOK.setScale(0.25);

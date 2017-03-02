@@ -493,17 +493,6 @@ function carregaCicloAscaris() {
   item.tomateTextoSintomas.disable();
   itensTomateDoente.push(item.tomateTextoSintomas);
 
-  /*item["tomateAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.tomateAbaSintomasHover.setPosition(432, 71);
-  item.tomateAbaSintomasHover.setScale(0.25);
-  item.tomateAbaSintomasHover.setZorder(7);
-  item.tomateAbaSintomasHover.disable();
-  item.tomateAbaSintomasHover.setInteractive(false);
-  item.tomateAbaSintomas.onMouseOut = function() {
-    item.tomateAbaSintomas.enable();
-    item.tomateAbaSintomasHover.disable();
-  }*/
-
   item["tomateAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.tomateAbaPrevencao.setPosition(432+232-260, 71);
   item.tomateAbaPrevencao.setScale(0.25);
@@ -530,19 +519,6 @@ function carregaCicloAscaris() {
   item.tomateTextoPrevencao.disable();
   itensTomateDoente.push(item.tomateTextoPrevencao);
 
-  /*item["tomateAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.tomateAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.tomateAbaPrevencaoHover.setScale(0.25);
-  item.tomateAbaPrevencaoHover.setZorder(7);
-  item.tomateAbaPrevencaoHover.setInteractive(false);
-  item.tomateAbaPrevencaoHover.disable();
-  item.tomateAbaPrevencaoHover.onMouseOut = function() {
-    item.tomateAbaPrevencaoHover.setInteractive(false);
-    item.tomateAbaPrevencaoHover.disable();
-    item.tomateAbaPrevencao.setInteractive(true);
-    item.tomateAbaPrevencao.enable();
-  }*/
-
   item["tomateAbaTransmissao"] = new Game.Item("abaTran.png");
   item.tomateAbaTransmissao.setPosition(432+482-260, 71);
   item.tomateAbaTransmissao.setScale(0.25);
@@ -568,12 +544,6 @@ function carregaCicloAscaris() {
   item.tomateTextoTransmissao.setPosition(432-130-260, 71+20);
   item.tomateTextoTransmissao.disable();
   itensTomateDoente.push(item.tomateTextoTransmissao);
-
-  /*item["tomateAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.tomateAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.tomateAbaTransmissaoHover.setScale(0.25);
-  item.tomateAbaTransmissaoHover.setZorder(7);
-  item.tomateAbaTransmissaoHover.disable();*/
 
   item["tomateBotaoOK"] = new Game.Item("okNormal.png");
   item.tomateBotaoOK.setScale(0.25);

@@ -431,17 +431,6 @@ function carregaCicloGiardia() {
   item.pocoTextoSintomas.disable();
   itensPocoDoente.push(item.pocoTextoSintomas);
 
-  /*item["pocoAbaSintomasHover"] = new Game.Item("abaSintHover.png");
-  item.pocoAbaSintomasHover.setPosition(432, 71);
-  item.pocoAbaSintomasHover.setScale(0.25);
-  item.pocoAbaSintomasHover.setZorder(7);
-  item.pocoAbaSintomasHover.disable();
-  item.pocoAbaSintomasHover.setInteractive(false);
-  item.pocoAbaSintomas.onMouseOut = function() {
-    item.pocoAbaSintomas.enable();
-    item.pocoAbaSintomasHover.disable();
-  }*/
-
   item["pocoAbaPrevencao"] = new Game.Item("abaPrev.png");
   item.pocoAbaPrevencao.setPosition(432+232+80, 71);
   item.pocoAbaPrevencao.setScale(0.25);
@@ -468,19 +457,6 @@ function carregaCicloGiardia() {
   item.pocoTextoPrevencao.disable();
   itensPocoDoente.push(item.pocoTextoPrevencao);
 
-  /*item["pocoAbaPrevencaoHover"] = new Game.Item("abaPrevHover.png");
-  item.pocoAbaPrevencaoHover.setPosition(432 + 247, 71);
-  item.pocoAbaPrevencaoHover.setScale(0.25);
-  item.pocoAbaPrevencaoHover.setZorder(7);
-  item.pocoAbaPrevencaoHover.setInteractive(false);
-  item.pocoAbaPrevencaoHover.disable();
-  item.pocoAbaPrevencaoHover.onMouseOut = function() {
-    item.pocoAbaPrevencaoHover.setInteractive(false);
-    item.pocoAbaPrevencaoHover.disable();
-    item.pocoAbaPrevencao.setInteractive(true);
-    item.pocoAbaPrevencao.enable();
-  }*/
-
   item["pocoAbaTransmissao"] = new Game.Item("abaTran.png");
   item.pocoAbaTransmissao.setPosition(432+482+80, 71);
   item.pocoAbaTransmissao.setScale(0.25);
@@ -506,12 +482,6 @@ function carregaCicloGiardia() {
   item.pocoTextoTransmissao.setPosition(432-130+80, 71+20);
   item.pocoTextoTransmissao.disable();
   itensPocoDoente.push(item.pocoTextoTransmissao);
-
-  /*item["pocoAbaTransmissaoHover"] = new Game.Item("abaTranHover.png");
-  item.pocoAbaTransmissaoHover.setPosition(432 + 2*247, 71);
-  item.pocoAbaTransmissaoHover.setScale(0.25);
-  item.pocoAbaTransmissaoHover.setZorder(7);
-  item.pocoAbaTransmissaoHover.disable();*/
 
   item["pocoBotaoOK"] = new Game.Item("okNormal.png");
   item.pocoBotaoOK.setScale(0.25);

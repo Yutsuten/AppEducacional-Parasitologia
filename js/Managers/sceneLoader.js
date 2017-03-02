@@ -6,7 +6,6 @@ for (var i = 0; i < gameImages.length; i++)
 // Loading progress text
 var progressScreenText = new Game.Text("Carregando: 0%", {
     "default": {fontFamily: "Book Antiqua", fontSize: "40px",
-      //stroke: 'black', strokeThickness: 10,
       dropShadow: true, dropShadowBlur: 10,
       fill: 0xFFFFFF, align: "left"
     }

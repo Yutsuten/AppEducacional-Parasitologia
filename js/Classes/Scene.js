@@ -16,7 +16,6 @@ Game.Scene = function() {
   var subtitle = new Game.Text("",
     {
       "default": {fontFamily: "Book Antiqua", fontSize: "60px",
-        //stroke: 'black', strokeThickness: 10,
         dropShadow: true, dropShadowBlur: 10,
         fill: 0xFFFFFF, align: "left"
       },

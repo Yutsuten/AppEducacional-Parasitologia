@@ -37,15 +37,6 @@ function changeScene(newScene) {
   // Play new music
   scene[currentScene].playSceneMusic();
 
-  // Running method for scene opened
-  /*if (onSceneOpen[currentScene] != null) {
-    onSceneOpen[currentScene]();
-  }
-  // Running method for scene closed
-  if (onSceneClose[lastScene] != null) {
-    onSceneClose[lastScene]();
-  }*/
-
   sceneFade();
   sceneFadeInterval = setInterval(sceneFade, animDelay);
 }
