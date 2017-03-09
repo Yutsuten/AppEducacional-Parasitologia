@@ -5,10 +5,20 @@ function carregaLivroAberto() {
 
   // Criando a variavel que tera todos os livros
   var livro = {};
+  var estiloTitulo = {
+    "default": {fontFamily: "Book Antiqua", fontSize: "35px",
+    fontStyle: "bold", fill: 0x010101, align: "left"
+    }
+  }
   var estiloTextoLivro = {
-    "default": {fontFamily: "Book Antiqua", fontSize: "40px",
-    dropShadow: true, dropShadowBlur: 10,
-    fill: 0xFFFFFF, align: "left"
+    "default": {fontFamily: "Book Antiqua", fontSize: "30px",
+    fill: 0x010101, align: "left"
+    },
+    "i" : {
+      fontStyle: "italic"
+    },
+    "b" : {
+      fontStyle: "bold"
     }
   };
   var paginaAtual = null;
@@ -18,6 +28,20 @@ function carregaLivroAberto() {
     this.z_order = 2;
     this.addContent = function(info) {
       content.push(this[info]);
+    }
+    this.show = function() {
+      for (var i = 0; i < content.length; i++) {
+        content[i].enable();
+        content[i].changeAlpha(1, 600);
+      }
+    }
+    this.hide = function() {
+      for (var i = 0; i < content.length; i++) {
+        content[i].changeAlpha(0, 600);
+        setTimeout(function() {
+          content[i].disable();
+        }, 650);
+      }
     }
     this.draw = function(stage) {
       for (var i = 0; i < content.length; i++) {
@@ -31,6 +55,7 @@ function carregaLivroAberto() {
 
     // Desabilita interação com os livros do armario
     groupDisable(scene[2].livros);
+    item.setaSalaDeAula.setInteractive(false);
 
     // Mostra o livro
     item.livroAberto.enable();
@@ -50,21 +75,32 @@ function carregaLivroAberto() {
   // LIVRO: OBJETO DE APRENDIZAGEM
   livro.ObjetoDeApendizagem = {};
   livro.ObjetoDeApendizagem.abre = function() {
-    item.livroObjetoDeApendizagemPagina0.texto.enable();
-    item.livroObjetoDeApendizagemPagina0.texto.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemPagina0.show();
     paginaAtual = livro.ObjetoDeApendizagem;
   }
   livro.ObjetoDeApendizagem.fecha = function() {
-    item.livroObjetoDeApendizagemPagina0.texto.changeAlpha(0, 600);
-    setTimeout(function() {
-      item.livroObjetoDeApendizagemPagina0.texto.disable();
-    }, 650);
+    item.livroObjetoDeApendizagemPagina0.hide();
   }
 
   // Conteúdo do livro Objeto de Aprendizagem
   item.livroObjetoDeApendizagemPagina0 = new Page();
-  item.livroObjetoDeApendizagemPagina0.texto = new Game.Text("Texto sobre Objeto de Aprendizagem.", estiloTextoLivro);
-  item.livroObjetoDeApendizagemPagina0.texto.setPosition(248, 172);
+  item.livroObjetoDeApendizagemPagina0.titulo = new Game.Text(
+    "       O Objeto de Aprendizagem"
+  , estiloTitulo);
+  item.livroObjetoDeApendizagemPagina0.titulo.setPosition(248, 120);
+  item.livroObjetoDeApendizagemPagina0.titulo.setAlpha(0);
+  item.livroObjetoDeApendizagemPagina0.titulo.disable();
+  item.livroObjetoDeApendizagemPagina0.addContent("titulo");
+
+  item.livroObjetoDeApendizagemPagina0.texto = new Game.Text(
+    "     Os Objetos de Aprendizagem são uma\n" +
+    "tecnologia recente que abre caminhos na\n" +
+    "educação à distância e que serve de\n" +
+    "material de apoio a aula presencial\n" +
+    "tradicional. São elementos de uma nova\n" +
+    "metodologia de ensino e aprendizagem\n" +
+    "baseada no uso do computador e da Internet.", estiloTextoLivro);
+  item.livroObjetoDeApendizagemPagina0.texto.setPosition(248, 190);
   item.livroObjetoDeApendizagemPagina0.texto.setAlpha(0);
   item.livroObjetoDeApendizagemPagina0.texto.disable();
   item.livroObjetoDeApendizagemPagina0.addContent("texto");
@@ -92,6 +128,7 @@ function carregaLivroAberto() {
 
     // Habilita interação com os livros do armario
     groupEnable(scene[2].livros);
+    item.setaSalaDeAula.setInteractive(true);
 
     // Esconde o livro
     item.livroAberto.changeAlpha(0, 600);
