@@ -46,7 +46,7 @@ sceneLoader[2] = function() {
   item.livroParasitologia.setZorder(20);
   item.livroParasitologia.setBrightness(210);
   item.livroParasitologia.onMouseOver = function() {
-    scene[2].setSubtitle("livroParasitologia");
+    scene[2].setSubtitle("Parasitologia");
     item.livroParasitologia.setBrightness(255);
   }
   item.livroParasitologia.onMouseOut = function() {
