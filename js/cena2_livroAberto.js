@@ -170,12 +170,30 @@ function carregaLivroAberto() {
   item.livroParasitologiaPagina0.texto2.setAlpha(0);
   item.livroParasitologiaPagina0.texto2.disable();
 
+  item.livroParasitologiaPagina0.texto3 = new Game.Text(
+    "     Os helmintos (ou vermes) são grandes e vi-\n" +
+    "síveis a olho nu. Podem ser metazoários, para-\n" +
+    "sitos de animais, vegetais ou de vida livre.\n" +
+    "     São classificados em quatro filos:\n" +
+    "     - Platyelminthes: vermes achatados, os\n" +
+    "quais se subdividem em duas classes: Trema-\n" +
+    "toda: vermes em forma de folha e Cestoda:\n" +
+    "vermes em forma de fita."
+    , estiloTextoLivro);
+  item.livroParasitologiaPagina0.texto3.setPosition(990, 650);
+  item.livroParasitologiaPagina0.texto3.setAlpha(0);
+  item.livroParasitologiaPagina0.texto3.disable();
+
   // Margem direita - Para debug
   item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
   item.margemDir1.setZorder(1);
 
   item.margemDir2 = new Game.Line(1550, 120, 1550, 950, 2);
   item.margemDir2.setZorder(1);
+
+  // Margem inferior
+  item.margemInf = new Game.Line(220, 935, 1580, 935, 2);
+  item.margemInf.setZorder(1);
 
   // Imagens do livro e do X de fechar
   item.livroAberto = new Game.Image("livroAberto.png");
