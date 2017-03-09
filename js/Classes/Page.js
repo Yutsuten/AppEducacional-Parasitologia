@@ -27,8 +27,10 @@ var notContain = function(str, arrayStr) {
 
 Game.Page = function() {
   var objInstance = this;
-  var classPropMethods = ["z_order", "show", "hide", "draw"];
+  var classPropMethods = ["z_order", "show", "hide", "draw", "interactive", "alpha"];
+
   this.z_order = 2;
+
   this.show = function() {
     for (var element in this) {
       if (notContain(element, classPropMethods)) {
@@ -37,6 +39,7 @@ Game.Page = function() {
       }
     }
   }
+
   this.hide = function() {
     for (var element in this) {
       if (notContain(element, classPropMethods)) {
@@ -47,11 +50,13 @@ Game.Page = function() {
       }
     }
   }
+
   this.draw = function(stage) {
-    for (var element in this) {
+    for (var element in objInstance) {
       if (notContain(element, classPropMethods)) {
-        stage.addChild(this[element]);
+        stage.addChild(objInstance[element]);
       }
     }
   }
+
 }
