@@ -47,17 +47,54 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.titulo.setAlpha(0);
   item.livroObjetoDeApendizagemPagina0.titulo.disable();
 
-  item.livroObjetoDeApendizagemPagina0.texto = new Game.Text(
+  item.livroObjetoDeApendizagemPagina0.texto1 = new Game.Text(
     "     Os Objetos de Aprendizagem são uma\n" +
     "tecnologia recente que abre caminhos na\n" +
-    "educação à distância e que serve de\n" +
-    "material de apoio a aula presencial\n" +
-    "tradicional. São elementos de uma nova\n" +
-    "metodologia de ensino e aprendizagem\n" +
-    "baseada no uso do computador e da Internet.", estiloTextoLivro);
-  item.livroObjetoDeApendizagemPagina0.texto.setPosition(248, 190);
-  item.livroObjetoDeApendizagemPagina0.texto.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.texto.disable();
+    "educação à distância e que serve de material\n" +
+    "de apoio a aula presencial tradicional. São\n" +
+    "elementos de uma nova metodologia de\n" +
+    "ensino e aprendizagem baseada no uso do\n" +
+    "computador e da Internet.\n" +
+    "     Apesar de sua definição ainda ser vaga, o\n" +
+    "o consenso é de que o Objeto de Aprendiza-\n" +
+    "gem deva possuir um propósito educacional\n" +
+    "definido, um elemento que estimule a refle-\n" +
+    "xão do estudante e que sua construção seja\n" +
+    "de forma a facilitar a reutilização dentro de\n" +
+    "outros contextos de aprendizagem.\n" +
+    "     Desta forma, as autoras apresentam o\n" +
+    "presente Objeto de Aprendizagem em Para-\n" +
+    "sitologia.\n" +
+    "     O software (ou “jogo”) conta com regiões\n" +
+    "clicáveis e interativas, as quais revelarão ao\n" +
+    "usuário informações adicionais sobre o objeto\n" +
+    "interativo, como os ciclos de vida dos para-\n" +
+    "sitas em questão e as suas consequentes doen-"
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemPagina0.texto1.setPosition(248, 190);
+  item.livroObjetoDeApendizagemPagina0.texto1.setAlpha(0);
+  item.livroObjetoDeApendizagemPagina0.texto1.disable();
+
+  item.livroObjetoDeApendizagemPagina0.texto2 = new Game.Text(
+    "ças. Visualmente, o jogo é repleto de imagens\n" +
+    "e se é intencionado que estas sejam autoexpli-\n" +
+    "cativas, contando, num primeiro momento,\n" +
+    "com os auxílios das legendas.\n" +
+    "     São expostas três telas: a principal, a sala\n" +
+    "de aula, na qual serão encontradas representa-\n" +
+    "ções de quatro doenças e seus respectivos\n" +
+    "parasitas. À direita da tela principal será ex-\n" +
+    "posto o exterior da escola, com mais quatro\n" +
+    "doenças e seus três parasitas. À esquerda da\n" +
+    "sala de aula será apresentada uma estante re-\n" +
+    "pleta de livros interativos, nos quais serão\n" +
+    "explicadas as teorias sobre o Parasitismo e\n" +
+    "cada parasita abordado neste Objeto de Apren-\n" +
+    "dizagem."
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemPagina0.texto2.setPosition(990, 120);
+  item.livroObjetoDeApendizagemPagina0.texto2.setAlpha(0);
+  item.livroObjetoDeApendizagemPagina0.texto2.disable();
 
   // Imagens do livro e do X de fechar
   item.livroAberto = new Game.Image("livroAberto.png");
