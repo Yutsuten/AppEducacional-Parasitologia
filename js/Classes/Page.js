@@ -2,12 +2,12 @@
 
 // Criando a variavel que tera todos os livros
 var estiloTitulo = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "35px",
+  "default": {fontFamily: "Times New Roman", fontSize: "35px",
   fontStyle: "bold", fill: 0x010101, align: "left"
   }
 }
 var estiloTextoLivro = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "30px",
+  "default": {fontFamily: "Times New Roman", fontSize: "30px",
   fill: 0x010101, align: "left"
   },
   "i" : {
