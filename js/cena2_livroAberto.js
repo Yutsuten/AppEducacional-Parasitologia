@@ -3,63 +3,8 @@ function carregaLivroAberto() {
   // Criando um aliase de scene[2].item
   var item = scene[2].item;
 
-  // Criando a variavel que tera todos os livros
   var livro = {};
-  var estiloTitulo = {
-    "default": {fontFamily: "Book Antiqua", fontSize: "35px",
-    fontStyle: "bold", fill: 0x010101, align: "left"
-    }
-  }
-  var estiloTextoLivro = {
-    "default": {fontFamily: "Book Antiqua", fontSize: "30px",
-    fill: 0x010101, align: "left"
-    },
-    "i" : {
-      fontStyle: "italic"
-    },
-    "b" : {
-      fontStyle: "bold"
-    }
-  };
   var paginaAtual = null;
-
-  var notContain = function(str, arrayStr) {
-    for (i = 0; i < arrayStr.length; i++)
-      if (str == arrayStr[i])
-        return false;
-    return true;
-  }
-
-  var Page = function() {
-    var objInstance = this;
-    var classPropMethods = ["z_order", "show", "hide", "draw"];
-    this.z_order = 2;
-    this.show = function() {
-      for (var element in this) {
-        if (notContain(element, classPropMethods)) {
-          this[element].enable();
-          this[element].changeAlpha(1, 600);
-        }
-      }
-    }
-    this.hide = function() {
-      for (var element in this) {
-        if (notContain(element, classPropMethods)) {
-          this[element].changeAlpha(0, 600);
-          setTimeout(function() {
-            this[element].disable();
-          }, 650);
-        }
-      }
-    }
-    this.draw = function(stage) {
-      for (var element in this) {
-        if (notContain(element, classPropMethods)) {
-          stage.addChild(this[element]);
-        }
-      }
-    }
-  }
 
   scene[2].openBook = function(titulo) {
     disableInteractiveness();
@@ -94,7 +39,7 @@ function carregaLivroAberto() {
   }
 
   // Conteúdo do livro Objeto de Aprendizagem
-  item.livroObjetoDeApendizagemPagina0 = new Page();
+  item.livroObjetoDeApendizagemPagina0 = new Game.Page();
   item.livroObjetoDeApendizagemPagina0.titulo = new Game.Text(
     "       O Objeto de Aprendizagem"
   , estiloTitulo);
