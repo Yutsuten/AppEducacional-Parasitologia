@@ -23,29 +23,40 @@ function carregaLivroAberto() {
   };
   var paginaAtual = null;
 
+  var notContain = function(str, arrayStr) {
+    for (i = 0; i < arrayStr.length; i++)
+      if (str == arrayStr[i])
+        return false;
+    return true;
+  }
+
   var Page = function() {
-    var content = [];
+    var objInstance = this;
+    var classPropMethods = ["z_order", "show", "hide", "draw"];
     this.z_order = 2;
-    this.addContent = function(info) {
-      content.push(this[info]);
-    }
     this.show = function() {
-      for (var i = 0; i < content.length; i++) {
-        content[i].enable();
-        content[i].changeAlpha(1, 600);
+      for (var element in this) {
+        if (notContain(element, classPropMethods)) {
+          this[element].enable();
+          this[element].changeAlpha(1, 600);
+        }
       }
     }
     this.hide = function() {
-      for (var i = 0; i < content.length; i++) {
-        content[i].changeAlpha(0, 600);
-        setTimeout(function() {
-          content[i].disable();
-        }, 650);
+      for (var element in this) {
+        if (notContain(element, classPropMethods)) {
+          this[element].changeAlpha(0, 600);
+          setTimeout(function() {
+            this[element].disable();
+          }, 650);
+        }
       }
     }
     this.draw = function(stage) {
-      for (var i = 0; i < content.length; i++) {
-        stage.addChild(content[i]);
+      for (var element in this) {
+        if (notContain(element, classPropMethods)) {
+          stage.addChild(this[element]);
+        }
       }
     }
   }
@@ -90,7 +101,6 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.titulo.setPosition(248, 120);
   item.livroObjetoDeApendizagemPagina0.titulo.setAlpha(0);
   item.livroObjetoDeApendizagemPagina0.titulo.disable();
-  item.livroObjetoDeApendizagemPagina0.addContent("titulo");
 
   item.livroObjetoDeApendizagemPagina0.texto = new Game.Text(
     "     Os Objetos de Aprendizagem são uma\n" +
@@ -103,7 +113,6 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.texto.setPosition(248, 190);
   item.livroObjetoDeApendizagemPagina0.texto.setAlpha(0);
   item.livroObjetoDeApendizagemPagina0.texto.disable();
-  item.livroObjetoDeApendizagemPagina0.addContent("texto");
 
   // Imagens do livro e do X de fechar
   item.livroAberto = new Game.Image("livroAberto.png");
