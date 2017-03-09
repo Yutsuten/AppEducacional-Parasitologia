@@ -150,6 +150,13 @@ function carregaLivroAberto() {
   item.livroParasitologiaPagina0.texto1.setAlpha(0);
   item.livroParasitologiaPagina0.texto1.disable();
 
+  // Margem direita - Para debug
+  item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
+  item.margemDir1.setZorder(1);
+
+  item.margemDir2 = new Game.Line(1550, 120, 1550, 950, 2);
+  item.margemDir2.setZorder(1);
+
   // Imagens do livro e do X de fechar
   item.livroAberto = new Game.Image("livroAberto.png");
   item.livroAberto.setZorder(4);
