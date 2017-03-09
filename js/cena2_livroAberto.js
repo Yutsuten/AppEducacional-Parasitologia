@@ -150,6 +150,26 @@ function carregaLivroAberto() {
   item.livroParasitologiaPagina0.texto1.setAlpha(0);
   item.livroParasitologiaPagina0.texto1.disable();
 
+  item.livroParasitologiaPagina0.texto2 = new Game.Text(
+    "     A ação do parasita no hospedeiro é de gran-\n" +
+    "de importância na parasitologia, visto que é\n" +
+    "através dela que ocorrem as doenças. Dentre os\n" +
+    "tipos de ação dos parasitos, os principais são:\n" +
+    "     - Mecânica: ação obstrutiva ou destrutiva\n" +
+    "que parasito exerce sobre algum órgão do hos-\n" +
+    "pedeiro;\n" +
+    "      - Espoliativa: ocorre quando o parasito re-\n" +
+    "tira nutrientes do hospedeiro;\n" +
+    "      - Traumática: quando o parasito promove\n" +
+    "traumas no hospedeiro, como fixação e migra-\n" +
+    "ção;\n" +
+    "      - Tóxica: produtos do metabolismo do pa-\n" +
+    "rasito é tóxico ao hospedeiro."
+    , estiloTextoLivro);
+  item.livroParasitologiaPagina0.texto2.setPosition(990, 120);
+  item.livroParasitologiaPagina0.texto2.setAlpha(0);
+  item.livroParasitologiaPagina0.texto2.disable();
+
   // Margem direita - Para debug
   item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
   item.margemDir1.setZorder(1);
