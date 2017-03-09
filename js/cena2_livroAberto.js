@@ -96,6 +96,13 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.texto2.setAlpha(0);
   item.livroObjetoDeApendizagemPagina0.texto2.disable();
 
+  item.livroObjetoDeApendizagemPagina0.texto3 = new Game.Text(
+    "Vamos lá!"
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemPagina0.texto3.setPosition(1414, 669);
+  item.livroObjetoDeApendizagemPagina0.texto3.setAlpha(0);
+  item.livroObjetoDeApendizagemPagina0.texto3.disable();
+
   // Imagens do livro e do X de fechar
   item.livroAberto = new Game.Image("livroAberto.png");
   item.livroAberto.setZorder(4);
