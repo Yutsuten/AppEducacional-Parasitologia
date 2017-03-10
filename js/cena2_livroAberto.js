@@ -34,19 +34,6 @@ function carregaLivroAberto() {
   // LIVRO: OBJETO DE APRENDIZAGEM
   livro.newBook("ObjetoDeApendizagem");
 
-  /*livro.ObjetoDeApendizagem.abre = function() {
-    paginaAtualIndice = 0;
-    paginaAtual = item.livroObjetoDeApendizagemPagina0;
-    paginaAtual.show();
-    livroAtual = livro.ObjetoDeApendizagem;
-  }
-  livro.ObjetoDeApendizagem.fecha = function() {
-    paginaAtual.hide();
-  }
-  livro.ObjetoDeApendizagem.proximo = function() {
-    paginaAtualIndice++;
-  }*/
-
   // Conteúdo do livro Objeto de Aprendizagem
   livro.ObjetoDeApendizagem.pagina[0] = new Game.Page();
   livro.ObjetoDeApendizagem.pagina[0].titulo = new Game.Text(
@@ -113,25 +100,18 @@ function carregaLivroAberto() {
   livro.ObjetoDeApendizagem.pagina[0].texto3.disable();
 
   // LIVRO: PARASITOLOGIA
-  /*livro.Parasitologia = {};
-  livro.Parasitologia.abre = function() {
-    item.livroParasitologiaPagina0.show();
-    livroAtual = livro.Parasitologia;
-  }
-  livro.Parasitologia.fecha = function() {
-    item.livroParasitologiaPagina0.hide();
-  }*/
+  livro.newBook("Parasitologia");
 
   // Conteúdo do livro Objeto de Aprendizagem
-  item.livroParasitologiaPagina0 = new Game.Page();
-  item.livroParasitologiaPagina0.titulo = new Game.Text(
+  livro.Parasitologia.pagina[0] = new Game.Page();
+  livro.Parasitologia.pagina[0].titulo = new Game.Text(
     "                   Parasitologia"
   , estiloTitulo);
-  item.livroParasitologiaPagina0.titulo.setPosition(248, 120);
-  item.livroParasitologiaPagina0.titulo.setAlpha(0);
-  item.livroParasitologiaPagina0.titulo.disable();
+  livro.Parasitologia.pagina[0].titulo.setPosition(248, 120);
+  livro.Parasitologia.pagina[0].titulo.setAlpha(0);
+  livro.Parasitologia.pagina[0].titulo.disable();
 
-  item.livroParasitologiaPagina0.texto1 = new Game.Text(
+  livro.Parasitologia.pagina[0].texto1 = new Game.Text(
     "     A parasitologia é o estudo dos parasitas\n" +
     "animais e vegetais e da relação entre parasi-\n" +
     "tas e seus hospedeiros.\n" +
@@ -155,11 +135,11 @@ function carregaLivroAberto() {
     "     - ao hospedeiro: idade, nutrição, tipo de\n" +
     "resposta imune."
     , estiloTextoLivro);
-  item.livroParasitologiaPagina0.texto1.setPosition(248, 190);
-  item.livroParasitologiaPagina0.texto1.setAlpha(0);
-  item.livroParasitologiaPagina0.texto1.disable();
+  livro.Parasitologia.pagina[0].texto1.setPosition(248, 190);
+  livro.Parasitologia.pagina[0].texto1.setAlpha(0);
+  livro.Parasitologia.pagina[0].texto1.disable();
 
-  item.livroParasitologiaPagina0.texto2 = new Game.Text(
+  livro.Parasitologia.pagina[0].texto2 = new Game.Text(
     "     A ação do parasita no hospedeiro é de gran-\n" +
     "de importância na parasitologia, visto que é\n" +
     "através dela que ocorrem as doenças. Dentre os\n" +
@@ -175,11 +155,11 @@ function carregaLivroAberto() {
     "      - Tóxica: produtos do metabolismo do pa-\n" +
     "rasito é tóxico ao hospedeiro."
     , estiloTextoLivro);
-  item.livroParasitologiaPagina0.texto2.setPosition(990, 120);
-  item.livroParasitologiaPagina0.texto2.setAlpha(0);
-  item.livroParasitologiaPagina0.texto2.disable();
+  livro.Parasitologia.pagina[0].texto2.setPosition(990, 120);
+  livro.Parasitologia.pagina[0].texto2.setAlpha(0);
+  livro.Parasitologia.pagina[0].texto2.disable();
 
-  item.livroParasitologiaPagina0.texto3 = new Game.Text(
+  livro.Parasitologia.pagina[0].texto3 = new Game.Text(
     "     Os helmintos (ou vermes) são grandes e vi-\n" +
     "síveis a olho nu. Podem ser metazoários, para-\n" +
     "sitos de animais, vegetais ou de vida livre.\n" +
@@ -189,12 +169,12 @@ function carregaLivroAberto() {
     "toda: vermes em forma de folha e Cestoda:\n" +
     "vermes em forma de fita."
     , estiloTextoLivro);
-  item.livroParasitologiaPagina0.texto3.setPosition(990, 650);
-  item.livroParasitologiaPagina0.texto3.setAlpha(0);
-  item.livroParasitologiaPagina0.texto3.disable();
+  livro.Parasitologia.pagina[0].texto3.setPosition(990, 650);
+  livro.Parasitologia.pagina[0].texto3.setAlpha(0);
+  livro.Parasitologia.pagina[0].texto3.disable();
 
-  item.livroParasitologiaPagina1 = new Game.Page();
-  item.livroParasitologiaPagina1.texto1 = new Game.Text(
+  livro.Parasitologia.pagina[1] = new Game.Page();
+  livro.Parasitologia.pagina[1].texto1 = new Game.Text(
     "     YYYYYYYYY é o estudo dos parasitas\n" +
     "animais e vegetais e da relação entre parasi-\n" +
     "tas e seus hospedeiros.\n" +
@@ -218,9 +198,9 @@ function carregaLivroAberto() {
     "     - ao hospedeiro: idade, nutrição, tipo de\n" +
     "resposta imune."
     , estiloTextoLivro);
-  item.livroParasitologiaPagina1.texto1.setPosition(248, 190);
-  item.livroParasitologiaPagina1.texto1.setAlpha(0);
-  item.livroParasitologiaPagina1.texto1.disable();
+  livro.Parasitologia.pagina[1].texto1.setPosition(248, 190);
+  livro.Parasitologia.pagina[1].texto1.setAlpha(0);
+  livro.Parasitologia.pagina[1].texto1.disable();
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
