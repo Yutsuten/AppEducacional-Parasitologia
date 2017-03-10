@@ -3,8 +3,7 @@ function carregaLivroAberto() {
   // Criando um aliase de scene[2].item
   var item = scene[2].item;
 
-  var livro = {};
-  var paginaAtual = null;
+  var livro = new Game.Bookshelf();
 
   scene[2].openBook = function(titulo) {
     disableInteractiveness();
@@ -30,12 +29,18 @@ function carregaLivroAberto() {
 
   // LIVRO: OBJETO DE APRENDIZAGEM
   livro.ObjetoDeApendizagem = {};
+
   livro.ObjetoDeApendizagem.abre = function() {
-    item.livroObjetoDeApendizagemPagina0.show();
-    paginaAtual = livro.ObjetoDeApendizagem;
+    /*paginaAtualIndice = 0;
+    paginaAtual = item.livroObjetoDeApendizagemPagina0;
+    paginaAtual.show();
+    livroAtual = livro.ObjetoDeApendizagem;*/
   }
   livro.ObjetoDeApendizagem.fecha = function() {
-    item.livroObjetoDeApendizagemPagina0.hide();
+    /*paginaAtual.hide();*/
+  }
+  livro.ObjetoDeApendizagem.proximo = function() {
+    /*paginaAtualIndice++;*/
   }
 
   // Conteúdo do livro Objeto de Aprendizagem
@@ -106,11 +111,11 @@ function carregaLivroAberto() {
   // LIVRO: PARASITOLOGIA
   livro.Parasitologia = {};
   livro.Parasitologia.abre = function() {
-    item.livroParasitologiaPagina0.show();
-    paginaAtual = livro.Parasitologia;
+    /*item.livroParasitologiaPagina0.show();
+    livroAtual = livro.Parasitologia;*/
   }
   livro.Parasitologia.fecha = function() {
-    item.livroParasitologiaPagina0.hide();
+    /*item.livroParasitologiaPagina0.hide();*/
   }
 
   // Conteúdo do livro Objeto de Aprendizagem
@@ -184,6 +189,35 @@ function carregaLivroAberto() {
   item.livroParasitologiaPagina0.texto3.setAlpha(0);
   item.livroParasitologiaPagina0.texto3.disable();
 
+  item.livroParasitologiaPagina1 = new Game.Page();
+  item.livroParasitologiaPagina1.texto1 = new Game.Text(
+    "     YYYYYYYYY é o estudo dos parasitas\n" +
+    "animais e vegetais e da relação entre parasi-\n" +
+    "tas e seus hospedeiros.\n" +
+    "     O parasitismo é a associação entre os se-\n" +
+    "res vivos, na qual existe unilateralidade de\n" +
+    "benefícios, ou seja, apenas um dos lados é\n" +
+    "beneficiado. Neste sentido, o hospedeiro\n" +
+    "provê abrigo e proteção ao parasita, o qual\n" +
+    "prejudica e promove danos ao hospedeiro.\n" +
+    "De um modo geral, afirma-se que a associa-\n" +
+    "ção parasitária tende ao equilíbrio porque se\n" +
+    "o hospedeiro morre, o parasita também morre.\n" +
+    "Entretanto, percebe-se que na prática tal fato\n" +
+    "não ocorre, visto que ao evitar a morte, o pa-\n" +
+    "rasita não mata seu hospedeiro.\n" +
+    "     Para haver doenças parasitárias é necessá-\n" +
+    "rio que existam alguns fatores, quanto:\n" +
+    "     - ao parasito: como o número de indivídu-\n" +
+    "os que atingirão o hospedeiro, a sua virulência\n" +
+    "e a localização do parasito;\n" +
+    "     - ao hospedeiro: idade, nutrição, tipo de\n" +
+    "resposta imune."
+    , estiloTextoLivro);
+  item.livroParasitologiaPagina1.texto1.setPosition(248, 190);
+  item.livroParasitologiaPagina1.texto1.setAlpha(0);
+  item.livroParasitologiaPagina1.texto1.disable();
+
   // Margem direita - Para debug
   item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
   item.margemDir1.setZorder(1);
@@ -225,8 +259,8 @@ function carregaLivroAberto() {
     item.fechaLivro.changeAlpha(0, 600);
 
     // Esconde o texto
-    paginaAtual.fecha();
-    paginaAtual = null;
+    livroAtual.fecha();
+    livroAtual = null;
 
     setTimeout(function() {
       item.livroAberto.disable();
