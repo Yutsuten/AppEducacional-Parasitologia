@@ -47,7 +47,7 @@ Game.Book = function(name) {
     item.bookPreviousPageArrow.setBrightness(220);
   }
   item.bookPreviousPageArrow.onClick = function(mouse) {
-    objInstance.nextPage();
+    objInstance.previousPage();
   }
 
   var updateArrowsState = function() {
@@ -108,6 +108,15 @@ Game.Book = function(name) {
   }
 
   this.previousPage = function() {
+    if (currentPageIndex > 0) {
+      item[getItemName()].hide(); // Pagina anterior
+      currentPageIndex--;
+      item[getItemName()].show(); // Pagina anterior
+      updateArrowsState();
+    }
+    else {
+      console.warn("There is no previous page.");
+    }
   }
 
 }
