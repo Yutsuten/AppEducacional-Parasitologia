@@ -26,7 +26,7 @@ Game.Book = function(name) {
     item.bookNextPageArrow.setBrightness(220);
   }
   item.bookNextPageArrow.onClick = function(mouse) {
-    this.nextPage();
+    objInstance.nextPage();
   }
 
   item.bookPreviousPageArrow = new Game.Item("seta.png");
@@ -47,7 +47,7 @@ Game.Book = function(name) {
     item.bookPreviousPageArrow.setBrightness(220);
   }
   item.bookPreviousPageArrow.onClick = function(mouse) {
-    this.nextPage();
+    objInstance.nextPage();
   }
 
   var updateArrowsState = function() {
@@ -96,6 +96,15 @@ Game.Book = function(name) {
   }
 
   this.nextPage = function() {
+    if (currentPageIndex < currentPageIndex < objInstance.pagina.length - 1) {
+      item[getItemName()].hide(); // Pagina anterior
+      currentPageIndex++;
+      item[getItemName()].show(); // Proxima pagina
+      updateArrowsState();
+    }
+    else {
+      console.warn("There is no next page.");
+    }
   }
 
   this.previousPage = function() {
