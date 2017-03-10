@@ -190,17 +190,18 @@ function carregaLivroAberto() {
     "parasitas, algumas fases de seus ciclos bioló-\n" +
     "gicos são complicadas e outras mais simples,\n" +
     "obtendo, de uma forma ou de outra, sucesso\n" +
-    "em sua reprodução e dispersão.\n" +
-    "rio que existam alguns fatores, quanto:\n" +
-    "     - ao parasito: como o número de indivídu-\n" +
-    "os que atingirão o hospedeiro, a sua virulência\n" +
-    "e a localização do parasito;\n" +
-    "     - ao hospedeiro: idade, nutrição, tipo de\n" +
-    "resposta imune."
+    "em sua reprodução e dispersão."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[1].texto1.setPosition(248, 120);
   livro.Parasitologia.pagina[1].texto1.setAlpha(0);
   livro.Parasitologia.pagina[1].texto1.disable();
+
+  livro.Parasitologia.pagina[1].titulo = new Game.Text(
+    "      Glossário"
+  , estiloTitulo);
+  livro.Parasitologia.pagina[1].titulo.setPosition(248, 680);
+  livro.Parasitologia.pagina[1].titulo.setAlpha(0);
+  livro.Parasitologia.pagina[1].titulo.disable();
 
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
   livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
