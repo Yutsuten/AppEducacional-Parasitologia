@@ -97,10 +97,16 @@ Game.Book = function(name) {
 
   this.nextPage = function() {
     if (currentPageIndex < currentPageIndex < objInstance.pagina.length - 1) {
+      disableInteractiveness();
+
       item[getItemName()].hide(); // Pagina anterior
       currentPageIndex++;
       item[getItemName()].show(); // Proxima pagina
       updateArrowsState();
+
+      setTimeout(function() {
+        enableInteractiveness();
+      }, 650);
     }
     else {
       console.warn("There is no next page.");
@@ -109,10 +115,16 @@ Game.Book = function(name) {
 
   this.previousPage = function() {
     if (currentPageIndex > 0) {
+      disableInteractiveness();
+
       item[getItemName()].hide(); // Pagina anterior
       currentPageIndex--;
       item[getItemName()].show(); // Pagina anterior
       updateArrowsState();
+
+      setTimeout(function() {
+        enableInteractiveness();
+      }, 650);
     }
     else {
       console.warn("There is no previous page.");
