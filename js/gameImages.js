@@ -32,6 +32,9 @@ var gameImages = [
   "livroToxoplamose.png",
   "livroAberto.png",
 
+  // Imagens de livro
+  "tabelaParasitologia.png",
+
   // Ciclo do Entamoeba Coli (banana)
   "estHprdClo.png",
   "estHprdDte.png",
