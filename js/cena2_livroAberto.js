@@ -52,15 +52,11 @@ function carregaLivroAberto() {
   livro.ObjetoDeApendizagem.pagina[0].titulo = new Game.Text(
     "       O Objeto de Aprendizagem"
   , estiloTitulo);
-  /*item.livroObjetoDeApendizagemPagina0 = new Game.Page();
-  item.livroObjetoDeApendizagemPagina0.titulo = new Game.Text(
-    "       O Objeto de Aprendizagem"
-  , estiloTitulo);
-  item.livroObjetoDeApendizagemPagina0.titulo.setPosition(248, 120);
-  item.livroObjetoDeApendizagemPagina0.titulo.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.titulo.disable();
+  livro.ObjetoDeApendizagem.pagina[0].titulo.setPosition(248, 120);
+  livro.ObjetoDeApendizagem.pagina[0].titulo.setAlpha(0);
+  livro.ObjetoDeApendizagem.pagina[0].titulo.disable();
 
-  item.livroObjetoDeApendizagemPagina0.texto1 = new Game.Text(
+  livro.ObjetoDeApendizagem.pagina[0].texto1 = new Game.Text(
     "     Os Objetos de Aprendizagem são uma\n" +
     "tecnologia recente que abre caminhos na\n" +
     "educação à distância e que serve de material\n" +
@@ -84,11 +80,11 @@ function carregaLivroAberto() {
     "interativo, como os ciclos de vida dos para-\n" +
     "sitas em questão e as suas consequentes doen-"
     , estiloTextoLivro);
-  item.livroObjetoDeApendizagemPagina0.texto1.setPosition(248, 190);
-  item.livroObjetoDeApendizagemPagina0.texto1.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.texto1.disable();
+  livro.ObjetoDeApendizagem.pagina[0].texto1.setPosition(248, 190);
+  livro.ObjetoDeApendizagem.pagina[0].texto1.setAlpha(0);
+  livro.ObjetoDeApendizagem.pagina[0].texto1.disable();
 
-  item.livroObjetoDeApendizagemPagina0.texto2 = new Game.Text(
+  livro.ObjetoDeApendizagem.pagina[0].texto2 = new Game.Text(
     "ças. Visualmente, o jogo é repleto de imagens\n" +
     "e se é intencionado que estas sejam autoexpli-\n" +
     "cativas, contando, num primeiro momento,\n" +
@@ -105,16 +101,16 @@ function carregaLivroAberto() {
     "cada parasita abordado neste Objeto de Apren-\n" +
     "dizagem."
     , estiloTextoLivro);
-  item.livroObjetoDeApendizagemPagina0.texto2.setPosition(990, 120);
-  item.livroObjetoDeApendizagemPagina0.texto2.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.texto2.disable();
+  livro.ObjetoDeApendizagem.pagina[0].texto2.setPosition(990, 120);
+  livro.ObjetoDeApendizagem.pagina[0].texto2.setAlpha(0);
+  livro.ObjetoDeApendizagem.pagina[0].texto2.disable();
 
-  item.livroObjetoDeApendizagemPagina0.texto3 = new Game.Text(
+  livro.ObjetoDeApendizagem.pagina[0].texto3 = new Game.Text(
     "Vamos lá!"
     , estiloTextoLivro);
-  item.livroObjetoDeApendizagemPagina0.texto3.setPosition(1414, 669);
-  item.livroObjetoDeApendizagemPagina0.texto3.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.texto3.disable();*/
+  livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 669);
+  livro.ObjetoDeApendizagem.pagina[0].texto3.setAlpha(0);
+  livro.ObjetoDeApendizagem.pagina[0].texto3.disable();
 
   // LIVRO: PARASITOLOGIA
   /*livro.Parasitologia = {};
