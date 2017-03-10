@@ -44,8 +44,9 @@ Game.Page = function() {
     for (var element in this) {
       if (notContain(element, classPropMethods)) {
         this[element].changeAlpha(0, 600);
+        var thisElement = this[element];
         setTimeout(function() {
-          objInstance[element].disable();
+          thisElement.disable();
         }, 650);
       }
     }
