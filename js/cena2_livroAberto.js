@@ -48,7 +48,11 @@ function carregaLivroAberto() {
   }*/
 
   // Conteúdo do livro Objeto de Aprendizagem
-  item.livroObjetoDeApendizagemPagina0 = new Game.Page();
+  livro.ObjetoDeApendizagem.pagina[0] = new Game.Page();
+  livro.ObjetoDeApendizagem.pagina[0].titulo = new Game.Text(
+    "       O Objeto de Aprendizagem"
+  , estiloTitulo);
+  /*item.livroObjetoDeApendizagemPagina0 = new Game.Page();
   item.livroObjetoDeApendizagemPagina0.titulo = new Game.Text(
     "       O Objeto de Aprendizagem"
   , estiloTitulo);
@@ -110,7 +114,7 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   item.livroObjetoDeApendizagemPagina0.texto3.setPosition(1414, 669);
   item.livroObjetoDeApendizagemPagina0.texto3.setAlpha(0);
-  item.livroObjetoDeApendizagemPagina0.texto3.disable();
+  item.livroObjetoDeApendizagemPagina0.texto3.disable();*/
 
   // LIVRO: PARASITOLOGIA
   /*livro.Parasitologia = {};
@@ -221,6 +225,9 @@ function carregaLivroAberto() {
   item.livroParasitologiaPagina1.texto1.setPosition(248, 190);
   item.livroParasitologiaPagina1.texto1.setAlpha(0);
   item.livroParasitologiaPagina1.texto1.disable();
+
+  // Cria os itens com o conteudo dos livros
+  livro.createItems();
 
   // Margem direita - Para debug
   item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
