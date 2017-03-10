@@ -27,6 +27,9 @@ Game.Book = function(name) {
   }
   item.bookNextPageArrow.onClick = function(mouse) {
     objInstance.nextPage();
+    setTimeout(function() {
+      scene[2].setSubtitle("");
+    }, 300);
   }
 
   item.bookPreviousPageArrow = new Game.Item("seta.png");
@@ -48,6 +51,9 @@ Game.Book = function(name) {
   }
   item.bookPreviousPageArrow.onClick = function(mouse) {
     objInstance.previousPage();
+    setTimeout(function() {
+      scene[2].setSubtitle("");
+    }, 300);
   }
 
   var updateArrowsState = function() {
