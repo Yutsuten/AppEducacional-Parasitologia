@@ -32,6 +32,7 @@ Game.Page = function() {
   this.z_order = 2;
 
   this.show = function() {
+    console.log("Show page");
     for (var element in this) {
       if (notContain(element, classPropMethods)) {
         this[element].enable();

@@ -3,6 +3,7 @@
 Game.Book = function(name) {
   var bookName = name;
   var currentPageIndex = 0;
+  var item = scene[2].item;
 
   this.page = [];
 
@@ -12,8 +13,7 @@ Game.Book = function(name) {
 
   this.open = function() {
     currentPageIndex = 0;
-    console.log(getItemName());
-    //this.page[currentPageIndex].show();
+    item[getItemName()].show();
   }
 
   this.close = function() {
