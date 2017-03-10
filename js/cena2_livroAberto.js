@@ -18,7 +18,7 @@ function carregaLivroAberto() {
     item.fechaLivro.enable();
     item.fechaLivro.changeAlpha(1, 600);
 
-    livro[titulo].abre();
+    livro[titulo].open();
 
     setTimeout(function() {
       enableInteractiveness();
@@ -28,20 +28,20 @@ function carregaLivroAberto() {
   // Conteudo dos livros
 
   // LIVRO: OBJETO DE APRENDIZAGEM
-  livro.ObjetoDeApendizagem = {};
+  livro.newBook("ObjetoDeApendizagem");
 
-  livro.ObjetoDeApendizagem.abre = function() {
-    /*paginaAtualIndice = 0;
+  /*livro.ObjetoDeApendizagem.abre = function() {
+    paginaAtualIndice = 0;
     paginaAtual = item.livroObjetoDeApendizagemPagina0;
     paginaAtual.show();
-    livroAtual = livro.ObjetoDeApendizagem;*/
+    livroAtual = livro.ObjetoDeApendizagem;
   }
   livro.ObjetoDeApendizagem.fecha = function() {
-    /*paginaAtual.hide();*/
+    paginaAtual.hide();
   }
   livro.ObjetoDeApendizagem.proximo = function() {
-    /*paginaAtualIndice++;*/
-  }
+    paginaAtualIndice++;
+  }*/
 
   // Conteúdo do livro Objeto de Aprendizagem
   item.livroObjetoDeApendizagemPagina0 = new Game.Page();
@@ -109,14 +109,14 @@ function carregaLivroAberto() {
   item.livroObjetoDeApendizagemPagina0.texto3.disable();
 
   // LIVRO: PARASITOLOGIA
-  livro.Parasitologia = {};
+  /*livro.Parasitologia = {};
   livro.Parasitologia.abre = function() {
-    /*item.livroParasitologiaPagina0.show();
-    livroAtual = livro.Parasitologia;*/
+    item.livroParasitologiaPagina0.show();
+    livroAtual = livro.Parasitologia;
   }
   livro.Parasitologia.fecha = function() {
-    /*item.livroParasitologiaPagina0.hide();*/
-  }
+    item.livroParasitologiaPagina0.hide();
+  }*/
 
   // Conteúdo do livro Objeto de Aprendizagem
   item.livroParasitologiaPagina0 = new Game.Page();
@@ -259,7 +259,7 @@ function carregaLivroAberto() {
     item.fechaLivro.changeAlpha(0, 600);
 
     // Esconde o texto
-    livroAtual.fecha();
+    livroAtual.close();
     livroAtual = null;
 
     setTimeout(function() {
