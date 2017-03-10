@@ -5,7 +5,7 @@ var estiloTitulo = {
   "default": {fontFamily: "Times New Roman", fontSize: "35px",
   fontStyle: "bold", fill: 0x010101, align: "left"
   }
-}
+};
 var estiloTextoLivro = {
   "default": {fontFamily: "Times New Roman", fontSize: "30px",
   fill: 0x010101, align: "left"
@@ -17,6 +17,11 @@ var estiloTextoLivro = {
     fontStyle: "bold"
   }
 };
+var estiloLegenda = {
+  "default": {fontFamily: "Times New Roman", fontSize: "30px",
+  fontStyle: "bold", fill: 0x010101, align: "center"
+  }
+}
 
 var notContain = function(str, arrayStr) {
   for (i = 0; i < arrayStr.length; i++)

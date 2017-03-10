@@ -202,6 +202,22 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[1].texto1.setAlpha(0);
   livro.Parasitologia.pagina[1].texto1.disable();
 
+  livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
+  livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
+  livro.Parasitologia.pagina[1].tabela.setScale(1.1);
+  livro.Parasitologia.pagina[1].tabela.setTint(200, 194, 177);
+  livro.Parasitologia.pagina[1].tabela.setAlpha(0);
+  livro.Parasitologia.pagina[1].tabela.disable();
+
+  livro.Parasitologia.pagina[1].legendaTabela = new Game.Text(
+    "Tabela referente aos organismos\n" +
+    "que parasitam os humanos"
+    , estiloLegenda);
+  livro.Parasitologia.pagina[1].legendaTabela.setPosition(1238, 460);
+  livro.Parasitologia.pagina[1].legendaTabela.setAnchor(0.5, 0.5);
+  livro.Parasitologia.pagina[1].legendaTabela.setAlpha(0);
+  livro.Parasitologia.pagina[1].legendaTabela.disable();
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
