@@ -17,6 +17,17 @@ Game.Book = function(name) {
   item.bookNextPageArrow.setInteractive(false);
   item.bookNextPageArrow.disable();
   item.bookNextPageArrow.setZorder(2);
+  item.bookNextPageArrow.onMouseOver = function() {
+    scene[2].setSubtitle("Próxima página");
+    item.bookNextPageArrow.setBrightness(255);
+  }
+  item.bookNextPageArrow.onMouseOut = function() {
+    scene[2].setSubtitle("");
+    item.bookNextPageArrow.setBrightness(220);
+  }
+  item.bookNextPageArrow.onClick = function(mouse) {
+    this.nextPage();
+  }
 
   item.bookPreviousPageArrow = new Game.Item("seta.png");
   item.bookPreviousPageArrow.setPosition(110, 500);
@@ -27,6 +38,17 @@ Game.Book = function(name) {
   item.bookPreviousPageArrow.setInteractive(false);
   item.bookPreviousPageArrow.disable();
   item.bookPreviousPageArrow.setZorder(2);
+  item.bookPreviousPageArrow.onMouseOver = function() {
+    scene[2].setSubtitle("Página anterior");
+    item.bookPreviousPageArrow.setBrightness(255);
+  }
+  item.bookPreviousPageArrow.onMouseOut = function() {
+    scene[2].setSubtitle("");
+    item.bookPreviousPageArrow.setBrightness(220);
+  }
+  item.bookPreviousPageArrow.onClick = function(mouse) {
+    this.nextPage();
+  }
 
   var updateArrowsState = function() {
     var arrowNextEnabled = currentPageIndex < objInstance.pagina.length - 1;
