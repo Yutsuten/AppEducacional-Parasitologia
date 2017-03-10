@@ -17,6 +17,7 @@ Game.Book = function(name) {
   }
 
   this.close = function() {
+    item[getItemName()].hide();
   }
 
   this.nextPage = function() {

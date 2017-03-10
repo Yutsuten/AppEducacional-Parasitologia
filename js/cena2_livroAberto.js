@@ -4,9 +4,13 @@ function carregaLivroAberto() {
   var item = scene[2].item;
 
   var livro = new Game.Bookshelf();
+  var tituloLivroAberto = null;
 
   scene[2].openBook = function(titulo) {
     disableInteractiveness();
+
+    // Salva nome do livro
+    tituloLivroAberto = titulo;
 
     // Desabilita interação com os livros do armario
     groupDisable(scene[2].livros);
@@ -18,7 +22,7 @@ function carregaLivroAberto() {
     item.fechaLivro.enable();
     item.fechaLivro.changeAlpha(1, 600);
 
-    livro[titulo].open();
+    livro[tituloLivroAberto].open();
 
     setTimeout(function() {
       enableInteractiveness();
@@ -259,8 +263,7 @@ function carregaLivroAberto() {
     item.fechaLivro.changeAlpha(0, 600);
 
     // Esconde o texto
-    livroAtual.close();
-    livroAtual = null;
+    livro[tituloLivroAberto].close();
 
     setTimeout(function() {
       item.livroAberto.disable();
