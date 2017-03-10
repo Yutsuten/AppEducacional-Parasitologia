@@ -73,7 +73,9 @@ Game.Book = function(name) {
 
   this.createItems = function() {
     for (var i = 0; i < this.pagina.length; i++) {
-      item["livro" + bookName + "Pagina" + i] = this.pagina[i];
+      var itemName = "livro" + bookName + "Pagina" + i;
+      item[itemName] = this.pagina[i];
+      item[itemName].disableItems();
     }
   }
 

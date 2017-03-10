@@ -32,9 +32,18 @@ var notContain = function(str, arrayStr) {
 
 Game.Page = function() {
   var objInstance = this;
-  var classPropMethods = ["z_order", "show", "hide", "draw", "interactive", "alpha"];
+  var classPropMethods = ["z_order", "disableItems", "show", "hide", "draw", "interactive", "alpha"];
 
   this.z_order = 2;
+
+  this.disableItems = function() {
+    for (var element in this) {
+      if (notContain(element, classPropMethods)) {
+        this[element].setAlpha(0);
+        this[element].disable();
+      }
+    }
+  }
 
   this.show = function() {
     for (var element in this) {

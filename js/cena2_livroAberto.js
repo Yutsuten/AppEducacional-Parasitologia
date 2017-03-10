@@ -40,8 +40,8 @@ function carregaLivroAberto() {
     "       O Objeto de Aprendizagem"
   , estiloTitulo);
   livro.ObjetoDeApendizagem.pagina[0].titulo.setPosition(248, 120);
-  livro.ObjetoDeApendizagem.pagina[0].titulo.setAlpha(0);
-  livro.ObjetoDeApendizagem.pagina[0].titulo.disable();
+  //livro.ObjetoDeApendizagem.pagina[0].titulo.setAlpha(0);
+  //livro.ObjetoDeApendizagem.pagina[0].titulo.disable();
 
   livro.ObjetoDeApendizagem.pagina[0].texto1 = new Game.Text(
     "     Os Objetos de Aprendizagem são uma\n" +
@@ -68,8 +68,8 @@ function carregaLivroAberto() {
     "sitas em questão e as suas consequentes doen-"
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto1.setPosition(248, 190);
-  livro.ObjetoDeApendizagem.pagina[0].texto1.setAlpha(0);
-  livro.ObjetoDeApendizagem.pagina[0].texto1.disable();
+  //livro.ObjetoDeApendizagem.pagina[0].texto1.setAlpha(0);
+  //livro.ObjetoDeApendizagem.pagina[0].texto1.disable();
 
   livro.ObjetoDeApendizagem.pagina[0].texto2 = new Game.Text(
     "ças. Visualmente, o jogo é repleto de imagens\n" +
@@ -89,15 +89,15 @@ function carregaLivroAberto() {
     "dizagem."
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto2.setPosition(990, 120);
-  livro.ObjetoDeApendizagem.pagina[0].texto2.setAlpha(0);
-  livro.ObjetoDeApendizagem.pagina[0].texto2.disable();
+  //livro.ObjetoDeApendizagem.pagina[0].texto2.setAlpha(0);
+  //livro.ObjetoDeApendizagem.pagina[0].texto2.disable();
 
   livro.ObjetoDeApendizagem.pagina[0].texto3 = new Game.Text(
     "Vamos lá!"
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 669);
-  livro.ObjetoDeApendizagem.pagina[0].texto3.setAlpha(0);
-  livro.ObjetoDeApendizagem.pagina[0].texto3.disable();
+  //livro.ObjetoDeApendizagem.pagina[0].texto3.setAlpha(0);
+  //livro.ObjetoDeApendizagem.pagina[0].texto3.disable();
 
   // LIVRO: PARASITOLOGIA
   livro.newBook("Parasitologia");
@@ -108,8 +108,8 @@ function carregaLivroAberto() {
     "                   Parasitologia"
   , estiloTitulo);
   livro.Parasitologia.pagina[0].titulo.setPosition(248, 120);
-  livro.Parasitologia.pagina[0].titulo.setAlpha(0);
-  livro.Parasitologia.pagina[0].titulo.disable();
+  //livro.Parasitologia.pagina[0].titulo.setAlpha(0);
+  //livro.Parasitologia.pagina[0].titulo.disable();
 
   livro.Parasitologia.pagina[0].texto1 = new Game.Text(
     "     A parasitologia é o estudo dos parasitas\n" +
@@ -136,8 +136,8 @@ function carregaLivroAberto() {
     "resposta imune."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto1.setPosition(248, 190);
-  livro.Parasitologia.pagina[0].texto1.setAlpha(0);
-  livro.Parasitologia.pagina[0].texto1.disable();
+  //livro.Parasitologia.pagina[0].texto1.setAlpha(0);
+  //livro.Parasitologia.pagina[0].texto1.disable();
 
   livro.Parasitologia.pagina[0].texto2 = new Game.Text(
     "     A ação do parasita no hospedeiro é de gran-\n" +
@@ -156,8 +156,8 @@ function carregaLivroAberto() {
     "rasito é tóxico ao hospedeiro."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto2.setPosition(990, 120);
-  livro.Parasitologia.pagina[0].texto2.setAlpha(0);
-  livro.Parasitologia.pagina[0].texto2.disable();
+  //livro.Parasitologia.pagina[0].texto2.setAlpha(0);
+  //livro.Parasitologia.pagina[0].texto2.disable();
 
   livro.Parasitologia.pagina[0].texto3 = new Game.Text(
     "     Os helmintos (ou vermes) são grandes e vi-\n" +
@@ -170,8 +170,8 @@ function carregaLivroAberto() {
     "vermes em forma de fita."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto3.setPosition(990, 650);
-  livro.Parasitologia.pagina[0].texto3.setAlpha(0);
-  livro.Parasitologia.pagina[0].texto3.disable();
+  //livro.Parasitologia.pagina[0].texto3.setAlpha(0);
+  //livro.Parasitologia.pagina[0].texto3.disable();
 
   livro.Parasitologia.pagina[1] = new Game.Page();
   livro.Parasitologia.pagina[1].texto1 = new Game.Text(
@@ -193,22 +193,22 @@ function carregaLivroAberto() {
     "em sua reprodução e dispersão."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[1].texto1.setPosition(248, 120);
-  livro.Parasitologia.pagina[1].texto1.setAlpha(0);
-  livro.Parasitologia.pagina[1].texto1.disable();
+  //livro.Parasitologia.pagina[1].texto1.setAlpha(0);
+  //livro.Parasitologia.pagina[1].texto1.disable();
 
   livro.Parasitologia.pagina[1].titulo = new Game.Text(
     "      Glossário"
   , estiloTitulo);
   livro.Parasitologia.pagina[1].titulo.setPosition(248, 680);
-  livro.Parasitologia.pagina[1].titulo.setAlpha(0);
-  livro.Parasitologia.pagina[1].titulo.disable();
+  //livro.Parasitologia.pagina[1].titulo.setAlpha(0);
+  //livro.Parasitologia.pagina[1].titulo.disable();
 
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
   livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
   livro.Parasitologia.pagina[1].tabela.setScale(1.1);
   livro.Parasitologia.pagina[1].tabela.setTint(200, 194, 177);
-  livro.Parasitologia.pagina[1].tabela.setAlpha(0);
-  livro.Parasitologia.pagina[1].tabela.disable();
+  //livro.Parasitologia.pagina[1].tabela.setAlpha(0);
+  //livro.Parasitologia.pagina[1].tabela.disable();
 
   livro.Parasitologia.pagina[1].legendaTabela = new Game.Text(
     "Tabela referente aos organismos\n" +
@@ -216,8 +216,8 @@ function carregaLivroAberto() {
     , estiloLegenda);
   livro.Parasitologia.pagina[1].legendaTabela.setPosition(1238, 460);
   livro.Parasitologia.pagina[1].legendaTabela.setAnchor(0.5, 0.5);
-  livro.Parasitologia.pagina[1].legendaTabela.setAlpha(0);
-  livro.Parasitologia.pagina[1].legendaTabela.disable();
+  //livro.Parasitologia.pagina[1].legendaTabela.setAlpha(0);
+  //livro.Parasitologia.pagina[1].legendaTabela.disable();
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
