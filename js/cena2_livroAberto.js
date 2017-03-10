@@ -195,7 +195,7 @@ function carregaLivroAberto() {
     "sim, pode respresentar um fungo, bactéria, ví-\n" +
     "rus, protozoário ou helminto."
     , estiloTextoLivro);
-  livro.Parasitologia.pagina[1].texto2.setPosition(248, 736);
+  livro.Parasitologia.pagina[1].texto2.setPosition(248, 730);
 
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
   livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
