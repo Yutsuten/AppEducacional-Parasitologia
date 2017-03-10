@@ -187,6 +187,16 @@ function carregaLivroAberto() {
   , estiloTitulo);
   livro.Parasitologia.pagina[1].titulo.setPosition(248, 680);
 
+  livro.Parasitologia.pagina[1].texto2 = new Game.Text(
+    "     - Agente infeccioso: todo parasito capaz de\n" +
+    "produzir infecção ou doença infecciosa.\n" +
+    "     - Agente etiológico: é o agente causador ou\n" +
+    "responsável pela origem da doença. Sendo as-\n" +
+    "sim, pode respresentar um fungo, bactéria, ví-\n" +
+    "rus, protozoário ou helminto."
+    , estiloTextoLivro);
+  livro.Parasitologia.pagina[1].texto2.setPosition(248, 736);
+
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
   livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
   livro.Parasitologia.pagina[1].tabela.setScale(1.1);
