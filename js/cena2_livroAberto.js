@@ -175,22 +175,22 @@ function carregaLivroAberto() {
 
   livro.Parasitologia.pagina[1] = new Game.Page();
   livro.Parasitologia.pagina[1].texto1 = new Game.Text(
-    "     YYYYYYYYY é o estudo dos parasitas\n" +
-    "animais e vegetais e da relação entre parasi-\n" +
-    "tas e seus hospedeiros.\n" +
-    "     O parasitismo é a associação entre os se-\n" +
-    "res vivos, na qual existe unilateralidade de\n" +
-    "benefícios, ou seja, apenas um dos lados é\n" +
-    "beneficiado. Neste sentido, o hospedeiro\n" +
-    "provê abrigo e proteção ao parasita, o qual\n" +
-    "prejudica e promove danos ao hospedeiro.\n" +
-    "De um modo geral, afirma-se que a associa-\n" +
-    "ção parasitária tende ao equilíbrio porque se\n" +
-    "o hospedeiro morre, o parasita também morre.\n" +
-    "Entretanto, percebe-se que na prática tal fato\n" +
-    "não ocorre, visto que ao evitar a morte, o pa-\n" +
-    "rasita não mata seu hospedeiro.\n" +
-    "     Para haver doenças parasitárias é necessá-\n" +
+    "     - Nematoda: vermes redondos, os quais se\n" +
+    "subdividem em: Adenophorea (não-parasitas\n" +
+    "do ser humano) e Sercenentea (parasitam o\n" +
+    "Homem e animais).\n" +
+    "      - Acanthocephala: vermes pseudoceloma-\n" +
+    "dos e pseudossegmentados.\n" +
+    "      - Annelida: grupo de metazoários, como a\n" +
+    "classe Oligochaeta (minhocas) e Hirudinea\n" +
+    "(sanguessugas).\n" +
+    "      No interior, ou não, de um hospedeiro, o\n" +
+    "parasita se desenvolve por meio de seu ciclo\n" +
+    "biológico. Como resultado da evolução dos\n" +
+    "parasitas, algumas fases de seus ciclos bioló-\n" +
+    "gicos são complicadas e outras mais simples,\n" +
+    "obtendo, de uma forma ou de outra, sucesso\n" +
+    "em sua reprodução e dispersão.\n" +
     "rio que existam alguns fatores, quanto:\n" +
     "     - ao parasito: como o número de indivídu-\n" +
     "os que atingirão o hospedeiro, a sua virulência\n" +
@@ -198,7 +198,7 @@ function carregaLivroAberto() {
     "     - ao hospedeiro: idade, nutrição, tipo de\n" +
     "resposta imune."
     , estiloTextoLivro);
-  livro.Parasitologia.pagina[1].texto1.setPosition(248, 190);
+  livro.Parasitologia.pagina[1].texto1.setPosition(248, 120);
   livro.Parasitologia.pagina[1].texto1.setAlpha(0);
   livro.Parasitologia.pagina[1].texto1.disable();
 
