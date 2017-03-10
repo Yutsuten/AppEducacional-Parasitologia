@@ -2,6 +2,7 @@
 
 Game.Book = function(name) {
   var item = scene[2].item;
+  var objInstance = this;
 
   var bookName = name;
   var currentPageIndex = 0;
@@ -27,6 +28,17 @@ Game.Book = function(name) {
   item.bookPreviousPageArrow.disable();
   item.bookPreviousPageArrow.setZorder(2);
 
+  var updateArrowsState = function() {
+    var arrowNextEnabled = currentPageIndex < objInstance.pagina.length - 1;
+    var arrowPreviousEnabled = currentPageIndex > 0;
+
+    item.bookNextPageArrow.setInteractive(arrowNextEnabled);
+    item.bookPreviousPageArrow.setInteractive(arrowPreviousEnabled);
+
+    item.bookNextPageArrow.setBrightness(arrowNextEnabled ? 220 : 120);
+    item.bookPreviousPageArrow.setBrightness(arrowPreviousEnabled ? 220 : 120);
+  }
+
   var getItemName = function() {
     return "livro" + bookName + "Pagina" + currentPageIndex;
   }
@@ -41,12 +53,11 @@ Game.Book = function(name) {
     currentPageIndex = 0;
     item[getItemName()].show();
 
+    updateArrowsState();
     item.bookNextPageArrow.enable();
     item.bookNextPageArrow.changeAlpha(1, 600);
-    item.bookNextPageArrow.setInteractive(true);
     item.bookPreviousPageArrow.enable();
     item.bookPreviousPageArrow.changeAlpha(1, 600);
-    item.bookPreviousPageArrow.setInteractive(true);
   }
 
   this.close = function() {
