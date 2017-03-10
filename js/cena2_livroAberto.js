@@ -195,10 +195,10 @@ function carregaLivroAberto() {
     "sim, pode respresentar um fungo, bactéria, ví-\n" +
     "rus, protozoário ou helminto."
     , estiloTextoLivro);
-  livro.Parasitologia.pagina[1].texto2.setPosition(248, 730);
+  livro.Parasitologia.pagina[1].texto2.setPosition(248, 720);
 
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
-  livro.Parasitologia.pagina[1].tabela.setPosition(1240, 270);
+  livro.Parasitologia.pagina[1].tabela.setPosition(1270, 270);
   livro.Parasitologia.pagina[1].tabela.setScale(1.1);
   livro.Parasitologia.pagina[1].tabela.setTint(200, 194, 177);
 
@@ -206,8 +206,76 @@ function carregaLivroAberto() {
     "Tabela referente aos organismos\n" +
     "que parasitam os humanos"
     , estiloLegenda);
-  livro.Parasitologia.pagina[1].legendaTabela.setPosition(1238, 460);
+  livro.Parasitologia.pagina[1].legendaTabela.setPosition(1260, 460);
   livro.Parasitologia.pagina[1].legendaTabela.setAnchor(0.5, 0.5);
+
+  livro.Parasitologia.pagina[1].texto3 = new Game.Text(
+    "     - Contaminação: é a presença de um agente\n" +
+    "infeccioso na superfície do corpo, roupas, brin-\n" +
+    "quedos, água, alimentos etc.\n" +
+    "     - Fase aguda: corresponde ao período logo\n" +
+    "após a infecção, no qual os sintomas são mais\n" +
+    "marcantes (febre alta, dores de cabeça e abdo-\n" +
+    "minais etc). É um período de definição: o indi-\n" +
+    "víduo ou se cura, ou entra na fase crônica ou \n" +
+    "falece.\n" +
+    "     - Fase crônica: período que se segue à fase\n" +
+    "aguda; caracteriza-se pela diminuição dos sin-\n" +
+    "tomas e por um equilíbrio elativo entre o hos-"
+    , estiloTextoLivro);
+  livro.Parasitologia.pagina[1].texto3.setPosition(990, 520);
+
+  // Parasitologia: Pagina 2
+  livro.Parasitologia.pagina[2] = new Game.Page();
+
+  livro.Parasitologia.pagina[2].texto1 = new Game.Text(
+    "pedeiro e o parasita. Este equilíbrio pode ser\n" +
+    "quebrado em favor de amobos os lados.\n" +
+    "      - Hospedeiro definitivo: o hospedeiro é\n" +
+    "aquele que contém o parasito. O hospedeiro\n" +
+    "definitivo é o que apresenta o parasito em sua\n" +
+    "fase matura ou em fase de atividade sexual.\n" +
+    "Exemplo: o hospedeiro definitivo de <i>T. gondii</i>\n" +
+    "é o gato, enquanto que o da <i>Taenia</i> sp é o ser\n" +
+    "humano.\n" +
+    "      - Hospedeiro intermediário: é aquele que\n" +
+    "possui o parasito em sua forma larvária ou as-\n" +
+    "sexuada. Exemplo: os bovinos ou suínos são\n" +
+    "hospedeiros intermediários de <i>Taenia</i> sp e o\n" +
+    "humano do <i>Plasmodium</i> sp.\n" +
+    "      - Infecção: penetração e desenvolvimento\n" +
+    "de um agente infeccioso (vírus, bactérias, pro-\n" +
+    "tozoários ou helmintos) dentro de um organis-\n" +
+    "mo.\n" +
+    "      - Patogenia: é o mecanismo pelo qual um\n" +
+    "agente infeccioso provoca lesões no hospedei-\n" +
+    "ro. Exemplo: a <i>Giardia lamblia</i> adere ao intes-\n" +
+    "tino dificultando a absorção de nutrientes e\n" +
+    "causando lesões na parede intestinal, provo-\n" +
+    "cando diarréias e respostas inflamatórias."
+    , estiloTextoLivro);
+  livro.Parasitologia.pagina[2].texto1.setPosition(248, 120);
+
+  livro.Parasitologia.pagina[2].texto2 = new Game.Text(
+    "      - Patogenicidade: é a habilidade de um a-\n" +
+    "gente infeccioso em provocar lesões. Exemplo:\n" +
+    "<i>Taenia saginata</i> tem patogenicidade baixa.\n" +
+    "      - Vetor: é qualquer organismo que sirva de\n" +
+    "veículo para o parasito entre dois hospederei-\n" +
+    "ros, podendo ser um artrópode ou molusco.\n" +
+    "Exemplo: Mosquito que transmite a malária, o\n" +
+    "<i>Anopheles</i> sp.\n" +
+    "      - Virulência: é a severidade e rapidez com\n" +
+    "as quais o agente infeccioso provoca lesões no\n" +
+    "hospedeiro. Exemplo: a <i>E. histolytica</i> provoca\n" +
+    "lesões severas rapidamente.\n" +
+    "      - Zoonose: doenças e infecções que são\n" +
+    "transmitidos entre animais vertebrados e os hu-\n" +
+    "manos. Atualmente são conhecidas 100 zoono-\n" +
+    "ses. Exemplo: doenças de Chagas, toxoplasmo-\n" +
+    "se e raiva."
+    , estiloTextoLivro);
+  livro.Parasitologia.pagina[2].texto2.setPosition(990, 120);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
