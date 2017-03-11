@@ -64,7 +64,7 @@ sceneLoader[2] = function() {
   item.livroAmebiase.setZorder(20);
   item.livroAmebiase.setBrightness(210);
   item.livroAmebiase.onMouseOver = function() {
-    scene[2].setSubtitle("livroAmebiase");
+    scene[2].setSubtitle("Amebíase");
     item.livroAmebiase.setBrightness(255);
   }
   item.livroAmebiase.onMouseOut = function() {

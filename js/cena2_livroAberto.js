@@ -277,6 +277,92 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Parasitologia.pagina[2].texto2.setPosition(990, 120);
 
+  // LIVRO: AMEBIASE
+  livro.newBook("Amebiase");
+
+  // Amebiase: Pagina 0
+  livro.Amebiase.pagina[0] = new Game.Page();
+
+  livro.Amebiase.pagina[0].titulo = new Game.Text(
+    "                     Amebíase"
+  , estiloTitulo);
+  livro.Amebiase.pagina[0].titulo.setPosition(248, 120);
+
+  livro.Amebiase.pagina[0].texto1 = new Game.Text(
+    "     A Amebíase é causada pelo agente etioló-\n" +
+    "gico <i>Entamoeba histolytica</i>. É de grande im-\n" +
+    "portância médica, pois, até o ano de 2011 era\n" +
+    "caracterizada como a segunda doença parasi-\n" +
+    "tária que mais levava o Homem à morte. En-\n" +
+    "tretanto, apesar da alta taxa de mortalidade,\n" +
+    "muitos casos de infecções assintomáticas\n" +
+    "ocorrem.\n" +
+    "     A classificação do agente etiológico é:\n" +
+    "     Reino: Protista\n" +
+    "     Filo: Amoebozoa\n" +
+    "     Classe: Archamoebae\n" +
+    "     Ordem: Mastigamoebida\n" +
+    "     Família: Entamoedbidae\n" +
+    "     Gênero: <i>Entamoeba</i>\n" +
+    "     Espécie: <i>E. histolytica</i>\n" +
+    "     A <i>E. histolytica</i> vive no intestino grosso de\n" +
+    "humanos e animais. O ciclo de vida consiste\n" +
+    "em duas formas de vida: cistos arredondados\n" +
+    "com quatro núcleos e trofozoítos alongados\n" +
+    "com um só núcleo."
+    , estiloTextoLivro);
+  livro.Amebiase.pagina[0].texto1.setPosition(248, 190);
+
+  livro.Amebiase.pagina[0].cicloDeVida = new Game.Text(
+    "      Ciclo de vida"
+  , estiloTitulo);
+  livro.Amebiase.pagina[0].cicloDeVida.setPosition(990, 120);
+
+  livro.Amebiase.pagina[0].texto2 = new Game.Text(
+    "      O ciclo se inicia pela ingestão de cistos\n" +
+    "maduros, junto de alimentos ou água contami-\n" +
+    "nados. Os cistos são resistentes ao suco gástri-\n" +
+    "co, assim passam pelo estômago e alcançam o\n" +
+    "final do intestino delgado ou início do grosso.\n" +
+    "Neste local ocorre o desencistamento: processo\n" +
+    "no qual o cisto libera o metacisto, que sofre\n" +
+    "divisões nucleares e citoplasmáticas, culminan-\n" +
+    "do no trofozoíto.\n" +
+    "      Os trofozoítos gerados migram para o in-\n" +
+    "testino grosso e ali se colonizam. Estes aderem-\n" +
+    "se à mucosa do intestino e, através desta, ali-\n" +
+    "mentam-se de detritos e bactérias.\n" +
+    "      Sob certa cisrcuntâncias (não bem descritas),\n" +
+    "o trofozoíto desliga-se da parede intestinal e\n" +
+    "sofre desidratação, transformando-se em pré-\n" +
+    "cisto, o qual irá sofrer divisões nucleares e se\n" +
+    "transformará em cisto maduro que será elimi-\n" +
+    "nado pelas fezes, recomeçando o ciclo."
+    , estiloTextoLivro);
+  livro.Amebiase.pagina[0].texto2.setPosition(990, 170);
+
+  livro.Amebiase.pagina[0].cisto = new Game.Image("entamoebaCisto.png");
+  livro.Amebiase.pagina[0].cisto.setPosition(1120, 730);
+  livro.Amebiase.pagina[0].cisto.setScale(0.4);
+
+  livro.Amebiase.pagina[0].legendaCisto = new Game.Text(
+    "Foto do cisto da\n" +
+    "<i>E. histolytica</i>"
+    , estiloLegenda);
+  livro.Amebiase.pagina[0].legendaCisto.setPosition(1120, 880);
+  livro.Amebiase.pagina[0].legendaCisto.setAnchor(0.5, 0.5);
+
+  livro.Amebiase.pagina[0].trofozoito = new Game.Image("entamoebaTrofozoito.png");
+  livro.Amebiase.pagina[0].trofozoito.setPosition(1400, 730);
+  livro.Amebiase.pagina[0].trofozoito.setScale(0.4);
+
+  livro.Amebiase.pagina[0].legendaTrofozoito = new Game.Text(
+    "Foto do trofozoíto da\n" +
+    "<i>E. histolytica</i>"
+    , estiloLegenda);
+  livro.Amebiase.pagina[0].legendaTrofozoito.setPosition(1400, 880);
+  livro.Amebiase.pagina[0].legendaTrofozoito.setAnchor(0.5, 0.5);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 

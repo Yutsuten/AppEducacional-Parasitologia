@@ -20,6 +20,9 @@ var estiloTextoLivro = {
 var estiloLegenda = {
   "default": {fontFamily: "Times New Roman", fontSize: "30px",
   fontStyle: "bold", fill: 0x010101, align: "center"
+  },
+  "i" : {
+    fontStyle: "bold italic"
   }
 }
 
