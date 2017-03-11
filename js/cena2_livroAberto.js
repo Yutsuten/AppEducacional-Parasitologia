@@ -515,6 +515,40 @@ function carregaLivroAberto() {
   livro.Malaria.pagina[1].legendaGametocito.setPosition(1120, 370);
   livro.Malaria.pagina[1].legendaGametocito.setAnchor(0.5, 0.5);
 
+  // LIVRO: TOXOPLASMOSE
+  livro.newBook("Toxoplasmose");
+
+  // Malaria: Pagina 0
+  livro.Toxoplasmose.pagina[0] = new Game.Page();
+
+  livro.Toxoplasmose.pagina[0].titulo = new Game.Text(
+    "                     Toxoplasmose"
+  , estiloTitulo);
+  livro.Toxoplasmose.pagina[0].titulo.setPosition(248, 120);
+
+  livro.Toxoplasmose.pagina[0].texto1 = new Game.Text(
+    "     O parasita causador de Toxoplasmose é o\n" +
+    "<i>Toxoplasma gondii</i>. Este protozoário está dis-\n" +
+    "tribuído por todo o mundo e, em indivíduos\n" +
+    "com o sistema mune comprometido, pode le-\n" +
+    "var à encefalite e doença sistêmica, por exem-\n" +
+    "plo.\n" +
+    "     A toxoplasmose é uma zoonose (doença\n" +
+    "presente em animais, mas que pode ser trans-\n" +
+    "mitida ao Homem) presente em espécies de\n" +
+    "animais, como: carneiro, cabra, aves e gato\n" +
+    "não-imunes ao parasito. O ciclo da doença se\n" +
+    "completa em duas partes, uma no Homem e\n" +
+    "outra no gato, assim, o gato é o hospedeiro\n" +
+    "definitivo do parasita e o ser humano, outros\n" +
+    "mamíferos e aves são intermediários.\n" +
+    "     Reino: Eucoccidiorida\n" +
+    "     Família: Sarcocystidae\n" +
+    "     Gênero: <i>Toxoplasma</i>\n" +
+    "     Espécie: <i>T. gondii</i>"
+    , estiloTextoLivro);
+  livro.Toxoplasmose.pagina[0].texto1.setPosition(248, 190);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 

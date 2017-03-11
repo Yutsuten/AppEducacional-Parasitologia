@@ -100,7 +100,7 @@ sceneLoader[2] = function() {
   item.livroToxoplamose.setZorder(20);
   item.livroToxoplamose.setBrightness(210);
   item.livroToxoplamose.onMouseOver = function() {
-    scene[2].setSubtitle("livroToxoplamose");
+    scene[2].setSubtitle("Toxoplasmose");
     item.livroToxoplamose.setBrightness(255);
   }
   item.livroToxoplamose.onMouseOut = function() {
@@ -109,7 +109,7 @@ sceneLoader[2] = function() {
   }
   item.livroToxoplamose.onClick = function(mouse) {
     item.livroToxoplamose.onMouseOut();
-    scene[2].openBook("Toxoplamose");
+    scene[2].openBook("Toxoplasmose");
   }
   scene[2].livros.push(item.livroToxoplamose);
 
