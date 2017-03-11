@@ -392,7 +392,7 @@ function carregaLivroAberto() {
     "     Ordem: Haemosporida\n" +
     "     Família: Plasmodiidae\n" +
     "     Gênero: <i>Plasmodium</i>\n" +
-    "     Espécie: <i>P. falciparum; P. vivax; P. mala-\n" +
+    "     Espécies: <i>P. falciparum; P. vivax; P. mala-\n" +
     "riae; P. ovale</i>"
     , estiloTextoLivro);
   livro.Malaria.pagina[0].texto1.setPosition(248, 190);
