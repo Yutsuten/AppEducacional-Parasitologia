@@ -452,9 +452,54 @@ function carregaLivroAberto() {
     "milhares de merozoítos, os quais poderão inva-\n" +
     "dir as hemácias presentes no sangue. Dentro\n" +
     "delas, os merozoítos também se multiplicam\n" +
-    "(reprodução assexuada), gerando novos merozoítos,"
+    "(reprodução assexuada), gerando novos mero-"
     , estiloTextoLivro);
   livro.Malaria.pagina[0].texto3.setPosition(990, 460);
+
+  // Malaria: Pagina 1
+  livro.Malaria.pagina[1] = new Game.Page();
+
+  livro.Malaria.pagina[1].texto1 = new Game.Text(
+    "zoítos, os quais invadem novas hemácias. De-\n" +
+    "pois de algumas gerações de merozoítos, estes\n" +
+    "irão se diferenciar em gametócitos feminino e\n" +
+    "masculino, o estágio sexuado do parasita."
+    , estiloTextoLivro);
+  livro.Malaria.pagina[1].texto1.setPosition(248, 120);
+
+  livro.Malaria.pagina[1].merozoito = new Game.Image("merozoito.png");
+  livro.Malaria.pagina[1].merozoito.setPosition(360, 380);
+  livro.Malaria.pagina[1].merozoito.setScale(0.4);
+
+  livro.Malaria.pagina[1].legendaMerozoito = new Game.Text(
+    "Merozoítos de\n" +
+    "<i>Plasmodium</i> sp"
+    , estiloLegenda);
+  livro.Malaria.pagina[1].legendaMerozoito.setPosition(360, 530);
+  livro.Malaria.pagina[1].legendaMerozoito.setAnchor(0.5, 0.5);
+
+  livro.Malaria.pagina[1].hemacia = new Game.Image("hemaciaComMerozoito.png");
+  livro.Malaria.pagina[1].hemacia.setPosition(640, 380);
+  livro.Malaria.pagina[1].hemacia.setScale(0.4);
+
+  livro.Malaria.pagina[1].legendaHemacia = new Game.Text(
+    "Merozoítos inva-\n" +
+    "dem as hemácias"
+    , estiloLegenda);
+  livro.Malaria.pagina[1].legendaHemacia.setPosition(640, 530);
+  livro.Malaria.pagina[1].legendaHemacia.setAnchor(0.5, 0.5);
+
+  livro.Malaria.pagina[1].gametocito = new Game.Image("gametocitoPlasmodium.png");
+  livro.Malaria.pagina[1].gametocito.setPosition(1400, 220);
+  livro.Malaria.pagina[1].gametocito.setTint(200, 194, 177);
+  livro.Malaria.pagina[1].gametocito.setScale(0.4);
+
+  livro.Malaria.pagina[1].legendaGametocito = new Game.Text(
+    "Gametócitos de \n" +
+    "<i>Plasmodium</i> sp"
+    , estiloLegenda);
+  livro.Malaria.pagina[1].legendaGametocito.setPosition(1400, 370);
+  livro.Malaria.pagina[1].legendaGametocito.setAnchor(0.5, 0.5);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
