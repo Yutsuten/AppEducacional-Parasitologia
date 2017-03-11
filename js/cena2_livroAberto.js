@@ -594,6 +594,50 @@ function carregaLivroAberto() {
   livro.Toxoplasmose.pagina[1].legendaToxoplamose.setPosition(640, 370);
   livro.Toxoplasmose.pagina[1].legendaToxoplamose.setAnchor(0.5, 0.5);
 
+  livro.Toxoplasmose.pagina[1].texto1 = new Game.Text(
+    "      Entretanto, em\n" +
+    "outras pessoas o sis-\n" +
+    "tema imune pode\n" +
+    "combater o parasito\n" +
+    "e, desta forma, a\n" +
+    "doença não se ma-\n" +
+    "nifesta tão grave-\n" +
+    "mente. Grande par-\n" +
+    "te dos parasitos é\n" +
+    "eliminada e alguns deles evoluem para cistos.\n" +
+    "Este conjunto de fatores caracteriza a fase\n" +
+    "crônica da doença, a qual permanece por um\n" +
+    "longo período de tempo no ser humano. Du-\n" +
+    "rante esta fase pode haver reativação da fase\n" +
+    "aguda.\n" +
+    "      No gato, a ingestão de cistos ou oocistos,\n" +
+    "leva os parasitos até o intestino, onde adentra-\n" +
+    "rão as células e sofrerão um processo de mul-\n" +
+    "tiplicação, gerando vários merozoítos. O rom-\n" +
+    "pimento da célula parasitada libera os mero-\n" +
+    "zoítos, os quais penetrarão outras células e\n" +
+    "formarão os gametócitos femininos e mascu-\n" +
+    "linos. Estes, após um período de maturação,\n" +
+    "terão a capacidade de se movimentar, permi-"
+    , estiloTextoLivro);
+  livro.Toxoplasmose.pagina[1].texto1.setPosition(248, 120);
+
+  livro.Toxoplasmose.pagina[1].texto2 = new Game.Text(
+    "tindo que se encontrem e formem o zigoto.\n" +
+    "Este irá se desenvolver dentro do epitélio do\n" +
+    "gato e ormará o oocisto imaturo, o qual será\n" +
+    "eliminado do organismo junto com as fezes.\n" +
+    "      No meio externo, ou seja, fora do organis-\n" +
+    "mo do gato e antes de chegar ao ser humano,\n" +
+    "os oocistos imaturos amadurecem após um pe-\n" +
+    "ríodo de tempo. Assim, quando em condições\n" +
+    "propícias ao oocisto maduro (umidade, tempe-\n" +
+    "ratura e local favorável), este é capaz de manter\n" +
+    "a sua capacidade de infecção por aproximada-\n" +
+    "mente 1 ano."
+    , estiloTextoLivro);
+  livro.Toxoplasmose.pagina[1].texto2.setPosition(990, 120);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
