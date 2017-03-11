@@ -518,7 +518,7 @@ function carregaLivroAberto() {
   // LIVRO: TOXOPLASMOSE
   livro.newBook("Toxoplasmose");
 
-  // Malaria: Pagina 0
+  // Toxoplasmose: Pagina 0
   livro.Toxoplasmose.pagina[0] = new Game.Page();
 
   livro.Toxoplasmose.pagina[0].titulo = new Game.Text(
@@ -579,6 +579,20 @@ function carregaLivroAberto() {
     "tema imune comprometido podem morrer."
     , estiloTextoLivro);
   livro.Toxoplasmose.pagina[0].texto2.setPosition(990, 170);
+
+  // Toxoplasmose: Pagina 1
+  livro.Toxoplasmose.pagina[1] = new Game.Page();
+
+  livro.Toxoplasmose.pagina[1].toxoplamose = new Game.Image("toxoplamose.png");
+  livro.Toxoplasmose.pagina[1].toxoplamose.setPosition(640, 220);
+  livro.Toxoplasmose.pagina[1].toxoplamose.setScale(0.4);
+
+  livro.Toxoplasmose.pagina[1].legendaToxoplamose = new Game.Text(
+    "Oocisto de <i>Toxo\n" +
+    "plasma gondii</i>"
+    , estiloLegenda);
+  livro.Toxoplasmose.pagina[1].legendaToxoplamose.setPosition(640, 370);
+  livro.Toxoplasmose.pagina[1].legendaToxoplamose.setAnchor(0.5, 0.5);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
