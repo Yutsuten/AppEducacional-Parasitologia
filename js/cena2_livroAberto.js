@@ -377,7 +377,7 @@ function carregaLivroAberto() {
   livro.Malaria.pagina[0] = new Game.Page();
 
   livro.Malaria.pagina[0].titulo = new Game.Text(
-    "                     Malaria"
+    "                      Malária"
   , estiloTitulo);
   livro.Malaria.pagina[0].titulo.setPosition(248, 120);
 
@@ -413,6 +413,30 @@ function carregaLivroAberto() {
     "tico, os esporozoítos alcançam um linfonodo e"
     , estiloTextoLivro);
   livro.Malaria.pagina[0].texto2.setPosition(248, 660);
+
+  livro.Malaria.pagina[0].mosquito = new Game.Image("mosquito.png");
+  livro.Malaria.pagina[0].mosquito.setPosition(1120, 220);
+  livro.Malaria.pagina[0].mosquito.setTint(200, 194, 177);
+  livro.Malaria.pagina[0].mosquito.setScale(0.4);
+
+  livro.Malaria.pagina[0].legendaMosquito = new Game.Text(
+    "Mosquito\n" +
+    "<i>Anopheles</i> sp"
+    , estiloLegenda);
+  livro.Malaria.pagina[0].legendaMosquito.setPosition(1120, 370);
+  livro.Malaria.pagina[0].legendaMosquito.setAnchor(0.5, 0.5);
+
+  livro.Malaria.pagina[0].picada = new Game.Image("picada.png");
+  livro.Malaria.pagina[0].picada.setPosition(1400, 220);
+  livro.Malaria.pagina[0].picada.setScale(0.4);
+
+  livro.Malaria.pagina[0].legendaPicada = new Game.Text(
+    "Inoculação de espo-\n" +
+    "rozoítos na corrente\n" +
+    "sanguínea"
+    , estiloLegenda);
+  livro.Malaria.pagina[0].legendaPicada.setPosition(1400, 385);
+  livro.Malaria.pagina[0].legendaPicada.setAnchor(0.5, 0.5);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
