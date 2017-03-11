@@ -860,6 +860,97 @@ function carregaLivroAberto() {
   livro.TeniaseCisticercose.pagina[0].legendaTeniaAdulta.setPosition(1400, 880);
   livro.TeniaseCisticercose.pagina[0].legendaTeniaAdulta.setAnchor(0.5, 0.5);
 
+  // TeniaseCisticercose: Pagina 1
+  livro.TeniaseCisticercose.pagina[1] = new Game.Page();
+
+  livro.TeniaseCisticercose.pagina[1].texto1 = new Game.Text(
+    "      Durante o parasitismo, várias proglotes\n" +
+    "grávidas e desprendem diariamente."
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[1].texto1.setPosition(248, 120);
+
+  livro.TeniaseCisticercose.pagina[1].proglate = new Game.Image("proglate.png");
+  livro.TeniaseCisticercose.pagina[1].proglate.setPosition(360, 305);
+  livro.TeniaseCisticercose.pagina[1].proglate.setTint(200, 194, 177);
+  livro.TeniaseCisticercose.pagina[1].proglate.setScale(0.4);
+
+  livro.TeniaseCisticercose.pagina[1].legendaProglate = new Game.Text(
+    "Proglote grávida\n" +
+    "contendo ovos\n" +
+    "de <i>Taenia</i> sp"
+    , estiloLegenda);
+  livro.TeniaseCisticercose.pagina[1].legendaProglate.setPosition(360, 470);
+  livro.TeniaseCisticercose.pagina[1].legendaProglate.setAnchor(0.5, 0.5);
+
+  livro.TeniaseCisticercose.pagina[1].ovoTenia = new Game.Image("ovoTenia.png");
+  livro.TeniaseCisticercose.pagina[1].ovoTenia.setPosition(640, 305);
+  livro.TeniaseCisticercose.pagina[1].ovoTenia.setTint(200, 194, 177);
+  livro.TeniaseCisticercose.pagina[1].ovoTenia.setScale(0.4);
+
+  livro.TeniaseCisticercose.pagina[1].legendaovoTenia = new Game.Text(
+    "Ovo de\n" +
+    "<i>Taenia</i> sp"
+    , estiloLegenda);
+  livro.TeniaseCisticercose.pagina[1].legendaovoTenia.setPosition(640, 455);
+  livro.TeniaseCisticercose.pagina[1].legendaovoTenia.setAnchor(0.5, 0.5);
+
+  livro.TeniaseCisticercose.pagina[1].texto2 = new Game.Text(
+    "     No ser humano, o desenvolvimento do pa-\n" +
+    "rasita termina quando ocorre a formação dos\n" +
+    "gametócitos. O ciclo continua no interior do\n" +
+    "mosquito, assim, o <i>Plasmodium</i> sp depende do\n" +
+    "hospedeiro infectado ser novamente picado e,\n" +
+    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
+    "infecte, para que seu ciclo termine.\n" +
+    "     A reprodução sexuada que ocorre no inte-\n" +
+    "hospedeiro infectado ser novamente picado e,\n" +
+    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
+    "infecte, para que seu ciclo termine.\n" +
+    "rior do mosquito gera esporozoítos e, assim, o"
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[1].texto2.setPosition(248, 530);
+
+  livro.TeniaseCisticercose.pagina[1].cerebroInfectado = new Game.Image("cerebroInfectado.png");
+  livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setPosition(1400, 220);
+  livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setTint(200, 194, 177);
+  livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setScale(0.4);
+
+  livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado = new Game.Text(
+    "Cérebro humano\n" +
+    "infectado por\n" +
+    "cisticercos"
+    , estiloLegenda);
+  livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado.setPosition(1400, 385);
+  livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado.setAnchor(0.5, 0.5);
+
+  livro.TeniaseCisticercose.pagina[1].texto3 = new Game.Text(
+    "ovos, em condições favoráveis, tornam-se em-\n" +
+    "brionados em 2 semanas e, assim, formam as\n" +
+    "larvas do parasito.\n" +
+    "      A primeira larva, chamada rabditoide (L1),\n" +
+    "dá origem à larva L2, a qual, por sua vez, gera\n" +
+    "a larva L3, denominada filarióide, a qual está\n" +
+    "pronta para infectar novos hospedeiros. Os o-\n" +
+    "vos com as larvas L3 permanecem no solo por\n" +
+    "muitos meses e, assim, podem ser ingeridas\n" +
+    "pelo ser humano.\n" +
+    "      Após a ingestão, os\n" +
+    "ovos chegam até o in-\n" +
+    "testino delgado, onde\n" +
+    "os ovos com as larvas\n" +
+    "L3 eclodem. As larvas\n" +
+    "ultrapassam a parede\n" +
+    "intestinal, alcançam o\n" +
+    "sistema linfático e a\n" +
+    "veia mesentérica supe-\n" +
+    "rior e, desta forma, chegam no fígado do hos-\n" +
+    "pedeiro. Quando alcançam a veia cava inferior,\n" +
+    "as larvas alcançam o coração e, depois, os\n" +
+    "pulmões.\n" +
+    "      Dentro dos pulmões, após 8 dias de infecção,"
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[1].texto3.setPosition(990, 120);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
