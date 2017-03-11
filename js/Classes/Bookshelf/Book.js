@@ -1,55 +1,57 @@
 'use strict';
 
-Game.Book = function(name) {
+Game.Book = function(bookName) {
   var item = scene[2].item;
   var objInstance = this;
 
-  var bookName = name;
   var currentPageIndex = 0;
 
   this.pagina = [];
 
-  item.bookNextPageArrow = new Game.Item("seta.png");
-  item.bookNextPageArrow.setPosition(1670, 500);
-  item.bookNextPageArrow.setBrightness(220);
-  item.bookNextPageArrow.setScale(0.3);
-  item.bookNextPageArrow.setAlpha(0);
-  item.bookNextPageArrow.setInteractive(false);
-  item.bookNextPageArrow.disable();
-  item.bookNextPageArrow.setZorder(2);
-  item.bookNextPageArrow.onMouseOver = function() {
+  // Setas de proximo e anterior
+  var nextPageArrow = bookName + "NextPageArrow";
+  item[nextPageArrow] = new Game.Item("seta.png");
+  item[nextPageArrow].setPosition(1670, 500);
+  item[nextPageArrow].setBrightness(220);
+  item[nextPageArrow].setScale(0.3);
+  item[nextPageArrow].setAlpha(0);
+  item[nextPageArrow].setInteractive(false);
+  item[nextPageArrow].disable();
+  item[nextPageArrow].setZorder(2);
+  item[nextPageArrow].onMouseOver = function() {
     scene[2].setSubtitle("Próxima página");
-    item.bookNextPageArrow.setBrightness(255);
+    item[nextPageArrow].setBrightness(255);
   }
-  item.bookNextPageArrow.onMouseOut = function() {
+  item[nextPageArrow].onMouseOut = function() {
     scene[2].setSubtitle("");
-    item.bookNextPageArrow.setBrightness(220);
+    item[nextPageArrow].setBrightness(220);
   }
-  item.bookNextPageArrow.onClick = function(mouse) {
+  item[nextPageArrow].onClick = function(mouse) {
     objInstance.nextPage();
     setTimeout(function() {
       scene[2].setSubtitle("");
     }, 300);
   }
 
-  item.bookPreviousPageArrow = new Game.Item("seta.png");
-  item.bookPreviousPageArrow.setPosition(110, 500);
-  item.bookPreviousPageArrow.setBrightness(220);
-  item.bookPreviousPageArrow.setScale(0.3);
-  item.bookPreviousPageArrow.setRotation(180);
-  item.bookPreviousPageArrow.setAlpha(0);
-  item.bookPreviousPageArrow.setInteractive(false);
-  item.bookPreviousPageArrow.disable();
-  item.bookPreviousPageArrow.setZorder(2);
-  item.bookPreviousPageArrow.onMouseOver = function() {
+  var previousPageArrow = bookName + "PreviousPageArrow";
+  item[previousPageArrow] = new Game.Item("seta.png");
+  item[previousPageArrow].setPosition(110, 500);
+  item[previousPageArrow].setBrightness(220);
+  item[previousPageArrow].setScale(0.3);
+  item[previousPageArrow].setRotation(180);
+  item[previousPageArrow].setAlpha(0);
+  item[previousPageArrow].setInteractive(false);
+  item[previousPageArrow].disable();
+  item[previousPageArrow].setZorder(2);
+  item[previousPageArrow].onMouseOver = function() {
     scene[2].setSubtitle("Página anterior");
-    item.bookPreviousPageArrow.setBrightness(255);
+    item[previousPageArrow].setBrightness(255);
   }
-  item.bookPreviousPageArrow.onMouseOut = function() {
+  item[previousPageArrow].onMouseOut = function() {
     scene[2].setSubtitle("");
-    item.bookPreviousPageArrow.setBrightness(220);
+    item[previousPageArrow].setBrightness(220);
   }
-  item.bookPreviousPageArrow.onClick = function(mouse) {
+  item[previousPageArrow].onClick = function(mouse) {
     objInstance.previousPage();
     setTimeout(function() {
       scene[2].setSubtitle("");
@@ -60,11 +62,11 @@ Game.Book = function(name) {
     var arrowNextEnabled = currentPageIndex < objInstance.pagina.length - 1;
     var arrowPreviousEnabled = currentPageIndex > 0;
 
-    item.bookNextPageArrow.setInteractive(arrowNextEnabled);
-    item.bookPreviousPageArrow.setInteractive(arrowPreviousEnabled);
+    item[nextPageArrow].setInteractive(arrowNextEnabled);
+    item[previousPageArrow].setInteractive(arrowPreviousEnabled);
 
-    item.bookNextPageArrow.setBrightness(arrowNextEnabled ? 220 : 120);
-    item.bookPreviousPageArrow.setBrightness(arrowPreviousEnabled ? 220 : 120);
+    item[nextPageArrow].setBrightness(arrowNextEnabled ? 220 : 120);
+    item[previousPageArrow].setBrightness(arrowPreviousEnabled ? 220 : 120);
   }
 
   var getItemName = function() {
@@ -84,22 +86,22 @@ Game.Book = function(name) {
     item[getItemName()].show();
 
     updateArrowsState();
-    item.bookNextPageArrow.enable();
-    item.bookNextPageArrow.changeAlpha(1, 600);
-    item.bookPreviousPageArrow.enable();
-    item.bookPreviousPageArrow.changeAlpha(1, 600);
+    item[nextPageArrow].enable();
+    item[nextPageArrow].changeAlpha(1, 600);
+    item[previousPageArrow].enable();
+    item[previousPageArrow].changeAlpha(1, 600);
   }
 
   this.close = function() {
     item[getItemName()].hide();
 
-    item.bookNextPageArrow.changeAlpha(0, 600);
-    item.bookNextPageArrow.setInteractive(false);
-    item.bookPreviousPageArrow.changeAlpha(0, 600);
-    item.bookPreviousPageArrow.setInteractive(false);
+    item[nextPageArrow].changeAlpha(0, 600);
+    item[nextPageArrow].setInteractive(false);
+    item[previousPageArrow].changeAlpha(0, 600);
+    item[previousPageArrow].setInteractive(false);
     setTimeout(function() {
-      item.bookNextPageArrow.disable();
-      item.bookPreviousPageArrow.disable();
+      item[nextPageArrow].disable();
+      item[previousPageArrow].disable();
     }, 650);
   }
 
