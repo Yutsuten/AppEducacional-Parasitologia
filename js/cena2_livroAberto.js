@@ -722,6 +722,63 @@ function carregaLivroAberto() {
   livro.Ascaridiase.pagina[0].legendaOvoAscaris.setPosition(1400, 695);
   livro.Ascaridiase.pagina[0].legendaOvoAscaris.setAnchor(0.5, 0.5);
 
+  // Ascaridiase: Pagina 1
+  livro.Ascaridiase.pagina[1] = new Game.Page();
+
+  livro.Ascaridiase.pagina[1].ascarisFilhote = new Game.Image("ascarisFilhote.png");
+  livro.Ascaridiase.pagina[1].ascarisFilhote.setPosition(360, 220);
+  livro.Ascaridiase.pagina[1].ascarisFilhote.setScale(0.4);
+
+  livro.Ascaridiase.pagina[1].legendaAscarisFilhote = new Game.Text(
+    "Larva L3 de <i>A.\n" +
+    "lumbricoides</i>"
+    , estiloLegenda);
+  livro.Ascaridiase.pagina[1].legendaAscarisFilhote.setPosition(360, 360);
+  livro.Ascaridiase.pagina[1].legendaAscarisFilhote.setAnchor(0.5, 0.5);
+
+  livro.Ascaridiase.pagina[1].circulacao = new Game.Image("circulacao.png");
+  livro.Ascaridiase.pagina[1].circulacao.setPosition(640, 220);
+  livro.Ascaridiase.pagina[1].circulacao.setScale(0.4);
+
+  livro.Ascaridiase.pagina[1].legendaCirculacao = new Game.Text(
+    "Larva L3 ultrapas-\n" +
+    "sando parede intestinal"
+    , estiloLegenda);
+  livro.Ascaridiase.pagina[1].legendaCirculacao.setPosition(640, 360);
+  livro.Ascaridiase.pagina[1].legendaCirculacao.setAnchor(0.5, 0.5);
+
+  livro.Ascaridiase.pagina[1].texto1 = new Game.Text(
+    "as larvas transformam-se em L4, rompem os\n" +
+    "capilares dos pulmões e alcançam os alvéolos.\n" +
+    "Nestes, as larvas L4 sofrem mudas para L5, as\n" +
+    "quais podem chegar até a faringe e, assim, se-\n" +
+    "rem expelidas por tosse ou engolidas, chegan-\n" +
+    "do novamente ao intestino delgado.\n" +
+    "      Após dois meses\n" +
+    "de infecção, as larvas,\n" +
+    "agora adultas, alcan-\n" +
+    "çam a sua capacidade\n" +
+    "reprodutiva, fazem\n" +
+    "cópula e liberam ovos,\n" +
+    "os quais serão descar-\n" +
+    "tados juntamente com\n" +
+    "as fezes do hospedei-\n" +
+    "ro, concluindo o ciclo."
+    , estiloTextoLivro);
+  livro.Ascaridiase.pagina[1].texto1.setPosition(248, 400);
+
+  livro.Ascaridiase.pagina[1].ascarisMF = new Game.Image("ascarisMF.png");
+  livro.Ascaridiase.pagina[1].ascarisMF.setPosition(640, 705);
+  livro.Ascaridiase.pagina[1].ascarisMF.setScale(0.39);
+
+  livro.Ascaridiase.pagina[1].legendaAscarisMF = new Game.Text(
+    "Larvas adultas\n" +
+    "alcançam capaci-\n" +
+    "dade reprodutiva"
+    , estiloLegenda);
+  livro.Ascaridiase.pagina[1].legendaAscarisMF.setPosition(640, 880);
+  livro.Ascaridiase.pagina[1].legendaAscarisMF.setAnchor(0.5, 0.5);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
