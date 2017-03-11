@@ -814,6 +814,52 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.TeniaseCisticercose.pagina[0].texto1.setPosition(248, 190);
 
+  livro.TeniaseCisticercose.pagina[0].cicloBiologico = new Game.Text(
+    "      Ciclo biológico"
+  , estiloTitulo);
+  livro.TeniaseCisticercose.pagina[0].cicloBiologico.setPosition(990, 120);
+
+  livro.TeniaseCisticercose.pagina[0].texto2 = new Game.Text(
+    "      O humano é o hospedeiro definitivo deste\n" +
+    "parasita e é infectado pela <i>Taenia</i> sp ao ingerir\n" +
+    "uma carne suína (<i>Taenia solium</i>) ou bovina\n" +
+    "(<i>Taenia saginata</i>), crua ou mal cozida, que es-\n" +
+    "teja infectada. A carne infectada possui cisti-\n" +
+    "cercos que representam um estágio inicial da\n" +
+    "larva de <i>Taenia</i> sp. Este cisticerco ao ser inge-\n" +
+    "rido sofre ação do suco gástrico, permitindo\n" +
+    "que a larva se liberte e se fixe nas paredes do\n" +
+    "intestino delgado por meio de seu escólex,\n" +
+    "transformando-se em uma larva adulta. O es-\n" +
+    "cólex é um órgão de fixação formado por ven-\n" +
+    "tosas presente na cabeça da larva."
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[0].texto2.setPosition(990, 170);
+
+  livro.TeniaseCisticercose.pagina[0].carne = new Game.Image("carneInfectada.png");
+  livro.TeniaseCisticercose.pagina[0].carne.setPosition(1120, 730);
+  livro.TeniaseCisticercose.pagina[0].carne.setTint(200, 194, 177);
+  livro.TeniaseCisticercose.pagina[0].carne.setScale(0.4);
+
+  livro.TeniaseCisticercose.pagina[0].legendaCarne = new Game.Text(
+    "Carne crua infectada\n" +
+    "por cisticercos"
+    , estiloLegenda);
+  livro.TeniaseCisticercose.pagina[0].legendaCarne.setPosition(1120, 880);
+  livro.TeniaseCisticercose.pagina[0].legendaCarne.setAnchor(0.5, 0.5);
+
+  livro.TeniaseCisticercose.pagina[0].teniaAdulta = new Game.Image("teniaAdulta.png");
+  livro.TeniaseCisticercose.pagina[0].teniaAdulta.setPosition(1400, 730);
+  livro.TeniaseCisticercose.pagina[0].teniaAdulta.setTint(200, 194, 177);
+  livro.TeniaseCisticercose.pagina[0].teniaAdulta.setScale(0.4);
+
+  livro.TeniaseCisticercose.pagina[0].legendaTeniaAdulta = new Game.Text(
+    "Larva adulta\n" +
+    "de <i>Taenia</i> sp"
+    , estiloLegenda);
+  livro.TeniaseCisticercose.pagina[0].legendaTeniaAdulta.setPosition(1400, 880);
+  livro.TeniaseCisticercose.pagina[0].legendaTeniaAdulta.setAnchor(0.5, 0.5);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
