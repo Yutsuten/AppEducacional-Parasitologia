@@ -489,8 +489,22 @@ function carregaLivroAberto() {
   livro.Malaria.pagina[1].legendaHemacia.setPosition(640, 530);
   livro.Malaria.pagina[1].legendaHemacia.setAnchor(0.5, 0.5);
 
+  livro.Malaria.pagina[1].texto2 = new Game.Text(
+    "     No ser humano, o desenvolvimento do pa-\n" +
+    "rasita termina quando ocorre a formação dos\n" +
+    "gametócitos. O ciclo continua no interior do\n" +
+    "mosquito, assim, o <i>Plasmodium</i> sp depende do\n" +
+    "hospedeiro infectado ser novamente picado e,\n" +
+    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
+    "infecte, para que seu ciclo termine.\n" +
+    "     A reprodução sexuada que ocorre no inte-\n" +
+    "rior do mosquito gera esporozoítos e, assim, o\n" +
+    "ciclo se completa."
+    , estiloTextoLivro);
+  livro.Malaria.pagina[1].texto2.setPosition(248, 590);
+
   livro.Malaria.pagina[1].gametocito = new Game.Image("gametocitoPlasmodium.png");
-  livro.Malaria.pagina[1].gametocito.setPosition(1400, 220);
+  livro.Malaria.pagina[1].gametocito.setPosition(1120, 220);
   livro.Malaria.pagina[1].gametocito.setTint(200, 194, 177);
   livro.Malaria.pagina[1].gametocito.setScale(0.4);
 
@@ -498,7 +512,7 @@ function carregaLivroAberto() {
     "Gametócitos de \n" +
     "<i>Plasmodium</i> sp"
     , estiloLegenda);
-  livro.Malaria.pagina[1].legendaGametocito.setPosition(1400, 370);
+  livro.Malaria.pagina[1].legendaGametocito.setPosition(1120, 370);
   livro.Malaria.pagina[1].legendaGametocito.setAnchor(0.5, 0.5);
 
   // Cria os itens com o conteudo dos livros
