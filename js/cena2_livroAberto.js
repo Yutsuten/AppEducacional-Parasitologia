@@ -370,6 +370,50 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Amebiase.pagina[1].texto1.setPosition(248, 120);
 
+  // LIVRO: MALARIA
+  livro.newBook("Malaria");
+
+  // Malaria: Pagina 0
+  livro.Malaria.pagina[0] = new Game.Page();
+
+  livro.Malaria.pagina[0].titulo = new Game.Text(
+    "                     Malaria"
+  , estiloTitulo);
+  livro.Malaria.pagina[0].titulo.setPosition(248, 120);
+
+  livro.Malaria.pagina[0].texto1 = new Game.Text(
+    "     Apesar de muito antiga, a Malária ainda é\n" +
+    "um os principais problemas de saúde pública\n" +
+    "mundial. Esta doença é causada pelo parasita\n" +
+    "<i>Plasmodium</i> sp.\n" +
+    "     Reino: Protozoa\n" +
+    "     Filo: Apicomplexa\n" +
+    "     Classe: Aconoidasida\n" +
+    "     Ordem: Haemosporida\n" +
+    "     Família: Plasmodiidae\n" +
+    "     Gênero: <i>Plasmodium</i>\n" +
+    "     Espécie: <i>P. falciparum; P. vivax; P. mala-\n" +
+    "riae; P. ovale</i>"
+    , estiloTextoLivro);
+  livro.Malaria.pagina[0].texto1.setPosition(248, 190);
+
+  livro.Malaria.pagina[0].cicloDeVida = new Game.Text(
+    "      Ciclo de vida"
+  , estiloTitulo);
+  livro.Malaria.pagina[0].cicloDeVida.setPosition(248, 610);
+
+  livro.Malaria.pagina[0].texto2 = new Game.Text(
+    "     A infecção do hospedeiro ocorre quando o\n" +
+    "vetor, o mosquito fêmea Anopheles sp, inocu-\n" +
+    "la, sob a pele do mesmo, esporozítos de <i>Plas-\n" +
+    "modium</i> sp, que se movimentam e migram até\n" +
+    "a corrente sanguínea ou vasos linfáticos do\n" +
+    "hospedeiro.\n" +
+    "     No caso de migração para o sistema linfá-\n" +
+    "tico, os esporozoítos alcançam um linfonodo e"
+    , estiloTextoLivro);
+  livro.Malaria.pagina[0].texto2.setPosition(248, 660);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 

@@ -82,7 +82,7 @@ sceneLoader[2] = function() {
   item.livroMalaria.setZorder(20);
   item.livroMalaria.setBrightness(210);
   item.livroMalaria.onMouseOver = function() {
-    scene[2].setSubtitle("livroMalaria");
+    scene[2].setSubtitle("Malária");
     item.livroMalaria.setBrightness(255);
   }
   item.livroMalaria.onMouseOut = function() {
