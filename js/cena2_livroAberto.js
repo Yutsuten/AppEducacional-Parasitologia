@@ -549,6 +549,37 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Toxoplasmose.pagina[0].texto1.setPosition(248, 190);
 
+  livro.Toxoplasmose.pagina[0].cicloBiologico = new Game.Text(
+    "      Ciclo biológico"
+  , estiloTitulo);
+  livro.Toxoplasmose.pagina[0].cicloBiologico.setPosition(990, 120);
+
+  livro.Toxoplasmose.pagina[0].texto2 = new Game.Text(
+    "      Existem duas fases de desenvolvimento do\n" +
+    "ciclo: a fase assexuada, que ocorre no hospe-\n" +
+    "deiro intermediário e a sexuada, que ocorre nos\n" +
+    "gatos não-imunes.\n" +
+    "      O Homem infecta-se com o parasito ao in-\n" +
+    "gerir oocistos maduros, os quais contém os es-\n" +
+    "porozoítos, encontrados em alimentos, água ou\n" +
+    "fezes de gato contaminados. Cada esporozoíto\n" +
+    "transforma-se em taquizoíto, o chegar no estô-\n" +
+    "mago. No epitélio intestinal, tais taquizoítos\n" +
+    "sofrerão multiplicação intracelular e invadirão\n" +
+    "outras células do organismo, nas quais também\n" +
+    "irão se multiplicar, formando novos taquizoítos.\n" +
+    "A grande quantidade de taquizoítos dentro de\n" +
+    "uma célula fará com que a mesma se rompa e\n" +
+    "libere os parasitos, que irão infectar novas cé-\n" +
+    "lulas, através do sistema linfático e sanguíneo,\n" +
+    "e assim por diante. Nesta fase da doença, cha\n" +
+    "mada de fase proliferativa, a evolução dos sin-\n" +
+    "tomas é muito rápida, caracterizando a fase\n" +
+    "aguda da doença. Fetos ou pessoas com o sis-\n" +
+    "tema imune comprometido podem morrer."
+    , estiloTextoLivro);
+  livro.Toxoplasmose.pagina[0].texto2.setPosition(990, 170);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
