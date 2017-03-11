@@ -638,6 +638,90 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Toxoplasmose.pagina[1].texto2.setPosition(990, 120);
 
+  // LIVRO: ASCARIDIASE
+  livro.newBook("Ascaridiase");
+
+  // Ascaridiase: Pagina 0
+  livro.Ascaridiase.pagina[0] = new Game.Page();
+
+  livro.Ascaridiase.pagina[0].titulo = new Game.Text(
+    "                   Ascaridíase"
+  , estiloTitulo);
+  livro.Ascaridiase.pagina[0].titulo.setPosition(248, 120);
+
+  livro.Ascaridiase.pagina[0].texto1 = new Game.Text(
+    "     Os <i>Ascaris lumbricoides</i> são os parasitos\n" +
+    "responsáveis pela Ascaridíase. São conhecidos\n" +
+    "popularmente como lombrigas e são encontra-\n" +
+    "dos em quase todos os países do mundo, ocor-\n" +
+    "rendo com frequência variada na população,\n" +
+    "pois depende de condições climáticas, ambi-\n" +
+    "entais e, principalmente, do grau de desenvol-\n" +
+    "vimento socioeconômico da população.\n" +
+    "     Reino: Animalia\n" +
+    "     Filo: Nematoda\n" +
+    "     Classe: Secernentea\n" +
+    "     Ordem: Ascaridida\n" +
+    "     Família: Ascarididae\n" +
+    "     Gênero: <i>Ascaris</i>\n" +
+    "     Espécie: <i>A. lumbricoides</i>"
+    , estiloTextoLivro);
+  livro.Ascaridiase.pagina[0].texto1.setPosition(248, 190);
+
+  livro.Ascaridiase.pagina[0].cicloBiologico = new Game.Text(
+    "      Ciclo biológico"
+  , estiloTitulo);
+  livro.Ascaridiase.pagina[0].cicloBiologico.setPosition(248, 710);
+
+  livro.Ascaridiase.pagina[0].texto2 = new Game.Text(
+    "     O ser humano é o único hospedeiro. Cada\n" +
+    "fêmea de <i>A. lumbricoides</i> é capaz de liberar\n" +
+    "diariamente, aproximadamente, 200.000 ovos\n" +
+    "por dia, os quais são liberados juntamente com\n" +
+    "as fezes do hospedeiro. No meio externo, os"
+    , estiloTextoLivro);
+  livro.Ascaridiase.pagina[0].texto2.setPosition(248, 760);
+
+  livro.Ascaridiase.pagina[0].texto3 = new Game.Text(
+    "ovos, em condições favoráveis, tornam-se em-\n" +
+    "brionados em 2 semanas e, assim, formam as\n" +
+    "larvas do parasito.\n" +
+    "      A primeira larva, chamada rabditoide (L1),\n" +
+    "dá origem à larva L2, a qual, por sua vez, gera\n" +
+    "a larva L3, denominada filarióide, a qual está\n" +
+    "pronta para infectar novos hospedeiros. Os o-\n" +
+    "vos com as larvas L3 permanecem no solo por\n" +
+    "muitos meses e, assim, podem ser ingeridas\n" +
+    "pelo ser humano.\n" +
+    "      Após a ingestão, os\n" +
+    "ovos chegam até o in-\n" +
+    "testino delgado, onde\n" +
+    "os ovos com as larvas\n" +
+    "L3 eclodem. As larvas\n" +
+    "ultrapassam a parede\n" +
+    "intestinal, alcançam o\n" +
+    "sistema linfático e a\n" +
+    "veia mesentérica supe-\n" +
+    "rior e, desta forma, chegam no fígado do hos-\n" +
+    "pedeiro. Quando alcançam a veia cava inferior,\n" +
+    "as larvas alcançam o coração e, depois, os\n" +
+    "pulmões.\n" +
+    "      Dentro dos pulmões, após 8 dias de infecção,"
+    , estiloTextoLivro);
+  livro.Ascaridiase.pagina[0].texto3.setPosition(990, 120);
+
+  livro.Ascaridiase.pagina[0].ovoAscaris = new Game.Image("ovoAscaris.png");
+  livro.Ascaridiase.pagina[0].ovoAscaris.setPosition(1400, 545);
+  livro.Ascaridiase.pagina[0].ovoAscaris.setTint(200, 194, 177);
+  livro.Ascaridiase.pagina[0].ovoAscaris.setScale(0.4);
+
+  livro.Ascaridiase.pagina[0].legendaOvoAscaris = new Game.Text(
+    "Ovo de <i>A.\n" +
+    "lumbricoides</i>"
+    , estiloLegenda);
+  livro.Ascaridiase.pagina[0].legendaOvoAscaris.setPosition(1400, 695);
+  livro.Ascaridiase.pagina[0].legendaOvoAscaris.setAnchor(0.5, 0.5);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 

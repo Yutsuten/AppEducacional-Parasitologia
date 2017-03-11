@@ -118,7 +118,7 @@ sceneLoader[2] = function() {
   item.livroAscaridiase.setZorder(20);
   item.livroAscaridiase.setBrightness(210);
   item.livroAscaridiase.onMouseOver = function() {
-    scene[2].setSubtitle("livroAscaridiase");
+    scene[2].setSubtitle("Ascaridíase");
     item.livroAscaridiase.setBrightness(255);
   }
   item.livroAscaridiase.onMouseOut = function() {
