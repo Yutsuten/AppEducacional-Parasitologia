@@ -136,7 +136,7 @@ sceneLoader[2] = function() {
   item.livroTeniase.setZorder(20);
   item.livroTeniase.setBrightness(210);
   item.livroTeniase.onMouseOver = function() {
-    scene[2].setSubtitle("livroTeniase");
+    scene[2].setSubtitle("Teníase & Cisticercose");
     item.livroTeniase.setBrightness(255);
   }
   item.livroTeniase.onMouseOut = function() {
@@ -145,7 +145,7 @@ sceneLoader[2] = function() {
   }
   item.livroTeniase.onClick = function(mouse) {
     item.livroTeniase.onMouseOut();
-    scene[2].openBook("Teniase");
+    scene[2].openBook("TeniaseCisticercose");
   }
   scene[2].livros.push(item.livroTeniase);
 

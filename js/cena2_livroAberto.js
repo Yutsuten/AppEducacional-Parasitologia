@@ -779,6 +779,41 @@ function carregaLivroAberto() {
   livro.Ascaridiase.pagina[1].legendaAscarisMF.setPosition(640, 880);
   livro.Ascaridiase.pagina[1].legendaAscarisMF.setAnchor(0.5, 0.5);
 
+  // LIVRO: TENÍASE & CISTICERCOSE
+  livro.newBook("TeniaseCisticercose");
+
+  // TeniaseCisticercose: Pagina 0
+  livro.TeniaseCisticercose.pagina[0] = new Game.Page();
+
+  livro.TeniaseCisticercose.pagina[0].titulo = new Game.Text(
+    "            Teníase & Cisticercose"
+  , estiloTitulo);
+  livro.TeniaseCisticercose.pagina[0].titulo.setPosition(248, 120);
+
+  livro.TeniaseCisticercose.pagina[0].texto1 = new Game.Text(
+    "     As tênias são vermes achatados, hermafro-\n" +
+    "ditas e os parasitas cestoides mais frequentes\n" +
+    "encontrados no organismo humano.\n" +
+    "     As doenças teníase e cisticercose são dis-\n" +
+    "tintas, entretanto, são causadas pelo mesmo\n" +
+    "verme, em fases de vida diferentes. Estas do-\n" +
+    "enças constituem um grande problema econô-\n" +
+    "mico e de saúde pública, uma vez que afetam\n" +
+    "o ser humano quando este está exposto a varia-\n" +
+    "das condições sanitárias precárias, além de\n" +
+    "afetar também os porcos e vacas. Desta forma,\n" +
+    "quando o gado está infectado, as suas carcaças\n" +
+    "infectadas são condenadas e inutilizadas.\n" +
+    "     Reino: Animalia\n" +
+    "     Filo: Platelmintos\n" +
+    "     Classe: Cestoda\n" +
+    "     Ordem: Cyclophyllidea\n" +
+    "     Família: Taeniidae\n" +
+    "     Gênero: <i>Taenia</i>\n" +
+    "     Espécies: <i>T. solium; T. saginata</i>"
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[0].texto1.setPosition(248, 190);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
