@@ -331,13 +331,7 @@ function carregaLivroAberto() {
     "      Os trofozoítos gerados migram para o in-\n" +
     "testino grosso e ali se colonizam. Estes aderem-\n" +
     "se à mucosa do intestino e, através desta, ali-\n" +
-    "mentam-se de detritos e bactérias.\n" +
-    "      Sob certa cisrcuntâncias (não bem descritas),\n" +
-    "o trofozoíto desliga-se da parede intestinal e\n" +
-    "sofre desidratação, transformando-se em pré-\n" +
-    "cisto, o qual irá sofrer divisões nucleares e se\n" +
-    "transformará em cisto maduro que será elimi-\n" +
-    "nado pelas fezes, recomeçando o ciclo."
+    "mentam-se de detritos e bactérias."
     , estiloTextoLivro);
   livro.Amebiase.pagina[0].texto2.setPosition(990, 170);
 
@@ -357,11 +351,24 @@ function carregaLivroAberto() {
   livro.Amebiase.pagina[0].trofozoito.setScale(0.4);
 
   livro.Amebiase.pagina[0].legendaTrofozoito = new Game.Text(
-    "Foto do trofozoíto da\n" +
-    "<i>E. histolytica</i>"
+    "Foto do trofozoíto\n" +
+    "da <i>E. histolytica</i>"
     , estiloLegenda);
   livro.Amebiase.pagina[0].legendaTrofozoito.setPosition(1400, 880);
   livro.Amebiase.pagina[0].legendaTrofozoito.setAnchor(0.5, 0.5);
+
+  // Amebiase: Pagina 1
+  livro.Amebiase.pagina[1] = new Game.Page();
+
+  livro.Amebiase.pagina[1].texto1 = new Game.Text(
+    "      Sob certa cisrcuntâncias (não bem descri-\n" +
+    "tas), o trofozoíto desliga-se da parede intestinal\n" +
+    "e sofre desidratação, transformando-se em pré-\n" +
+    "cisto, o qual irá sofrer divisões nucleares e se\n" +
+    "transformará em cisto maduro que será elimi-\n" +
+    "nado pelas fezes, recomeçando o ciclo."
+    , estiloTextoLivro);
+  livro.Amebiase.pagina[1].texto1.setPosition(248, 120);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
