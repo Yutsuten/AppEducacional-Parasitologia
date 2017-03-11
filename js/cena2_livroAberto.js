@@ -438,6 +438,24 @@ function carregaLivroAberto() {
   livro.Malaria.pagina[0].legendaPicada.setPosition(1400, 385);
   livro.Malaria.pagina[0].legendaPicada.setAnchor(0.5, 0.5);
 
+  livro.Malaria.pagina[0].texto3 = new Game.Text(
+    "lá são destruídos. Em migração à corrente san-\n" +
+    "guínea, os esporozoítos podem adentrar em\n" +
+    "várias células e, assim, serem transportados\n" +
+    "para outras regiões e órgãos do corpo, antes de\n" +
+    "ocorrer a infecção de um hepatócito (célula que\n" +
+    "constitui o fígado). Nesta célula específica é\n" +
+    "onde ocorre o desenvolvimento do parasita.\n" +
+    "     Após invadir o hepatócito, os esporozoítos\n" +
+    "se diferenciam em trofozoítos, os quais, por\n" +
+    "reprodução assexuada, multiplicam-se e geram\n" +
+    "milhares de merozoítos, os quais poderão inva-\n" +
+    "dir as hemácias presentes no sangue. Dentro\n" +
+    "delas, os merozoítos também se multiplicam\n" +
+    "(reprodução assexuada), gerando novos merozoítos,"
+    , estiloTextoLivro);
+  livro.Malaria.pagina[0].texto3.setPosition(990, 460);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
