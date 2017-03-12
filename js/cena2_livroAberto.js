@@ -895,23 +895,23 @@ function carregaLivroAberto() {
   livro.TeniaseCisticercose.pagina[1].legendaovoTenia.setAnchor(0.5, 0.5);
 
   livro.TeniaseCisticercose.pagina[1].texto2 = new Game.Text(
-    "     No ser humano, o desenvolvimento do pa-\n" +
-    "rasita termina quando ocorre a formação dos\n" +
-    "gametócitos. O ciclo continua no interior do\n" +
-    "mosquito, assim, o <i>Plasmodium</i> sp depende do\n" +
-    "hospedeiro infectado ser novamente picado e,\n" +
-    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
-    "infecte, para que seu ciclo termine.\n" +
-    "     A reprodução sexuada que ocorre no inte-\n" +
-    "hospedeiro infectado ser novamente picado e,\n" +
-    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
-    "infecte, para que seu ciclo termine.\n" +
-    "rior do mosquito gera esporozoítos e, assim, o"
+    "     Em ambiente úmido e protegido de luz so-\n" +
+    "lar, os ovos têm grande longividade, matendo-\n" +
+    "se infectantes por meses. Um hospedeiro in-\n" +
+    "termediário (suíno para <i>T. solium</i> e bovino\n" +
+    "para <i>T. saginata</i>) ingere os ovos, e os embrió-\n" +
+    "foros sofrem ação da pepsina, uma substância\n" +
+    "ácida encontrada no estômago, e, em seguida,\n" +
+    "de sais biliares, presentes no intestino. O em-\n" +
+    "brióforo é uma estrutura protetora grossa que\n" +
+    "recobre a oncosfera, estrutura que contém o\n" +
+    "embrião. As oncosferas são libertadas do em-\n" +
+    "brióforo e se instalam em uma vilosidade do"
     , estiloTextoLivro);
   livro.TeniaseCisticercose.pagina[1].texto2.setPosition(248, 530);
 
   livro.TeniaseCisticercose.pagina[1].cerebroInfectado = new Game.Image("cerebroInfectado.png");
-  livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setPosition(1400, 220);
+  livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setPosition(1400, 230);
   livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setTint(200, 194, 177);
   livro.TeniaseCisticercose.pagina[1].cerebroInfectado.setScale(0.4);
 
@@ -920,36 +920,46 @@ function carregaLivroAberto() {
     "infectado por\n" +
     "cisticercos"
     , estiloLegenda);
-  livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado.setPosition(1400, 385);
+  livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado.setPosition(1400, 395);
   livro.TeniaseCisticercose.pagina[1].legendaCerebroInfectado.setAnchor(0.5, 0.5);
 
   livro.TeniaseCisticercose.pagina[1].texto3 = new Game.Text(
-    "ovos, em condições favoráveis, tornam-se em-\n" +
-    "brionados em 2 semanas e, assim, formam as\n" +
-    "larvas do parasito.\n" +
-    "      A primeira larva, chamada rabditoide (L1),\n" +
-    "dá origem à larva L2, a qual, por sua vez, gera\n" +
-    "a larva L3, denominada filarióide, a qual está\n" +
-    "pronta para infectar novos hospedeiros. Os o-\n" +
-    "vos com as larvas L3 permanecem no solo por\n" +
-    "muitos meses e, assim, podem ser ingeridas\n" +
-    "pelo ser humano.\n" +
-    "      Após a ingestão, os\n" +
-    "ovos chegam até o in-\n" +
-    "testino delgado, onde\n" +
-    "os ovos com as larvas\n" +
-    "L3 eclodem. As larvas\n" +
-    "ultrapassam a parede\n" +
-    "intestinal, alcançam o\n" +
-    "sistema linfático e a\n" +
-    "veia mesentérica supe-\n" +
-    "rior e, desta forma, chegam no fígado do hos-\n" +
-    "pedeiro. Quando alcançam a veia cava inferior,\n" +
-    "as larvas alcançam o coração e, depois, os\n" +
-    "pulmões.\n" +
-    "      Dentro dos pulmões, após 8 dias de infecção,"
+    "intestino delgado por\n" +
+    "quatro dias. Em se-\n" +
+    "guida, penetram as\n" +
+    "veias e os vasos lin-\n" +
+    "fáticos do hospedeiro,\n" +
+    "de forma a migrarem\n" +
+    "para todos os tecidos\n" +
+    "e órgãos até atraves-\n" +
+    "sarem a parede do va-\n" +
+    "so e se instalarem no\n" +
+    "tecido vizinho à ele.\n" +
+    "     As oncosferas desenvolvem-se para cisti-\n" +
+    "cercos em qualquer tecido mole (pele, múscu-\n" +
+    "los esqueléticos e cardíacos, olhos e cérebro),\n" +
+    "porém preferem os músculos com maior oxige-\n" +
+    "nação, como a língua, o coração e o cérebro. Os\n" +
+    "cisticercos permanecem infectantes nos tecidos\n" +
+    "por alguns meses até serem ingeridos pelos hu-\n" +
+    "manos completando o ciclo.\n" +
+    "     A cisticercose humana é adquirida quando\n" +
+    "há ingestão acidental de ovos viáveis da <i>T. so-\n" +
+    "lium</i> que foram eliminados pelas fezes de um\n" +
+    "portador de teníase. Os cisticercos, que se de-\n" +
+    "senvolvem a partir destes ovos são, então, en-"
     , estiloTextoLivro);
   livro.TeniaseCisticercose.pagina[1].texto3.setPosition(990, 120);
+
+  // TeniaseCisticercose: Pagina 2
+  livro.TeniaseCisticercose.pagina[2] = new Game.Page();
+
+  livro.TeniaseCisticercose.pagina[2].texto1 = new Game.Text(
+    "contrados em certos tecidos do hospedeiro\n" +
+    "humano como o muscular, o cardíaco ou o\n" +
+    "cerebral."
+    , estiloTextoLivro);
+  livro.TeniaseCisticercose.pagina[2].texto1.setPosition(248, 120);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
