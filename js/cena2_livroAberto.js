@@ -973,68 +973,62 @@ function carregaLivroAberto() {
   livro.Giardiase.pagina[0].titulo.setPosition(248, 120);
 
   livro.Giardiase.pagina[0].texto1 = new Game.Text(
-    "     Os <i>Ascaris lumbricoides</i> são os parasitos\n" +
-    "responsáveis pela Ascaridíase. São conhecidos\n" +
-    "popularmente como lombrigas e são encontra-\n" +
-    "dos em quase todos os países do mundo, ocor-\n" +
-    "rendo com frequência variada na população,\n" +
-    "pois depende de condições climáticas, ambi-\n" +
-    "entais e, principalmente, do grau de desenvol-\n" +
-    "vimento socioeconômico da população.\n" +
-    "     Reino: Animalia\n" +
-    "     Filo: Nematoda\n" +
-    "     Classe: Secernentea\n" +
-    "     Ordem: Ascaridida\n" +
-    "     Família: Ascarididae\n" +
-    "     Gênero: <i>Ascaris</i>\n" +
-    "     Espécie: <i>A. lumbricoides</i>"
+    "     Dentre os parasitos intestinais presentes em\n" +
+    "seres humanos, o parasito da Giardíase, <i>Giar-\n" +
+    "dia lamblia</i>, ainda é um dos mais comuns em\n" +
+    "diferentes egiões do mundo, principalmente\n" +
+    "nos países em desenvolvimento. Na população\n" +
+    "infectada, especialmente nas crianças, causa\n" +
+    "diarreia infecciosa associada à água.\n" +
+    "     Reino: Protista\n" +
+    "     Filo: Sarcomastigophora\n" +
+    "     Classe: Zoomastigophora\n" +
+    "     Ordem: Diplomonadida\n" +
+    "     Família: Hexamitidae\n" +
+    "     Gênero: <i>Giardia</i>\n" +
+    "     Espécie: <i>G. lamblia</i>"
     , estiloTextoLivro);
   livro.Giardiase.pagina[0].texto1.setPosition(248, 190);
 
   livro.Giardiase.pagina[0].cicloBiologico = new Game.Text(
     "      Ciclo biológico"
   , estiloTitulo);
-  livro.Giardiase.pagina[0].cicloBiologico.setPosition(248, 710);
+  livro.Giardiase.pagina[0].cicloBiologico.setPosition(248, 680);
 
   livro.Giardiase.pagina[0].texto2 = new Game.Text(
-    "     O ser humano é o único hospedeiro. Cada\n" +
-    "fêmea de <i>A. lumbricoides</i> é capaz de liberar\n" +
-    "diariamente, aproximadamente, 200.000 ovos\n" +
-    "por dia, os quais são liberados juntamente com\n" +
-    "as fezes do hospedeiro. No meio externo, os"
+    "     Após a ingestão de cistos de <i>G. lamblia</i>\n" +
+    "pelo hospedeiro, estes iniciam o processo de\n" +
+    "desencistamento no estômago, o qual comple-\n" +
+    "ta-se no duodeno. Tal processo é caracterizado\n" +
+    "pela transformação dos cistos em trofozoítos,\n" +
+    "que se multiplicam por divisões binárias e co-"
     , estiloTextoLivro);
-  livro.Giardiase.pagina[0].texto2.setPosition(248, 760);
+  livro.Giardiase.pagina[0].texto2.setPosition(248, 730);
 
   livro.Giardiase.pagina[0].texto3 = new Game.Text(
-    "      O humano é o hospedeiro definitivo deste\n" +
-    "parasita e é infectado pela <i>Taenia</i> sp ao ingerir\n" +
-    "uma carne suína (<i>Taenia solium</i>) ou bovina\n" +
-    "(<i>Taenia saginata</i>), crua ou mal cozida, que es-\n" +
-    "teja infectada. A carne infectada possui cisti-\n" +
-    "cercos que representam um estágio inicial da\n" +
-    "larva de <i>Taenia</i> sp. Este cisticerco ao ser inge-\n" +
-    "rido sofre ação do suco gástrico, permitindo\n" +
-    "que a larva se liberte e se fixe nas paredes do\n" +
-    "intestino delgado por meio de seu escólex,\n" +
-    "transformando-se em uma larva adulta. O es-\n" +
-    "cólex é um órgão de fixação formado por ven-\n" +
-    "tosas presente na cabeça da larva."
+    "lonizam o intestino. Lá os trofozoítos ficam\n" +
+    "aderidos na parede intestinal até sofrerem o\n" +
+    "processo inverso ao desencistamento: o encis-\n" +
+    "tamento; este é caracterizado pela transforma-\n" +
+    "ção dos trofozoítos em cistos. Os cistos form-\n" +
+    "ados são, então, eliminados para o exterior por\n" +
+    "meio das fezes do hospedeiro."
     , estiloTextoLivro);
   livro.Giardiase.pagina[0].texto3.setPosition(990, 170);
 
   livro.Giardiase.pagina[0].cistos = new Game.Image("maisCistos.png");
-  livro.Giardiase.pagina[0].cistos.setPosition(1120, 720);
+  livro.Giardiase.pagina[0].cistos.setPosition(1120, 530);
   livro.Giardiase.pagina[0].cistos.setScale(0.4);
 
   livro.Giardiase.pagina[0].legendaCistos = new Game.Text(
     "Cistos de\n" +
     "<i>G. lamblia</i>"
     , estiloLegenda);
-  livro.Giardiase.pagina[0].legendaCistos.setPosition(1120, 870);
+  livro.Giardiase.pagina[0].legendaCistos.setPosition(1120, 680);
   livro.Giardiase.pagina[0].legendaCistos.setAnchor(0.5, 0.5);
 
   livro.Giardiase.pagina[0].giardiaReproducao = new Game.Image("giardiaReproducao.png");
-  livro.Giardiase.pagina[0].giardiaReproducao.setPosition(1400, 720);
+  livro.Giardiase.pagina[0].giardiaReproducao.setPosition(1400, 530);
   livro.Giardiase.pagina[0].giardiaReproducao.setScale(0.4);
 
   livro.Giardiase.pagina[0].legendaGiardiaReproducao = new Game.Text(
@@ -1042,7 +1036,7 @@ function carregaLivroAberto() {
     "trofozoítos de\n" +
     "<i>G. lamblia</i>"
     , estiloLegenda);
-  livro.Giardiase.pagina[0].legendaGiardiaReproducao.setPosition(1400, 885);
+  livro.Giardiase.pagina[0].legendaGiardiaReproducao.setPosition(1400, 695);
   livro.Giardiase.pagina[0].legendaGiardiaReproducao.setAnchor(0.5, 0.5);
 
   // Cria os itens com o conteudo dos livros
