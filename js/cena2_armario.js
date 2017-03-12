@@ -172,7 +172,7 @@ sceneLoader[2] = function() {
   item.livroAgradecimentos.setZorder(20);
   item.livroAgradecimentos.setBrightness(210);
   item.livroAgradecimentos.onMouseOver = function() {
-    scene[2].setSubtitle("livroAgradecimentos");
+    scene[2].setSubtitle("Agradecimentos");
     item.livroAgradecimentos.setBrightness(255);
   }
   item.livroAgradecimentos.onMouseOut = function() {

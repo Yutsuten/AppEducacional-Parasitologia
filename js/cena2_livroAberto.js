@@ -1039,6 +1039,91 @@ function carregaLivroAberto() {
   livro.Giardiase.pagina[0].legendaGiardiaReproducao.setPosition(1400, 695);
   livro.Giardiase.pagina[0].legendaGiardiaReproducao.setAnchor(0.5, 0.5);
 
+  // LIVRO: GIARDÍASE
+  livro.newBook("Agradecimentos");
+
+  // Giardíase: Pagina 0
+  livro.Agradecimentos.pagina[0] = new Game.Page();
+
+  livro.Agradecimentos.pagina[0].titulo = new Game.Text(
+    "                   Agradecimentos"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[0].titulo.setPosition(248, 120);
+
+  livro.Agradecimentos.pagina[0].autoras = new Game.Text(
+    "      Autoras:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[0].autoras.setPosition(248, 190);
+
+  livro.Agradecimentos.pagina[0].texto1 = new Game.Text(
+    "     Isabella Brosens Barros – Licenciada em\n" +
+    "Ciências Biológicas\n" +
+    "     Karina Nomidome de Senna - Licenciada\n" +
+    "em Ciências Biológicas"
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[0].texto1.setPosition(248, 240);
+
+  livro.Agradecimentos.pagina[0].colaboradores = new Game.Text(
+    "      Colaboradores:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[0].colaboradores.setPosition(248, 400);
+
+  livro.Agradecimentos.pagina[0].texto2 = new Game.Text(
+    "     Heitor Vasconcelos de Queiroz - Designer\n" +
+    "     Mateus Gonçalez Etto - Desenvolvedor\n" +
+    "     Matheus Barbosa Peixoto – Designer"
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[0].texto2.setPosition(248, 450);
+
+  livro.Agradecimentos.pagina[0].agradecimento = new Game.Text(
+    "      Agradecimento:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[0].agradecimento.setPosition(248, 570);
+
+  livro.Agradecimentos.pagina[0].texto3 = new Game.Text(
+    "     À coordenadora geral do LTIA, Elisa Cas-\n" +
+    "tro Livramento, por coordenar a equipe.\n" +
+    "     À Prof. Dr. Rosana Rossi pelo conteúdo das\n" +
+    "aulas de parasitologia e pelas imagens cedidas.\n" +
+    "     Ao autor Juan Gaertner pela foto do verme\n" +
+    "adulto de <i>Taenia</i> sp, encontrado no site.\n" +
+    "     Ao autor Jarun Ontakrai e o banco de ima-\n" +
+    "gens Shutterstock, pelas fotos do ovo de <i>Asca-\n" +
+    "rís lumbricoides</i> e pelo ovo de <i>Taenia</i> sp."
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[0].texto3.setPosition(248, 620);
+
+  livro.Agradecimentos.pagina[0].texto4 = new Game.Text(
+    "     Ao autor Peter Darben pela foto do cisto e\n" +
+    "trofozoíto de <i>E. histolytica</i>.\n" +
+    "     Aos autores P. W. Pappas e S. M. Wardrop -\n" +
+    "     - Mecânica: ação obstrutiva ou destrutiva\n" +
+    "Foto proglotíde de <i>Taenia</i> sp."
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[0].texto4.setPosition(990, 120);
+
+  livro.Agradecimentos.pagina[0].referencias = new Game.Text(
+    "      Referências:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[0].referencias.setPosition(990, 310);
+
+  livro.Agradecimentos.pagina[0].texto5 = new Game.Text(
+    "BRASIL. 2017. Disponível em: http://portal\n" +
+    "saude.saude.gov.br/.\n" +
+    "BRASIL. <b>Doenças infecciosas e parasitárias:\n" +
+    "guia de bolso.</b> 8ª edição. Brasília - DF: Editora\n" +
+    "do  Ministério da Saúde, 2010. 448 p.\n" +
+    "FARIAS, A. F. de. <b>Saneamento básico: solu-\n" +
+    "ções alternativas de abastecimento de água.</b>\n" +
+    "Disponível em: http://www.ji-parana.ro.gov.br/\n" +
+    "layout2013/noticia.php?id=961.\n" +
+    "NEVES, D. P.; MELO, A. L. de; LINARDI,\n" +
+    "P. M.; VITOR, R. W. A. <b>Parasitologia huma\n" +
+    "na.</b> 12ªedição. São Paulo - SP: Atheneu, 2011.\n" +
+    "546 p."
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[0].texto5.setPosition(990, 360);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
