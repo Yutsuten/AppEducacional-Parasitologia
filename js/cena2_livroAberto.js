@@ -1144,6 +1144,10 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
+  livro.Agradecimentos.pagina[1].pixijsLogo = new Game.Image("pixijs.png");
+  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 560);
+  livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
+
   // Cria os itens com o conteudo dos livros
   livro.createItems();
 
