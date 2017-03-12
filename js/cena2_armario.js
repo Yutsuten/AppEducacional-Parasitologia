@@ -154,7 +154,7 @@ sceneLoader[2] = function() {
   item.livroGiardiase.setZorder(20);
   item.livroGiardiase.setBrightness(210);
   item.livroGiardiase.onMouseOver = function() {
-    scene[2].setSubtitle("livroGiardiase");
+    scene[2].setSubtitle("Giardiase");
     item.livroGiardiase.setBrightness(255);
   }
   item.livroGiardiase.onMouseOut = function() {
