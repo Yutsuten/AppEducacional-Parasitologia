@@ -1039,10 +1039,10 @@ function carregaLivroAberto() {
   livro.Giardiase.pagina[0].legendaGiardiaReproducao.setPosition(1400, 695);
   livro.Giardiase.pagina[0].legendaGiardiaReproducao.setAnchor(0.5, 0.5);
 
-  // LIVRO: GIARDÍASE
+  // LIVRO: AGRADECIMENTOS
   livro.newBook("Agradecimentos");
 
-  // Giardíase: Pagina 0
+  // Agradecimentos: Pagina 0
   livro.Agradecimentos.pagina[0] = new Game.Page();
 
   livro.Agradecimentos.pagina[0].titulo = new Game.Text(
@@ -1123,6 +1123,26 @@ function carregaLivroAberto() {
     "546 p."
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[0].texto5.setPosition(990, 360);
+
+  // Agradecimentos: Pagina 1
+  livro.Agradecimentos.pagina[1] = new Game.Page();
+
+  livro.Agradecimentos.pagina[1].utilizadoAplicacao = new Game.Text(
+    "      Utilizados nesta aplicação:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[1].utilizadoAplicacao.setPosition(248, 120);
+
+  livro.Agradecimentos.pagina[1].texto1 = new Game.Text(
+    "     O CircleCaps, utilizados na numeração dos\n" +
+    "ciclos, estão disponíveis em: http://www.da\n" +
+    "font.com/pt/circlecaps.font.\n" +
+    "     O Código para scaleToWindow disponível\n" +
+    "em: https://github.com/kittykatattack/scaleTo\n" +
+    "Window.\n" +
+    "     O código para multiformatação dos textos:\n" +
+    "https://github.com/tleunen/pixi-multistyle-text."
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
