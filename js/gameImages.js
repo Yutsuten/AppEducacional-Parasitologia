@@ -35,6 +35,7 @@ var gameImages = [
   // Imagens de livro
   "tabelaParasitologia.png",
   "pixijs.png",
+  "CNPq_transparente.png",
 
   // Ciclo do Entamoeba Coli (banana)
   "estHprdClo.png",

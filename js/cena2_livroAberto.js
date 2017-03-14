@@ -1136,6 +1136,8 @@ function carregaLivroAberto() {
     "     O CircleCaps, utilizados na numeração dos\n" +
     "ciclos, estão disponíveis em: http://www.da\n" +
     "font.com/pt/circlecaps.font.\n" +
+    "     O botão de fechar criado por Eugene\n" +
+    "Pavovsky disponível no site www.flaticon.com\n" +
     "     O Código para scaleToWindow disponível\n" +
     "em: https://github.com/kittykatattack/scaleTo\n" +
     "Window.\n" +
@@ -1145,8 +1147,12 @@ function carregaLivroAberto() {
   livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
   livro.Agradecimentos.pagina[1].pixijsLogo = new Game.Image("pixijs.png");
-  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 560);
+  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 620);
   livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
+
+  livro.Agradecimentos.pagina[1].logoCnpq = new Game.Image("CNPq_transparente.png");
+  livro.Agradecimentos.pagina[1].logoCnpq.setPosition(1250, 210);
+  livro.Agradecimentos.pagina[1].logoCnpq.setScale(0.6);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
