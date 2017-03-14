@@ -1136,8 +1136,8 @@ function carregaLivroAberto() {
     "     O CircleCaps, utilizados na numeração dos\n" +
     "ciclos, estão disponíveis em: http://www.da\n" +
     "font.com/pt/circlecaps.font.\n" +
-    "     O botão de fechar criado por Eugene\n" +
-    "Pavovsky disponível no site www.flaticon.com\n" +
+    "     O botão de fechar criado por Eugene Pa-\n" +
+    "vovsky disponível no site www.flaticon.com\n" +
     "     O Código para scaleToWindow disponível\n" +
     "em: https://github.com/kittykatattack/scaleTo\n" +
     "Window.\n" +
