@@ -588,8 +588,8 @@ function carregaLivroAberto() {
   livro.Toxoplasmose.pagina[1].toxoplamose.setScale(0.4);
 
   livro.Toxoplasmose.pagina[1].legendaToxoplamose = new Game.Text(
-    "Oocisto de <i>Toxo\n" +
-    "plasma gondii</i>"
+    "Oocisto de\n" +
+    "<i>Toxoplasma gondii</i>"
     , estiloLegenda);
   livro.Toxoplasmose.pagina[1].legendaToxoplamose.setPosition(640, 370);
   livro.Toxoplasmose.pagina[1].legendaToxoplamose.setAnchor(0.5, 0.5);
