@@ -1167,14 +1167,15 @@ function carregaLivroAberto() {
   item.fechaLivro = new Game.Item("botaoFechar.png");
   item.fechaLivro.setPosition(1840, 70);
   item.fechaLivro.setZorder(1);
+  item.fechaLivro.setBrightness(200);
   item.fechaLivro.setScale(0.2);
   item.fechaLivro.setAlpha(0);
   item.fechaLivro.disable();
   item.fechaLivro.onMouseOver = function() {
-    item.fechaLivro.addGlow();
+    item.fechaLivro.setBrightness(255);
   }
   item.fechaLivro.onMouseOut = function() {
-    item.fechaLivro.removeGlow();
+    item.fechaLivro.setBrightness(200);
   }
   item.fechaLivro.onClick = function(mouse) {
     disableInteractiveness();
@@ -1192,6 +1193,7 @@ function carregaLivroAberto() {
 
     setTimeout(function() {
       item.livroAberto.disable();
+      item.fechaLivro.setBrightness(200);
       item.fechaLivro.disable();
       enableInteractiveness();
     }, 700);

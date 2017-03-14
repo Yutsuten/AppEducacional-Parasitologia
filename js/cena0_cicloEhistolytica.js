@@ -338,15 +338,16 @@ function carregaCicloEhistolytica() {
   item.bananaFechar = new Game.Item("botaoFechar.png");
   item.bananaFechar.setPosition(1840, 70);
   item.bananaFechar.setRotation(180);
+  item.bananaFechar.setBrightness(200);
   item.bananaFechar.setScale(0.2);
   item.bananaFechar.setZorder(1);
   item.bananaFechar.setAlpha(0);
   item.bananaFechar.disable();
   item.bananaFechar.onMouseOver = function() {
-    item.bananaFechar.addGlow();
+    item.bananaFechar.setBrightness(255);
   }
   item.bananaFechar.onMouseOut = function() {
-    item.bananaFechar.removeGlow();
+    item.bananaFechar.setBrightness(200);
   }
   item.bananaFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -358,6 +359,7 @@ function carregaCicloEhistolytica() {
     setTimeout(function() {
       groupDisable(itensBananaCiclo);
 
+      item.bananaFechar.setBrightness(200);
       item.estBananaDoente.enable();
       item.estBananaDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

@@ -383,15 +383,16 @@ function carregaCicloAscaris() {
   item.tomateFechar = new Game.Item("botaoFechar.png");
   item.tomateFechar.setPosition(1840, 70);
   item.tomateFechar.setRotation(180);
+  item.tomateFechar.setBrightness(200);
   item.tomateFechar.setScale(0.2);
   item.tomateFechar.setZorder(1);
   item.tomateFechar.setAlpha(0);
   item.tomateFechar.disable();
   item.tomateFechar.onMouseOver = function() {
-    item.tomateFechar.addGlow();
+    item.tomateFechar.setBrightness(255);
   }
   item.tomateFechar.onMouseOut = function() {
-    item.tomateFechar.removeGlow();
+    item.tomateFechar.setBrightness(200);
   }
   item.tomateFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -403,6 +404,7 @@ function carregaCicloAscaris() {
     setTimeout(function() {
       groupDisable(itensTomateCiclo);
 
+      item.tomateFechar.setBrightness(200);
       item.estTomateDoente.enable();
       item.estTomateDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

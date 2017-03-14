@@ -160,15 +160,16 @@ function carregaCicloCisticercose() {
   item.cenouraFechar = new Game.Item("botaoFechar.png");
   item.cenouraFechar.setPosition(1840, 70);
   item.cenouraFechar.setRotation(180);
+  item.cenouraFechar.setBrightness(200);
   item.cenouraFechar.setScale(0.2);
   item.cenouraFechar.setZorder(1);
   item.cenouraFechar.setAlpha(0);
   item.cenouraFechar.disable();
   item.cenouraFechar.onMouseOver = function() {
-    item.cenouraFechar.addGlow();
+    item.cenouraFechar.setBrightness(255);
   }
   item.cenouraFechar.onMouseOut = function() {
-    item.cenouraFechar.removeGlow();
+    item.cenouraFechar.setBrightness(200);
   }
   item.cenouraFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -180,6 +181,7 @@ function carregaCicloCisticercose() {
     setTimeout(function() {
       groupDisable(itensCenouraCiclo);
 
+      item.cenouraFechar.setBrightness(200);
       item.estCenouraDoente.enable();
       item.estCenouraDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

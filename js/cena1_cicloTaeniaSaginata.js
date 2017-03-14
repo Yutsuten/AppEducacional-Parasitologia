@@ -383,15 +383,16 @@ function carregaCicloTaeniaSaginata() {
   item.vacaFechar = new Game.Item("botaoFechar.png");
   item.vacaFechar.setPosition(1840, 70);
   item.vacaFechar.setRotation(180);
+  item.vacaFechar.setBrightness(200);
   item.vacaFechar.setScale(0.2);
   item.vacaFechar.setZorder(1);
   item.vacaFechar.setAlpha(0);
   item.vacaFechar.disable();
   item.vacaFechar.onMouseOver = function() {
-    item.vacaFechar.addGlow();
+    item.vacaFechar.setBrightness(255);
   }
   item.vacaFechar.onMouseOut = function() {
-    item.vacaFechar.removeGlow();
+    item.vacaFechar.setBrightness(200);
   }
   item.vacaFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -407,6 +408,7 @@ function carregaCicloTaeniaSaginata() {
     setTimeout(function() {
       groupDisable(itensVacaCiclo);
 
+      item.vacaFechar.setBrightness(200);
       item.estVacaDoente.enable();
       item.estVacaDoente.setBrightness(150); // Começa com 150 por causa que os 2 precisam ser vistos
       item.estVacaDoente.changeAlpha(1, 600);

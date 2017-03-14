@@ -381,15 +381,16 @@ function carregaCicloPlasmodium() {
   item.pernFechar = new Game.Item("botaoFechar.png");
   item.pernFechar.setPosition(1840, 70);
   item.pernFechar.setRotation(180);
+  item.pernFechar.setBrightness(200);
   item.pernFechar.setScale(0.2);
   item.pernFechar.setZorder(1);
   item.pernFechar.setAlpha(0);
   item.pernFechar.disable();
   item.pernFechar.onMouseOver = function() {
-    item.pernFechar.addGlow();
+    item.pernFechar.setBrightness(255);
   }
   item.pernFechar.onMouseOut = function() {
-    item.pernFechar.removeGlow();
+    item.pernFechar.setBrightness(200);
   }
   item.pernFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -401,6 +402,7 @@ function carregaCicloPlasmodium() {
     setTimeout(function() {
       groupDisable(itensPernCiclo);
 
+      item.pernFechar.setBrightness(200);
       item.estPernDoente.enable();
       item.estPernDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

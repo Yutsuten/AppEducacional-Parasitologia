@@ -252,15 +252,16 @@ function carregaCicloToxoplasmose() {
   item.gatoFechar = new Game.Item("botaoFechar.png");
   item.gatoFechar.setPosition(1840, 70);
   item.gatoFechar.setRotation(180);
+  item.gatoFechar.setBrightness(200);
   item.gatoFechar.setScale(0.2);
   item.gatoFechar.setZorder(1);
   item.gatoFechar.setAlpha(0);
   item.gatoFechar.disable();
   item.gatoFechar.onMouseOver = function() {
-    item.gatoFechar.addGlow();
+    item.gatoFechar.setBrightness(255);
   }
   item.gatoFechar.onMouseOut = function() {
-    item.gatoFechar.removeGlow();
+    item.gatoFechar.setBrightness(200);
   }
   item.gatoFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -272,6 +273,7 @@ function carregaCicloToxoplasmose() {
     setTimeout(function() {
       groupDisable(itensGatoCiclo);
 
+      item.gatoFechar.setBrightness(200);
       item.estGatoDoente.enable();
       item.estGatoDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

@@ -321,15 +321,16 @@ function carregaCicloGiardia() {
   item.pocoFechar = new Game.Item("botaoFechar.png");
   item.pocoFechar.setPosition(1840, 70);
   item.pocoFechar.setRotation(180);
+  item.pocoFechar.setBrightness(200);
   item.pocoFechar.setScale(0.2);
   item.pocoFechar.setZorder(1);
   item.pocoFechar.setAlpha(0);
   item.pocoFechar.disable();
   item.pocoFechar.onMouseOver = function() {
-    item.pocoFechar.addGlow();
+    item.pocoFechar.setBrightness(255);
   }
   item.pocoFechar.onMouseOut = function() {
-    item.pocoFechar.removeGlow();
+    item.pocoFechar.setBrightness(200);
   }
   item.pocoFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -341,6 +342,7 @@ function carregaCicloGiardia() {
     setTimeout(function() {
       groupDisable(itensPocoCiclo);
 
+      item.pocoFechar.setBrightness(200);
       item.estPocoDoente.enable();
       item.estPocoDoente.changeAlpha(1, 600);
     }, currentTime += animationInterval);

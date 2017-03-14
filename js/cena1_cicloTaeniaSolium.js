@@ -384,15 +384,16 @@ function carregaCicloTaeniaSolium() {
   item.porcoFechar = new Game.Item("botaoFechar.png");
   item.porcoFechar.setPosition(1840, 70);
   item.porcoFechar.setRotation(180);
+  item.porcoFechar.setBrightness(200);
   item.porcoFechar.setScale(0.2);
   item.porcoFechar.setZorder(1);
   item.porcoFechar.setAlpha(0);
   item.porcoFechar.disable();
   item.porcoFechar.onMouseOver = function() {
-    item.porcoFechar.addGlow();
+    item.porcoFechar.setBrightness(255);
   }
   item.porcoFechar.onMouseOut = function() {
-    item.porcoFechar.removeGlow();
+    item.porcoFechar.setBrightness(200);
   }
   item.porcoFechar.onClick = function(mouse) {
     disableInteractiveness();
@@ -408,6 +409,7 @@ function carregaCicloTaeniaSolium() {
     setTimeout(function() {
       groupDisable(itensPorcoCiclo);
 
+      item.porcoFechar.setBrightness(200);
       item.estPorcoDoente.enable();
       item.estPorcoDoente.setBrightness(150); // Começa com 150 por causa que os 2 precisam ser vistos
       item.estPorcoDoente.changeAlpha(1, 600);
