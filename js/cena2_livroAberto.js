@@ -1097,7 +1097,6 @@ function carregaLivroAberto() {
     "     Ao autor Peter Darben pela foto do cisto e\n" +
     "trofozoíto de <i>E. histolytica</i>.\n" +
     "     Aos autores P. W. Pappas e S. M. Wardrop -\n" +
-    "     - Mecânica: ação obstrutiva ou destrutiva\n" +
     "Foto proglotíde de <i>Taenia</i> sp."
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[0].texto4.setPosition(990, 120);
