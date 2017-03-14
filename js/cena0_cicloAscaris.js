@@ -383,6 +383,7 @@ function carregaCicloAscaris() {
   item.tomateFechar = new Game.Item("botaoFechar.png");
   item.tomateFechar.setPosition(1840, 70);
   item.tomateFechar.setRotation(180);
+  item.tomateFechar.setScale(0.2);
   item.tomateFechar.setZorder(1);
   item.tomateFechar.setAlpha(0);
   item.tomateFechar.disable();

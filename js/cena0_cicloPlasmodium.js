@@ -381,6 +381,7 @@ function carregaCicloPlasmodium() {
   item.pernFechar = new Game.Item("botaoFechar.png");
   item.pernFechar.setPosition(1840, 70);
   item.pernFechar.setRotation(180);
+  item.pernFechar.setScale(0.2);
   item.pernFechar.setZorder(1);
   item.pernFechar.setAlpha(0);
   item.pernFechar.disable();

@@ -160,6 +160,7 @@ function carregaCicloCisticercose() {
   item.cenouraFechar = new Game.Item("botaoFechar.png");
   item.cenouraFechar.setPosition(1840, 70);
   item.cenouraFechar.setRotation(180);
+  item.cenouraFechar.setScale(0.2);
   item.cenouraFechar.setZorder(1);
   item.cenouraFechar.setAlpha(0);
   item.cenouraFechar.disable();

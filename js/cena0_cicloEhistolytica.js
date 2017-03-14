@@ -338,6 +338,7 @@ function carregaCicloEhistolytica() {
   item.bananaFechar = new Game.Item("botaoFechar.png");
   item.bananaFechar.setPosition(1840, 70);
   item.bananaFechar.setRotation(180);
+  item.bananaFechar.setScale(0.2);
   item.bananaFechar.setZorder(1);
   item.bananaFechar.setAlpha(0);
   item.bananaFechar.disable();

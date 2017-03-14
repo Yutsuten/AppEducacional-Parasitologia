@@ -384,6 +384,7 @@ function carregaCicloTaeniaSolium() {
   item.porcoFechar = new Game.Item("botaoFechar.png");
   item.porcoFechar.setPosition(1840, 70);
   item.porcoFechar.setRotation(180);
+  item.porcoFechar.setScale(0.2);
   item.porcoFechar.setZorder(1);
   item.porcoFechar.setAlpha(0);
   item.porcoFechar.disable();

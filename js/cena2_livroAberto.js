@@ -1167,6 +1167,7 @@ function carregaLivroAberto() {
   item.fechaLivro = new Game.Item("botaoFechar.png");
   item.fechaLivro.setPosition(1840, 70);
   item.fechaLivro.setZorder(1);
+  item.fechaLivro.setScale(0.2);
   item.fechaLivro.setAlpha(0);
   item.fechaLivro.disable();
   item.fechaLivro.onMouseOver = function() {

@@ -321,6 +321,7 @@ function carregaCicloGiardia() {
   item.pocoFechar = new Game.Item("botaoFechar.png");
   item.pocoFechar.setPosition(1840, 70);
   item.pocoFechar.setRotation(180);
+  item.pocoFechar.setScale(0.2);
   item.pocoFechar.setZorder(1);
   item.pocoFechar.setAlpha(0);
   item.pocoFechar.disable();

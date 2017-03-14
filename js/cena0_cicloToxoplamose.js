@@ -252,6 +252,7 @@ function carregaCicloToxoplasmose() {
   item.gatoFechar = new Game.Item("botaoFechar.png");
   item.gatoFechar.setPosition(1840, 70);
   item.gatoFechar.setRotation(180);
+  item.gatoFechar.setScale(0.2);
   item.gatoFechar.setZorder(1);
   item.gatoFechar.setAlpha(0);
   item.gatoFechar.disable();
