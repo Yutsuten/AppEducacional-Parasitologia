@@ -253,7 +253,7 @@ function carregaCicloToxoplasmose() {
   item.gatoFechar.setPosition(1840, 70);
   item.gatoFechar.setRotation(180);
   item.gatoFechar.setBrightness(200);
-  item.gatoFechar.setScale(0.2);
+  item.gatoFechar.setScale(0.14);
   item.gatoFechar.setZorder(1);
   item.gatoFechar.setAlpha(0);
   item.gatoFechar.disable();

@@ -384,7 +384,7 @@ function carregaCicloTaeniaSaginata() {
   item.vacaFechar.setPosition(1840, 70);
   item.vacaFechar.setRotation(180);
   item.vacaFechar.setBrightness(200);
-  item.vacaFechar.setScale(0.2);
+  item.vacaFechar.setScale(0.14);
   item.vacaFechar.setZorder(1);
   item.vacaFechar.setAlpha(0);
   item.vacaFechar.disable();

@@ -339,7 +339,7 @@ function carregaCicloEhistolytica() {
   item.bananaFechar.setPosition(1840, 70);
   item.bananaFechar.setRotation(180);
   item.bananaFechar.setBrightness(200);
-  item.bananaFechar.setScale(0.2);
+  item.bananaFechar.setScale(0.14);
   item.bananaFechar.setZorder(1);
   item.bananaFechar.setAlpha(0);
   item.bananaFechar.disable();

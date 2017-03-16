@@ -384,7 +384,7 @@ function carregaCicloAscaris() {
   item.tomateFechar.setPosition(1840, 70);
   item.tomateFechar.setRotation(180);
   item.tomateFechar.setBrightness(200);
-  item.tomateFechar.setScale(0.2);
+  item.tomateFechar.setScale(0.14);
   item.tomateFechar.setZorder(1);
   item.tomateFechar.setAlpha(0);
   item.tomateFechar.disable();

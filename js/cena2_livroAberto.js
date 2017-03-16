@@ -1167,7 +1167,7 @@ function carregaLivroAberto() {
   item.fechaLivro.setPosition(1840, 70);
   item.fechaLivro.setZorder(1);
   item.fechaLivro.setBrightness(200);
-  item.fechaLivro.setScale(0.2);
+  item.fechaLivro.setScale(0.14);
   item.fechaLivro.setAlpha(0);
   item.fechaLivro.disable();
   item.fechaLivro.onMouseOver = function() {
