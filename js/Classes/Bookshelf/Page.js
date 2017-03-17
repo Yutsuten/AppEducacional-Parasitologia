@@ -7,7 +7,7 @@ var estiloTitulo = {
   }
 };
 var estiloTextoLivro = {
-  "default": {fontFamily: "Times New Roman", fontSize: "30px",
+  "default": {fontFamily: "Book Antiqua", fontSize: "30px",
   fill: 0x010101, align: "left"
   },
   "i" : {

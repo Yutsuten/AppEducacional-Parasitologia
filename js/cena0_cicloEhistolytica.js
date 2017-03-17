@@ -10,7 +10,7 @@ var estiloNumeros = {
 
 var estiloInfoBalao = {
   "default" : {
-    fontFamily: "Times New Roman",
+    fontFamily: "Book Antiqua",
     fill: 0x010101,
     fontSize: "30px"
   },
@@ -453,14 +453,14 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaSintomas);
 
   item.bananaTextoSintomas = new Game.Text(
-  "<b>Sintomas Gerais:</b>\n" +
-  "Diarreia (ou disenteria amebiana quando houver sangue\n" +
-  "e muco nas fezes), flatulência, dor, espasmos abdominais,\n" +
-  "náuseas e vômitos. Pode ser assintomática.\n" +
-  "<b>Sintomas Raros:</b>\n" +
-  "Perda de peso, anorexia, fadiga crônica, dores no fígado\n" +
-  "e infecção hepática (febre, perda de peso e tosse)."
-  , estiloInfoBalao);
+    "<b>Sintomas Gerais:</b>\n" +
+    "Diarreia (ou disenteria amebiana quando houver sangue e\n" +
+    "muco nas fezes), flatulência, dor, espasmos abdominais,\n" +
+    "náuseas e vômitos. Pode ser assintomática.\n" +
+    "<b>Sintomas Raros:</b>\n" +
+    "Perda de peso, anorexia, fadiga crônica, dores no fígado e\n" +
+    "infecção hepática (febre, perda de peso e tosse)."
+    , estiloInfoBalao);
   item.bananaTextoSintomas.setPosition(432-130, 58+20);
   item.bananaTextoSintomas.setAlpha(0);
   item.bananaTextoSintomas.disable();
@@ -487,7 +487,11 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaPrevencao);
 
-  item.bananaTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.bananaTextoPrevencao = new Game.Text(
+    "Lavar os alimentos com água tratada, lavar\n" +
+    "as mãos antes de comer, beber água tratada\n" +
+    "proteger os alimentos de moscas e baratas."
+    , estiloInfoBalao);
   item.bananaTextoPrevencao.setPosition(432-130, 58+20);
   item.bananaTextoPrevencao.disable();
   itensBananaDoente.push(item.bananaTextoPrevencao);
@@ -513,7 +517,12 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaTransmissao);
 
-  item.bananaTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.bananaTextoTransmissao = new Game.Text(
+    "Água contaminada (não tratada), alimentos (verduras cruas\n" +
+    "e frutas) contaminados pela água não tratada, alimentos\n" +
+    "contaminados por patas de barata ou moscas, falta de higiene\n" +
+    "pessoal."
+    , estiloInfoBalao);
   item.bananaTextoTransmissao.setPosition(432-130, 58+20);
   item.bananaTextoTransmissao.disable();
   itensBananaDoente.push(item.bananaTextoTransmissao);
