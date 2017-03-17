@@ -361,7 +361,13 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaSintomas);
 
-  item.gatoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.gatoTextoSintomas = new Game.Text(
+    "- Geralmente assintomática;\n" +
+    "- Quadros agudos: febre, linfoadenopatia (inchaço dos\n" +
+    "nódulos linfáticos), linfocitose (aumento do número de\n" +
+    "linfócitos no sangue) e dores musculares;\n" +
+    "- No feto: lesão cerebral, deformidades físicas e convulsões."
+    , estiloInfoBalao);
   item.gatoTextoSintomas.setPosition(432-130+550, 58+20);
   item.gatoTextoSintomas.setAlpha(0);
   item.gatoTextoSintomas.disable();
@@ -388,7 +394,15 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
-  item.gatoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.gatoTextoPrevencao = new Game.Text(
+    "Não ingerir carne crua ou mal passada, lavar bem as mãos e\n" +
+    "utensílios de cozinha após o contato com carne crua, evitar\n" +
+    "mexer em jardins sem luvas e sempre lavar as mãos logo\n" +
+    "após, lavar frutas e verduras, antes de ingerí-los, trocar a\n" +
+    "caixa de areia dos gatos diariamente e lavar as mãos logo\n" +
+    "após, não alimentar o gato com carne crua ou mal passada e\n" +
+    "manter o gato dentro de casa evitando o hábito de caça."
+    , estiloInfoBalao);
   item.gatoTextoPrevencao.setPosition(432-130+550, 58+20);
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
@@ -414,7 +428,14 @@ function carregaCicloToxoplasmose() {
   }
   itensGatoDoente.push(item.gatoAbaTransmissao);
 
-  item.gatoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.gatoTextoTransmissao = new Game.Text(
+    "- Ingestão de carne crua ou mal cozida de animais infectados;\n" +
+    "- Ingestão de frutas, verduras e legumes crus contaminados\n" +
+    "com oocistos;\n" +
+    "- Beber água sem filtrar ou ferver;\n" +
+    "- Manusear a terra ou areia contaminada;\n" +
+    "- Via transplacentária."
+    , estiloInfoBalao);
   item.gatoTextoTransmissao.setPosition(432-130+550, 58+20);
   item.gatoTextoTransmissao.disable();
   itensGatoDoente.push(item.gatoTextoTransmissao);
