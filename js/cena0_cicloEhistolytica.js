@@ -488,9 +488,9 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaPrevencao);
 
   item.bananaTextoPrevencao = new Game.Text(
-    "Lavar os alimentos com água tratada, lavar\n" +
-    "as mãos antes de comer, beber água tratada\n" +
-    "proteger os alimentos de moscas e baratas."
+    "Lavar os alimentos com água tratada, lavar as mãos antes\n" +
+    "de comer, beber água tratada proteger os alimentos de\n" +
+    "moscas e baratas."
     , estiloInfoBalao);
   item.bananaTextoPrevencao.setPosition(432-130, 58+20);
   item.bananaTextoPrevencao.disable();
