@@ -274,9 +274,9 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraTextoSintomas);
 
   item.cenouraAbaPrevencao = new Game.Item("abaPrev.png");
-  item.cenouraAbaPrevencao.setPosition(432+244+550-150, 71);
+  item.cenouraAbaPrevencao.setPosition(432+486+550-150, 71);
   item.cenouraAbaPrevencao.setScale(0.25);
-  item.cenouraAbaPrevencao.setZorder(8);
+  item.cenouraAbaPrevencao.setZorder(9);
   item.cenouraAbaPrevencao.setAlpha(0);
   item.cenouraAbaPrevencao.disable();
   item.cenouraAbaPrevencao.onClick = function() {
@@ -300,9 +300,9 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
 
   item.cenouraAbaTransmissao = new Game.Item("abaTran.png");
-  item.cenouraAbaTransmissao.setPosition(432+490+550-150, 71);
+  item.cenouraAbaTransmissao.setPosition(432+232+550-150, 71);
   item.cenouraAbaTransmissao.setScale(0.25);
-  item.cenouraAbaTransmissao.setZorder(9);
+  item.cenouraAbaTransmissao.setZorder(8);
   item.cenouraAbaTransmissao.setAlpha(0);
   item.cenouraAbaTransmissao.disable();
   item.cenouraAbaTransmissao.onClick = function() {

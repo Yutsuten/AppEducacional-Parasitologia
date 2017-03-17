@@ -466,7 +466,7 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaTextoSintomas);
 
   item.bananaAbaPrevencao = new Game.Item("abaPrev.png");
-  item.bananaAbaPrevencao.setPosition(432 + 232, 71);
+  item.bananaAbaPrevencao.setPosition(432+486, 71);
   item.bananaAbaPrevencao.setScale(0.25);
   item.bananaAbaPrevencao.setZorder(8);
   item.bananaAbaPrevencao.setAlpha(0);
@@ -492,7 +492,7 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaTextoPrevencao);
 
   item.bananaAbaTransmissao = new Game.Item("abaTran.png");
-  item.bananaAbaTransmissao.setPosition(432 + 482, 71);
+  item.bananaAbaTransmissao.setPosition(432+232, 71);
   item.bananaAbaTransmissao.setScale(0.25);
   item.bananaAbaTransmissao.setZorder(9);
   item.bananaAbaTransmissao.setAlpha(0);

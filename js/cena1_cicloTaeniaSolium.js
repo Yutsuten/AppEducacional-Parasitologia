@@ -531,9 +531,9 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoTextoSintomas);
 
   item.porcoAbaPrevencao = new Game.Item("abaPrev.png");
-  item.porcoAbaPrevencao.setPosition(432+244+550+270, 71);
+  item.porcoAbaPrevencao.setPosition(432+486+550+270, 71);
   item.porcoAbaPrevencao.setScale(0.25);
-  item.porcoAbaPrevencao.setZorder(8);
+  item.porcoAbaPrevencao.setZorder(9);
   item.porcoAbaPrevencao.setAlpha(0);
   item.porcoAbaPrevencao.disable();
   item.porcoAbaPrevencao.onClick = function() {
@@ -557,9 +557,9 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoTextoPrevencao);
 
   item.porcoAbaTransmissao = new Game.Item("abaTran.png");
-  item.porcoAbaTransmissao.setPosition(432+490+550+270, 71);
+  item.porcoAbaTransmissao.setPosition(432+232+550+270, 71);
   item.porcoAbaTransmissao.setScale(0.25);
-  item.porcoAbaTransmissao.setZorder(9);
+  item.porcoAbaTransmissao.setZorder(8);
   item.porcoAbaTransmissao.setAlpha(0);
   item.porcoAbaTransmissao.disable();
   item.porcoAbaTransmissao.onClick = function() {

@@ -435,9 +435,9 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoTextoSintomas);
 
   item.pocoAbaPrevencao = new Game.Item("abaPrev.png");
-  item.pocoAbaPrevencao.setPosition(432+232+80, 71);
+  item.pocoAbaPrevencao.setPosition(432+486+80, 71);
   item.pocoAbaPrevencao.setScale(0.25);
-  item.pocoAbaPrevencao.setZorder(8);
+  item.pocoAbaPrevencao.setZorder(9);
   item.pocoAbaPrevencao.setAlpha(0);
   item.pocoAbaPrevencao.disable();
   item.pocoAbaPrevencao.onClick = function() {
@@ -461,9 +461,9 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoTextoPrevencao);
 
   item.pocoAbaTransmissao = new Game.Item("abaTran.png");
-  item.pocoAbaTransmissao.setPosition(432+482+80, 71);
+  item.pocoAbaTransmissao.setPosition(432+232+80, 71);
   item.pocoAbaTransmissao.setScale(0.25);
-  item.pocoAbaTransmissao.setZorder(9);
+  item.pocoAbaTransmissao.setZorder(8);
   item.pocoAbaTransmissao.setAlpha(0);
   item.pocoAbaTransmissao.disable();
   item.pocoAbaTransmissao.onClick = function() {

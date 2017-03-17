@@ -530,9 +530,9 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaTextoSintomas);
 
   item.vacaAbaPrevencao = new Game.Item("abaPrev.png");
-  item.vacaAbaPrevencao.setPosition(432+244+550+270, 71);
+  item.vacaAbaPrevencao.setPosition(432+486+550+270, 71);
   item.vacaAbaPrevencao.setScale(0.25);
-  item.vacaAbaPrevencao.setZorder(8);
+  item.vacaAbaPrevencao.setZorder(9);
   item.vacaAbaPrevencao.setAlpha(0);
   item.vacaAbaPrevencao.disable();
   item.vacaAbaPrevencao.onClick = function() {
@@ -556,9 +556,9 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaTextoPrevencao);
 
   item.vacaAbaTransmissao = new Game.Item("abaTran.png");
-  item.vacaAbaTransmissao.setPosition(432+490+550+270, 71);
+  item.vacaAbaTransmissao.setPosition(432+232+550+270, 71);
   item.vacaAbaTransmissao.setScale(0.25);
-  item.vacaAbaTransmissao.setZorder(9);
+  item.vacaAbaTransmissao.setZorder(8);
   item.vacaAbaTransmissao.setAlpha(0);
   item.vacaAbaTransmissao.disable();
   item.vacaAbaTransmissao.onClick = function() {
