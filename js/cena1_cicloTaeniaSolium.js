@@ -557,7 +557,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoTextoPrevencao);
 
   item.porcoAbaTransmissao = new Game.Item("abaTran.png");
-  item.porcoAbaTransmissao.setPosition(432+232+550+270, 71);
+  item.porcoAbaTransmissao.setPosition(432+240+550+270, 71);
   item.porcoAbaTransmissao.setScale(0.25);
   item.porcoAbaTransmissao.setZorder(8);
   item.porcoAbaTransmissao.setAlpha(0);

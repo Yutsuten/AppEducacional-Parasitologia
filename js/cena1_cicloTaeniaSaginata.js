@@ -556,7 +556,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaTextoPrevencao);
 
   item.vacaAbaTransmissao = new Game.Item("abaTran.png");
-  item.vacaAbaTransmissao.setPosition(432+232+550+270, 71);
+  item.vacaAbaTransmissao.setPosition(432+240+550+270, 71);
   item.vacaAbaTransmissao.setScale(0.25);
   item.vacaAbaTransmissao.setZorder(8);
   item.vacaAbaTransmissao.setAlpha(0);

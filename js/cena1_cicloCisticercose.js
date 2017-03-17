@@ -300,7 +300,7 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
 
   item.cenouraAbaTransmissao = new Game.Item("abaTran.png");
-  item.cenouraAbaTransmissao.setPosition(432+232+550-150, 71);
+  item.cenouraAbaTransmissao.setPosition(432+240+550-150, 71);
   item.cenouraAbaTransmissao.setScale(0.25);
   item.cenouraAbaTransmissao.setZorder(8);
   item.cenouraAbaTransmissao.setAlpha(0);

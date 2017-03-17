@@ -393,7 +393,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoTextoPrevencao);
 
   item.gatoAbaTransmissao = new Game.Item("abaTran.png");
-  item.gatoAbaTransmissao.setPosition(432+232+550, 71);
+  item.gatoAbaTransmissao.setPosition(432+240+550, 71);
   item.gatoAbaTransmissao.setScale(0.25);
   item.gatoAbaTransmissao.setZorder(8);
   item.gatoAbaTransmissao.setAlpha(0);
