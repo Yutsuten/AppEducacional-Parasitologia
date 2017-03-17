@@ -524,7 +524,12 @@ function carregaCicloTaeniaSaginata() {
   }
   itensVacaDoente.push(item.vacaAbaSintomas);
 
-  item.vacaTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.vacaTextoSintomas = new Game.Text(
+    "- Dores abdominais, flatulência, náuseas;\n" +
+    "- Debilidade, perda de peso;\n" +
+    "- Diarreia ou constipação quando o parasita permanece na\n" +
+    "luz intestinal."
+    , estiloInfoBalao);
   item.vacaTextoSintomas.setPosition(432-130+550+270, 58+20);
   item.vacaTextoSintomas.setAlpha(0);
   item.vacaTextoSintomas.disable();
@@ -551,7 +556,15 @@ function carregaCicloTaeniaSaginata() {
   }
   itensVacaDoente.push(item.vacaAbaPrevencao);
 
-  item.vacaTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.vacaTextoPrevencao = new Game.Text(
+    "- Impedir o acesso de suínos e bovinos às fezes humanas,\n" +
+    "latrinas, esgotos e pastagens/alimentos contaminados;\n" +
+    "- Implantação de ações de fiscalização e de orientação,\n" +
+    "permitindo o acesso da população a maiores informações e a\n" +
+    "alimentos inspecionados;\n" +
+    "- Evitar o consumo de carne mal passada;\n" +
+    "- Obter produtos de boa origem."
+    , estiloInfoBalao);
   item.vacaTextoPrevencao.setPosition(432-130+550+270, 58+20);
   item.vacaTextoPrevencao.disable();
   itensVacaDoente.push(item.vacaTextoPrevencao);
@@ -577,7 +590,10 @@ function carregaCicloTaeniaSaginata() {
   }
   itensVacaDoente.push(item.vacaAbaTransmissao);
 
-  item.vacaTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.vacaTextoTransmissao = new Game.Text(
+    "Ingestão de carne mal passada ou crua (suína ou bovina)\n" +
+    "que esteja infectada com cisticercos de <i>Taenia</i> sp."
+    , estiloInfoBalao);
   item.vacaTextoTransmissao.setPosition(432-130+550+270, 58+20);
   item.vacaTextoTransmissao.disable();
   itensVacaDoente.push(item.vacaTextoTransmissao);
