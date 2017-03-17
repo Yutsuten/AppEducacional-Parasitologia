@@ -268,7 +268,7 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraAbaSintomas);
 
   item.cenouraTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.cenouraTextoSintomas.setPosition(432-130+550-150, 71+20);
+  item.cenouraTextoSintomas.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoSintomas.setAlpha(0);
   item.cenouraTextoSintomas.disable();
   itensCenouraDoente.push(item.cenouraTextoSintomas);
@@ -295,7 +295,7 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraAbaPrevencao);
 
   item.cenouraTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.cenouraTextoPrevencao.setPosition(432-130+550-150, 71+20);
+  item.cenouraTextoPrevencao.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoPrevencao.disable();
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
 
@@ -321,7 +321,7 @@ function carregaCicloCisticercose() {
   itensCenouraDoente.push(item.cenouraAbaTransmissao);
 
   item.cenouraTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.cenouraTextoTransmissao.setPosition(432-130+550-150, 71+20);
+  item.cenouraTextoTransmissao.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoTransmissao.disable();
   itensCenouraDoente.push(item.cenouraTextoTransmissao);
 

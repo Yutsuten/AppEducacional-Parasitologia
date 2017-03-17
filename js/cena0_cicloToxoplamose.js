@@ -361,7 +361,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaSintomas);
 
   item.gatoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.gatoTextoSintomas.setPosition(432-130+550, 71+20);
+  item.gatoTextoSintomas.setPosition(432-130+550, 58+20);
   item.gatoTextoSintomas.setAlpha(0);
   item.gatoTextoSintomas.disable();
   itensGatoDoente.push(item.gatoTextoSintomas);
@@ -388,7 +388,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
   item.gatoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.gatoTextoPrevencao.setPosition(432-130+550, 71+20);
+  item.gatoTextoPrevencao.setPosition(432-130+550, 58+20);
   item.gatoTextoPrevencao.disable();
   itensGatoDoente.push(item.gatoTextoPrevencao);
 
@@ -414,7 +414,7 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaTransmissao);
 
   item.gatoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.gatoTextoTransmissao.setPosition(432-130+550, 71+20);
+  item.gatoTextoTransmissao.setPosition(432-130+550, 58+20);
   item.gatoTextoTransmissao.disable();
   itensGatoDoente.push(item.gatoTextoTransmissao);
 

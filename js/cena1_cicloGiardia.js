@@ -429,7 +429,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaSintomas);
 
   item.pocoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.pocoTextoSintomas.setPosition(432-130+80, 71+20);
+  item.pocoTextoSintomas.setPosition(432-130+80, 58+20);
   item.pocoTextoSintomas.setAlpha(0);
   item.pocoTextoSintomas.disable();
   itensPocoDoente.push(item.pocoTextoSintomas);
@@ -456,7 +456,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaPrevencao);
 
   item.pocoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.pocoTextoPrevencao.setPosition(432-130+80, 71+20);
+  item.pocoTextoPrevencao.setPosition(432-130+80, 58+20);
   item.pocoTextoPrevencao.disable();
   itensPocoDoente.push(item.pocoTextoPrevencao);
 
@@ -482,7 +482,7 @@ function carregaCicloGiardia() {
   itensPocoDoente.push(item.pocoAbaTransmissao);
 
   item.pocoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.pocoTextoTransmissao.setPosition(432-130+80, 71+20);
+  item.pocoTextoTransmissao.setPosition(432-130+80, 58+20);
   item.pocoTextoTransmissao.disable();
   itensPocoDoente.push(item.pocoTextoTransmissao);
 

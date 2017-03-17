@@ -491,7 +491,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaSintomas);
 
   item.tomateTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.tomateTextoSintomas.setPosition(432-130-260, 71+20);
+  item.tomateTextoSintomas.setPosition(432-130-260, 58+20);
   item.tomateTextoSintomas.setAlpha(0);
   item.tomateTextoSintomas.disable();
   itensTomateDoente.push(item.tomateTextoSintomas);
@@ -518,7 +518,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaPrevencao);
 
   item.tomateTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.tomateTextoPrevencao.setPosition(432-130-260, 71+20);
+  item.tomateTextoPrevencao.setPosition(432-130-260, 58+20);
   item.tomateTextoPrevencao.disable();
   itensTomateDoente.push(item.tomateTextoPrevencao);
 
@@ -544,7 +544,7 @@ function carregaCicloAscaris() {
   itensTomateDoente.push(item.tomateAbaTransmissao);
 
   item.tomateTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.tomateTextoTransmissao.setPosition(432-130-260, 71+20);
+  item.tomateTextoTransmissao.setPosition(432-130-260, 58+20);
   item.tomateTextoTransmissao.disable();
   itensTomateDoente.push(item.tomateTextoTransmissao);
 

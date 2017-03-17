@@ -524,7 +524,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaSintomas);
 
   item.vacaTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.vacaTextoSintomas.setPosition(432-130+550+270, 71+20);
+  item.vacaTextoSintomas.setPosition(432-130+550+270, 58+20);
   item.vacaTextoSintomas.setAlpha(0);
   item.vacaTextoSintomas.disable();
   itensVacaDoente.push(item.vacaTextoSintomas);
@@ -551,7 +551,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaPrevencao);
 
   item.vacaTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.vacaTextoPrevencao.setPosition(432-130+550+270, 71+20);
+  item.vacaTextoPrevencao.setPosition(432-130+550+270, 58+20);
   item.vacaTextoPrevencao.disable();
   itensVacaDoente.push(item.vacaTextoPrevencao);
 
@@ -577,7 +577,7 @@ function carregaCicloTaeniaSaginata() {
   itensVacaDoente.push(item.vacaAbaTransmissao);
 
   item.vacaTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.vacaTextoTransmissao.setPosition(432-130+550+270, 71+20);
+  item.vacaTextoTransmissao.setPosition(432-130+550+270, 58+20);
   item.vacaTextoTransmissao.disable();
   itensVacaDoente.push(item.vacaTextoTransmissao);
 

@@ -489,7 +489,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaSintomas);
 
   item.pernTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.pernTextoSintomas.setPosition(432-130+300, 71+20);
+  item.pernTextoSintomas.setPosition(432-130+300, 58+20);
   item.pernTextoSintomas.setAlpha(0);
   item.pernTextoSintomas.disable();
   itensPernDoente.push(item.pernTextoSintomas);
@@ -516,7 +516,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaPrevencao);
 
   item.pernTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.pernTextoPrevencao.setPosition(432-130+300, 71+20);
+  item.pernTextoPrevencao.setPosition(432-130+300, 58+20);
   item.pernTextoPrevencao.disable();
   itensPernDoente.push(item.pernTextoPrevencao);
 
@@ -542,7 +542,7 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaTransmissao);
 
   item.pernTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.pernTextoTransmissao.setPosition(432-130+300, 71+20);
+  item.pernTextoTransmissao.setPosition(432-130+300, 58+20);
   item.pernTextoTransmissao.disable();
   itensPernDoente.push(item.pernTextoTransmissao);
 

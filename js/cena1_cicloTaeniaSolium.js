@@ -525,7 +525,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaSintomas);
 
   item.porcoTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.porcoTextoSintomas.setPosition(432-130+550+270, 71+20);
+  item.porcoTextoSintomas.setPosition(432-130+550+270, 58+20);
   item.porcoTextoSintomas.setAlpha(0);
   item.porcoTextoSintomas.disable();
   itensPorcoDoente.push(item.porcoTextoSintomas);
@@ -552,7 +552,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaPrevencao);
 
   item.porcoTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.porcoTextoPrevencao.setPosition(432-130+550+270, 71+20);
+  item.porcoTextoPrevencao.setPosition(432-130+550+270, 58+20);
   item.porcoTextoPrevencao.disable();
   itensPorcoDoente.push(item.porcoTextoPrevencao);
 
@@ -578,7 +578,7 @@ function carregaCicloTaeniaSolium() {
   itensPorcoDoente.push(item.porcoAbaTransmissao);
 
   item.porcoTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.porcoTextoTransmissao.setPosition(432-130+550+270, 71+20);
+  item.porcoTextoTransmissao.setPosition(432-130+550+270, 58+20);
   item.porcoTextoTransmissao.disable();
   itensPorcoDoente.push(item.porcoTextoTransmissao);
 

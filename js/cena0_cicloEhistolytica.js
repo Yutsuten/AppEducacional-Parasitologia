@@ -468,7 +468,7 @@ function carregaCicloEhistolytica() {
   item.bananaAbaPrevencao = new Game.Item("abaPrev.png");
   item.bananaAbaPrevencao.setPosition(432+486, 71);
   item.bananaAbaPrevencao.setScale(0.25);
-  item.bananaAbaPrevencao.setZorder(8);
+  item.bananaAbaPrevencao.setZorder(9);
   item.bananaAbaPrevencao.setAlpha(0);
   item.bananaAbaPrevencao.disable();
   item.bananaAbaPrevencao.onClick = function() {
@@ -487,14 +487,14 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaPrevencao);
 
   item.bananaTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
-  item.bananaTextoPrevencao.setPosition(432-130, 71+20);
+  item.bananaTextoPrevencao.setPosition(432-130, 58+20);
   item.bananaTextoPrevencao.disable();
   itensBananaDoente.push(item.bananaTextoPrevencao);
 
   item.bananaAbaTransmissao = new Game.Item("abaTran.png");
   item.bananaAbaTransmissao.setPosition(432+232, 71);
   item.bananaAbaTransmissao.setScale(0.25);
-  item.bananaAbaTransmissao.setZorder(9);
+  item.bananaAbaTransmissao.setZorder(8);
   item.bananaAbaTransmissao.setAlpha(0);
   item.bananaAbaTransmissao.disable();
   item.bananaAbaTransmissao.onClick = function() {
@@ -513,7 +513,7 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaTransmissao);
 
   item.bananaTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
-  item.bananaTextoTransmissao.setPosition(432-130, 71+20);
+  item.bananaTextoTransmissao.setPosition(432-130, 58+20);
   item.bananaTextoTransmissao.disable();
   itensBananaDoente.push(item.bananaTextoTransmissao);
 
