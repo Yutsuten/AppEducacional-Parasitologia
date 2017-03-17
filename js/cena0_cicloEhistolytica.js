@@ -488,9 +488,10 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaPrevencao);
 
   item.bananaTextoPrevencao = new Game.Text(
-    "Lavar os alimentos com água tratada, lavar as mãos antes\n" +
-    "de comer, beber água tratada proteger os alimentos de\n" +
-    "moscas e baratas."
+    "- Lavar os alimentos com água tratada;\n" +
+    "- Lavar as mãos antes de comer;\n" +
+    "- Beber água tratada;\n" +
+    "- Proteger os alimentos de moscas e baratas."
     , estiloInfoBalao);
   item.bananaTextoPrevencao.setPosition(432-130, 58+20);
   item.bananaTextoPrevencao.disable();
@@ -518,10 +519,11 @@ function carregaCicloEhistolytica() {
   itensBananaDoente.push(item.bananaAbaTransmissao);
 
   item.bananaTextoTransmissao = new Game.Text(
-    "Água contaminada (não tratada), alimentos (verduras cruas\n" +
-    "e frutas) contaminados pela água não tratada, alimentos\n" +
-    "contaminados por patas de barata ou moscas, falta de higiene\n" +
-    "pessoal."
+    "- Água contaminada (não tratada);\n" +
+    "- Alimentos (verduras cruas e frutas) contaminados pela água\n" +
+    "não tratada;\n" +
+    "- Alimentos contaminados por patas de barata ou moscas;\n" +
+    "- Falta de higiene pessoal."
     , estiloInfoBalao);
   item.bananaTextoTransmissao.setPosition(432-130, 58+20);
   item.bananaTextoTransmissao.disable();

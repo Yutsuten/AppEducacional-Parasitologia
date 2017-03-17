@@ -491,7 +491,11 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaSintomas);
 
-  item.tomateTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.tomateTextoSintomas = new Game.Text(
+    "- Ação espoliadora: subnutrição;\n" +
+    "- Ação tóxica: edema, urticária e convulsões;\n" +
+    "- Ação mecânica: irritação na pele, obstrução intestinal."
+    , estiloInfoBalao);
   item.tomateTextoSintomas.setPosition(432-130-260, 58+20);
   item.tomateTextoSintomas.setAlpha(0);
   item.tomateTextoSintomas.disable();
@@ -518,7 +522,12 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaPrevencao);
 
-  item.tomateTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.tomateTextoPrevencao = new Game.Text(
+    "- Ingerir água tratada;\n" +
+    "- Lavar bem frutas e legumes;\n" +
+    "- Não defecar em locais inapropriados;\n" +
+    "- Saneamento básico."
+    , estiloInfoBalao);
   item.tomateTextoPrevencao.setPosition(432-130-260, 58+20);
   item.tomateTextoPrevencao.disable();
   itensTomateDoente.push(item.tomateTextoPrevencao);
@@ -544,7 +553,11 @@ function carregaCicloAscaris() {
   }
   itensTomateDoente.push(item.tomateAbaTransmissao);
 
-  item.tomateTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.tomateTextoTransmissao = new Game.Text(
+    "- Ingestão de água e alimentos contaminados;\n" +
+    "- Poeira, aves, insetos (moscas e baratas);\n" +
+    "- Irrigação de hortas com água contaminada."
+    , estiloInfoBalao);
   item.tomateTextoTransmissao.setPosition(432-130-260, 58+20);
   item.tomateTextoTransmissao.disable();
   itensTomateDoente.push(item.tomateTextoTransmissao);
