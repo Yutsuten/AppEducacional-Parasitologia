@@ -493,8 +493,8 @@ function carregaCicloPlasmodium() {
     "Desenvolvimento de anemia, febre, mal-estar, palidez,\n" +
     "hipoglicemia (pouco açúcar no sangue), pele amarelada,\n" +
     "lesões renais, dor abdominal, dor lombar, náuseas, vômitos,\n" +
-    "tosse seca, Hepatomegalia, esplenomegalia (aumento anormal\n" +
-    "do fígado e baço respectivamente), diarréia e\n" +
+    "tosse seca, Hepatomegalia, esplenomegalia (aumento\n" +
+    "anormal do fígado e baço respectivamente), diarréia e\n" +
     "desidratação."
     , estiloInfoBalao);
   item.pernTextoSintomas.setPosition(432-130+300, 58+20);
@@ -524,8 +524,8 @@ function carregaCicloPlasmodium() {
   itensPernDoente.push(item.pernAbaPrevencao);
 
   item.pernTextoPrevencao = new Game.Text(
-    "- Uso de repelentes, calças e camisas de manga longa evitando\n" +
-    "picadas do mosquito;\n" +
+    "- Uso de repelentes, calças e camisas de manga longa\n" +
+    "evitando picadas do mosquito;\n" +
     "- Evitar acúmulo de água parada impedindo a oviposição."
     , estiloInfoBalao);
   item.pernTextoPrevencao.setPosition(432-130+300, 58+20);
