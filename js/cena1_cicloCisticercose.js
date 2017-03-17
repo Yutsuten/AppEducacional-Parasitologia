@@ -268,7 +268,12 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaSintomas);
 
-  item.cenouraTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.cenouraTextoSintomas = new Game.Text(
+    "- Inflamação do olho;\n" +
+    "- Sintomas neuropsiquiátricos: convulsões, distúrbio de\n" +
+    "comportamento, hipertensão intracraniana, alterações de\n" +
+    "visão, vômitos e até mesmo a morte."
+    , estiloInfoBalao);
   item.cenouraTextoSintomas.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoSintomas.setAlpha(0);
   item.cenouraTextoSintomas.disable();
@@ -295,7 +300,12 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaPrevencao);
 
-  item.cenouraTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.cenouraTextoPrevencao = new Game.Text(
+    "- Sempre lavar as mãos;\n" +
+    "- Não utilizar fezes humanas ou lixo como adubo;\n" +
+    "- Não irrigar horta com água do rio;\n" +
+    "- Lavar bem frutas e verduras."
+    , estiloInfoBalao);
   item.cenouraTextoPrevencao.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoPrevencao.disable();
   itensCenouraDoente.push(item.cenouraTextoPrevencao);
@@ -321,7 +331,10 @@ function carregaCicloCisticercose() {
   }
   itensCenouraDoente.push(item.cenouraAbaTransmissao);
 
-  item.cenouraTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.cenouraTextoTransmissao = new Game.Text(
+    "Através do consumo de água e alimentos, como frutas e\n" +
+    "verduras, contaminados com os ovos da <i>Taenia</i> sp."
+    , estiloInfoBalao);
   item.cenouraTextoTransmissao.setPosition(432-130+550-150, 58+20);
   item.cenouraTextoTransmissao.disable();
   itensCenouraDoente.push(item.cenouraTextoTransmissao);
