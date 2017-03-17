@@ -407,6 +407,7 @@ function carregaCicloTaeniaSaginata() {
 
     setTimeout(function() {
       groupDisable(itensVacaCiclo);
+      scene[1].setSubtitle("");
 
       item.vacaFechar.setBrightness(200);
       item.estVacaDoente.enable();

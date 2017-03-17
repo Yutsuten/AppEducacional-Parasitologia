@@ -364,6 +364,7 @@ function carregaCicloEhistolytica() {
 
     setTimeout(function() {
       groupDisable(itensBananaCiclo);
+      scene[0].setSubtitle("");
 
       item.bananaFechar.setBrightness(200);
       item.estBananaDoente.enable();

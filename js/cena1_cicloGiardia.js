@@ -341,6 +341,7 @@ function carregaCicloGiardia() {
 
     setTimeout(function() {
       groupDisable(itensPocoCiclo);
+      scene[1].setSubtitle("");
 
       item.pocoFechar.setBrightness(200);
       item.estPocoDoente.enable();

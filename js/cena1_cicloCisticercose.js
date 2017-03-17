@@ -180,6 +180,7 @@ function carregaCicloCisticercose() {
 
     setTimeout(function() {
       groupDisable(itensCenouraCiclo);
+      scene[1].setSubtitle("");
 
       item.cenouraFechar.setBrightness(200);
       item.estCenouraDoente.enable();

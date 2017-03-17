@@ -403,6 +403,7 @@ function carregaCicloAscaris() {
 
     setTimeout(function() {
       groupDisable(itensTomateCiclo);
+      scene[0].setSubtitle("");
 
       item.tomateFechar.setBrightness(200);
       item.estTomateDoente.enable();

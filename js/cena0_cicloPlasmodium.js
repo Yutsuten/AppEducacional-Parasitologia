@@ -401,6 +401,7 @@ function carregaCicloPlasmodium() {
 
     setTimeout(function() {
       groupDisable(itensPernCiclo);
+      scene[0].setSubtitle("");
 
       item.pernFechar.setBrightness(200);
       item.estPernDoente.enable();

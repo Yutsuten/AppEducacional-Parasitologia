@@ -272,6 +272,7 @@ function carregaCicloToxoplasmose() {
 
     setTimeout(function() {
       groupDisable(itensGatoCiclo);
+      scene[0].setSubtitle("");
 
       item.gatoFechar.setBrightness(200);
       item.estGatoDoente.enable();

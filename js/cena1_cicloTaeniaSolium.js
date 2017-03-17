@@ -408,6 +408,7 @@ function carregaCicloTaeniaSolium() {
 
     setTimeout(function() {
       groupDisable(itensPorcoCiclo);
+      scene[1].setSubtitle("");
 
       item.porcoFechar.setBrightness(200);
       item.estPorcoDoente.enable();
