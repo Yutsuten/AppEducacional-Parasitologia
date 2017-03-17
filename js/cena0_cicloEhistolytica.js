@@ -10,9 +10,15 @@ var estiloNumeros = {
 
 var estiloInfoBalao = {
   "default" : {
-    fontFamily: "Book Antiqua",
+    fontFamily: "Times New Roman",
     fill: 0x010101,
-    fontSize: "40px"
+    fontSize: "30px"
+  },
+  "i" : {
+    fontStyle: "italic"
+  },
+  "b" : {
+    fontStyle: "bold"
   }
 }
 
@@ -445,8 +451,16 @@ function carregaCicloEhistolytica() {
   }
   itensBananaDoente.push(item.bananaAbaSintomas);
 
-  item.bananaTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
-  item.bananaTextoSintomas.setPosition(432-130, 71+20);
+  item.bananaTextoSintomas = new Game.Text(
+  "<b>Sintomas Gerais:</b>\n" +
+  "Diarreia (ou disenteria amebiana quando houver sangue\n" +
+  "e muco nas fezes), flatulência, dor, espasmos abdominais,\n" +
+  "náuseas e vômitos. Pode ser assintomática.\n" +
+  "<b>Sintomas Raros:</b>\n" +
+  "Perda de peso, anorexia, fadiga crônica, dores no fígado\n" +
+  "e infecção hepática (febre, perda de peso e tosse)."
+  , estiloInfoBalao);
+  item.bananaTextoSintomas.setPosition(432-130, 58+20);
   item.bananaTextoSintomas.setAlpha(0);
   item.bananaTextoSintomas.disable();
   itensBananaDoente.push(item.bananaTextoSintomas);
