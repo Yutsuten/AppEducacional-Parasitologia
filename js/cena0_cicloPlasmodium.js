@@ -489,7 +489,14 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaSintomas);
 
-  item.pernTextoSintomas = new Game.Text("Texto sintomas.", estiloInfoBalao);
+  item.pernTextoSintomas = new Game.Text(
+    "Desenvolvimento de anemia, febre, mal-estar, palidez,\n" +
+    "hipoglicemia (pouco açúcar no sangue), pele amarelada,\n" +
+    "lesões renais, dor abdominal, dor lombar, náuseas, vômitos,\n" +
+    "tosse seca, Hepatomegalia, esplenomegalia (aumento anormal\n" +
+    "do fígado e baço respectivamente), diarréia e\n" +
+    "desidratação."
+    , estiloInfoBalao);
   item.pernTextoSintomas.setPosition(432-130+300, 58+20);
   item.pernTextoSintomas.setAlpha(0);
   item.pernTextoSintomas.disable();
@@ -516,7 +523,11 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaPrevencao);
 
-  item.pernTextoPrevencao = new Game.Text("Texto prevenção.", estiloInfoBalao);
+  item.pernTextoPrevencao = new Game.Text(
+    "- Uso de repelentes, calças e camisas de manga longa evitando\n" +
+    "picadas do mosquito;\n" +
+    "- Evitar acúmulo de água parada impedindo a oviposição."
+    , estiloInfoBalao);
   item.pernTextoPrevencao.setPosition(432-130+300, 58+20);
   item.pernTextoPrevencao.disable();
   itensPernDoente.push(item.pernTextoPrevencao);
@@ -542,7 +553,10 @@ function carregaCicloPlasmodium() {
   }
   itensPernDoente.push(item.pernAbaTransmissao);
 
-  item.pernTextoTransmissao = new Game.Text("Texto transmissão.", estiloInfoBalao);
+  item.pernTextoTransmissao = new Game.Text(
+    "- Através da picada de fêmeas do mosquito <i>Anopheles</i> sp;\n" +
+    "- Transfusão de sangue."
+    , estiloInfoBalao);
   item.pernTextoTransmissao.setPosition(432-130+300, 58+20);
   item.pernTextoTransmissao.disable();
   itensPernDoente.push(item.pernTextoTransmissao);
