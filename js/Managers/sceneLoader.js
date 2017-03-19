@@ -34,5 +34,5 @@ loader.add(gameImages)
     }
 
     // Initial Scene
-    setScene(2);
+    setScene(0);
   });

@@ -12,7 +12,7 @@ var estiloInfoBalao = {
   "default" : {
     fontFamily: "Book Antiqua",
     fill: 0x010101,
-    fontSize: "30px"
+    fontSize: "28px"
   },
   "i" : {
     fontStyle: "italic"
