@@ -84,8 +84,8 @@ function carregaLivroAberto() {
     "querda da sala de aula será apresentada\n" +
     "uma estante repleta de livros interativos,\n" +
     "nos quais serão explicadas as teorias sobre\n" +
-    "o Parasitismo e cada parasita abordado\n" +
-    "neste Objeto de Aprendizagem."
+    "o Parasitismo e cada parasita abordado neste\n" +
+    "Objeto de Aprendizagem."
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto2.setPosition(990, 120);
 
@@ -1162,7 +1162,7 @@ function carregaLivroAberto() {
   item.margemDir1 = new Game.Line(800, 120, 800, 950, 2);
   item.margemDir1.setZorder(1);
 
-  item.margemDir2 = new Game.Line(1550, 120, 1550, 950, 2);
+  item.margemDir2 = new Game.Line(1550, 120, 1570, 950, 2);
   item.margemDir2.setZorder(1);
 
   // Margem inferior
