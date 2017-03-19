@@ -152,9 +152,9 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[0].texto3 = new Game.Text(
     "     Os helmintos (ou vermes) são grandes e\n" +
     "visíveis a olho nu. Podem ser metazoários,\n" +
-    "parasitos de animais, vegetais ou de vida\n" +
-    "livre.\n" +
-    "     São classificados em quatro filos:"
+    "parasitos de animais, vegetais ou de vida livre.\n" +
+    "     São classificados em quatro filos:\n" +
+    "     - Platyelminthes: vermes achatados, os"
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto3.setPosition(990, 750);
 
@@ -162,7 +162,6 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[1] = new Game.Page();
 
   livro.Parasitologia.pagina[1].texto1 = new Game.Text(
-   "     - Platyelminthes: vermes achatados, os\n" +
    "quais se subdividem em duas classes: Tre-\n" +
    "matoda: vermes em forma de folha e Ces-\n" +
    "toda: vermes em forma de fita.\n" +
@@ -1152,12 +1151,13 @@ function carregaLivroAberto() {
     "em: https://github.com/kittykatattack/scaleTo\n" +
     "Window.\n" +
     "     O código para multiformatação dos textos:\n" +
-    "https://github.com/tleunen/pixi-multistyle-text."
+    "https://github.com/tleunen/pixi-multistyle-\n" +
+    "text."
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
   livro.Agradecimentos.pagina[1].pixijsLogo = new Game.Image("pixijs.png");
-  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 620);
+  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 640);
   livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
 
   livro.Agradecimentos.pagina[1].logoCnpq = new Game.Image("CNPq_transparente.png");
