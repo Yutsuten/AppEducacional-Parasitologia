@@ -282,8 +282,8 @@ function carregaLivroAberto() {
     "      - Zoonose: doenças e infecções que são\n" +
     "transmitidos entre animais vertebrados e\n" +
     "os humanos. Atualmente são conhecidas\n" +
-    "100 zoonoses. Exemplo: doenças de Cha-\n" +
-    "gas, toxoplasmose e raiva."
+    "100 zoonoses. Exemplo: doenças de Chagas,\n" +
+    "toxoplasmose e raiva."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[3].texto1.setPosition(248, 120);
 
