@@ -68,31 +68,29 @@ function carregaLivroAberto() {
   livro.ObjetoDeApendizagem.pagina[0].texto1.setPosition(248, 190);
 
   livro.ObjetoDeApendizagem.pagina[0].texto2 = new Game.Text(
-    "bre o objeto interativo, como os ciclos de\n" +
-    "vida dos parasitas em questão e as suas\n" +
-    "consequentes doenças. Visualmente, o jogo\n" +
-    "é repleto de imagens e se é intencionado\n" +
-    "que estas sejam autoexplicativas, contando,\n" +
-    "num primeiro momento, com os auxílios\n" +
-    "das legendas.\n" +
+    "bre o objeto interativo, como os ciclos de vida\n" +
+    "dos parasitas em questão e as suas consequen-\n" +
+    "tes doenças. Visualmente, o jogo é repleto de\n" +
+    "imagens e se é intencionado que estas sejam\n" +
+    "autoexplicativas, contando, num primeiro mo-\n" +
+    "mento, com os auxílios das legendas.\n" +
     "     São expostas três telas: a principal, a sala\n" +
-    "de aula, na qual serão encontradas repre-\n" +
-    "sentações de quatro doenças e seus respec-\n" +
-    "tivos parasitas. À direita da tela principal\n" +
-    "será exposto o exterior da escola, com mais\n" +
-    "quatro doenças e seus três parasitas. À es-\n" +
-    "querda da sala de aula será apresentada\n" +
-    "uma estante repleta de livros interativos,\n" +
-    "nos quais serão explicadas as teorias sobre\n" +
-    "o Parasitismo e cada parasita abordado neste\n" +
-    "Objeto de Aprendizagem."
+    "de aula, na qual serão encontradas representa-\n" +
+    "ções de quatro doenças e seus respectivos pa-\n" +
+    "rasitas. À direita da tela principal será exposto\n" +
+    "o exterior da escola, com mais quatro doenças\n" +
+    "e seus três parasitas. À esquerda da sala de au-\n" +
+    "la será apresentada uma estante repleta de li-\n" +
+    "vros interativos, nos quais serão explicadas as\n" +
+    "teorias sobre o Parasitismo e cada parasita abor-\n" +
+    "dado neste Objeto de Aprendizagem."
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto2.setPosition(990, 120);
 
   livro.ObjetoDeApendizagem.pagina[0].texto3 = new Game.Text(
     "Vamos lá!"
     , estiloTextoLivro);
-  livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 800);
+  livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 700);
 
   // LIVRO: PARASITOLOGIA
   livro.newBook("Parasitologia");
