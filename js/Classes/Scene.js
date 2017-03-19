@@ -15,7 +15,7 @@ Game.Scene = function() {
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   var subtitle = new Game.Text("",
     {
-      "default": {fontFamily: "Book Antiqua", fontSize: "60px",
+      "default": {fontFamily: "Book Antiqua", fontSize: "56px",
         dropShadow: true, dropShadowBlur: 10,
         fill: 0xFFFFFF, align: "left"
       },
