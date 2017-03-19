@@ -56,41 +56,43 @@ function carregaLivroAberto() {
     "cional definido, um elemento que estimule\n" +
     "a reflexão do estudante e que sua constru-\n" +
     "ção seja de forma a facilitar a reutilização\n" +
-    "dentro de outros contextos de aprendizagem.\n" +
+    "dentro de outros contextos de aprendiza-\n" +
+    "gem.\n" +
     "     Desta forma, as autoras apresentam o\n" +
-    "presente Objeto de Aprendizagem em Parasi-\n" +
-    "tologia.\n" +
-    "     O software (ou “jogo”) conta com regiões\n" +
-    "clicáveis e interativas, as quais revelarão ao\n" +
-    "usuário informações adicionais sobre o objeto\n" +
-    "interativo, como os ciclos de vida dos para-\n" +
-    "sitas em questão e as suas consequentes doen-"
+    "presente Objeto de Aprendizagem em Pa-\n" +
+    "rasitologia.\n" +
+    "     O software (ou “jogo”) conta com regi-\n" +
+    "ões clicáveis e interativas, as quais revela-\n" +
+    "rão ao usuário informações adicionais so-"
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto1.setPosition(248, 190);
 
   livro.ObjetoDeApendizagem.pagina[0].texto2 = new Game.Text(
-    "ças. Visualmente, o jogo é repleto de imagens\n" +
-    "e se é intencionado que estas sejam autoexpli-\n" +
-    "cativas, contando, num primeiro momento,\n" +
-    "com os auxílios das legendas.\n" +
+    "bre o objeto interativo, como os ciclos de\n" +
+    "vida dos parasitas em questão e as suas\n" +
+    "consequentes doenças. Visualmente, o jogo\n" +
+    "é repleto de imagens e se é intencionado\n" +
+    "que estas sejam autoexplicativas, contando,\n" +
+    "num primeiro momento, com os auxílios\n" +
+    "das legendas.\n" +
     "     São expostas três telas: a principal, a sala\n" +
-    "de aula, na qual serão encontradas representa-\n" +
-    "ções de quatro doenças e seus respectivos\n" +
-    "parasitas. À direita da tela principal será ex-\n" +
-    "posto o exterior da escola, com mais quatro\n" +
-    "doenças e seus três parasitas. À esquerda da\n" +
-    "sala de aula será apresentada uma estante re-\n" +
-    "pleta de livros interativos, nos quais serão\n" +
-    "explicadas as teorias sobre o Parasitismo e\n" +
-    "cada parasita abordado neste Objeto de Apren-\n" +
-    "dizagem."
+    "de aula, na qual serão encontradas repre-\n" +
+    "sentações de quatro doenças e seus respec-\n" +
+    "tivos parasitas. À direita da tela principal\n" +
+    "será exposto o exterior da escola, com mais\n" +
+    "quatro doenças e seus três parasitas. À es-\n" +
+    "querda da sala de aula será apresentada\n" +
+    "uma estante repleta de livros interativos,\n" +
+    "nos quais serão explicadas as teorias sobre\n" +
+    "o Parasitismo e cada parasita abordado\n" +
+    "neste Objeto de Aprendizagem."
     , estiloTextoLivro);
   livro.ObjetoDeApendizagem.pagina[0].texto2.setPosition(990, 120);
 
   livro.ObjetoDeApendizagem.pagina[0].texto3 = new Game.Text(
     "Vamos lá!"
     , estiloTextoLivro);
-  livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 669);
+  livro.ObjetoDeApendizagem.pagina[0].texto3.setPosition(1414, 800);
 
   // LIVRO: PARASITOLOGIA
   livro.newBook("Parasitologia");
