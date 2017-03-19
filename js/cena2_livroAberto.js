@@ -43,20 +43,20 @@ function carregaLivroAberto() {
   livro.ObjetoDeApendizagem.pagina[0].titulo.setPosition(248, 120);
 
   livro.ObjetoDeApendizagem.pagina[0].texto1 = new Game.Text(
-    "     Os Objetos de Aprendizagem são uma tec-\n" +
-    "nologia recente que abre caminhos na educa-\n" +
-    "ção à distância e que serve de material de\n" +
-    "apoio a aula presencial tradicional. São ele-\n" +
-    "mentos de uma nova metodologia de ensino\n" +
-    "e aprendizagem baseada no uso do computa-\n" +
-    "dor e da Internet.\n" +
-    "     Apesar de sua definição ainda ser vaga, o\n" +
-    "o consenso é de que o Objeto de Aprendiza-\n" +
-    "gem deva possuir um propósito educacional\n" +
-    "definido, um elemento que estimule a refle-\n" +
-    "xão do estudante e que sua construção seja\n" +
-    "de forma a facilitar a reutilização dentro de\n" +
-    "outros contextos de aprendizagem.\n" +
+    "     Os Objetos de Aprendizagem são uma\n" +
+    "tecnologia recente que abre caminhos na\n" +
+    "educação à distância e que serve de mate-\n" +
+    "rial de apoio a aula presencial tradicional.\n" +
+    "São elementos de uma nova metodologia\n" +
+    "de ensino e aprendizagem baseada no uso\n" +
+    "do computador e da Internet.\n" +
+    "     Apesar de sua definição ainda ser vaga,\n" +
+    "o consenso é de que o Objeto de Aprendi-\n" +
+    "zagem deva possuir um propósito educa-\n" +
+    "cional definido, um elemento que estimule\n" +
+    "a reflexão do estudante e que sua constru-\n" +
+    "ção seja de forma a facilitar a reutilização\n" +
+    "dentro de outros contextos de aprendizagem.\n" +
     "     Desta forma, as autoras apresentam o\n" +
     "presente Objeto de Aprendizagem em Parasi-\n" +
     "tologia.\n" +
