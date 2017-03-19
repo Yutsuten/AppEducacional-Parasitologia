@@ -107,97 +107,105 @@ function carregaLivroAberto() {
 
   livro.Parasitologia.pagina[0].texto1 = new Game.Text(
     "     A parasitologia é o estudo dos parasitas\n" +
-    "animais e vegetais e da relação entre parasi-\n" +
-    "tas e seus hospedeiros.\n" +
+    "animais e vegetais e da relação entre para-\n" +
+    "sitas e seus hospedeiros.\n" +
     "     O parasitismo é a associação entre os se-\n" +
     "res vivos, na qual existe unilateralidade de\n" +
     "benefícios, ou seja, apenas um dos lados é\n" +
     "beneficiado. Neste sentido, o hospedeiro\n" +
     "provê abrigo e proteção ao parasita, o qual\n" +
     "prejudica e promove danos ao hospedeiro.\n" +
-    "De um modo geral, afirma-se que a associa-\n" +
-    "ção parasitária tende ao equilíbrio porque se\n" +
-    "o hospedeiro morre, o parasita também morre.\n" +
-    "Entretanto, percebe-se que na prática tal fato\n" +
-    "não ocorre, visto que ao evitar a morte, o pa-\n" +
-    "rasita não mata seu hospedeiro.\n" +
-    "     Para haver doenças parasitárias é necessá-\n" +
-    "rio que existam alguns fatores, quanto:\n" +
-    "     - ao parasito: como o número de indivídu-\n" +
-    "os que atingirão o hospedeiro, a sua virulência\n" +
-    "e a localização do parasito;\n" +
-    "     - ao hospedeiro: idade, nutrição, tipo de\n" +
-    "resposta imune."
+    "De um modo geral, afirma-se que a asso-\n" +
+    "ciação parasitária tende ao equilíbrio por-\n" +
+    "que se o hospedeiro morre, o parasita tam-\n" +
+    "bém morre. Entretanto, percebe-se que na\n" +
+    "prática tal fato não ocorre, visto que ao\n" +
+    "evitar a morte, o parasita não mata seu\n" +
+    "hospedeiro.\n" +
+    "     Para haver doenças parasitárias é nece-\n" +
+    "ssário que existam alguns fatores, quanto:\n" +
+    "     - ao parasito: como o número de indiví-\n" +
+    "duos que atingirão o hospedeiro, a sua vi-\n" +
+    "rulência e a localização do parasito;"
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto1.setPosition(248, 190);
 
   livro.Parasitologia.pagina[0].texto2 = new Game.Text(
-    "     A ação do parasita no hospedeiro é de gran-\n" +
-    "de importância na parasitologia, visto que é\n" +
-    "através dela que ocorrem as doenças. Dentre os\n" +
-    "tipos de ação dos parasitos, os principais são:\n" +
+   "     - ao hospedeiro: idade, nutrição, tipo de\n" +
+   "resposta imune.\n" +
+    "     A ação do parasita no hospedeiro é de\n" +
+    "grande importância na parasitologia, visto\n" +
+    "que é através dela que ocorrem as doenças.\n" +
+    "Dentre os tipos de ação dos parasitos, os\n" +
+    "principais são:\n" +
     "     - Mecânica: ação obstrutiva ou destrutiva\n" +
-    "que parasito exerce sobre algum órgão do hos-\n" +
-    "pedeiro;\n" +
-    "      - Espoliativa: ocorre quando o parasito re-\n" +
-    "tira nutrientes do hospedeiro;\n" +
-    "      - Traumática: quando o parasito promove\n" +
-    "traumas no hospedeiro, como fixação e migra-\n" +
-    "ção;\n" +
-    "      - Tóxica: produtos do metabolismo do pa-\n" +
-    "rasito é tóxico ao hospedeiro."
+    "que parasito exerce sobre algum órgão do\n" +
+    "hospedeiro;\n" +
+    "      - Espoliativa: ocorre quando o parasito\n" +
+    "retira nutrientes do hospedeiro;\n" +
+    "      - Traumática: quando o parasito promo-\n" +
+    "ve traumas no hospedeiro, como fixação e\n" +
+    "migração;\n" +
+    "      - Tóxica: produtos do metabolismo do\n" +
+    "parasito é tóxico ao hospedeiro."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[0].texto2.setPosition(990, 120);
 
   livro.Parasitologia.pagina[0].texto3 = new Game.Text(
-    "     Os helmintos (ou vermes) são grandes e vi-\n" +
-    "síveis a olho nu. Podem ser metazoários, para-\n" +
-    "sitos de animais, vegetais ou de vida livre.\n" +
-    "     São classificados em quatro filos:\n" +
-    "     - Platyelminthes: vermes achatados, os\n" +
-    "quais se subdividem em duas classes: Trema-\n" +
-    "toda: vermes em forma de folha e Cestoda:\n" +
-    "vermes em forma de fita."
+    "     Os helmintos (ou vermes) são grandes e\n" +
+    "visíveis a olho nu. Podem ser metazoários,\n" +
+    "parasitos de animais, vegetais ou de vida\n" +
+    "livre.\n" +
+    "     São classificados em quatro filos:"
     , estiloTextoLivro);
-  livro.Parasitologia.pagina[0].texto3.setPosition(990, 650);
+  livro.Parasitologia.pagina[0].texto3.setPosition(990, 750);
 
   // Parasitologia: Pagina 1
   livro.Parasitologia.pagina[1] = new Game.Page();
 
   livro.Parasitologia.pagina[1].texto1 = new Game.Text(
-    "     - Nematoda: vermes redondos, os quais se\n" +
-    "subdividem em: Adenophorea (não-parasitas\n" +
-    "do ser humano) e Sercenentea (parasitam o\n" +
-    "Homem e animais).\n" +
-    "      - Acanthocephala: vermes pseudoceloma-\n" +
-    "dos e pseudossegmentados.\n" +
-    "      - Annelida: grupo de metazoários, como a\n" +
-    "classe Oligochaeta (minhocas) e Hirudinea\n" +
-    "(sanguessugas).\n" +
-    "      No interior, ou não, de um hospedeiro, o\n" +
-    "parasita se desenvolve por meio de seu ciclo\n" +
-    "biológico. Como resultado da evolução dos\n" +
-    "parasitas, algumas fases de seus ciclos bioló-\n" +
-    "gicos são complicadas e outras mais simples,\n" +
-    "obtendo, de uma forma ou de outra, sucesso\n" +
-    "em sua reprodução e dispersão."
+   "     - Platyelminthes: vermes achatados, os\n" +
+   "quais se subdividem em duas classes: Tre-\n" +
+   "matoda: vermes em forma de folha e Ces-\n" +
+   "toda: vermes em forma de fita.\n" +
+    "     - Nematoda: vermes redondos, os quais\n" +
+    "se subdividem em: Adenophorea (não-\n" +
+    "parasitas do ser humano) e Sercenentea\n" +
+    "(parasitam o Homem e animais).\n" +
+    "      - Acanthocephala: vermes pseudocelo-\n" +
+    "mados e pseudossegmentados.\n" +
+    "      - Annelida: grupo de metazoários, co-\n" +
+    "mo a classe Oligochaeta (minhocas) e Hi-\n" +
+    "rudinea (sanguessugas).\n" +
+    "      No interior, ou não, de um hospedeiro,\n" +
+    "o parasita se desenvolve por meio de seu\n" +
+    "ciclo biológico. Como resultado da evolu-\n" +
+    "ção dos parasitas, algumas fases de seus\n" +
+    "ciclos biológicos são complicadas e outras\n" +
+    "mais simples, obtendo, de uma forma ou\n" +
+    "de outra, sucesso em sua reprodução e\n" +
+    "dispersão."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[1].texto1.setPosition(248, 120);
 
   livro.Parasitologia.pagina[1].titulo = new Game.Text(
     "      Glossário"
   , estiloTitulo);
-  livro.Parasitologia.pagina[1].titulo.setPosition(248, 680);
+  livro.Parasitologia.pagina[1].titulo.setPosition(990, 520);
 
   livro.Parasitologia.pagina[1].texto2 = new Game.Text(
-    "     - Agente infeccioso: todo parasito capaz de\n" +
-    "produzir infecção ou doença infecciosa.\n" +
-    "     - Agente etiológico: é o agente causador ou\n" +
-    "responsável pela origem da doença. Sendo as-\n" +
-    "sim, pode respresentar um fungo, bactéria, ví-\n" +
-    "rus, protozoário ou helminto."
+    "     - Agente infeccioso: todo parasito capaz\n" +
+    "de produzir infecção ou doença infecciosa.\n" +
+    "     - Agente etiológico: é o agente causador\n" +
+    "ou responsável pela origem da doença. Sen-\n" +
+    "do assim, pode respresentar um fungo, bac-\n" +
+    "téria, vírus, protozoário ou helminto.\n" +
+    "     - Contaminação: é a presença de um a-\n" +
+    "gente infeccioso na superfície do corpo, rou-\n" +
+    "pas, brinquedos, água, alimentos etc.\n" +
+    "     - Fase aguda: corresponde ao período logo"
     , estiloTextoLivro);
-  livro.Parasitologia.pagina[1].texto2.setPosition(248, 720);
+  livro.Parasitologia.pagina[1].texto2.setPosition(990, 570);
 
   livro.Parasitologia.pagina[1].tabela = new Game.Image("tabelaParasitologia.png");
   livro.Parasitologia.pagina[1].tabela.setPosition(1270, 270);
@@ -211,73 +219,76 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[1].legendaTabela.setPosition(1260, 460);
   livro.Parasitologia.pagina[1].legendaTabela.setAnchor(0.5, 0.5);
 
-  livro.Parasitologia.pagina[1].texto3 = new Game.Text(
-    "     - Contaminação: é a presença de um agente\n" +
-    "infeccioso na superfície do corpo, roupas, brin-\n" +
-    "quedos, água, alimentos etc.\n" +
-    "     - Fase aguda: corresponde ao período logo\n" +
-    "após a infecção, no qual os sintomas são mais\n" +
-    "marcantes (febre alta, dores de cabeça e abdo-\n" +
-    "minais etc). É um período de definição: o indi-\n" +
-    "víduo ou se cura, ou entra na fase crônica ou \n" +
-    "falece.\n" +
-    "     - Fase crônica: período que se segue à fase\n" +
-    "aguda; caracteriza-se pela diminuição dos sin-\n" +
-    "tomas e por um equilíbrio elativo entre o hos-"
-    , estiloTextoLivro);
-  livro.Parasitologia.pagina[1].texto3.setPosition(990, 520);
-
   // Parasitologia: Pagina 2
   livro.Parasitologia.pagina[2] = new Game.Page();
 
   livro.Parasitologia.pagina[2].texto1 = new Game.Text(
-    "pedeiro e o parasita. Este equilíbrio pode ser\n" +
-    "quebrado em favor de amobos os lados.\n" +
-    "      - Hospedeiro definitivo: o hospedeiro é\n" +
-    "aquele que contém o parasito. O hospedeiro\n" +
-    "definitivo é o que apresenta o parasito em sua\n" +
-    "fase matura ou em fase de atividade sexual.\n" +
-    "Exemplo: o hospedeiro definitivo de <i>T. gondii</i>\n" +
-    "é o gato, enquanto que o da <i>Taenia</i> sp é o ser\n" +
-    "humano.\n" +
-    "      - Hospedeiro intermediário: é aquele que\n" +
-    "possui o parasito em sua forma larvária ou as-\n" +
-    "sexuada. Exemplo: os bovinos ou suínos são\n" +
-    "hospedeiros intermediários de <i>Taenia</i> sp e o\n" +
-    "humano do <i>Plasmodium</i> sp.\n" +
-    "      - Infecção: penetração e desenvolvimento\n" +
-    "de um agente infeccioso (vírus, bactérias, pro-\n" +
-    "tozoários ou helmintos) dentro de um organis-\n" +
-    "mo.\n" +
-    "      - Patogenia: é o mecanismo pelo qual um\n" +
-    "agente infeccioso provoca lesões no hospedei-\n" +
-    "ro. Exemplo: a <i>Giardia lamblia</i> adere ao intes-\n" +
-    "tino dificultando a absorção de nutrientes e\n" +
-    "causando lesões na parede intestinal, provo-\n" +
-    "cando diarréias e respostas inflamatórias."
+    "após a infecção, no qual os sintomas são\n" +
+    "mais marcantes (febre alta, dores de cabeça\n" +
+    "e abdominais etc). É um período de defi-\n" +
+    "nição: o indivíduo ou se cura, ou entra na\n" +
+    "fase crônica ou falece.\n" +
+    "     - Fase crônica: período que se segue à\n" +
+    "fase aguda; caracteriza-se pela diminuição\n" +
+    "dos sintomas e por um equilíbrio elativo\n" +
+    "entre o hospedeiro e o parasita. Este equi-\n" +
+    "líbrio pode ser quebrado em favor de am-\n" +
+    "bos os lados.\n" +
+    "      - Hospedeiro definitivo: o hospedeiro\n" +
+    "é aquele que contém o parasito. O hospe-\n" +
+    "deiro definitivo é o que apresenta o para-\n" +
+    "sito em sua fase matura ou em fase de ati-\n" +
+    "vidade sexual. Exemplo: o hospedeiro de-\n" +
+    "finitivo de <i>T. gondii</i> é o gato, enquanto que\n" +
+    "o da <i>Taenia</i> sp é o ser humano.\n" +
+    "      - Hospedeiro intermediário: é aquele\n" +
+    "que possui o parasito em sua forma larvá-\n" +
+    "ria ou assexuada. Exemplo: os bovinos ou\n" +
+    "suínos são hospedeiros intermediários de\n" +
+    "<i>Taenia</i> sp e o humano do <i>Plasmodium</i> sp."
     , estiloTextoLivro);
   livro.Parasitologia.pagina[2].texto1.setPosition(248, 120);
 
   livro.Parasitologia.pagina[2].texto2 = new Game.Text(
-    "      - Patogenicidade: é a habilidade de um a-\n" +
-    "gente infeccioso em provocar lesões. Exemplo:\n" +
-    "<i>Taenia saginata</i> tem patogenicidade baixa.\n" +
-    "      - Vetor: é qualquer organismo que sirva de\n" +
-    "veículo para o parasito entre dois hospederei-\n" +
-    "ros, podendo ser um artrópode ou molusco.\n" +
-    "Exemplo: Mosquito que transmite a malária, o\n" +
-    "<i>Anopheles</i> sp.\n" +
+    "      - Infecção: penetração e desenvolvi-\n" +
+    "mento de um agente infeccioso (vírus, bac-\n" +
+    "térias, protozoários ou helmintos) dentro\n" +
+    "de um organismo.\n" +
+    "      - Patogenia: é o mecanismo pelo qual\n" +
+    "um agente infeccioso provoca lesões no hos-\n" +
+    "pedeiro. Exemplo: a <i>Giardia lamblia</i> adere\n" +
+    "ao intestino dificultando a absorção de nu-\n" +
+    "trientes e causando lesões na parede intes-\n" +
+    "tinal, provocando diarréias e respostas in-\n" +
+    "flamatórias.\n" +
+    "      - Patogenicidade: é a habilidade de um\n" +
+    "agente infeccioso em provocar lesões. Exem-\n" +
+    "plo: <i>Taenia saginata</i> tem patogenicidade\n" +
+    "baixa.\n" +
+    "      - Vetor: é qualquer organismo que sirva\n" +
+    "de veículo para o parasito entre dois hospe-\n" +
+    "dereiros, podendo ser um artrópode ou mo-\n" +
+    "lusco. Exemplo: Mosquito que transmite a\n" +
+    "malária, o <i>Anopheles</i> sp.\n" +
     "      - Virulência: é a severidade e rapidez com\n" +
-    "as quais o agente infeccioso provoca lesões no\n" +
-    "hospedeiro. Exemplo: a <i>E. histolytica</i> provoca\n" +
-    "lesões severas rapidamente.\n" +
-    "      - Zoonose: doenças e infecções que são\n" +
-    "transmitidos entre animais vertebrados e os hu-\n" +
-    "manos. Atualmente são conhecidas 100 zoono-\n" +
-    "ses. Exemplo: doenças de Chagas, toxoplasmo-\n" +
-    "se e raiva."
+    "as quais o agente infeccioso provoca lesões\n" +
+    "no hospedeiro. Exemplo: a <i>E. histolytica</i> pro-"
+
     , estiloTextoLivro);
   livro.Parasitologia.pagina[2].texto2.setPosition(990, 120);
+
+  // Parasitologia: Pagina 3
+  livro.Parasitologia.pagina[3] = new Game.Page();
+
+  livro.Parasitologia.pagina[3].texto1 = new Game.Text(
+    "voca lesões severas rapidamente.\n" +
+    "      - Zoonose: doenças e infecções que são\n" +
+    "transmitidos entre animais vertebrados e\n" +
+    "os humanos. Atualmente são conhecidas\n" +
+    "100 zoonoses. Exemplo: doenças de Cha-\n" +
+    "gas, toxoplasmose e raiva."
+    , estiloTextoLivro);
+  livro.Parasitologia.pagina[3].texto1.setPosition(248, 120);
 
   // LIVRO: AMEBIASE
   livro.newBook("Amebiase");
