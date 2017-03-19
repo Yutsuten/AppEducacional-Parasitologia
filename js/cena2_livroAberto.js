@@ -503,10 +503,10 @@ function carregaLivroAberto() {
     "     No ser humano, o desenvolvimento do pa-\n" +
     "rasita termina quando ocorre a formação dos\n" +
     "gametócitos. O ciclo continua no interior do\n" +
-    "mosquito, assim, o <i>Plasmodium</i> sp depende do\n" +
-    "hospedeiro infectado ser novamente picado e,\n" +
-    "consequentemente, que outro <i>Anopheles</i> sp se\n" +
-    "infecte, para que seu ciclo termine.\n" +
+    "mosquito, assim, o <i>Plasmodium</i> sp depende\n" +
+    "do hospedeiro infectado ser novamente pica-\n" +
+    "do e, consequentemente, que outro <i>Anopheles</i>\n" +
+    "sp se infecte, para que seu ciclo termine.\n" +
     "     A reprodução sexuada que ocorre no inte-\n" +
     "rior do mosquito gera esporozoítos e, assim, o\n" +
     "ciclo se completa."
