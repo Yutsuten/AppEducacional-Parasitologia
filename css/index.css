@@ -7,3 +7,8 @@
     font-family: "CircleCaps";
     src: url("../font/CircleCaps.ttf");
 }
+
+@font-face {
+    font-family: "Book Antiqua";
+    src: url("../font/Book Antiqua.ttf");
+}
