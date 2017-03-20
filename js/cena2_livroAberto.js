@@ -1160,9 +1160,18 @@ function carregaLivroAberto() {
   livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(540, 640);
   livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
 
+  livro.Agradecimentos.pagina[1].parceria = new Game.Text(
+    "      Parceria:"
+  , estiloTitulo);
+  livro.Agradecimentos.pagina[1].parceria.setPosition(990, 120);
+
   livro.Agradecimentos.pagina[1].logoCnpq = new Game.Image("CNPq_transparente.png");
-  livro.Agradecimentos.pagina[1].logoCnpq.setPosition(1250, 210);
+  livro.Agradecimentos.pagina[1].logoCnpq.setPosition(1250, 320);
   livro.Agradecimentos.pagina[1].logoCnpq.setScale(0.6);
+
+  livro.Agradecimentos.pagina[1].logoLtia = new Game.Image("LtiaLogo.png");
+  livro.Agradecimentos.pagina[1].logoLtia.setPosition(1250, 560);
+  livro.Agradecimentos.pagina[1].logoLtia.setScale(0.6);
 
   // Cria os itens com o conteudo dos livros
   livro.createItems();
