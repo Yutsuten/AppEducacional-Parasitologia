@@ -9,12 +9,13 @@ sceneLoader[1] = function() {
 
   // Adicionando uma imagem de fundo
   scene[1].background = new Game.Background("cenaExterior.jpg");
+  scene[1].background.setBrightness(210);
   // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
   // Mostrar as coordenadas
   scene[1].background.setInteractive(true);
   scene[1].background.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
-    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
+    //console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
   // Criando um aliase de scene[1].item

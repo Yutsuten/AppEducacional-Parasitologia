@@ -29,7 +29,7 @@ sceneLoader[0] = function() {
   scene[0].background.setInteractive(true);
   scene[0].background.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
-    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
+    //console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
   // Criando um aliase de scene[0].item
