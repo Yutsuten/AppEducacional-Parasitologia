@@ -265,7 +265,7 @@ function carregaCicloTaeniaSaginata() {
   }
   itensVacaCiclo.push(item.vacaElem4);
 
-  item.vacaSetaElem4Est = new Game.Line(580, 800, 950, 770, 4);
+  item.vacaSetaElem4Est = new Game.Line(580, 800, 968, 793, 4);
   item.vacaSetaElem4Est.setColor(0, 0, 0);
   item.vacaSetaElem4Est.setZorder(7);
   item.vacaSetaElem4Est.setAlpha(0);
