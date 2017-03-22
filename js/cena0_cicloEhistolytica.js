@@ -44,6 +44,9 @@ function carregaCicloEhistolytica() {
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
+
     // Fadeout unrelated images
     scene[0].background.changeBrightness(100, 600);
     item.carteiras.changeBrightness(100, 600);

@@ -58,7 +58,7 @@ sceneLoader[1] = function() {
 
   item.popupLatrinaPoco = new Game.Image("popupLatrinaPoco.png");
   item.popupLatrinaPoco.setPosition(1210, 440);
-  item.popupLatrinaPoco.setScale(0.23);
+  item.popupLatrinaPoco.setScale(0.24);
   item.popupLatrinaPoco.disable();
 
   item.popupLatrinaPocoTexto = new Game.Text(
@@ -76,7 +76,7 @@ sceneLoader[1] = function() {
     "guidas: a construção da fossa se\n" +
     "deu próxima ao poço."
     ,estiloInfoPopup);
-  item.popupLatrinaPocoTexto.setPosition(1110, 430);
+  item.popupLatrinaPocoTexto.setPosition(1106, 430);
   item.popupLatrinaPocoTexto.setAnchor(0.5, 0.5);
   item.popupLatrinaPocoTexto.disable();
 
@@ -121,15 +121,15 @@ sceneLoader[1] = function() {
   item.pocoExterior.setZorder(10);
   item.pocoExterior.onMouseOver = function() {
     scene[1].setSubtitle("Poço artesiano");
-    item.popupLatrinaPoco.enable();
+    /*item.popupLatrinaPoco.enable();
     item.popupLatrinaPocoTexto.enable();
     item.popupChorume.disable();
-    item.popupChorumeTexto.disable();
+    item.popupChorumeTexto.disable();*/
   }
   item.pocoExterior.onMouseOut = function() {
     scene[1].setSubtitle("");
-    item.popupLatrinaPoco.disable();
-    item.popupLatrinaPocoTexto.disable();
+    /*item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();*/
   }
 
   item.vacaExterior = new Game.Image("vacaExterior.png");

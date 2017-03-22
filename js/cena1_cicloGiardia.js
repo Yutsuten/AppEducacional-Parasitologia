@@ -20,6 +20,11 @@ function carregaCicloGiardia() {
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
+
     // Fadeout unrelated images
     scene[1].background.changeBrightness(100, 600);
     item.chiqueiro.changeBrightness(100, 600);
