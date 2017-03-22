@@ -45,10 +45,40 @@ sceneLoader[1] = function() {
   item.latrina.setZorder(15);
   item.latrina.onMouseOver = function() {
     scene[1].setSubtitle("Fossa");
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
   }
   item.latrina.onMouseOut = function() {
     scene[1].setSubtitle("");
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
+
+  item.popupLatrinaPoco = new Game.Image("popupLatrinaPoco.png");
+  item.popupLatrinaPoco.setPosition(1210, 440);
+  item.popupLatrinaPoco.setScale(0.23);
+  item.popupLatrinaPoco.disable();
+
+  item.popupLatrinaPocoTexto = new Game.Text(
+    "Contaminação do poço artesiano\n" +
+    "a partir da fossa. A localização\n" +
+    "do poço deve levar em conta os\n" +
+    "riscos de contaminação do lençol\n" +
+    "freático, portanto, deve-se respei-\n" +
+    "tar uma distância mínima de 15\n" +
+    "metros de qualquer fossa e de 45\n" +
+    "metros de chiqueiros, por exem-\n" +
+    "plo. No ambiente representado\n" +
+    "por esse Objeto de Aprendiza-\n" +
+    "gem, estas regras não foram se-\n" +
+    "guidas: a construção da fossa se\n" +
+    "deu próxima ao poço."
+    ,estiloInfoPopup);
+  item.popupLatrinaPocoTexto.setPosition(1110, 430);
+  item.popupLatrinaPocoTexto.setAnchor(0.5, 0.5);
+  item.popupLatrinaPocoTexto.disable();
 
   item.lixeira = new Game.Item("lixeira.png");
   item.lixeira.setPosition(567, 288);
@@ -57,6 +87,8 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("Lixo");
     item.popupChorume.enable();
     item.popupChorumeTexto.enable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.lixeira.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -89,9 +121,15 @@ sceneLoader[1] = function() {
   item.pocoExterior.setZorder(10);
   item.pocoExterior.onMouseOver = function() {
     scene[1].setSubtitle("Poço artesiano");
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
   }
   item.pocoExterior.onMouseOut = function() {
     scene[1].setSubtitle("");
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
 
   item.vacaExterior = new Game.Image("vacaExterior.png");
