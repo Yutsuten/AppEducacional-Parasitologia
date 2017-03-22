@@ -126,6 +126,11 @@ var gameImages = [
   "okNormal.png",
   "okHover.png",
 
+  // Pop-ups
+  "popupChorume.png",
+  "popupFlores.png",
+  "popupLatrinaPoco.png",
+
   // Imagens Gerais (usadas em varios lugares)
   "botaoFechar.png",
   "seta.png"

@@ -1,5 +1,19 @@
 'use strict';
 
+var estiloInfoPopup = {
+  "default" : {
+    fontFamily: "Book Antiqua",
+    fill: 0x010101,
+    fontSize: "25px"
+  },
+  "i" : {
+    fontStyle: "italic"
+  },
+  "b" : {
+    fontStyle: "bold"
+  }
+}
+
 sceneLoader[0] = function() {
 
   // Iniciando a nova cena
@@ -48,10 +62,33 @@ sceneLoader[0] = function() {
   item.vasoDeFlores.setBrightness(210);
   item.vasoDeFlores.onMouseOver = function() {
     scene[0].setSubtitle("Vaso com água parada");
+    item.popupFlores.enable();
+    item.popupFloresTexto.enable();
   }
   item.vasoDeFlores.onMouseOut = function() {
     scene[0].setSubtitle("");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
+
+  item.popupFlores = new Game.Image("popupFlores.png");
+  item.popupFlores.setPosition(1400, 210);
+  item.popupFlores.setScale(0.32);
+  item.popupFlores.disable();
+
+  item.popupFloresTexto = new Game.Text(
+    "Vaso de planta com água\n" +
+    "parada. Este é um local\n" +
+    "propício para a postura\n" +
+    "de ovos e desenvolvi-\n" +
+    "mento de larvas de mos-\n" +
+    "quitos, como, por exem-\n" +
+    "plo, o <i>Anopheles</i> sp,\n" +
+    "vetor da malária."
+    ,estiloInfoPopup);
+  item.popupFloresTexto.setPosition(1315, 160);
+  item.popupFloresTexto.setAnchor(0.5, 0.5);
+  item.popupFloresTexto.disable();
 
   // Adiciona uma seta para levar a cena externa
   item.setaJanela = new Game.Item("seta.png");
