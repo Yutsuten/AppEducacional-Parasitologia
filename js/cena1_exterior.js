@@ -55,10 +55,34 @@ sceneLoader[1] = function() {
   item.lixeira.setZorder(16);
   item.lixeira.onMouseOver = function() {
     scene[1].setSubtitle("Lixo");
+    item.popupChorume.enable();
+    item.popupChorumeTexto.enable();
   }
   item.lixeira.onMouseOut = function() {
     scene[1].setSubtitle("");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
   }
+
+  item.popupChorume = new Game.Image("popupChorume.png");
+  item.popupChorume.setPosition(900, 460);
+  item.popupChorume.setScale(0.27);
+  item.popupChorume.disable();
+
+  item.popupChorumeTexto = new Game.Text(
+    "Contaminação do solo atra-\n" +
+    "vés do chorume proveniente\n" +
+    "do lixo depositado de modo\n" +
+    "inadequado e por muito\n" +
+    "tempo no local. O chorume\n" +
+    "é um resíduo líquido forma-\n" +
+    "do a partir da decomposição\n" +
+    "de matéria orgânica presen-\n" +
+    "te no lixo."
+    ,estiloInfoPopup);
+  item.popupChorumeTexto.setPosition(1010, 500);
+  item.popupChorumeTexto.setAnchor(0.5, 0.5);
+  item.popupChorumeTexto.disable();
 
   item.pocoExterior = new Game.Item("pocoExterior.png");
   item.pocoExterior.setPosition(1723, 643);
