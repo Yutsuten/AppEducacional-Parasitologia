@@ -230,14 +230,14 @@ function carregaCicloEhistolytica() {
   }
   itensBananaCiclo.push(item.bananaElem2b);
 
-  item.bananaSetaElem2bEst = new Game.Line(537, 750, 940, 810, 4);
+  item.bananaSetaElem2bEst = new Game.Line(537, 750, 920, 802, 4);
   item.bananaSetaElem2bEst.setColor(0, 0, 0);
   item.bananaSetaElem2bEst.setZorder(7);
   item.bananaSetaElem2bEst.setAlpha(0);
   item.bananaSetaElem2bEst.disable();
   itensBananaCiclo.push(item.bananaSetaElem2bEst);
 
-  item.bananaSetaEstElem3a = new Game.Line(1010, 770, 1330, 250, 4);
+  item.bananaSetaEstElem3a = new Game.Line(966, 814, 1330, 250, 4);
   item.bananaSetaEstElem3a.setColor(0, 0, 0);
   item.bananaSetaEstElem3a.setZorder(7);
   item.bananaSetaEstElem3a.setAlpha(0);
