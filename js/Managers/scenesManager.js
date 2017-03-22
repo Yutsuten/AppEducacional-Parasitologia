@@ -8,7 +8,7 @@ var onSceneClose = [];
 var lastScene = null;
 var currentScene = null;
 var animDelay = 33;
-var sceneAnimationTime = 350;
+var sceneAnimationTime = 400;
 var elapsedTime = 0;
 var sceneFadeInterval;
 
@@ -17,6 +17,7 @@ function setScene(newScene) {
   lastScene = currentScene;
   currentScene = newScene;
   scene[currentScene].playSceneMusic();
+  scene[currentScene].enabled = true;
   UpdateScreen();
 }
 
@@ -29,8 +30,8 @@ function changeScene(newScene) {
   currentScene = newScene;
 
   // Interval when both scenes appear at the same time
-  scene[lastScene].disableSceneInteractiveness();
-  scene[currentScene].disableSceneInteractiveness();
+  scene[lastScene].disable();
+  scene[currentScene].disable();
   scene[currentScene].saveAlphaValues();
   scene[currentScene].setFade(0);
 
@@ -53,8 +54,7 @@ function sceneFade() {
   // Finished animation
   else {
     scene[currentScene].setFade(1);
-    scene[lastScene].enableSceneInteractiveness();
-    scene[currentScene].enableSceneInteractiveness();
+    scene[currentScene].enable();
     clearInterval(sceneFadeInterval); // Stop calling itself
   }
   UpdateScreen();

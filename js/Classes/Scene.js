@@ -11,7 +11,9 @@ Game.Scene = function() {
   var itemAlpha = [];
   var spritesheetAlpha = [];
   var itemInteractiveness = [];
+  var backgroundInteractiveness = null;
   var itemsArray = [];
+  var enabled = false;
   var backgroundMask = new Game.Rectangle(renderer.view.width, renderer.view.height);
   var subtitle = new Game.Text("",
     {
@@ -89,6 +91,7 @@ Game.Scene = function() {
   }
 
   this.saveInteractiveness = function() {
+    backgroundInteractiveness = this.background.interactive;
     for (var i = 0; i < itemsArray.length; i++) {
       itemInteractiveness[i] = itemsArray[i].interactive;
     }
@@ -103,16 +106,23 @@ Game.Scene = function() {
     }
   }
 
-  this.disableSceneInteractiveness = function() {
-    this.saveInteractiveness();
-    for (var i = 0; i < itemsArray.length; i++) {
-      itemsArray[i].interactive = false;
+  this.disable = function() {
+    if (enabled) {
+      this.background.interactive = false;
+      for (var i = 0; i < itemsArray.length; i++) {
+        itemsArray[i].interactive = false;
+      }
+      enabled = false;
     }
   }
 
-  this.enableSceneInteractiveness = function() {
-    for (var i = 0; i < itemsArray.length; i++) {
-      itemsArray[i].interactive = itemInteractiveness[i];
+  this.enable = function() {
+    if (!enabled) {
+      this.background.interactive = backgroundInteractiveness;
+      for (var i = 0; i < itemsArray.length; i++) {
+        itemsArray[i].interactive = itemInteractiveness[i];
+      }
+      enabled = true;
     }
   }
 

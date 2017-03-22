@@ -24,13 +24,6 @@ sceneLoader[0] = function() {
   // Adicionando uma imagem de fundo
   scene[0].background = new Game.Background("salaDeAula.jpg");
   scene[0].background.setBrightness(210);
-  // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
-  // Mostrar as coordenadas
-  scene[0].background.setInteractive(true);
-  scene[0].background.click = function(mouse) {
-    var mousePosition = mouse.data.getLocalPosition(stage);
-    //console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-  }
 
   // Criando um aliase de scene[0].item
   var item = scene[0].item;
@@ -124,7 +117,7 @@ sceneLoader[0] = function() {
     item.setaArmario.setBrightness(220);
   }
   item.setaArmario.onClick = function(mouse) {
-    changeScene(2); // Muda para a cena exterior
+    changeScene(2); // Muda para o armario
   }
 
   // Carrega ciclos

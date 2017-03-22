@@ -15,7 +15,7 @@ sceneLoader[2] = function() {
   scene[2].background.setInteractive(true);
   scene[2].background.click = function(mouse) {
     var mousePosition = mouse.data.getLocalPosition(stage);
-    //console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
+    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
   }
 
   // Criando um aliase de scene[2].item
@@ -200,7 +200,7 @@ sceneLoader[2] = function() {
     item.setaSalaDeAula.setBrightness(220);
   }
   item.setaSalaDeAula.onClick = function(mouse) {
-    changeScene(0); // Muda para a cena exterior
+    changeScene(0); // Muda para a sala de aula
   }
 
   carregaLivroAberto();

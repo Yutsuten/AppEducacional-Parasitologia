@@ -27,10 +27,12 @@ loader.add(gameImages)
   .load(function() {
     progressScreenText = null; // Delete the loading object
     for (var i = 0; i < sceneLoader.length; i++) {
-      if (sceneLoader[i] != null)
+      if (sceneLoader[i] != null) {
         sceneLoader[i]();
+        scene[i].saveInteractiveness();
+      }
       else
-        console.log("ERROR: Failed to load scene " + i);
+        console.warn("ERROR: Failed to load scene " + i);
     }
 
     // Initial Scene
