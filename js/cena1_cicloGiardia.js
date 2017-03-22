@@ -200,7 +200,7 @@ function carregaCicloGiardia() {
   item.pocoSetaEst1Elem2.disable();
   itensPocoCiclo.push(item.pocoSetaEst1Elem2);
 
-  item.pocoSetaEst2Elem2 = new Game.Line(860, 700, 1180, 280, 4);
+  item.pocoSetaEst2Elem2 = new Game.Line(878, 755, 1180, 280, 4);
   item.pocoSetaEst2Elem2.setColor(0, 0, 0);
   item.pocoSetaEst2Elem2.setZorder(7);
   item.pocoSetaEst2Elem2.setAlpha(0);
