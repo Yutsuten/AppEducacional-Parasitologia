@@ -10,13 +10,6 @@ sceneLoader[2] = function() {
   // Adicionando uma imagem de fundo
   scene[2].background = new Game.Background("armario.jpg");
   scene[2].background.setBrightness(210);
-  // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
-  // Mostrar as coordenadas
-  scene[2].background.setInteractive(true);
-  scene[2].background.click = function(mouse) {
-    var mousePosition = mouse.data.getLocalPosition(stage);
-    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-  }
 
   // Criando um aliase de scene[2].item
   var item = scene[2].item;

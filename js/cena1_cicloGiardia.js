@@ -10,6 +10,10 @@ function carregaCicloGiardia() {
   item.estPocoNormal.onMouseOver = function() {
     item.estPocoNormal.setBrightness(255);
     scene[1].setSubtitle("Giardíase");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.estPocoNormal.onMouseOut = function() {
     item.estPocoNormal.setBrightness(220);

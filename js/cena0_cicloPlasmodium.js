@@ -10,6 +10,8 @@ function carregaCicloPlasmodium() {
   item.estPernNormal.onMouseOver = function() {
     item.estPernNormal.setBrightness(255);
     scene[0].setSubtitle("Malária");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.estPernNormal.onMouseOut = function() {
     item.estPernNormal.setBrightness(220);

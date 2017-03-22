@@ -11,6 +11,10 @@ function carregaCicloTaeniaSolium() {
   item.estPorcoNormal.onMouseOver = function() {
     item.estPorcoNormal.setBrightness(255);
     scene[1].setSubtitle("Teníase");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.estPorcoNormal.onMouseOut = function() {
     item.estPorcoNormal.setBrightness(220);

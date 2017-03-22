@@ -34,6 +34,8 @@ sceneLoader[0] = function() {
   item.caixaDeAreia.setBrightness(210);
   item.caixaDeAreia.onMouseOver = function() {
     scene[0].setSubtitle("Caixa de areia");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.caixaDeAreia.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -92,6 +94,8 @@ sceneLoader[0] = function() {
   item.setaJanela.onMouseOver = function() {
     scene[0].setSubtitle("Ambiente externo");
     item.setaJanela.setBrightness(255);
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.setaJanela.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -111,6 +115,8 @@ sceneLoader[0] = function() {
   item.setaArmario.onMouseOver = function() {
     scene[0].setSubtitle("Armário");
     item.setaArmario.setBrightness(255);
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.setaArmario.onMouseOut = function() {
     scene[0].setSubtitle("");

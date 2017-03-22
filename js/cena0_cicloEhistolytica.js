@@ -34,6 +34,8 @@ function carregaCicloEhistolytica() {
   item.estBananaNormal.onMouseOver = function() {
     item.estBananaNormal.setBrightness(255);
     scene[0].setSubtitle("Amebíase");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.estBananaNormal.onMouseOut = function() {
     item.estBananaNormal.setBrightness(220);

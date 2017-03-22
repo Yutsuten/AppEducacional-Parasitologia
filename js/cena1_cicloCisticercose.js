@@ -12,6 +12,10 @@ function carregaCicloCisticercose() {
   item.estCenouraNormal.onMouseOver = function() {
     item.estCenouraNormal.setBrightness(255);
     scene[1].setSubtitle("Cisticercose");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.estCenouraNormal.onMouseOut = function() {
     item.estCenouraNormal.setBrightness(220);

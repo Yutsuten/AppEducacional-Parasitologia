@@ -10,6 +10,8 @@ function carregaCicloAscaris() {
   item.estTomateNormal.onMouseOver = function() {
     item.estTomateNormal.setBrightness(255);
     scene[0].setSubtitle("Ascaridíase");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.estTomateNormal.onMouseOut = function() {
     item.estTomateNormal.setBrightness(220);

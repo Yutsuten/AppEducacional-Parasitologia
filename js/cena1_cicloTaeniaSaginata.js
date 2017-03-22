@@ -11,6 +11,10 @@ function carregaCicloTaeniaSaginata() {
   item.estVacaNormal.onMouseOver = function() {
     item.estVacaNormal.setBrightness(255);
     scene[1].setSubtitle("Teníase");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.estVacaNormal.onMouseOut = function() {
     item.estVacaNormal.setBrightness(220);

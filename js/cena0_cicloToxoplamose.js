@@ -10,6 +10,8 @@ function carregaCicloToxoplasmose() {
   item.estGatoNormal.onMouseOver = function() {
     item.estGatoNormal.setBrightness(255);
     scene[0].setSubtitle("Toxoplasmose");
+    item.popupFlores.disable();
+    item.popupFloresTexto.disable();
   }
   item.estGatoNormal.onMouseOut = function() {
     item.estGatoNormal.setBrightness(220);

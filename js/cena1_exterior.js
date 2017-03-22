@@ -10,13 +10,6 @@ sceneLoader[1] = function() {
   // Adicionando uma imagem de fundo
   scene[1].background = new Game.Background("cenaExterior.jpg");
   scene[1].background.setBrightness(210);
-  // Para ajuda no desenvolvimento, colocando um evento de clique no fundo para
-  // Mostrar as coordenadas
-  scene[1].background.setInteractive(true);
-  scene[1].background.click = function(mouse) {
-    var mousePosition = mouse.data.getLocalPosition(stage);
-    console.log(Math.round(mousePosition.x) + "; " + Math.round(mousePosition.y));
-  }
 
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
@@ -26,6 +19,10 @@ sceneLoader[1] = function() {
   item.chiqueiro.setZorder(15);
   item.chiqueiro.onMouseOver = function() {
     scene[1].setSubtitle("Chiqueiro");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.chiqueiro.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -36,6 +33,10 @@ sceneLoader[1] = function() {
   item.horta.setZorder(10);
   item.horta.onMouseOver = function() {
     scene[1].setSubtitle("Horta");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.horta.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -122,6 +123,10 @@ sceneLoader[1] = function() {
   item.pocoExterior.setZorder(10);
   item.pocoExterior.onMouseOver = function() {
     scene[1].setSubtitle("Poço artesiano");
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
     /*item.popupLatrinaPoco.enable();
     item.popupLatrinaPocoTexto.enable();
     item.popupChorume.disable();
@@ -147,6 +152,10 @@ sceneLoader[1] = function() {
   item.setaSalaDeAula.onMouseOver = function() {
     scene[1].setSubtitle("Sala de aula");
     item.setaSalaDeAula.setBrightness(255);
+    item.popupChorume.disable();
+    item.popupChorumeTexto.disable();
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
   item.setaSalaDeAula.onMouseOut = function() {
     scene[1].setSubtitle("");
