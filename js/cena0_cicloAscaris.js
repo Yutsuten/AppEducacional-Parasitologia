@@ -197,7 +197,7 @@ function carregaCicloAscaris() {
   item.tomateNum2.disable();
   itensTomateCiclo.push(item.tomateNum2);
 
-  item.tomateSetaElem2Est = new Game.Line(380, 550, 840, 700, 4);
+  item.tomateSetaElem2Est = new Game.Line(380, 550, 897, 721, 4);
   item.tomateSetaElem2Est.setColor(0, 0, 0);
   item.tomateSetaElem2Est.setZorder(7);
   item.tomateSetaElem2Est.setAlpha(0);
@@ -298,7 +298,7 @@ function carregaCicloAscaris() {
   }
   itensTomateCiclo.push(item.tomateElem3d);
 
-  item.tomateSetaElem4Est = new Game.Line(420, 850, 840, 760, 4);
+  item.tomateSetaElem4Est = new Game.Line(420, 850, 886, 751, 4);
   item.tomateSetaElem4Est.setColor(0, 0, 0);
   item.tomateSetaElem4Est.setZorder(7);
   item.tomateSetaElem4Est.setAlpha(0);
