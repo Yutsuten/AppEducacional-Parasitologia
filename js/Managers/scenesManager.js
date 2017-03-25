@@ -17,7 +17,7 @@ function setScene(newScene) {
   lastScene = currentScene;
   currentScene = newScene;
   scene[currentScene].playSceneMusic();
-  scene[currentScene].enabled = true;
+  scene[currentScene].enable();
   UpdateScreen();
 }
 
