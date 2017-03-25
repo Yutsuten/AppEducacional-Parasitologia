@@ -21,6 +21,8 @@ function carregaCicloGiardia() {
   }
   item.estPocoNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -343,6 +345,8 @@ function carregaCicloGiardia() {
   }
   item.pocoFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -538,6 +542,8 @@ function carregaCicloGiardia() {
   }
   item.pocoBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

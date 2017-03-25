@@ -22,8 +22,9 @@ function carregaCicloCisticercose() {
     scene[1].setSubtitle("");
   }
   item.estCenouraNormal.onClick = function() {
-
       disableInteractiveness();
+      somClique();
+
       var currentTime = 0;
       var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -182,6 +183,8 @@ function carregaCicloCisticercose() {
   }
   item.cenouraFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -372,6 +375,8 @@ function carregaCicloCisticercose() {
   }
   item.cenouraBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

@@ -19,6 +19,8 @@ function carregaCicloAscaris() {
   }
   item.estTomateNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -401,6 +403,8 @@ function carregaCicloAscaris() {
   }
   item.tomateFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -591,6 +595,8 @@ function carregaCicloAscaris() {
   }
   item.tomateBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

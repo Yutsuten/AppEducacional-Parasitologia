@@ -22,6 +22,8 @@ function carregaCicloTaeniaSolium() {
   }
   item.estPorcoNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -406,6 +408,8 @@ function carregaCicloTaeniaSolium() {
   }
   item.porcoFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -632,6 +636,8 @@ function carregaCicloTaeniaSolium() {
   }
   item.porcoBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

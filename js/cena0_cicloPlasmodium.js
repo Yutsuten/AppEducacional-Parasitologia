@@ -19,6 +19,8 @@ function carregaCicloPlasmodium() {
   }
   item.estPernNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -399,6 +401,8 @@ function carregaCicloPlasmodium() {
   }
   item.pernFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -590,6 +594,8 @@ function carregaCicloPlasmodium() {
   }
   item.pernBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

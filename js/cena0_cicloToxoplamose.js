@@ -19,6 +19,8 @@ function carregaCicloToxoplasmose() {
   }
   item.estGatoNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -270,6 +272,8 @@ function carregaCicloToxoplasmose() {
   }
   item.gatoFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -469,6 +473,8 @@ function carregaCicloToxoplasmose() {
   }
   item.gatoBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

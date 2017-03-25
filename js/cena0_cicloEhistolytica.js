@@ -43,6 +43,8 @@ function carregaCicloEhistolytica() {
   }
   item.estBananaNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -362,6 +364,8 @@ function carregaCicloEhistolytica() {
   }
   item.bananaFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -558,6 +562,8 @@ function carregaCicloEhistolytica() {
   }
   item.bananaBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

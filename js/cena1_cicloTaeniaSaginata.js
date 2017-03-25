@@ -22,6 +22,8 @@ function carregaCicloTaeniaSaginata() {
   }
   item.estVacaNormal.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -405,6 +407,8 @@ function carregaCicloTaeniaSaginata() {
   }
   item.vacaFechar.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 
@@ -631,6 +635,8 @@ function carregaCicloTaeniaSaginata() {
   }
   item.vacaBotaoOKhover.onClick = function() {
     disableInteractiveness();
+    somClique();
+
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
 

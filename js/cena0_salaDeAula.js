@@ -27,7 +27,7 @@ function somLivroMudaPagina() {
 }
 
 function somClique() {
-  playSoundEffect("somClique.mp3", 1.0);
+  playSoundEffect("somClique.mp3", 0.5);
 }
 
 sceneLoader[0] = function() {

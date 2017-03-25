@@ -30,6 +30,7 @@ sceneLoader[2] = function() {
   }
   item.livroObjetoDeApendizagem.onClick = function(mouse) {
     item.livroObjetoDeApendizagem.onMouseOut();
+    somClique();
     scene[2].openBook("ObjetoDeApendizagem");
   }
   scene[2].livros.push(item.livroObjetoDeApendizagem);
@@ -48,6 +49,7 @@ sceneLoader[2] = function() {
   }
   item.livroParasitologia.onClick = function(mouse) {
     item.livroParasitologia.onMouseOut();
+    somClique();
     scene[2].openBook("Parasitologia");
   }
   scene[2].livros.push(item.livroParasitologia);
@@ -66,6 +68,7 @@ sceneLoader[2] = function() {
   }
   item.livroAmebiase.onClick = function(mouse) {
     item.livroAmebiase.onMouseOut();
+    somClique();
     scene[2].openBook("Amebiase");
   }
   scene[2].livros.push(item.livroAmebiase);
@@ -84,6 +87,7 @@ sceneLoader[2] = function() {
   }
   item.livroMalaria.onClick = function(mouse) {
     item.livroMalaria.onMouseOut();
+    somClique();
     scene[2].openBook("Malaria");
   }
   scene[2].livros.push(item.livroMalaria);
@@ -102,6 +106,7 @@ sceneLoader[2] = function() {
   }
   item.livroToxoplamose.onClick = function(mouse) {
     item.livroToxoplamose.onMouseOut();
+    somClique();
     scene[2].openBook("Toxoplasmose");
   }
   scene[2].livros.push(item.livroToxoplamose);
@@ -120,6 +125,7 @@ sceneLoader[2] = function() {
   }
   item.livroAscaridiase.onClick = function(mouse) {
     item.livroAscaridiase.onMouseOut();
+    somClique();
     scene[2].openBook("Ascaridiase");
   }
   scene[2].livros.push(item.livroAscaridiase);
@@ -138,6 +144,7 @@ sceneLoader[2] = function() {
   }
   item.livroTeniase.onClick = function(mouse) {
     item.livroTeniase.onMouseOut();
+    somClique();
     scene[2].openBook("TeniaseCisticercose");
   }
   scene[2].livros.push(item.livroTeniase);
@@ -156,6 +163,7 @@ sceneLoader[2] = function() {
   }
   item.livroGiardiase.onClick = function(mouse) {
     item.livroGiardiase.onMouseOut();
+    somClique();
     scene[2].openBook("Giardiase");
   }
   scene[2].livros.push(item.livroGiardiase);
@@ -174,6 +182,7 @@ sceneLoader[2] = function() {
   }
   item.livroAgradecimentos.onClick = function(mouse) {
     item.livroAgradecimentos.onMouseOut();
+    somClique();
     scene[2].openBook("Agradecimentos");
   }
   scene[2].livros.push(item.livroAgradecimentos);

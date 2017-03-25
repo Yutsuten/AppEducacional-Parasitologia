@@ -1198,6 +1198,7 @@ function carregaLivroAberto() {
   }
   item.fechaLivro.onClick = function(mouse) {
     disableInteractiveness();
+    somClique();
 
     // Habilita interação com os livros do armario
     groupEnable(scene[2].livros);
