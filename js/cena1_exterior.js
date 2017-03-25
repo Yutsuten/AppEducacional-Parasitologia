@@ -47,6 +47,7 @@ sceneLoader[1] = function() {
   item.latrina.setZorder(15);
   item.latrina.onMouseOver = function() {
     scene[1].setSubtitle("Fossa");
+    somPopup();
     item.popupLatrinaPoco.enable();
     item.popupLatrinaPocoTexto.enable();
     item.popupChorume.disable();
@@ -87,6 +88,7 @@ sceneLoader[1] = function() {
   item.lixeira.setZorder(16);
   item.lixeira.onMouseOver = function() {
     scene[1].setSubtitle("Lixo");
+    somPopup();
     item.popupChorume.enable();
     item.popupChorumeTexto.enable();
     item.popupLatrinaPoco.disable();

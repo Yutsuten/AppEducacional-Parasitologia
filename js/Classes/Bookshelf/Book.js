@@ -28,6 +28,7 @@ Game.Book = function(bookName) {
   }
   item[nextPageArrow].onClick = function(mouse) {
     objInstance.nextPage();
+    somLivroMudaPagina();
     setTimeout(function() {
       scene[2].setSubtitle("");
     }, 300);
@@ -53,6 +54,7 @@ Game.Book = function(bookName) {
   }
   item[previousPageArrow].onClick = function(mouse) {
     objInstance.previousPage();
+    somLivroMudaPagina();
     setTimeout(function() {
       scene[2].setSubtitle("");
     }, 300);

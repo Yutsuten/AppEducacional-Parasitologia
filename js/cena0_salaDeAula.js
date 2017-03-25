@@ -18,6 +18,14 @@ function somSeta() {
   playSoundEffect("somSetas.mp3", 0.3);
 }
 
+function somPopup() {
+  playSoundEffect("somPopup.mp3", 0.6);
+}
+
+function somLivroMudaPagina() {
+  playSoundEffect("somLivro.wav", 0.6);
+}
+
 sceneLoader[0] = function() {
 
   // Iniciando a nova cena
@@ -61,6 +69,7 @@ sceneLoader[0] = function() {
   item.vasoDeFlores.setBrightness(210);
   item.vasoDeFlores.onMouseOver = function() {
     scene[0].setSubtitle("Vaso com água parada");
+    somPopup();
     item.popupFlores.enable();
     item.popupFloresTexto.enable();
   }
