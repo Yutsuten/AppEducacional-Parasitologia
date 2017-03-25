@@ -19,7 +19,7 @@ function carregaCicloGiardia() {
     item.estPocoNormal.setBrightness(220);
     scene[1].setSubtitle("");
   }
-  item.estPocoNormal.click = function() {
+  item.estPocoNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao

@@ -17,7 +17,7 @@ function carregaCicloToxoplasmose() {
     item.estGatoNormal.setBrightness(220);
     scene[0].setSubtitle("");
   }
-  item.estGatoNormal.click = function() {
+  item.estGatoNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao

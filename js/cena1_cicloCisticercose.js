@@ -21,7 +21,7 @@ function carregaCicloCisticercose() {
     item.estCenouraNormal.setBrightness(220);
     scene[1].setSubtitle("");
   }
-  item.estCenouraNormal.click = function() {
+  item.estCenouraNormal.onClick = function() {
 
       disableInteractiveness();
       var currentTime = 0;

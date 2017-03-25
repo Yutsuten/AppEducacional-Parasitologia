@@ -26,6 +26,10 @@ function somLivroMudaPagina() {
   playSoundEffect("somLivro.wav", 0.6);
 }
 
+function somClique() {
+  playSoundEffect("somClique.mp3", 1.0);
+}
+
 sceneLoader[0] = function() {
 
   // Iniciando a nova cena

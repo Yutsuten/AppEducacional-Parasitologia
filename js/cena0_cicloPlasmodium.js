@@ -17,7 +17,7 @@ function carregaCicloPlasmodium() {
     item.estPernNormal.setBrightness(220);
     scene[0].setSubtitle("");
   }
-  item.estPernNormal.click = function() {
+  item.estPernNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao

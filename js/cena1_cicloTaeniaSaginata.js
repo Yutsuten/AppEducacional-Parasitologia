@@ -20,7 +20,7 @@ function carregaCicloTaeniaSaginata() {
     item.estVacaNormal.setBrightness(220);
     scene[1].setSubtitle("");
   }
-  item.estVacaNormal.click = function() {
+  item.estVacaNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao

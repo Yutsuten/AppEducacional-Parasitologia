@@ -20,7 +20,7 @@ function carregaCicloTaeniaSolium() {
     item.estPorcoNormal.setBrightness(220);
     scene[1].setSubtitle("");
   }
-  item.estPorcoNormal.click = function() {
+  item.estPorcoNormal.onClick = function() {
     disableInteractiveness();
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
