@@ -8,6 +8,7 @@ Game.Scene = function() {
   var spritesheet = [];
   var activatedBackground = 0;
   var music = null;
+  var musicVolume = null;
   var itemAlpha = [];
   var spritesheetAlpha = [];
   var itemInteractiveness = [];
@@ -45,13 +46,14 @@ Game.Scene = function() {
     UpdateScreen();
   }
 
-  this.setMusic = function(musicDirectory) {
-    music = "audio/" + musicDirectory;
+  this.setMusic = function(musicDirectory, volume = 1) {
+    music = musicDirectory;
+    musicVolume = volume;
   }
 
   this.playSceneMusic = function() {
     if (music != null)
-      playMusic(music);
+      playMusic(music, musicVolume);
     else
       console.log("ERROR: No music is set to this scene");
   }

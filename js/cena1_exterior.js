@@ -5,7 +5,7 @@ sceneLoader[1] = function() {
   // Iniciando a nova cena
   scene[1] = new Game.Scene();
   // Adicionando musica na cena
-  scene[1].setMusic("musicaCenaExterna.mp3");
+  scene[1].setMusic("musicaAmbienteExterno.wav", 1.0);
 
   // Adicionando uma imagem de fundo
   scene[1].background = new Game.Background("cenaExterior.jpg");
@@ -162,6 +162,7 @@ sceneLoader[1] = function() {
     item.setaSalaDeAula.setBrightness(220);
   }
   item.setaSalaDeAula.onClick = function(mouse) {
+    somSeta();
     changeScene(0); // Muda para a sala de aula
   }
 

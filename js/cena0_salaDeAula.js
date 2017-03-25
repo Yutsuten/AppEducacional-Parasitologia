@@ -14,12 +14,16 @@ var estiloInfoPopup = {
   }
 }
 
+function somSeta() {
+  playSoundEffect("somSetas.mp3", 0.3);
+}
+
 sceneLoader[0] = function() {
 
   // Iniciando a nova cena
   scene[0] = new Game.Scene();
   // Adicionando musica na cena
-  scene[0].setMusic("musicaSalaDeAula.mp3");
+  scene[0].setMusic("musicaSala.wav", 1.0);
 
   // Adicionando uma imagem de fundo
   scene[0].background = new Game.Background("salaDeAula.jpg");
@@ -102,6 +106,7 @@ sceneLoader[0] = function() {
     item.setaJanela.setBrightness(220);
   }
   item.setaJanela.onClick = function(mouse) {
+    somSeta();
     changeScene(1); // Muda para a cena exterior
   }
 
@@ -123,6 +128,7 @@ sceneLoader[0] = function() {
     item.setaArmario.setBrightness(220);
   }
   item.setaArmario.onClick = function(mouse) {
+    somSeta();
     changeScene(2); // Muda para o armario
   }
 
