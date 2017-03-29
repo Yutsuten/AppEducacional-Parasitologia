@@ -54,15 +54,21 @@ var estiloInfoBalao = {
   }
 }
 
-// Criando a variavel que tera todos os livros
 var estiloTitulo = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "34px",
-  fontStyle: "bold", fill: 0x010101, align: "left"
+  "default" : {
+    fontFamily: "Book Antiqua",
+    fontSize: "34px",
+    fontStyle: "bold",
+    fill: 0x010101,
+    align: "left"
+  },
+  "big" : {
+    fontSize: "42px"
   }
 };
 
 var estiloTextoLivro = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "28px",
+  "default" : {fontFamily: "Book Antiqua", fontSize: "28px",
   fill: 0x010101, align: "left"
   },
   "i" : {
@@ -70,6 +76,12 @@ var estiloTextoLivro = {
   },
   "b" : {
     fontStyle: "bold"
+  },
+  "gray" : {
+    fill: 0x888888
+  },
+  "big" : {
+    fontSize: "36px"
   }
 };
 

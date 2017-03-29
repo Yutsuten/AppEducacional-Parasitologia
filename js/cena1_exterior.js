@@ -237,20 +237,22 @@ sceneLoader[1] = function() {
 
   // Livro inicial
   item.livroCenaExteriorTitulo = new Game.Text(
-    "          Cena Exterior"
+    "<big>           Cena Exterior</big>"
   , estiloTitulo);
   item.livroCenaExteriorTitulo.setPosition(248, 120);
 
   item.livroCenaExteriorTexto1 = new Game.Text(
-    "     Nesta parte, você irá se deparar com\n" +
-    "uma ordem programada de interação com\n" +
-    "as personagens e suas doenças. Apresenta-\n" +
-    "remos quatro doenças, mas apenas três pa-\n" +
-    "rasitas. Neste sentido, um dos parasitas é o\n" +
-    "causador de duas doenças. Passe o mouse\n" +
-    "pela tela e descubra qual é esta ordem!"
+    "<big>     Nesta parte, você irá se deparar\n" +
+    "com uma ordem programada de in-\n" +
+    "teração com as personagens e suas\n" +
+    "doenças. Apresentaremos quatro\n" +
+    "doenças, mas apenas três parasitas.\n" +
+    "Neste sentido, um dos parasitas é o\n" +
+    "causador de duas doenças. Passe o\n" +
+    "mouse pela tela e descubra qual é\n" +
+    "esta ordem!</big>"
     , estiloTextoLivro);
-  item.livroCenaExteriorTexto1.setPosition(248, 190);
+  item.livroCenaExteriorTexto1.setPosition(248, 200);
 
   item.livroAberto = new Game.Item("livroAbertoSemMesa.png");
   item.livroAberto.setZorder(6);
