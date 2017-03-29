@@ -486,6 +486,8 @@ function carregaCicloAscaris() {
   item.tomateAbaSintomas.setZorder(7);
   item.tomateAbaSintomas.disable();
   item.tomateAbaSintomas.onClick = function() {
+    somClique();
+
     item.tomateBalaoSintoma.enable();
     item.tomateBalaoPrevencao.disable();
     item.tomateBalaoTransmissao.disable();
@@ -517,6 +519,8 @@ function carregaCicloAscaris() {
   item.tomateAbaPrevencao.setAlpha(0);
   item.tomateAbaPrevencao.disable();
   item.tomateAbaPrevencao.onClick = function() {
+    somClique();
+
     item.tomateBalaoSintoma.disable();
     item.tomateBalaoPrevencao.enable();
     item.tomateBalaoTransmissao.disable();
@@ -548,6 +552,8 @@ function carregaCicloAscaris() {
   item.tomateAbaTransmissao.setAlpha(0);
   item.tomateAbaTransmissao.disable();
   item.tomateAbaTransmissao.onClick = function() {
+    somClique();
+
     item.tomateBalaoSintoma.disable();
     item.tomateBalaoPrevencao.disable();
     item.tomateBalaoTransmissao.enable();

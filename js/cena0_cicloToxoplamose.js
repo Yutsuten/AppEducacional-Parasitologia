@@ -356,6 +356,8 @@ function carregaCicloToxoplasmose() {
   item.gatoAbaSintomas.setZorder(7);
   item.gatoAbaSintomas.disable();
   item.gatoAbaSintomas.onClick = function() {
+    somClique();
+
     item.gatoBalaoSintoma.enable();
     item.gatoBalaoPrevencao.disable();
     item.gatoBalaoTransmissao.disable();
@@ -389,6 +391,8 @@ function carregaCicloToxoplasmose() {
   item.gatoAbaPrevencao.setAlpha(0);
   item.gatoAbaPrevencao.disable();
   item.gatoAbaPrevencao.onClick = function() {
+    somClique();
+
     item.gatoBalaoSintoma.disable();
     item.gatoBalaoPrevencao.enable();
     item.gatoBalaoTransmissao.disable();
@@ -423,6 +427,8 @@ function carregaCicloToxoplasmose() {
   item.gatoAbaTransmissao.setAlpha(0);
   item.gatoAbaTransmissao.disable();
   item.gatoAbaTransmissao.onClick = function() {
+    somClique();
+
     item.gatoBalaoSintoma.disable();
     item.gatoBalaoPrevencao.disable();
     item.gatoBalaoTransmissao.enable();

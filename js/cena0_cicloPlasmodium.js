@@ -484,6 +484,8 @@ function carregaCicloPlasmodium() {
   item.pernAbaSintomas.setZorder(7);
   item.pernAbaSintomas.disable();
   item.pernAbaSintomas.onClick = function() {
+    somClique();
+
     item.pernBalaoSintoma.enable();
     item.pernBalaoPrevencao.disable();
     item.pernBalaoTransmissao.disable();
@@ -518,6 +520,8 @@ function carregaCicloPlasmodium() {
   item.pernAbaPrevencao.setAlpha(0);
   item.pernAbaPrevencao.disable();
   item.pernAbaPrevencao.onClick = function() {
+    somClique();
+
     item.pernBalaoSintoma.disable();
     item.pernBalaoPrevencao.enable();
     item.pernBalaoTransmissao.disable();
@@ -548,6 +552,8 @@ function carregaCicloPlasmodium() {
   item.pernAbaTransmissao.setAlpha(0);
   item.pernAbaTransmissao.disable();
   item.pernAbaTransmissao.onClick = function() {
+    somClique();
+
     item.pernBalaoSintoma.disable();
     item.pernBalaoPrevencao.disable();
     item.pernBalaoTransmissao.enable();

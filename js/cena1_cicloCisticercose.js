@@ -266,6 +266,8 @@ function carregaCicloCisticercose() {
   item.cenouraAbaSintomas.setZorder(7);
   item.cenouraAbaSintomas.disable();
   item.cenouraAbaSintomas.onClick = function() {
+    somClique();
+
     item.cenouraBalaoSintoma.enable();
     item.cenouraBalaoPrevencao.disable();
     item.cenouraBalaoTransmissao.disable();
@@ -298,6 +300,8 @@ function carregaCicloCisticercose() {
   item.cenouraAbaPrevencao.setAlpha(0);
   item.cenouraAbaPrevencao.disable();
   item.cenouraAbaPrevencao.onClick = function() {
+    somClique();
+
     item.cenouraBalaoSintoma.disable();
     item.cenouraBalaoPrevencao.enable();
     item.cenouraBalaoTransmissao.disable();
@@ -329,6 +333,8 @@ function carregaCicloCisticercose() {
   item.cenouraAbaTransmissao.setAlpha(0);
   item.cenouraAbaTransmissao.disable();
   item.cenouraAbaTransmissao.onClick = function() {
+    somClique();
+
     item.cenouraBalaoSintoma.disable();
     item.cenouraBalaoPrevencao.disable();
     item.cenouraBalaoTransmissao.enable();

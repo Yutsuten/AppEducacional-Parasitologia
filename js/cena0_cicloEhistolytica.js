@@ -447,6 +447,8 @@ function carregaCicloEhistolytica() {
   item.bananaAbaSintomas.setZorder(7);
   item.bananaAbaSintomas.disable();
   item.bananaAbaSintomas.onClick = function() {
+    somClique();
+
     item.bananaBalaoSintoma.enable();
     item.bananaBalaoPrevencao.disable();
     item.bananaBalaoTransmissao.disable();
@@ -482,6 +484,8 @@ function carregaCicloEhistolytica() {
   item.bananaAbaPrevencao.setAlpha(0);
   item.bananaAbaPrevencao.disable();
   item.bananaAbaPrevencao.onClick = function() {
+    somClique();
+
     item.bananaBalaoSintoma.disable();
     item.bananaBalaoPrevencao.enable();
     item.bananaBalaoTransmissao.disable();
@@ -513,6 +517,8 @@ function carregaCicloEhistolytica() {
   item.bananaAbaTransmissao.setAlpha(0);
   item.bananaAbaTransmissao.disable();
   item.bananaAbaTransmissao.onClick = function() {
+    somClique();
+
     item.bananaBalaoSintoma.disable();
     item.bananaBalaoPrevencao.disable();
     item.bananaBalaoTransmissao.enable();

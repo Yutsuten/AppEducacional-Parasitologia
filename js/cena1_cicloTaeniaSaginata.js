@@ -523,6 +523,8 @@ function carregaCicloTaeniaSaginata() {
   item.vacaAbaSintomas.setZorder(7);
   item.vacaAbaSintomas.disable();
   item.vacaAbaSintomas.onClick = function() {
+    somClique();
+
     item.vacaBalaoSintoma.enable();
     item.vacaBalaoPrevencao.disable();
     item.vacaBalaoTransmissao.disable();
@@ -555,6 +557,8 @@ function carregaCicloTaeniaSaginata() {
   item.vacaAbaPrevencao.setAlpha(0);
   item.vacaAbaPrevencao.disable();
   item.vacaAbaPrevencao.onClick = function() {
+    somClique();
+
     item.vacaBalaoSintoma.disable();
     item.vacaBalaoPrevencao.enable();
     item.vacaBalaoTransmissao.disable();
@@ -589,6 +593,8 @@ function carregaCicloTaeniaSaginata() {
   item.vacaAbaTransmissao.setAlpha(0);
   item.vacaAbaTransmissao.disable();
   item.vacaAbaTransmissao.onClick = function() {
+    somClique();
+
     item.vacaBalaoSintoma.disable();
     item.vacaBalaoPrevencao.disable();
     item.vacaBalaoTransmissao.enable();

@@ -428,6 +428,8 @@ function carregaCicloGiardia() {
   item.pocoAbaSintomas.setZorder(7);
   item.pocoAbaSintomas.disable();
   item.pocoAbaSintomas.onClick = function() {
+    somClique();
+
     item.pocoBalaoSintoma.enable();
     item.pocoBalaoPrevencao.disable();
     item.pocoBalaoTransmissao.disable();
@@ -462,6 +464,8 @@ function carregaCicloGiardia() {
   item.pocoAbaPrevencao.setAlpha(0);
   item.pocoAbaPrevencao.disable();
   item.pocoAbaPrevencao.onClick = function() {
+    somClique();
+
     item.pocoBalaoSintoma.disable();
     item.pocoBalaoPrevencao.enable();
     item.pocoBalaoTransmissao.disable();
@@ -493,6 +497,8 @@ function carregaCicloGiardia() {
   item.pocoAbaTransmissao.setAlpha(0);
   item.pocoAbaTransmissao.disable();
   item.pocoAbaTransmissao.onClick = function() {
+    somClique();
+
     item.pocoBalaoSintoma.disable();
     item.pocoBalaoPrevencao.disable();
     item.pocoBalaoTransmissao.enable();

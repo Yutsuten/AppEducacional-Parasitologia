@@ -524,6 +524,8 @@ function carregaCicloTaeniaSolium() {
   item.porcoAbaSintomas.setZorder(7);
   item.porcoAbaSintomas.disable();
   item.porcoAbaSintomas.onClick = function() {
+    somClique();
+
     item.porcoBalaoSintoma.enable();
     item.porcoBalaoPrevencao.disable();
     item.porcoBalaoTransmissao.disable();
@@ -556,6 +558,8 @@ function carregaCicloTaeniaSolium() {
   item.porcoAbaPrevencao.setAlpha(0);
   item.porcoAbaPrevencao.disable();
   item.porcoAbaPrevencao.onClick = function() {
+    somClique();
+
     item.porcoBalaoSintoma.disable();
     item.porcoBalaoPrevencao.enable();
     item.porcoBalaoTransmissao.disable();
@@ -590,6 +594,8 @@ function carregaCicloTaeniaSolium() {
   item.porcoAbaTransmissao.setAlpha(0);
   item.porcoAbaTransmissao.disable();
   item.porcoAbaTransmissao.onClick = function() {
+    somClique();
+
     item.porcoBalaoSintoma.disable();
     item.porcoBalaoPrevencao.disable();
     item.porcoBalaoTransmissao.enable();
