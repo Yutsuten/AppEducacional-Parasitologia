@@ -674,6 +674,7 @@ function carregaCicloTaeniaSolium() {
       item.estCenouraNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
       item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
       item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
+      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
       item.setaSalaDeAula.enable();
       item.setaSalaDeAula.changeAlpha(1, 600);
 
