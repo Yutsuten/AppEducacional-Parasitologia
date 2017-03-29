@@ -203,6 +203,7 @@ sceneLoader[2] = function() {
   }
   item.setaSalaDeAula.onClick = function(mouse) {
     somSeta();
+    scene[2].setSubtitle("");
     changeScene(0); // Muda para a sala de aula
   }
 

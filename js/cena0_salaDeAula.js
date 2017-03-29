@@ -123,6 +123,7 @@ sceneLoader[0] = function() {
   }
   item.setaJanela.onClick = function(mouse) {
     somSeta();
+    scene[0].setSubtitle("");
     changeScene(1); // Muda para a cena exterior
   }
 
@@ -147,6 +148,7 @@ sceneLoader[0] = function() {
   }
   item.setaArmario.onClick = function(mouse) {
     somSeta();
+    scene[0].setSubtitle("");
     changeScene(2); // Muda para o armario
   }
 
