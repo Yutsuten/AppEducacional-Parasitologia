@@ -15,11 +15,11 @@ var estiloInfoPopup = {
 }
 
 function somSeta() {
-  playSoundEffect("somSetas.mp3", 0.3);
+  playSoundEffect("somSetas.wav", 0.3);
 }
 
 function somPopup() {
-  playSoundEffect("somPopup.mp3", 0.6);
+  playSoundEffect("somPopup.wav", 0.6);
 }
 
 function somLivroMudaPagina() {
@@ -27,7 +27,7 @@ function somLivroMudaPagina() {
 }
 
 function somClique() {
-  playSoundEffect("somClique.mp3", 0.5);
+  playSoundEffect("somClique.wav", 0.5);
 }
 
 sceneLoader[0] = function() {
