@@ -200,7 +200,6 @@ function carregaCicloCisticercose() {
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      groupDisable(itensCenouraCiclo);
       item.cenouraBalaoSintoma.enable();
       item.cenouraBalaoSintoma.changeAlpha(1, 600);
       item.cenouraTextoSintomas.enable();
@@ -390,50 +389,21 @@ function carregaCicloCisticercose() {
     scene[1].nextState();
 
     setTimeout(function() {
-      item.estCenouraNormal.enable();
-      item.estCenouraNormal.setBrightness(item.estCenouraNormal.brightnessTarget);
-      item.estCenouraNormal.changeAlpha(1, 600);
+      item.fechaLivro.disable();
+      item.fechaLivro.setInteractive(false);
 
-      scene[1].background.changeBrightness(210, 600);
-      item.chiqueiro.changeBrightness(210, 600);
-      item.horta.changeBrightness(210, 600);
-      item.latrina.changeBrightness(210, 600);
-      item.lixeira.changeBrightness(210, 600);
-      item.pocoExterior.changeBrightness(210, 600);
-      item.vacaExterior.changeBrightness(210, 600);
-
-      item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
-      item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
-      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
-      item.setaSalaDeAula.enable();
-      item.setaSalaDeAula.changeAlpha(1, 600);
-
-      item.cenouraBotaoOKhover.disable();
-      item.cenouraBalaoPrevencao.disable();
-      item.cenouraBalaoTransmissao.disable();
-      item.cenouraAbaSintomas.disable();
-      item.cenouraAbaPrevencao.disable();
-      item.cenouraAbaTransmissao.disable();
-      item.cenouraTextoPrevencao.disable();
-      item.cenouraTextoTransmissao.disable();
+      item.livroAberto.enable();
+      item.fechaLivro2.enable();
+      item.livroCenaExteriorTitulo.enable();
+      item.livroCenaExteriorTexto2.enable();
+      item.livroAberto.changeAlpha(1, 600);
+      item.fechaLivro2.changeAlpha(1, 600);
+      item.livroCenaExteriorTitulo.changeAlpha(1, 600);
+      item.livroCenaExteriorTexto2.changeAlpha(1, 600);
     }, currentTime += animationInterval);
 
     setTimeout(function() {
-      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
-      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
-      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
-      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
-
-      item.setaSalaDeAula.setInteractive(true);
-      item.chiqueiro.setInteractive(true);
-      item.horta.setInteractive(true);
-      item.latrina.setInteractive(true);
-      item.lixeira.setInteractive(true);
-      item.pocoExterior.setInteractive(true);
-
       enableInteractiveness();
-
-      scene[1].saveInteractiveness();
     }, currentTime += animationInterval);
 
   }
