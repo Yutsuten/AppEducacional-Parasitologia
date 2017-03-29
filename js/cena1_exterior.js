@@ -150,7 +150,8 @@ sceneLoader[1] = function() {
   item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);
   item.setaSalaDeAula.setRotation(180);
-  item.setaSalaDeAula.setInteractive(true);
+  item.setaSalaDeAula.setAlpha(0);
+  item.setaSalaDeAula.disable();
   item.setaSalaDeAula.onMouseOver = function() {
     scene[1].setSubtitle("Sala de aula");
     item.setaSalaDeAula.setBrightness(255);
@@ -218,6 +219,68 @@ sceneLoader[1] = function() {
   carregaCicloTaeniaSaginata();
   carregaCicloTaeniaSolium();
   carregaCicloCisticercose();
+
+  // Livro inicial
+  item.livroCenaExteriorTitulo = new Game.Text(
+    "          Cena Exterior"
+  , estiloTitulo);
+  item.livroCenaExteriorTitulo.setPosition(248, 120);
+
+  item.livroCenaExteriorTexto1 = new Game.Text(
+    "     Nesta parte, você irá se deparar com\n" +
+    "uma ordem programada de interação com\n" +
+    "as personagens e suas doenças. Apresenta-\n" +
+    "remos quatro doenças, mas apenas três pa-\n" +
+    "rasitas. Neste sentido, um dos parasitas é o\n" +
+    "causador de duas doenças. Passe o mouse\n" +
+    "pela tela e descubra qual é esta ordem!"
+    , estiloTextoLivro);
+  item.livroCenaExteriorTexto1.setPosition(248, 190);
+
+  item.livroAberto = new Game.Item("livroAbertoSemMesa.png");
+  item.livroAberto.setZorder(6);
+  item.livroAberto.setPosition(960, 540);
+  item.livroAberto.enable();
+  item.livroAberto.setAlpha(1);
+
+  item.fechaLivro = new Game.Item("botaoFechar.png");
+  item.fechaLivro.setPosition(1840, 70);
+  item.fechaLivro.setZorder(1);
+  item.fechaLivro.setBrightness(200);
+  item.fechaLivro.setScale(0.14);
+  item.fechaLivro.enable();
+  item.fechaLivro.setAlpha(1);
+  item.fechaLivro.onMouseOver = function() {
+    item.fechaLivro.setBrightness(255);
+  }
+  item.fechaLivro.onMouseOut = function() {
+    item.fechaLivro.setBrightness(200);
+  }
+  item.fechaLivro.onClick = function(mouse) {
+    disableInteractiveness();
+    somClique();
+
+    // Esconde o livro
+    item.livroAberto.changeAlpha(0, 600);
+    item.fechaLivro.changeAlpha(0, 600);
+
+    // Esconde o texto
+    item.livroCenaExteriorTitulo.changeAlpha(0, 600);
+    item.livroCenaExteriorTexto1.changeAlpha(0, 600);
+
+    // Mostra setas da sala de aula
+    item.setaSalaDeAula.enable();
+    item.setaSalaDeAula.changeAlpha(1, 600);
+
+    setTimeout(function() {
+      item.livroAberto.disable();
+      item.fechaLivro.disable();
+      item.livroCenaExteriorTitulo.disable();
+      item.livroCenaExteriorTexto1.disable();
+
+      enableInteractiveness();
+    }, 650);
+  }
 
   scene[1].addAllItemsToScene();
 }
