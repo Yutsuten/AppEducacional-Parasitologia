@@ -9,7 +9,7 @@ sceneLoader[1] = function() {
 
   // Adicionando uma imagem de fundo
   scene[1].background = new Game.Background("cenaExterior.jpg");
-  scene[1].background.setBrightness(210);
+  scene[1].background.setBrightness(100);
 
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
@@ -222,6 +222,26 @@ sceneLoader[1] = function() {
   carregaCicloTaeniaSolium();
   carregaCicloCisticercose();
 
+  // Scene darker and disable them by default
+  item.chiqueiro.setBrightness(100);
+  item.horta.setBrightness(100);
+  item.latrina.setBrightness(100);
+  item.lixeira.setBrightness(100);
+  item.pocoExterior.setBrightness(100);
+  item.vacaExterior.setBrightness(100);
+
+  item.estCenouraNormal.setBrightness(100);
+  item.estVacaNormal.setBrightness(100);
+  item.estPocoNormal.setBrightness(100);
+
+  item.estPocoNormal.setInteractive(false);
+  item.setaSalaDeAula.setInteractive(false);
+  item.chiqueiro.setInteractive(false);
+  item.horta.setInteractive(false);
+  item.latrina.setInteractive(false);
+  item.lixeira.setInteractive(false);
+  item.pocoExterior.setInteractive(false);
+
   // Livro inicial
   item.livroCenaExteriorTitulo = new Game.Text(
     "          Cena Exterior"
@@ -270,9 +290,26 @@ sceneLoader[1] = function() {
     item.livroCenaExteriorTitulo.changeAlpha(0, 600);
     item.livroCenaExteriorTexto1.changeAlpha(0, 600);
 
-    // Mostra setas da sala de aula
+    // Mostra setas da cena exterior
     item.setaSalaDeAula.enable();
     item.setaSalaDeAula.changeAlpha(1, 600);
+
+    scene[1].background.changeBrightness(210, 600);
+    item.chiqueiro.changeBrightness(210, 600);
+    item.horta.changeBrightness(210, 600);
+    item.latrina.changeBrightness(210, 600);
+    item.lixeira.changeBrightness(210, 600);
+    item.pocoExterior.changeBrightness(210, 600);
+    item.vacaExterior.changeBrightness(210, 600);
+
+    item.estPocoNormal.changeBrightness(210, 600);
+    item.estPocoNormal.setInteractive(true);
+    item.setaSalaDeAula.setInteractive(true);
+    item.chiqueiro.setInteractive(true);
+    item.horta.setInteractive(true);
+    item.latrina.setInteractive(true);
+    item.lixeira.setInteractive(true);
+    item.pocoExterior.setInteractive(true);
 
     setTimeout(function() {
       item.livroAberto.disable();
