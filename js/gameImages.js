@@ -31,6 +31,7 @@ var gameImages = [
   "livroTeniase.png",
   "livroToxoplamose.png",
   "livroAberto.png",
+  "livroAbertoSemMesa.png",
 
   // Imagens de livro
   "tabelaParasitologia.png",
