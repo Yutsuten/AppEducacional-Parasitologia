@@ -254,6 +254,20 @@ sceneLoader[1] = function() {
     , estiloTextoLivro);
   item.livroCenaExteriorTexto1.setPosition(248, 200);
 
+  item.livroCenaExteriorTexto2 = new Game.Text(
+    "<big>     Você conseguiu entender?! O\n" +
+    "parasita Taenia solium pode gerar\n" +
+    "a doença conhecida como Cisticer-\n" +
+    "cose e também a doença dita Tenía-\n" +
+    "se, a qual é muito parecida com a\n" +
+    "Teníase causada pela Taenia sagina-\n" +
+    "ta. Desta forma, estes dois parasitas\n" +
+    "causam sintomas semelhantes.</big>"
+    , estiloTextoLivro);
+  item.livroCenaExteriorTexto2.setPosition(248, 200);
+  item.livroCenaExteriorTexto2.setAlpha(0);
+  item.livroCenaExteriorTexto2.disable();
+
   item.livroAberto = new Game.Item("livroAbertoSemMesa.png");
   item.livroAberto.setZorder(6);
   item.livroAberto.setPosition(960, 540);
