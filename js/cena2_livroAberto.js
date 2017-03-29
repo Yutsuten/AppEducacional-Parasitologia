@@ -1169,17 +1169,24 @@ function carregaLivroAberto() {
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
+  livro.Agradecimentos.pagina[1].texto2 = new Game.Text(
+    "     O ponto de interrogação criado por Eleanor\n" +
+    "Wang disponível no site http://www.flaticon.\n" +
+    "com"
+    , estiloTextoLivro);
+  livro.Agradecimentos.pagina[1].texto2.setPosition(990, 120);
+
   livro.Agradecimentos.pagina[1].pixijsLogo = new Game.Image("pixijs.png");
-  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(1300, 200);
+  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(1300, 300);
   livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
 
   livro.Agradecimentos.pagina[1].parceria = new Game.Text(
     "      Parceria:"
   , estiloTitulo);
-  livro.Agradecimentos.pagina[1].parceria.setPosition(990, 350);
+  livro.Agradecimentos.pagina[1].parceria.setPosition(990, 400);
 
   livro.Agradecimentos.pagina[1].logoLtia = new Game.Image("LtiaLogo.png");
-  livro.Agradecimentos.pagina[1].logoLtia.setPosition(1250, 480);
+  livro.Agradecimentos.pagina[1].logoLtia.setPosition(1250, 520);
   livro.Agradecimentos.pagina[1].logoLtia.setScale(0.6);
 
   livro.Agradecimentos.pagina[1].financiamento = new Game.Text(
