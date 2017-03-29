@@ -108,6 +108,8 @@ sceneLoader[0] = function() {
   item.setaJanela.setBrightness(220);
   item.setaJanela.setScale(0.3);
   item.setaJanela.setZorder(1);
+  item.setaJanela.setAlpha(0);
+  item.setaJanela.disable();
   item.setaJanela.onMouseOver = function() {
     scene[0].setSubtitle("Ambiente externo");
     item.setaJanela.setBrightness(255);
@@ -130,6 +132,8 @@ sceneLoader[0] = function() {
   item.setaArmario.setScale(0.3);
   item.setaArmario.setRotation(180);
   item.setaArmario.setZorder(1);
+  item.setaArmario.setAlpha(0);
+  item.setaArmario.disable();
   item.setaArmario.onMouseOver = function() {
     scene[0].setSubtitle("Armário");
     item.setaArmario.setBrightness(255);
@@ -150,6 +154,113 @@ sceneLoader[0] = function() {
   carregaCicloAscaris();
   carregaCicloPlasmodium();
   carregaCicloToxoplasmose();
+
+  // Livro inicial
+  item.livroObjetoDeApendizagemTitulo = new Game.Text(
+    "       O Objeto de Aprendizagem"
+  , estiloTitulo);
+  item.livroObjetoDeApendizagemTitulo.setPosition(248, 120);
+
+  item.livroObjetoDeApendizagemTexto1 = new Game.Text(
+    "     Os Objetos de Aprendizagem são uma\n" +
+    "tecnologia recente que abre caminhos na\n" +
+    "educação à distância e que serve de mate-\n" +
+    "rial de apoio a aula presencial tradicional.\n" +
+    "São elementos de uma nova metodologia\n" +
+    "de ensino e aprendizagem baseada no uso\n" +
+    "do computador e da Internet.\n" +
+    "     Apesar de sua definição ainda ser vaga,\n" +
+    "o consenso é de que o Objeto de Aprendi-\n" +
+    "zagem deva possuir um propósito educa-\n" +
+    "cional definido, um elemento que estimule\n" +
+    "a reflexão do estudante e que sua constru-\n" +
+    "ção seja de forma a facilitar a reutilização\n" +
+    "dentro de outros contextos de aprendiza-\n" +
+    "gem.\n" +
+    "     Desta forma, as autoras apresentam o\n" +
+    "presente Objeto de Aprendizagem em Pa-\n" +
+    "rasitologia.\n" +
+    "     O software (ou “jogo”) conta com regi-\n" +
+    "ões clicáveis e interativas, as quais revela-\n" +
+    "rão ao usuário informações adicionais so-"
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemTexto1.setPosition(248, 190);
+
+  item.livroObjetoDeApendizagemTexto2 = new Game.Text(
+    "bre o objeto interativo, como os ciclos de vida\n" +
+    "dos parasitas em questão e as suas consequen-\n" +
+    "tes doenças. Visualmente, o jogo é repleto de\n" +
+    "imagens e se é intencionado que estas sejam\n" +
+    "autoexplicativas, contando, num primeiro mo-\n" +
+    "mento, com os auxílios das legendas.\n" +
+    "     São expostas três telas: a principal, a sala\n" +
+    "de aula, na qual serão encontradas representa-\n" +
+    "ções de quatro doenças e seus respectivos pa-\n" +
+    "rasitas. À direita da tela principal será exposto\n" +
+    "o exterior da escola, com mais quatro doenças\n" +
+    "e seus três parasitas. À esquerda da sala de au-\n" +
+    "la será apresentada uma estante repleta de li-\n" +
+    "vros interativos, nos quais serão explicadas as\n" +
+    "teorias sobre o Parasitismo e cada parasita abor-\n" +
+    "dado neste Objeto de Aprendizagem."
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemTexto2.setPosition(990, 120);
+
+  item.livroObjetoDeApendizagemTexto3 = new Game.Text(
+    "Vamos lá!"
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemTexto3.setPosition(1414, 700);
+
+  item.livroAberto = new Game.Item("livroAberto.png");
+  item.livroAberto.setZorder(6);
+  item.livroAberto.setPosition(960, 540);
+  item.livroAberto.enable();
+  item.livroAberto.setAlpha(1);
+
+  item.fechaLivro = new Game.Item("botaoFechar.png");
+  item.fechaLivro.setPosition(1840, 70);
+  item.fechaLivro.setZorder(1);
+  item.fechaLivro.setBrightness(200);
+  item.fechaLivro.setScale(0.14);
+  item.fechaLivro.enable();
+  item.fechaLivro.setAlpha(1);
+  item.fechaLivro.onMouseOver = function() {
+    item.fechaLivro.setBrightness(255);
+  }
+  item.fechaLivro.onMouseOut = function() {
+    item.fechaLivro.setBrightness(200);
+  }
+  item.fechaLivro.onClick = function(mouse) {
+    disableInteractiveness();
+    somClique();
+
+    // Esconde o livro
+    item.livroAberto.changeAlpha(0, 600);
+    item.fechaLivro.changeAlpha(0, 600);
+
+    // Esconde o texto
+    item.livroObjetoDeApendizagemTitulo.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto1.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto2.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto3.changeAlpha(0, 600);
+
+    // Mostra setas da sala de aula
+    item.setaJanela.enable();
+    item.setaArmario.enable();
+    item.setaJanela.changeAlpha(1, 600);
+    item.setaArmario.changeAlpha(1, 600);
+
+    setTimeout(function() {
+      item.livroAberto.disable();
+      item.fechaLivro.disable();
+      item.livroObjetoDeApendizagemTitulo.disable();
+      item.livroObjetoDeApendizagemTexto1.disable();
+      item.livroObjetoDeApendizagemTexto2.disable();
+      item.livroObjetoDeApendizagemTexto3.disable();
+
+      enableInteractiveness();
+    }, 650);
+  }
 
   scene[0].addAllItemsToScene();
 }
