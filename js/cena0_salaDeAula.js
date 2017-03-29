@@ -1,35 +1,5 @@
 'use strict';
 
-var estiloInfoPopup = {
-  "default" : {
-    fontFamily: "Book Antiqua",
-    fill: 0x010101,
-    fontSize: "25px"
-  },
-  "i" : {
-    fontStyle: "italic"
-  },
-  "b" : {
-    fontStyle: "bold"
-  }
-}
-
-function somSeta() {
-  playSoundEffect("somSetas.wav", 0.3);
-}
-
-function somPopup() {
-  playSoundEffect("somPopup.wav", 0.6);
-}
-
-function somLivroMudaPagina() {
-  playSoundEffect("somLivro.wav", 0.6);
-}
-
-function somClique() {
-  playSoundEffect("somClique.wav", 0.5);
-}
-
 sceneLoader[0] = function() {
 
   // Iniciando a nova cena

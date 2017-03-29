@@ -1,27 +1,3 @@
-var estiloNumeros = {
-  "default" : {
-    fontFamily: "CircleCaps",
-    dropShadow: true,
-    dropShadowBlur: 10,
-    fill: 0xFFFFFF,
-    fontSize: "200px"
-  }
-}
-
-var estiloInfoBalao = {
-  "default" : {
-    fontFamily: "Book Antiqua",
-    fill: 0x010101,
-    fontSize: "28px"
-  },
-  "i" : {
-    fontStyle: "italic"
-  },
-  "b" : {
-    fontStyle: "bold"
-  }
-}
-
 function carregaCicloEhistolytica() {
   // Criando um aliase de scene[0].item
   var item = scene[0].item;

@@ -1,31 +1,5 @@
 'use strict';
 
-// Criando a variavel que tera todos os livros
-var estiloTitulo = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "34px",
-  fontStyle: "bold", fill: 0x010101, align: "left"
-  }
-};
-var estiloTextoLivro = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "28px",
-  fill: 0x010101, align: "left"
-  },
-  "i" : {
-    fontStyle: "italic"
-  },
-  "b" : {
-    fontStyle: "bold"
-  }
-};
-var estiloLegenda = {
-  "default": {fontFamily: "Book Antiqua", fontSize: "28px",
-  fontStyle: "bold", fill: 0x010101, align: "center"
-  },
-  "i" : {
-    fontStyle: "bold italic"
-  }
-}
-
 var notContain = function(str, arrayStr) {
   for (i = 0; i < arrayStr.length; i++)
     if (str == arrayStr[i])
