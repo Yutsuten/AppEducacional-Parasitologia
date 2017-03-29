@@ -502,11 +502,11 @@ function carregaCicloPlasmodium() {
 
   item.pernTextoSintomas = new Game.Text(
     "Desenvolvimento de anemia, febre, mal-estar, palidez,\n" +
-    "hipoglicemia (pouco açúcar no sangue), pele amarelada,\n" +
-    "lesões renais, dor abdominal, dor lombar, náuseas, vômitos,\n" +
-    "tosse seca, Hepatomegalia, esplenomegalia (aumento\n" +
-    "anormal do fígado e baço respectivamente), diarréia e\n" +
-    "desidratação."
+    "dores abdominal e lombar. Ocorrência de náuseas, vômitos,\n" +
+    "tosse seca, diarreia e desidratação. Pode gerar hipoglicemia\n" +
+    "(pouco açúcar no sangue), pele amarelada, lesões renais e\n" +
+    "hepatomegalia e esplenomegalia (aumento anormal do\n" +
+    "fígado e baço, respectivamente)."
     , estiloInfoBalao);
   item.pernTextoSintomas.setPosition(432-130+300, 58+20);
   item.pernTextoSintomas.setAlpha(0);

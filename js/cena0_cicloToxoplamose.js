@@ -408,13 +408,14 @@ function carregaCicloToxoplasmose() {
   itensGatoDoente.push(item.gatoAbaPrevencao);
 
   item.gatoTextoPrevencao = new Game.Text(
-    "Não ingerir carne crua ou mal passada, lavar bem as mãos e\n" +
-    "utensílios de cozinha após o contato com carne crua, evitar\n" +
-    "mexer em jardins sem luvas e sempre lavar as mãos logo\n" +
-    "após, lavar frutas e verduras, antes de ingerí-los, trocar a\n" +
-    "caixa de areia dos gatos diariamente e lavar as mãos logo\n" +
-    "após, não alimentar o gato com carne crua ou mal passada e\n" +
-    "manter o gato dentro de casa evitando o hábito de caça."
+    "Lavar bem as mãos e utensílios de cozinha após o contato\n" +
+    "com carne crua. Não ingerir carne crua ou malpassada.\n" +
+    "Lavar frutas e verduras, antes de ingeri-los. Evitar mexer\n" +
+    "em jardins sem luvas e sempre lavar as mãos logo após. Do\n" +
+    "mesmo modo, trocar a caixa de areia dos gatos diariamente\n" +
+    "e lavar as mãos logo após. Não alimentar o gato com carne\n" +
+    "crua ou malpassada e manter o gato dentro de casa evitan-\n" +
+    "do o hábito de caça."
     , estiloInfoBalao);
   item.gatoTextoPrevencao.setPosition(432-130+550, 58+20);
   item.gatoTextoPrevencao.disable();
