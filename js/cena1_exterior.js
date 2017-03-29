@@ -235,14 +235,6 @@ sceneLoader[1] = function() {
   item.estVacaNormal.setBrightness(100);
   item.estPocoNormal.setBrightness(100);
 
-  item.estPocoNormal.setInteractive(false);
-  item.setaSalaDeAula.setInteractive(false);
-  item.chiqueiro.setInteractive(false);
-  item.horta.setInteractive(false);
-  item.latrina.setInteractive(false);
-  item.lixeira.setInteractive(false);
-  item.pocoExterior.setInteractive(false);
-
   // Livro inicial
   item.livroCenaExteriorTitulo = new Game.Text(
     "          Cena Exterior"
@@ -304,13 +296,6 @@ sceneLoader[1] = function() {
     item.vacaExterior.changeBrightness(210, 600);
 
     item.estPocoNormal.changeBrightness(210, 600);
-    item.estPocoNormal.setInteractive(true);
-    item.setaSalaDeAula.setInteractive(true);
-    item.chiqueiro.setInteractive(true);
-    item.horta.setInteractive(true);
-    item.latrina.setInteractive(true);
-    item.lixeira.setInteractive(true);
-    item.pocoExterior.setInteractive(true);
 
     setTimeout(function() {
       item.livroAberto.disable();
