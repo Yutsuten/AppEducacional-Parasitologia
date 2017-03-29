@@ -374,10 +374,10 @@ function carregaCicloToxoplasmose() {
 
   item.gatoTextoSintomas = new Game.Text(
     "- Geralmente assintomática;\n" +
-    "- Quadros agudos: febre, linfoadenopatia (inchaço dos\n" +
+    "- <b>Quadros agudos:</b> febre, linfoadenopatia (inchaço dos\n" +
     "nódulos linfáticos), linfocitose (aumento do número de\n" +
     "linfócitos no sangue) e dores musculares;\n" +
-    "- No feto: lesão cerebral, deformidades físicas e convulsões."
+    "- <b>No feto:</b> lesão cerebral, deformidades físicas e convulsões."
     , estiloInfoBalao);
   item.gatoTextoSintomas.setPosition(432-130+550, 58+20);
   item.gatoTextoSintomas.setAlpha(0);

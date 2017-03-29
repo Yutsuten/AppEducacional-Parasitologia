@@ -446,11 +446,12 @@ function carregaCicloGiardia() {
 
   item.pocoTextoSintomas = new Game.Text(
     "- Maioria das infecções são assintomáticas;\n" +
-    "- Sintomas comuns: dor abdominal, enterite (inflamação do\n" +
-    "tecido intestinal), perda de apetite, diarréia amarela, perda de\n" +
-    "peso, insônia;\n" +
-    "- Quando há predomínio de cistos as fezes continuam sólidas;\n" +
-    "- Outros: vômito; flatulência."
+    "- <b>Sintomas comuns:</b> dor abdominal, enterite (inflamação do\n" +
+    "tecido intestinal), perda de apetite, diarréia amarela, perda\n" +
+    "de peso, insônia;\n" +
+    "- Quando há predomínio de cistos as fezes continuam só-\n" +
+    "lidas;\n" +
+    "- <b>Outros:</b> vômito; flatulência."
     , estiloInfoBalao);
   item.pocoTextoSintomas.setPosition(432-130+80, 58+20);
   item.pocoTextoSintomas.setAlpha(0);
