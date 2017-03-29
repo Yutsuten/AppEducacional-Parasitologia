@@ -81,6 +81,7 @@ sceneLoader[1] = function() {
     ,estiloInfoPopup);
   item.popupLatrinaPocoTexto.setPosition(1106, 430);
   item.popupLatrinaPocoTexto.setAnchor(0.5, 0.5);
+  item.popupLatrinaPocoTexto.setZorder(4);
   item.popupLatrinaPocoTexto.disable();
 
   item.lixeira = new Game.Item("lixeira.png");
@@ -118,6 +119,7 @@ sceneLoader[1] = function() {
     ,estiloInfoPopup);
   item.popupChorumeTexto.setPosition(1010, 500);
   item.popupChorumeTexto.setAnchor(0.5, 0.5);
+  item.popupChorumeTexto.setZorder(4);
   item.popupChorumeTexto.disable();
 
   item.pocoExterior = new Game.Item("pocoExterior.png");

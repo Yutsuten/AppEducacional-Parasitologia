@@ -100,6 +100,7 @@ sceneLoader[0] = function() {
     ,estiloInfoPopup);
   item.popupFloresTexto.setPosition(1315, 160);
   item.popupFloresTexto.setAnchor(0.5, 0.5);
+  item.popupFloresTexto.setZorder(4);
   item.popupFloresTexto.disable();
 
   // Adiciona uma seta para levar a cena externa
