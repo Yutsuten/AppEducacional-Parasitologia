@@ -252,7 +252,11 @@ sceneLoader[1] = function() {
     "mouse pela tela e descubra qual é\n" +
     "esta ordem!</big>"
     , estiloTextoLivro);
-  item.livroCenaExteriorTexto1.setPosition(248, 200);
+  item.livroCenaExteriorTexto1.setPosition(248, 300);
+
+  item.livroCenaExteriorInterrocacao = new Game.Image("interrogacao.png");
+  item.livroCenaExteriorInterrocacao.setPosition(1270, 450);
+  item.livroCenaExteriorInterrocacao.setScale(1.4);
 
   item.livroCenaExteriorTexto2 = new Game.Text(
     "<big>     Você conseguiu entender?! O\n" +
@@ -264,7 +268,7 @@ sceneLoader[1] = function() {
     "ta. Desta forma, estes dois parasitas\n" +
     "causam sintomas semelhantes.</big>"
     , estiloTextoLivro);
-  item.livroCenaExteriorTexto2.setPosition(248, 200);
+  item.livroCenaExteriorTexto2.setPosition(990, 320);
   item.livroCenaExteriorTexto2.setAlpha(0);
   item.livroCenaExteriorTexto2.disable();
 
@@ -299,6 +303,7 @@ sceneLoader[1] = function() {
     // Esconde o texto
     item.livroCenaExteriorTitulo.changeAlpha(0, 600);
     item.livroCenaExteriorTexto1.changeAlpha(0, 600);
+    item.livroCenaExteriorInterrocacao.changeAlpha(0, 600);
     item.livroCenaExteriorTexto2.changeAlpha(0, 600);
 
     // Mostra setas da cena exterior
@@ -320,6 +325,8 @@ sceneLoader[1] = function() {
       item.fechaLivro.disable();
       item.livroCenaExteriorTitulo.disable();
       item.livroCenaExteriorTexto1.disable();
+      item.livroCenaExteriorInterrocacao.disable();
+      item.livroCenaExteriorTexto2.disable();
 
       enableInteractiveness();
     }, 650);

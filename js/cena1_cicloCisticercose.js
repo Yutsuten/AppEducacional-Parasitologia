@@ -394,10 +394,12 @@ function carregaCicloCisticercose() {
 
       item.livroAberto.enable();
       item.fechaLivro2.enable();
+      item.livroCenaExteriorTexto1.enable();
       item.livroCenaExteriorTitulo.enable();
       item.livroCenaExteriorTexto2.enable();
       item.livroAberto.changeAlpha(1, 600);
       item.fechaLivro2.changeAlpha(1, 600);
+      item.livroCenaExteriorTexto1.changeAlpha(1, 600);
       item.livroCenaExteriorTitulo.changeAlpha(1, 600);
       item.livroCenaExteriorTexto2.changeAlpha(1, 600);
     }, currentTime += animationInterval);
