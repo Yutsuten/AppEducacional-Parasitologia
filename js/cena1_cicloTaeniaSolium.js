@@ -701,6 +701,8 @@ function carregaCicloTaeniaSolium() {
       item.pocoExterior.setInteractive(true);
 
       enableInteractiveness();
+
+      scene[1].saveInteractiveness();
     }, currentTime += animationInterval);
 
   }
