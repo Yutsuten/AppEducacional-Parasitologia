@@ -78,7 +78,7 @@ var estiloTextoLivro = {
     fontStyle: "bold"
   },
   "gray" : {
-    fill: 0x888888
+    fill: 0x333333
   },
   "big" : {
     fontSize: "36px"

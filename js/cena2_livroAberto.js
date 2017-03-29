@@ -191,16 +191,16 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[1].titulo.setPosition(990, 520);
 
   livro.Parasitologia.pagina[1].texto2 = new Game.Text(
-    "     - <b>Agente infeccioso:</b> todo parasito capaz\n" +
+    "     - <gray>Agente infeccioso:</gray> todo parasito capaz\n" +
     "de produzir infecção ou doença infecciosa.\n" +
-    "     - <b>Agente etiológico:</b> é o agente causador\n" +
+    "     - <gray>Agente etiológico:</gray> é o agente causador\n" +
     "ou responsável pela origem da doença. Sen-\n" +
     "do assim, pode respresentar um fungo, bac-\n" +
     "téria, vírus, protozoário ou helminto.\n" +
-    "     - <b>Contaminação:</b> é a presença de um a-\n" +
+    "     - <gray>Contaminação:</gray> é a presença de um a-\n" +
     "gente infeccioso na superfície do corpo, rou-\n" +
     "pas, brinquedos, água, alimentos etc.\n" +
-    "     - <b>Fase aguda:</b> corresponde ao período logo"
+    "     - <gray>Fase aguda:</gray> corresponde ao período logo"
     , estiloTextoLivro);
   livro.Parasitologia.pagina[1].texto2.setPosition(990, 570);
 
@@ -225,20 +225,20 @@ function carregaLivroAberto() {
     "e abdominais etc). É um período de defi-\n" +
     "nição: o indivíduo ou se cura, ou entra na\n" +
     "fase crônica ou falece.\n" +
-    "     - <b>Fase crônica:</b> período que se segue à\n" +
+    "     - <gray>Fase crônica:</gray> período que se segue à\n" +
     "fase aguda; caracteriza-se pela diminuição\n" +
     "dos sintomas e por um equilíbrio elativo\n" +
     "entre o hospedeiro e o parasita. Este equi-\n" +
     "líbrio pode ser quebrado em favor de am-\n" +
     "bos os lados.\n" +
-    "      - <b>Hospedeiro definitivo:</b> o hospedeiro\n" +
+    "      - <gray>Hospedeiro definitivo:</gray> o hospedeiro\n" +
     "é aquele que contém o parasito. O hospe-\n" +
     "deiro definitivo é o que apresenta o para-\n" +
     "sito em sua fase matura ou em fase de ati-\n" +
     "vidade sexual. Exemplo: o hospedeiro de-\n" +
     "finitivo de <i>T. gondii</i> é o gato, enquanto que\n" +
     "o da <i>Taenia</i> sp é o ser humano.\n" +
-    "      - <b>Hospedeiro intermediário:</b> é aquele\n" +
+    "      - <gray>Hospedeiro intermediário:</gray> é aquele\n" +
     "que possui o parasito em sua forma larvá-\n" +
     "ria ou assexuada. Exemplo: os bovinos ou\n" +
     "suínos são hospedeiros intermediários de\n" +
@@ -247,27 +247,27 @@ function carregaLivroAberto() {
   livro.Parasitologia.pagina[2].texto1.setPosition(248, 120);
 
   livro.Parasitologia.pagina[2].texto2 = new Game.Text(
-    "      - <b>Infecção:</b> penetração e desenvolvi-\n" +
+    "      - <gray>Infecção:</gray> penetração e desenvolvi-\n" +
     "mento de um agente infeccioso (vírus, bac-\n" +
     "térias, protozoários ou helmintos) dentro\n" +
     "de um organismo.\n" +
-    "      - <b>Patogenia:</b> é o mecanismo pelo qual\n" +
+    "      - <gray>Patogenia:</gray> é o mecanismo pelo qual\n" +
     "um agente infeccioso provoca lesões no hos-\n" +
     "pedeiro. Exemplo: a <i>Giardia lamblia</i> adere\n" +
     "ao intestino dificultando a absorção de nu-\n" +
     "trientes e causando lesões na parede intes-\n" +
     "tinal, provocando diarréias e respostas in-\n" +
     "flamatórias.\n" +
-    "      - <b>Patogenicidade:</b> é a habilidade de um\n" +
+    "      - <gray>Patogenicidade:</gray> é a habilidade de um\n" +
     "agente infeccioso em provocar lesões. Exem-\n" +
     "plo: <i>Taenia saginata</i> tem patogenicidade\n" +
     "baixa.\n" +
-    "      - <b>Vetor:</b> é qualquer organismo que sirva\n" +
+    "      - <gray>Vetor:</gray> é qualquer organismo que sirva\n" +
     "de veículo para o parasito entre dois hospe-\n" +
     "dereiros, podendo ser um artrópode ou mo-\n" +
     "lusco. Exemplo: Mosquito que transmite a\n" +
     "malária, o <i>Anopheles</i> sp.\n" +
-    "      - <b>Virulência:</b> é a severidade e rapidez com\n" +
+    "      - <gray>Virulência:</gray> é a severidade e rapidez com\n" +
     "as quais o agente infeccioso provoca lesões\n" +
     "no hospedeiro. Exemplo: a <i>E. histolytica</i> pro-"
 
@@ -279,7 +279,7 @@ function carregaLivroAberto() {
 
   livro.Parasitologia.pagina[3].texto1 = new Game.Text(
     "voca lesões severas rapidamente.\n" +
-    "      - <b>Zoonose:</b> doenças e infecções que são\n" +
+    "      - <gray>Zoonose:</gray> doenças e infecções que são\n" +
     "transmitidos entre animais vertebrados e\n" +
     "os humanos. Atualmente são conhecidas\n" +
     "100 zoonoses. Exemplo: doenças de Chagas,\n" +
