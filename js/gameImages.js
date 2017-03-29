@@ -19,6 +19,7 @@ var gameImages = [
   "lixeira.png",
   "pocoExterior.png",
   "vacaExterior.png",
+  "interrogacao.png",
 
   // Imagens Armario
   "livroAgradecimentos.png",
