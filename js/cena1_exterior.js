@@ -252,23 +252,25 @@ sceneLoader[1] = function() {
     "mouse pela tela e descubra qual é\n" +
     "esta ordem!</big>"
     , estiloTextoLivro);
-  item.livroCenaExteriorTexto1.setPosition(248, 300);
+  item.livroCenaExteriorTexto1.setPosition(248, 350);
 
   item.livroCenaExteriorInterrocacao = new Game.Image("interrogacao.png");
   item.livroCenaExteriorInterrocacao.setPosition(1270, 450);
   item.livroCenaExteriorInterrocacao.setScale(1.4);
 
   item.livroCenaExteriorTexto2 = new Game.Text(
-    "<big>     Você conseguiu entender?! O\n" +
-    "parasita Taenia solium pode gerar\n" +
+    "<big>     Você conseguiu entender?!\n" +
+    "  \n" +
+    "  \n" +
+    "O parasita <i>Taenia solium</i> pode gerar\n" +
     "a doença conhecida como Cisticer-\n" +
     "cose e também a doença dita Tenía-\n" +
     "se, a qual é muito parecida com a\n" +
-    "Teníase causada pela Taenia sagina-\n" +
-    "ta. Desta forma, estes dois parasitas\n" +
+    "Teníase causada pela <i>Taenia sagina-\n" +
+    "ta</i>. Desta forma, estes dois parasitas\n" +
     "causam sintomas semelhantes.</big>"
     , estiloTextoLivro);
-  item.livroCenaExteriorTexto2.setPosition(990, 320);
+  item.livroCenaExteriorTexto2.setPosition(990, 280);
   item.livroCenaExteriorTexto2.setAlpha(0);
   item.livroCenaExteriorTexto2.disable();
 
