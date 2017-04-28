@@ -1,7 +1,7 @@
 # Idiomas | Languages | 言語
 - [Português](#Índice)
 - [English](#index)
-- 日本語
+- [日本語](#目次)
 
 ---
 
@@ -74,7 +74,6 @@ Designers:
 
 
 ## Créditos
-
 Este projeto utilizou códigos externos e bibliotecas. Crédito para os respectivos criadores.
 
 - [Pixijs](https://github.com/pixijs/pixi.js)
@@ -155,7 +154,6 @@ Designers:
 
 
 ## Credits
-
 This project used external code and libraries. Credit for the respective creators.
 
 - [Pixijs](https://github.com/pixijs/pixi.js)
@@ -163,3 +161,83 @@ This project used external code and libraries. Credit for the respective creator
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
 
 [Back to top](#top)
+
+
+---
+
+# 目次
+1. [ゲームについて](#ゲームについて)
+2. [スクリーンショット](#スクリーンショット)
+3. [チーム](#チーム)
+4. [著作権](#著作権)
+
+
+## ゲームについて
+このゲームは、小学生に寄生虫学を教える目的で開発されました。
+３つのシーンがあります。教室、外部シーンと本棚です。
+
+8人の学生がいます。4人は教室、他の4人は外部シーンにいます。
+ゲーム中、それぞれの学生は寄生虫で病気になってしまいます。
+学生にクイックしたら、なぜ学生が病気になったか、なんで予防できるか、プレイヤーがが分かるようになります。
+
+[トップに戻る](#top)
+
+
+## スクリーンショット
+
+### 教室のシーン：
+教室と4人の学生。
+
+![CenaSalaDeAula](screenshots/CenaSalaDeAula.jpg)
+
+### 外部シーン：
+外部シーンと他の4人の学生。
+
+![CenaExterna](screenshots/CenaExterior.jpg)
+
+### 本棚のシーン：
+本棚と１０冊のインタラクティブ本
+
+![Armario](screenshots/CenaArmario.jpg)
+
+### 病気のサイクル：
+学生にクリックすると、寄生虫と病気のサイクルが見えます。
+
+![CicloParasita](screenshots/ExemploCiclo.jpg)
+
+### 兆候、感染、予防：
+サイクルを見た後、病気の兆候、感染と予防について読めます。
+
+![Balao](screenshots/ExemploBalao.jpg)
+
+### 本
+本棚のシーンで、本で寄生虫学とその病気について読めます。
+
+![Livro](screenshots/ExemploLivro.jpg)
+
+[トップに戻る](#top)
+
+
+## チーム
+著者 （生物学の学生）：
+- Isabella Brosens Barros
+- Karina Nomidome de Senna
+
+開発者：
+- Mateus Gonçalez Etto
+
+デザイナー：
+- Heitor Vasconcelos de Queiroz
+- Matheus Barbosa Peixoto
+
+[トップに戻る](#top)
+
+
+## 著作権
+このプロジェクトでは外部のコードとライブラリーが使われました。これらのクレジットはそれぞれのクリエーターです。
+
+- [Pixijs](https://github.com/pixijs/pixi.js)
+- [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
+- [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
+
+[トップに戻る](#top)
