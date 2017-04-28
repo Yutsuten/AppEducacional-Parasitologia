@@ -8,8 +8,9 @@
 # Índice
 1. [Sobre o jogo](#sobre-o-jogo)
 2. [Capturas de tela](#capturas-de-tela)
-3. [Equipe](#equipe)
-4. [Créditos](#créditos)
+3. [Vídeo](#vídeo)
+4. [Equipe](#equipe)
+5. [Créditos](#créditos)
 
 
 ## Sobre o jogo
@@ -58,6 +59,13 @@ Na cena do armário, é possivel ler livros para aprender mais sobre parasitolog
 [Voltar ao topo da página](#top)
 
 
+## Vídeo
+
+[![Video](http://img.youtube.com/vi/gyyVnTMLL4c/0.jpg)](https://www.youtube.com/watch?v=gyyVnTMLL4c)
+
+[Voltar ao topo da página](#top)
+
+
 ## Equipe
 Autoras (Estudantes de Biologia):
 - Isabella Brosens Barros
@@ -88,8 +96,9 @@ Este projeto utilizou códigos externos e bibliotecas. Crédito para os respecti
 # Index
 1. [About the game](#about-the-game)
 2. [Screenshots](#screenshots)
-3. [Team](#team)
-4. [Credits](#credits)
+3. [Video](#video)
+4. [Team](#team)
+5. [Credits](#credits)
 
 
 ## About the game
@@ -138,6 +147,13 @@ At the Wardrobe Scene, it is possible to read book and learn more about parasito
 [Back to top](#top)
 
 
+## Video
+
+[![Video](http://img.youtube.com/vi/gyyVnTMLL4c/0.jpg)](https://www.youtube.com/watch?v=gyyVnTMLL4c)
+
+[Back to top](#top)
+
+
 ## Team
 Authors (Biology Students):
 - Isabella Brosens Barros
@@ -168,8 +184,9 @@ This project used external code and libraries. Credit for the respective creator
 # 目次
 1. [ゲームについて](#ゲームについて)
 2. [スクリーンショット](#スクリーンショット)
-3. [チーム](#チーム)
-4. [著作権](#著作権)
+3. [ビデオ](#ビデオ)
+4. [チーム](#チーム)
+5. [著作権](#著作権)
 
 
 ## ゲームについて
@@ -214,6 +231,13 @@ This project used external code and libraries. Credit for the respective creator
 本棚のシーンで、本で寄生虫学とその病気について読めます。
 
 ![Livro](screenshots/ExemploLivro.jpg)
+
+[トップに戻る](#top)
+
+
+## ビデオ
+
+[![Video](http://img.youtube.com/vi/gyyVnTMLL4c/0.jpg)](https://www.youtube.com/watch?v=gyyVnTMLL4c)
 
 [トップに戻る](#top)
 
