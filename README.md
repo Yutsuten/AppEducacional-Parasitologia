@@ -196,7 +196,7 @@ This project used external code and libraries. Credit for the respective creator
 ![CenaExterna](screenshots/CenaExterior.jpg)
 
 ### 本棚のシーン：
-本棚と１０冊のインタラクティブ本
+本棚と１０冊のインタラクティブ本。
 
 ![Armario](screenshots/CenaArmario.jpg)
 
@@ -206,7 +206,7 @@ This project used external code and libraries. Credit for the respective creator
 ![CicloParasita](screenshots/ExemploCiclo.jpg)
 
 ### 兆候、感染、予防：
-サイクルを見た後、病気の兆候、感染と予防について読めます。
+サイクルを見た後、病気の兆候と感染、予防について読めます。
 
 ![Balao](screenshots/ExemploBalao.jpg)
 
