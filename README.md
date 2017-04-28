@@ -1,11 +1,13 @@
-- [Português](#Índice)
-- English
+- [Português](#índice)
+- [English](#index)
 - 日本語
 
 # Índice
-1. Sobre o jogo
-2. Screenshots
-3. Equipe
+1. [Sobre o jogo](#1.-sobre-o-jogo)
+2. [Capturas de tela](#2.-capturas-de-tela)
+3. [Equipe](#3.-equipe)
+4. [Créditos](#4.créditos)
+
 
 ## 1. Sobre o jogo
 Este jogo foi desenvolvido com o objetivo de ensinar parasitologia para estudantes do Ensino fundamental.
@@ -16,7 +18,7 @@ No jogo, cada estudante é afetado por um parasita e fica doente.
 Durante as interações, o jogador entende o porquê de o estudante ter ficado doente, e aprende de que maneiras ele pode se previnir daquela doença.
 
 
-## 2. Screenshots
+## 2. Capturas de tela
 
 ### Cena da Sala de Aula:
 Sala de aula com 4 estudantes.
@@ -54,14 +56,88 @@ Autoras (Estudantes de Biologia):
 - Isabella Brosens Barros
 - Karina Nomidome de Senna
 
-Programador:
+Desenvolvedor:
 - Mateus Gonçalez Etto
 
 Designers:
 - Heitor Vasconcelos de Queiroz
 - Matheus Barbosa Peixoto
 
+
+## 4. Créditos
+
+Este projeto utilizou códigos externos e bibliotecas. Crédito para os respectivos criadores.
+
+- [Pixijs](https://github.com/pixijs/pixi.js)
+- [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
+- [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
+
+
 ---
+
+# Index
+1. [About the game](#1.-about-the-game)
+2. [Screenshots](#2.-screenshots)
+3. [Team](#3.-team)
+4. [Credits](#4.credits)
+
+
+## 1. About the game
+This game was developed with the objective to teach parasitology to Elementary School students.
+It has 3 scenes, that are Classroom, External Scene and the Wardrobe.
+
+There are 8 students, 4 in the Classroom, and 4 at External Scene.
+In the game, each student is affected by a parasite and gets sick.
+During the interactions, the player understands why the student got sick, and learns how to prevent that illness.
+
+
+## 2. Screenshots
+
+### Classroom Scene:
+Classroom with 4 students.
+
+![CenaSalaDeAula](screenshots/CenaSalaDeAula.jpg)
+
+### External Scene:
+External Scene with other 4 students.
+
+![CenaExterna](screenshots/CenaExterior.jpg)
+
+### Wardrobe Scene:
+Wardrobe with 10 interactive books.
+
+![Armario](screenshots/CenaArmario.jpg)
+
+### Illness cicle:
+After clicking a student, it is possible to see the parasite's cicle that causes the disease.
+
+![CicloParasita](screenshots/ExemploCiclo.jpg)
+
+### Symptoms, Transmission and Prevention:
+After seeing the cycle, it is possible to read the symptoms, transmission and prevention of the illness.
+
+![Balao](screenshots/ExemploBalao.jpg)
+
+### Book
+At the Wardrobe Scene, it is possible to read book and learn more about parasitology or its specifics diseases.
+
+![Livro](screenshots/ExemploLivro.jpg)
+
+
+## 3. Team
+Authors (Biology Students):
+- Isabella Brosens Barros
+- Karina Nomidome de Senna
+
+Developer:
+- Mateus Gonçalez Etto
+
+Designers:
+- Heitor Vasconcelos de Queiroz
+- Matheus Barbosa Peixoto
+
+
+## 4. Credits
 
 This project used external code and libraries. Credit for the respective creators.
 
