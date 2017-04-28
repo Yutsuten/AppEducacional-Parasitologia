@@ -3,10 +3,10 @@
 - 日本語
 
 # Índice
-1. [Sobre o jogo](##Sobre-o-jogo)
-2. [Capturas de tela](##Capturas-de-tela)
-3. [Equipe](##Equipe)
-4. [Créditos](##Créditos)
+1. [Sobre o jogo](#sobre-o-jogo)
+2. [Capturas de tela](#capturas-de-tela)
+3. [Equipe](#equipe)
+4. [Créditos](#créditos)
 
 
 ## Sobre o jogo
@@ -76,10 +76,10 @@ Este projeto utilizou códigos externos e bibliotecas. Crédito para os respecti
 ---
 
 # Index
-1. [About the game](##About-the-game)
-2. [Screenshots](##Screenshots)
-3. [Team](##Team)
-4. [Credits](##Credits)
+1. [About the game](#about-the-game)
+2. [Screenshots](#screenshots)
+3. [Team](#team)
+4. [Credits](#credits)
 
 
 ## About the game
