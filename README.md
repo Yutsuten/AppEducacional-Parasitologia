@@ -1,6 +1,9 @@
+# Idiomas | Languages | 言語
 - [Português](#Índice)
 - [English](#index)
 - 日本語
+
+---
 
 # Índice
 1. [Sobre o jogo](#sobre-o-jogo)
@@ -16,6 +19,8 @@ Ele é composto por 3 cenas, que são a Sala de Aula, Cena Exterior e Armário.
 Existem 8 estudantes no total, sendo 4 na Sala de Aula e outros 4 na Cena Exterior.
 No jogo, cada estudante é afetado por um parasita e fica doente.
 Durante as interações, o jogador entende o porquê de o estudante ter ficado doente, e aprende de que maneiras ele pode se previnir daquela doença.
+
+[Voltar ao topo da página](#idiomas-|-languages-|-言語)
 
 
 ## Capturas de tela
@@ -50,6 +55,8 @@ Na cena do armário, é possivel ler livros para aprender mais sobre parasitolog
 
 ![Livro](screenshots/ExemploLivro.jpg)
 
+[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+
 
 ## Equipe
 Autoras (Estudantes de Biologia):
@@ -63,6 +70,8 @@ Designers:
 - Heitor Vasconcelos de Queiroz
 - Matheus Barbosa Peixoto
 
+[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+
 
 ## Créditos
 
@@ -71,6 +80,8 @@ Este projeto utilizou códigos externos e bibliotecas. Crédito para os respecti
 - [Pixijs](https://github.com/pixijs/pixi.js)
 - [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
+
+[Voltar ao topo da página](#idiomas-|-languages-|-言語)
 
 
 ---
@@ -89,6 +100,8 @@ It has 3 scenes, that are Classroom, External Scene and the Wardrobe.
 There are 8 students, 4 in the Classroom, and 4 at External Scene.
 In the game, each student is affected by a parasite and gets sick.
 During the interactions, the player understands why the student got sick, and learns how to prevent that illness.
+
+[Back to top](#idiomas-|-languages-|-言語)
 
 
 ## Screenshots
@@ -123,6 +136,8 @@ At the Wardrobe Scene, it is possible to read book and learn more about parasito
 
 ![Livro](screenshots/ExemploLivro.jpg)
 
+[Back to top](#idiomas-|-languages-|-言語)
+
 
 ## Team
 Authors (Biology Students):
@@ -136,6 +151,8 @@ Designers:
 - Heitor Vasconcelos de Queiroz
 - Matheus Barbosa Peixoto
 
+[Back to top](#idiomas-|-languages-|-言語)
+
 
 ## Credits
 
@@ -144,3 +161,5 @@ This project used external code and libraries. Credit for the respective creator
 - [Pixijs](https://github.com/pixijs/pixi.js)
 - [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
+
+[Back to top](#idiomas-|-languages-|-言語)
