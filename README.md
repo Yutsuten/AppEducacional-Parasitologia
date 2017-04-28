@@ -1,15 +1,15 @@
-- [Português](#índice)
+- [Português](#Índice)
 - [English](#index)
 - 日本語
 
 # Índice
-1. [Sobre o jogo](#1.-sobre-o-jogo)
-2. [Capturas de tela](#2.-capturas-de-tela)
-3. [Equipe](#3.-equipe)
-4. [Créditos](#4.créditos)
+1. [Sobre o jogo](#Sobre-o-jogo)
+2. [Capturas de tela](#Capturas-de-tela)
+3. [Equipe](#Equipe)
+4. [Créditos](#Créditos)
 
 
-## 1. Sobre o jogo
+## Sobre o jogo
 Este jogo foi desenvolvido com o objetivo de ensinar parasitologia para estudantes do Ensino fundamental.
 Ele é composto por 3 cenas, que são a Sala de Aula, Cena Exterior e Armário.
 
@@ -18,7 +18,7 @@ No jogo, cada estudante é afetado por um parasita e fica doente.
 Durante as interações, o jogador entende o porquê de o estudante ter ficado doente, e aprende de que maneiras ele pode se previnir daquela doença.
 
 
-## 2. Capturas de tela
+## Capturas de tela
 
 ### Cena da Sala de Aula:
 Sala de aula com 4 estudantes.
@@ -51,7 +51,7 @@ Na cena do armário, é possivel ler livros para aprender mais sobre parasitolog
 ![Livro](screenshots/ExemploLivro.jpg)
 
 
-## 3. Equipe
+## Equipe
 Autoras (Estudantes de Biologia):
 - Isabella Brosens Barros
 - Karina Nomidome de Senna
@@ -64,7 +64,7 @@ Designers:
 - Matheus Barbosa Peixoto
 
 
-## 4. Créditos
+## Créditos
 
 Este projeto utilizou códigos externos e bibliotecas. Crédito para os respectivos criadores.
 
@@ -76,13 +76,13 @@ Este projeto utilizou códigos externos e bibliotecas. Crédito para os respecti
 ---
 
 # Index
-1. [About the game](#1.-about-the-game)
-2. [Screenshots](#2.-screenshots)
-3. [Team](#3.-team)
-4. [Credits](#4.credits)
+1. [About the game](#About-the-game)
+2. [Screenshots](#Screenshots)
+3. [Team](#Team)
+4. [Credits](#Credits)
 
 
-## 1. About the game
+## About the game
 This game was developed with the objective to teach parasitology to Elementary School students.
 It has 3 scenes, that are Classroom, External Scene and the Wardrobe.
 
@@ -91,7 +91,7 @@ In the game, each student is affected by a parasite and gets sick.
 During the interactions, the player understands why the student got sick, and learns how to prevent that illness.
 
 
-## 2. Screenshots
+## Screenshots
 
 ### Classroom Scene:
 Classroom with 4 students.
@@ -124,7 +124,7 @@ At the Wardrobe Scene, it is possible to read book and learn more about parasito
 ![Livro](screenshots/ExemploLivro.jpg)
 
 
-## 3. Team
+## Team
 Authors (Biology Students):
 - Isabella Brosens Barros
 - Karina Nomidome de Senna
@@ -137,7 +137,7 @@ Designers:
 - Matheus Barbosa Peixoto
 
 
-## 4. Credits
+## Credits
 
 This project used external code and libraries. Credit for the respective creators.
 
