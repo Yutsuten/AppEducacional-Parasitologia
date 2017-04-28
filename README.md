@@ -20,7 +20,7 @@ Existem 8 estudantes no total, sendo 4 na Sala de Aula e outros 4 na Cena Exteri
 No jogo, cada estudante é afetado por um parasita e fica doente.
 Durante as interações, o jogador entende o porquê de o estudante ter ficado doente, e aprende de que maneiras ele pode se previnir daquela doença.
 
-[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+[Voltar ao topo da página](#top)
 
 
 ## Capturas de tela
@@ -55,7 +55,7 @@ Na cena do armário, é possivel ler livros para aprender mais sobre parasitolog
 
 ![Livro](screenshots/ExemploLivro.jpg)
 
-[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+[Voltar ao topo da página](#top)
 
 
 ## Equipe
@@ -70,7 +70,7 @@ Designers:
 - Heitor Vasconcelos de Queiroz
 - Matheus Barbosa Peixoto
 
-[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+[Voltar ao topo da página](#top)
 
 
 ## Créditos
@@ -81,7 +81,7 @@ Este projeto utilizou códigos externos e bibliotecas. Crédito para os respecti
 - [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
 
-[Voltar ao topo da página](#idiomas-|-languages-|-言語)
+[Voltar ao topo da página](#top)
 
 
 ---
@@ -101,7 +101,7 @@ There are 8 students, 4 in the Classroom, and 4 at External Scene.
 In the game, each student is affected by a parasite and gets sick.
 During the interactions, the player understands why the student got sick, and learns how to prevent that illness.
 
-[Back to top](#idiomas-|-languages-|-言語)
+[Back to top](#top)
 
 
 ## Screenshots
@@ -136,7 +136,7 @@ At the Wardrobe Scene, it is possible to read book and learn more about parasito
 
 ![Livro](screenshots/ExemploLivro.jpg)
 
-[Back to top](#idiomas-|-languages-|-言語)
+[Back to top](#top)
 
 
 ## Team
@@ -151,7 +151,7 @@ Designers:
 - Heitor Vasconcelos de Queiroz
 - Matheus Barbosa Peixoto
 
-[Back to top](#idiomas-|-languages-|-言語)
+[Back to top](#top)
 
 
 ## Credits
@@ -162,4 +162,4 @@ This project used external code and libraries. Credit for the respective creator
 - [scaleToWindow](https://github.com/kittykatattack/scaleToWindow)
 - [pixi-multistyle-text](https://github.com/tleunen/pixi-multistyle-text)
 
-[Back to top](#idiomas-|-languages-|-言語)
+[Back to top](#top)
