@@ -37,7 +37,7 @@ Cena exterior com outros 4 estudantes.
 ![CenaExterna](screenshots/CenaExterior.jpg)
 
 ### Cena do Armário:
-Armário com 10 livros clicáveis.
+Armário com 9 livros clicáveis.
 
 ![Armario](screenshots/CenaArmario.jpg)
 
@@ -125,7 +125,7 @@ External Scene with other 4 students.
 ![CenaExterna](screenshots/CenaExterior.jpg)
 
 ### Wardrobe Scene:
-Wardrobe with 10 interactive books.
+Wardrobe with 9 interactive books.
 
 ![Armario](screenshots/CenaArmario.jpg)
 
@@ -213,7 +213,7 @@ This project used external code and libraries. Credit for the respective creator
 ![CenaExterna](screenshots/CenaExterior.jpg)
 
 ### 本棚のシーン：
-本棚と１０冊のインタラクティブ本。
+本棚と9冊のインタラクティブ本。
 
 ![Armario](screenshots/CenaArmario.jpg)
 
