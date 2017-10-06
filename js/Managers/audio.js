@@ -1,6 +1,6 @@
 'use strict';
 
-var musicEnabled = true;
+var musicEnabled = false;
 var soundEffectsEnabled = true;
 
 var gameMusic = null;
