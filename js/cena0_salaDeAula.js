@@ -184,6 +184,127 @@ sceneLoader[0] = function() {
     , estiloTextoLivro);
   item.livroObjetoDeApendizagemTexto3.setPosition(1414, 700);
 
+  item.livroObjetoDeApendizagemTitulo2 = new Game.Text(
+    "       Pagina 2"
+  , estiloTitulo);
+  item.livroObjetoDeApendizagemTitulo2.setPosition(248, 120);
+  item.livroObjetoDeApendizagemTitulo2.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto4 = new Game.Text(
+    "     Pagina2\n" +
+    "tecnologia recente que abre caminhos na\n" +
+    "educação à distância e que serve de mate-\n" +
+    "rial de apoio a aula presencial tradicional.\n" +
+    "São elementos de uma nova metodologia\n" +
+    "de ensino e aprendizagem baseada no uso\n" +
+    "do computador e da Internet.\n" +
+    "     Apesar de sua definição ainda ser vaga,\n" +
+    "o consenso é de que o Objeto de Aprendi-\n" +
+    "zagem deva possuir um propósito educa-\n" +
+    "cional definido, um elemento que estimule\n" +
+    "a reflexão do estudante e que sua constru-\n" +
+    "ção seja de forma a facilitar a reutilização\n" +
+    "dentro de outros contextos de aprendiza-\n" +
+    "gem.\n" +
+    "     Desta forma, as autoras apresentam o\n" +
+    "presente Objeto de Aprendizagem em Pa-\n" +
+    "rasitologia.\n" +
+    "     O software (ou “jogo”) conta com regi-\n" +
+    "ões clicáveis e interativas, as quais revela-\n" +
+    "rão ao usuário informações adicionais so-"
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemTexto4.setPosition(248, 190);
+  item.livroObjetoDeApendizagemTexto4.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto5 = new Game.Text(
+    "Pagina2\n" +
+    "dos parasitas em questão e as suas consequen-\n" +
+    "tes doenças. Visualmente, o jogo é repleto de\n" +
+    "imagens e se é intencionado que estas sejam\n" +
+    "autoexplicativas, contando, num primeiro mo-\n" +
+    "mento, com os auxílios das legendas.\n" +
+    "     São expostas três telas: a principal, a sala\n" +
+    "de aula, na qual serão encontradas representa-\n" +
+    "ções de quatro doenças e seus respectivos pa-\n" +
+    "rasitas. À direita da tela principal será exposto\n" +
+    "o exterior da escola, com mais quatro doenças\n" +
+    "e seus três parasitas. À esquerda da sala de au-\n" +
+    "la será apresentada uma estante repleta de li-\n" +
+    "vros interativos, nos quais serão explicadas as\n" +
+    "teorias sobre o Parasitismo e cada parasita abor-\n" +
+    "dado neste Objeto de Aprendizagem."
+    , estiloTextoLivro);
+  item.livroObjetoDeApendizagemTexto5.setPosition(990, 120);
+  item.livroObjetoDeApendizagemTexto5.setAlpha(0);
+
+  item.livroPagina1 = new Game.Item("seta.png");
+  item.livroPagina1.setPosition(110, 500);
+  item.livroPagina1.setBrightness(120);
+  item.livroPagina1.setScale(0.3);
+  item.livroPagina1.setZorder(0);
+  item.livroPagina1.setAlpha(1);
+  item.livroPagina1.setRotation(180);
+  item.livroPagina1.setInteractive(false);
+  item.livroPagina1.enable();
+  item.livroPagina1.onMouseOver = function() {
+    scene[0].setSubtitle("Página anterior");
+    item.livroPagina1.setBrightness(255);
+  }
+  item.livroPagina1.onMouseOut = function() {
+    scene[0].setSubtitle("");
+    item.livroPagina1.setBrightness(220);
+  }
+  item.livroPagina1.onClick = function(mouse) {
+    somSeta();
+    item.livroObjetoDeApendizagemTitulo.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto1.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto2.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto3.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTitulo2.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto4.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto5.changeAlpha(0, 600);
+    item.livroPagina1.setInteractive(false);
+    item.livroPagina1.setBrightness(120);
+    item.livroPagina2.setInteractive(true);
+    item.livroPagina2.setBrightness(220);
+    item.fechaLivro.disable();
+    item.fechaLivro.changeAlpha(0, 600);
+    scene[0].setSubtitle("");
+  }
+
+  item.livroPagina2 = new Game.Item("seta.png");
+  item.livroPagina2.setPosition(1670, 500);
+  item.livroPagina2.setBrightness(220);
+  item.livroPagina2.setScale(0.3);
+  item.livroPagina2.setZorder(0);
+  item.livroPagina2.setAlpha(1);
+  item.livroPagina2.enable();
+  item.livroPagina2.onMouseOver = function() {
+    scene[0].setSubtitle("Próxima página");
+    item.livroPagina2.setBrightness(255);
+  }
+  item.livroPagina2.onMouseOut = function() {
+    scene[0].setSubtitle("");
+    item.livroPagina2.setBrightness(220);
+  }
+  item.livroPagina2.onClick = function(mouse) {
+    somSeta();
+    item.livroObjetoDeApendizagemTitulo.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto1.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto2.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto3.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTitulo2.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto4.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto5.changeAlpha(1, 600);
+    item.livroPagina1.setInteractive(true);
+    item.livroPagina1.setBrightness(220);
+    item.livroPagina2.setInteractive(false);
+    item.livroPagina2.setBrightness(120);
+    item.fechaLivro.enable();
+    item.fechaLivro.changeAlpha(1, 600);
+    scene[0].setSubtitle("");
+  }
+
   item.livroAberto = new Game.Item("livroAberto.png");
   item.livroAberto.setZorder(6);
   item.livroAberto.setPosition(960, 540);
@@ -195,8 +316,8 @@ sceneLoader[0] = function() {
   item.fechaLivro.setZorder(1);
   item.fechaLivro.setBrightness(200);
   item.fechaLivro.setScale(0.14);
-  item.fechaLivro.enable();
-  item.fechaLivro.setAlpha(1);
+  item.fechaLivro.disable();
+  item.fechaLivro.setAlpha(0);
   item.fechaLivro.onMouseOver = function() {
     item.fechaLivro.setBrightness(255);
   }
@@ -212,10 +333,12 @@ sceneLoader[0] = function() {
     item.fechaLivro.changeAlpha(0, 600);
 
     // Esconde o texto
-    item.livroObjetoDeApendizagemTitulo.changeAlpha(0, 600);
-    item.livroObjetoDeApendizagemTexto1.changeAlpha(0, 600);
-    item.livroObjetoDeApendizagemTexto2.changeAlpha(0, 600);
-    item.livroObjetoDeApendizagemTexto3.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTitulo2.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto4.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto5.changeAlpha(0, 600);
+
+    item.livroPagina1.changeAlpha(0, 600);
+    item.livroPagina2.changeAlpha(0, 600);
 
     // Mostra setas da sala de aula
     item.setaJanela.enable();
@@ -226,10 +349,11 @@ sceneLoader[0] = function() {
     setTimeout(function() {
       item.livroAberto.disable();
       item.fechaLivro.disable();
-      item.livroObjetoDeApendizagemTitulo.disable();
-      item.livroObjetoDeApendizagemTexto1.disable();
-      item.livroObjetoDeApendizagemTexto2.disable();
-      item.livroObjetoDeApendizagemTexto3.disable();
+      item.livroObjetoDeApendizagemTitulo2.disable();
+      item.livroObjetoDeApendizagemTexto4.disable();
+      item.livroObjetoDeApendizagemTexto5.disable();
+      item.livroPagina1.disable();
+      item.livroPagina2.disable();
 
       enableInteractiveness();
     }, 650);
