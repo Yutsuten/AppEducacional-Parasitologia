@@ -9,7 +9,7 @@ sceneLoader[1] = function() {
 
   // Adicionando uma imagem de fundo
   scene[1].background = new Game.Background("cenaExterior.jpg");
-  scene[1].background.setBrightness(100);
+  scene[1].background.setBrightness(210);
 
   // Criando um aliase de scene[1].item
   var item = scene[1].item;
@@ -173,7 +173,7 @@ sceneLoader[1] = function() {
   }
 
   // Estados da cena
-  scene[1].state = 0;
+  scene[1].state = 3;
   scene[1].nextState = function() {
     switch (scene[1].state) {
       case 0:
@@ -222,199 +222,6 @@ sceneLoader[1] = function() {
   carregaCicloTaeniaSaginata();
   carregaCicloTaeniaSolium();
   carregaCicloCisticercose();
-
-  // Scene darker and disable them by default
-  item.chiqueiro.setBrightness(100);
-  item.horta.setBrightness(100);
-  item.latrina.setBrightness(100);
-  item.lixeira.setBrightness(100);
-  item.pocoExterior.setBrightness(100);
-  item.vacaExterior.setBrightness(100);
-
-  item.estCenouraNormal.setBrightness(100);
-  item.estVacaNormal.setBrightness(100);
-  item.estPocoNormal.setBrightness(100);
-
-  // Livro inicial
-  item.livroCenaExteriorTitulo = new Game.Text(
-    "<big>           Cena Exterior</big>"
-  , estiloTitulo);
-  item.livroCenaExteriorTitulo.setPosition(248, 120);
-
-  item.livroCenaExteriorTexto1 = new Game.Text(
-    "<big>     Nesta parte, você irá se deparar\n" +
-    "com uma ordem programada de in-\n" +
-    "teração com as personagens e suas\n" +
-    "doenças. Apresentaremos quatro\n" +
-    "doenças, mas apenas três parasitas.\n" +
-    "Neste sentido, um dos parasitas é o\n" +
-    "causador de duas doenças. Passe o\n" +
-    "mouse pela tela e descubra qual é\n" +
-    "esta ordem!</big>"
-    , estiloTextoLivro);
-  item.livroCenaExteriorTexto1.setPosition(248, 350);
-
-  item.livroCenaExteriorInterrocacao = new Game.Image("interrogacao.png");
-  item.livroCenaExteriorInterrocacao.setPosition(1270, 450);
-  item.livroCenaExteriorInterrocacao.setScale(1.4);
-
-  item.livroCenaExteriorTexto2 = new Game.Text(
-    "<big>     Você conseguiu entender?!\n" +
-    "  \n" +
-    "  \n" +
-    "O parasita <i>Taenia solium</i> pode gerar\n" +
-    "a doença conhecida como Cisticer-\n" +
-    "cose e também a doença dita Tenía-\n" +
-    "se, a qual é muito parecida com a\n" +
-    "Teníase causada pela <i>Taenia sagina-\n" +
-    "ta</i>. Desta forma, estes dois parasitas\n" +
-    "causam sintomas semelhantes.</big>"
-    , estiloTextoLivro);
-  item.livroCenaExteriorTexto2.setPosition(990, 280);
-  item.livroCenaExteriorTexto2.setAlpha(0);
-  item.livroCenaExteriorTexto2.disable();
-
-  item.livroAberto = new Game.Item("livroAbertoSemMesa.png");
-  item.livroAberto.setZorder(6);
-  item.livroAberto.setPosition(960, 540);
-  item.livroAberto.enable();
-  item.livroAberto.setAlpha(1);
-
-  // Fecha do primeiro livro (que aparece assim que entra na cena exterior)
-  item.fechaLivro = new Game.Item("botaoFechar.png");
-  item.fechaLivro.setPosition(1840, 70);
-  item.fechaLivro.setZorder(1);
-  item.fechaLivro.setBrightness(200);
-  item.fechaLivro.setScale(0.14);
-  item.fechaLivro.enable();
-  item.fechaLivro.setAlpha(1);
-  item.fechaLivro.onMouseOver = function() {
-    item.fechaLivro.setBrightness(255);
-  }
-  item.fechaLivro.onMouseOut = function() {
-    item.fechaLivro.setBrightness(200);
-  }
-  item.fechaLivro.onClick = function(mouse) {
-    disableInteractiveness();
-    somClique();
-
-    // Esconde o livro
-    item.livroAberto.changeAlpha(0, 600);
-    item.fechaLivro.changeAlpha(0, 600);
-
-    // Esconde o texto
-    item.livroCenaExteriorTitulo.changeAlpha(0, 600);
-    item.livroCenaExteriorTexto1.changeAlpha(0, 600);
-    item.livroCenaExteriorInterrocacao.changeAlpha(0, 600);
-    item.livroCenaExteriorTexto2.changeAlpha(0, 600);
-
-    // Mostra setas da cena exterior
-    item.setaSalaDeAula.enable();
-    item.setaSalaDeAula.changeAlpha(1, 600);
-
-    scene[1].background.changeBrightness(210, 600);
-    item.chiqueiro.changeBrightness(210, 600);
-    item.horta.changeBrightness(210, 600);
-    item.latrina.changeBrightness(210, 600);
-    item.lixeira.changeBrightness(210, 600);
-    item.pocoExterior.changeBrightness(210, 600);
-    item.vacaExterior.changeBrightness(210, 600);
-
-    item.estPocoNormal.changeBrightness(210, 600);
-
-    setTimeout(function() {
-      item.livroAberto.disable();
-      item.fechaLivro.disable();
-      item.livroCenaExteriorTitulo.disable();
-      item.livroCenaExteriorTexto1.disable();
-      item.livroCenaExteriorInterrocacao.disable();
-      item.livroCenaExteriorTexto2.disable();
-
-      enableInteractiveness();
-    }, 650);
-  }
-
-  // Fechar do segundo livro (aparece apos ver Cisticercose pela primeira vez)
-  item.fechaLivro2 = new Game.Item("botaoFechar.png");
-  item.fechaLivro2.setPosition(1840, 70);
-  item.fechaLivro2.setZorder(1);
-  item.fechaLivro2.setBrightness(200);
-  item.fechaLivro2.setScale(0.14);
-  item.fechaLivro2.disable();
-  item.fechaLivro2.setAlpha(0);
-  item.fechaLivro2.onMouseOver = function() {
-    item.fechaLivro2.setBrightness(255);
-  }
-  item.fechaLivro2.onMouseOut = function() {
-    item.fechaLivro2.setBrightness(200);
-  }
-  item.fechaLivro2.onClick = function(mouse) {
-    disableInteractiveness();
-    somClique();
-
-    // Esconde o livro
-    item.livroAberto.changeAlpha(0, 600);
-    item.fechaLivro2.changeAlpha(0, 600);
-
-    // Esconde o texto
-    item.livroCenaExteriorTitulo.changeAlpha(0, 600);
-    item.livroCenaExteriorTexto1.changeAlpha(0, 600);
-    item.livroCenaExteriorTexto2.changeAlpha(0, 600);
-
-    // Mostra cena
-    item.estCenouraNormal.enable();
-    item.estCenouraNormal.setBrightness(item.estCenouraNormal.brightnessTarget);
-    item.estCenouraNormal.changeAlpha(1, 600);
-
-    scene[1].background.changeBrightness(210, 600);
-    item.chiqueiro.changeBrightness(210, 600);
-    item.horta.changeBrightness(210, 600);
-    item.latrina.changeBrightness(210, 600);
-    item.lixeira.changeBrightness(210, 600);
-    item.pocoExterior.changeBrightness(210, 600);
-    item.vacaExterior.changeBrightness(210, 600);
-
-    item.estPocoNormal.changeBrightness(item.estPocoNormal.brightnessTarget, 600);
-    item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
-    item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
-    item.setaSalaDeAula.enable();
-    item.setaSalaDeAula.changeAlpha(1, 600);
-
-    item.cenouraBotaoOKhover.disable();
-    item.cenouraBalaoPrevencao.disable();
-    item.cenouraBalaoTransmissao.disable();
-    item.cenouraAbaSintomas.disable();
-    item.cenouraAbaPrevencao.disable();
-    item.cenouraAbaTransmissao.disable();
-    item.cenouraTextoPrevencao.disable();
-    item.cenouraTextoTransmissao.disable();
-
-    setTimeout(function() {
-      item.livroAberto.disable();
-      item.fechaLivro2.disable();
-      item.livroCenaExteriorTitulo.disable();
-      item.livroCenaExteriorTexto1.disable();
-
-      enableInteractiveness();
-    }, 650);
-
-    setTimeout(function() {
-      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
-      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
-      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
-      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
-
-      item.setaSalaDeAula.setInteractive(true);
-      item.chiqueiro.setInteractive(true);
-      item.horta.setInteractive(true);
-      item.latrina.setInteractive(true);
-      item.lixeira.setInteractive(true);
-      item.pocoExterior.setInteractive(true);
-
-      enableInteractiveness();
-      scene[1].saveInteractiveness();
-    }, 1300);
-  }
 
   scene[1].addAllItemsToScene();
 }
