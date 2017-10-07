@@ -1155,13 +1155,8 @@ function carregaLivroAberto() {
     "text.\n" +
     "     Os sons estão disponíveis nos seguintes\n" +
     "links:\n" +
-    "     Som de fundo sa sala de aula: https://\n" +
-    "freesound.org/people/Relebogile/sounds/\n" +
-    "328232/ (com modificações)\n" +
     "     Som para virar as páginas dos livros: https:\n" +
     "//freesound.org/people/flag2/sounds/63318/\n" +
-    "     Som de fundo do ambiente externo: https://\n" +
-    "freesound.org/people/eric5335/sounds/52740/\n" +
     "     Sons para o surgimento dos pop-ups e para\n" +
     "mudar de ambiente: http://www.freesfx.co.uk\n" +
     "     Som de clique do mouse: http://www.\n" +
@@ -1170,32 +1165,32 @@ function carregaLivroAberto() {
   livro.Agradecimentos.pagina[1].texto1.setPosition(248, 170);
 
   livro.Agradecimentos.pagina[1].texto2 = new Game.Text(
-    "     O ponto de interrogação criado por Eleanor\n" +
-    "Wang disponível no site http://www.flaticon.\n" +
-    "com"
+    "" +
+    "" +
+    ""
     , estiloTextoLivro);
   livro.Agradecimentos.pagina[1].texto2.setPosition(990, 120);
 
   livro.Agradecimentos.pagina[1].pixijsLogo = new Game.Image("pixijs.png");
-  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(1300, 300);
+  livro.Agradecimentos.pagina[1].pixijsLogo.setPosition(1300, 200);
   livro.Agradecimentos.pagina[1].pixijsLogo.setScale(1.4);
 
   livro.Agradecimentos.pagina[1].parceria = new Game.Text(
     "      Parceria:"
   , estiloTitulo);
-  livro.Agradecimentos.pagina[1].parceria.setPosition(990, 400);
+  livro.Agradecimentos.pagina[1].parceria.setPosition(990, 400-60);
 
   livro.Agradecimentos.pagina[1].logoLtia = new Game.Image("LtiaLogo.png");
-  livro.Agradecimentos.pagina[1].logoLtia.setPosition(1250, 520);
+  livro.Agradecimentos.pagina[1].logoLtia.setPosition(1250, 520-60);
   livro.Agradecimentos.pagina[1].logoLtia.setScale(0.6);
 
   livro.Agradecimentos.pagina[1].financiamento = new Game.Text(
     "      Financiamento:"
   , estiloTitulo);
-  livro.Agradecimentos.pagina[1].financiamento.setPosition(990, 620);
+  livro.Agradecimentos.pagina[1].financiamento.setPosition(990, 620-50);
 
   livro.Agradecimentos.pagina[1].logoCnpq = new Game.Image("CNPq_transparente.png");
-  livro.Agradecimentos.pagina[1].logoCnpq.setPosition(1250, 800);
+  livro.Agradecimentos.pagina[1].logoCnpq.setPosition(1250, 800-50);
   livro.Agradecimentos.pagina[1].logoCnpq.setScale(0.6);
 
   // Cria os itens com o conteudo dos livros
