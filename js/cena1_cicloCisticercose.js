@@ -7,8 +7,8 @@ function carregaCicloCisticercose() {
   item.estCenouraNormal.setPosition(375, 560);
   item.estCenouraNormal.setScale(0.7);
   item.estCenouraNormal.setZorder(9);
-  item.estCenouraNormal.setBrightness(150);
-  item.estCenouraNormal.setInteractive(false);
+  item.estCenouraNormal.setBrightness(210);
+  item.estCenouraNormal.setInteractive(true);
   item.estCenouraNormal.onMouseOver = function() {
     item.estCenouraNormal.setBrightness(255);
     scene[1].setSubtitle("Cisticercose");
@@ -389,23 +389,50 @@ function carregaCicloCisticercose() {
     scene[1].nextState();
 
     setTimeout(function() {
-      item.fechaLivro.disable();
-      item.fechaLivro.setInteractive(false);
+      item.estCenouraNormal.enable();
+      item.estCenouraNormal.setBrightness(item.estPocoNormal.brightnessTarget);
+      item.estCenouraNormal.changeAlpha(1, 600);
 
-      item.livroAberto.enable();
-      item.fechaLivro2.enable();
-      item.livroCenaExteriorTexto1.enable();
-      item.livroCenaExteriorTitulo.enable();
-      item.livroCenaExteriorTexto2.enable();
-      item.livroAberto.changeAlpha(1, 600);
-      item.fechaLivro2.changeAlpha(1, 600);
-      item.livroCenaExteriorTexto1.changeAlpha(1, 600);
-      item.livroCenaExteriorTitulo.changeAlpha(1, 600);
-      item.livroCenaExteriorTexto2.changeAlpha(1, 600);
+      scene[1].background.changeBrightness(210, 600);
+      item.chiqueiro.changeBrightness(210, 600);
+      item.horta.changeBrightness(210, 600);
+      item.latrina.changeBrightness(210, 600);
+      item.lixeira.changeBrightness(210, 600);
+      item.pocoExterior.changeBrightness(210, 600);
+      item.vacaExterior.changeBrightness(210, 600);
+
+      item.estPocoNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
+      item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
+      item.estPorcoNormal.changeBrightness(item.estPorcoNormal.brightnessTarget, 600);
+      item.setaSalaDeAula.enable();
+      item.setaSalaDeAula.changeAlpha(1, 600);
+
+      item.pocoBotaoOKhover.disable();
+      item.pocoBalaoPrevencao.disable();
+      item.pocoBalaoTransmissao.disable();
+      item.pocoAbaSintomas.disable();
+      item.pocoAbaPrevencao.disable();
+      item.pocoAbaTransmissao.disable();
+      item.pocoTextoPrevencao.disable();
+      item.pocoTextoTransmissao.disable();
     }, currentTime += animationInterval);
 
     setTimeout(function() {
+      item.estCenouraNormal.setInteractive(item.estCenouraNormal.interactiveTarget);
+      item.estVacaNormal.setInteractive(item.estVacaNormal.interactiveTarget);
+      item.estPorcoNormal.setInteractive(item.estPorcoNormal.interactiveTarget);
+      item.estPocoNormal.setInteractive(item.estPocoNormal.interactiveTarget);
+
+      item.setaSalaDeAula.setInteractive(true);
+      item.chiqueiro.setInteractive(true);
+      item.horta.setInteractive(true);
+      item.latrina.setInteractive(true);
+      item.lixeira.setInteractive(true);
+      item.pocoExterior.setInteractive(true);
+
       enableInteractiveness();
+
+      scene[1].saveInteractiveness();
     }, currentTime += animationInterval);
 
   }
