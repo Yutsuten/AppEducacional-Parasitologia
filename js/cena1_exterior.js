@@ -152,8 +152,8 @@ sceneLoader[1] = function() {
   item.setaSalaDeAula.setBrightness(220);
   item.setaSalaDeAula.setScale(0.3);
   item.setaSalaDeAula.setRotation(180);
-  item.setaSalaDeAula.setAlpha(0);
-  item.setaSalaDeAula.disable();
+  item.setaSalaDeAula.setAlpha(1);
+  item.setaSalaDeAula.enable();
   item.setaSalaDeAula.onMouseOver = function() {
     scene[1].setSubtitle("Sala de aula");
     item.setaSalaDeAula.setBrightness(255);
