@@ -69,7 +69,7 @@ var estiloTitulo = {
 
 var estiloTitulo1 = {
   "default" : {fontFamily: "Book Antiqua", fontSize: "40px",
-  fill: 0x010101, align: "left"
+    fill: 0x010101, align: "left"
   },
   "i" : {
     fontStyle: "italic"
@@ -110,6 +110,36 @@ var estiloTextoLivro = {
   },
   "gray" : {
     fill: 0x333333
+  },
+  "big" : {
+    fontSize: "36px"
+  }
+};
+
+var estiloTextoLivro1 = {
+  "default" : {fontFamily: "Book Antiqua", fontSize: "33px",
+  /*dropShadow: true, dropShadowBlur: 30,*/ fill: 0x010101, align: "left"
+  },
+  "i" : {
+    fontStyle: "italic"
+  },
+  "b" : {
+    fontStyle: "bold"
+  },
+  "c1" : {
+    fill: 0xFF2222
+  },
+  "c2" : {
+    fill: 0x22FF22
+  },
+  "c3" : {
+    fill: 0x222288
+  },
+  "c4" : {
+    fill: 0xFFFF66
+  },
+  "c5" : {
+    fill: 0x66FFFF
   },
   "big" : {
     fontSize: "36px"

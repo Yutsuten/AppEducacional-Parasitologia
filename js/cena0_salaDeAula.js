@@ -190,6 +190,10 @@ sceneLoader[0] = function() {
     item.livroObjetoDeApendizagemTitulo3.changeAlpha(1, 600);
     item.livroObjetoDeApendizagemTexto6.changeAlpha(1, 600);
     item.livroObjetoDeApendizagemTexto7.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto8.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto9.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto10.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto11.changeAlpha(1, 600);
   }
 
   item.livroObjetoDeApendizagemTitulo = new Game.Text(
@@ -311,51 +315,58 @@ sceneLoader[0] = function() {
   item.livroObjetoDeApendizagemTitulo3.setAlpha(0);
 
   item.livroObjetoDeApendizagemTexto6 = new Game.Text(
-    "     Aluno\n" +
-    "tecnologia recente que abre caminhos na\n" +
-    "educação à distância e que serve de mate-\n" +
-    "rial de apoio a aula presencial tradicional.\n" +
-    "São elementos de uma nova metodologia\n" +
-    "de ensino e aprendizagem baseada no uso\n" +
-    "do computador e da Internet.\n" +
-    "     Apesar de sua definição ainda ser vaga,\n" +
-    "o consenso é de que o Objeto de Aprendi-\n" +
-    "zagem deva possuir um propósito educa-\n" +
-    "cional definido, um elemento que estimule\n" +
-    "a reflexão do estudante e que sua constru-\n" +
-    "ção seja de forma a facilitar a reutilização\n" +
-    "dentro de outros contextos de aprendiza-\n" +
-    "gem.\n" +
-    "     Desta forma, as autoras apresentam o\n" +
-    "presente Objeto de Aprendizagem em Pa-\n" +
-    "rasitologia.\n" +
-    "     O software (ou “jogo”) conta com regi-\n" +
-    "ões clicáveis e interativas, as quais revela-\n" +
-    "rão ao usuário informações adicionais so-"
+    "     <big>Como navegar pelo Objeto de\n" +
+    "Aprendizagem:</big>"
     , estiloTextoLivro);
   item.livroObjetoDeApendizagemTexto6.setPosition(248, 190);
   item.livroObjetoDeApendizagemTexto6.setAlpha(0);
 
   item.livroObjetoDeApendizagemTexto7 = new Game.Text(
-    "Aluno\n" +
-    "dos parasitas em questão e as suas consequen-\n" +
-    "tes doenças. Visualmente, o jogo é repleto de\n" +
-    "imagens e se é intencionado que estas sejam\n" +
-    "autoexplicativas, contando, num primeiro mo-\n" +
-    "mento, com os auxílios das legendas.\n" +
-    "     São expostas três telas: a principal, a sala\n" +
-    "de aula, na qual serão encontradas representa-\n" +
-    "ções de quatro doenças e seus respectivos pa-\n" +
-    "rasitas. À direita da tela principal será exposto\n" +
-    "o exterior da escola, com mais quatro doenças\n" +
-    "e seus três parasitas. À esquerda da sala de au-\n" +
-    "la será apresentada uma estante repleta de li-\n" +
-    "vros interativos, nos quais serão explicadas as\n" +
-    "teorias sobre o Parasitismo e cada parasita abor-\n" +
-    "dado neste Objeto de Aprendizagem."
-    , estiloTextoLivro);
-  item.livroObjetoDeApendizagemTexto7.setPosition(990, 120);
+    "     <c1>- Há vários elementos clicáveis nas\n" +
+    "cenas que se acenderão quando o mou-\n" +
+    "se passar por eles. Ao clicar, você verá\n" +
+    "o ciclo de vida do parasita correspon-\n" +
+    "dente à doença que ele causa;</c1>"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto7.setPosition(248, 300);
   item.livroObjetoDeApendizagemTexto7.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto8 = new Game.Text(
+    "     <c2>- Ao final de cada ciclo de cada doen-\n" +
+    "ça, aparecerão informações sobre os mo-\n" +
+    "dos de transmissão e prevenção e os sin-\n" +
+    "tomas das doenças, juntamente com o\n" +
+    "desenho do indivíduo sintomático</c2>"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto8.setPosition(248, 700);
+  item.livroObjetoDeApendizagemTexto8.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto9 = new Game.Text(
+    "     <c3>- Leia as legendas das imagens e dos\n" +
+    "ciclos de vida que vão aparecer quando\n" +
+    "você passar o mouse por cima deles;</c3>"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto9.setPosition(248, 540);
+  item.livroObjetoDeApendizagemTexto9.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto10 = new Game.Text(
+    "     <c4>- Navegue pelos desenhos do Objeto\n" +
+    "de Aprendizagem: eles terão informações\n" +
+    "adicionais para te ajudar a compreender\n" +
+    "como as doenças podem ser contraídas;</c4>"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto10.setPosition(990, 120);
+  item.livroObjetoDeApendizagemTexto10.setAlpha(0);
+
+  item.livroObjetoDeApendizagemTexto11 = new Game.Text(
+    "     <c5>- Se tiver alguma dúvida, leia os li-\n" +
+    "vros na cena do \"Armário\". Lá existem \n" +
+    "informações extras para te ajudar.\n" +
+    "Se ainda houver dúvida, pergunte ao\n" +
+    "seu professor.</c5>"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto11.setPosition(990, 340);
+  item.livroObjetoDeApendizagemTexto11.setAlpha(0);
 
   item.livroPagina1 = new Game.Item("seta.png");
   item.livroPagina1.setPosition(110, 500);
@@ -440,7 +451,7 @@ sceneLoader[0] = function() {
   }
   item.livroPagina3.onMouseOut = function() {
     scene[0].setSubtitle("");
-    item.livroPagina2.setBrightness(220);
+    item.livroPagina3.setBrightness(220);
   }
   item.livroPagina3.onClick = function(mouse) {
     somSeta();
@@ -450,6 +461,12 @@ sceneLoader[0] = function() {
     item.livroObjetoDeApendizagemTitulo3.changeAlpha(1, 600);
     item.livroObjetoDeApendizagemTexto6.changeAlpha(1, 600);
     item.livroObjetoDeApendizagemTexto7.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto8.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto9.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto10.changeAlpha(1, 600);
+    item.livroObjetoDeApendizagemTexto11.changeAlpha(1, 600);
+    item.fechaLivro.enable();
+    item.fechaLivro.changeAlpha(1, 600);
     item.livroPagina1.disable();
     item.livroPagina2.disable();
     item.livroPagina3.disable();
@@ -463,10 +480,10 @@ sceneLoader[0] = function() {
   item.livroAberto.setAlpha(1);
 
   item.fechaLivro = new Game.Item("botaoFechar.png");
-  item.fechaLivro.setPosition(1240, 800);
+  item.fechaLivro.setPosition(1260, 750);
   item.fechaLivro.setZorder(1);
   item.fechaLivro.setBrightness(200);
-  item.fechaLivro.setScale(0.14);
+  item.fechaLivro.setScale(0.3);
   item.fechaLivro.disable();
   item.fechaLivro.setAlpha(0);
   item.fechaLivro.onMouseOver = function() {
@@ -484,9 +501,13 @@ sceneLoader[0] = function() {
     item.fechaLivro.changeAlpha(0, 600);
 
     // Esconde o texto
-    item.livroObjetoDeApendizagemTitulo2.changeAlpha(0, 600);
-    item.livroObjetoDeApendizagemTexto4.changeAlpha(0, 600);
-    item.livroObjetoDeApendizagemTexto5.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTitulo3.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto6.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto7.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto8.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto9.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto10.changeAlpha(0, 600);
+    item.livroObjetoDeApendizagemTexto11.changeAlpha(0, 600);
 
     item.livroPagina1.changeAlpha(0, 600);
     item.livroPagina2.changeAlpha(0, 600);
