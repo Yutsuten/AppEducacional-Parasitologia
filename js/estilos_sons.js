@@ -67,6 +67,37 @@ var estiloTitulo = {
   }
 };
 
+var estiloTitulo1 = {
+  "default" : {fontFamily: "Book Antiqua", fontSize: "40px",
+  fill: 0x010101, align: "left"
+  },
+  "i" : {
+    fontStyle: "italic"
+  },
+  "b" : {
+    fontStyle: "bold"
+  },
+  "gray" : {
+    fill: 0x333333
+  },
+  "big" : {
+    fontSize: "36px"
+  }
+};
+
+var estiloTitulo2 = {
+  "default" : {
+    fontFamily: "Book Antiqua",
+    fontSize: "60px",
+    fontStyle: "bold",
+    fill: 0x010101,
+    align: "left"
+  },
+  "big" : {
+    fontSize: "42px"
+  }
+};
+
 var estiloTextoLivro = {
   "default" : {fontFamily: "Book Antiqua", fontSize: "28px",
   fill: 0x010101, align: "left"
