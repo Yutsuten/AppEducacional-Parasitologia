@@ -127,19 +127,19 @@ var estiloTextoLivro1 = {
     fontStyle: "bold"
   },
   "c1" : {
-    fill: 0xFF2222
-  },
-  "c2" : {
-    fill: 0x22FF22
+    fill: 0x56FF41
   },
   "c3" : {
-    fill: 0x222288
+    fill: 0xE8C055
+  },
+  "c2" : {
+    fill: 0xFF544F
   },
   "c4" : {
-    fill: 0xFFFF66
+    fill: 0x583DE8
   },
   "c5" : {
-    fill: 0x66FFFF
+    fill: 0x7EFFDF
   },
   "big" : {
     fontSize: "36px"
