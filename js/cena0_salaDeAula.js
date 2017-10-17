@@ -141,20 +141,23 @@ sceneLoader[0] = function() {
   , estiloTitulo2);
   item.livroOAIntroducaoTitulo.setPosition(248, 470);
 
-  item.intProf = new Game.Item("salaDeAula_caixaDeAreia.png");
-  item.intProf .setPosition(1200, 430);
+  item.intProf = new Game.Item("professoresInstrucoes.png");
+  item.intProf.setPosition(1270, 400);
   item.intProf.setZorder(0);
   item.intProf.setBrightness(210);
   item.intProf.onMouseOver = function() {
     scene[0].setSubtitle("Instruções aos professores");
+    item.intProfHover.enable();
   }
   item.intProf.onMouseOut = function() {
     scene[0].setSubtitle("");
+    item.intProfHover.disable();
   }
   item.intProf.onClick = function() {
     somClique();
     item.intProf.setInteractive(false);
     item.intAluno.setInteractive(false);
+    item.intProfHover.disable();
     scene[0].setSubtitle("");
     item.livroOAIntroducao.changeAlpha(0, 600);
     item.livroOAIntroducaoTitulo.changeAlpha(0, 600);
@@ -168,20 +171,30 @@ sceneLoader[0] = function() {
     item.livroPagina2.changeAlpha(1, 600);
   }
 
-  item.intAluno = new Game.Item("salaDeAula_caixaDeAreia.png");
-  item.intAluno .setPosition(1200, 550);
+  item.intProfHover = new Game.Item("professoresInstrucoesHover.png");
+  item.intProfHover.setPosition(1270, 400);
+  item.intProfHover.setZorder(-1);
+  item.intProfHover.setBrightness(210);
+  item.intProfHover.setInteractive(false);
+  item.intProfHover.disable(false);
+
+  item.intAluno = new Game.Item("alunosIntrucoes.png");
+  item.intAluno.setPosition(1270, 580);
   item.intAluno.setZorder(0);
   item.intAluno.setBrightness(210);
   item.intAluno.onMouseOver = function() {
     scene[0].setSubtitle("Instruções aos alunos");
+    item.intAlunoHover.enable();
   }
   item.intAluno.onMouseOut = function() {
     scene[0].setSubtitle("");
+    item.intAlunoHover.disable();
   }
   item.intAluno.onClick = function() {
     somClique();
     item.intProf.setInteractive(false);
     item.intAluno.setInteractive(false);
+    item.intAlunoHover.disable();
     item.livroOAIntroducao.changeAlpha(0, 600);
     item.livroOAIntroducaoTitulo.changeAlpha(0, 600);
     item.intProf.changeAlpha(0, 600);
@@ -197,6 +210,13 @@ sceneLoader[0] = function() {
     item.livroObjetoDeApendizagemTexto10.changeAlpha(1, 600);
     item.livroObjetoDeApendizagemTexto11.changeAlpha(1, 600);
   }
+
+  item.intAlunoHover = new Game.Item("alunosIntrucoesHover.png");
+  item.intAlunoHover.setPosition(1270, 580);
+  item.intAlunoHover.setZorder(-1);
+  item.intAlunoHover.setBrightness(210);
+  item.intAlunoHover.setInteractive(false);
+  item.intAlunoHover.disable();
 
   item.livroObjetoDeApendizagemTitulo = new Game.Text(
     "       O Objeto de Aprendizagem"
@@ -390,18 +410,22 @@ sceneLoader[0] = function() {
   item.livroAberto.enable();
   item.livroAberto.setAlpha(1);
 
-  item.fechaLivro = new Game.Item("botaoFechar.png");
-  item.fechaLivro.setPosition(1260, 750);
+  item.fechaLivroHover = new Game.Item("comecarHover.png");
+  item.fechaLivroHover.setPosition(1270, 750);
+  item.fechaLivroHover.setZorder(0);
+  item.fechaLivroHover.setInteractive(false);
+  item.fechaLivroHover.disable();
+
+  item.fechaLivro = new Game.Item("comecar.png");
+  item.fechaLivro.setPosition(1270, 750);
   item.fechaLivro.setZorder(1);
-  item.fechaLivro.setBrightness(200);
-  item.fechaLivro.setScale(0.3);
   item.fechaLivro.disable();
   item.fechaLivro.setAlpha(0);
   item.fechaLivro.onMouseOver = function() {
-    item.fechaLivro.setBrightness(255);
+    item.fechaLivroHover.enable();
   }
   item.fechaLivro.onMouseOut = function() {
-    item.fechaLivro.setBrightness(200);
+    item.fechaLivroHover.disable();
   }
   item.fechaLivro.onClick = function(mouse) {
     disableInteractiveness();
@@ -410,6 +434,7 @@ sceneLoader[0] = function() {
     // Esconde o livro
     item.livroAberto.changeAlpha(0, 600);
     item.fechaLivro.changeAlpha(0, 600);
+    item.fechaLivroHover.disable();
 
     // Esconde o texto
     item.livroObjetoDeApendizagemTitulo3.changeAlpha(0, 600);

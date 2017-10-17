@@ -11,6 +11,8 @@ var gameImages = [
   "salaDeAula_mesaProfessor.png",
   "salaDeAula_caixaDeAreia.png",
   "salaDeAula_vasoDeFlores.png",
+  "salaDeAula_livro.png",
+  "salaDeAula_microscopio",
 
   // Imagens Cena Exterior
   "chiqueiro.png",
@@ -20,6 +22,7 @@ var gameImages = [
   "pocoExterior.png",
   "vacaExterior.png",
   "interrogacao.png",
+  "mochila",
 
   // Imagens Armario
   "livroAgradecimentos.png",
@@ -127,6 +130,14 @@ var gameImages = [
   "abaPrev.png",
   "okNormal.png",
   "okHover.png",
+
+  // Botoes
+  "alunosIntrucoes.png",
+  "alunosIntrucoesHover.png",
+  "professoresInstrucoes.png",
+  "professoresInstrucoesHover.png",
+  "comecar.png",
+  "comecarHover.png",
 
   // Pop-ups
   "popupChorume.png",
