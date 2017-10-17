@@ -46,6 +46,8 @@ sceneLoader[0] = function() {
     somPopup();
     item.popupFlores.enable();
     item.popupFloresTexto.enable();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
   }
   item.vasoDeFlores.onMouseOut = function() {
     scene[0].setSubtitle("");
@@ -73,6 +75,50 @@ sceneLoader[0] = function() {
   item.popupFloresTexto.setZorder(4);
   item.popupFloresTexto.disable();
 
+  item.livro = new Game.Item("salaDeAula_livro.png");
+  item.livro.setPosition(450, 800);
+  item.livro.setZorder(8);
+  item.livro.onMouseOver = function() {
+    somPopup();
+    item.popupLivro.enable();
+    item.popupLivroTexto.enable();
+  }
+  item.livro.onMouseOut = function() {
+    scene[0].setSubtitle("");
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
+  }
+
+  item.popupLivro = new Game.Image("popupFlores.png");
+  item.popupLivro.setPosition(750, 440);
+  item.popupLivro.setScale(0.47);
+  item.popupLivro.setRotation(90);
+  item.popupLivro.disable();
+
+  item.popupLivroTexto = new Game.Text(
+    "Nesta cena você encontrará quatro\n" +
+    "doenças e seus quatro causadores.\n" +
+    "Os parasitas apresentados são:\n" +
+    "o protozoário <i>Toxoplasma gondii</i>,\n" +
+    "causador da Toxoplasmose; o ver-\n" +
+    "me <i>Ascaris lumbricoides</i>, que cau-\n" +
+    "sa a Ascaridíase; o protozoário\n" +
+    "<i>Plasmodium sp</i>, causador da Ma-\n" +
+    "lária.\n" +
+    "Lembre-se: acesse o armário para\n" +
+    "solucionar as suas dúvidas ou\n" +
+    "peça ajuda ao seu professor (a).\n" +
+    "Vamos lá!"
+    ,estiloInfoPopup);
+  item.popupLivroTexto.setPosition(820, 310);
+  item.popupLivroTexto.setAnchor(0.5, 0.5);
+  item.popupLivroTexto.setZorder(4);
+  item.popupLivroTexto.disable();
+
+  item.microscopio = new Game.Image("salaDeAula_microscopio.png");
+  item.microscopio.setPosition(1500, 380);
+  item.microscopio.setZorder(12);
+
   // Adiciona uma seta para levar a cena externa
   item.setaJanela = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
@@ -93,6 +139,8 @@ sceneLoader[0] = function() {
   }
   item.setaJanela.onClick = function(mouse) {
     somSeta();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
     scene[0].setSubtitle("");
     changeScene(1); // Muda para a cena exterior
   }
@@ -118,6 +166,8 @@ sceneLoader[0] = function() {
   }
   item.setaArmario.onClick = function(mouse) {
     somSeta();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
     scene[0].setSubtitle("");
     changeScene(2); // Muda para o armario
   }
@@ -448,11 +498,17 @@ sceneLoader[0] = function() {
     item.livroPagina1.changeAlpha(0, 600);
     item.livroPagina2.changeAlpha(0, 600);
 
+    item.intProf.disable();
+    item.intAluno.disable();
+
     // Mostra setas da sala de aula
     item.setaJanela.enable();
     item.setaArmario.enable();
     item.setaJanela.changeAlpha(1, 600);
     item.setaArmario.changeAlpha(1, 600);
+
+    item.popupLivro.enable();
+    item.popupLivroTexto.enable();
 
     setTimeout(function() {
       item.livroAberto.disable();

@@ -12,7 +12,7 @@ var gameImages = [
   "salaDeAula_caixaDeAreia.png",
   "salaDeAula_vasoDeFlores.png",
   "salaDeAula_livro.png",
-  "salaDeAula_microscopio",
+  "salaDeAula_microscopio.png",
 
   // Imagens Cena Exterior
   "chiqueiro.png",

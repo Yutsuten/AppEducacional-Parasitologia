@@ -20,6 +20,8 @@ function carregaCicloEhistolytica() {
   item.estBananaNormal.onClick = function() {
     disableInteractiveness();
     somClique();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
 
     var currentTime = 0;
     var animationInterval = 750; // Intervalo entre cada animacao
@@ -33,6 +35,8 @@ function carregaCicloEhistolytica() {
     item.mesaProfessor.changeBrightness(100, 600);
     item.caixaDeAreia.changeBrightness(100, 600);
     item.vasoDeFlores.changeBrightness(100, 600);
+    item.livro.changeBrightness(100, 600);
+    item.microscopio.changeBrightness(100, 600);
 
     item.estTomateNormal.changeBrightness(100, 600);
     item.estPernNormal.changeBrightness(100, 600);
@@ -48,6 +52,8 @@ function carregaCicloEhistolytica() {
     item.setaArmario.setInteractive(false);
     item.caixaDeAreia.setInteractive(false);
     item.vasoDeFlores.setInteractive(false);
+    item.livro.setInteractive(false);
+    item.microscopio.setInteractive(false);
 
     setTimeout(function() {
       scene[0].setSubtitle("");
@@ -561,6 +567,8 @@ function carregaCicloEhistolytica() {
       item.mesaProfessor.changeBrightness(210, 600);
       item.caixaDeAreia.changeBrightness(210, 600);
       item.vasoDeFlores.changeBrightness(210, 600);
+      item.livro.changeBrightness(210, 600);
+      item.microscopio.changeBrightness(210, 600);
 
       item.estTomateNormal.changeBrightness(210, 600);
       item.estPernNormal.changeBrightness(210, 600);
@@ -589,6 +597,8 @@ function carregaCicloEhistolytica() {
       item.setaArmario.setInteractive(true);
       item.caixaDeAreia.setInteractive(true);
       item.vasoDeFlores.setInteractive(true);
+      item.livro.setInteractive(true);
+      item.microscopio.setInteractive(true);
 
       enableInteractiveness();
     }, currentTime += animationInterval);
