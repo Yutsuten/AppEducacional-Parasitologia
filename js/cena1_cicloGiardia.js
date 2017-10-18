@@ -30,6 +30,8 @@ function carregaCicloGiardia() {
     item.popupChorumeTexto.disable();
     item.popupLatrinaPoco.disable();
     item.popupLatrinaPocoTexto.disable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
 
     // Fadeout unrelated images
     scene[1].background.changeBrightness(100, 600);
@@ -39,6 +41,7 @@ function carregaCicloGiardia() {
     item.lixeira.changeBrightness(100, 600);
     item.pocoExterior.changeBrightness(100, 600);
     item.vacaExterior.changeBrightness(100, 600);
+    item.mochila.changeBrightness(100, 600);
 
     item.estCenouraNormal.changeBrightness(100, 600);
     item.estVacaNormal.changeBrightness(100, 600);
@@ -55,6 +58,10 @@ function carregaCicloGiardia() {
     item.latrina.setInteractive(false);
     item.lixeira.setInteractive(false);
     item.pocoExterior.setInteractive(false);
+    item.mochila.setInteractive(false);
+    item.porco.setInteractive(false);
+    item.hortaRegion.setInteractive(false);
+    item.vacaExterior.setInteractive(false);
 
     setTimeout(function() {
       scene[1].setSubtitle("");
@@ -569,6 +576,7 @@ function carregaCicloGiardia() {
       item.lixeira.changeBrightness(210, 600);
       item.pocoExterior.changeBrightness(210, 600);
       item.vacaExterior.changeBrightness(210, 600);
+      item.mochila.changeBrightness(210, 600);
 
       item.estCenouraNormal.changeBrightness(item.estCenouraNormal.brightnessTarget, 600);
       item.estVacaNormal.changeBrightness(item.estVacaNormal.brightnessTarget, 600);
@@ -598,6 +606,10 @@ function carregaCicloGiardia() {
       item.latrina.setInteractive(true);
       item.lixeira.setInteractive(true);
       item.pocoExterior.setInteractive(true);
+      item.mochila.setInteractive(true);
+      item.porco.setInteractive(true);
+      item.hortaRegion.setInteractive(true);
+      item.vacaExterior.setInteractive(true);
 
       enableInteractiveness();
 

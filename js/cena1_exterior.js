@@ -35,6 +35,8 @@ sceneLoader[1] = function() {
     somPopup();
     item.popupPorco.enable();
     item.popupPorcoTexto.enable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
   item.porco.onMouseOut = function() {
     item.popupPorco.disable();
@@ -78,6 +80,8 @@ sceneLoader[1] = function() {
     somPopup();
     item.popupHorta.enable();
     item.popupHortaTexto.enable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
   item.hortaRegion.onMouseOut = function() {
     item.popupHorta.disable();
@@ -107,14 +111,39 @@ sceneLoader[1] = function() {
   item.mochila.setZorder(8);
   item.mochila.onMouseOver = function() {
     scene[1].setSubtitle("Apresentação do Ambiente externo");
-    item.popupLatrinaPoco.enable();
-    item.popupLatrinaPocoTexto.enable();
+    somPopup();
+    item.popupMochila.enable();
+    item.popupMochilaTexto.enable();
   }
   item.mochila.onMouseOut = function() {
     scene[1].setSubtitle("");
-    item.popupLatrinaPoco.disable();
-    item.popupLatrinaPocoTexto.disable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
+
+  item.popupMochila = new Game.Image("popupChorume.png");
+  item.popupMochila.setPosition(870, 480);
+  item.popupMochila.setRotation(270);
+  item.popupMochila.setScale(0.34);
+
+  item.popupMochilaTexto = new Game.Text(
+    "Nesta cena você conhecerá qua-\n" +
+    "tro doenças. Entretanto, há so-\n" +
+    "mente três parasitas causadores,\n" +
+    "são eles: o protozoário <i>Giardia\n" +
+    "lamblia</i>, causador da Giardíase;\n" +
+    "o verme <i>Taenia saginata</i>, causa-\n" +
+    "dor da Teníase e o verme <i>Taenia\n" +
+    "solium</i>, causador de duas doen-\n" +
+    "ças: a Teníase e a Cisticercose.\n" +
+    "Lembre-se: acesse o armário pa-\n" +
+    "ra solucionar as suas dúvidas ou\n" +
+    "peça ajuda ao seu professor (a).\n" +
+    "Vamos aprender!"
+    ,estiloInfoPopup);
+  item.popupMochilaTexto.setPosition(925, 340);
+  item.popupMochilaTexto.setAnchor(0.5, 0.5);
+  item.popupMochilaTexto.setZorder(4);
 
   item.latrina = new Game.Item("latrina.png");
   item.latrina.setPosition(1450, 200);
@@ -126,6 +155,8 @@ sceneLoader[1] = function() {
     item.popupLatrinaPocoTexto.enable();
     item.popupChorume.disable();
     item.popupChorumeTexto.disable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
   item.latrina.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -168,6 +199,8 @@ sceneLoader[1] = function() {
     item.popupChorumeTexto.enable();
     item.popupLatrinaPoco.disable();
     item.popupLatrinaPocoTexto.disable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
   item.lixeira.onMouseOut = function() {
     scene[1].setSubtitle("");
@@ -224,6 +257,8 @@ sceneLoader[1] = function() {
     somPopup();
     item.popupVaca.enable();
     item.popupVacaTexto.enable();
+    item.popupMochila.disable();
+    item.popupMochilaTexto.disable();
   }
   item.vacaExterior.onMouseOut = function() {
     scene[1].setSubtitle("");
