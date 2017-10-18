@@ -32,13 +32,30 @@ sceneLoader[1] = function() {
   item.porco.setPosition(320, 290);
   item.porco.setZorder(10);
   item.porco.onMouseOver = function() {
-    item.popupLatrinaPoco.enable();
-    item.popupLatrinaPocoTexto.enable();
+    somPopup();
+    item.popupPorco.enable();
+    item.popupPorcoTexto.enable();
   }
   item.porco.onMouseOut = function() {
-    item.popupLatrinaPoco.disable();
-    item.popupLatrinaPocoTexto.disable();
+    item.popupPorco.disable();
+    item.popupPorcoTexto.disable();
   }
+
+  item.popupPorco = new Game.Image("popupChorume.png");
+  item.popupPorco.setPosition(550, 470);
+  item.popupPorco.setScale(0.2);
+  item.popupPorco.disable();
+
+  item.popupPorcoTexto = new Game.Text(
+    "Porco alimentando-\n" +
+    "se do lixo contami-\n" +
+    "nado com ovos de\n" +
+    "<i>Taenia solium</i>."
+    ,estiloInfoPopup);
+  item.popupPorcoTexto.setPosition(630, 500);
+  item.popupPorcoTexto.setAnchor(0.5, 0.5);
+  item.popupPorcoTexto.setZorder(4);
+  item.popupPorcoTexto.disable();
 
   item.horta = new Game.Item("horta.png");
   item.horta.setPosition(400, 660);
@@ -58,13 +75,32 @@ sceneLoader[1] = function() {
   item.hortaRegion.setPosition(400, 660);
   item.hortaRegion.setZorder(8);
   item.hortaRegion.onMouseOver = function() {
-    item.popupLatrinaPoco.enable();
-    item.popupLatrinaPocoTexto.enable();
+    somPopup();
+    item.popupHorta.enable();
+    item.popupHortaTexto.enable();
   }
   item.hortaRegion.onMouseOut = function() {
-    item.popupLatrinaPoco.disable();
-    item.popupLatrinaPocoTexto.disable();
+    item.popupHorta.disable();
+    item.popupHortaTexto.disable();
   }
+
+  item.popupHorta = new Game.Image("popupChorume.png");
+  item.popupHorta.setPosition(700, 840);
+  item.popupHorta.setScale(0.25);
+  item.popupHorta.disable();
+
+  item.popupHortaTexto = new Game.Text(
+    "Garoto alimentando-se\n" +
+    "de cenoura cultivada na\n" +
+    "horta. O chorume prove-\n" +
+    "niente do lixo chega até a\n" +
+    "horta e a contamina com\n" +
+    "ovos de <i>Taenia solium</i>."
+    ,estiloInfoPopup);
+  item.popupHortaTexto.setPosition(805, 880);
+  item.popupHortaTexto.setAnchor(0.5, 0.5);
+  item.popupHortaTexto.setZorder(4);
+  item.popupHortaTexto.disable();
 
   item.mochila = new Game.Item("mochila.png");
   item.mochila.setPosition(630, 820);
@@ -185,14 +221,34 @@ sceneLoader[1] = function() {
   item.vacaExterior.setZorder(15);
   item.vacaExterior.onMouseOver = function() {
     scene[1].setSubtitle("Vaca");
-    item.popupLatrinaPoco.enable();
-    item.popupLatrinaPocoTexto.enable();
+    somPopup();
+    item.popupVaca.enable();
+    item.popupVacaTexto.enable();
   }
   item.vacaExterior.onMouseOut = function() {
     scene[1].setSubtitle("");
-    item.popupLatrinaPoco.disable();
-    item.popupLatrinaPocoTexto.disable();
+    item.popupVaca.disable();
+    item.popupVacaTexto.disable();
   }
+
+  item.popupVaca = new Game.Image("popupChorume.png");
+  item.popupVaca.setPosition(770, 470);
+  item.popupVaca.setRotation(90);
+  item.popupVaca.setScale(0.22);
+  item.popupVaca.disable();
+
+  item.popupVacaTexto = new Game.Text(
+    "Vaca alimentando-se\n" +
+    "do pasto próximo ao\n" +
+    "lixo. O pasto está\n" +
+    "contaminado com\n" +
+    "ovos de <i>Taenia\n" +
+    "saginata</i>."
+    ,estiloInfoPopup);
+  item.popupVacaTexto.setPosition(735, 550);
+  item.popupVacaTexto.setAnchor(0.5, 0.5);
+  item.popupVacaTexto.setZorder(4);
+  item.popupVacaTexto.disable();
 
   // Adiciona uma seta para voltar na sala de aula
   item.setaSalaDeAula = new Game.Item("seta.png");
