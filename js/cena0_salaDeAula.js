@@ -159,6 +159,45 @@ sceneLoader[0] = function() {
   item.popupMicroscopioTexto.setZorder(4);
   item.popupMicroscopioTexto.disable();
 
+  item.bananaRegion = new Game.Item("transparent.png");
+  item.bananaRegion.setPosition(1150, 550);
+  item.bananaRegion.setScale(0.7);
+  item.bananaRegion.setZorder(5);
+  item.bananaRegion.setInteractive(false);
+  item.bananaRegion.onMouseOver = function() {
+    somPopup();
+    item.popupBanana.enable();
+    item.popupBananaTexto.enable();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
+  }
+  item.bananaRegion.onMouseOut = function() {
+    scene[0].setSubtitle("");
+    item.popupBanana.disable();
+    item.popupBananaTexto.disable();
+  }
+
+  item.popupBanana = new Game.Image("popupFlores.png");
+  item.popupBanana.setPosition(850, 300);
+  item.popupBanana.setScale(0.37);
+  item.popupBanana.disable();
+
+  item.popupBananaTexto = new Game.Text(
+    "Mosca infectada pelo para-\n" +
+    "sita <i>Entamoeba histolytica</i>\n" +
+    "rodeia a banana. Quando\n" +
+    "sem a casca, a mosca pousa\n" +
+    "na fruta e deposita os cistos\n" +
+    "maduros do protozoário. O\n" +
+    "garoto ingere estes cistos\n" +
+    "juntamente com a banana\n" +
+    "e o ciclo se inicia."
+    ,estiloInfoPopup);
+  item.popupBananaTexto.setPosition(750, 230);
+  item.popupBananaTexto.setAnchor(0.5, 0.5);
+  item.popupBananaTexto.setZorder(4);
+  item.popupBananaTexto.disable();
+
   // Adiciona uma seta para levar a cena externa
   item.setaJanela = new Game.Item("seta.png");
   item.setaJanela.setPosition(1735, 480);
@@ -549,6 +588,7 @@ sceneLoader[0] = function() {
 
     item.popupLivro.enable();
     item.popupLivroTexto.enable();
+    item.bananaRegion.setInteractive(true);
 
     setTimeout(function() {
       item.livroAberto.disable();

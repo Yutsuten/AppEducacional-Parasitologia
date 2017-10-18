@@ -22,7 +22,7 @@ var gameImages = [
   "pocoExterior.png",
   "vacaExterior.png",
   "interrogacao.png",
-  "mochila",
+  "mochila.png",
 
   // Imagens Armario
   "livroAgradecimentos.png",
@@ -146,5 +146,7 @@ var gameImages = [
 
   // Imagens Gerais (usadas em varios lugares)
   "botaoFechar.png",
-  "seta.png"
+  "seta.png",
+
+  "transparent.png"
 ];
