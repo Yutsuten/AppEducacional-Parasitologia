@@ -54,6 +54,7 @@ function carregaCicloToxoplasmose() {
     item.vasoDeFlores.setInteractive(false);
     item.livro.setInteractive(false);
     item.microscopio.setInteractive(false);
+    item.bananaRegion.setInteractive(false);
 
     setTimeout(function() {
       scene[0].setSubtitle("");
@@ -535,6 +536,7 @@ function carregaCicloToxoplasmose() {
       item.vasoDeFlores.setInteractive(true);
       item.livro.setInteractive(true);
       item.microscopio.setInteractive(true);
+      item.bananaRegion.setInteractive(true);
 
       enableInteractiveness();
     }, currentTime += animationInterval);
