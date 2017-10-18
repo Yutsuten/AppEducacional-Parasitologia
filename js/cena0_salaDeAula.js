@@ -115,9 +115,49 @@ sceneLoader[0] = function() {
   item.popupLivroTexto.setZorder(4);
   item.popupLivroTexto.disable();
 
-  item.microscopio = new Game.Image("salaDeAula_microscopio.png");
+  item.microscopio = new Game.Item("salaDeAula_microscopio.png");
   item.microscopio.setPosition(1500, 380);
   item.microscopio.setZorder(12);
+  item.microscopio.onMouseOver = function() {
+    somPopup();
+    item.popupMicroscopio.enable();
+    item.popupMicroscopioTexto.enable();
+    item.popupLivro.disable();
+    item.popupLivroTexto.disable();
+  }
+  item.microscopio.onMouseOut = function() {
+    scene[0].setSubtitle("");
+    item.popupMicroscopio.disable();
+    item.popupMicroscopioTexto.disable();
+  }
+
+  item.popupMicroscopio = new Game.Image("popupFlores.png");
+  item.popupMicroscopio.setPosition(1200, 700);
+  item.popupMicroscopio.setScale(0.51);
+  item.popupMicroscopio.setRotation(270);
+  item.popupMicroscopio.disable();
+
+  item.popupMicroscopioTexto = new Game.Text(
+    "É importante perceber que a maioria dos\n" +
+    "parasitas apresentados neste Objeto de\n" +
+    "Aprendizagem é microscópica. Isto quer\n" +
+    "dizer que os parasitas são muito peque-\n" +
+    "nos para serem vistos a olho nu: é pre-\n" +
+    "ciso utilizar um microscópio para que\n" +
+    "possamos enxergá-los.\n" +
+    "Protozoários como <i>Plasmodium</i> sp e\n" +
+    "<i>Giardia lamblia</i> necessitam de microscó-\n" +
+    "pio para serem vistos, mas vermes adul-\n" +
+    "tos como <i>Ascaris lumbricoides</i>, <i>Taenia\n" +
+    "saginata</i> e <i>Taenia solium</i> podem crescer\n" +
+    "muito, alcançando até mesmo alguns\n" +
+    "metros de comprimento e, assim, po-\n" +
+    "dem ser vistos a olho nu."
+    ,estiloInfoPopup);
+  item.popupMicroscopioTexto.setPosition(1122, 840);
+  item.popupMicroscopioTexto.setAnchor(0.5, 0.5);
+  item.popupMicroscopioTexto.setZorder(4);
+  item.popupMicroscopioTexto.disable();
 
   // Adiciona uma seta para levar a cena externa
   item.setaJanela = new Game.Item("seta.png");
