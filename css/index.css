@@ -12,3 +12,8 @@
     font-family: "Book Antiqua";
     src: url("../font/Book Antiqua.ttf");
 }
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto.ttf");
+}

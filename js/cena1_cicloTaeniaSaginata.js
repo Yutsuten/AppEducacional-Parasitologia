@@ -584,8 +584,8 @@ function carregaCicloTaeniaSaginata() {
     "- Impedir o acesso de suínos e bovinos às fezes humanas,\n" +
     "latrinas, esgotos e pastagens/alimentos contaminados;\n" +
     "- Implantação de ações de fiscalização e de orientação,\n" +
-    "permitindo o acesso da população a maiores informações e a\n" +
-    "alimentos inspecionados;\n" +
+    "permitindo o acesso da população a maiores informações\n" +
+    "e a alimentos inspecionados;\n" +
     "- Evitar o consumo de carne mal passada;\n" +
     "- Obter produtos de boa origem."
     , estiloInfoBalao);

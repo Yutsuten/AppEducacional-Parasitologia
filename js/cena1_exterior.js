@@ -33,12 +33,14 @@ sceneLoader[1] = function() {
   item.porco.setZorder(10);
   item.porco.onMouseOver = function() {
     somPopup();
+    scene[1].setSubtitle("Porco");
     item.popupPorco.enable();
     item.popupPorcoTexto.enable();
     item.popupMochila.disable();
     item.popupMochilaTexto.disable();
   }
   item.porco.onMouseOut = function() {
+    scene[1].setSubtitle("");
     item.popupPorco.disable();
     item.popupPorcoTexto.disable();
   }
@@ -77,6 +79,7 @@ sceneLoader[1] = function() {
   item.hortaRegion.setPosition(400, 660);
   item.hortaRegion.setZorder(8);
   item.hortaRegion.onMouseOver = function() {
+    scene[1].setSubtitle("Horta");
     somPopup();
     item.popupHorta.enable();
     item.popupHortaTexto.enable();
@@ -84,6 +87,7 @@ sceneLoader[1] = function() {
     item.popupMochilaTexto.disable();
   }
   item.hortaRegion.onMouseOut = function() {
+    scene[1].setSubtitle("");
     item.popupHorta.disable();
     item.popupHortaTexto.disable();
   }

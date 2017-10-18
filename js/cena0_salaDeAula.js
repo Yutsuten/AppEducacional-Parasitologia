@@ -79,6 +79,7 @@ sceneLoader[0] = function() {
   item.livro.setPosition(450, 800);
   item.livro.setZorder(8);
   item.livro.onMouseOver = function() {
+    scene[0].setSubtitle("Apresentação da Sala de Aula");
     somPopup();
     item.popupLivro.enable();
     item.popupLivroTexto.enable();

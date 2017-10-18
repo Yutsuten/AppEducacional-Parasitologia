@@ -18,9 +18,9 @@ function somClique() {
 
 var estiloInfoPopup = {
   "default" : {
-    fontFamily: "Book Antiqua",
+    fontFamily: "Roboto",
     fill: 0x010101,
-    fontSize: "25px"
+    fontSize: "24px"
   },
   "i" : {
     fontStyle: "italic"
@@ -42,7 +42,7 @@ var estiloNumeros = {
 
 var estiloInfoBalao = {
   "default" : {
-    fontFamily: "Book Antiqua",
+    fontFamily: "Roboto",
     fill: 0x010101,
     fontSize: "28px"
   },
