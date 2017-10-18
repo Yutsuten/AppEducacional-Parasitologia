@@ -28,6 +28,18 @@ sceneLoader[1] = function() {
     scene[1].setSubtitle("");
   }
 
+  item.porco = new Game.Item("transparent.png");
+  item.porco.setPosition(320, 290);
+  item.porco.setZorder(10);
+  item.porco.onMouseOver = function() {
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+  }
+  item.porco.onMouseOut = function() {
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
+  }
+
   item.horta = new Game.Item("horta.png");
   item.horta.setPosition(400, 660);
   item.horta.setZorder(10);
@@ -40,6 +52,32 @@ sceneLoader[1] = function() {
   }
   item.horta.onMouseOut = function() {
     scene[1].setSubtitle("");
+  }
+
+  item.hortaRegion = new Game.Item("transparent.png");
+  item.hortaRegion.setPosition(400, 660);
+  item.hortaRegion.setZorder(8);
+  item.hortaRegion.onMouseOver = function() {
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+  }
+  item.hortaRegion.onMouseOut = function() {
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
+  }
+
+  item.mochila = new Game.Item("mochila.png");
+  item.mochila.setPosition(630, 820);
+  item.mochila.setZorder(8);
+  item.mochila.onMouseOver = function() {
+    scene[1].setSubtitle("Apresentação do Ambiente externo");
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+  }
+  item.mochila.onMouseOut = function() {
+    scene[1].setSubtitle("");
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
   }
 
   item.latrina = new Game.Item("latrina.png");
@@ -142,9 +180,19 @@ sceneLoader[1] = function() {
     item.popupLatrinaPocoTexto.disable();*/
   }
 
-  item.vacaExterior = new Game.Image("vacaExterior.png");
+  item.vacaExterior = new Game.Item("vacaExterior.png");
   item.vacaExterior.setPosition(935, 252);
   item.vacaExterior.setZorder(15);
+  item.vacaExterior.onMouseOver = function() {
+    scene[1].setSubtitle("Vaca");
+    item.popupLatrinaPoco.enable();
+    item.popupLatrinaPocoTexto.enable();
+  }
+  item.vacaExterior.onMouseOut = function() {
+    scene[1].setSubtitle("");
+    item.popupLatrinaPoco.disable();
+    item.popupLatrinaPocoTexto.disable();
+  }
 
   // Adiciona uma seta para voltar na sala de aula
   item.setaSalaDeAula = new Game.Item("seta.png");
