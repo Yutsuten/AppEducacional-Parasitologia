@@ -163,7 +163,7 @@ sceneLoader[0] = function() {
   item.bananaRegion.setPosition(1150, 550);
   item.bananaRegion.setScale(0.7);
   item.bananaRegion.setZorder(5);
-  item.bananaRegion.setInteractive(false);
+  item.bananaRegion.disable();
   item.bananaRegion.onMouseOver = function() {
     somPopup();
     item.popupBanana.enable();
@@ -588,7 +588,7 @@ sceneLoader[0] = function() {
 
     item.popupLivro.enable();
     item.popupLivroTexto.enable();
-    item.bananaRegion.setInteractive(true);
+    item.bananaRegion.enable();
 
     setTimeout(function() {
       item.livroAberto.disable();
