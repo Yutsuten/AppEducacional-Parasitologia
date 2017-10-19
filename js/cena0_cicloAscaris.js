@@ -18,13 +18,12 @@ function carregaCicloAscaris() {
     scene[0].setSubtitle("");
   }
   item.estTomateNormal.onClick = function() {
-    disableInteractiveness();
     somClique();
     item.popupLivro.disable();
     item.popupLivroTexto.disable();
 
     var currentTime = 0;
-    var animationInterval = 750; // Intervalo entre cada animacao
+    var animationInterval = 500; // Intervalo entre cada animacao
 
     item.popupFlores.disable();
     item.popupFloresTexto.disable();
@@ -660,6 +659,7 @@ function carregaCicloAscaris() {
       item.bananaRegion.setInteractive(true);
 
       enableInteractiveness();
+
     }, currentTime += animationInterval);
 
   }

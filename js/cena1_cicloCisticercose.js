@@ -22,11 +22,10 @@ function carregaCicloCisticercose() {
     scene[1].setSubtitle("");
   }
   item.estCenouraNormal.onClick = function() {
-    disableInteractiveness();
     somClique();
 
     var currentTime = 0;
-    var animationInterval = 750; // Intervalo entre cada animacao
+    var animationInterval = 500; // Intervalo entre cada animacao
 
     item.popupChorume.disable();
     item.popupChorumeTexto.disable();

@@ -18,13 +18,12 @@ function carregaCicloEhistolytica() {
     scene[0].setSubtitle("");
   }
   item.estBananaNormal.onClick = function() {
-    disableInteractiveness();
     somClique();
     item.popupLivro.disable();
     item.popupLivroTexto.disable();
 
     var currentTime = 0;
-    var animationInterval = 750; // Intervalo entre cada animacao
+    var animationInterval = 500; // Intervalo entre cada animacao
 
     item.popupFlores.disable();
     item.popupFloresTexto.disable();
@@ -603,6 +602,7 @@ function carregaCicloEhistolytica() {
       item.bananaRegion.setInteractive(true);
 
       enableInteractiveness();
+
     }, currentTime += animationInterval);
 
   }

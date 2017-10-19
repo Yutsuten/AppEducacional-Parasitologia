@@ -422,48 +422,48 @@ sceneLoader[0] = function() {
   item.livroObjetoDeApendizagemTexto6.setAlpha(0);
 
   item.livroObjetoDeApendizagemTexto7 = new Game.Text(
-    "     <c1>- Há vários elementos clicáveis nas\n" +
+    "     - Há vários elementos clicáveis nas\n" +
     "cenas que se acenderão quando o mou-\n" +
     "se passar por eles. Ao clicar, você verá\n" +
-    "o ciclo de vida do parasita correspon-\n" +
-    "dente à doença que ele causa;</c1>"
+    "o <c1>ciclo de vida</c1> do parasita correspon-\n" +
+    "dente à doença que ele causa;"
     , estiloTextoLivro1);
   item.livroObjetoDeApendizagemTexto7.setPosition(248, 300);
   item.livroObjetoDeApendizagemTexto7.setAlpha(0);
 
-  item.livroObjetoDeApendizagemTexto8 = new Game.Text(
-    "     <c2>- Ao final de cada ciclo de cada doen-\n" +
-    "ça, aparecerão informações sobre os mo-\n" +
-    "dos de transmissão e prevenção e os sin-\n" +
-    "tomas das doenças, juntamente com o\n" +
-    "desenho do indivíduo sintomático</c2>"
-    , estiloTextoLivro1);
-  item.livroObjetoDeApendizagemTexto8.setPosition(248, 700);
-  item.livroObjetoDeApendizagemTexto8.setAlpha(0);
-
   item.livroObjetoDeApendizagemTexto9 = new Game.Text(
-    "     <c3>- Leia as legendas das imagens e dos\n" +
+    "     - Leia as <c3>legendas</c3> das imagens e dos\n" +
     "ciclos de vida que vão aparecer quando\n" +
-    "você passar o mouse por cima deles;</c3>"
+    "você passar o mouse por cima deles;"
     , estiloTextoLivro1);
   item.livroObjetoDeApendizagemTexto9.setPosition(248, 540);
   item.livroObjetoDeApendizagemTexto9.setAlpha(0);
 
+  item.livroObjetoDeApendizagemTexto8 = new Game.Text(
+    "     - Ao final de cada ciclo de cada doen-\n" +
+    "ça, aparecerão <c2>informações</c2> sobre os mo-\n" +
+    "dos de transmissão e prevenção e os sin-\n" +
+    "tomas das doenças, juntamente com o\n" +
+    "desenho do indivíduo sintomático"
+    , estiloTextoLivro1);
+  item.livroObjetoDeApendizagemTexto8.setPosition(248, 700);
+  item.livroObjetoDeApendizagemTexto8.setAlpha(0);
+
   item.livroObjetoDeApendizagemTexto10 = new Game.Text(
-    "     <c4>- Navegue pelos desenhos do Objeto\n" +
+    "     - Navegue pelos <c4>desenhos</c4> do Objeto\n" +
     "de Aprendizagem: eles terão informações\n" +
     "adicionais para te ajudar a compreender\n" +
-    "como as doenças podem ser contraídas;</c4>"
+    "como as doenças podem ser contraídas;"
     , estiloTextoLivro1);
   item.livroObjetoDeApendizagemTexto10.setPosition(990, 120);
   item.livroObjetoDeApendizagemTexto10.setAlpha(0);
 
   item.livroObjetoDeApendizagemTexto11 = new Game.Text(
-    "     <c5>- Se tiver alguma dúvida, leia os li-\n" +
+    "     - Se tiver alguma <c5>dúvida</c5>, leia os li-\n" +
     "vros na cena do \"Armário\". Lá existem \n" +
     "informações extras para te ajudar.\n" +
     "Se ainda houver dúvida, pergunte ao\n" +
-    "seu professor.</c5>"
+    "seu professor."
     , estiloTextoLivro1);
   item.livroObjetoDeApendizagemTexto11.setPosition(990, 340);
   item.livroObjetoDeApendizagemTexto11.setAlpha(0);

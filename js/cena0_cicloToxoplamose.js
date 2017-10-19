@@ -18,13 +18,12 @@ function carregaCicloToxoplasmose() {
     scene[0].setSubtitle("");
   }
   item.estGatoNormal.onClick = function() {
-    disableInteractiveness();
     somClique();
     item.popupLivro.disable();
     item.popupLivroTexto.disable();
 
     var currentTime = 0;
-    var animationInterval = 750; // Intervalo entre cada animacao
+    var animationInterval = 500; // Intervalo entre cada animacao
 
     item.popupFlores.disable();
     item.popupFloresTexto.disable();
@@ -539,6 +538,7 @@ function carregaCicloToxoplasmose() {
       item.bananaRegion.setInteractive(true);
 
       enableInteractiveness();
+
     }, currentTime += animationInterval);
 
   }
