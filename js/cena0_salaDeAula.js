@@ -260,7 +260,7 @@ sceneLoader[0] = function() {
 
   // Livro inicial
   item.livroOAIntroducao = new Game.Text(
-    "Bem vindos ao Objeto de\n" +
+    "Bem-vindos ao Objeto de\n" +
     "Aprendizagem:"
   , estiloTitulo1 );
   item.livroOAIntroducao.setPosition(248, 350);
@@ -359,7 +359,7 @@ sceneLoader[0] = function() {
     "(OAs) são materiais didáticos virtuais que\n" +
     "servem como apoio à aula presencial tradi-\n" +
     "cional ou objeto de utilização no Ensino a\n" +
-    "distância. são elementos de uma nova meto-\n" +
+    "distância. São elementos de uma nova meto-\n" +
     "dologia de ensino-aprendizagem baseada no\n" +
     "uso do computador e da internet.\n" +
     "     O OA \"Aprendendo sobre Parasitologia\"\n" +

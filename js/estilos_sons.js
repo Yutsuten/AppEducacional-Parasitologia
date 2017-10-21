@@ -127,13 +127,13 @@ var estiloTextoLivro1 = {
     fontStyle: "bold"
   },
   "c1" : {
-    fill: 0x56FF41
+    fill: 0x167F01
   },
   "c3" : {
     fill: 0xE8C055
   },
   "c2" : {
-    fill: 0xFF544F
+    fill: 0xFF241F
   },
   "c4" : {
     fill: 0x583DE8
