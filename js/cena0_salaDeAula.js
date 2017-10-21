@@ -267,7 +267,7 @@ sceneLoader[0] = function() {
 
   item.livroOAIntroducaoTitulo = new Game.Text(
     "\"Aprendendo sobre\n" +
-    "Parasitologia\""
+    "     Parasitologia\""
   , estiloTitulo2);
   item.livroOAIntroducaoTitulo.setPosition(248, 470);
 
